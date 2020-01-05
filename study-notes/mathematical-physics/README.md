@@ -1,0 +1,3 @@
+
+mathematical physics study notes
+
