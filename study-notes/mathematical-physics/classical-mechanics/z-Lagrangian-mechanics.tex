@@ -36,12 +36,15 @@ the function \,$\mathscr{L}$\, is called the \textbf{Lagrangian function}
 \vskip 0.1cm
 \noindent
 Let \,$\left(\,M,\mathscr{L}\,\right)$ be a Lagrangian mechanical system.
-The \,\textbf{action}\, of a smooth curve
+The \,\textbf{action}\, of a smooth parametrized curve
 \,$\gamma : [\,a, b\,] \longrightarrow M$\,
-is defined as\begin{equation*}
+is defined as
+\begin{equation*}
 S(\,\gamma\,)
 \;\; := \;\;
-\int_{a}^{b}\mathscr{L}(\,\gamma(t)\,)\,\d t.\end{equation*}
+\int_{a}^{b}
+\mathscr{L}(\,\gamma(t)\,)\,\d t.
+\end{equation*}
 A \,\textbf{motion}\, of the system is a critical point of \,$S$\,
 under smooth variations with fixed endpoints.
 (This statement is a mathematical formulation of
@@ -50,6 +53,89 @@ which should better be called principle of {\color{red}stationary} action.)
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Induced coordinate systems]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\left(\,M,\mathscr{L}\,\right)$ is a Lagrangian mechanical system, with \,$n \,:=\, \dim(M)$, and
+\item
+	$(x^{1},\ldots,x^{n}) : U \subset M \longrightarrow \Re^{n}$\,
+	is a local coordinate system.
+\end{itemize}
+Then, the \,\textbf{induced coordinate sytem}\, of \,$(x^{1},\ldots,x^{n})$\, is
+\,$\left(\,q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n}\,\right) : \pi^{-1}(U) \longrightarrow \Re^{2n}$\,
+given by
+\begin{equation*} 
+q^{i} \; := \; x^{i} \circ \pi \,:\, \pi^{-1}(U) \,\longrightarrow\, \Re,
+\quad\textnormal{and}\quad
+\hat{q}^{\,i} \; := \; \d x^{i} \,:\, \pi^{-1}(U) \,\longrightarrow\, \Re\,,
+\end{equation*}
+where \,$\pi : TM \longrightarrow M$\, is the canoncial projection.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}[Gradient of the Lagrangian function with respect to an induced coordinate system]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Note that
+\begin{equation*}
+\nabla_{(q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n})}\,\mathscr{L}
+\;\; = \;\;
+	\left(\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{1}}\,,
+		\,\ldots\,,
+		\dfrac{\partial\mathscr{L}}{\partial q^{n}}\,,
+		\dfrac{\partial\mathscr{L}}{\partial \hat{q}^{\,1}}\,,
+		\,\ldots\,
+		\dfrac{\partial\mathscr{L}}{\partial \hat{q}^{\,n}}
+		\,\right)
+\end{equation*}
+The component functions of
+\,$\nabla_{(q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n})}\,\mathscr{L}$\,
+appear in the Euler-Lagrange equations,
+the ordinary differential equations that determine the motions
+of a Lagrangian mechanical system;
+see Proposition \ref{EulerLagrangeEquations}.
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Equations of motion, Euler-Lagrangian equations]
+\label{EulerLagrangeEquations}
+\mbox{}
+\vskip 0.1cm
+\noindent
+A smooth parametrized curve
+\,$\gamma : [\,a,b\,] \longrightarrow M$\,
+in a Lagrangian mechanical system
+\,$\left(\,M,\mathscr{L}\,\right)$\,
+is a motion if and only if
+\,$\gamma$\,
+satisfies the following ordinary differential equations:
+\begin{equation*}
+\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+\; - \;
+\dfrac{\d}{\d t}\!\left(\,\dfrac{\partial\mathscr{L}}{\partial \hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)\right)
+\;\; = \;\;
+0\,,
+\end{equation*}
+for each \,$i = 1, 2, \,\ldots\, , n \,:=\, \dim(M)$,
+each \,$t \in [\,a,b\,]$, and
+each induced coordinate system \,$\left(\,q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n}\,\right)$\,
+containing \,$\gamma(t) \in M$.
+\end{proposition}
+\proof
+
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
