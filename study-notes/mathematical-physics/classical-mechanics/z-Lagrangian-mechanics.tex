@@ -162,7 +162,8 @@ Now, observe that
 	\overset{{\color{white}1}}{\dfrac{\d}{\d t}}\, W^{i}(t),
 \end{eqnarray*}
 where
-\,$W(t) \,:=\, \left.\dfrac{\d}{\d s}\right\vert_{s=0} \gamma_{s}(t)$.
+\,$W(t) \,:=\, \left.\dfrac{\d}{\d s}\right\vert_{s=0} \gamma_{s}(t) \,\in\, T_{\gamma(t)}M$\,
+is the variation vector field defined along \,$\gamma$.
 Hence,
 \begin{eqnarray*}
 \dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
@@ -187,7 +188,9 @@ Hence,
 \end{eqnarray*}
 Substituting the above into \eqref{VariationVectorField} yields:
 \begin{eqnarray*}
-\left.\dfrac{\d}{\d s}\right\vert_{s=0} \mathscr{L}\!\left(\gamma_{s}(t)\right)
+&&
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} \mathscr{L}\!\left(\gamma_{s}(t)\right)
+\\
 & = &
 	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
 		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}_{0}(t)\right)
@@ -201,22 +204,138 @@ Substituting the above into \eqref{VariationVectorField} yields:
 \\
 & = &
 	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
-		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
 		\cdot
-		\left.\dfrac{\d}{\d s}\right\vert_{s=0} q^{i}(\gamma^{\prime}_{s}(t))
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} x^{i}\circ\pi(\gamma^{\prime}_{s}(t))
 		\, - \,
 		\dfrac{\d}{\d t}\!\left(\,
-			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
 			\right)	
+		\cdot
+		W^{i}(t)
 		\,\right\}
 	\; + \;
-	\overset{n}{\underset{i=1}{\sum}}\;
 	\dfrac{\d}{\d t}\!\left(\,
-		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\overset{n}{\underset{i=1}{\sum}}\;
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
 		\cdot
 		W^{i}(t)
 		\right)
+\\
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} x^{i}\circ\gamma_{s}(t)
+		\, - \,
+		\dfrac{\d}{\d t}\!\left(\,
+			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+			\right)	
+		\cdot
+		W^{i}(t)
+		\,\right\}
+	\; + \;
+	f^{\prime}(t)
+\\
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+		\, - \,
+		\dfrac{\d}{\d t}\!\left(\,
+			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+			\right)
+		\right\}
+	\cdot
+	W^{i}(t)
+	\; + \;
+	f^{\prime}(t)
 \end{eqnarray*}
+where
+\begin{equation*}
+f(t)
+\;\; := \;\;
+	\overset{n}{\underset{i=1}{\sum}}\;
+	\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+	\cdot
+	W^{i}(t)\,,
+\quad
+\textnormal{for \,$t \in [\,a,b\,]$}
+\end{equation*}
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 1:}
+\vskip 0.1cm
+\noindent
+$f : [\,a,b\,] \longrightarrow \Re$\, is globally well-defined on \,$[\,a,b\,]$;\,
+more precisely, the local definition of \,$f$\, above is in fact
+independent of the choice of the local coordinate system.
+Furthermore, \,$f(a) = f(b) = 0$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 1: \quad
+\begin{equation*}
+T^{\textnormal{ver}}_{\gamma(t)}(TM)
+\;\; := \;\;
+	\textnormal{ker}\!\left(\,\d\pi\vert_{\gamma(t)}\,\right)
+\;\; \subset \;\;
+	T_{\gamma(t)}(TM).
+\end{equation*}
+
+\vskip 0.5cm
+\begin{eqnarray*}
+&&
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} S\!\left(\gamma_{s}\right)
+\\
+& = &
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0}\; \int_{a}^{b}\,\mathscr{L}\!\left(\gamma_{s}(t)\right)\d t
+\;\; = \;\;
+	\int_{a}^{b}\left(\left.\dfrac{\d}{\d s}\right\vert_{s=0}\,\mathscr{L}\!\left(\gamma_{s}(t)\right)\right)\d t
+\\
+& = &
+	\int_{a}^{b}\left(\;
+		\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+			\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+			\, - \,
+			\dfrac{\d}{\d t}\!\left(\,
+				\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+				\right)
+			\right\}
+		\cdot
+		W^{i}(t)
+		\; + \;
+		f^{\prime}(t)
+		\right)\d t
+\\
+& = &
+	\int_{a}^{b}\left(\;
+		\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+			\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+			\, - \,
+			\dfrac{\d}{\d t}\!\left(\,
+				\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+				\right)
+			\right\}
+		\cdot
+		W^{i}(t)
+		\right)\d t
+	\; + \;
+	\left(\, f(b) \overset{{\color{white}1}}{-} f(a) \,\right)
+\\
+& = &
+	\int_{a}^{b}\left(\;
+		\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+			\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+			\, - \,
+			\dfrac{\d}{\d t}\!\left(\,
+				\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+				\right)
+			\right\}
+		\cdot
+		W^{i}(t)
+		\right)\d t
+\end{eqnarray*}
+
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
