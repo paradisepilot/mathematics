@@ -45,87 +45,15 @@ S(\,\gamma\,)
 A \,\textbf{motion}\, of the system is a critical point of \,$S$\,
 under smooth variations with fixed endpoints.
 (This statement is a mathematical formulation of
-Hamilton’s principle of least action,
-which should better be called principle of stationary action.)
+\textbf{Hamilton's principle of least action},
+which should better be called principle of {\color{red}stationary} action.)
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{definition}[Filtration]
-\mbox{}
-\vskip 0.2cm
-\noindent
-Suppose $(\Omega,\mathcal{A})$ is a measurable space,
-i.e. $\Omega$ is a non-empty set and $\mathcal{A}$ is a $\sigma$-algebra
-of subsets of \,$\Omega$.
-A \textbf{filtration} on \,$(\Omega,\mathcal{A})$\,
-is a one-parameter family
-$\left\{\,\mathcal{F}_{t}\,\right\}_{t \in T}$,
-of sub-$\sigma$-algebras of $\mathcal{A}$,
-parametrized by $T \subset \Re$,
-such that, for any $s, t \in T$,
-\begin{equation*}
-s \,\leq\, t
-\quad\Longrightarrow\quad
-\mathcal{F}_{s} \; \subset \; \mathcal{F}_{t} \; \subset \; \mathcal{A}
-\end{equation*}
-\end{definition}
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{definition}[Martingale, sub-martingale, super-martingale]
-\mbox{}
-\vskip 0.1cm
-\noindent
-A stochastic process
-\,$\left\{\,\overset{{\color{white}.}}{X}_{t} : (\Omega,\mathcal{A},\mu) \longrightarrow \Re \;\right\}_{t \in T}$\,
-is called a \textbf{martingale}
-with respect to a filtration
-\,$\left\{\,\mathcal{F}_{t}\,\right\}_{t \in T}$\, on \,$(\Omega,\mathcal{A})$,\,
-if
-\begin{itemize}
-\item
-	$X_{t}$ is integrable, for each $t \in T$,
-\item
-	$X_{t}$ is $\mathcal{F}_{t}$-measurable, for each $t \in T$, and
-\item
-	$X_{s} \; {\color{red}=} \; E\!\left[\,X_{t}\,\vert\,\mathcal{F}_{s}\,\right]$,\,
-	for each $s, t \in T$ with $s \leq t$.
-\end{itemize}
-$\left\{\,X_{t}\,\right\}_{t \in T}$\, is called a \textbf{{\color{red}sub-}martingale}
-if the equality above is replaced with \,{\color{red}$\leq$}\,,
-i.e. if \,$\left\{\,X_{t}\,\right\}_{t \in T}$\, satisfies instead:
-\begin{equation*}
-X_{s} \;\; {\color{red}\leq} \;\; E\!\left[\,X_{t}\,\vert\,\mathcal{F}_{s}\,\right],
-\quad
-\textnormal{for each \,$s, t \in T$ with $s \leq t$}.
-\end{equation*}
-\vskip 0.1cm
-\noindent
-$\left\{\,X_{t}\,\right\}_{t \in T}$\, is called a \textbf{{\color{red}super-}martingale}
-if the equality above is replaced with \,{\color{red}$\geq$}\,,
-i.e. if \,$\left\{\,X_{t}\,\right\}_{t \in T}$\, satisfies instead:
-\begin{equation*}
-X_{s} \;\; {\color{red}\geq} \;\; E\!\left[\,X_{t}\,\vert\,\mathcal{F}_{s}\,\right],
-\quad
-\textnormal{for each \,$s, t \in T$ with $s \leq t$}.
-\end{equation*}
-\end{definition}
-
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{remark}[Mnemonic aid]
-\mbox{}
-\vskip -0.1cm
-\noindent
-\begin{itemize}
-\item
-	A {\color{red}sub-}martingale {\color{red}sub}ceeds its own expectation value given history.
-\item
-	A super-martingale exceeds its own expectation value given history.
-\item
-	A martingale equals its own expectation value given history.
-\end{itemize}
-\end{remark}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
