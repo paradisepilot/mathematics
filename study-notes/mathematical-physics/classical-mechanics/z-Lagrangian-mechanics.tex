@@ -136,7 +136,7 @@ each induced coordinate system \,$\left(\,q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldot
 containing \,$\gamma(t) \in M$.
 \end{proposition}
 \proof
-\begin{equation*}
+\begin{equation}\label{VariationVectorField}
 \left.\dfrac{\d}{\d s}\right\vert_{s=0} \mathscr{L}\!\left(\gamma_{s}(t)\right)
 \;\; = \;\;
 	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
@@ -148,7 +148,75 @@ containing \,$\gamma(t) \in M$.
 		\cdot
 		\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
 		\,\right\}
-\end{equation*}
+\end{equation}
+Now, observe that
+\begin{eqnarray*}
+\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+& = &
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} \d x^{i}(\gamma^{\prime}_{s}(t))
+\;\; = \;\;
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} \, \dfrac{\d}{\d t}\,(x^{i}\circ\gamma_{s})(t)
+\;\; = \;\;
+	\dfrac{\d}{\d t}\; \left.\dfrac{\d}{\d s}\right\vert_{s=0} \, (x^{i}\circ\gamma_{s})(t)
+\;\; = \;\;
+	\overset{{\color{white}1}}{\dfrac{\d}{\d t}}\, W^{i}(t),
+\end{eqnarray*}
+where
+\,$W(t) \,:=\, \left.\dfrac{\d}{\d s}\right\vert_{s=0} \gamma_{s}(t)$.
+Hence,
+\begin{eqnarray*}
+\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+\cdot
+\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+& = &
+	\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+	\cdot
+	\dfrac{\d}{\d t}\, W^{i}(t)	
+\;\; = \;\;
+	\dfrac{\d}{\d t}\!\left(\,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		W^{i}(t)
+		\right)
+	\, - \,
+	\dfrac{\d}{\d t}\!\left(\,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\right)	
+	\cdot
+	W^{i}(t)
+\end{eqnarray*}
+Substituting the above into \eqref{VariationVectorField} yields:
+\begin{eqnarray*}
+\left.\dfrac{\d}{\d s}\right\vert_{s=0} \mathscr{L}\!\left(\gamma_{s}(t)\right)
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} q^{i}(\gamma^{\prime}_{s}(t))
+		\, + \,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+		\,\right\}
+\\
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} q^{i}(\gamma^{\prime}_{s}(t))
+		\, - \,
+		\dfrac{\d}{\d t}\!\left(\,
+			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+			\right)	
+		\,\right\}
+	\; + \;
+	\overset{n}{\underset{i=1}{\sum}}\;
+	\dfrac{\d}{\d t}\!\left(\,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		W^{i}(t)
+		\right)
+\end{eqnarray*}
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
