@@ -136,7 +136,19 @@ each induced coordinate system \,$\left(\,q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldot
 containing \,$\gamma(t) \in M$.
 \end{proposition}
 \proof
-
+\begin{equation*}
+\left.\dfrac{\d}{\d s}\right\vert_{s=0} \mathscr{L}\!\left(\gamma_{s}(t)\right)
+\;\; = \;\;
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} q^{i}(\gamma^{\prime}_{s}(t))
+		\, + \,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+		\,\right\}
+\end{equation*}
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
