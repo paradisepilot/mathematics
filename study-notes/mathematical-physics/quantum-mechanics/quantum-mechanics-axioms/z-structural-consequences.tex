@@ -1,0 +1,171 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Structural consequences of the axioms of quantum mechanics}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\subsection{Commutator with Hamiltonian and time-evolution of expectation values}
+
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\H$ is a Hilbert space over $\C$,
+	and $S_{1}(\H)$ is the unit sphere in $\H$.
+\item
+	$\widehat{H} : \D(\widehat{H}) \subset \H \longrightarrow \H$
+	is a Hamiltonian operator defined on $\H$.
+\item
+	$\psi : [\,a,b\,) \longrightarrow S_{1}(\H)$ is solution of the Schr\"{o}dinger equation defined by $\widehat{H}$, i.e.
+	$\psi$ satisfies
+	\begin{equation*}
+	\dfrac{\d\psi(t)}{\d t}
+	\;\; = \;\;
+		-\,\dfrac{\i}{\hbar}\cdot\widehat{H}\!\left[\;\overset{{\color{white}.}}{\psi(t)}\,\right]
+	\end{equation*}
+\item
+	$A : \D(A) \subset \H \longrightarrow \H$
+	is a self-adjoint operator defined on $\H$.
+\end{itemize}
+Then,
+\begin{equation*}
+\dfrac{\d}{\d t}\, E_{\psi}\!\left[\;A\;\right]
+\;\; = \;\;
+	\dfrac{\d}{\d t} \left\langle\; \psi(t) \,, A\psi(\overset{{\color{white}.}}{t})\;\right\rangle
+\;\; = \;\;
+	\left\langle\;
+		\psi(t)
+		\,,\,
+		\dfrac{1}{\i\,\hbar}\cdot\left[A,\widehat{H}\,\right]\psi(t)
+		\;\right\rangle,
+\quad
+\textnormal{for each $t \in (\,a,b\,)$}
+\end{equation*}
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\subsection{Spectral solution of the Schr\"{o}dinger equation \& eigenspaces of the Hamiltonian operator $\widehat{H}$}
+
+Observe that the Schr\"{o}dinger equation is formally of the form:
+\begin{equation*}
+\dfrac{\d}{\d t}\,\psi(t) \;\; = \;\; A \cdot\psi(t)
+\end{equation*}
+where $A$ is a linear operator on a Hilbert space.
+Consider $\psi(t)$ of the following form:
+\begin{equation*}
+\psi(t)
+\;\; = \;\;
+	\exp\!\left(\,tA\,\right)\cdot\psi(0)
+\end{equation*}
+where $\exp\!\left(\,tA\,\right)$ denotes the ``operator exponential''
+of the operator $t A$, in the sense that it satisfies formally:
+\begin{equation*}
+\dfrac{\d}{\d t}\,\exp\!\left(\,tA\,\right)
+\;\; = \;\;
+	A \cdot \exp\!\left(\,tA\,\right)
+\end{equation*}
+Then, $\psi(t) = \exp(tA)\cdot\psi(0)$ gives a formal solution to the original differential equation:
+\begin{equation*}
+\dfrac{\d}{\d t}\,\psi(t)
+\;\; = \;\;
+	\dfrac{\d}{\d t}\left(\,\exp\!\left(\,tA\,\right)\overset{{\color{white}1}}{\cdot}\psi(0)\right)
+\;\; = \;\;
+	\left(\,\dfrac{\d}{\d t}\,\exp\!\left(\,tA\,\right)\right)\cdot\psi(0)
+\;\; = \;\;
+	A \cdot \exp\!\left(\,tA\,\right)\cdot\psi(0)
+\;\; = \;\;
+	A \cdot\psi(t)
+\end{equation*}
+Hence, we attempt to seek a solution to the Schr\"{o}dinger equation of the form:
+\begin{equation*}
+\psi(t)
+\;\; = \;\;
+	\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\widehat{H}}{\hbar}\,\right)\cdot\psi(0)
+\end{equation*}
+which means that we need the operator exponential
+\,$\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\widehat{H}}{\hbar}\,\right)$\,
+to make sense.
+To this end, note that, if the Hilbert space $\H$ admits an orthonormal basis
+$\left\{\,\overset{{\color{white}.}}{e_{k}}\,\right\}_{k \in K}$
+consisting of eigenvectors of $\widehat{H}$,
+with
+$\widehat{H}\,e_{k} = \lambda_{k}\cdot e_{k}$,
+then the operator exponential can be
+defined via its action of the $e_{k}$'s (and linear extension):
+\begin{equation*}
+\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\widehat{H}}{\hbar}\,\right)\cdot e_{k}
+\;\; = \;\;
+	\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\lambda_{k}}{\hbar}\,\right)\cdot e_{k}
+\end{equation*}
+In practice, the Hamiltonian operator $\widehat{H}$ is often an unbounded self-adjoint operator on $\H$.
+The spectral theory for {\color{red}unbounded self-adjoint} operators on Hilbert spaces is invoked to construct solutions
+for the Schr\"{o}dinger equation.
+More precisely,
+\begin{itemize}
+\item
+	Find an orthonormal basis
+	$\left\{\,\overset{{\color{white}.}}{e_{k}}\,\right\}_{k \in K}$
+	for $\H$ consisting of eigenvectors of the Hamiltonian operator $\widehat{H}$,
+	with $\widehat{H}\,e_{k} = \lambda_{k}\cdot e_{k}$.
+	In other words, completely solve the eigenvector/eigenvalue problem for $\widehat{H}$:
+	\begin{equation*}
+	\widehat{H}\cdot\psi \;\; = \;\; \lambda\cdot\psi\,,
+	\quad
+	\textnormal{for \,$\lambda \in \Re$\, and \,$\psi \in \H$}.
+	\end{equation*}
+	The above equation is known as the \textbf{time-independent Schr\"{o}dinger equation}.
+\item
+	Express the initial state as a linear combination of 
+	$\left\{\,\overset{{\color{white}.}}{e_{k}}\,\right\}_{k \in K}$:
+	\begin{equation*}
+	\psi(0)
+	\;\; = \;\;
+		\underset{k \in K}{\sum}\;\alpha_{k}\cdot e_{k}
+	\;\; = \;\;
+		\underset{k \in K}{\sum}\;\langle\,\psi(0),e_{k}\,\rangle\cdot e_{k}
+	\end{equation*}
+\item
+	Obtain a solution via:
+	\begin{eqnarray*}
+	\psi(t)
+	& := &
+		\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\widehat{H}}{\hbar}\,\right)\cdot \psi(0)
+	\\
+	& = &
+		\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\widehat{H}}{\hbar}\,\right)\cdot
+		\left(\,\underset{k \in K}{\sum}\;\alpha_{k}\cdot e_{k}\,\right)
+	\;\; = \;\;
+		\underset{k \in K}{\sum}\;
+		\alpha_{k}\cdot 
+		\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\widehat{H}}{\hbar}\,\right)\cdot e_{k}
+	\\
+	& = &
+		\underset{k \in K}{\sum}\;
+		\alpha_{k}\cdot 
+		\exp\!\left(\,-\,\dfrac{{\color{white}.}\i\,t\cdot\lambda_{k}}{\hbar}\,\right)\cdot e_{k}
+	\end{eqnarray*}
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\subsection{Symmetries of the Hamiltonian operator $\widehat{H}$ \& entrance of representation theory}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%

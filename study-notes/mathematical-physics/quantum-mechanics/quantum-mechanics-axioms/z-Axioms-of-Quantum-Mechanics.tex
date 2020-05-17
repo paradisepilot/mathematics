@@ -1,0 +1,89 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Axioms of Quantum Mechanics}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{enumerate}
+\item
+	\textbf{Quantum state space}
+	\vskip 0.05cm
+	For every given ``physical system'', there exists a Hilbert space $\H$ over $\C$
+	such that every possible ``quantum state'' of the given system is a unit vector in $\H$.
+	Furthermore, if
+	\begin{itemize}
+	\item
+		$\psi_{1}, \psi_{2} \in \H$ are unit vectors in $\H$, and they both represent physical states of the given quantum system,
+	\item
+		$\psi_{2} = c \cdot \psi_{1}$, for some $c \in \C$,
+	\end{itemize}
+	then $\psi_{1}$ and $\psi_{2}$ in fact represent the same physical state.
+
+\vskip 0.5cm
+\item
+	\textbf{Quantization (classical observable corresponds to self-adjoint operator)}
+	\vskip 0.05cm
+	To each classical observable $f$
+	(i.e. $f$ is a Borel-measurable $\Re$-valued function defined on the phase space in the Hamiltonian formalism)
+	there corresponds a (possibly unbounded) self-adjoint operator
+	$\widehat{f}$ on $\H$.
+	$\widehat{f}$ is interpreted to be a quantum observable.
+
+\vskip 0.5cm
+\item
+	\textbf{Each quantum state induces a probability measure on the classical phase space}
+	\vskip 0.05cm
+	Every unit vector $\psi \in \H$ representing a quantum state of a given physical system
+	induces a probability measure $\mu_{\psi}$ on the classical phase space of the system,
+	making each classical observable into a random variable defined on the phase space.
+	Furthermore, for each classical observable $f$ and for each $m \in \{\,0\,\}\cup\N$,
+	the expectation value $E_{\psi}\!\left[\;\overset{{\color{white}.}}{f^{\,m}}\;\right]$ of $f^{\,m}$
+	with respect to $\mu_{\psi}$ satisfies the following equality:
+	\begin{equation*}
+	E_{\psi}\!\left[\;\overset{{\color{white}.}}{f^{\,m}}\;\right]
+	\;\; := \;\;
+		\int_{\Re^{2n}}
+		f^{m}(x,p)
+		\;\d\mu_{\psi}(x,p)
+	\;\; = \;\;
+		\left\langle\;
+			\psi
+			\,,\,
+			\widehat{f}^{\,m}(\psi)
+			\;\right\rangle_{\H}
+	\end{equation*}
+
+\vskip 0.3cm
+\item
+	\textbf{Time evolution of quantum states is governed by the Schr\"{o}dinger equation}
+	\vskip 0.05cm
+	Let $\psi(t) \in \H$ be the quantum state at time $t$ of the given physical system.
+	Then, $\psi(t)$ is differentiable with respect to $t$, and its derivative satisfies
+	the following equation (the Schr\"{o}dinger equation):
+	\begin{equation*}
+	\dfrac{\d\psi(t)}{\d t}
+	\;\; = \;\;
+		-\,\dfrac{\sqrt{-1}}{\hbar}\cdot\widehat{H}\!\left[\;\overset{{\color{white}.}}{\psi(t)}\,\right]
+	\end{equation*}
+	where $\hbar$ is the reduced Planck constant, and
+	$\widehat{H} : \D(\widehat{H}) \subset \H \longrightarrow \H$
+	is the self-adjoint operator corresponding to the Hamiltonian function $H$
+	defined on the classical phase space.
+
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
