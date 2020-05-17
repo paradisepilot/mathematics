@@ -1,0 +1,220 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Uncertainty Principle}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\H$,\, $\H_{1}$\, and \,$\H_{2}$\, are Hilbert spaces over \,$\C$.
+\begin{enumerate}
+\item
+	A \,\textbf{linear operator}\, from \,$\H_{1}$\, into \,$\H_{2}$\,
+	is a linear map
+	\,$T : \D(T) \longrightarrow \H_{2}$,\,
+	where \,$\D(T) \subset \H_{1}$\, is a linear subspace of \,$\H_{1}$.
+\item
+	A linear operator
+	\,$T : \D(T) \subset \H \longrightarrow \H$\,
+	is said to be \,\textbf{Hermitian}\, if
+	\begin{equation*}
+	\langle\,Tx\,,\,y\,\rangle
+	\;\; = \;\;
+		\langle\,x\,,\,Ty\,\rangle\,,
+	\quad
+	\textnormal{for each \,$x, y \in \D(T) \subset \H$}.
+	\end{equation*}
+\end{enumerate}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}[Uncertainty principle]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\H$\, is a Hilbert space over \,$\C$.
+\item
+	$A : \D(A) \subset \H \longrightarrow \H$,\, $B : \D(B) \subset \H\longrightarrow \H$\,
+	are Hermitian operators on $\H$.
+\item
+	The commutator
+	\,$[\,A,B\,] : \D(A \circ B)\cap\D(B \circ A) \subset \H \longrightarrow \H$\,
+	of \,$A$\, and \,$B$\, is defined as follows:
+	\begin{equation*}
+	[\,A,B\,](x)
+	\;\; := \;\;
+		A(Bx) \,-\, B(Ax)\,,
+	\quad
+	\textnormal{for each \,$x \,\in\, \D(A \circ B) \cap \D(B \circ A) \,\subset\, \H$}
+	\end{equation*}
+\end{itemize}
+Then, the following inequality holds:
+\begin{equation*}
+\left\vert\; \left\langle\,[A,B]\,x\,,\,\overset{{\color{white}1}}{x}\,\right\rangle \;\right\vert
+\;\; \leq \;\;
+	2 \cdot
+	\left\Vert\; (A \,-\, \alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x} \;\right\Vert
+	\cdot
+	\left\Vert\; (B \,-\, \beta\cdot 1_{\H})\,\overset{{\color{white}1}}{x} \;\right\Vert,
+\end{equation*}
+for each \,$\alpha, \beta \in \Re$,\, and
+for each \,$x \,\in\, \D(A \circ B) \cap \D(B \circ A) \,\subset\, \H$.
+\end{theorem}
+\proof
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\quad
+For each \,$x \in \D(A \circ B)\cap\D(B \circ A) \subset \H$,\, we have:
+\begin{equation*}
+\left\langle\,[\,A,B\,]\,x\,,\,\overset{{\color{white}1}}{x}\,\right\rangle
+\;\; = \;\;
+	- \, \sqrt{-1} \cdot 2 \cdot
+	\textnormal{Im}\!\left(\left\langle\,
+		(A -\alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x}
+		\,,\,
+		(B - \beta\cdot 1_{\H})\,x
+		\,\right\rangle\right)
+\end{equation*}
+Proof of Claim 1:\quad
+First, note that
+\begin{eqnarray*}
+\left\langle\,[\,A,B\,]\,x\,,\,\overset{{\color{white}1}}{x}\,\right\rangle
+&=&
+	\left\langle\,AB\,x\,,\,\overset{{\color{white}1}}{x}\,\right\rangle
+	\, - \,
+	\left\langle\,BA\,x\,,\,\overset{{\color{white}1}}{x}\,\right\rangle
+\\
+&=&
+	\left\langle\,Bx\,,A\overset{{\color{white}1}}{x}\,\right\rangle
+	\, - \,
+	\left\langle\,Ax\,,B\overset{{\color{white}1}}{x}\,\right\rangle\,,
+	\quad
+	\textnormal{since $A$, $B$ are Hermitian}
+\\
+&=&
+	\overline{\left\langle\,Ax\,,B\overset{{\color{white}1}}{x}\,\right\rangle}
+	\, - \,
+	\left\langle\,Ax\,,B\overset{{\color{white}1}}{x}\,\right\rangle
+\\
+&=&
+	-\, \sqrt{-1} \cdot 2 \cdot
+	\textnormal{Im}\!\left(\left\langle\,Ax\,,B\overset{{\color{white}1}}{x}\,\right\rangle\right),
+\end{eqnarray*}
+where the last equality follows from
+$\overline{(a + \i\,b)} - (a + \i\,b)$ $=$ $(a - \i\,b) - (a + \i\,b)$ $=$ $-\i\cdot 2\cdot b$,
+for $\i\,:=\sqrt{-1}$ and for each $a,b\in\Re$.
+On the other hand,
+\begin{eqnarray*}
+\left\langle\,
+	(A -\alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x}
+	\,,\,
+	(B - \beta\cdot 1_{\H})\,x
+	\,\right\rangle
+&=&
+	\left\langle\, A\overset{{\color{white}1}}{x} \,, Bx \,\right\rangle
+	\,-\,
+		\beta\cdot
+		\left\langle\, A\overset{{\color{white}1}}{x} \,,\, x \,\right\rangle
+	\,-\,
+		\alpha\cdot
+		\left\langle\, \overset{{\color{white}1}}{x} \,, Bx \,\right\rangle
+	\,+\,
+		\alpha\,\beta\cdot
+		\left\langle\, \overset{{\color{white}1}}{x} \,,\, x \,\right\rangle
+\end{eqnarray*}
+which implies
+\begin{eqnarray*}
+\textnormal{Im}\!\left(
+	\left\langle\,
+		(A -\alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x}
+		\,,\,
+		(B - \beta\cdot 1_{\H})\,x
+		\,\right\rangle
+	\right)
+&=&
+	\textnormal{Im}\!\left(
+		\left\langle\, A\overset{{\color{white}1}}{x} \,, Bx \,\right\rangle
+		\right)
+\end{eqnarray*}
+since
+$\beta\cdot\left\langle\, A\overset{{\color{white}1}}{x} \,,\, x \,\right\rangle$,\,
+$\alpha\cdot\left\langle\, \overset{{\color{white}1}}{x} \,, Bx \,\right\rangle$,\,
+$\alpha\,\beta\cdot\left\langle\, \overset{{\color{white}1}}{x} \,,\, x \,\right\rangle$\,
+$\in$ $\Re$.
+Thus, we see that
+\begin{eqnarray*}
+\left\langle\,[\,A,B\,]\,x\,,\,\overset{{\color{white}1}}{x}\,\right\rangle
+&=&
+	-\, \sqrt{-1} \cdot 2 \cdot
+	\textnormal{Im}\!\left(\left\langle\,Ax\,,B\overset{{\color{white}1}}{x}\,\right\rangle\right),
+\\
+&=&
+	-\, \sqrt{-1} \cdot 2 \cdot
+	\textnormal{Im}\!\left(
+		\left\langle\,
+			(A -\alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x}
+			\,,\,
+			(B - \beta\cdot 1_{\H})\,x
+			\,\right\rangle
+		\right)
+\end{eqnarray*}
+This proves Claim 1.
+
+\vskip 0.5cm
+\noindent
+Now, observe that
+\begin{eqnarray*}
+\left\vert\; \left\langle\,[A,B]\,x\,,\,\overset{{\color{white}1}}{x}\,\right\rangle \;\right\vert
+& = &
+	2 \cdot
+	\left\vert\;
+		\textnormal{Im}\!\left(
+			\left\langle\,
+				(A -\alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x}
+				\,,\,
+				(B - \beta\cdot 1_{\H})\,x
+				\,\right\rangle
+			\right)
+		\;\right\vert,
+	\quad
+	\textnormal{by Claim 1}
+\\
+& \leq &
+	2 \cdot
+	\left\vert\;
+			\left\langle\,
+				(A -\alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x}
+				\,,\,
+				(B - \beta\cdot 1_{\H})\,x
+				\,\right\rangle
+		\;\right\vert
+\\
+& \leq &
+	2 \cdot
+	\left\Vert\; (A \,-\, \alpha\cdot 1_{\H})\,\overset{{\color{white}1}}{x} \;\right\Vert
+	\cdot
+	\left\Vert\; (B \,-\, \beta\cdot 1_{\H})\,\overset{{\color{white}1}}{x} \;\right\Vert,
+	\quad
+	\textnormal{by the Cauchy-Schwarz inequality}
+\end{eqnarray*}
+This completes the proof of the Theorem.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
