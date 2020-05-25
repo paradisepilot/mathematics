@@ -1,0 +1,222 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Maxwell's equations -- differential vector calculus form}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+Suppose
+\begin{equation*}
+E \; = \; E_{1}\,\dfrac{\partial}{\partial x_{1}} + E_{2}\,\dfrac{\partial}{\partial x_{2}} + E_{3}\,\dfrac{\partial}{\partial x_{3}}\,,
+\quad
+B \; = \; B_{1}\,\dfrac{\partial}{\partial x_{1}} + B_{2}\,\dfrac{\partial}{\partial x_{2}} + B_{3}\,\dfrac{\partial}{\partial x_{3}}\,,
+\end{equation*}
+\begin{equation*}
+\rho\,,
+\quad\textnormal{and}\quad
+J \; = \; J_{1}\,\dfrac{\partial}{\partial x_{1}} + J_{2}\,\dfrac{\partial}{\partial x_{2}} + J_{3}\,\dfrac{\partial}{\partial x_{3}}
+\end{equation*}
+are, respectively, the electric (vector) field, magnetic (vector) field,
+electric charge density (scalar) field, and electric current (vector) field
+defined on $I \times U$,
+where $I$ is an open interval in $\Re$, and $U$ is a domain in $\Re^{3}$.
+
+\vskip 0.5cm
+\noindent
+Then, Maxwell's equations are the following:
+\begin{enumerate}
+\item
+	Gauss's law for magnetism (non-existence of magnetic monopoles):
+	\begin{equation*}
+	\nabla \bullet B \;\; = \;\; 0
+	\end{equation*}
+
+\item
+	Coulomb's law (conservation of electric charge):
+	\begin{equation*}
+	\nabla \bullet E \;\; = \;\; 4 \pi \rho
+	\end{equation*}
+
+\item
+	Faraday's law of induction:
+	\begin{equation*}
+	\dfrac{\partial B}{\partial t} \;\; = \;\; -\,\nabla \times E
+	\end{equation*}
+
+\item
+	Amp\'{e}re-Maxwell's law:
+	\begin{equation*}
+	\dfrac{\partial E}{\partial t} \;\; = \;\; \nabla \times B \,-\, 4\,\pi\cdot J
+	\end{equation*}
+
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\begin{center}
+\textbf{\large Integral form of Maxwell's equations}
+\end{center}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\textbf{Gauss's law for magnetism (non-existence of magnetic monopoles)}
+\begin{eqnarray*}
+	\left(\begin{array}{c}
+	\textnormal{magnetic charge}
+	\\
+	\textnormal{contained in}
+	\\
+	\textnormal{domain $U \subset \Re^{3}$}
+	\end{array}\!\right)
+&=&
+	\left(\!\begin{array}{c}
+	\textnormal{outward flux}
+	\\
+	\textnormal{of magnetic field}
+	\\
+	\textnormal{through $\partial U$}
+	\end{array}\!\right)
+\\
+0
+&=&
+	\int\!\!\!\!\int_{\partial U}\, B \bullet \widehat{\mathbf{n}} \;\d S
+\\
+&=&
+	\int\!\!\!\!\int\!\!\!\!\int_{U}\, \nabla \bullet B \;\d V\,,
+	\quad
+	\textnormal{by Divergence Theorem of Gauss}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\textbf{Coulomb's law (conservation of electric charge)}
+\begin{eqnarray*}
+	4\,\pi\cdot\left(\begin{array}{c}
+	\textnormal{electric charge}
+	\\
+	\textnormal{contained in}
+	\\
+	\textnormal{domain $U \subset \Re^{3}$}
+	\end{array}\!\right)
+&=&
+	\left(\begin{array}{c}
+	\textnormal{outward flux}
+	\\
+	\textnormal{of electric field}
+	\\
+	\textnormal{through $\partial U$}
+	\end{array}\!\right)
+\\
+4\,\pi\cdot\int\!\!\!\!\int\!\!\!\!\int_{U}\, \rho \;\d V
+&=&
+	\int\!\!\!\!\int_{\partial U}\, E \bullet \widehat{\mathbf{n}} \;\d S
+\\
+&=&
+	\int\!\!\!\!\int\!\!\!\!\int_{U}\, \nabla \bullet E \;\d V\,,
+	\quad
+	\textnormal{by Divergence Theorem of Gauss}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\textbf{Faraday's law of induction}
+\begin{eqnarray*}
+	\left(\begin{array}{c}
+	\textnormal{time rate of change}
+	\\
+	\textnormal{of magnetic flux}
+	\\
+	\textnormal{through surface $\Sigma \subset \Re^{3}$}
+	\end{array}\!\right)
+&=&
+	-\,\left(\begin{array}{c}
+	\textnormal{electric field}
+	\\
+	\textnormal{around close path $\partial \Sigma$}
+	\end{array}\!\right)
+\\
+\int\!\!\!\!\int_{\Sigma}\; \dfrac{\partial B}{\partial t} \,\bullet\, \widehat{\mathbf{n}}\;\d S
+\;\; = \;\;
+\dfrac{\d}{\d t}\left(\,\int\!\!\!\!\int_{\Sigma}\; B \,\bullet\, \widehat{\mathbf{n}}\;\d S\,\right)
+&=&
+	-\,\int_{\partial\Sigma}\, E \,\bullet\, \widehat{\mathbf{t}} \;\d l
+\\
+&=&
+	-\,\int\!\!\!\!\int_{\Sigma}\; (\nabla \times E) \,\bullet\, \widehat{\mathbf{n}} \;\d S\,,
+	\quad
+	\textnormal{by Stoke's Theorem}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\textbf{Amp\`{e}re-Maxwell's law}
+\begin{eqnarray*}
+\int\!\!\!\!\int_{\Sigma}\; (\nabla \times B) \,\bullet\, \widehat{\mathbf{n}} \;\d S
+& = &
+\int_{\partial\Sigma}\, B \,\bullet\, \widehat{\mathbf{t}} \;\d l\,,
+\quad
+\textnormal{by Stoke's Theorem}
+\\
+&=&
+	\left(\begin{array}{c}
+	\textnormal{magnetic field}
+	\\
+	\textnormal{around}
+	\\
+	\textnormal{close path $\partial\Sigma$}
+	\end{array}\!\right)
+\\
+&=&
+	4\,\pi\cdot\left(\begin{array}{c}
+	\textnormal{electric current}
+	\\
+	\textnormal{through}
+	\\
+	\textnormal{surface $\Sigma \subset \Re^{3}$}
+	\end{array}\!\right)
+	\; + \;
+	\left(\begin{array}{c}
+	\textnormal{time rate of change}
+	\\
+	\textnormal{of electric field}
+	\\
+	\textnormal{through surface $\Sigma \subset \Re^{3}$}
+	\end{array}\!\right)
+\\
+&=&
+	4\,\pi\cdot\int\!\!\!\!\int_{\Sigma}\; J \,\bullet\, \widehat{\mathbf{n}} \,\;\d S
+	\; + \;
+	\dfrac{\d}{\d t}\left(\,\int\!\!\!\!\int_{\Sigma}\; E \,\bullet\, \widehat{\mathbf{n}} \,\;\d S\,\right)
+\\
+&=&
+	\int\!\!\!\!\int_{\Sigma}\; \left(\,4\,\pi\cdot J \,+\, \dfrac{\partial E}{\partial t} \,\right)\,\bullet\, \widehat{\mathbf{n}} \,\;\d S
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+

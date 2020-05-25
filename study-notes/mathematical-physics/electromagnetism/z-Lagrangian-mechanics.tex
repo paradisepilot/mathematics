@@ -1,0 +1,346 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Lagrangian mechanics}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Lagrangian mechanical system, Definition 2.1, \cite{Cortes2017}]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A \,\textbf{Lagrangian mechanical system}\, is a pair \,$\left(\,M,\mathscr{L}\,\right)$\,
+consisting of a smooth manifold \,$M$ and a smooth $\Re$-valued function
+\,$\mathscr{L} : TM \longrightarrow \Re$\,
+defined on the tangent bundle \,$TM$ of \,$M$.
+The manifold \,$M$ is called the \textbf{configuration space} and
+the function \,$\mathscr{L}$\, is called the \textbf{Lagrangian function}
+(or simply the \textbf{Lagrangian}) of the system.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Hamilton's principle of least action]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\left(\,M,\mathscr{L}\,\right)$ be a Lagrangian mechanical system.
+The \,\textbf{action}\, of a smooth parametrized curve
+\,$\gamma : [\,a, b\,] \longrightarrow M$\,
+is defined as
+\begin{equation*}
+S(\,\gamma\,)
+\;\; := \;\;
+\int_{a}^{b}
+\mathscr{L}(\,\gamma(t)\,)\,\d t.
+\end{equation*}
+A \,\textbf{motion}\, of the system is a critical point of \,$S$\,
+under smooth variations with fixed endpoints.
+(This statement is a mathematical formulation of
+\textbf{Hamilton's principle of least action},
+which should better be called principle of {\color{red}stationary} action.)
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Induced coordinate systems]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\left(\,M,\mathscr{L}\,\right)$ is a Lagrangian mechanical system, with \,$n \,:=\, \dim(M)$, and
+\item
+	$(x^{1},\ldots,x^{n}) : U \subset M \longrightarrow \Re^{n}$\,
+	is a local coordinate system.
+\end{itemize}
+Then, the \,\textbf{induced coordinate sytem}\, of \,$(x^{1},\ldots,x^{n})$\, is
+\,$\left(\,q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n}\,\right) : \pi^{-1}(U) \longrightarrow \Re^{2n}$\,
+given by
+\begin{equation*} 
+q^{i} \; := \; x^{i} \circ \pi \,:\, \pi^{-1}(U) \,\longrightarrow\, \Re,
+\quad\textnormal{and}\quad
+\hat{q}^{\,i} \; := \; \d x^{i} \,:\, \pi^{-1}(U) \,\longrightarrow\, \Re\,,
+\end{equation*}
+where \,$\pi : TM \longrightarrow M$\, is the canoncial projection.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}[Gradient of the Lagrangian function with respect to an induced coordinate system]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Note that
+\begin{equation*}
+\nabla_{(q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n})}\,\mathscr{L}
+\;\; = \;\;
+	\left(\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{1}}\,,
+		\,\ldots\,,
+		\dfrac{\partial\mathscr{L}}{\partial q^{n}}\,,
+		\dfrac{\partial\mathscr{L}}{\partial \hat{q}^{\,1}}\,,
+		\,\ldots\,
+		\dfrac{\partial\mathscr{L}}{\partial \hat{q}^{\,n}}
+		\,\right)
+\; : \;
+	\pi^{-1}(U) \; \longrightarrow \; \Re^{2n}
+\end{equation*}
+The component functions of
+\,$\nabla_{(q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n})}\,\mathscr{L}$\,
+appear in the Euler-Lagrange equations,
+the ordinary differential equations that determine the motions
+of a Lagrangian mechanical system;
+see Proposition \ref{EulerLagrangeEquations}.
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Equations of motion, Euler-Lagrangian equations]
+\label{EulerLagrangeEquations}
+\mbox{}
+\vskip 0.1cm
+\noindent
+A smooth parametrized curve
+\,$\gamma : [\,a,b\,] \longrightarrow M$\,
+in a Lagrangian mechanical system
+\,$\left(\,M,\mathscr{L}\,\right)$\,
+is a motion if and only if
+\,$\gamma$\,
+satisfies the following ordinary differential equations:
+\begin{equation*}
+\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+\; - \;
+\dfrac{\d}{\d t}\!\left(\,\dfrac{\partial\mathscr{L}}{\partial \hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)\right)
+\;\; = \;\;
+0\,,
+\end{equation*}
+for each \,$i = 1, 2, \,\ldots\, , n \,:=\, \dim(M)$,
+each \,$t \in [\,a,b\,]$, and
+each induced coordinate system \,$\left(\,q^{1},\ldots,q^{n},\hat{q}^{\,1},\ldots,\hat{q}^{\,n}\,\right)$\,
+containing \,$\gamma(t) \in M$.
+\end{proposition}
+\proof
+\begin{equation}\label{VariationVectorField}
+\left.\dfrac{\d}{\d s}\right\vert_{s=0} \mathscr{L}\!\left(\gamma_{s}(t)\right)
+\;\; = \;\;
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} q^{i}(\gamma^{\prime}_{s}(t))
+		\, + \,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+		\,\right\}
+\end{equation}
+Now, observe that
+\begin{eqnarray*}
+\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+& = &
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} \d x^{i}(\gamma^{\prime}_{s}(t))
+\;\; = \;\;
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} \, \dfrac{\d}{\d t}\,(x^{i}\circ\gamma_{s})(t)
+\;\; = \;\;
+	\dfrac{\d}{\d t}\; \left.\dfrac{\d}{\d s}\right\vert_{s=0} \, (x^{i}\circ\gamma_{s})(t)
+\;\; = \;\;
+	\overset{{\color{white}1}}{\dfrac{\d}{\d t}}\, W^{i}(t),
+\end{eqnarray*}
+where
+\,$W(t) \,:=\, \left.\dfrac{\d}{\d s}\right\vert_{s=0} \gamma_{s}(t) \,\in\, T_{\gamma(t)}M$\,
+is the variation vector field defined along \,$\gamma$.
+Hence,
+\begin{eqnarray*}
+\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+\cdot
+\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+& = &
+	\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+	\cdot
+	\dfrac{\d}{\d t}\, W^{i}(t)	
+\;\; = \;\;
+	\dfrac{\d}{\d t}\!\left(\,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		W^{i}(t)
+		\right)
+	\, - \,
+	\dfrac{\d}{\d t}\!\left(\,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\right)	
+	\cdot
+	W^{i}(t)
+\end{eqnarray*}
+Substituting the above into \eqref{VariationVectorField} yields:
+\begin{eqnarray*}
+&&
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} \mathscr{L}\!\left(\gamma_{s}(t)\right)
+\\
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} q^{i}(\gamma^{\prime}_{s}(t))
+		\, + \,
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}_{0}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} \hat{q}^{\,i}(\gamma^{\prime}_{s}(t))
+		\,\right\}
+\\
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} x^{i}\circ\pi(\gamma^{\prime}_{s}(t))
+		\, - \,
+		\dfrac{\d}{\d t}\!\left(\,
+			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+			\right)	
+		\cdot
+		W^{i}(t)
+		\,\right\}
+	\; + \;
+	\dfrac{\d}{\d t}\!\left(\,
+		\overset{n}{\underset{i=1}{\sum}}\;
+		\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+		\cdot
+		W^{i}(t)
+		\right)
+\\
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\,
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+		\cdot
+		\left.\dfrac{\d}{\d s}\right\vert_{s=0} x^{i}\circ\gamma_{s}(t)
+		\, - \,
+		\dfrac{\d}{\d t}\!\left(\,
+			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+			\right)	
+		\cdot
+		W^{i}(t)
+		\,\right\}
+	\; + \;
+	f^{\prime}(t)
+\\
+& = &
+	\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+		\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+		\, - \,
+		\dfrac{\d}{\d t}\!\left(\,
+			\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+			\right)
+		\right\}
+	\cdot
+	W^{i}(t)
+	\; + \;
+	f^{\prime}(t)
+\end{eqnarray*}
+where
+\begin{equation*}
+f(t)
+\;\; := \;\;
+	\overset{n}{\underset{i=1}{\sum}}\;
+	\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+	\cdot
+	W^{i}(t)\,,
+\quad
+\textnormal{for \,$t \in [\,a,b\,]$}
+\end{equation*}
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 1:}
+\vskip 0.1cm
+\noindent
+$f : [\,a,b\,] \longrightarrow \Re$\, is globally well-defined on \,$[\,a,b\,]$;\,
+more precisely, the local definition of \,$f$\, above is in fact
+independent of the choice of the local coordinate system.
+Furthermore, \,$f(a) = f(b) = 0$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 1: \quad
+\begin{equation*}
+T^{\textnormal{ver}}_{\gamma(t)}(TM)
+\;\; := \;\;
+	\textnormal{ker}\!\left(\,\d\pi\vert_{\gamma(t)}\,\right)
+\;\; \subset \;\;
+	T_{\gamma(t)}(TM).
+\end{equation*}
+
+\vskip 0.5cm
+\begin{eqnarray*}
+&&
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0} S\!\left(\gamma_{s}\right)
+\\
+& = &
+	\left.\dfrac{\d}{\d s}\right\vert_{s=0}\; \int_{a}^{b}\,\mathscr{L}\!\left(\gamma_{s}(t)\right)\d t
+\;\; = \;\;
+	\int_{a}^{b}\left(\left.\dfrac{\d}{\d s}\right\vert_{s=0}\,\mathscr{L}\!\left(\gamma_{s}(t)\right)\right)\d t
+\\
+& = &
+	\int_{a}^{b}\left(\;
+		\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+			\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+			\, - \,
+			\dfrac{\d}{\d t}\!\left(\,
+				\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+				\right)
+			\right\}
+		\cdot
+		W^{i}(t)
+		\; + \;
+		f^{\prime}(t)
+		\right)\d t
+\\
+& = &
+	\int_{a}^{b}\left(\;
+		\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+			\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+			\, - \,
+			\dfrac{\d}{\d t}\!\left(\,
+				\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+				\right)
+			\right\}
+		\cdot
+		W^{i}(t)
+		\right)\d t
+	\; + \;
+	\left(\, f(b) \overset{{\color{white}1}}{-} f(a) \,\right)
+\\
+& = &
+	\int_{a}^{b}\left(\;
+		\overset{n}{\underset{i=1}{\sum}}\,\left\{\;
+			\dfrac{\partial\mathscr{L}}{\partial q^{i}}\!\left(\gamma^{\prime}(t)\right)
+			\, - \,
+			\dfrac{\d}{\d t}\!\left(\,
+				\dfrac{\partial\mathscr{L}}{\partial\hat{q}^{\,i}}\!\left(\gamma^{\prime}(t)\right)
+				\right)
+			\right\}
+		\cdot
+		W^{i}(t)
+		\right)\d t
+\end{eqnarray*}
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
