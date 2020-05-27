@@ -1,0 +1,84 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Maxwell's equations -- gauge theory, gauge field}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}[Gauge field gives rise to electric, magnetic fields that satisfy Maxwell's equations]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose
+\begin{equation*}
+\mathbf{A}
+\;\; := \;\;
+	-\,A_{0}\,\d t \,+\, A_{1}\,\d x_{1}  \,+\, A_{2}\,\d x_{2}  \,+\, A_{3}\,\d x_{3}
+\end{equation*}
+is a local gauge field (local $4$-potential), where
+\,$A_{0}, A_{1}, A_{2}, A_{3}$\,
+are smooth functions defined on a contractible domain $U \subset \Re^{1,3}$.
+\vskip 0.3cm
+\noindent
+Define:
+\begin{eqnarray*}
+A
+& := &
+	A_{1}\,\dfrac{\partial}{\partial x_{1}} \,+\, A_{2}\,\dfrac{\partial}{\partial x_{2}} \,+\, A_{3}\,\dfrac{\partial}{\partial x_{3}}
+\\
+\overset{{\color{white}1}}{B}
+& := &
+	\nabla \times A
+\\
+\overset{{\color{white}\textnormal{\Large$1$}}}{E}
+& := &
+	-\,\nabla A_{0} \,-\, \dfrac{\partial A}{\partial t}
+\end{eqnarray*}
+Then,
+\begin{enumerate}
+\item
+	$B$ satisfies Gauss's law for magnetism (non-existence of magnetic monopoles).
+\item
+	$B$ and $E$ satisfy Faraday's law.
+\item
+	$E$ satisfies Coulomb's law if and only if $\mathbf{A}$ satisfies:
+	\begin{equation*}
+	\Delta A_{0} \,+\, \dfrac{\partial}{\partial t}\!\left(\,\nabla \overset{{\color{white}-}}{\bullet} A\,\right)
+	\;\; = \;\;
+		- \, 4\,\pi \cdot \rho
+	\end{equation*}
+\item
+	$B$ and $E$ satisfy Amp\`{e}re-Maxwell's law if and only if $\mathbf{A}$ satisfies:
+	\begin{equation*}
+	\left(\, -\,\dfrac{\partial^{2}}{\partial t^{2}} \,+\, \Delta \,\right) \cdot A
+	\,-\,
+	\nabla\left(\,\dfrac{\partial A_{0}}{\partial t} \,+\, \nabla\bullet A\,\right)
+	\;\; = \;\;
+		- \, 4\,\pi \cdot J
+	\end{equation*}
+\end{enumerate}
+\end{theorem}
+\proof
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
