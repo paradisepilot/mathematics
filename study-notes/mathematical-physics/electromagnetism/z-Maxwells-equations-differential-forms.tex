@@ -121,7 +121,107 @@ Then,
 \end{enumerate}
 \end{theorem}
 \proof
-
+\begin{enumerate}
+\item
+	First, we compute:
+	\begin{eqnarray*}
+	\d\,\mathbf{F}
+	& = &
+		   - \; E^{1}_{,2} \cdot \d x^{2} \wedge \d x^{0} \wedge \d x^{1}
+		\; - \; E^{1}_{,3} \cdot \d x^{3} \wedge \d x^{0} \wedge \d x^{1}
+	\\
+	&&
+		   - \; E^{2}_{,1} \cdot \d x^{1} \wedge \d x^{0} \wedge \d x^{2}
+		\; - \; E^{2}_{,3} \cdot \d x^{3} \wedge \d x^{0} \wedge \d x^{2}
+	\\
+	&&
+		   - \; E^{3}_{,1} \cdot \d x^{1} \wedge \d x^{0} \wedge \d x^{3}
+		\; - \; E^{3}_{,2} \cdot \d x^{2} \wedge \d x^{0} \wedge \d x^{3}
+	\\
+	&&
+		  +\; B^{1}_{,0} \cdot \d x^{0} \wedge \d x^{2} \wedge \d x^{3}
+		\;+\; B^{1}_{,1} \cdot \d x^{1} \wedge \d x^{2} \wedge \d x^{3}
+	\\
+	&&
+		  +\; B^{2}_{,0} \cdot \d x^{0} \wedge \d x^{3} \wedge \d x^{1}
+		\;+\; B^{2}_{,2} \cdot \d x^{2} \wedge \d x^{3} \wedge \d x^{1}
+	\\
+	&&
+		  +\; B^{3}_{,0} \cdot \d x^{0} \wedge \d x^{1} \wedge \d x^{2}
+		\;+\; B^{3}_{,3} \cdot \d x^{3} \wedge \d x^{1} \wedge \d x^{2}
+	\\ \\
+	& = &
+		\left(\,
+			- E^{1}_{,2} 
+			+ E^{2}_{,1} 
+			+ B^{3}_{,0}
+			\;\right)
+		\cdot \d x^{0} \wedge \d x^{1} \wedge \d x^{2}
+	\\
+	&&
+		\left(\,
+			- E^{1}_{,3}
+			+ E^{3}_{,1}
+			- B^{2}_{,0}
+			\;\right)
+		\cdot \d x^{0} \wedge \d x^{1} \wedge \d x^{3}
+	\\
+	&&
+		\left(\;
+			- E^{2}_{,3}
+			+ E^{3}_{,2}
+			+ B^{1}_{,0}
+			\,\right)
+		\cdot \d x^{0} \wedge \d x^{2} \wedge \d x^{3}
+	\\
+	&&
+		\left(\,
+			{\color{white}+} B^{1}_{,1}
+			+ B^{2}_{,2}
+			+ B^{3}_{,3}
+			\,\right)
+		\cdot \d x^{1} \wedge \d x^{2} \wedge \d x^{3}
+	\\ \\
+	& = &
+		\left[\;
+			{\color{white}+}\,
+			\nabla \times E \,+\, \dfrac{\partial B}{\partial x^{0}}
+			\,\right]_{3}
+		\cdot \d x^{0} \wedge \d x^{1} \wedge \d x^{2}
+	\\
+	&&
+		\left[\;
+			-\,
+			\nabla \times E \,-\, \dfrac{\partial B}{\partial x^{0}}
+			\,\right]_{2}
+		\cdot \d x^{0} \wedge \d x^{1} \wedge \d x^{3}
+	\\
+	&&
+		\left[\;
+			{\color{white}+}\,
+			\nabla \times E \,+\, \dfrac{\partial B}{\partial x^{0}}
+			\,\right]_{1}
+		\cdot \d x^{0} \wedge \d x^{2} \wedge \d x^{3}
+	\\
+	&&
+		\left(\, \nabla \bullet B \,\right)
+		\cdot \d x^{1} \wedge \d x^{2} \wedge \d x^{3}
+	\end{eqnarray*}
+	It follows that
+	\begin{equation*}
+		\d\,\mathbf{F} \; = \; 0
+	\quad\quad
+	\Longleftrightarrow
+	\quad\quad
+		\left\{\begin{array}{cclc}
+		\nabla \bullet B & = & 0\,, & \textnormal{and}
+		\\
+		\nabla \times E \,+\, \overset{{\color{white}.}}{\dfrac{\partial B}{\partial x^{0}}} & = & 0
+		\end{array}\right.
+	\end{equation*}
+	as required.
+\item
+\end{enumerate}
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
