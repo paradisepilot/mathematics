@@ -1,0 +1,122 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Gauge transformations and quantum mechanics}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+Transformations of the Schr\"{o}dinger equation under local $U(1)$ gauge transformations:
+\begin{proposition}[Zero-electromagnetic-field Schr\"{o}dinger equation is not $U(1)$-gauge-invariant]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$U \subset \Re^{1,3}$ is an open subset, with coordinates $(t,x_{1},x_{2},x_{3})$.
+\item
+	$\psi : U \longrightarrow \C$, $\Phi : U \longrightarrow \Re$ are smooth functions.
+\item
+	$V : U \longrightarrow \Re$ is a smooth function.
+\end{itemize}
+Define \,$\widetilde{\psi} : U \longrightarrow \C$\, as follows:
+\begin{equation*}
+\widetilde{\psi}(t,x_{1},x_{2},x_{3})
+\;\; := \;\;
+	\exp\!\left(\,\overset{{\color{white}.}}{\i}\cdot\Phi(t,x_{1},x_{2},x_{3})\,\right) \cdot \psi(t,x_{1},x_{2},x_{3})
+\end{equation*}
+Conclusion:\quad If $\psi$ satisfies the following Schr\"{o}dinger equation:
+\begin{equation*}
+\i\hbar \cdot \dfrac{\partial \psi}{\partial t}
+\;\; = \;\;
+	-\,\dfrac{\hbar^{2}}{2m}\Delta\psi \,+\, V\cdot\psi
+\end{equation*}
+then $\widetilde{\psi}$ satisfies the following equation:
+\begin{equation*}
+\i\hbar \cdot \dfrac{\partial \widetilde{\psi}}{\partial t}
+\;\; = \;\;
+	-\,\dfrac{\hbar^{2}}{2m}\cdot\left(\,
+		\Delta\widetilde{\psi}
+		-\,2\,\i\cdot(\nabla\Phi) \cdot (\nabla\widetilde{\psi})
+		-\,\i\cdot(\Delta\Phi)\cdot\widetilde{\psi}
+		-\,\vert\,\nabla\Phi\,\vert^{2}\cdot\widetilde{\psi}
+		\,\right)
+	\,+\,
+	\left(\,V\,-\,\hbar\cdot\dfrac{\partial\Phi}{\partial t}\,\right)\cdot\psi
+\end{equation*}
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\begin{theorem}[Four-potential Schr\"{o}dinger equation is $U(1)$-gauge-invariant]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$U \subset \Re^{1,3}$ is an open subset, with coordinates $(t,x_{1},x_{2},x_{3})$.
+\item
+	$\psi : U \longrightarrow \C$, $\Phi : U \longrightarrow \Re$ are smooth functions.
+\item
+	$\mathbf{A} \, = \, (A_{0}, A_{1}, A_{2}, A_{3}) : U \longrightarrow \Re^{4}$ is a smooth function.
+\end{itemize}
+Define \,$\widetilde{\psi} : U \longrightarrow \C$\, as follows:
+\begin{equation*}
+\widetilde{\psi}(t,x_{1},x_{2},x_{3})
+\;\; := \;\;
+	\exp\!\left(\,-\,\overset{{\color{white}.}}{\i}\,q \cdot\Phi(t,x_{1},x_{2},x_{3})\,\right) \cdot \psi(t,x_{1},x_{2},x_{3})
+\end{equation*}
+Conclusion:\quad If $\psi$ satisfies the following Schr\"{o}dinger equation:
+\begin{equation*}
+\i\hbar \cdot \dfrac{\partial \psi}{\partial t}
+\;\; = \;\;
+	-\,\dfrac{\hbar^{2}}{2m}\cdot\overset{3}{\underset{j=1}{\sum}}\left(\,
+		\dfrac{\partial}{\partial x_{j}}
+		+
+		\i\,q\cdot A_{j}
+		\,\right)^{\!2}
+		\psi
+	\,+\,
+	\left(\,q \overset{{\color{white}.}}{\cdot} A_{0}\,\right)\cdot\psi
+\end{equation*}
+then $\widetilde{\psi}$ satisfies the following equation:
+\begin{equation*}
+\i\hbar \cdot \dfrac{\partial \widetilde{\psi}}{\partial t}
+\;\; = \;\;
+	-\,\dfrac{\hbar^{2}}{2m}\cdot\overset{3}{\underset{j=1}{\sum}}\left(\,
+		\dfrac{\partial}{\partial x_{j}}
+		+
+		\i\,q\cdot \widetilde{A}_{j}
+		\,\right)^{\!2}
+		\widetilde{\psi}
+	\,+\,
+	\left(\,q \overset{{\color{white}.}}{\cdot} \widetilde{A}_{0}\,\right)\cdot\widetilde{\psi}\,,
+\end{equation*}
+where
+\,$\widetilde{A} \,=\, \left(\,\widetilde{A}_{0},\widetilde{A}_{1},\widetilde{A}_{2},\widetilde{A}_{3}\,\right)$
+\,$:=$\,
+$A \,+\, q\cdot\d\Phi$.
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
