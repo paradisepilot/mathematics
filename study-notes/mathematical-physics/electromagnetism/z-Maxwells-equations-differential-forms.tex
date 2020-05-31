@@ -221,6 +221,168 @@ Then,
 	\end{equation*}
 	as required.
 \item
+	\begin{eqnarray*}
+	\star\;\mathbf{F}
+	& = &
+		  - \; E^{1} \cdot\star\left(\,\d x^{0} \wedge \d x^{1}\,\right)
+		\; - \; E^{2} \cdot\star\left(\,\d x^{0} \wedge \d x^{2}\,\right)
+		\; - \; E^{3} \cdot\star\left(\,\d x^{0} \wedge \d x^{3}\,\right)
+	\\
+	&&
+		  +\; B^{1} \cdot\star\left(\,\d x^{2} \wedge \d x^{3}\,\right)
+		\;+\; B^{2} \cdot\star\left(\,\d x^{3} \wedge \d x^{1}\,\right)
+		\;+\; B^{3} \cdot\star\left(\,\d x^{1} \wedge \d x^{2}\,\right)
+	\\ \\
+	& = &
+		   - \; E^{1} \cdot\left(\,\d x^{2} \wedge \d x^{3}\,\right)
+		\; - \; E^{2} \cdot\left(\,\d x^{3} \wedge \d x^{1}\,\right)
+		\; - \; E^{3} \cdot\left(\,\d x^{1} \wedge \d x^{2}\,\right)
+	\\
+	&&
+		  -\; B^{1} \cdot\left(\,\d x^{0} \wedge \d x^{1}\,\right)
+		\;-\; B^{2} \cdot\left(\,\d x^{0} \wedge \d x^{2}\,\right)
+		\;-\; B^{3} \cdot\left(\,\d x^{0} \wedge \d x^{3}\,\right)
+	\end{eqnarray*}
+	Hence,
+	\begin{eqnarray*}
+	\d\left(\;\star\;\mathbf{F}\,\right)
+	& = &
+		\; - \; E^{1}_{,0} \cdot\left(\,\d x^ {0} \wedge \d x^{2} \wedge \d x^{3}\,\right)
+		\; - \; E^{1}_{,1} \cdot\left(\,\d x^ {1} \wedge \d x^{2} \wedge \d x^{3}\,\right)
+	\\
+	&&
+		\; + \; E^{2}_{,0} \cdot\left(\,\d x^{0} \wedge \d x^{1} \wedge \d x^{3}\,\right)
+		\; + \; E^{2}_{,2} \cdot\left(\,\d x^{2} \wedge \d x^{1} \wedge \d x^{3}\,\right)
+	\\
+	&&
+		\; - \; E^{3}_{,0} \cdot\left(\,\d x^{0} \wedge \d x^{1} \wedge \d x^{2}\,\right)
+		\; - \; E^{3}_{,3} \cdot\left(\,\d x^{3} \wedge \d x^{1} \wedge \d x^{2}\,\right)
+	\\
+	&&
+		\; - \; B^{1}_{,2} \cdot\left(\,\d x^{2} \wedge \d x^{0} \wedge \d x^{1}\,\right)
+		\; - \; B^{1}_{,3} \cdot\left(\,\d x^{3} \wedge \d x^{0} \wedge \d x^{1}\,\right)
+	\\
+	&&
+		\; - \; B^{2}_{,1} \cdot\left(\,\d x^{1} \wedge \d x^{0} \wedge \d x^{2}\,\right)
+		\; - \; B^{2}_{,3} \cdot\left(\,\d x^{3} \wedge \d x^{0} \wedge \d x^{2}\,\right)
+	\\
+	&&
+		\; - \; B^{3}_{,1} \cdot\left(\,\d x^{1} \wedge \d x^{0} \wedge \d x^{3}\,\right)
+		\; - \; B^{3}_{,2} \cdot\left(\,\d x^{2} \wedge \d x^{0} \wedge \d x^{3}\,\right)
+	\\ \\
+	& = &
+		{\color{white}+}
+		\left(\,
+			   - \; E^{3}_{,0}
+			\; - \; B^{1}_{,2}
+			\; + \; B^{2}_{,1}
+			\;\right)
+			\cdot \d x^ {0} \wedge \d x^{1} \wedge \d x^{2}
+		\;\; + \;\;
+		\left(\,
+			   + \; E^{2}_{,0}
+			\; - \; B^{1}_{,3}
+			\; + \; B^{3}_{,1}
+			\;\right)
+			\cdot \d x^ {0} \wedge \d x^{1} \wedge \d x^{3}
+	\\
+	&&
+		+
+		\left(\,
+			   - \; E^{1}_{,0}
+			\; - \; B^{2}_{,3}
+			\; + \; B^{3}_{,2}
+			\;\right)
+			\cdot \d x^ {0} \wedge \d x^{2} \wedge \d x^{3}
+		\;\; + \;\;
+		\left(\,
+			- \; E^{1}_{,1}
+			\; - \; E^{2}_{,2}
+			\; - \; E^{3}_{,3}
+			\;\right)
+			\cdot \d x^ {1} \wedge \d x^{2} \wedge \d x^{3}
+	\end{eqnarray*}
+	Hence,
+	\begin{eqnarray*}
+	\star\;\,\d\left(\;\star\;\mathbf{F}\,\right)
+	& = &
+		-
+		\left(\,
+			   - \; E^{3}_{,0}
+			\; - \; B^{1}_{,2}
+			\; + \; B^{2}_{,1}
+			\;\right)
+			\cdot \d x^ {3}
+		\;\; + \;\;
+		\left(\,
+			   + \; E^{2}_{,0}
+			\; - \; B^{1}_{,3}
+			\; + \; B^{3}_{,1}
+			\;\right)
+			\cdot \d x^ {2}
+	\\
+	&&
+		-
+		\left(\,
+			   - \; E^{1}_{,0}
+			\; - \; B^{2}_{,3}
+			\; + \; B^{3}_{,2}
+			\;\right)
+			\cdot \d x^ {1}
+		\;\; - \;\;
+		\left(\,
+			- \; E^{1}_{,1}
+			\; - \; E^{2}_{,2}
+			\; - \; E^{3}_{,3}
+			\;\right)
+			\cdot \d x^ {0}
+	\\ \\
+	& = &
+		+
+		\left(\, + \; E^{3}_{,0} \; + \; B^{1}_{,2} \; - \; B^{2}_{,1} \;\right)
+			\cdot \d x^ {3}
+		\;\;+\;\;
+		\left(\, + \; E^{2}_{,0} \; - \; B^{1}_{,3} \; + \; B^{3}_{,1} \;\right)
+			\cdot \d x^ {2}
+	\\
+	&&
+		+ \left(\, + \; E^{1}_{,0} \; + \; B^{2}_{,3} \; - \; B^{3}_{,2} \;\right)
+			\cdot \d x^ {1}
+		\;\;+\;\;
+		\left(\, \nabla \bullet E \;\right) \cdot \d x^ {0}
+	\\ \\
+	& = &
+		+
+		\left[\;\, \dfrac{\partial E}{\partial x^{0}} \, - \, \nabla \times B \;\right]_{3}
+		\cdot \d x^ {3}
+		\;\;+\;\;
+		\left[\;\, \dfrac{\partial E}{\partial x^{0}} \, - \, \nabla \times B \;\right]_{2}
+		\cdot \d x^ {2}
+	\\
+	&&
+		+
+		\left[\;\, \dfrac{\partial E}{\partial x^{0}} \, - \, \nabla \times B \;\right]_{1}
+		\cdot \d x^ {1}
+		\;\;+\;\;
+		\left(\, \nabla \bullet E \;\right) \cdot \d x^ {0}
+	\end{eqnarray*}
+	Hence, we see that
+	\begin{equation*}
+	\star\;\,\d\left(\;\star\;\mathbf{F}\,\right)
+	\;\; = \;\;
+		4\,\pi\cdot \mathbf{J}
+	\;\; = \;\;
+		4\,\pi\cdot \left(\; \rho\;\d x^{0} \,-\, J^{1}\,\d x^{1} \,-\, J^{2}\,\d x^{2} \,-\, J^{3}\,\d x^{3} \,\right)
+	\end{equation*}
+	if and only if
+	\begin{equation*}
+	\left\{\;\;\begin{array}{cclc}
+	\nabla \bullet E & = & {\color{white}-}\,4\,\pi\cdot\rho\,, & \textnormal{and}
+	\\
+	\overset{{\color{white}.}}{\dfrac{\partial E}{\partial x^{0}}} \;-\, \nabla \times B & = & -\,4\,\pi \cdot J
+	\end{array}\right.
+	\end{equation*}
+	as required.
 \end{enumerate}
 \qed
 
