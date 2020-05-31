@@ -36,15 +36,15 @@ where $I$ is an open interval in $\Re$, and $U$ is a domain in $\Re^{3}$.
 Then, Maxwell's equations are the following:
 \begin{enumerate}
 \item
-	Gauss's law for magnetism (non-existence of magnetic monopoles):
+	Gauss's law for electric fields:
 	\begin{equation*}
-	\nabla \bullet B \;\; = \;\; 0
+	\nabla \bullet E \;\; = \;\; 4 \pi \cdot \rho
 	\end{equation*}
 
 \item
-	Coulomb's law (conservation of electric charge):
+	Gauss's law for magnetic fields (non-existence of magnetic monopoles):
 	\begin{equation*}
-	\nabla \bullet E \;\; = \;\; 4 \pi \cdot \rho
+	\nabla \bullet B \;\; = \;\; 0
 	\end{equation*}
 
 \item
@@ -72,39 +72,10 @@ Then, Maxwell's equations are the following:
 
 \vskip 0.5cm
 \noindent
-\textbf{Gauss's law for magnetism (non-existence of magnetic monopoles)}
-\begin{eqnarray*}
-	\left(\begin{array}{c}
-	\textnormal{magnetic charge}
-	\\
-	\textnormal{contained in}
-	\\
-	\textnormal{domain $U \subset \Re^{3}$}
-	\end{array}\!\right)
-&=&
-	\left(\!\begin{array}{c}
-	\textnormal{outward flux}
-	\\
-	\textnormal{of magnetic field}
-	\\
-	\textnormal{through $\partial U$}
-	\end{array}\!\right)
-\\
-0
-&=&
-	\int\!\!\!\!\int_{\partial U}\, B \bullet \widehat{\mathbf{n}} \;\d S
-\\
-&=&
-	\int\!\!\!\!\int\!\!\!\!\int_{U}\, \nabla \bullet B \;\d V\,,
-	\quad
-	\textnormal{by Divergence Theorem of Gauss}
-\end{eqnarray*}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
+\textbf{Gauss's law for electric fields}
+\vskip 0.1cm
 \noindent
-\textbf{Coulomb's law (conservation of electric charge)}
+Flux of electric field through a closed surface equals enclosed electric charge.
 \begin{eqnarray*}
 	4\,\pi\cdot\left(\begin{array}{c}
 	\textnormal{electric charge}
@@ -128,6 +99,38 @@ Then, Maxwell's equations are the following:
 \\
 &=&
 	\int\!\!\!\!\int\!\!\!\!\int_{U}\, \nabla \bullet E \;\d V\,,
+	\quad
+	\textnormal{by Divergence Theorem of Gauss}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\textbf{Gauss's law for magnetic fields (non-existence of magnetic monopoles)}
+\begin{eqnarray*}
+	\left(\begin{array}{c}
+	\textnormal{magnetic charge}
+	\\
+	\textnormal{contained in}
+	\\
+	\textnormal{domain $U \subset \Re^{3}$}
+	\end{array}\!\right)
+&=&
+	\left(\!\begin{array}{c}
+	\textnormal{outward flux}
+	\\
+	\textnormal{of magnetic field}
+	\\
+	\textnormal{through $\partial U$}
+	\end{array}\!\right)
+\\
+0
+&=&
+	\int\!\!\!\!\int_{\partial U}\, B \bullet \widehat{\mathbf{n}} \;\d S
+\\
+&=&
+	\int\!\!\!\!\int\!\!\!\!\int_{U}\, \nabla \bullet B \;\d V\,,
 	\quad
 	\textnormal{by Divergence Theorem of Gauss}
 \end{eqnarray*}
