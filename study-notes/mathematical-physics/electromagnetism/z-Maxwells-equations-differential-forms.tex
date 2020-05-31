@@ -16,19 +16,20 @@
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \begin{theorem}[Maxwell's equations in terms of differential forms]
+\label{MaxwellsEquationsDifferentialForms}
 \mbox{}
 \vskip 0.2cm
 \noindent
 Suppose
 \begin{equation*}
-E \; = \; E_{1}\,\dfrac{\partial}{\partial x_{1}} + E_{2}\,\dfrac{\partial}{\partial x_{2}} + E_{3}\,\dfrac{\partial}{\partial x_{3}}\,,
+E \; = \; E^{1}\,\dfrac{\partial}{\partial x^{1}} + E^{2}\,\dfrac{\partial}{\partial x^{2}} + E^{3}\,\dfrac{\partial}{\partial x^{3}}\,,
 \quad
-B \; = \; B_{1}\,\dfrac{\partial}{\partial x_{1}} + B_{2}\,\dfrac{\partial}{\partial x_{2}} + B_{3}\,\dfrac{\partial}{\partial x_{3}}\,,
+B \; = \; B^{1}\,\dfrac{\partial}{\partial x^{1}} + B^{2}\,\dfrac{\partial}{\partial x^{2}} + B^{3}\,\dfrac{\partial}{\partial x^{3}}\,,
 \end{equation*}
 \begin{equation*}
 \rho\,,
 \quad\textnormal{and}\quad
-J \; = \; J_{1}\,\dfrac{\partial}{\partial x_{1}} + J_{2}\,\dfrac{\partial}{\partial x_{2}} + J_{3}\,\dfrac{\partial}{\partial x_{3}}
+J \; = \; J^{1}\,\dfrac{\partial}{\partial x^{1}} + J^{2}\,\dfrac{\partial}{\partial x^{2}} + J^{3}\,\dfrac{\partial}{\partial x^{3}}
 \end{equation*}
 are, respectively, the electric (vector) field, magnetic (vector) field,
 electric charge density (scalar) field, and electric current (vector) field
@@ -41,38 +42,81 @@ Define:
 \item
 	the electric $1$-form field:
 	\begin{equation*}
-	\mathbf{E} \; := \; E_{1}\,\d x_{1} \,+\, E_{2}\,\d x_{2} \,+\, E_{3}\,\d x_{3}
+	\mathbf{E} \; := \; E^{1}\,\d x^{1} \,+\, E^{2}\,\d x^{2} \,+\, E^{3}\,\d x^{3}
 	\end{equation*}
 \item
 	the magnetic $2$-form field:
 	\begin{equation*}
 	\mathbf{B}
 	\; := \;
-		B_{1}\;\d x_{2} \wedge \d x_{3}
+		B^{1}\;\d x^{2} \wedge \d x^{3}
 		\;+\;
-		B_{2}\;\d x_{3} \wedge \d x_{1}
+		B^{2}\;\d x^{3} \wedge \d x^{1}
 		\;+\;
-		B_{3}\;\d x_{1} \wedge \d x_{2}
+		B^{3}\;\d x^{1} \wedge \d x^{2}
 	\end{equation*}
 \item
 	the electromagnetic field strength $2$-form field:
-	\begin{equation*}
+	\begin{eqnarray*}
 	\mathbf{F}
-	\;\; := \;\;
-		\mathbf{B} \, - \, \d t \wedge \mathbf{E}
+	& := &
+		- \, \d x^{0} \wedge \mathbf{E} \, + \, \mathbf{B}
+	\\
+	& = &
+		- \, E^{1}\;\d x^{0} \wedge \d x^{1} \, - \, E^{2}\;\d x^{0} \wedge \d x^{2} \, - \, E^{3}\;\d x^{0} \wedge \d x^{3}
+		\;+\;
+		B^{1}\;\d x^{2} \wedge \d x^{3}
+		\;+\;
+		B^{2}\;\d x^{3} \wedge \d x^{1}
+		\;+\;
+		B^{3}\;\d x^{1} \wedge \d x^{2}
+	\end{eqnarray*}
+	As a matrix of $2$-forms, $\mathbf{F}$ can be expressed as:
+	\begin{equation*}
+	\left(\,F_{\mu\nu}\overset{{\color{white}1}}{\cdot}\d x^{\mu} \wedge \d x^{\nu}\,\right)
+	\;\; = \;\;
+	\dfrac{1}{2}\cdot
+	\left({\color{gray}\begin{array}{rrrr}
+	0\cdot\d x^{0}\wedge\d x^{0} &
+	{\color{red}-E^{1}} \cdot\d x^{0}\wedge\d x^{1} &
+	{\color{red}-E^{2}} \cdot\d x^{0}\wedge\d x^{2} &
+	{\color{red}-E^{3}} \cdot\d x^{0}\wedge\d x^{3}
+	\\
+	{\color{red}E^{1}} \cdot\d x^{1}\wedge\d x^{0} &
+	0 \cdot\d x^{1}\wedge\d x^{1} &
+	{\color{red}B^{3}} \cdot\d x^{1}\wedge\d x^{2} &
+	{\color{red}-B^{2}} \cdot\d x^{1}\wedge\d x^{3}
+	\\
+	{\color{red}E^{2}} \cdot\d x^{2}\wedge\d x^{0} &
+	{\color{red}-B^{3}} \cdot\d x^{2}\wedge\d x^{1} &
+	0 \cdot\d x^{2}\wedge\d x^{2} &
+	{\color{red}B^{1}} \cdot\d x^{2}\wedge\d x^{3}
+	\\
+	{\color{red}E^{3}} \cdot\d x^{3}\wedge\d x^{0} &
+	{\color{red}B^{2}} \cdot\d x^{2}\wedge\d x^{1} &
+	{\color{red}-B^{1}} \cdot\d x^{2}\wedge\d x^{2} &
+	0 \cdot\d x^{3}\wedge\d x^{3}
+	\end{array}}\right)
 	\end{equation*}
 \item
 	the current $1$-form field:
 	\begin{equation*}
-	\mathbf{J} \; := \; \rho \, \d t \,-\, J_{1}\,\d x_{1} \,-\, J_{2}\,\d x_{2} \,-\, J_{3}\,\d x_{3}
+	\mathbf{J} \; := \; \rho \, \d x^{0} \,-\, J^{1}\,\d x^{1} \,-\, J^{2}\,\d x^{2} \,-\, J^{3}\,\d x^{3}
 	\end{equation*}
 \end{itemize}
-Then, the Maxwell's equations are equivalent to the following:
-\begin{eqnarray*}
-\d\mathbf{F} & = & 0
-\\
-\star\;\d \left(\;\star\,\mathbf{F}\,\right) & = & 4\,\pi\cdot\mathbf{J}
-\end{eqnarray*}
+Then,
+\begin{enumerate}
+\item
+	Gauss's law for magnetism (non-existence of magnetic monopoles) and Faraday's law are equivalent to the following:
+	\begin{eqnarray*}
+	\d\,\mathbf{F} & = & 0
+	\end{eqnarray*}
+\item
+	Coulomb's law and Amp\`{e}re-Maxwell's law are equivalent to the following:
+	\begin{eqnarray*}
+	\star\;\d \left(\;\star\,\mathbf{F}\,\right) & = & 4\,\pi\cdot\mathbf{J}
+	\end{eqnarray*}	
+\end{enumerate}
 \end{theorem}
 \proof
 
