@@ -1,0 +1,56 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Fibre bundles}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Fibre bundle]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A \,\textbf{fibre bundle}\, is a smooth surjection \,$\pi : P \longrightarrow M$,\,
+where
+\begin{itemize}
+\item
+	$P$ and $M$ are differentiable manifolds, and
+\item
+	there exist a differentiable manifold \,$F$,\,
+	an open cover \,$\mathcal{U} \,=\, \left\{\,U_{\alpha}\,\right\}_{\alpha \in \mathcal{A}}$\, of \,$M$,\, and
+	for each $\alpha \in \mathcal{A}$, a diffeomorphism
+	\,$\varphi_{\alpha} : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times F$\,
+	such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}[column sep=scriptsize]	\pi^{-1}(U_{\alpha}) \arrow[swap]{dr}{\pi} \arrow{rr}{\varphi_{\alpha}} & & U_{\alpha} \times F \arrow{dl}{\textnormal{pr}_{1}} \\
+	& U_{\alpha} 
+	\end{tikzcd}
+	\end{center}
+	where $\textnormal{pr}_{1} : U_{\alpha} \times F \longrightarrow U_{\alpha}$
+	is projection onto first factor.
+\end{itemize}
+The manifold \,$P$\, is called the \textbf{total space} of the fibre bundle,
+\,$M$\, is called the \textbf{base space},
+\,$F$\, is called the \textbf{general fibre}.
+The map \,$\pi : P \longrightarrow M$\, is called the \textbf{projection map}.
+Each \,$\varphi_{\alpha} : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times F$\,
+is called a \textbf{bundle chart} or a \textbf{local trivialization}.
+The collection
+\,$\left\{\,\varphi_{\alpha} : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times F\,\right\}_{\alpha\in\mathcal{A}}$\,
+of bundle charts is called a \textbf{bundle atlas}.
+
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%

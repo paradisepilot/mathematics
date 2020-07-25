@@ -1,0 +1,66 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Principal fibre bundles}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Principal fibre bundle]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A \,\textbf{principal fibre bundle}\, (or a \textbf{principal $G$-bundle})
+is a fibre bundle \,$\pi : P \longrightarrow M$\,
+whose general fibre \,$G$\, is a Lie group such that
+\begin{itemize}
+\item
+	$G$ acts smoothly on $P$ on the right,
+\item
+	the action of $G$ on $P$ preserves the fibre of $\pi$, i.e. \,$G\cdot\pi^{-1}(x) \subset \pi^{-1}(x)$,\,
+	for each $x \in M$,
+\item
+	the restricted action of $G$ to each fibre is free, i.e.
+	the orbit map
+	\begin{equation*}
+	\phi_{p} : G \longrightarrow \pi^{-1}(x) \; : \; g \longmapsto p \cdot g
+	\end{equation*}
+	is injective,
+	for each $p \in \pi^{-1}(x)$, $x \in M$,
+\item
+	the restricted action of $G$ to each fibre is transitive, i.e.
+	the orbit map $\phi_{p} : G \longrightarrow \pi^{-1}(x)$ is surjective,
+	for each $p \in \pi^{-1}(x)$, $x \in M$,
+\item
+	there exists a bundle atlas
+	\,$\left\{\,\varphi_{\alpha} : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G\,\right\}_{\alpha\in\mathcal{A}}$\,
+	of $G$-equivariant bundle charts, i.e.
+	\begin{equation*}
+	\varphi_{\alpha}(p \cdot g) \;\; = \;\; \varphi_{\alpha}(p) \cdot g\,,
+	\quad
+	\textnormal{for each \,$\alpha \in \mathcal{A}$, \,$p \in \pi^{-1}(U_{\alpha})$, \,$g \in G$},
+	\end{equation*}
+	where the right action of \,$G$\, on \,$U_{\alpha} \times G$ is given by:
+	\begin{equation*}
+	(x,h) \cdot g \;\; = \;\; (x,h \cdot g)\,,
+	\quad
+	\textnormal{for each \,$x \in M$, \,$g,h \in G$}.
+	\end{equation*}
+\end{itemize}
+The general fibre \,$G$\, is called the \textbf{structure group} of the principal fibre bundle.
+
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
