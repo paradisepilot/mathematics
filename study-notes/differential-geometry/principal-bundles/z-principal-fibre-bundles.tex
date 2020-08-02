@@ -107,11 +107,60 @@ as required.
 
 \vskip 0.3cm
 \noindent
-\underline{$\image\!\left(\;T_{e}\iota_{p}\,\right) \;\supset\; \ker\!\left(\,T_{p}\pi\,\right)$}
+\underline{$\image\!\left(\;T_{e}\iota_{p}\,\right) \;=\; \ker\!\left(\,T_{p}\pi\,\right)$}
 \vskip 0.2cm
 \noindent
-
-
+First, note that the following (trivial) short exact sequence
+\begin{center}
+\begin{tikzcd}[column sep=scriptsize]
+0 {\color{white}.} \arrow{rr}{} &&
+{\color{white}.}\ker\!\left(\,T_{p}\pi\,\right){\color{white}.} \arrow{rr}{} &&
+{\color{white}.}T_{p}P{\color{white}.} \arrow{rr}{T_{p}\pi} &&
+{\color{white}.}T_{\pi(p)}M{\color{white}.} \arrow{rr}{} &&
+0
+\end{tikzcd}
+\end{center}
+implies the following series of equalities
+\begin{equation*}
+\dim M + \dim G
+\; = \;
+	\dim\!\left(\,U_{\alpha} \times G\;\!\right)
+\; = \;
+	\dim P
+\; = \; 
+	\dim T_{p}P
+\; = \; 
+	\dim\ker\!\left(\,T_{p}\pi\,\right) \, + \, \dim T_{\pi(p)}M
+\; = \; 
+	\dim\ker\!\left(\,T_{p}\pi\,\right) \, + \, \dim M
+\end{equation*}
+which in turn implies that
+\begin{equation*}
+\dim\ker\!\left(\,T_{p}\pi\,\right) \; = \; \dim G
+\end{equation*}
+On the other hand, recall that, for each $p \in G$,
+the fibre \,$\pi^{-1}(\pi(p)) \subset P$\, is a submanifold of \,$P$,\,
+and the orbit map
+\begin{equation*}
+\iota_{p} : G \longrightarrow \pi^{-1}(\pi(p))
+\end{equation*}
+is a diffeomorphism. Hence, its differential:
+\begin{equation*}
+T_{e}\iota_{p} \; : \; \mathfrak{g} := T_{e}G \; \longrightarrow \; T_{p}\,\pi^{-1}(\pi(p))
+\end{equation*}
+is a vector-space isomorphism;
+in particular, \,$T_{e}\iota_{p} \,:\, \mathfrak{g} := T_{e}G \,\longrightarrow\, T_{p}P$\, is an injective (linear) map.
+Hence,
+\begin{equation*}
+\dim\,\image\!\left(\,T_{e}\iota_{p}\,\right) \;=\; \dim T_{e}G \;=\; \dim G \;=\; \dim\ker\!\left(\,T_{p}\pi\,\right)
+\end{equation*}
+But, we have already established that
+\,$\image\!\left(\;T_{e}\iota_{p}\,\right) \,\subset\, \ker\!\left(\,T_{p}\pi\,\right)$.\,
+Hence, we may now conclude that:
+\begin{equation*}
+\image\!\left(\;T_{e}\iota_{p}\,\right) \; = \;  \ker\!\left(\,T_{p}\pi\,\right)
+\end{equation*}
+This completes the proof of the Proposition.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -125,10 +174,8 @@ Let \,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\, be a principa
 For each \,$p \in P$,\, let \,$\iota_{p} : G \longrightarrow P : g \longmapsto p \cdot g$\, be the orbit map of \,$p \in P$.\,
 A tangent vector \,$v \in T_{p}P$\, is said to be \textbf{vertical} if
 \begin{equation*}
-v \;\in\; \ker\!\left(\,T_{e}\iota_{p}\right) \;\subset\; T_{p}P\,,
+v \;\in\; \image\!\left(\,T_{e}\iota_{p}\right) \;=\; \ker\!\left(\,T_{p}\pi\right) \;\subset\; T_{p}P\,.
 \end{equation*}
-where \,$T_{e}\iota_{p} : \mathfrak{g} := T_{e}G \longrightarrow T_{p}P$\,
-is the differential of $\iota_{p}$ at the identity $e \in G$.
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
