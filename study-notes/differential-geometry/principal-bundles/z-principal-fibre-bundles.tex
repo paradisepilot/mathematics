@@ -24,21 +24,21 @@ is a fibre bundle \,$\pi : P \longrightarrow M$\,
 whose general fibre \,$G$\, is a Lie group such that
 \begin{itemize}
 \item
-	$G$ acts smoothly on $P$ on the right,
+	$G$ acts smoothly on $P$ {\color{red}on the right},
 \item
-	the action of $G$ on $P$ preserves the fibre of $\pi$, i.e. \,$G\cdot\pi^{-1}(x) \subset \pi^{-1}(x)$,\,
+	the action of $G$ on $P$ preserves each fibre of $\pi$, i.e. \,$G\cdot\pi^{-1}(x) \subset \pi^{-1}(x)$,\,
 	for each $x \in M$,
 \item
 	the restricted action of $G$ to each fibre is free, i.e.
 	the orbit map
 	\begin{equation*}
-	\phi_{p} : G \longrightarrow \pi^{-1}(x) \; : \; g \longmapsto p \cdot g
+	\iota_{p} : G \longrightarrow \pi^{-1}(x) \; : \; g \longmapsto p \cdot g
 	\end{equation*}
 	is injective,
 	for each $p \in \pi^{-1}(x)$, $x \in M$,
 \item
 	the restricted action of $G$ to each fibre is transitive, i.e.
-	the orbit map $\phi_{p} : G \longrightarrow \pi^{-1}(x)$ is surjective,
+	the orbit map $\iota_{p} : G \longrightarrow \pi^{-1}(x)$ is surjective,
 	for each $p \in \pi^{-1}(x)$, $x \in M$,
 \item
 	there exists a bundle atlas
@@ -57,7 +57,78 @@ whose general fibre \,$G$\, is a Lie group such that
 	\end{equation*}
 \end{itemize}
 The general fibre \,$G$\, is called the \textbf{structure group} of the principal fibre bundle.
+\end{definition}
 
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Images of orbit maps equal kernels of canonical projection]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\, be a principal $G$-bundle.
+For each \,$p \in P$,\, let \,$\iota_{p} : G \longrightarrow P : g \longmapsto p \cdot g$\, be the orbit map of \,$p \in P$.\,
+Then,
+\begin{equation*}
+\image\!\left(\;T_{e}\iota_{p}\,\right) \;\; = \;\; \ker\!\left(\,T_{p}\pi\,\right)
+\end{equation*}
+Equivalently, the following is a short exact sequence of linear maps between vector spaces:
+\begin{center}
+\begin{tikzcd}[column sep=scriptsize]
+0 {\color{white}.} \arrow{rr}{} &&
+{\color{white}.}\mathfrak{g} := T_{e}G{\color{white}.} \arrow{rr}{T_{e}\iota_{p}} &&
+{\color{white}.}T_{p}P{\color{white}.} \arrow{rr}{T_{p}\pi} &&
+{\color{white}.}T_{\pi(p)}M{\color{white}.} \arrow{rr}{} &&
+0
+\end{tikzcd}
+\end{center}
+\end{proposition}
+\proof
+\vskip 0.3cm
+\noindent
+\underline{$\image\!\left(\;T_{e}\iota_{p}\,\right) \;\subset\; \ker\!\left(\,T_{p}\pi\,\right)$}
+\vskip 0.2cm
+\noindent
+Note that, for each \,$A \in \mathfrak{g} := T_{e}G$\, and each \,$p \in P$,\,
+\begin{equation*}
+T_{p}\pi\!\left(\,T_{e}\iota_{p}(\overset{{\color{white}.}}{A})\right)
+\;\; = \;\;
+	\left(\,T_{p}\pi \,\overset{{\color{white}1}}{\circ}\, T_{e}\iota_{p}\,\right)\!(A)
+\;\; = \;\;
+	\left(\,T_{e}(\pi\,\overset{{\color{white}1}}{\circ}\,\iota_{p})\,\right)\!(A)
+\;\; = \;\;
+	0\,,
+\end{equation*}
+where the last equality follows from the fact that
+\,$\pi\,\circ\,\iota_{p} : G \longrightarrow M$\,
+is a constant map:
+\,$\pi\,\circ\,\iota_{p}(g) \,=\, \pi(p \cdot g) \,=\, \pi(p)$,\,
+as required.
+
+\vskip 0.3cm
+\noindent
+\underline{$\image\!\left(\;T_{e}\iota_{p}\,\right) \;\supset\; \ker\!\left(\,T_{p}\pi\,\right)$}
+\vskip 0.2cm
+\noindent
+
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Vertical tangent vectors of a principal fibre bundle]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\, be a principal $G$-bundle.
+For each \,$p \in P$,\, let \,$\iota_{p} : G \longrightarrow P : g \longmapsto p \cdot g$\, be the orbit map of \,$p \in P$.\,
+A tangent vector \,$v \in T_{p}P$\, is said to be \textbf{vertical} if
+\begin{equation*}
+v \;\in\; \ker\!\left(\,T_{e}\iota_{p}\right) \;\subset\; T_{p}P\,,
+\end{equation*}
+where \,$T_{e}\iota_{p} : \mathfrak{g} := T_{e}G \longrightarrow T_{p}P$\,
+is the differential of $\iota_{p}$ at the identity $e \in G$.
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
