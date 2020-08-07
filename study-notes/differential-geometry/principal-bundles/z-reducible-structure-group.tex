@@ -1,0 +1,188 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Reducibility of the structure group of a principal fibre bundle}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Morphism of principal fibre bundles]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose
+\,$G_{1} \longhookrightarrow P_{1} \overset{\pi_{1}}{\longrightarrow} M_{1}$\, and
+\,$G_{2} \longhookrightarrow P_{2} \overset{\pi_{2}}{\longrightarrow} M_{2}$\,
+are two principal fibre bundles.
+%\begin{itemize}
+%\item
+\vskip 0.1cm
+\noindent
+	A \,\textbf{morphism of principal fibre bundles}\, from
+	\,$G_{1} \longhookrightarrow P_{1} \overset{\pi_{1}}{\longrightarrow} M_{1}$\,
+	into
+	\,$G_{2} \longhookrightarrow P_{2} \overset{\pi_{2}}{\longrightarrow} M_{2}$\,
+	is an ordered pair
+	\,$\left(\,\widetilde{f}\,,\,\rho\,\right)$,\,
+	where
+	\begin{equation*}
+	\rho : G_{1} \longrightarrow G_{2}
+	\end{equation*}
+	is a Lie group homomorphism, and
+	\begin{equation*}
+	\widetilde{f} : P_{1} \longrightarrow P_{2}
+	\end{equation*}
+	is a smooth $\rho$-equivariant map, i.e. 
+	\begin{equation*}
+	\widetilde{f}(p_{1} \cdot g_{1})
+	\;\; = \;\;
+		\widetilde{f}(p_{1}) \cdot \rho(g_{1})\,,
+	\quad
+	\textnormal{for each \,$p_{1} \in P_{1}$\, and \,$g_{1} \in G_{1}$}\,;
+	\end{equation*}
+	in other words, the following diagram commutes for each \,$g_{1} \in G_{1}$:
+	\begin{center}
+	\begin{tikzcd}	P_{1} \arrow[r, "\widetilde{f}"] \arrow[d, swap, "(\,\cdot\,)\,\cdot g_{1}\;\;"] & P_{2} \arrow[d, "\;\;(\,\cdot\,)\,\cdot \rho(g_{1})"] \\	P_{1} \arrow[r, "\widetilde{f}"] & P_{2}	\end{tikzcd}
+	\end{center}
+%\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{remark}
+\mbox{}
+\vskip 0.2cm
+\noindent
+%\begin{itemize}
+%\item
+	For a morphism \,$(\widetilde{f},\rho)$\, of principal fibre bundles from
+	\,$G_{1} \longhookrightarrow P_{1} \overset{\pi_{1}}{\longrightarrow} M_{1}$\,
+	into
+	\,$G_{2} \longhookrightarrow P_{2} \overset{\pi_{2}}{\longrightarrow} M_{2}$,\,
+	the $\rho$-equivariance hypothesis on $\widetilde{f}$ implies that
+	\,$\widetilde{f}$\, induces a smooth map \,$f : M_{1} \longrightarrow M_{2}$.
+	\vskip 0.2cm
+	\proof
+	Indeed, let $x_{1} \in M_{1}$. Then, define \,$f : M_{1} \longrightarrow M_{2}$\, as follows:
+	\begin{equation*}
+	f(x_{1}) \;\; := \;\; \pi_{2}\!\left(\,\widetilde{f}(p_{1})\,\right),
+	\quad
+	\textnormal{for any \,$p_{1} \in \pi_{1}^{-1}(x_{1}) \subset P_{1}$}.
+	\end{equation*}
+	We need to establish that the above definition of \,$f(x_{1})$\, does not depend on the
+	particular choice of \,$p_{1} \in \pi_{1}^{-1}(x_{1})$.
+	To this end, let $p_{1}^{\prime} \in \pi_{1}^{-1}(x_{1})$.
+	Since $G_{1}$ acts transitively on the right on each fibre of $P_{1}$, we have:
+	$p_{1}^{\prime} = p_{1} \cdot g_{1}$, for some $g_{1} \in G_{1}$.
+	Hence, by $\rho$-equivariance of $\widetilde{f}$, we have:
+	$\widetilde{f}(p_{1}^{\prime}) = \widetilde{f}(p_{1}\cdot g_{1}) = \widetilde{f}(p_{1})\cdot\rho(g_{1})$,
+	which in turn implies
+	$\pi_{2}\!\left(\,\widetilde{f}(p_{1}^{\prime})\,\right) = \pi_{2}\!\left(\,\widetilde{f}(p_{1})\,\right)$,
+	since the right action of $G_{2}$ on $P_{2}$ preserves fibres of $P_{2}$.	
+	\qed
+%\end{itemize}
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Embeddings and subbundles]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose
+\,$\left(\,\widetilde{f}:P_{1}\longrightarrow P_{2}\,,\,\rho:G_{1}\longrightarrow G_{2}\,\right)$\,
+is a morphism of principal fibre bundles from
+\,$G_{1} \longhookrightarrow P_{1} \overset{\pi_{1}}{\longrightarrow} M_{1}$\,
+into
+\,$G_{2} \longhookrightarrow P_{2} \overset{\pi_{2}}{\longrightarrow} M_{2}$.\,
+%\begin{itemize}
+%\item
+	The morphism
+	\,$\left(\,\widetilde{f}\,,\,\rho\,\right)$\,
+	is called an \,\textbf{embedding}\,
+	if \,$\widetilde{f}$\, is a embedding of smooth manifolds and
+	\,$\rho$\, is a monomorphism of Lie groups, in which case we say that
+	\,$G_{1} \longhookrightarrow P_{1} \overset{\pi_{1}}{\longrightarrow} M_{1}$\,
+	is a \,\textbf{subbundle}\, of
+	\,$G_{2} \longhookrightarrow P_{2} \overset{\pi_{2}}{\longrightarrow} M_{2}$.\,
+%\item
+%	We say that the structure group \,$G_{2}$\, is reducible to $G_{1}$
+%\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Reducibility of structure group]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+is a principal fibre bundle,
+\,$G_{1} \subset G$\, is a Lie subgroup of \,$G$,\, and
+\,$\iota:G_{1}\longhookrightarrow G$\,
+is the inclusion Lie group homomorphism.
+\begin{itemize}
+\item
+	\vskip -0.2cm
+	The structure group \,$G$\, is said to be \textbf{reducible} to $G_{1}$
+	if there exists an embedding
+	\,$\left(\,\widetilde{f}:P_{1}\longrightarrow P\,,\,\iota:G_{1}\longhookrightarrow G\,\right)$\,
+	of principal fibre bundles mapping
+	\,$G_{1} \longhookrightarrow P_{1} \overset{\pi}{\longrightarrow} M_{1}$\,
+	into
+	\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+	such that
+	\,$M_{1} = M$\,
+	and the induced map
+	\,$f : M_{1} = M \longrightarrow M$\,
+	is the identity map on $M$.
+\item
+	In this case,
+	\,$\widetilde{f}$\, is called a \textbf{reduction} of the structure group $G$ of
+	\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+	to $G_{1} \subset G$.
+	The principal fibre bundle
+	\,$G_{1} \longhookrightarrow P_{1} \overset{\pi}{\longrightarrow} M$\,
+	is then called a \textbf{reduced bundle} of
+	\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$.\,
+	
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Characterization of structure group reducibility in terms of transition functions]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+is a principal fibre bundle.
+The structure group \,$G$\, is reducible to a Lie subgroup 
+\,$G_{1} \subset G$\, if and only if
+there exists an open covering
+\,$\left\{\,U_{\alpha}\,\right\}_{\alpha\in\mathcal{A}}$\,
+of \,$M$\, with a set of transition functions
+\,$\tau_{\beta\alpha}$\,
+which take values in \,$G_{1}$.
+\end{proposition}
+\proof
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
