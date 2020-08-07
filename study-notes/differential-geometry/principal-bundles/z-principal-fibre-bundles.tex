@@ -17,7 +17,7 @@
 
 \begin{definition}[Principal fibre bundle]
 \mbox{}
-\vskip 0.1cm
+\vskip 0.2cm
 \noindent
 A \,\textbf{principal fibre bundle}\, (or a \textbf{principal $G$-bundle})
 is a fibre bundle \,$\pi : P \longrightarrow M$\,
@@ -41,9 +41,11 @@ whose general fibre \,$G$\, is a Lie group such that
 	the orbit map $\iota_{p} : G \longrightarrow \pi^{-1}(x)$ is surjective,
 	for each $p \in \pi^{-1}(x)$, $x \in M$,
 \item
-	there exists a bundle atlas
+	there exists a \textbf{bundle atlas}
 	\,$\left\{\,\varphi_{\alpha} : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G\,\right\}_{\alpha\in\mathcal{A}}$\,
-	of {\color{red}$G$-equivariant bundle charts}, i.e.
+	of \,{\color{red}$G$-equivariant \textbf{bundle charts}}, i.e.
+	\,$\left\{\,U_{\alpha}\,\right\}_{\alpha\in\mathcal{A}}$\,
+	is an open covering of \,$M$,\, and
 	\begin{equation*}
 	\varphi_{\alpha}(p \cdot g) \;\; = \;\; \varphi_{\alpha}(p) \cdot g\,,
 	\quad
@@ -51,7 +53,7 @@ whose general fibre \,$G$\, is a Lie group such that
 	\end{equation*}
 	where the right action of \,$G$\, on \,$U_{\alpha} \times G$ is given by:
 	\begin{equation*}
-	(x,h) \cdot g \;\; = \;\; (x,h \cdot g)\,,
+	(\,x,h\,) \cdot g \;\; = \;\; (\,x,h \cdot g\,)\,,
 	\quad
 	\textnormal{for each \,$x \in M$, \,$g,h \in G$}.
 	\end{equation*}
@@ -62,123 +64,103 @@ The general fibre \,$G$\, is called the \textbf{structure group} of the principa
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{proposition}[Images of orbit maps equal kernels of canonical projection]
+\begin{definition}[Transition functions of a principal fibre bundle]
 \mbox{}
-\vskip 0.1cm
-\noindent
-Let \,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\, be a principal $G$-bundle.
-For each \,$p \in P$,\, let \,$\iota_{p} : G \longrightarrow P : g \longmapsto p \cdot g$\, be the orbit map of \,$p \in P$.\,
-Then,
-\begin{equation*}
-\image\!\left(\;T_{e}\iota_{p}\,\right) \;\; = \;\; \ker\!\left(\,T_{p}\pi\,\right)
-\end{equation*}
-Equivalently, the following is a short exact sequence of linear maps between vector spaces:
-\begin{center}
-\begin{tikzcd}[column sep=scriptsize]
-0 {\color{white}.} \arrow{rr}{} &&
-{\color{white}.}\mathfrak{g} := T_{e}G{\color{white}.} \arrow{rr}{T_{e}\iota_{p}} &&
-{\color{white}.}T_{p}P{\color{white}.} \arrow{rr}{T_{p}\pi} &&
-{\color{white}.}T_{\pi(p)}M{\color{white}.} \arrow{rr}{} &&
-0
-\end{tikzcd}
-\end{center}
-\end{proposition}
-\proof
-\vskip 0.3cm
-\noindent
-\underline{$\image\!\left(\;T_{e}\iota_{p}\,\right) \;\subset\; \ker\!\left(\,T_{p}\pi\,\right)$}
 \vskip 0.2cm
 \noindent
-Note that, for each \,$A \in \mathfrak{g} := T_{e}G$\, and each \,$p \in P$,\,
+The set of \textbf{transition functions} of a principal fibre bundle
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+with respect to the bundle atlas
+\,$\left\{\,\varphi_{\alpha} = (\,\pi,\,\psi_{\alpha}\,) : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G\,\right\}_{\alpha\in\mathcal{A}}$\,
+is the collection
+\,$\left\{\,\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G\,\right\}_{\alpha,\beta\in\mathcal{A}}$\,
+of smooth $G$-valued functions, where each
+\,$\tau_{\beta\alpha}$\,
+is defined as follows:
+For each $x \in U_{\beta} \cap U_{\alpha}$,
 \begin{equation*}
-T_{p}\pi\!\left(\,T_{e}\iota_{p}(\overset{{\color{white}.}}{A})\right)
-\;\; = \;\;
-	\left(\,T_{p}\pi \,\overset{{\color{white}1}}{\circ}\, T_{e}\iota_{p}\,\right)\!(A)
-\;\; = \;\;
-	\left(\,T_{e}(\pi\,\overset{{\color{white}1}}{\circ}\,\iota_{p})\,\right)\!(A)
-\;\; = \;\;
-	0\,,
-\end{equation*}
-where the last equality follows from the fact that
-\,$\pi\,\circ\,\iota_{p} : G \longrightarrow M$\,
-is a constant map:
-\,$\pi\,\circ\,\iota_{p}(g) \,=\, \pi(p \cdot g) \,=\, \pi(p)$,\,
-as required.
-
-\vskip 0.3cm
-\noindent
-\underline{$\image\!\left(\;T_{e}\iota_{p}\,\right) \;=\; \ker\!\left(\,T_{p}\pi\,\right)$}
-\vskip 0.2cm
-\noindent
-First, note that the following (trivial) short exact sequence
-\begin{center}
-\begin{tikzcd}[column sep=scriptsize]
-0 {\color{white}.} \arrow{rr}{} &&
-{\color{white}.}\ker\!\left(\,T_{p}\pi\,\right){\color{white}.} \arrow{rr}{} &&
-{\color{white}.}T_{p}P{\color{white}.} \arrow{rr}{T_{p}\pi} &&
-{\color{white}.}T_{\pi(p)}M{\color{white}.} \arrow{rr}{} &&
-0
-\end{tikzcd}
-\end{center}
-implies the following series of equalities
-\begin{equation*}
-\dim M + \dim G
-\; = \;
-	\dim\!\left(\,U_{\alpha} \times G\;\!\right)
-\; = \;
-	\dim P
-\; = \; 
-	\dim T_{p}P
-\; = \; 
-	\dim\ker\!\left(\,T_{p}\pi\,\right) \, + \, \dim T_{\pi(p)}M
-\; = \; 
-	\dim\ker\!\left(\,T_{p}\pi\,\right) \, + \, \dim M
-\end{equation*}
-which in turn implies that
-\begin{equation*}
-\dim\ker\!\left(\,T_{p}\pi\,\right) \; = \; \dim G
-\end{equation*}
-On the other hand, recall that, for each $p \in G$,
-the fibre \,$\pi^{-1}(\pi(p)) \subset P$\, is a submanifold of \,$P$,\,
-and the orbit map
-\begin{equation*}
-\iota_{p} : G \longrightarrow \pi^{-1}(\pi(p))
-\end{equation*}
-is a diffeomorphism. Hence, its differential:
-\begin{equation*}
-T_{e}\iota_{p} \; : \; \mathfrak{g} := T_{e}G \; \longrightarrow \; T_{p}\,\pi^{-1}(\pi(p))
-\end{equation*}
-is a vector-space isomorphism;
-in particular, \,$T_{e}\iota_{p} \,:\, \mathfrak{g} := T_{e}G \,\longrightarrow\, T_{p}P$\, is an injective (linear) map.
-Hence,
-\begin{equation*}
-\dim\,\image\!\left(\,T_{e}\iota_{p}\,\right) \;=\; \dim T_{e}G \;=\; \dim G \;=\; \dim\ker\!\left(\,T_{p}\pi\,\right)
-\end{equation*}
-But, we have already established that
-\,$\image\!\left(\;T_{e}\iota_{p}\,\right) \,\subset\, \ker\!\left(\,T_{p}\pi\,\right)$.\,
-Hence, we may now conclude that:
-\begin{equation*}
-\image\!\left(\;T_{e}\iota_{p}\,\right) \; = \;  \ker\!\left(\,T_{p}\pi\,\right)
-\end{equation*}
-This completes the proof of the Proposition.
-\qed
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\begin{definition}[Vertical tangent vectors of a principal fibre bundle]
-\mbox{}
-\vskip 0.1cm
-\noindent
-Let \,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\, be a principal $G$-bundle.
-For each \,$p \in P$,\, let \,$\iota_{p} : G \longrightarrow P : g \longmapsto p \cdot g$\, be the orbit map of \,$p \in P$.\,
-A tangent vector \,$v \in T_{p}P$\, is said to be \textbf{vertical} if
-\begin{equation*}
-v \;\in\; \image\!\left(\;T_{e}\iota_{p}\,\right) \;=\; \ker\!\left(\;T_{p}\pi\,\right) \;\subset\; T_{p}P\,.
+\tau_{\beta\alpha}(x)
+\; := \;
+	\psi_{\beta}(p) \cdot \psi_{\alpha}(p)^{-1}
+\; \in \;
+	G\,,
+\quad
+\textnormal{for any \,$p \in \pi^{-1}(x)$}
 \end{equation*}
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{remark}
+\mbox{}
+\vskip 0.2cm
+\noindent
+The above definition is indeed well-defined since
+\begin{equation*}
+\psi_{\beta}(p \cdot g) \cdot \psi_{\alpha}(p \cdot g)^{-1}
+\;\; = \;\;
+	\left(\overset{{\color{white}.}}{\psi}_{\beta}(p)\cdot g\right) \cdot \left(\overset{{\color{white}.}}{\psi}_{\alpha}(p)\cdot g\right)^{-1}
+\;\; = \;\;
+	\psi_{\beta}(p) \cdot g \cdot g^{-1} \cdot \psi_{\alpha}(p)^{-1}
+\;\; = \;\;
+	\psi_{\beta}(p) \cdot \psi_{\alpha}(p)^{-1}
+\end{equation*}
+which shows that the expression
+\,$\psi_{\beta}(p) \cdot \psi_{\alpha}(p)^{-1}$\,
+is independent of the particular choice of \,$p \in \pi^{-1}(x)$.\,
+Note that we have used the equivariance assumption on the bundle charts,
+and the transitivity of the right $G$-action on each fibre.
+\end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Transition functions satisfy cocycle condition]
+\mbox{}
+\vskip 0.2cm
+\noindent
+The set
+\,$\left\{\,\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G\,\right\}_{\alpha,\beta\in\mathcal{A}}$\,
+of transition functions of a principal fibre bundle
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+with respect to a bundle atlas
+\,$\left\{\,\varphi_{\alpha} = (\,\pi,\,\psi_{\alpha}\,) : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G\,\right\}_{\alpha\in\mathcal{A}}$\,
+satisfies the following \textbf{cocycle condition}:
+\begin{equation*}
+\tau_{\gamma\alpha}(x) \; = \; \tau_{\gamma\beta}(x) \cdot \tau_{\beta\alpha}(x) \; \in \; G\,,
+\quad
+\textnormal{for each \,$x \in U_{\alpha} \cap U_{\beta} \cap U_{\gamma}$}
+\end{equation*}
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Cocycle condition determines a principal fibre bundle]
+\mbox{}
+\vskip 0.2cm
+\noindent
+Suppose \,$M$\, is a smooth manifold,
+\,$\left\{\,U_{\alpha}\,\right\}_{\alpha\in\mathcal{A}}$\,
+is an open covering of \,$M$,\, and
+\,$G$\, is a Lie group.
+If a collection
+\,$\left\{\,\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G\,\right\}_{\alpha,\beta\in\mathcal{A}}$\,
+of smooth \,$G$-valued functions
+satisfies the cocycle condition:
+\begin{equation*}
+\tau_{\gamma\alpha}(x) \; = \; \tau_{\gamma\beta}(x) \cdot \tau_{\beta\alpha}(x) \; \in \; G\,,
+\quad
+\textnormal{for each \,$x \in U_{\alpha} \cap U_{\beta} \cap U_{\gamma}$}\,,
+\end{equation*}
+then there exists a principal fibre bundle
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+with a bundle atlas
+\,$\left\{\,\varphi_{\alpha} = (\,\pi,\,\psi_{\alpha}\,) : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G\,\right\}_{\alpha\in\mathcal{A}}$\,
+such that
+\,$\left\{\,\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G\,\right\}_{\alpha,\beta\in\mathcal{A}}$\,
+is the corresponding collection of transition functions.
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
