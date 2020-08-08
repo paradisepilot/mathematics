@@ -179,6 +179,271 @@ of \,$M$\, with a set of transition functions
 which take values in \,$G_{1}$.
 \end{proposition}
 \proof
+
+\vskip 0.3cm
+\noindent
+\underline{$(\,\Longrightarrow\,)$}\;\;
+Suppose $G$ is reducible to $G_{1}$, i.e. there exists an embedding
+\,$\left(\,\widetilde{f} : P_{1} \longrightarrow P \,,\, \iota : G_{1} \longhookrightarrow G\,\right)$\,
+of principal fibre bundles
+whose induced map \,$f$\, on the base manifold \,$M$\, is the identity map on \,$M$.\,
+We consider \,$P_{1}$\, as a submanifold of \,$P$.\,
+Let
+\,$\left\{\,\Psi^{(1)}_{\alpha} = (\,\pi_{1}\,,\psi^{(1)}_{\alpha}\,) : \pi_{1}^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G_{1}\,\right\}_{\alpha\in\mathcal{A}}$\,
+be a bundle atlas of
+\,$G_{1} \longhookrightarrow P_{1} \overset{\pi}{\longrightarrow} M$.\,
+We define an extension
+\,$\Psi_{\alpha} = (\,\pi\,,\psi_{\alpha}\,) : \pi^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G$\,
+of each
+\,$\Psi^{(1)}_{\alpha} = (\,\pi_{1}\,,\psi^{(1)}_{\alpha}\,) : \pi_{1}^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G_{1}$\,
+as follows:
+\begin{equation*}
+\Psi_{\alpha}(p)
+\;\; := \;\;
+	\left(\,\pi(p)\,,\,\psi^{(1)}_{\alpha}(p_{1}) \cdot g\,\right)\,,
+\quad
+\textnormal{for each \,$p \in \pi^{-1}(U_{\alpha})$}\,,
+\end{equation*}
+where \,$(p_{1},g)$\, is any element of \,$\pi_{1}^{-1}(U_{\alpha}) \times G$\, such that \,$p = p_{1} \cdot g$.\,
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 1}:\quad
+$\Psi_{\alpha}$\, is well-defined, i.e. \,$\psi^{(1)}_{\alpha}(p_{1}) \cdot g \in G$\, is independent of the particular choice of \,$(p_{1},g)$.\,
+\vskip 0.2cm
+\proofof Claim 1:\quad
+Suppose
+\,$(p_{1}^{\prime},g^{\prime}) \in \pi_{1}^{-1}(U_{\alpha}) \times G$\,
+also satisfies
+\,$p = p_{1}^{\prime} \cdot g^{\prime}$.\,
+We need to establish that
+\begin{equation*}
+\psi^{(1)}_{\alpha}(p_{1}^{\prime}) \cdot g^{\prime}
+\;\; = \;\;
+	\psi^{(1)}_{\alpha}(p_{1}) \cdot g
+\end{equation*}
+First, note that there exists \,$g_{1} \in G_{1} \subset G$\, such that \,$p_{1}^{\prime} = p_{1} \cdot g_{1}$.\,
+Then,
+\begin{equation*}
+p_{1}^{\prime} \cdot g^{\prime} \,=\, p \,=\, p_{1} \cdot g
+\quad\Longrightarrow\quad
+p_{1} \cdot g_{1} \,=\, p_{1}^{\prime} \,=\, p_{1} \cdot \left(g \cdot (g^{\prime})^{-1}\right)
+\quad\Longrightarrow\quad
+\iota_{p_{1}}(\,g_{1}\,) \,=\, \iota_{p_{1}}\!\!\left(\,\overset{{\color{white}1}}{g} \cdot (g^{\prime}\,)^{-1}\,\right)
+\end{equation*}
+Hence, the injectivity of the orbit map
+\,$\iota_{p_{1}} : G \longrightarrow \pi^{-1}\!\left(\overset{{\color{white}-}}{\pi}(p_{1})\right)$\,
+implies that
+\,$g \cdot (g^{\prime}\,)^{-1} = g_{1} \in G_{1} \subset G$.\,
+We therefore see that
+\begin{equation*}
+\psi^{(1)}_{\alpha}(p_{1}^{\prime}) \cdot g^{\prime}
+\;\; = \;\;
+	\psi^{(1)}_{\alpha}(p_{1}^{\prime}) \cdot g^{\prime} \cdot g^{-1} \cdot g
+\;\; = \;\;
+	\psi^{(1)}_{\alpha}(p_{1}^{\prime}) \cdot g_{1}^{-1} \cdot g
+\;\; = \;\;
+	\psi^{(1)}_{\alpha}(p_{1}^{\prime} \cdot g_{1}^{-1}) \cdot g
+\;\; = \;\;
+	\psi^{(1)}_{\alpha}(p_{1}) \cdot g\,,
+\end{equation*}
+as required. This proves Claim 1.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 2}:\quad
+$\Psi_{\alpha} : \pi_{\alpha}^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G$\, is injective.
+\vskip 0.2cm
+\proofof Claim 2:\quad
+Suppose \,$\Psi_{\alpha}(p) \,=\, \Psi_{\alpha}(p^{\prime})$,\, for \,$p, p^{\prime} \in \pi^{-1}(U_{\alpha})$.\,
+We need to establish that \,$p = p^{\prime}$.\,
+Note first that \,$p = p_{1} \cdot g$\, and \,$p^{\prime} = p_{1}^{\prime} \cdot g^{\prime}$,\,
+for some
+\,$p_{1}, p_{1}^{\prime} \in \pi_{1}^{-1}(U_{\alpha}) \subset P_{1}$,\, and
+\,$g, g^{\prime} \in G$.\,
+Then,
+\begin{equation*}
+\left(\,\pi(p)\,,\,\psi^{(1)}_{\alpha}(p_{1}) \cdot g\,\right)
+\;\; =: \;\;
+	\Psi_{\alpha}(p)
+\;\; = \;\;
+	\Psi_{\alpha}(p^{\prime})
+\;\; := \;\;
+	\left(\,\pi(p^{\prime})\,,\,\psi^{(1)}_{\alpha}(p_{1}^{\prime}) \cdot g^{\prime}\,\right)
+\end{equation*}
+Now,
+\begin{equation*}
+\psi^{(1)}_{\alpha}(p_{1}) \cdot g
+\;\; = \;\;
+	\psi^{(1)}_{\alpha}(p_{1}^{\prime}) \cdot g^{\prime}
+\quad \Longrightarrow \quad
+g_{1}
+\; := \;
+	g^{\prime} \cdot g^{-1}
+\; = \;
+	\left(\psi^{(1)}_{\alpha}(p_{1}^{\prime})\right)^{-1} \cdot \psi^{(1)}_{\alpha}(p_{1})
+\; \in \;
+	G_{1}
+\; \subset \;
+	G\,,
+\end{equation*}
+which in turn implies:
+\begin{equation*}
+\psi^{(1)}_{\alpha}(p_{1})
+\;\; = \;\;
+	\psi^{(1)}_{\alpha}(p_{1}^{\prime} \cdot g_{1})
+\end{equation*}
+Next, note that
+\begin{equation*}
+\pi_{1}(p_{1}^{\prime} \cdot g_{1})
+\; = \;
+	\pi_{1}(p_{1}^{\prime})
+\; = \;
+	\pi(p_{1}^{\prime})
+\; = \;
+	\pi(p_{1}^{\prime} \cdot g^{\prime})
+\; = \;
+	\pi(p^{\prime})
+\; = \;
+	\pi(p)
+\; = \;
+	\pi(p_{1} \cdot g)
+\; = \;
+	\pi(p_{1})
+\; = \;
+	\pi_{1}(p_{1})
+\end{equation*}
+Therefore,
+\begin{equation*}
+\Psi^{(1)}_{\alpha}(p_{1})
+\; := \;
+	\left(\,\pi_{1}(p_{1})\,,\,\psi^{(1)}_{\alpha}(p_{1})\,\right)
+\; = \;
+	\left(\,\pi_{1}(p_{1}^{\prime} \cdot g_{1})\,,\,\psi^{(1)}_{\alpha}(p_{1}^{\prime} \cdot g_{1})\,\right)
+\; =: \;
+	\Psi^{(1)}_{\alpha}(p_{1}^{\prime} \cdot g_{1})
+\end{equation*}
+Bijectivity of \,$\Psi^{(1)}_{\alpha}$\, now implies:
+\begin{equation*}
+p_{1}
+\; = \;
+	p_{1}^{\prime} \cdot g_{1}
+\; = \;
+	p_{1}^{\prime} \cdot g^{\prime} \cdot g^{-1}
+\quad \Longrightarrow \quad
+p
+\; = \;
+	p_{1} \cdot g
+\; = \;
+	p_{1}^{\prime} \cdot g^{\prime}
+\; = \;
+	p^{\prime}
+\end{equation*}
+as required. This proves Claim 2.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 3}:\quad
+$\Psi_{\alpha} : \pi_{\alpha}^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G$\, is surjective.
+\vskip 0.2cm
+\proofof Claim 3:\quad
+Let \,$(\,x\,,\,g\,) \in U_{\alpha} \times G$.\,
+Choose any \,$p^{\prime} \in \pi^{-1}(x)$.
+Next, choose \,$p_{1}^{\prime} \in \pi_{1}^{-1}(x) \subset \pi_{1}^{-1}(U_{\alpha})$\, and \,$g^{\prime} \in G$\,
+such that \,$p^{\prime} = p_{1}^{\prime} \cdot g^{\prime}$.\,
+Now, define \,$g^{\prime\prime} := \left(\,g^{\prime}\,\right)^{-1} \cdot \left(\,\psi_{\alpha}^{-1}(p_{1}^{\prime})\,\right)^{-1} \cdot g$.\,
+Lastly, define
+\,$p := p^{\prime}\cdot g^{\prime\prime} = p_{1}^{\prime}\cdot g^{\prime} \cdot g^{\prime\prime} \in \pi^{-1}(x) \subset \pi^{-1}(U_{\alpha})$.\,
+Then,
+\begin{equation*}
+\Psi_{\alpha}\!\left(\,p\,\right)
+\; := \;
+	\left(\,\pi(p)\,,\,\psi_{\alpha}^{(1)}(p_{1}^{\prime}) \cdot g^{\prime} \cdot g^{\prime\prime} \,\right)
+\; = \;
+	\left(\,x\,,\,g\,\right)
+\end{equation*}
+This establishes the surjectivity of \,$\Psi_{\alpha}$\, and completes the proof of Claim 3.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 4}:\quad
+$\Psi_{\alpha} : \pi_{\alpha}^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G$\, is a bundle chart of
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$.
+\vskip 0.2cm
+\proofof Claim 4:\quad
+By Claims 1, 2, and 3,
+\,$\Psi_{\alpha} : \pi_{\alpha}^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G$\,
+is a (well-defined) diffeomorphism.
+For each \,$p \in \pi^{-1}(U_{\alpha})$\, and \,$g \in G$,\,
+we need to establish that
+\,$\Psi_{\alpha}(\,p\,\cdot\,g\,) \, = \, \Psi_{\alpha}(\,p\,)\,\cdot\,g$.\,
+To this end, choose \,$p_{1} \in \pi_{1}^{-1}(x) \subset \pi_{1}^{-1}(U_{\alpha})$\,
+and \,$g^{\prime} \in G$\, such that \,$p = p_{1} \cdot g^{\prime}$.
+Hence,
+\begin{eqnarray*}
+\Psi_{\alpha}(\,p \cdot g\,)
+& = &
+	\Psi_{\alpha}(\,p_{1} \cdot g^{\prime} \cdot g\,)
+\;\; = \;\;
+	\left(\,\pi(p_{1} \cdot g^{\prime} \cdot g)\,,\,\psi_{\alpha}^{(1)}(p_{1}) \cdot g^{\prime} \cdot g\,\right)
+\;\; = \;\;
+	\left(\,\pi(p_{1} \cdot g^{\prime})\,,\,\psi_{\alpha}^{(1)}(p_{1}) \cdot g^{\prime} \cdot g\,\right)
+\\
+& = &
+	\left(\,\pi(p)\,,\,\psi_{\alpha}^{(1)}(p_{1}) \cdot g^{\prime}\,\right) \cdot g
+\\
+& = &
+	\Psi_{\alpha}(\,p\,) \cdot g
+\end{eqnarray*}
+This proves Claim 4.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 5}:\quad
+This transition functions of
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+with respect to the bundle atlas
+\,$\left\{\,\Psi_{\alpha} : \pi_{\alpha}^{-1}(U_{\alpha}) \longrightarrow U_{\alpha} \times G\,\right\}_{\alpha\in\mathcal{A}}$\,
+take values in \,$G_{1} \subset G$.
+\vskip 0.2cm
+\proofof Claim 5:\quad
+Let \,$x \in U_{\alpha} \cap U_{\beta}$.\,
+Choose \,$p \in \pi^{-1}(x)$.\,
+Then, choose \,$p_{1} \in \pi_{1}^{-1}(x)$\, and \,$g \in G$\, such that \,$p = p_{1} \cdot g$.\,
+Hence,
+\begin{eqnarray*}
+\tau_{\beta\alpha}(x)
+& := &
+	\psi_{\beta}(p) \cdot \psi_{\alpha}(p)^{-1}
+\;\; = \;\;
+	\left(\,\psi_{\beta}^{(1)}(p_{1}) \cdot g\,\right) \cdot \left(\,\psi_{\alpha}^{(1)}(p_{1}) \cdot g\,\right)^{-1}	
+\;\; = \;\;
+	\psi_{\beta}^{(1)}(p_{1}) \cdot g \cdot g^{-1} \cdot \psi_{\alpha}^{(1)}(p_{1})^{-1}	
+\\
+& = &
+	\psi_{\beta}^{(1)}(p_{1}) \cdot \psi_{\alpha}^{(1)}(p_{1})^{-1}	
+\\
+& \in &
+	G_{1}
+\end{eqnarray*}
+This proves Claim 5, and completes the proof that
+the reducibility of the structure group \,$G$\, of
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+to a subgroup \,$G_{1} \subset G$\, implies that
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+admits a bundle atlas whose transition functions take values in $G_{1}$.
+
+\vskip 1.0cm
+\noindent
+\underline{$(\,\Longleftarrow\,)$}\;\;
+Conversely, suppose that the principal fibre bundle
+\,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
+admits a bundle atlas whose transition functions take values in the subgroup $G_{1} \subset G$.
+We need to prove that the structure group \,$G$\, is reducible to $G_{1}$, i.e. there exists an embedding
+\,$\left(\,\widetilde{f} : P_{1} \longrightarrow P \,,\, \iota : G_{1} \longhookrightarrow G\,\right)$\,
+of principal fibre bundles
+whose induced map \,$f$\, on the base manifold \,$M$\, is the identity map on \,$M$.\,
+
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
