@@ -433,16 +433,43 @@ to a subgroup \,$G_{1} \subset G$\, implies that
 \,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
 admits a bundle atlas whose transition functions take values in $G_{1}$.
 
-\vskip 1.0cm
+\vskip 0.8cm
 \noindent
 \underline{$(\,\Longleftarrow\,)$}\;\;
 Conversely, suppose that the principal fibre bundle
 \,$G \longhookrightarrow P \overset{\pi}{\longrightarrow} M$\,
-admits a bundle atlas whose transition functions take values in the subgroup $G_{1} \subset G$.
+admits a bundle atlas
+\begin{equation*}
+\left\{\;\Psi_{\alpha} = (\pi\,,\psi_{\alpha}) : \pi^{-1}(U_{\alpha}) \overset{{\color{white}1}}{\longrightarrow} U_{\alpha} \times G\;\right\}_{\alpha\in\mathcal{A}}
+\end{equation*}
+whose transition functions
+\,$\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G_{1} \subset G$\,
+take values in the subgroup $G_{1} \subset G$.
 We need to prove that the structure group \,$G$\, is reducible to $G_{1}$, i.e. there exists an embedding
 \,$\left(\,\widetilde{f} : P_{1} \longrightarrow P \,,\, \iota : G_{1} \longhookrightarrow G\,\right)$\,
 of principal fibre bundles
 whose induced map \,$f$\, on the base manifold \,$M$\, is the identity map on \,$M$.\,
+By Proposition \ref{cocycleDeterminesPFB}, there exists a principal fibre bundle
+\,$G_{1} \longhookrightarrow P_{1} \overset{\pi_{1}}{\longrightarrow} M$\,
+with bundle atlas
+\begin{equation*}
+\left\{\;
+	\Psi^{(1)}_{\alpha} = (\pi_{1}\,,\psi^{(1)}_{\alpha})
+	: \pi_{1}^{-1}(U_{\alpha}) \overset{{\color{white}1}}{\longrightarrow} U_{\alpha} \times G_{1}
+	\;\right\}_{\alpha\in\mathcal{A}}
+\end{equation*}
+whose transition functions are
+\,$\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G_{1}$.\,
+Now, define
+\begin{center}
+\begin{tikzcd}\widetilde{f}_{\alpha} \; : \;
+\pi_{1}^{-1}(U_{\alpha}) \arrow[r, "\Psi_{\alpha}^{(1)}"] &
+U_{\alpha} \times G_{1} \arrow[r, hook] &
+U_{\alpha} \times G \arrow[r, "\Psi_{\alpha}^{-1}"] &
+\pi^{-1}(U_{\alpha})\end{tikzcd}
+\end{center}
+Note that \,$\widetilde{f}_{\alpha}$\, is an embedding
+mapping \,$\pi_{1}^{-1}(U_{\alpha})$\, into \,$\pi^{-1}(U_{\alpha})$.\,
 
 \qed
 
