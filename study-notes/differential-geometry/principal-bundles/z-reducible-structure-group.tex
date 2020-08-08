@@ -443,12 +443,15 @@ admits a bundle atlas
 \left\{\;\Psi_{\alpha} = (\pi\,,\psi_{\alpha}) : \pi^{-1}(U_{\alpha}) \overset{{\color{white}1}}{\longrightarrow} U_{\alpha} \times G\;\right\}_{\alpha\in\mathcal{A}}
 \end{equation*}
 whose transition functions
-\,$\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G_{1} \subset G$\,
+\,$\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G$\,
 take values in the subgroup $G_{1} \subset G$.
 We need to prove that the structure group \,$G$\, is reducible to $G_{1}$, i.e. there exists an embedding
 \,$\left(\,\widetilde{f} : P_{1} \longrightarrow P \,,\, \iota : G_{1} \longhookrightarrow G\,\right)$\,
 of principal fibre bundles
 whose induced map \,$f$\, on the base manifold \,$M$\, is the identity map on \,$M$.\,
+
+\vskip 0.3cm
+\noindent
 By Proposition \ref{cocycleDeterminesPFB}, there exists a principal fibre bundle
 \,$G_{1} \longhookrightarrow P_{1} \overset{\pi_{1}}{\longrightarrow} M$\,
 with bundle atlas
@@ -458,8 +461,11 @@ with bundle atlas
 	: \pi_{1}^{-1}(U_{\alpha}) \overset{{\color{white}1}}{\longrightarrow} U_{\alpha} \times G_{1}
 	\;\right\}_{\alpha\in\mathcal{A}}
 \end{equation*}
-whose transition functions are
-\,$\tau_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G_{1}$.\,
+whose transition functions
+\,$\tau^{(1)}_{\beta\alpha} : U_{\beta} \cap U_{\alpha} \longrightarrow G_{1}$\,
+are given by
+\,$\tau^{(1)}_{\beta\alpha}(x) = \tau_{\beta\alpha}(x) \in G_{1}$,\,
+for each \,$x \in \pi^{-1}(U_{\alpha} \cap U_{\alpha})$.\,
 Now, define
 \begin{center}
 \begin{tikzcd}\widetilde{f}_{\alpha} \; : \;
@@ -470,7 +476,117 @@ U_{\alpha} \times G \arrow[r, "\Psi_{\alpha}^{-1}"] &
 \end{center}
 Note that \,$\widetilde{f}_{\alpha}$\, is an embedding
 mapping \,$\pi_{1}^{-1}(U_{\alpha})$\, into \,$\pi^{-1}(U_{\alpha})$.\,
+Next, we will establish that
+\begin{equation*}
+\left.\widetilde{f}_{\alpha}\,\right\vert_{\,\pi_{1}^{-1}(U_{\alpha})\;\cap\,\pi_{1}^{-1}(U_{\beta})}
+\;\; = \;\;
+\left.\widetilde{f}_{\beta}\,\right\vert_{\,\pi_{1}^{-1}(U_{\alpha})\;\cap\,\pi_{1}^{-1}(U_{\beta})}\,,
+\end{equation*}
+whenever
+\,$\pi_{1}^{-1}(U_{\alpha})\,\cap\,\pi_{1}^{-1}(U_{\beta}) \,\neq\, \varemptyset$.\,
+To this end, we need to show that
+\begin{equation*}
+\widetilde{f}_{\alpha}(\,p_{1}\,)
+\; = \;
+	\widetilde{f}_{\beta}(\,p_{1}\,)\,,
+\quad
+\textnormal{for each \,$p_{1} \in \pi_{1}^{-1}(U_{\alpha})\,\cap\,\pi_{1}^{-1}(U_{\beta})$}
+\end{equation*}
+which is equivalent to
+\begin{equation*}
+\Psi^{(1)}_{\alpha}(\,p_{1}\,)
+%\;\; = \;\;
+%	\left(\,\pi_{1}(p_{1}) \,,\, \psi^{(1)}_{\alpha}(p_{1})\,\right)
+\;\; \sim \;\;
+%	\left(\,\pi_{1}(p_{1}) \,,\, \tau_{\beta\alpha}(\,\pi(p)\,) \cdot \psi^{(1)}_{\alpha}(p_{1})\,\right)
+%\;\; = \;\;
+	\Psi^{(1)}_{\beta}(\,p_{1}\,)\,,
+\end{equation*}
+recalling (e.g. see proof of Proposition 5.2, p.52, \cite{Kobayashi1963v1}) that the principal fibre bundle
+\,$G_{1} \longhookrightarrow P_{1} \longrightarrow M$\,
+can be realized as follows:
+\begin{equation*}
+G_{1} \longhookrightarrow P_{1} \longrightarrow M
+\;\; = \;\;
+	\left.\left(\;\underset{\alpha\in\mathcal{A}}{\bigsqcup}\;U_{\alpha} \times G_{1}\;\right)\right\slash\textnormal{\large$\sim$}\,,
+\end{equation*}
+where the equivalence relation \,$\sim$\, is given by:
+For
+\,$\left(\,x\,,\,g\,\right) \in U_{\alpha} \times G_{1}$\,
+and
+\,$\left(\,x^{\prime}\,,\,g^{\prime}\,\right) \in U_{\beta} \times G_{1}$,\,
+\begin{equation*}
+\left(\,x\,,\,g\,\right) \,\sim\, \left(\,x^{\prime}\,,\,g^{\prime}\,\right)
+\quad\Longleftrightarrow\quad
+x^{\prime} \,=\, x
+\;\;\textnormal{and}\;\;
+g^{\prime} \,=\, \tau_{\beta\alpha}(x) \cdot g
+\end{equation*}
+Now, observe that
+\begin{eqnarray*}
+\Psi^{(1)}_{\alpha}(\,p_{1}\,)
+& {\color{white}=} &
+	{\color{white}\left(\,\pi_{1}(p_{1}) \,,\, \psi^{(1)}_{\alpha}(p_{1})\,\right)}
+\;\; {\color{white}111.} \;\;
+	{\color{white}\left(\,\pi(p_{1}) \,,\, \psi^{(1)}_{\beta}(p_{1}) \cdot \psi^{(1)}_{\alpha}(p_{1})^{-1} \cdot \psi^{(1)}_{\alpha}(p_{1})\,\right)}
+\;\; = \;\;
+	\left(\,\pi_{1}(p_{1}) \,,\, \psi^{(1)}_{\alpha}(p_{1})\,\right)
+\\
+\Psi^{(1)}_{\beta}(\,p_{1}\,)
+& = &
+	\left(\,\pi_{1}(p_{1}) \,,\, \psi^{(1)}_{\beta}(p_{1})\,\right)
+\;\; = \;\;
+	\left(\,\pi_{1}(p_{1}) \,,\, \psi^{(1)}_{\beta}(p_{1}) \cdot \psi^{(1)}_{\alpha}(p_{1})^{-1} \cdot \psi^{(1)}_{\alpha}(p_{1})\,\right)
+\;\; = \;\;
+	\left(\,\pi_{1}(p_{1}) \,,\, \tau_{\beta\alpha}(\,\pi(p)\,) \cdot \psi^{(1)}_{\alpha}(p_{1})\,\right)
+\end{eqnarray*}
+Hence, we see that
+\begin{equation*}
+\Psi^{(1)}_{\alpha}(\,p_{1}\,)
+\;\; = \;\;
+	\left(\,\pi_{1}(p_{1}) \,,\, \psi^{(1)}_{\alpha}(p_{1})\,\right)
+\;\; \sim \;\;
+	\left(\,\pi_{1}(p_{1}) \,,\, \tau_{\beta\alpha}(\,\pi(p)\,) \cdot \psi^{(1)}_{\alpha}(p_{1})\,\right)
+\;\; = \;\;
+	\Psi^{(1)}_{\beta}(\,p_{1}\,)
+\end{equation*}
+which completes the proof that
+\begin{equation*}
+\left.\widetilde{f}_{\alpha}\,\right\vert_{\,\pi_{1}^{-1}(U_{\alpha})\;\cap\,\pi_{1}^{-1}(U_{\beta})}
+\;\; = \;\;
+\left.\widetilde{f}_{\beta}\,\right\vert_{\,\pi_{1}^{-1}(U_{\alpha})\;\cap\,\pi_{1}^{-1}(U_{\beta})}.
+\end{equation*}
+Hence, the \,$\widetilde{f}_{\alpha}$'s\, patch together to define an injective map:
+\begin{equation*}
+\widetilde{f} \;\; : \;
+	\underset{G_{1} \longhookrightarrow P_{1} \longrightarrow M}
+	{\underbrace{\left.\left(\;\underset{\alpha\in\mathcal{A}}{\bigsqcup}\;U_{\alpha} \times G_{1}\;\right)\right\slash\textnormal{\large$\sim$}}}
+\quad \longrightarrow \quad
+	\underset{G \longhookrightarrow P \longrightarrow M}
+	{\underbrace{\left.\left(\;\underset{\alpha\in\mathcal{A}}{\bigsqcup}\;U_{\alpha} \times G\;\right)\right\slash\textnormal{\large$\sim$}}}
+\end{equation*}
+Lastly, observe that
+\begin{eqnarray*}
+\widetilde{f}(\,p_{1} \cdot g_{1}\,)
+& = &
+	\left[\;\Psi_{\alpha}^{(1)}\!\left(\,p_{1} \cdot g_{1}\,\right)\;\right]_{\sim}
+\;\; = \;\;
+	\left[\;\Psi_{\alpha}^{(1)}\!\left(\,p_{1}\,\right)\cdot g_{1}\;\right]_{\sim}
+\;\; = \;\;
+	\left[\;\Psi_{\alpha}^{(1)}\!\left(\,p_{1}\,\right)\;\right]_{\sim}\;\cdot g_{1}
+\;\; = \;\;
+	\widetilde{f}(\,p_{1}\,) \cdot g_{1}
+\end{eqnarray*}
+This proves that
+\begin{equation*}
+\left(\;\widetilde{f} : P_{1} \longrightarrow P \,,\, \iota : G_{1} \longhookrightarrow G \;\right)
+\end{equation*}
+indeed defines an embedding between principal fibre bundles.
+It is clear that the induced map on the base manifold $M$ by $\widetilde{f}$ is the identity map on $M$.
 
+\vskip 0.5cm
+\noindent
+This completes the proof of the reverse implication, as well as that of the Proposition.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
