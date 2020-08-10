@@ -20,21 +20,59 @@ Suppose:
 \item
 	$G \longhookrightarrow P \longrightarrow M$\,
 	is a principal fibre bundle.
+	\vskip 0.01cm
+	\,$\mathscr{C}\!\left(G\hookrightarrow P \rightarrow M\right)$\,
+	is the collection of all connection $1$-forms on the principal fibre bundle.
 \item
-	$F$ is a smooth manifold on which $G$ acts on the left.
-	$E$ is the associated fibre bundle, i.e. $E \,=\, \left.\left(\,P \times_{G} F\,\right)\,\right\slash G$.
+	$W$ is a finite-dimensional vector space over $\C$ admitting a representation
+	\,$\rho : G \longrightarrow \GL(W)$,\,
+	and \,$E$\, is the associated fibre bundle, i.e.
+	\,$E \,=\, P \times_{\rho} W$.\,
 \item
-	\begin{equation*}
+	$M$\, is equipped with a pseudo-Riemannian metric,
+	with the induced volume form defined as
+	\,$\d\,\vol_{M}$.\,
+	\vskip 0.1cm
+	The Lie algebra \,$\mathfrak{g}$\, of the structure (Lie) group \,$G$\,
+	is equipped with a positive definite \,$\Ad$-invariant\, inner product
+	\,$\langle\,\cdot\,,\cdot\,\rangle_{\mathfrak{g}}$\,
+	(which will involve a number of coupling constants).\,
+	Note that
+	\,$\langle\,\cdot\,,\cdot\,\rangle_{\mathfrak{g}}$\,
+	will then induce a bundle metric
+	--- which we denote by \,$\langle\,\cdot\,,\cdot\,\rangle_{\Ad(P)}$\, ---
+	on the associated real vector bundle
+	\,$\Ad(P) \,=\, P \times_{\Ad} \mathfrak{g}$.\,
+	\vskip 0.1cm
+	$W$\, is equipped with a \,$\rho$-invariant Hermitian inner product
+	\,$\langle\,\cdot\,,\cdot\,\rangle_{W}$,\,
+	which will induce the associated bundle metric on the associated vector bundle
+	\,$E \,=\, P \times_{\rho} W $.\,
+	\vskip 0.1cm
+\item
+	$S : \mathscr{C}\!\left(G\hookrightarrow P \rightarrow M\right) \times \Gamma(E) \longrightarrow \Re$\,
+	is the action functional defined as follows:
+	\begin{eqnarray*}
 	S\!\left(\,\omega\,,\Phi\,\right)
-	\;\; := \;\;
+	& := &
 		\int_{M}\left(\;
-			\dfrac{1}{2}\;\Omega\;\dot{\wedge}\star\Omega
+			\dfrac{1}{2}\,\langle\,F^{\omega}_{M} \,, F^{\omega}_{M}\,\rangle_{\Ad(P)}
 			\;+\;
-			\dfrac{1}{2}\;\nabla^{\omega}\Phi\;\dot{\wedge} \star\nabla^{\omega}\Omega
+			\dfrac{1}{2}\;\langle\,\nabla^{\,\omega}\Phi \,, \nabla^{\,\omega}\Phi\,\rangle_{E}
 			\;-\;
-			V(\Phi)\,\d\,\vol_{g} 
+			V(\Phi)
+			\,\right)
+			\,\d\,\vol_{M} 
+	\\
+	& = &
+		\int_{M}\left(\;
+			\dfrac{1}{2}\; F^{\omega}_{M} \;\dot{\wedge}\star F^{\omega}_{M}
+			\;+\;
+			\dfrac{1}{2}\;\nabla^{\,\omega}\Phi\;\dot{\,\wedge} \star\nabla^{\,\omega}\Phi
+			\;-\;
+			V(\Phi)\,\d\,\vol_{M} 
 			\;\right)
-	\end{equation*}
+	\end{eqnarray*}
 	where
 	\begin{equation*}
 	V(\Phi) \;\; = \;\; V(\vert\,\Phi\,\vert)
