@@ -56,7 +56,7 @@ Then, the following is an exact sequence of abelian groups:
 
 \vskip 0.25cm
 \noindent
-\underline{{\color{white}.}Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(N,D)$, i.e. {\color{red}injectivity of $\varphi^{\prime}$}{\color{white}.}}
+\underline{Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(N,D)$, i.e. {\color{red}injectivity of $\varphi^{\prime}$}{\color{white}.}}
 \vskip 0.25cm
 \noindent
 Let $\zeta_{1}, \zeta_{2} \in \Hom_{R}(N,D)$ be such that
@@ -68,11 +68,12 @@ But, this follows immediately from the {\color{red}surjectivity of} ${\color{red
 
 \vskip 0.50cm
 \noindent
-\underline{{\color{white}.}Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(M,D)$}
+\underline{Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(M,D)$,\, i.e. $\image(\psi^{\prime}) = \ker(\varphi^{\prime})$}
 \vskip 0.25cm
 \noindent
-We need to show that \,$\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)$,\,
-equivalently, $\psi^{\prime} \circ \varphi^{\prime} = 0$.
+We need to show that \,$\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)$.\,
+First, we establish \,$\image(\,\varphi^{\prime}\,) \subset \ker(\,\psi^{\prime}\,)$,\,
+equivalently, \,$\psi^{\prime} \circ \varphi^{\prime} = 0$.\,
 To this end, let
 $\varphi^{\prime}(\zeta) \;=\; \zeta \circ \varphi \;\in\; \image(\,\varphi^{\prime}\,) \;\subset\; \Hom_{R}(M,D)$.
 Then, observe that
@@ -90,24 +91,73 @@ Then, observe that
 	\textnormal{for each \,$\zeta \in \Hom_{R}(N,D)$}
 \end{equation*}
 Hence,
-\begin{eqnarray*}
+\begin{equation*}
 \textnormal{exactness of \eqref{givenShortExactSequence} at $M$}
-& \Longleftrightarrow &
+\; \Longleftrightarrow \;
 	{\color{red}\image(\,\psi\,) \,=\, \ker(\,\varphi\,)}
-\\
-& \Longleftrightarrow &
+\; \Longrightarrow \;
 	\varphi \,\circ\, \psi \,= 0
-\\
-& {\color{red}\Longrightarrow} &
+\;\; {\color{red}\Longrightarrow} \;\;
 	\psi^{\prime} \circ \varphi^{\prime} = 0
-\\
-& \Longleftrightarrow &
-	{\color{red}\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)}
-\\
-& \Longleftrightarrow &
-	\textnormal{exactness of \eqref{inducedExactSequence} at $\Hom_{R}(M,D)$},
-\end{eqnarray*}
+\; \Longleftrightarrow \;
+	{\color{red}\image(\,\varphi^{\prime}\,) \subset \ker(\,\psi^{\prime}\,)}
+\end{equation*}
 as required.
+
+\vskip 0.25cm
+\noindent
+Next, we show that
+\,$\image(\,\varphi^{\prime}\,) \supset \ker(\,\psi^{\prime}\,)$.\,
+To this end, let \,$\beta \in \ker(\,\psi^{\prime}\,) \subset \Hom_{R}(M,D)$,\,
+i.e. \,$\psi^{\prime}(\beta) = \beta \circ \psi = 0$.\,
+We need to show \,$\beta \in \image(\,\varphi^{\prime}\,)$,\,
+i.e. there exists \,$\alpha \in \Hom_{R}(N,D)$\, such that
+\,$\beta = \varphi^{\prime}(\alpha) = \alpha \circ \varphi \in \Hom_{R}(M,D)$.\,
+So, we now construct/define such an \,$\alpha \in \Hom_{R}(N,D)$,\, as follows:
+\begin{equation*}
+\alpha(\,n\,) \; := \; \beta(\,m\,),
+\quad
+\textnormal{for any \,$m \in \varphi^{-1}(n)$,\; for each \,$n \in N$}
+\end{equation*}
+For \,$\alpha$\, to be set-theoretically well-defined, we must have:
+\begin{itemize}
+\item
+	$\varphi^{-1}(n) \,\neq\, \varemptyset$,\, for each \,$n \in N$, and
+\item
+	$\beta(\,m_{1}\,) \,=\, \beta(\,m_{2}\,)$,\, for any \,$m_{1}, m_{2} \in \varphi^{-1}(n)$,\, for each \,$n \in N$.	
+\end{itemize}
+The first bullet is exactly the {\color{red}surjectivity of \,$\varphi$},\,
+equivalently, the exactness of \eqref{givenShortExactSequence} at $N$.
+For the second bullet, note that
+\begin{eqnarray*}
+m_{1}, m_{2} \in \varphi^{-1}(n)
+& \Longleftrightarrow &
+	\varphi(m_{1}) \,=\, n \,=\, \varphi(m_{2})
+\;\; \Longleftrightarrow \;\;
+	m_{1} - m_{2} \,\in\, {\color{red}\ker(\varphi) \,=\, \image(\psi)}
+\\
+& \overset{{\color{white}1}}{\Longrightarrow} &
+	\beta(\,m_{1} - m_{2}\,) \,\in\, \beta\!\left(\,\image(\psi)\,\right) \,=\, \{\,0\,\},
+	\;\;
+	\textnormal{since \,$\psi^{\prime}(\beta) \,=\, \beta \circ \psi \,=\, 0$}
+\\
+& \overset{{\color{white}1}}{\Longrightarrow} &
+	\beta(\,m_{1}\,) \,=\, \beta(\,m_{2}\,) \,\in\, D.
+\end{eqnarray*}
+This establishes that \,$\alpha : N \longrightarrow D$\, is indeed set-theoretically well-defined.
+It is routine to show that \,$\alpha$\, is furthermore an $R$-module homomorphism.
+By construction/definition of \,$\alpha$,\, we have
+\begin{equation*}
+\beta(\,m\,) \; = \; \alpha(\varphi(m)),
+\quad
+\textnormal{for each \,$m \in M$},
+\end{equation*}
+i.e. \,$\beta = \alpha \circ \varphi = \varphi^{\prime}(\alpha) \in \image(\varphi^{\prime})$.\,
+This proves that
+\,$\ker(\,\psi^{\prime}\,) \subset \image(\,\varphi^{\prime}\,)$,\,
+and hence
+\,$\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)$,\,
+i.e. the exactness of \eqref{inducedExactSequence} at \,$\Hom_{R}(M,D)$.\,
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -121,7 +171,7 @@ Consider the following diagram:
 \begin{center}
 \begin{tikzcd}
 0 \arrow[r]
-& L \arrow[r, "\psi"] \arrow[d, "\xi{\color{white}.}" swap]& M \arrow[r, "\varphi"] \arrow[dr] \arrow[dl, dashrightarrow, "\exists{\color{white}.}\eta{\color{white}.}?"]& N \arrow[d, "{\color{white}.}\zeta_{1}\textnormal{,\,}\zeta_{2}"] \arrow[r]
+& L \arrow[r, "\psi"] \arrow[d, "\xi{\color{white}.}" swap]& M \arrow[r, "\varphi"] \arrow[dr] \arrow[dl, dashrightarrow, "\exists{\color{white}.}\eta{\color{white}.}?", red]& N \arrow[d, "{\color{white}.}\zeta_{1}\textnormal{,\,}\zeta_{2}"] \arrow[r]
 & 0
 \\
 & D
@@ -169,9 +219,12 @@ Consider the following diagram:
 	\end{center}
 	And, the above statement is clearly not true in general.
 \end{itemize}
-Homological algebra provides tools to measure the degree to which
+Homological algebra defines, and provides tools to compute, algebraic objects
+that measure the degree to which
 \eqref{inducedExactSequence}
-{\color{red}fails to extend to a short exact sequence}.
+{\color{red}fails to extend to a short exact sequence};
+more precisely, the aforementioned algebraic objects are abelian groups
+that extend \eqref{inducedExactSequence} into a long exact sequence.
 \end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
