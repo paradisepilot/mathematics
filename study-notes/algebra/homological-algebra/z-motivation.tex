@@ -1,0 +1,177 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Homological algebra -- motivation}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}
+\label{homologicalAlgebraMotivation}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose $R$ is a ring with identity, and the following is
+a short exact sequence of $R$-modules
+\begin{equation}\label{givenShortExactSequence}
+0
+\;\; \longrightarrow \;\;
+	L
+\;\; \overset{\psi}{\longrightarrow} \;\;
+	M
+\;\; \overset{\varphi}{\longrightarrow} \;\;
+	N
+\;\; \longrightarrow \;\;
+	0
+\end{equation}
+For any $R$-module $D$, let 
+\begin{equation*}
+\begin{array}{lccccc}
+\psi^{\prime} & : & \Hom_{R}(M,D) & \longrightarrow & \Hom_{R}(\,L\,,D) \;\; : \;\; \eta \;\; \longmapsto \;\; \eta \circ \psi
+\\
+\varphi^{\prime} & : & \Hom_{R}(N,D) & \longrightarrow & \Hom_{R}(M,D) \;\; : \;\; \zeta \;\; \longmapsto \;\; \zeta \circ \varphi
+\end{array}
+\end{equation*}
+Then, the following is an exact sequence of abelian groups:
+\begin{equation}\label{inducedExactSequence}
+0
+\;\; \longrightarrow \;\;
+	\Hom_{R}(N,D)
+\;\; \overset{\varphi^{\prime}}{\longrightarrow} \;\;
+	\Hom_{R}(M,D)
+\;\; \overset{\psi^{\prime}}{\longrightarrow} \;\;
+	\Hom_{R}(L,D)
+\end{equation}
+\end{proposition}
+\proof
+
+\vskip 0.25cm
+\noindent
+\underline{{\color{white}.}Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(N,D)$, i.e. {\color{red}injectivity of $\varphi^{\prime}$}{\color{white}.}}
+\vskip 0.25cm
+\noindent
+Let $\zeta_{1}, \zeta_{2} \in \Hom_{R}(N,D)$ be such that
+$\varphi^{\prime}(\zeta_{1}) = \varphi^{\prime}(\zeta_{2}) \in \Hom_{R}(M,D)$, i.e.
+$\zeta_{1} \circ \varphi = \zeta_{2} \circ \varphi$.
+We need to show that $\zeta_{1} = \zeta_{2} \in \Hom_{R}(N,D)$.
+But, this follows immediately from the {\color{red}surjectivity of} ${\color{red}\varphi} \in \Hom_{R}(M,N)$.
+
+
+\vskip 0.50cm
+\noindent
+\underline{{\color{white}.}Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(M,D)$}
+\vskip 0.25cm
+\noindent
+We need to show that \,$\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)$,\,
+equivalently, $\psi^{\prime} \circ \varphi^{\prime} = 0$.
+To this end, let
+$\varphi^{\prime}(\zeta) \;=\; \zeta \circ \varphi \;\in\; \image(\,\varphi^{\prime}\,) \;\subset\; \Hom_{R}(M,D)$.
+Then, observe that
+\begin{equation*}
+(\,\psi^{\prime}\circ\varphi^{\prime}\,)(\zeta)
+\;\; = \;\;
+	\psi^{\prime}(\,\varphi^{\prime}(\zeta)\,)
+\;\; = \;\;
+	\psi^{\prime}(\,\zeta \circ \varphi\,)
+\;\; = \;\;
+	(\,\zeta \circ \varphi\,) \circ \psi
+\;\; = \;\;
+	\zeta \circ (\,\varphi \circ \psi\,),
+\quad
+	\textnormal{for each \,$\zeta \in \Hom_{R}(N,D)$}
+\end{equation*}
+Hence,
+\begin{eqnarray*}
+\textnormal{exactness of \eqref{givenShortExactSequence} at $M$}
+& \Longleftrightarrow &
+	{\color{red}\image(\,\psi\,) \,=\, \ker(\,\varphi\,)}
+\\
+& \Longleftrightarrow &
+	\varphi \,\circ\, \psi \,= 0
+\\
+& {\color{red}\Longrightarrow} &
+	\psi^{\prime} \circ \varphi^{\prime} = 0
+\\
+& \Longleftrightarrow &
+	{\color{red}\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)}
+\\
+& \Longleftrightarrow &
+	\textnormal{exactness of \eqref{inducedExactSequence} at $\Hom_{R}(M,D)$},
+\end{eqnarray*}
+as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Consider the following diagram:
+\begin{center}
+\begin{tikzcd}
+0 \arrow[r]
+& L \arrow[r, "\psi"] \arrow[d, "\xi{\color{white}.}" swap]& M \arrow[r, "\varphi"] \arrow[dr] \arrow[dl, dashrightarrow, "\exists{\color{white}.}\eta{\color{white}.}?"]& N \arrow[d, "{\color{white}.}\zeta_{1}\textnormal{,\,}\zeta_{2}"] \arrow[r]
+& 0
+\\
+& D
+&& D\end{tikzcd}\end{center}
+\begin{itemize}
+\item
+	The exactness of \eqref{inducedExactSequence} at \,$\Hom_{R}(N,D)$
+	is equivalent to the injectivity of $\varphi^{\prime}$,
+	which is a consequence of the surjectivity of $\varphi$.
+\item
+	The exactness of \eqref{inducedExactSequence} at \,$\Hom_{R}(M,D)$
+	is equivalent to \,$\psi^{\prime}\circ\varphi^{\prime} = 0$,\,
+	which follows from the exactness of \eqref{givenShortExactSequence} at \,$M$
+	(which in turn is equivalent to \,$\varphi \circ \psi = 0$),
+	since
+	\begin{equation*}
+	(\,\psi^{\prime}\circ\varphi^{\prime}\,)(\zeta)
+	\;\; = \;\;
+		\psi^{\prime}(\,\varphi^{\prime}(\zeta)\,)
+	\;\; = \;\;
+		\psi^{\prime}(\,\zeta \circ \varphi\,)
+	\;\; = \;\;
+		(\,\zeta \circ \varphi\,) \circ \psi
+	\;\; = \;\;
+		\zeta \circ (\,\varphi \circ \psi\,),
+	\quad
+		\textnormal{for each \,$\zeta \in \Hom_{R}(N,D)$}
+	\end{equation*}
+	as mentioned in the proof of Proposition \ref{homologicalAlgebraMotivation}.
+\item
+	The induced exact sequence \eqref{inducedExactSequence}
+	in general cannot be extended on the right to a short exact sequence.
+	Indeed, this extendibility is equivalent to the surjectivity of $\psi^{\prime}$,
+	which in turn is equivalent to the following statement:
+	\begin{center}
+	\begin{minipage}{6.0in}
+	\textnormal{For each $R$-module homomorphism
+	\,$L\,\overset{\xi}{\longrightarrow}\,D$,\,
+	there exists an $R$-module homomorphism
+	\,$M\,\overset{\eta}{\longrightarrow}\,D$,\,
+	such that
+	\,$\xi \,=\, \psi^{\prime}(\eta) \,=\, \eta \circ \psi$
+	}
+	\end{minipage}
+	\end{center}
+	And, the above statement is clearly not true in general.
+\end{itemize}
+Homological algebra provides tools to measure the degree to which
+\eqref{inducedExactSequence}
+{\color{red}fails to extend to a short exact sequence}.
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
