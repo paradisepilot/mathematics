@@ -1,0 +1,249 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The long exact sequence in cohomology of a short exact sequence of cochain complexes}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\mathcal{C}$\, be a sequence of abelian group homomorphisms:
+\begin{equation*}
+0
+\;\; \longrightarrow \;\;
+	C^{0}
+\;\; \overset{d_{1}}{\longrightarrow} \;\;
+	C^{1}
+\;\; \overset{d_{2}}{\longrightarrow} \;\;
+	C^{2}
+\;\; \longrightarrow \;\;
+	\cdots\cdots
+\;\; \longrightarrow \;\;
+	C^{n-1}
+\;\; \overset{d_{n}}{\longrightarrow} \;\;
+	C^{n}
+\;\; \overset{d_{n+1}}{\longrightarrow} \;\;
+\;\; \longrightarrow \;\;
+	\cdots\cdots
+\end{equation*}
+\begin{itemize}
+\item
+	The sequence \,$\mathcal{C}$\, is called a \textbf{cochain complex} if
+	\,$d_{n+1} \circ d_{n} \,=\, 0$,\, for each \,$n = 1, 2, \ldots$.\,
+\item
+	For a cochain complex \,$\mathcal{C}$,\, its \,\textbf{$n^{\textnormal{th}}$ cohomology group}
+	is the quotient group
+	\begin{equation*}
+	H^{n}(\,\mathcal{C}\,)
+	\; := \;
+		\left.\overset{{\color{white}.}}{\ker(d_{n+1})}\right/\image(d_{n})
+	\end{equation*}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let
+\,$\mathcal{A} = \{\,A^{n}\,\}$\,
+and
+\,$\mathcal{B} = \{\,B^{n}\,\}$\,
+be two cochain complexes.
+A \textbf{homomorphism of cochain complexes}
+\,$\alpha : \mathcal{A} \longrightarrow \mathcal{B}$\,
+is a set of homomorphisms
+\,$\alpha_{n} : A^{n} \longrightarrow B^{n}$\,
+such that for each $n = 0, 1, 2, \ldots$\,,
+the following diagram commutes:
+\begin{center}
+\begin{tikzcd}
+\cdots\cdots{\color{white}...} \arrow[r]
+& A^{n} \arrow[r, "a_{n+1}"] \arrow[d, "\alpha_{n}{\color{white}.}" swap]
+& A^{n+1} \arrow[r] \arrow[d, "{\color{white}.}\alpha_{n+1}"]
+& {\color{white}...}\cdots\cdots
+\\
+\cdots\cdots{\color{white}...} \arrow[r]
+& B^{n} \arrow[r, "b_{n+1}" swap]
+& B^{n+1} \arrow[r]
+& {\color{white}...}\cdots\cdots
+\end{tikzcd}\end{center}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+A homomorphism \,$\alpha : \mathcal{A} \longrightarrow \mathcal{B}$\,
+of cochain complexes induces group homomorphisms from
+\,$H^{n}(\mathcal{A})$\, to \,$H^{n}(\mathcal{B})$,\, for each \,$n = 0, 1, 2, \ldots$\,,
+on their respective cohomology groups.
+\end{proposition}
+\proof
+We need to define the map \,$\widehat{\alpha}_{n}$\, induced by \,$\alpha_{n}$:\,
+\begin{equation*}
+\dfrac{\ker(a_{n+1})}{\image(a_{n})}
+\; =: \;
+	H^{n}(\,\mathcal{A}\,)
+\;\; \overset{\widehat{\alpha}_{n}}{\longrightarrow} \;\;
+	H^{n}(\,\mathcal{B}\,)
+\; := \;
+	\dfrac{\ker(b_{n+1})}{\image(b_{n})}
+\end{equation*}
+To this end, we define
+\begin{equation*}
+\widehat{\,\alpha}_{n}\!\left(\,x_{n} \overset{{\color{white}.}}{+} \image(a_{n+1})\,\right)
+\;\; := \;\;
+	\alpha_{n}(\,x_{n}\,) \,+\, \image(b_{n+1})\,,
+\quad
+\textnormal{for each \,$x_{n} \in \ker(a_{n+1}) \subset A^{n}$}
+\end{equation*}
+We need to establish the well-definition of \,$\widehat{\alpha}_{n}$.\,
+To this end, suppose
+\,$x_{n},\, x_{n}^{\prime} \in \ker(a_{n+1}) \subset A^{n}$\,
+are such that
+\,$x_{n} + \image(a_{n}) \,=\, x_{n}^{\prime} + \image(a_{n})$,\,
+equivalently, \,$x_{n} - x_{n}^{\prime} \,\in\, \image(a_{n}) \subset \ker(a_{n+1})$.\,
+We need to show that
+\,$\alpha_{n}(x_{n}) + \image(b_{n+1}) \,=\, \alpha_{n}(x_{n}^{\prime}) + \image(b_{n})$,\,
+equivalently, \,$\alpha_{n}(x_{n}) - \alpha_{n}(x_{n}^{\prime}) \,\in\, \image(b_{n})$.\,
+
+\vskip 0.25cm
+\noindent
+Now, observe:
+\begin{eqnarray*}
+x_{n} - x_{n}^{\prime} \,\in\, \image(a_{n})
+& \Longleftrightarrow &
+	x_{n} - x_{n}^{\prime} \; = \; a_{n}(z_{n-1}),
+	\quad
+	\textnormal{for some \,$z_{n-1} \in A^{n-1}$}
+\\
+& \overset{{\color{white}1}}{\Longrightarrow} &
+	\alpha_{n}\!\left(\;x_{n} \overset{{\color{white}.}}{-} x_{n}^{\prime}\,\right)
+	\; = \;
+		(\,{\color{red}\alpha_{n} \,\circ\, a_{n}}\,)\!\left(\,\overset{{\color{white}-}}{z_{n-1}}\,\right)
+	\; = \;
+		(\,{\color{red}b_{n} \,\circ\, \alpha_{n-1}}\,)\!\left(\,\overset{{\color{white}-}}{z_{n-1}}\,\right)
+	\; \in \;
+		\image(\,b_{n}\,),
+\end{eqnarray*}
+as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let
+\,$\mathcal{A} = \{\,A^{n}\,\}$,\,
+\,$\mathcal{B} = \{\,B^{n}\,\}$,\,
+and
+\,$\mathcal{C} = \{\,C^{n}\,\}$\,
+be cochain complexes.
+A \textbf{short exact sequences of cochain complexes}
+\,$0 \,\longrightarrow\, \mathcal{A} \,\overset{\alpha}{\longrightarrow}\, \mathcal{B} \,\overset{\beta}{\longrightarrow}\, \mathcal{C} \,\longrightarrow\, 0$\,
+is a sequence of homomorphisms of cochain complexes such that
+\begin{equation*}
+0
+\;\; \longrightarrow \;\;
+	A^{n}
+\;\; \overset{\alpha_{n}}{\longrightarrow} \;\;
+	B^{n}
+\;\; \overset{\beta_{n}}{\longrightarrow} \;\;
+	C^{n}
+\,\longrightarrow\,
+	0
+\end{equation*}
+is a short exact sequence of abelian groups, for each \,$n = 0, 1, 2, \ldots$\,.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$0 \,\longrightarrow\, \mathcal{A} \,\overset{\alpha}{\longrightarrow}\, \mathcal{B} \,\overset{\beta}{\longrightarrow}\, \mathcal{C} \,\longrightarrow\, 0$\,
+is a short exact sequences of cochain complexes.
+Then, there exists a long exact sequence of cohomology groups:
+\begin{center}
+\begin{tikzcd}
+0 \arrow[r]
+& {\color{white}.}H^{0}(\mathcal{A}){\color{white}.} \arrow[r,"\widehat{\alpha}_{0}"]
+& {\color{white}.}H^{0}(\mathcal{B}){\color{white}.} \arrow[r,"\widehat{\beta}_{0}"] \arrow[d, phantom, ""{coordinate, name=Z}]
+& {\color{white}.}H^{0}(\mathcal{C}){\color{white}.} 
+%\arrow[dll, "\delta_{0}" swap,
+%rounded corners,
+%to path={ -- ([xshift=2ex]\tikztostart.east)
+%|- (Z) [near end]\tikztonodes
+%-| ([xshift=-2ex]\tikztotarget.west)
+%-- (\tikztotarget)}]
+\arrow[dll, %"\delta_{0}" swap,
+rounded corners,
+to path={
+	-- ([xshift=2ex]\tikztostart.east)
+	|- (Z) [near end]\tikztonodes
+	-| ([xshift=-2ex]\tikztotarget.west)
+	-- (\tikztotarget)
+	}]
+\\
+& {\color{white}.}H^{1}(\mathcal{A}){\color{white}.} \arrow[r,"\widehat{\alpha}_{1}"]
+& {\color{white}.}H^{1}(\mathcal{A}){\color{white}.} \arrow[r,"\widehat{\beta}_{1}"] \arrow[d, phantom, ""{coordinate, name=Z}]
+& {\color{white}.}H^{1}(\mathcal{A}){\color{white}.}
+\arrow[dll,
+rounded corners,
+to path={
+	-- ([xshift=2ex]\tikztostart.east)
+	|- (Z) [near end]\tikztonodes
+	-| ([xshift=-2ex]\tikztotarget.west)
+	-- (\tikztotarget)
+	}]
+\\
+& {\color{white}.}H^{2}(\mathcal{A}){\color{white}.} \arrow[r,"\widehat{\alpha}_{2}"]
+& {\color{white}.}H^{2}(\mathcal{A}){\color{white}.} \arrow[r,"\widehat{\beta}_{2}"] \arrow[d, phantom, ""{coordinate, name=Z}]
+& {\color{white}.}H^{2}(\mathcal{A}){\color{white}.}
+\arrow[dll,
+rounded corners,
+to path={
+	-- ([xshift=2ex]\tikztostart.east)
+	|- (Z) [near end]\tikztonodes
+	-| ([xshift=-2ex]\tikztotarget.west)
+	-- (\tikztotarget)
+	}]
+\\
+& {\color{white}.}H^{3}(\mathcal{A}){\color{white}.} \arrow[r]
+& {\color{white}.}\cdots\;\;\cdots\;\;\cdots{\color{white}.} \arrow[r, white]
+& {\color{white}.\Ext^{3}_{R}(N,D).}
+\end{tikzcd}\end{center}
+where the maps
+\begin{equation*}
+H^{n}(\mathcal{C}) \; \overset{\delta_{n}}{\longrightarrow} \; H^{n+1}(\mathcal{A})\,,
+\quad
+\textnormal{for \,$n = 0, 1, 2, \ldots\,$},
+\end{equation*}
+are called the connecting homomorphisms.
+\end{theorem}
+\proof
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
