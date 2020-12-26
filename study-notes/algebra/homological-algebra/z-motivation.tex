@@ -224,7 +224,34 @@ that measure the degree to which
 \eqref{inducedExactSequence}
 {\color{red}fails to extend to a short exact sequence};
 more precisely, the aforementioned algebraic objects are abelian groups
-that extend \eqref{inducedExactSequence} into a long exact sequence.
+that extend \eqref{inducedExactSequence} into a long exact sequence:
+\begin{center}
+\begin{tikzcd}0 \arrow[r]
+& \Hom_{R}(N,D) \arrow[r, "\varphi^{\prime}"]& \Hom_{R}(M,D) \arrow[r, "\psi^{\prime}"] \arrow[d, phantom, ""{coordinate, name=Z}]& \Hom_{R}(L,D) 
+\arrow[dll,rounded corners,to path={ -- ([xshift=2ex]\tikztostart.east)|- (Z) [near end]\tikztonodes-| ([xshift=-2ex]\tikztotarget.west)-- (\tikztotarget)}]
+\\
+& {\color{white}.}\Ext^{1}_{R}(N,D){\color{white}.} \arrow[r]& {\color{white}.}\Ext^{1}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]& {\color{white}.}\Ext^{1}_{R}(L,D){\color{white}.} 
+\arrow[dll,rounded corners,to path={ -- ([xshift=2ex]\tikztostart.east)|- (Z) [near end]\tikztonodes-| ([xshift=-2ex]\tikztotarget.west)-- (\tikztotarget)}]
+\\
+& {\color{white}.}\Ext^{2}_{R}(N,D){\color{white}.} \arrow[r]& {\color{white}.}\Ext^{2}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]& {\color{white}.}\Ext^{2}_{R}(L,D){\color{white}.}
+\arrow[dll,rounded corners,to path={ -- ([xshift=2ex]\tikztostart.east)|- (Z) [near end]\tikztonodes-| ([xshift=-2ex]\tikztotarget.west)-- (\tikztotarget)}]
+\\
+& {\color{white}.}\Ext^{3}_{R}(N,D){\color{white}.} \arrow[r]& {\color{white}.}\cdots\;\;\cdots\;\;\cdots{\color{white}.} \arrow[r, white]& {\color{white}.\Ext^{3}_{R}(N,D).}\end{tikzcd}\end{center}
+Consequently, the non-vanishing of the group
+\,$\Ext^{1}_{R}(N,D)$\,
+can therefore be regarded as {\color{red}obstruction} to
+\begin{itemize}
+\item
+	the extendibility of \eqref{inducedExactSequence} to a short exact sequence, or equivalently
+\item
+	the surjectivity \,$\psi^{\prime}$\, in \eqref{inducedExactSequence}, or equivalently
+\item
+	the lifting of an arbitrary \,$\gamma \in \Hom_{R}(L,D)$\, to an element in $\Hom_{R}(M,D)$ via \,$\psi$,\,
+	i.e. the existence of $\beta \in \Hom_{R}(M,D)$ such that $\gamma = \beta \circ \psi = \psi^{\prime}(\beta)$.
+\end{itemize}
+Put yet in another way, an element \,$\gamma \in \Hom_{R}(L,D)$\, can be lifted via \,$\psi$
+to an element in $\Hom_{R}(M,D)$ if and only if $\gamma$ maps to zero in
+\,$\Ext^{1}_{R}(N,D)$.\,
 \end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
