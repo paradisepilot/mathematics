@@ -186,7 +186,7 @@ is a short exact sequence of abelian groups, for each \,$n = 0, 1, 2, \ldots$\,.
 \noindent
 Suppose
 \,$0 \,\longrightarrow\, \mathcal{A} \,\overset{\alpha}{\longrightarrow}\, \mathcal{B} \,\overset{\beta}{\longrightarrow}\, \mathcal{C} \,\longrightarrow\, 0$\,
-is a short exact sequences of cochain complexes.
+is a short exact sequence of cochain complexes.
 Then, there exists a long exact sequence of cohomology groups:
 \begin{center}
 \begin{tikzcd}
@@ -246,6 +246,175 @@ H^{n}(\mathcal{C}) \; \overset{\delta_{n}}{\longrightarrow} \; H^{n+1}(\mathcal{
 are called the connecting homomorphisms.
 \end{theorem}
 \proof
+The short exact sequence of cochain complexes
+\,$0 \,\longrightarrow\, \mathcal{A} \,\overset{\alpha}{\longrightarrow}\, \mathcal{B} \,\overset{\beta}{\longrightarrow}\, \mathcal{C} \,\longrightarrow\, 0$\,
+amounts to the following commutative diagram
+whose columns are short exact sequences of
+abelian groups:
+\begin{center}
+\begin{tikzcd}
+& 0 \arrow[d]
+& 0 \arrow[d]
+& 0 \arrow[d]
+&
+\\
+\cdots\cdots{\color{white}...} \arrow[r]
+& A^{n-1} \arrow[r, "a_{n}"] \arrow[d, "\alpha_{n-1}{\color{white}.}" swap]
+& A^{n} \arrow[r, "a_{n+1}"] \arrow[d, "\alpha_{n}{\color{white}.}" swap]
+& A^{n+1} \arrow[r] \arrow[d, "{\color{white}.}\alpha_{n+1}"]
+& {\color{white}...}\cdots\cdots
+\\
+\cdots\cdots{\color{white}...} \arrow[r]
+& B^{n-1} \arrow[r, "b_{n}"] \arrow[d, "\beta_{n-1}{\color{white}.}" swap]
+& B^{n} \arrow[r, "b_{n+1}"] \arrow[d, "\beta_{n}{\color{white}.}" swap]
+& B^{n+1} \arrow[r] \arrow[d, "{\color{white}.}\beta_{n+1}"]
+& {\color{white}...}\cdots\cdots
+\\
+\cdots\cdots{\color{white}...} \arrow[r]
+& C^{n-1} \arrow[d] \arrow[r, "c_{n}"]
+& C^{n} \arrow[d] \arrow[r, "c_{n+1}"]
+& C^{n+1} \arrow[d] \arrow[r]
+& {\color{white}...}\cdots\cdots
+\\
+& 0 
+& 0 
+& 0
+&
+\end{tikzcd}
+\end{center}
+\vskip 0.25cm
+\noindent
+Let \,$\zeta_{n}$\, 
+$\in$
+\,$H^{n}(\mathcal{C}) := \left.\ker(\overset{{\color{white}.}}{c_{n+1}})\right/\image(c_{n})$.\,
+\vskip 0.25cm
+\noindent
+\textbf{Claim 1:}\;\;
+For each representative
+\,$z_{n} \in \ker(c_{n+1}) \subset C^{n}$a\,
+of
+\,$\zeta_{n} = \left[\,z_{n}\,\right]$,\,
+there exists $y_{n} \in B^{n}$
+such that $\beta_{n}(y_{n}) = z_{n}$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 1:
+Immediate by the hypothesis that
+\,$0 \,\longrightarrow\, \mathcal{A} \,\overset{\alpha}{\longrightarrow}\, \mathcal{B} \,\overset{\beta}{\longrightarrow}\, \mathcal{C} \,\longrightarrow\,0$\,
+is a short exact sequence of cochain complexes;
+in particular, for each $n \in \{\,0,1,2,\ldots\,\}$,
+\,$0 \,\longrightarrow\, A^{n} \,\overset{\alpha_{n}}{\longrightarrow}\, B^{n} \,\overset{\beta_{n}}{\longrightarrow}\, C^{n} \,\longrightarrow\,0$\,
+is a short exact sequence of abelian groups;
+in particular, each $\beta_{n}$ is surjective.
+This proves Claim 1.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 2:}\;\;
+$b_{n+1}(y_{n}) \in \ker(\beta_{n+1})$,\, and there exists a unique \,$x_{n+1} \in A^{n+1}$\,
+such that \,$\alpha_{n+1}(x_{n+1}) = b_{n+1}(y_{n})$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 2:
+Claim 1
+\;$\Longrightarrow$\;
+\,$z_{n} = \beta_{n}(y_{n})$
+\;$\Longrightarrow$\;
+$0 = c_{n+1}(z_{n}) = c_{n+1}(\beta_{n}(y_{n})) = \beta_{n+1}(b_{n+1}(y_{n}))$,
+which proves that $b_{n+1}(y_{n}) \in \ker(\beta_{n+1}) = \image(\alpha_{n+1})$.
+Hence, there exists a unique $x_{n+1} \in A^{n+1}$ such that
+$\alpha_{n+1}(x_{n+1}) = b_{n+1}(y_{n})$, by short-exactness.
+This proves Claim 2.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 3:}\;\;
+$x_{n+1} \in  \ker(a_{n+2}) \subset A^{n+1}$;\,
+hence \,$x_{n+1} \in A^{n+1}$\, defines a class
+\,$\xi_{n+1} = \left[\,x_{n+1}\,\right]$\,
+$\in$
+\,$H^{n+1}(\mathcal{A}) := \left.\ker(\overset{{\color{white}.}}{a_{n+2}})\right/\image(a_{n+1})$.\,
+\vskip 0.2cm
+\noindent
+Proof of Claim 3:
+Claim 2
+\;$\Longrightarrow$\;
+$b_{n+1}(y_{n}) = \alpha_{n+1}(x_{n+1})$
+\;$\Longrightarrow$\;
+$0 = b_{n+2}(b_{n+1}(y_{n})) = b_{n+2}(\alpha_{n+1}(x_{n+1})) = \alpha_{n+2}(a_{n+2}(x_{n+1}))$
+\;$\Longrightarrow$\;
+$a_{n+2}(x_{n+1}) = 0$,\, by injectivity of \,$\alpha_{n+2}$.
+Thus, we have \,$x_{n+1} \in  \ker(a_{n+2}) \subset A^{n+1}$.\,
+This proves Claim 3. 
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 4:}\;\;
+The class
+\,$\xi_{n+1} \,=\, \left[\,x_{n+1}\,\right] \,\in\, H^{n+1}(\mathcal{A})$\,
+depends only on the class
+\,$\zeta_{n} \,=\, \left[\,z_{n}\,\right] \,\in\, H^{n}(\mathcal{C})$;\,
+in particular,
+\,$\xi_{n+1} \,=\, \left[\,x_{n+1}\,\right]$\,
+is independent of the particular choices of
+\,$x_{n+1} \in A^{n+1}$,\, $y_{n} \in B^{n}$,\, $z_{n} \in C^{n}$\,
+in Claim 1 and Claim 2.
+\vskip 0.2cm
+\noindent
+Proof of Claim 4:\,
+Let
+\,$x_{n+1}^{\prime} \in A^{n+1}$,
+\,$y_{n}^{\prime} \in B^{n}$,
+\,$z_{n}^{\prime} \in C^{n}$\,
+be alternative choices.
+We need to show
+\,$\left[\,x_{n+1}\,\right] = \left[\,x_{n+1}^{\prime}\,\right]$\,
+$\in$
+\,$H^{n+1}(\mathcal{A}) := \left.\ker(\overset{{\color{white}.}}{a_{n+2}})\right/\image(a_{n+1})$,\,
+i.e.,
+\,$x_{n+1} - x_{n+1}^{\prime} \in \image(a_{n+1})$.\,
+To this end, simply observe that
+\begin{eqnarray*}
+&&
+	\left[\,z_{n}\,\right] \,=\, \zeta_{n} \,=\, \left[\,z_{n}^{\prime}\,\right]
+	\,\in\,
+		H^{n}(\mathcal{C}) \,:=\, \left.\ker(\overset{{\color{white}.}}{c_{n+1}})\right/\image(c_{n})
+\\
+& \Longrightarrow &
+	z_{n} - z_{n}^{\prime} \,\in\, \image(c_{n})
+\;\; \Longleftrightarrow \;\;
+	z_{n} - z_{n}^{\prime} \,=\, c_{n}(z_{n-1}),
+	\;\;
+	\textnormal{for some \,$z_{n-1} \in C^{n-1}$}
+\\
+& \Longrightarrow &
+	\beta_{n}(y_{n} - y_{n}^{\prime}) \,=\, c_{n}(z_{n-1}) \,=\, c_{n}(\beta_{n-1}(y_{n-1})) \,=\, \beta_{n}(b_{n}(y_{n-1})),
+	\;\;
+	\textnormal{for some \,$y_{n-1} \in C^{n-1}$, by surjectivity of $\beta_{n-1}$}
+\\
+& \Longrightarrow &
+	y_{n} - y_{n}^{\prime} - b_{n}(y_{n-1}) \,\in\, \ker(\beta_{n}) \,=\, \image(\alpha_{n})
+\\
+& \Longrightarrow &
+	y_{n} - y_{n}^{\prime} - b_{n}(y_{n-1}) \,=\, \alpha_{n}(x_{n}),
+	\;\;
+	\textnormal{for some \,$x_{n} \in A^{n}$}
+\\
+& \Longrightarrow &
+	\alpha_{n+1}(x_{n+1} - x_{n+1}^{\prime})
+	\,=\,
+		b_{n+1}(y_{n} - y_{n}^{\prime}) - b_{n+1}(b_{n}(y_{n-1}))
+	\,=\,
+		b_{n+1}(\alpha_{n}(x_{n}))
+	\,=\,
+		\alpha_{n+1}(a_{n+1}(x_{n}))
+\\
+& \Longrightarrow &
+	x_{n+1} - x_{n+1}^{\prime} \,=\, a_{n+1}(x_{n}) \,\in\, \image(a_{a+1}),
+	\;\;
+	\textnormal{since \,$b_{n+1} \circ b_{n} = 0$\, and \,$\alpha_{n+1}$\, is injective}
+\end{eqnarray*}
+This proves Claim 4.
 
 \qed
 
