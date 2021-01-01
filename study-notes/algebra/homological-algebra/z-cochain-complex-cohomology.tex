@@ -73,15 +73,18 @@ the following diagram commutes:
 \begin{center}
 \begin{tikzcd}
 \cdots\cdots{\color{white}...} \arrow[r]
+& A^{n-1} \arrow[r, "a_{n}"] \arrow[d, "\alpha_{n-1}{\color{white}.}" swap]
 & A^{n} \arrow[r, "a_{n+1}"] \arrow[d, "\alpha_{n}{\color{white}.}" swap]
 & A^{n+1} \arrow[r] \arrow[d, "{\color{white}.}\alpha_{n+1}"]
 & {\color{white}...}\cdots\cdots
 \\
 \cdots\cdots{\color{white}...} \arrow[r]
+& B^{n-1} \arrow[r, "b_{n}" swap]
 & B^{n} \arrow[r, "b_{n+1}" swap]
 & B^{n+1} \arrow[r]
 & {\color{white}...}\cdots\cdots
-\end{tikzcd}\end{center}
+\end{tikzcd}
+\end{center}
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
