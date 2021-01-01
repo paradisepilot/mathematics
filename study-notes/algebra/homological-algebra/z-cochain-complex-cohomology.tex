@@ -291,7 +291,7 @@ $\in$
 \noindent
 \textbf{Claim 1:}\;\;
 For each representative
-\,$z_{n} \in \ker(c_{n+1}) \subset C^{n}$a\,
+\,$z_{n} \in \ker(c_{n+1}) \subset C^{n}$\,
 of
 \,$\zeta_{n} = \left[\,z_{n}\,\right]$,\,
 there exists $y_{n} \in B^{n}$
@@ -415,6 +415,85 @@ To this end, simply observe that
 	\textnormal{since \,$b_{n+1} \circ b_{n} = 0$\, and \,$\alpha_{n+1}$\, is injective}
 \end{eqnarray*}
 This proves Claim 4.
+
+\vskip 0.5cm
+\noindent
+By Claim 4, we may now define, for each $n \in \{0,1,2,\ldots\}$, the connecting homomorphism:
+\begin{equation*}
+\delta_{n} : H^{n}(\mathcal{C}) \longrightarrow H^{n+1}(\mathcal{A})
+\quad\textnormal{via}\quad
+\delta_{n}\!\left(\,[\,\overset{{\color{white}-}}{z_{n}}\,]\,\right)
+\;\; := \;\;
+	[\,x_{n+1}\,]
+\;\; \in \;\;
+	H^{n+1}(\mathcal{A})\,,
+\;\;
+\textnormal{for each \,$[\,z_{n}\,] \in H^{n}(\mathcal{C})$}
+\end{equation*}
+
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 5:}\;\;
+For each \,$n \in \{0, 1, 2, \ldots\}$,\,
+\,$\delta_{n} : H^{n}(\mathcal{C}) \longrightarrow H^{n+1}(\mathcal{A})$\,
+is an abelian group homomorphism.
+\vskip 0.2cm
+\noindent
+Proof of Claim 5:\,
+We need to show:
+\begin{equation*}
+\delta_{n}\!\left(\,[\,z_{n}\,] \overset{{\color{white}-}}{+} [\,z_{n}^{\prime}\,]\,\right)
+\;\; = \;\;
+	[\,x_{n+1}\,] \,+\, [\,x_{n+1}^{\prime}\,]
+\end{equation*}
+where $x_{n+1}$ (respectively, $x_{n+1}^{\prime}$) is determined
+by $z_{n}$ (respectively, $z_{n}^{\prime}$) as described in Claim 1 and Claim 2.
+To this end, first observe that
+\,$[\,z_{n}\,] + [\,z_{n}^{\prime}\,]$\,
+$=$
+\,$[\,z_{n} \,+\, z_{n}^{\prime}\,]$\,
+$=$
+\,$[\,z_{n}^{\prime\prime}\,]$,\,
+where
+\,$z_{n}^{\prime\prime} \,:=\, z_{n} \,+\, z_{n}^{\prime}$.\,
+Thus, we may choose
+\,$y_{n}^{\prime\prime} \,:=\, y_{n} \,+\, y_{n}^{\prime}$\,
+so that
+\,$\beta_{n}(y_{n}^{\prime\prime})$
+\,$=$\, $\beta_{n}(y_{n} \,+\, y_{n}^{\prime})$
+\,$=$\, $\beta_{n}(y_{n}) \,+\, \beta_{n}(y_{n}^{\prime})$
+\,$=$\, $z_{n} + z_{n}^{\prime} \,=\, z_{n}^{\prime\prime}$.\,
+Next,
+\,$b_{n+1}(y_{n}^{\prime\prime})$
+\,$=$\, $b_{n+1}(y_{n} + y_{n}^{\prime})$
+\,$=$\, $b_{n+1}(y_{n}) + b_{n+1}(y_{n}^{\prime})$
+\,$=$\, $\alpha_{n+1}(x_{n+1}) + \alpha_{n+1}(x_{n+1}^{\prime})$
+\,$=$\, $\alpha_{n+1}(x_{n+1} + x_{n+1}^{\prime})$\,
+implies that
+\,$x_{n+1}^{\prime\prime} := x_{n+1} + x_{n+1}^{\prime}$\,
+is the unique element in \,$A^{n+1}$\, determined by \,$y_{n}^{\prime\prime} \in B^{n}$\,
+according to Claim 2.
+Hence,
+\begin{eqnarray*}
+\delta_{n}\!\left(\,[\,z_{n}\,] \overset{{\color{white}-}}{+} [\,z_{n}^{\prime}\,]\,\right)
+& = &
+	\delta_{n}\!\left(\,[\,z_{n} \overset{{\color{white}-}}{+} z_{n}^{\prime}\,]\,\right)
+\;\; = \;\;
+	\delta_{n}\!\left(\,[\,\overset{{\color{white}-}}{z_{n}^{\prime\prime}}\,]\,\right)
+\;\; = \;\;
+	\left[\,\overset{{\color{white}.}}{x_{n+1}^{\prime\prime}}\,\right]
+\;\; = \;\;
+	\left[\,x_{n+1} \,+\, \overset{{\color{white}.}}{x_{n+1}^{\prime}}\,\right]
+\\
+& = &
+	\left[\,\overset{{\color{white}.}}{x_{n+1}^{{\color{white}\prime}}}\,\right]
+	\, + \,
+	\left[\,\overset{{\color{white}.}}{x_{n+1}^{\prime}}\,\right]
+\end{eqnarray*}
+as required.
+This proves Claim 5.
+
 
 \qed
 
