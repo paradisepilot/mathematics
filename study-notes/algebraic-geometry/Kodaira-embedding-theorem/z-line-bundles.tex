@@ -141,11 +141,94 @@ g_{\alpha\beta}(x)
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\subsection{Divisors}
+\subsection{Divisors and the correspondence between line bundles and divisors}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+Let $M$ be a complex manifold.
+A \textbf{divisor} $D$ on $M$ is a \textit{locally finite} formal linear combination
+\begin{equation*}
+D
+\;\; = \;\;
+	\underset{i}{\sum}\;a_{i} \cdot V_{i}
+\end{equation*}
+of irreducible analytic hypersurfaces $V_{i}$ of $M$ with coefficients $a_{i} \in \Z$.
+``Locally finite'' here means:
+For each point $x \in M$, there is a open neighbourhood $U \subset M$ of $x \in M$ within which
+the divisor $D$ is given by a finite linear combination of irreducible analytic hypersurfaces with coefficients in $\Z$.
 
-\subsection{Relations between line bundles and divisors}
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$M$\, be a complex manifold, and \,$\Div(M)$\, the abelian group of divisors of \,$M$.\,
+Then,
+\begin{equation*}
+\Div(M) \; \cong \; H^{0}\!\left(\,\overset{{\color{white}.}}{M} , \mathcal{M}^{*}/\mathcal{O}^{*}\right),
+\;\;
+\textnormal{as abelian groups},
+\end{equation*}
+where $\mathcal{M}^{*}$ is the sheaf of non-identically-zero meromorphic functions on $M$,
+and $\mathcal{O}^{*}$ its subsheaf of nowhere vanishing holomorphic functions on $M$.
+\end{proposition}
+\proof
+A global section of the quotient sheaf \,$\mathcal{M}^{*}/\mathcal{O}^{*}$\,
+is given by a collection \,$\left\{\,\overset{{\color{white}.}}{f}_{\alpha} \in \mathcal{M}^{*}(U_{\alpha})\,\right\}_{\alpha}$,\,
+where \,$\{\,U_{\alpha}\,\}$\, is a complex coordinate atlas of \,$M$,\, and
+\begin{equation*}
+\dfrac{{\color{white}.}f_{\alpha}{\color{white}.}}{f_{\beta}}
+\;\in\;
+	\mathcal{O}^{*}\!\left(\,U_{\alpha} \overset{{\color{white}.}}{\cap} U_{\beta}\,\right)
+\end{equation*}
+This implies that
+\begin{equation*}
+\ord_{V}(f_{\alpha}) \; = \; \ord_{V}(f_{\beta}),
+\quad
+\textnormal{for each irreducible hypersurface $V \subset M$}.
+\end{equation*}
+Hence, the global section
+\,$\left\{\,\overset{{\color{white}.}}{f}_{\alpha}\,\right\}$ $\in$
+\,$H^{0}\!\left(\,\overset{{\color{white}.}}{M} , \mathcal{M}^{*}/\mathcal{O}^{*}\right)$\,
+determines the following divisor in \,$M$:\,
+\begin{equation*}
+\Div\!\left(\,\{\,\overset{{\color{white}.}}{f}_{\alpha}\,\}\,\right)
+\;\; := \;\;
+	\underset{V}{\sum} \;\, \ord_{V}(f_{\alpha(V)}) \cdot V
+\end{equation*}
+where the sum is taken over the collection of all irreducible analytic hypersurfaces
+of \,$M$,\, and for each irreducible analytic hypersurface \,$V$,\,
+the index $\alpha(V)$ is chosen such that \,$V \cap U_{\alpha} \neq \varemptyset$.
+{\color{red}Why is the preceding formal sum locally finite?
+(Look up the fact that the local ring at every point of $M$ is a unique factorization domain, and the Weierstrass Preparation Theorem.)}
+
+Conversely, given
+\begin{equation*}
+D
+\;\; = \;\;
+	\underset{i}{\sum}\;\, k_{i} \cdot V_{i}
+\;\; \in \;\;
+	\Div(M),
+\end{equation*}
+choose an open cover \,$\left\{\,\overset{{\color{white}.}}{U}_{\alpha}\,\right\}$\,
+of \,$M$\, such that each irreducible hypersurface $V_{i}$ appearing $D$
+has local defining function $h_{\alpha,i} \in \mathcal{O}(U_{\alpha})$.
+Then, define
+\begin{equation*}
+f_{\alpha}
+\;\; := \;\;
+	\underset{i}{\prod}\; (h_{\alpha,i})^{k_{i}}
+\;\; \in \;\;
+	\mathcal{M}^{*}(U_{\alpha})
+\end{equation*}
+It is clear that
+\begin{equation*}
+\dfrac{{\color{white}.}f_{\alpha}{\color{white}.}}{f_{\beta}}
+\;\in\;
+	\mathcal{O}^{*}\!\left(\,U_{\alpha} \overset{{\color{white}.}}{\cap} U_{\beta}\,\right)
+\end{equation*}
+Hence,
+\,$\left\{\,\overset{{\color{white}.}}{f}_{\alpha}\,\right\}$\,
+defines an element in
+\,$H^{0}\!\left(\,\overset{{\color{white}.}}{M} , \mathcal{M}^{*}/\mathcal{O}^{*}\right)$.\,
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
