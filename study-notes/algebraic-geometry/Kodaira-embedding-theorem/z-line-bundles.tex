@@ -1,0 +1,186 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Line bundles on complex manifolds}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Complex vector bundles}
+
+\noindent
+\underline{\textbf{Transition functions}}
+\vskip 0.1cm
+\noindent
+Let $M$ be a complex manifold, and $\pi : E \longrightarrow M$ a holomorphic vector bundle on $M$ of rank $r$.
+Then, there exist \textbf{local trivializations}:
+\begin{equation*}
+\Phi_{\alpha} : \pi^{-1}(U_{\alpha}) \overset{\sim}{\longrightarrow} U_{\alpha} \times \C^{r},
+\end{equation*}
+where $\{\,U_{\alpha}\,\}_{\alpha}$ is a complex coordinate atlas of $M$,
+such that the transition map
+$\Phi_{\alpha} \circ \Phi_{\beta}^{-1} : (U_{\alpha} \cap U_{\beta}) \times \C^{r} \longrightarrow (U_{\alpha} \cap U_{\beta}) \times \C^{r}$
+has the form:
+\begin{equation*}
+\Phi_{\alpha} \circ \Phi_{\beta}^{-1}\!\left(\,x,v\right)
+\;\; = \;\;
+	\left(\, x \overset{{\color{white}-}}{,} \tau_{\alpha\beta}(x) \cdot v\,\right)
+\end{equation*}
+where
+\begin{equation*}
+\tau_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})
+\end{equation*}
+are the associated \textbf{transition functions}.
+
+\vskip0.75cm
+\noindent
+\underline{\textbf{Dual bundle}}
+\vskip 0.1cm
+\noindent
+The transition functions
+\,$\tau^{*}_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})$\,
+of the \textbf{dual bundle} $E^{*} \longrightarrow M$ is given by:
+\begin{equation*}
+\tau^{*}_{\alpha\beta}(x)
+\;\; = \;\;
+	\left(\;\tau^{T}_{\alpha\beta}(x)\,\right)^{-1}
+\end{equation*}
+
+\vskip0.5cm
+\noindent
+\underline{\textbf{Tensor product of two vector bundles}}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$E \longrightarrow M$\, and \,$F \longrightarrow M$\,
+are two holomorphic vector bundles
+determined respectively by the transition functions:
+\,$\tau_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})$\,
+and
+\,$\rho_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{d})$.\,
+Then, their \textbf{tensor product}
+\,$E \otimes F$\,
+is the vector bundle with fibre
+\,$\C^{r}\otimes\C^{d} \cong \C^{r \times d}$\,
+determined by the transition functions
+%\,$\tau_{\alpha\beta} \otimes \rho_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r} \otimes \C^{d})$\,
+\begin{equation*}
+\tau_{\alpha\beta} \otimes \rho_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r} \otimes \C^{d})\,,
+\quad
+\left(\,\tau_{\alpha\beta} \otimes \rho_{\alpha\beta}\right)(x)
+\;\; = \;\;
+	\tau_{\alpha\beta}(x) \otimes_{\C} \rho_{\alpha\beta}(x)
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip0.5cm
+\subsection{Line bundles}
+
+\noindent
+\underline{\textbf{The tensor product of two line bundles is itself a line bundle}}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$L_{1} \longrightarrow M$\, and \,$L_{2} \longrightarrow M$\,
+are two holomorphic line bundles
+determined respectively by the transition functions:
+\,$g_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1}) \cong \C^{*}$\,
+and
+\,$h_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1}) \cong \C^{*}$.\,
+Then, their \textbf{tensor product}
+\,$L_{1} \otimes L_{2}$\,
+is the vector bundle with fibre
+\,$\C^{1} \otimes \C^{1} \cong \C$\,
+determined by the transition functions
+\begin{equation*}
+g_{\alpha\beta} \otimes h_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1} \otimes \C^{1}) \cong \C^{*}\,,
+\quad
+\left(\,g_{\alpha\beta} \otimes h_{\alpha\beta}\right)(x)
+\;\; = \;\;
+	g_{\alpha\beta}(x) \otimes_{\C} h_{\alpha\beta}(x)
+\;\; = \;\;
+	g_{\alpha\beta}(x) \cdot h_{\alpha\beta}(x),
+\end{equation*}
+where the last equality follows from the standard identification
+of $\C \otimes \C \overset{\sim}{\longrightarrow} \C : 1 \otimes 1 \longmapsto 1$.
+\vskip 0.2cm
+\noindent
+Hence, the collection of line bundles on $M$ forms an abelian group under tensor product.
+
+\vskip 0.5cm
+\noindent
+\underline{\textbf{The determinant (line) bundle of a vector bundle}}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$E \longrightarrow M$\,
+is a holomorphic vector bundle
+determined respectively by the transition functions:
+\,$\tau_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})$.\,
+Then, its \textbf{determinant bundle} is the line bundle on $M$
+determined by the transition functions
+\begin{equation*}
+g_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1}) \cong \C^{*}\,,
+\quad
+g_{\alpha\beta}(x)
+\;\; = \;\;
+	\det\!\left(\,\tau_{\alpha\beta}(x)\,\right)
+\;\; \in \;\;
+	\C^{*}
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Divisors}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Relations between line bundles and divisors}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\subsection{Line bundles and maps into project space}
+
+Let $M$ be a compact complex manifold, and $L \longrightarrow M$ a holomorphic line bundle on $M$.
+Let $H^{0}(M,\mathcal{O}(L))$ be the vector space of global holomorphic sections of $L$.
+Let $E \subset H^{0}(M,\mathcal{O}(L))$ be a vector subspace.
+For each point \,$p \in M$,
+\begin{equation*}
+\widetilde{H}_{p} \;\; := \;\; \left\{\,\left. s \overset{{\color{white}.}}{\in} E \,\;\right\vert\, s(p) = 0\,\right\}
+\end{equation*}
+forms a hyperplane in \,$E$.\,
+Clearly, \,$\widetilde{H}_{p}$\, is closed under addition and scalar multiplication;
+hence, it is a vector subspace of \,$E$.\,
+Secondly, the evaluation map
+\,$\ev_{p} : E \longrightarrow \C : s \longrightarrow s(p)$\,
+is (clearly) surjective with kernel
+\,$\ker(\ev_{p}) = \widetilde{H}_{p}$.\,
+Hence,
+\begin{equation*}
+E \left/ \widetilde{H}_{p}\right.
+\;\; = \;\;
+	E \left/ \overset{{\color{white}.}}{\ker}(\ev_{p}) \right.
+\;\; \cong \;\;
+	\image(\ev_{p})
+\;\; = \;\;
+	\C
+\end{equation*}
+Thus, \,$\widetilde{H}_{p}$\, has codimension one in \,$E$;\,
+hence, \,$\widetilde{H}_{p}$\, is a hyperplane in \,$E$.\,
+
+\begin{equation*}
+\iota_{E} \, : \, M \longrightarrow \, \P(E)^{*}\,
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
