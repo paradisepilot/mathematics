@@ -137,30 +137,33 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\setcounter{page}{1}
+\pagecolor{black}
+\input{tex/z-titlepage}
+\pagecolor{white}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \pagestyle{fancy}
 
-\rhead[Study Notes]{Kenneth Chu}
-\lhead[Kenneth Chu]{Study Notes}
-\chead[]{{\Large\bf Mathematical Theory of the Standard Model of Particle Physics} \\
-\vskip 0.1cm \normalsize \today}
+\lhead[Kenneth Chu]{Standard Model}
+\rhead[Standard Model]{Kenneth Chu}
+%\chead[]{{\Large\bf Mathematical Theory of the Standard Model of Particle Physics} \\ \vskip 0.1cm \normalsize \today}
 \lfoot[]{}
 \cfoot[]{}
 \rfoot[]{\thepage}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\frontmatter
+%\pagenumbering{roman}
+%\setcounter{page}{1}
+\tableofcontents
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-%\mbox{}\vskip 0.0cm
-\pagecolor{black}
-\input{tex/z-titlepage}
-\pagecolor{white}
-%\titlepage
-
-\tableofcontents
-
+\mainmatter
+%\pagenumbering{arabic}
+%\setcounter{page}{0}
 \input{tex/z-Lagrangian-mechanics}
 \input{tex/z-symplectic-geometry}
 
