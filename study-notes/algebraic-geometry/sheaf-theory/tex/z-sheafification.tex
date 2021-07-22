@@ -237,6 +237,33 @@ respectively.
 \proof
 \begin{enumerate}
 \item
+	Recall that 
+	\,$\mathscr{F}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{F})$\,
+	being a morphism of presheaves simply means that,
+	for each open sets $V \subset U \subset X$, the following diagram commutes:
+	\begin{equation*}
+	\begin{tikzcd}	\mathscr{F}(U)  \arrow[r, "\iota_{U}"] \arrow[d, "\res^{U}_{V}"'] & \mathscr{D}(\mathscr{F})(U) \arrow[d, "\res^{U}_{V}"] \\	\mathscr{F}(V) \arrow[r, "\iota_{V}"'] & \mathscr{D}(\mathscr{F})(V)	\end{tikzcd}
+	\end{equation*}
+	Now, for each open subsets \,$V \subset U \subset X$,\, and each \,$\sigma \in \mathscr{F}(U)$,
+	we have
+	\begin{equation*}
+	\res^{\,U}_{\,V}\!\left(\,\overset{{\color{white}.}}{\iota_{U}(\,\sigma\,)}\,\right)
+	\;\; = \;\;
+		\res^{\,U}_{\,V}\!\left(\,
+			\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}
+			\,\right)
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in V}
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\left(\res^{\,U}_{\,V}(\sigma)\right)_{x}}\,\right)_{x \in V}
+%	\\
+%	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+	\;\; = \;\;
+		\iota_{V}\!\left(\,\overset{{\color{white}.}}{\res^{\,U}_{\,V}(\sigma)}\,\right),
+	\end{equation*}
+	which proves the commutativity of the above diagram, which in turn proves that
+	\,$\mathscr{F}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{F})$\,
+	is indeed a morphism of presheaves.
 \item
 \item
 \item
