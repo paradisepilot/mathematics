@@ -1,0 +1,530 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Sheafification}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{The sheaf of discontinuous sections of a presheaf}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+\begin{definition}
+\mbox{}\vskip 0.1cm
+\noindent
+Suppose $\mathscr{P}$ is a presheaf on a topological space $X$.
+\vskip 0.1cm
+\noindent
+The \textbf{presheaf $\mathscr{D}(\mathscr{P})$ of discontinuous sections} of $\mathscr{P}$
+is defined as follows:
+\begin{itemize}
+\item
+	For each open subset $U \subset X$,
+	\begin{equation*}
+	\mathscr{D}(\mathscr{P})(\,U)
+	\;\; := \;\;
+		\underset{x \in U}{\prod} \, \mathscr{P}_{x}
+	\end{equation*}
+	In particular, a section $\sigma \in \mathscr{D}(\mathscr{P})(\,U)$ has the form:
+	\begin{equation*}
+	\sigma
+	\;\, = \;
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}
+	\quad
+	\textnormal{where \;$\sigma_{x} \in \mathscr{P}_{x}$,\; for each $x \in U$}
+	\end{equation*}
+\item
+	For each open subsets $V \subset U \subset X$,
+	the restriction map of $\mathscr{D}(\mathscr{P})$ is defined by:
+	\begin{equation*}
+	\textnormal{res}^{U}_{V}\!\left(\,\overset{{\color{white}.}}{\sigma}\,\right)
+	\;\; = \;\;
+		\textnormal{res}^{U}_{V}\!\left(\,\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right)
+	\;\; := \;\;
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in V}
+	\end{equation*}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}\vskip 0.1cm
+\noindent
+The presheaf of discontinuous sections of a presheaf over a topological space is in fact a sheaf.
+\end{proposition}
+\proof
+\vskip 0.3cm
+\noindent
+Suppose $\mathscr{P}$ is a presheaf on a topological space $X$, and
+$\mathscr{D}(\mathscr{P})$ is the presheaf of discontinuous sections of $\mathscr{P}$.
+\vskip 0.3cm
+\noindent
+Let $U = \,\underset{\alpha}{\bigcup}\;U_{\alpha}$ be an open cover of an open subset $U \subset X$.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 1:}\quad
+Let \,$\sigma$, $\tau$ $\in$ $\mathscr{D}(\mathscr{P})(U)$.
+\,\;Then,
+\,$\left.\overset{{\color{white}.}}{\sigma}\,\right\vert_{U_{\alpha}}$
+$=$
+$\left.\overset{{\color{white}.}}{\tau}\,\right\vert_{U_{\alpha}}$\,,\,
+for each $\alpha$
+\;\;$\Longrightarrow$\;\;
+$\sigma \,=\, \tau$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 1:
+\begin{eqnarray*}
+	\left.\overset{{\color{white}.}}{\sigma}\,\right\vert_{U_{\alpha}}
+	\, = \,
+	\left.\overset{{\color{white}.}}{\tau}\,\right\vert_{U_{\alpha}},
+	\;\;\textnormal{for each $\alpha$}
+& \Longleftrightarrow &
+	\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U_{\alpha}}
+	\;\; =: \;\;
+	\left.\overset{{\color{white}.}}{\sigma}\,\right\vert_{U_{\alpha}}
+	\;\; = \;\;
+	\left.\overset{{\color{white}.}}{\tau}\,\right\vert_{U_{\alpha}}
+	\;\; := \;\;
+	\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U_{\alpha}},
+	\;\;\textnormal{for each $\alpha$}
+\\
+& \overset{{\color{white}\textnormal{\LARGE$1$}}}{\Longleftrightarrow} &
+	\sigma_{x} \; = \; \tau_{x}\,,
+	\;\;\textnormal{for each $x \in U_{\alpha}$,\, for each $\alpha$}
+\\
+& \overset{{\color{white}\textnormal{\LARGE$1$}}}{\Longleftrightarrow} &
+	\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}
+	\;\; = \;\;
+	\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U},
+	\;\;\textnormal{for each $x \in U = \,\underset{\alpha}{\bigcup}\;U_{\alpha}$}
+\\
+& \overset{{\color{white}\textnormal{\tiny$1$}}}{\Longleftrightarrow} &
+	\sigma \; = \; \tau
+\end{eqnarray*}
+This proves Claim 1.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 2:}\quad
+Let
+\,$\sigma_{\alpha}$ $\in$ $\mathscr{D}(\mathscr{P})(U_{\alpha})$\,
+be such that
+\,$\left.\overset{{\color{white}.}}{\sigma_{\alpha}}\,\right\vert_{\,U_{\alpha} \cap\,U_{\beta}}$
+$=$
+\,$\left.\overset{{\color{white}.}}{\sigma_{\beta}}\,\right\vert_{\,U_{\alpha} \cap\,U_{\beta}}$.
+\,\;Then,
+\begin{equation*}
+\textnormal{there exists \;$\sigma \in \mathscr{D}(\mathscr{P})(U)$\; such that}\;\;
+\sigma_{\alpha}
+\;=\;
+\left.\overset{{\color{white}.}}{\sigma}\,\right\vert_{\,U_{\alpha}},
+\;\;\textnormal{for each $\alpha$}
+\end{equation*}
+\vskip 0.2cm
+\noindent
+Proof of Claim 2:\quad
+First, observation that
+\begin{eqnarray*}
+&&
+	\left.\overset{{\color{white}.}}{\sigma_{\alpha}}\,\right\vert_{\,U_{\alpha}\cap\,U_{\beta}}
+	\, = \,
+	\left.\overset{{\color{white}.}}{\sigma_{\beta}}\,\right\vert_{\,U_{\alpha}\cap\,U_{\beta}},
+	\;\;\textnormal{for each $\alpha$, $\beta$}
+\\
+& \overset{{\color{white}\textnormal{\LARGE$1$}}}{\Longleftrightarrow} &
+	\left(\,\overset{{\color{white}.}}{(\sigma_{\alpha})_{x}}\,\right)_{x \,\in\, U_{\alpha}\cap\,U_{\beta}}
+	\;\; =: \;\;
+	\left.\overset{{\color{white}.}}{\sigma_{\alpha}}\,\right\vert_{\,U_{\alpha}\cap\,U_{\beta}}
+	\;\; = \;\;
+	\left.\overset{{\color{white}.}}{\sigma_{\beta}}\,\right\vert_{\,U_{\alpha}\cap\,U_{\beta}}
+	\;\; := \;\;
+	\left(\,\overset{{\color{white}.}}{(\sigma_{\beta})_{x}}\,\right)_{x \,\in\, U_{\alpha}\cap\,U_{\beta}},
+	\;\;\textnormal{for each $\alpha$, $\beta$}
+\\
+& \overset{{\color{white}\textnormal{\LARGE$1$}}}{\Longleftrightarrow} &
+	(\,\sigma_{\alpha}\,)_{x} \; = \; (\,\sigma_{\beta}\,)_{x}\,,
+	\;\;\textnormal{for each $x \in U_{\alpha}\cap\,U_{\alpha}$,\, for each $\alpha$, $\beta$}
+\end{eqnarray*}
+The above observation allows us to unambiguously define, for each $x \in U$,
+\begin{equation*}
+\sigma_{x}
+\;\; := \;\;
+	(\,\sigma_{\alpha}\,)_{x}\,,
+\quad
+\textnormal{for any \,$\alpha$\, such that \,$U_{\alpha} \ni x$}
+\end{equation*}
+Now, define
+\,$\sigma \,\in\, \mathscr{D}(\mathscr{P})(U)$\,
+by
+\,$\sigma \,:=\, \left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}$.\,
+Then, for each $\alpha$, we have:
+\begin{equation*}
+\left.\overset{{\color{white}\textnormal{\Large$.$}}}{\sigma}\,\right\vert_{U_{\alpha}}
+\;\; = \;\;
+\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U_{\alpha}}
+\;\; = \;\;
+\left(\,\overset{{\color{white}.}}{(\sigma_{\alpha})_{x}}\,\right)_{x \,\in\, U_{\alpha}}
+\;\; = \;\;
+\sigma_{\alpha}
+\end{equation*}
+This proves Claim 2.
+
+\vskip 0.5cm
+\noindent
+Claim 1 and Claim 2 together imply that
+\,$\mathscr{D}(\mathscr{P})$\,
+is a sheaf, which completes the proof of the Proposition.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{lemma}
+\mbox{}\vskip 0.1cm
+\noindent
+Suppose
+\,$\mathscr{F}$, $\mathscr{G}$, $\mathscr{H}$\,
+are presheaves on a topological space $X$, and
+\,$\mathscr{D}(\mathscr{F})$, $\mathscr{D}(\mathscr{G})$, $\mathscr{D}(\mathscr{H})$\,
+are the sheaves of discontinuous sections of
+\,$\mathscr{F}$, $\mathscr{G}$, $\mathscr{H}$,\,
+respectively.
+\begin{enumerate}
+\item
+	For each open subset $U \subset X$ and each $\sigma \in \mathscr{F}(U)$, define
+	\begin{equation*}
+	\iota_{U}(\,\sigma\,)
+	\;\; := \;\;
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}
+	\end{equation*}
+	Then,
+	\,$\mathscr{F}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{F})$\,
+	is a morphism of presheaves.
+\item
+	For each morphism of presheaves
+	\,$\mathscr{F}\,\overset{\varphi}{\longrightarrow}\,\mathscr{G}$,\,
+	there exists a unique morphism of presheaves
+	\begin{tikzcd}	\mathscr{D}(\mathscr{F}) \arrow[r, "\mathscr{D}(\varphi)"] & \mathscr{D}(\mathscr{G})	\end{tikzcd}
+	such that the following diagram commutes:
+	\begin{equation*}
+	\begin{tikzcd}	                    \mathscr{F}  \arrow[r, "\varphi"] \arrow[d, "\iota"'] & \mathscr{G} \arrow[d, "\iota"] \\	\mathscr{D}(\mathscr{F}) \arrow[r, "\mathscr{D}(\varphi)"'] & \mathscr{D}(\mathscr{G})	\end{tikzcd}
+	\end{equation*}
+\item
+	$\mathscr{D}(\,\id_{\mathscr{F}}\,)$ \,$=$\, $\id_{\mathscr{D}(\mathscr{F})}$ 
+\item
+	For each pair of morphisms of presheaves
+	\,$\mathscr{F}\,\overset{\varphi}{\longrightarrow}\,\mathscr{G}$\,
+	and
+	\,$\mathscr{G}\,\overset{\psi}{\longrightarrow}\,\mathscr{H}$,\,
+	we have:
+	\begin{equation*}
+	\mathscr{D}(\,\psi \circ \varphi\,) \;\; = \;\; \mathscr{D}(\,\psi\,) \circ \mathscr{D}(\,\varphi\,)
+	\end{equation*}
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+\item
+\item
+\item
+\end{enumerate}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{The sheafification of a presheaf}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+\begin{theorem}
+\mbox{}\vskip 0.1cm
+\noindent
+Suppose $\mathscr{P}$ is a presheaf on a topological space $X$.
+
+\end{theorem}
+
+\noindent
+
+\underline{\textbf{Transition functions}}
+\vskip 0.1cm
+\noindent
+Let $M$ be a complex manifold, and $\pi : E \longrightarrow M$ a holomorphic vector bundle on $M$ of rank $r$.
+Then, there exist \textbf{local trivializations}:
+\begin{equation*}
+\Phi_{\alpha} : \pi^{-1}(U_{\alpha}) \overset{\sim}{\longrightarrow} U_{\alpha} \times \C^{r},
+\end{equation*}
+where $\{\,U_{\alpha}\,\}_{\alpha}$ is a complex coordinate atlas of $M$,
+such that the transition map
+$\Phi_{\alpha} \circ \Phi_{\beta}^{-1} : (U_{\alpha} \cap U_{\beta}) \times \C^{r} \longrightarrow (U_{\alpha} \cap U_{\beta}) \times \C^{r}$
+has the form:
+\begin{equation*}
+\Phi_{\alpha} \circ \Phi_{\beta}^{-1}\!\left(\,x,v\right)
+\;\; = \;\;
+	\left(\, x \overset{{\color{white}-}}{,} \tau_{\alpha\beta}(x) \cdot v\,\right)
+\end{equation*}
+where
+\begin{equation*}
+\tau_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})
+\end{equation*}
+are the associated \textbf{transition functions}.
+
+\vskip0.75cm
+\noindent
+\underline{\textbf{Dual bundle}}
+\vskip 0.1cm
+\noindent
+The transition functions
+\,$\tau^{*}_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})$\,
+of the \textbf{dual bundle} $E^{*} \longrightarrow M$ is given by:
+\begin{equation*}
+\tau^{*}_{\alpha\beta}(x)
+\;\; = \;\;
+	\left(\;\tau^{T}_{\alpha\beta}(x)\,\right)^{-1}
+\end{equation*}
+
+\vskip0.5cm
+\noindent
+\underline{\textbf{Tensor product of two vector bundles}}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$E \longrightarrow M$\, and \,$F \longrightarrow M$\,
+are two holomorphic vector bundles
+determined respectively by the transition functions:
+\,$\tau_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})$\,
+and
+\,$\rho_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{d})$.\,
+Then, their \textbf{tensor product}
+\,$E \otimes F$\,
+is the vector bundle with fibre
+\,$\C^{r}\otimes\C^{d} \cong \C^{r \times d}$\,
+determined by the transition functions
+%\,$\tau_{\alpha\beta} \otimes \rho_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r} \otimes \C^{d})$\,
+\begin{equation*}
+\tau_{\alpha\beta} \otimes \rho_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r} \otimes \C^{d})\,,
+\quad
+\left(\,\tau_{\alpha\beta} \otimes \rho_{\alpha\beta}\right)(x)
+\;\; = \;\;
+	\tau_{\alpha\beta}(x) \otimes_{\C} \rho_{\alpha\beta}(x)
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip0.5cm
+\subsection{Line bundles}
+
+\noindent
+\underline{\textbf{The tensor product of two line bundles is itself a line bundle}}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$L_{1} \longrightarrow M$\, and \,$L_{2} \longrightarrow M$\,
+are two holomorphic line bundles
+determined respectively by the transition functions:
+\,$g_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1}) \cong \C^{*}$\,
+and
+\,$h_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1}) \cong \C^{*}$.\,
+Then, their \textbf{tensor product}
+\,$L_{1} \otimes L_{2}$\,
+is the vector bundle with fibre
+\,$\C^{1} \otimes \C^{1} \cong \C$\,
+determined by the transition functions
+\begin{equation*}
+g_{\alpha\beta} \otimes h_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1} \otimes \C^{1}) \cong \C^{*}\,,
+\quad
+\left(\,g_{\alpha\beta} \otimes h_{\alpha\beta}\right)(x)
+\;\; = \;\;
+	g_{\alpha\beta}(x) \otimes_{\C} h_{\alpha\beta}(x)
+\;\; = \;\;
+	g_{\alpha\beta}(x) \cdot h_{\alpha\beta}(x),
+\end{equation*}
+where the last equality follows from the standard identification
+of $\C \otimes \C \overset{\sim}{\longrightarrow} \C : 1 \otimes 1 \longmapsto 1$.
+\vskip 0.2cm
+\noindent
+Hence, the collection of line bundles on $M$ forms an abelian group under tensor product.
+
+\vskip 0.5cm
+\noindent
+\underline{\textbf{The determinant (line) bundle of a vector bundle}}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$E \longrightarrow M$\,
+is a holomorphic vector bundle
+determined respectively by the transition functions:
+\,$\tau_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{r})$.\,
+Then, its \textbf{determinant bundle} is the line bundle on $M$
+determined by the transition functions
+\begin{equation*}
+g_{\alpha\beta} : U_{\alpha} \cap U_{\beta} \longrightarrow \GL(\C^{1}) \cong \C^{*}\,,
+\quad
+g_{\alpha\beta}(x)
+\;\; = \;\;
+	\det\!\left(\,\tau_{\alpha\beta}(x)\,\right)
+\;\; \in \;\;
+	\C^{*}
+\end{equation*}
+
+\vskip 0.5cm
+\noindent
+\underline{\textbf{Sheaf-cohomological description of the Picard group: $\Pic(M) \,=\, \breve{H}^{1}(M,\mathcal{O}^{*})$}}
+\vskip 0.1cm
+\noindent
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Divisors}
+
+Let $M$ be a complex manifold.
+A \textbf{divisor} $D$ on $M$ is a \textit{locally finite} formal linear combination
+\begin{equation*}
+D
+\;\; = \;\;
+	\underset{i}{\sum}\;a_{i} \cdot V_{i}
+\end{equation*}
+of irreducible analytic hypersurfaces $V_{i}$ of $M$ with coefficients $a_{i} \in \Z$.
+``Locally finite'' here means:
+For each point $x \in M$, there is a open neighbourhood $U \subset M$ of $x \in M$ within which
+the divisor $D$ is given by a finite linear combination of irreducible analytic hypersurfaces with coefficients in $\Z$.
+
+\begin{proposition}[Sheaf-cohomological description of the group of divisors]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$M$\, be a complex manifold, and \,$\Div(M)$\, the abelian group of divisors of \,$M$.\,
+Then,
+\begin{equation*}
+\Div(M) \; \cong \; H^{0}\!\left(\,\overset{{\color{white}.}}{M} , \mathcal{M}^{*}/\mathcal{O}^{*}\right),
+\;\;
+\textnormal{as abelian groups},
+\end{equation*}
+where $\mathcal{M}^{*}$ is the sheaf of non-identically-zero meromorphic functions on $M$,
+and $\mathcal{O}^{*}$ its subsheaf of nowhere vanishing holomorphic functions on $M$.
+\end{proposition}
+\proof
+A global section of the quotient sheaf \,$\mathcal{M}^{*}/\mathcal{O}^{*}$\,
+is given by a collection \,$\left\{\,\overset{{\color{white}.}}{f}_{\alpha} \in \mathcal{M}^{*}(U_{\alpha})\,\right\}_{\alpha}$,\,
+where \,$\{\,U_{\alpha}\,\}$\, is a complex coordinate atlas of \,$M$,\, and
+\begin{equation*}
+\dfrac{{\color{white}.}f_{\alpha}{\color{white}.}}{f_{\beta}}
+\;\in\;
+	\mathcal{O}^{*}\!\left(\,U_{\alpha} \overset{{\color{white}.}}{\cap} U_{\beta}\,\right)
+\end{equation*}
+This implies that
+\begin{equation*}
+\ord_{V}(f_{\alpha}) \; = \; \ord_{V}(f_{\beta}),
+\quad
+\textnormal{for each irreducible hypersurface $V \subset M$}.
+\end{equation*}
+Hence, the global section
+\,$\left\{\,\overset{{\color{white}.}}{f}_{\alpha}\,\right\}$ $\in$
+\,$H^{0}\!\left(\,\overset{{\color{white}.}}{M} , \mathcal{M}^{*}/\mathcal{O}^{*}\right)$\,
+determines the following divisor in \,$M$:\,
+\begin{equation*}
+\Div\!\left(\,\{\,\overset{{\color{white}.}}{f}_{\alpha}\,\}\,\right)
+\;\; := \;\;
+	\underset{V}{\sum} \;\, \ord_{V}(f_{\alpha(V)}) \cdot V
+\end{equation*}
+where the sum is taken over the collection of all irreducible analytic hypersurfaces
+of \,$M$,\, and for each irreducible analytic hypersurface \,$V$,\,
+the index $\alpha(V)$ is chosen such that \,$V \cap U_{\alpha} \neq \varemptyset$.
+{\color{red}Why is the preceding formal sum locally finite?
+(Look up the fact that the local ring at every point of $M$ is a unique factorization domain, and the Weierstrass Preparation Theorem.)}
+
+Conversely, given
+\begin{equation*}
+D
+\;\; = \;\;
+	\underset{i}{\sum}\;\, k_{i} \cdot V_{i}
+\;\; \in \;\;
+	\Div(M),
+\end{equation*}
+choose an open cover \,$\left\{\,\overset{{\color{white}.}}{U}_{\alpha}\,\right\}$\,
+of \,$M$\, such that each irreducible hypersurface $V_{i}$ appearing $D$
+has local defining function $h_{\alpha,i} \in \mathcal{O}(U_{\alpha})$.
+Then, define
+\begin{equation*}
+f_{\alpha}
+\;\; := \;\;
+	\underset{i}{\prod}\; (h_{\alpha,i})^{k_{i}}
+\;\; \in \;\;
+	\mathcal{M}^{*}(U_{\alpha})
+\end{equation*}
+It is clear that
+\begin{equation*}
+\dfrac{{\color{white}.}f_{\alpha}{\color{white}.}}{f_{\beta}}
+\;\in\;
+	\mathcal{O}^{*}\!\left(\,U_{\alpha} \overset{{\color{white}.}}{\cap} U_{\beta}\,\right)
+\end{equation*}
+Hence,
+\,$\left\{\,\overset{{\color{white}.}}{f}_{\alpha}\,\right\}$\,
+defines an element in
+\,$H^{0}\!\left(\,\overset{{\color{white}.}}{M} , \mathcal{M}^{*}/\mathcal{O}^{*}\right)$.\,
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\subsection{The correspondence between line bundles and divisors}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\subsection{Line bundles and maps into project space}
+
+Let $M$ be a compact complex manifold, and $L \longrightarrow M$ a holomorphic line bundle on $M$.
+Let $H^{0}(M,\mathcal{O}(L))$ be the vector space of global holomorphic sections of $L$.
+Let $E \subset H^{0}(M,\mathcal{O}(L))$ be a vector subspace.
+For each point \,$p \in M$,
+\begin{equation*}
+\widetilde{H}_{p} \;\; := \;\; \left\{\,\left. s \overset{{\color{white}.}}{\in} E \,\;\right\vert\, s(p) = 0\,\right\}
+\end{equation*}
+forms a hyperplane in \,$E$.\,
+Clearly, \,$\widetilde{H}_{p}$\, is closed under addition and scalar multiplication;
+hence, it is a vector subspace of \,$E$.\,
+Secondly, the evaluation map
+\,$\ev_{p} : E \longrightarrow \C : s \longrightarrow s(p)$\,
+is (clearly) surjective with kernel
+\,$\ker(\ev_{p}) = \widetilde{H}_{p}$.\,
+Hence,
+\begin{equation*}
+E \left/ \widetilde{H}_{p}\right.
+\;\; = \;\;
+	E \left/ \overset{{\color{white}.}}{\ker}(\ev_{p}) \right.
+\;\; \cong \;\;
+	\image(\ev_{p})
+\;\; = \;\;
+	\C
+\end{equation*}
+Thus, \,$\widetilde{H}_{p}$\, has codimension one in \,$E$;\,
+hence, \,$\widetilde{H}_{p}$\, is a hyperplane in \,$E$.\,
+
+\begin{equation*}
+\iota_{E} \, : \, M \longrightarrow \, \P(E)^{*}\,
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\subsection{First Chern classes of line bundles}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\subsection{Positivity of line bundles}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
