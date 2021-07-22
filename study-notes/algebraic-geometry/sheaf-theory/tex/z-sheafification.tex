@@ -20,10 +20,10 @@
 \begin{definition}
 \mbox{}\vskip 0.1cm
 \noindent
-Suppose $\mathscr{P}$ is a presheaf on a topological space $X$.
+Suppose $\mathscr{P}$ is a presheaf over a topological space $X$.
 \vskip 0.1cm
 \noindent
-The \textbf{presheaf $\mathscr{D}(\mathscr{P})$ of discontinuous sections} of $\mathscr{P}$
+The \textbf{sheaf \,$\mathscr{D}(\mathscr{P})$\, of discontinuous sections} of $\mathscr{P}$
 is defined as follows:
 \begin{itemize}
 \item
@@ -60,16 +60,56 @@ is defined as follows:
 \begin{proposition}
 \mbox{}\vskip 0.1cm
 \noindent
-The presheaf of discontinuous sections of a presheaf over a topological space is in fact a sheaf.
+The sheaf of discontinuous sections of a presheaf over a topological space is indeed a sheaf.
 \end{proposition}
 \proof
 \vskip 0.3cm
 \noindent
-Suppose $\mathscr{P}$ is a presheaf on a topological space $X$, and
-$\mathscr{D}(\mathscr{P})$ is the presheaf of discontinuous sections of $\mathscr{P}$.
-\vskip 0.3cm
+Suppose $\mathscr{P}$ is a presheaf over a topological space $X$, and
+$\mathscr{D}(\mathscr{P})$ is the ``sheaf'' of discontinuous sections of $\mathscr{P}$.
+
+\vskip 0.5cm
 \noindent
-Let $U = \,\underset{\alpha}{\bigcup}\;U_{\alpha}$ be an open cover of an open subset $U \subset X$.
+\textbf{Claim 0:}\quad $\mathscr{D}(\mathscr{P})$ is a presheaf.
+\vskip 0.2cm
+\noindent
+Proof of Claim 0:\;\; Observe that:
+\begin{itemize}
+\item
+	For any open subset \,$U \subset X$,\, and any section
+	\,$\sigma = \left(\,\overset{{\color{white}.}}{\sigma}_{x}\,\right)_{x \in U} \in \mathscr{D}(\mathscr{P})(U)$,\,
+	we have:
+	\begin{equation*}
+	\res^{\,U}_{\,{\color{red}U}}\!\left(\,\overset{{\color{white}.}}{\sigma}\,\right)
+	\;\; = \;\;
+		\res^{\,U}_{\,{\color{red}U}}\!\left(\,\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right)
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in {\color{red}U}}
+	\end{equation*}
+	In other words, \,$\res^{\,U}_{\,U} \,=\, \id_{U}$.
+\item
+	For any open subsets \,$W \subset V \subset U \subset X$,\, and any section
+	\,$\sigma = \left(\,\overset{{\color{white}.}}{\sigma}_{x}\,\right)_{x \in U} \in \mathscr{D}(\mathscr{P})(U)$,\,
+	we have:
+	\begin{equation*}
+	\res^{\,V}_{\,W}\!\left(\,
+		\overset{{\color{white}\textnormal{\large$.$}}}{\res^{\,U}_{\,V}}
+		\!\left(\,\overset{{\color{white}.}}{\sigma}\,\right)
+		\,\right)
+	\;\; = \;\;
+		\res^{\,V}_{\,W}\!\left(\,\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in V}\,\right)
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in W}
+	\;\; = \;\;
+		\res^{\,U}_{\,W}\!\left(\,\overset{{\color{white}.}}{\sigma}\,\right)
+	\end{equation*}
+	In other words, \,$\res^{\,V}_{\,W} \,\circ\, \res^{\,U}_{\,V} \; = \; \res^{\,U}_{\,W}$.
+\end{itemize} 
+Claim 0 follows, by definition of presheaves, immediately from the above two observations.
+
+\vskip 0.5cm
+\noindent
+Next, let $U = \,\underset{\alpha}{\bigcup}\;U_{\alpha}$ be an open cover of an open subset $U \subset X$.
 
 \vskip 0.5cm
 \noindent
