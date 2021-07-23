@@ -305,8 +305,69 @@ respectively.
 	\,$\mathscr{F}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{F})$\,
 	is indeed a morphism of presheaves.
 \item
+	For each
+	\,$\tau$
+	\,$=$\, $\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U}$
+	\,$\in$\, $\mathscr{D}(\mathscr{F})(U)$,\,
+	we define
+	\begin{equation*}
+	\mathscr{D}(\varphi)\!\left(\,\overset{{\color{white}.}}{\tau}\,\right)
+	\;\; = \;\;
+		\mathscr{D}(\varphi)\!\left[\;\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U}\,\right]
+	\;\; := \;\;
+		\left(\,\overset{{\color{white}.}}{\varphi_{x}(\tau_{x})}\,\right)_{x \in U}
+	\end{equation*}
+	Now, observe that, for each \,$\sigma \in \mathscr{F}(U)$,\, we then have
+	\begin{equation*}
+	\iota\!\left(\,\overset{{\color{white}.}}{\varphi(\,\sigma\,)}\,\right)
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\varphi(\,\sigma\,)_{x}}\,\right)_{x \in U}
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\varphi_{x}(\,\sigma_{x}\,)}\,\right)_{x \in U}
+	\;\; = \;\;
+		\mathscr{D}(\varphi)\!\left[\;\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right]
+	\;\; = \;\;
+		\mathscr{D}(\varphi)\!\left(\,\overset{{\color{white}.}}{\iota(\,\sigma\,)}\,\right)
+	\end{equation*}
+	Hence, \;$\iota \circ \varphi \,=\, \mathscr{D}(\varphi) \circ \iota$\,,\; as required.
 \item
+	For each
+	\,$\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}$
+	\,$\in$\, $\mathscr{D}(\mathscr{F})(U)$,\,
+	observe that
+	\begin{equation*}
+	\mathscr{D}(\,\id_{\mathscr{F}}\,)\!\left[\;\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right]
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{(\id_{\mathscr{F}})_{x}(\,\sigma_{x}\,)}\,\right)_{x \in U}
+	\;\; = \;\;
+		\left(\;\overset{{\color{white}-}}{\sigma_{x}}\;\right)_{x \in U}
+	\;\; = \;\;
+		\id_{\mathscr{D}(\mathscr{F})}\!\left[\;\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right],
+	\end{equation*}
+	which proves: \;$\mathscr{D}(\,\id_{\mathscr{F}}\,) \,=\, \id_{\mathscr{D}(\mathscr{F})}$.
 \item
+	For each
+	\,$\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}$
+	\,$\in$\, $\mathscr{D}(\mathscr{F})(U)$,\,
+	observe that
+	\begin{eqnarray*}
+	\mathscr{D}(\,\psi\circ\varphi\,)\!\left[\;\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right]
+	& = &
+		\left(\,\overset{{\color{white}.}}{(\psi\circ\varphi)_{x}(\,\sigma_{x}\,)}\,\right)_{x \in U}
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\psi_{x}(\,\varphi_{x}(\,\sigma_{x}\,))}\,\right)_{x \in U}
+	\;\; = \;\;
+		\mathscr{D}(\,\psi\,)\!\left[\,\left(\,\overset{{\color{white}.}}{\varphi_{x}(\,\sigma_{x}\,)}\,\right)_{x \in U}\,\right]
+	\\
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		\mathscr{D}(\,\psi\,)\!\left[\;
+			\mathscr{D}(\,\varphi\,)\!\left[\;\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right]
+			\,\right]
+	\;\; = \;\;
+		\mathscr{D}(\,\psi\,)\circ\mathscr{D}(\,\varphi\,)
+			\!\left[\;\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U}\,\right],
+	\end{eqnarray*}
+	which proves: \;$\mathscr{D}(\,\psi\circ\varphi\,) \,=\, \mathscr{D}(\,\psi\,)\circ\mathscr{D}(\,\varphi\,)$.
 \end{enumerate}
 \qed
 
