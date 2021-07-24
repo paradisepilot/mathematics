@@ -373,6 +373,222 @@ respectively.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\subsection{Technical results}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+\begin{proposition}\label{subPresheafOfDecentPresheafIsDecent}
+\mbox{}\vskip 0.1cm
+\noindent
+A sub-presheaf of a decent presheaf is itself decent.
+\end{proposition}
+\proof
+
+\qed
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}\vskip 0.1cm
+\noindent
+Suppose \,$\mathscr{S}$\, is sheaf over a topological space \,$X$\,
+and \,$\mathscr{P}$\, is a sub-presheaf of \,$\mathscr{S}$.
+Then, the smallest sub-sheaf of \,$\mathscr{S}$\, containing \,$\mathscr{P}$ exists.
+\end{proposition}
+\proof
+For each open subset \,$U \subset X$\, of \,$X$,\, define:
+\begin{equation*}
+\mathscr{F}(U)
+\;\; := \;\;
+	\left\{\;\,
+		\sigma \in \mathscr{S}(U)
+		\,\;\left\vert\;
+			\begin{array}{c}
+			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$}
+			\\
+			\textnormal{such that \,$\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{S})}_{\,U_{\alpha}} \in \mathscr{P}(U_{\alpha})$\, for each \,$\alpha$}
+			\end{array}
+			\right.
+		\right\}
+\;\; \subset \;\;
+	\mathscr{S}(U)
+\end{equation*}
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 0:}\;\;
+For each open subset \,$U \subset X$, we have \,$\mathscr{P}(U) \,\subset \mathscr{F}(U)$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 0:\;\; Immediate.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 1:}\;\;
+For each \,$\sigma \,\in\, \mathscr{F}(U) \,\subset\, \mathscr{S}(U)$\, and each open subset \,$V \subset U$,\,
+$\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{S})}_{\,V}$
+\,$\in$\,
+${\color{red}\mathscr{F}}(V)$
+\vskip 0.2cm
+\noindent
+Proof of Claim 1:\;\;
+Since \,$\sigma \,\in\, \mathscr{F}(U)$,\, there exists an open cover
+\,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\, such that
+\,$\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{S})}_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$.\,
+Next, note that, since \,$V \subset U$,\, we have
+\,$V \,=\, \underset{\alpha}{\bigcup}\;(\,V\cap\,U_{\alpha})$.\,
+Hence,
+\begin{equation*}
+\left.\left(\,\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{({\color{red}\mathscr{S}})}_{\,V}\right)\right\vert^{(\mathscr{S})}_{\,V\cap\,U_{\alpha}}
+\;\; = \;\;
+	\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{({\color{red}\mathscr{S}})}_{\,V\cap\,U_{\alpha}}
+\;\; = \;\;
+	\left.\left(\,\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{({\color{red}\mathscr{S}})}_{\,{\color{red}U_{\alpha}}}\right)\right\vert^{(\mathscr{S})}_{\,V\cap\,U_{\alpha}}
+\;\; \in \;\;
+	\mathscr{P}(U_{\alpha}\cap\,V)\,,
+\end{equation*}
+which shows that
+\,$\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{S})}_{\,V}$
+\,$\in$\,
+${\color{red}\mathscr{F}}(V)$.\,
+This proves Claim 1.
+
+\vskip 0.5cm
+\noindent
+Claim 1 allows us to define the restriction maps of \,$\mathscr{F}$:
+\begin{equation*}
+\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{F})}_{\,V}
+\; := \;
+	\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{({\color{red}\mathscr{S}})}_{\,V}
+\; \in \;
+	\mathscr{F}(V)
+\; \subset \;
+	\mathscr{S}(V)\,,
+\quad
+\textnormal{for each \,$\sigma \,\in\, \mathscr{F}(U) \,\subset\, \mathscr{S}(U)$\, and each open subset \,$V \subset U$}.
+\end{equation*}
+Note that \,$\mathscr{F}$\, is then a sub-presheaf of the sheaf \,$\mathscr{S}$.
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 2:}\;\; $\mathscr{F}$ is decent.
+\vskip 0.2cm
+\noindent
+Proof of Claim 2:\;\; Immediate by Proposition \ref{subPresheafOfDecentPresheafIsDecent}
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 3:}\;\;
+Suppose \,$\sigma_{\alpha} \,\in\, \mathscr{F}(U_{\alpha})$ are such that
+\,$\left.\overset{{\color{white}.}}{\sigma}_{\alpha}\right\vert^{(\mathscr{F})}_{\,U_{\alpha\,\cap\,U_{\beta}}}$
+\,$=$\,
+$\left.\overset{{\color{white}.}}{\sigma}_{\beta}\right\vert^{(\mathscr{F})}_{\,U_{\alpha\,\cap\,U_{\beta}}}$,\,
+for each \,$\alpha, \beta$.
+Then, there exists a unique
+\,$\sigma \in \mathscr{F}\!\left(\,\underset{\alpha}{\bigcup}\;U_{\alpha}\right)$\,
+such that
+\,$\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{F})}_{\,U_{\alpha}}$
+\,$=$\,
+$\sigma_{\alpha} \,\in\, \mathscr{F}(U_{\alpha})$,\,
+for each \,$\alpha$.
+\vskip 0.3cm
+\noindent
+Proof of Claim 3:\;\;
+Since \,$\mathscr{F}$\, is a sub-presheaf of the the sheaf \,$\mathscr{S}$,\,
+we see immediately that there exists a unique
+\,$\sigma \,\in\, \mathscr{S}\!\left(\,\underset{\alpha}{\bigcup}\;U_{\alpha}\right)$\,
+such that
+\,$\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{({\color{red}\mathscr{S}})}_{\,U_{\alpha}}$
+\,$=$\,
+$\sigma_{\alpha} \,\in\, \mathscr{F}(U_{\alpha}) \,\subset\, \mathscr{S}(U_{\alpha})$,\, for each \,$\alpha$.
+Thus, it remains only to show that we in fact have
+\,$\sigma \,\in\, {\color{red}\mathscr{F}}\!\left(\,\underset{\alpha}{\bigcup}\;U_{\alpha}\right)$.\,
+Now, each \,$U_{\alpha}$\,
+admits an open cover
+\,$U_{\alpha} \,= \underset{\beta\,\in\,\Lambda_{\alpha}}{\bigcup}V^{(\alpha)}_{\beta}$\,
+such that
+\,$\left.\overset{{\color{white}.}}{\sigma}_{\alpha}\right\vert^{(\mathscr{S})}_{\,V^{((\alpha)}_{\beta}}$
+\,$\in$\, $\mathscr{P}(V^{((\alpha)}_{\beta})$.\,
+Hence,
+\begin{eqnarray*}
+\underset{\alpha}{\bigcup}\;U_{\alpha}
+& = &
+	\underset{\alpha}{\bigcup}\left(\,\underset{\beta\,\in\,\Lambda_{\alpha}}{\bigcup}V^{(\alpha)}_{\beta}\,\right),
+	\quad\textnormal{and}
+\\
+\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{S})}_{\,V^{((\alpha)}_{\beta}}
+& \overset{{\color{white}\textnormal{\Huge$1$}}}{=} &
+	\left.
+		\left(\;
+			\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{S})}_{\,U_{\alpha}}
+			\;\right)
+		\right\vert^{(\mathscr{S})}_{\,V^{((\alpha)}_{\beta}}
+\;\; = \;\;
+	\left.\overset{{\color{white}.}}{\sigma}_{\alpha}\right\vert^{(\mathscr{S})}_{\,V^{((\alpha)}_{\beta}}
+\;\; \in \;\;
+	\mathscr{P}(V^{((\alpha)}_{\beta})\,,
+\quad\textnormal{for each \,$\beta \in \Lambda_{\alpha}$,\, for each \,$\alpha$}
+\end{eqnarray*}
+It follows immediately from the two observations above that
+\,$\sigma \,\in\, \mathscr{F}\!\left(\,\underset{\alpha}{\bigcup}\;U_{\alpha}\right)$.\,
+This proves Claim 3.
+
+\vskip 0.5cm
+\noindent
+We have established that
+\begin{itemize}
+\item
+	$\mathscr{F}$\, is a sub-presheaf of \,$\mathscr{S}$ (by Claim 1),
+\item
+	$\mathscr{F}$\, is furthermore a sub-sheaf of \,$\mathscr{S}$ (by Claim 2 and Claim 3), and
+\item
+	$\mathscr{P}$\, is a sub-presheaf of \,$\mathscr{F}$ (by Claim 0).
+\end{itemize}
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 4:}\;\;
+If \,$\mathscr{G}$\, is a sub-sheaf of \,$\mathscr{S}$\, that contains the sub-presheaf \,$\mathscr{P} \subset \mathscr{S}$,\,
+then \,$\mathscr{F}$\, is a sub-sheaf of \,$\mathscr{G}$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 4:\;\;
+We need to show that for each
+\,$\sigma \,\in\, \mathscr{F}(U) \,\subset\, \mathscr{S}(U)$,\,
+we also have 
+\,$\sigma \,\in\, \mathscr{G}(U)$.\,
+To this end, let 
+\,$\sigma \,\in\, \mathscr{F}(U) \,\subset\, \mathscr{S}(U)$.\,
+Then, there exists an open cover
+\,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\,
+such that
+\begin{equation*}
+\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{F})}_{\,U_{\alpha}}
+\;\; := \;\;
+	\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{S})}_{\,U_{\alpha}}
+\;\;\in\;\;
+	\mathscr{P}(U_{\alpha})
+\;\;\subset\;\;
+\mathscr{G}(U_{\alpha})
+\;\;\subset\;\;
+	\mathscr{S}(U_{\alpha})
+\end{equation*}
+Since \,$\mathscr{G}$\, is by hypothesis a (sub-)sheaf (of $\mathscr{S}$), we therefore have:
+\begin{equation*}
+\sigma
+\;\in\; \mathscr{G}\!\left(\,\underset{\alpha}{\bigcup}\;U_{\alpha}\,\right)
+\; = \; \mathscr{G}\!\left(\,\overset{{\color{white}.}}{U}\,\right)
+\end{equation*}
+This proves Claim 4.
+
+\vskip 0.5cm
+\noindent
+Claim 4 shows that \,$\mathscr{F}$\, is indeed the smallest sub-sheaf of \,$\mathscr{S}$\,
+that contains the sub-presheaf \,$\mathscr{P} \subset \mathscr{S}$.\,
+This completes the proof of the Proposition.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \subsection{The sheafification of a presheaf}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
