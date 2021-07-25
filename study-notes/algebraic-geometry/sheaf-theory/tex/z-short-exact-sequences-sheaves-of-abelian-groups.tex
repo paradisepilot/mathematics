@@ -1,0 +1,402 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Short exact sequences of sheaves of Abelian groups}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Short exact sequences of sheaves of Abelian groups}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+\begin{definition}
+\mbox{}\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\mathscr{F}$, $\mathscr{G}$, $\mathscr{H}$\, are sheaves of Abelian groups over a topological space $X$,
+\item
+	$\varphi : \mathscr{F}\longrightarrow\mathscr{G}$,\,
+	$\psi : \mathscr{G}\longrightarrow\mathscr{H}$\,
+	are morphisms of sheaves of abelian groups.
+\end{itemize}
+Then, the sequence of morphisms (of sheaves of Abelian groups)
+\begin{equation*}
+\begin{tikzcd}0                 \arrow[r] &
+\mathscr{F} \arrow[r, "\varphi"] &
+\mathscr{G} \arrow[r, "\psi"] &
+\mathscr{H} \arrow[r] &
+0\end{tikzcd}
+\end{equation*}
+is called a \textbf{short exact sequence of sheaves of Abelian groups}
+if, for each $x \in X$, the induced sequence between stalks at $x$
+\begin{equation*}
+\begin{tikzcd}0                 \arrow[r] &
+\mathscr{F}_{x} \arrow[r, "\varphi_{x}"] &
+\mathscr{G}_{x} \arrow[r, "\psi_{x}"] &
+\mathscr{H}_{x} \arrow[r] &
+0\end{tikzcd}
+\end{equation*}
+is a short exact sequence of Abelian groups.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}
+\mbox{}\vskip 0.1cm
+\noindent
+The sequence of morphisms (of sheaves of Abelian groups)
+\begin{equation*}
+\begin{tikzcd}0                 \arrow[r] &
+\mathscr{F} \arrow[r, "\varphi"] &
+\mathscr{G} \arrow[r, "\psi"] &
+\mathscr{H} \arrow[r] &
+0\end{tikzcd}
+\end{equation*}
+is a short exact sequence of sheaves of Abelian groups
+if and only if the following two conditions are true:
+\begin{itemize}
+\item
+	For each open subset \,$U \subset X$,\, the following is an exact sequence of Abelian groups:
+	\begin{equation*}
+	\begin{tikzcd}	0                 \arrow[r] &
+	\mathscr{F}(U) \arrow[r, "\varphi_{U}"] &
+	\mathscr{G}(U) \arrow[r, "\psi_{U}"] &
+	\mathscr{H}(U)
+	\end{tikzcd}
+	\end{equation*}
+\item
+	The sheaf \,$\mathscr{H}$ is isomorphic to the sheafification of the image sub-presheaf
+	\,$\psi(\mathscr{G}) \subset \mathscr{H}$\,
+	of \,$\mathscr{G}$\, under \,$\psi$;\, more precisely, there exists an isomorphism of sheaves of Abelian groups
+	\begin{equation*}
+	\begin{tikzcd}	\mathscr{H} \arrow[r, "\sim"] & \left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)^{\sharp}
+	\end{tikzcd}
+	\end{equation*}
+	such that the following diagram commutes:
+	\begin{equation*}
+	\begin{tikzcd}	\mathscr{G} \arrow[r, "\psi"] & \psi(\mathscr{G}) \arrow[r, hook] \arrow[dr] & \mathscr{H} \arrow[d, "\sim"]
+	\\
+	&& \left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)^{\sharp} \arrow[r, hook] & \mathscr{D}\!\left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)
+	\end{tikzcd}
+	\end{equation*}
+\end{itemize}
+\end{theorem}
+\proof
+
+\vskip 0.3cm
+\noindent
+\underline{(\,$\Longrightarrow$\,)}\quad
+Suppose
+\,$0 \longrightarrow \mathscr{F} \overset{\varphi}{\longrightarrow} \mathscr{G} \overset{\psi}{\longrightarrow} \mathscr{H} \longrightarrow 0$\,
+is a short exact sequence of sheaves of Abelian groups.
+Then, for each $x \in X$, the following is a short exact sequence of Abelian groups:
+\,$0 \longrightarrow \mathscr{F}_{x} \overset{\varphi_{x}}{\longrightarrow} \mathscr{G}_{x} \overset{\psi_{x}}{\longrightarrow} \mathscr{H}_{x} \longrightarrow 0$.\,
+Now, exactness at \,$\mathscr{H}$\, means precisely:
+For each \,$\tau_{x} \in \mathscr{H}_{x}$,\, the following are true:
+\begin{itemize}
+\item
+	there exists \,$\sigma_{x} \in \mathscr{G}_{x}$\, such that \,$\tau_{x} = \psi_{x}(\sigma_{x})$,
+\item
+	there exists open
+	\,$U \ni x$,\, \,$\widetilde{\tau} \in \mathscr{H}(U)$,\, and \,$\widetilde{\sigma} \in \mathscr{G}(U)$\,
+	such that
+	\,$\tau_{x} \,=\, \left(\,\widetilde{\tau}\,\right)_{x},$\,
+	\,$\widetilde{\tau} \,=\, \psi_{U}(\,\widetilde{\sigma}\,)$,\, and
+	\,$\sigma_{x} \,=\, \left(\,\widetilde{\sigma}\,\right)_{x}$,\, hence
+	\begin{equation*}
+	\tau_{x}
+	\;\; = \;\;
+		\left(\,\widetilde{\tau}\,\right)_{x}
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}.}}{\psi}_{U}(\,\widetilde{\sigma}\,)\,\right)_{x}
+	\;\; = \;\;
+		\psi_{x}\!\left(\,\widetilde{\sigma}_{x}\,\right)
+	\end{equation*}
+\end{itemize}
+These observations imply:
+\begin{eqnarray*}
+\mathscr{H}(U)
+& = &
+	\mathscr{H}^{\sharp}(U)
+\\ & {\color{white}\textnormal{\large$1$}} &
+\\
+& := &
+	\left\{\;
+		\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, {\color{white}1}\mathscr{D}(\mathscr{H})(U){\color{white}1}
+		\;\,\left\vert\;
+			\begin{array}{c}
+			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$,\, and{\color{white}2222.}}
+			\\
+			\textnormal{there exists \,$\widetilde{\tau}_{\alpha} \,\in \mathscr{H}(U_{\alpha})$,\, for each \,$\alpha$,\, such that}
+			\\
+			\textnormal{$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\tau_{x}} \,=\, \left(\;\overset{{\color{white}.}}{\widetilde{\tau}_{\alpha}}\,\right)_{x}$\,,\, for each \,$x \in U_{\alpha}$,\, for each $\alpha$}
+			\end{array}
+			\right.
+		\,\right\}
+\\ & {\color{white}\textnormal{\large$1$}} &
+\\
+& = &
+	\left\{\;
+		\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\psi(\mathscr{G}))(U)
+		\;\,\left\vert\;
+			\begin{array}{c}
+			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\beta}$,\, and{\color{white}2222.}}
+			\\
+			\textnormal{there exists \,$\widetilde{\sigma}_{\beta} \,\in\, \mathscr{G}(U_{\beta})$,\, for each \,$\beta$,\, such that}
+			\\
+			\textnormal{$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\tau_{x}} \,=\, \left(\;\overset{{\color{white}.}}{\psi_{U_{\beta}}(\,\widetilde{\sigma}_{\beta})}\,\right)_{x}$\,,\, for each \,$x \in U_{\beta}$,\, for each $\beta$}
+			\end{array}
+			\right.
+		\,\right\}
+\\ & {\color{white}\textnormal{\large$1$}} &
+\\
+& =: &
+	\mathscr{D}(\psi(\mathscr{G}))^{\sharp}(U)
+\end{eqnarray*}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\begin{example}
+\mbox{}\vskip 0.2cm
+\noindent
+Let
+\begin{itemize}
+\item
+	$X = \Re^{2}$,\,
+\item
+	$C^{\infty}$ = sheaf over $X$ of infinitely smooth $\Re$-valued functions,\, and
+\item
+	$\Omega$ = sheaf over $X$ of infinitely smooth $1$-forms.
+\end{itemize}
+Define the morphism of sheaves
+\,$d : C^{\infty} \longrightarrow \Omega$\,
+as follows:
+For each open subset $U \subset X$,
+\begin{equation*}
+\begin{array}{cccl}
+d_{U} : & C^{\infty}(U) & \longrightarrow & \Omega(U)
+\\
+& \overset{{\color{white}\textnormal{\Large$1$}}}{f} & \longmapsto & \dfrac{\partial f}{\partial x}\,\d x +  \dfrac{\partial f}{\partial y}\,\d y
+\end{array}
+\end{equation*}
+Then, the following statements hold:
+\begin{enumerate}
+\item
+	The following is a short exact sequence of sheaves of Abelian groups:
+	\begin{equation*}
+	\begin{tikzcd}	0                 \arrow[r] &
+	\Re^{\sharp} \arrow[r, hook] &
+	C^{\infty} \arrow[r, "d"] &
+	\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp} \arrow[r] &
+	0	\end{tikzcd}
+	\end{equation*}
+	where \,$\Re^{\sharp}$\, is the sheaf over $X$ of locally constant $\Re$-valued functions.
+\item
+	For each open subset \,$U \subset X$,\,
+	\begin{equation*}
+	\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)
+	\;\; = \;\;
+		\textnormal{the set of all closed forms defined on $U$}
+	\end{equation*}
+\item
+	For \,$U = X \,\backslash \{\,0\,\} = \Re^{2} \,\backslash \{\,0\,\}$,\,
+	the map
+	\begin{equation*}
+	\begin{array}{cccl}
+	d_{U} : & C^{\infty}(U) & \longrightarrow & \left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)
+	\end{array}
+	\end{equation*}
+	is not surjective.
+\end{enumerate}
+\end{example}
+\proof
+\vskip 0.3cm
+\begin{enumerate}
+\item
+\item
+	By the definition of the sheafification of the image sub-presheaf \,$d(C^{\infty})$,\,
+	\begin{eqnarray*}
+	\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)
+	& := &
+		\left\{\;
+			\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}\!\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)(U)
+			\;\,\left\vert\;
+				\begin{array}{c}
+				\textnormal{there exist an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$,\, and{\color{white}	2222.}}
+				\\
+				\textnormal{$\widetilde{\tau}_{\alpha} \,\in \left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)(U_{\alpha}) \,=\, d_{U_{\alpha}}\!\left(\,\overset{{\color{white}.}}{C^{\infty}(U_{\alpha})}\,\right)$\,, \,for each \,$\alpha$,}
+				\\
+				\textnormal{such that \,$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\tau_{x}} \,=\, \left(\;\overset{{\color{white}.}}{\widetilde{\tau}_{\alpha}}\,\right)_{x}$\,,\, for each \,$x \in U_{\alpha}$,\, for each $\alpha$}
+				\end{array}
+				\right.
+			\,\right\}
+	\\ & {\color{white}\textnormal{\large$1$}} &
+	\\
+	& = &
+		\left\{\;
+			\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}\!\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)(U)
+			\;\,\left\vert\;
+				\begin{array}{c}
+				\textnormal{there exist an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$,\, and{\color{white}	2222.}}
+				\\
+				\textnormal{$\widetilde{\sigma}_{\alpha} \,\in C^{\infty}(U_{\alpha})$\,, \,for each \,$\alpha$,\, such that}
+				\\
+				\textnormal{$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\tau_{x}} \,=\, \left(\;\overset{{\color{white}.}}{d(\,\widetilde{\sigma}_{\alpha})}\,\right)_{x}$\,,\, for each \,$x \in U_{\alpha}$,\, for each $\alpha$}
+				\end{array}
+				\right.
+			\,\right\}
+	\end{eqnarray*}
+	which shows that
+	\begin{equation*}
+	\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)
+	\;\; = \;\;
+		\textnormal{the set of all locally exact (hence also closed) forms defined on $U$}
+	\end{equation*}	
+	Now, recall the Poincar\'{e} Lemma, which states that
+	closed $p$-forms defined on open balls in $\Re^{n}$ are exact;
+	in particular, closed $p$-form defined on open subsets of $\Re^{n}$ are therefore locally exact.
+	We may now conclude:
+	\begin{equation*}
+	\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)
+	\;\; = \;\;
+		\textnormal{the set of all closed forms defined on $U$}
+	\end{equation*}	
+\item
+	Let \,$\omega \in \Omega(U)$\, be the $1$-form defined on \,$U \ni X \,\backslash \{\,0\,\}$ given by:
+	\begin{equation*}
+	\omega \;\; := \;\; \left(\dfrac{-\,y}{x^{2}+y^{2}}\right)\d x + \left(\dfrac{x}{x^{2}+y^{2}}\right)\d y
+	\end{equation*}
+	Then, \,$\omega$\, is in fact a closed $1$-form, i.e.
+	 \,$\omega \in \left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)$.\,
+	 Indeed,
+	\begin{eqnarray*}
+	\d\,\omega
+	& = &
+		\dfrac{\partial}{\partial y}\!\left(\dfrac{-\,y}{x^{2}+y^{2}}\right)\d y \wedge \d x
+		\, + \,
+		\dfrac{\partial}{\partial x}\!\left(\dfrac{x}{x^{2}+y^{2}}\right)\d x \wedge \d y
+	\\
+	& = &
+		\left[\,\dfrac{-\,1}{x^{2}+y^{2}} - y\cdot(-1)\cdot\dfrac{2y}{(x^{2}+y^{2})^2}\,\right]\left(- \,\d x \wedge \d y\right)
+		\; + \;
+		\left[\,\dfrac{1}{x^{2}+y^{2}} + x\cdot(-1)\cdot\dfrac{2x}{(x^{2}+y^{2})^2}\,\right]\d x \wedge \d y
+	\\
+	& = &
+		\left[\;
+			\dfrac{1}{x^{2}+y^{2}} - \dfrac{2y^{2}}{(x^{2}+y^{2})^2}
+			\; + \;
+			\dfrac{1}{x^{2}+y^{2}} - \dfrac{2x^{2}}{(x^{2}+y^{2})^2}
+			\,\right]\,\d x \wedge \d y
+	\\
+	& = &
+		\left[\;
+			\dfrac{2}{x^{2}+y^{2}} - \dfrac{2(x^{2}+y^{2})}{(x^{2}+y^{2})^2}
+			\,\right]\,\d x \wedge \d y
+	\\
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		0
+	\end{eqnarray*}
+	However, \,$\omega$\, is not an exact form.
+	Suppose on the contrary that \,$\omega$\, were an exact form, i.e.
+	there exists \,$f \in C^{\infty}(U)$\, such that
+	\begin{equation*}
+	\omega
+	\;\; = \;\;
+		\d\,f
+	\;\; = \;\;
+		\dfrac{\partial f}{\partial x}\,\d\,x \; + \; \dfrac{\partial f}{\partial y}\,\d\,y
+	\end{equation*}
+	Then, integrating \,$\omega$\, along the parametrized closed circle of radius $r > 0$
+	centred at $0 \in \Re^{2}$
+	\begin{equation*}
+	\Gamma
+	\; : \;
+		\left(\;x(t)\,\overset{{\color{white}1}}{,}\, y(t)\;\right)
+	\;\; = \;\;
+		\left(\;r \cos t \,\overset{{\color{white}1}}{,}\, r \sin t\;\right),
+	\quad
+	\textnormal{for \,$t \in [\,0,2\pi\,]$}
+	\end{equation*}
+	would have yielded zero, since
+	\begin{eqnarray*}
+	\displaystyle\int_{\,\Gamma}\;\omega
+	& = &
+		\displaystyle\int_{\,\Gamma}\;\d\,f
+	\;\; = \;\;
+		f\!\left(\,\overset{{\color{white}}}{\Gamma(2\pi)}\,\right)
+		\; - \;
+		f\!\left(\,\overset{{\color{white}}}{\Gamma(0)}\,\right)
+	\;\; = \;\;
+		f\!\left(\,\overset{{\color{white}}}{(1,0)}\,\right)
+		\; - \;
+		f\!\left(\,\overset{{\color{white}}}{(1,0)}\,\right)
+	\;\; = \;\;
+		0
+	\end{eqnarray*}
+	On the other hand, explicit calculations shows:
+	\begin{eqnarray*}
+	\displaystyle\int_{\,\Gamma}\;\omega
+	& = &
+		\ointctrclockwise\;
+			\left(\dfrac{-\,y}{x^{2}+y^{2}}\right)\d\,x
+			\;+\;
+			\left(\dfrac{x}{x^{2}+y^{2}}\right)\d\,y
+	\;\; = \;\;
+		\int_{0}^{2\pi}\,
+			\left[\;
+			\left(\dfrac{-\,y}{x^{2}+y^{2}}\right) \dot{x}(t)
+			\; + \;
+			\left(\dfrac{x}{x^{2}+y^{2}}\right) \dot{y}(t)
+			\,\right]
+			\;\d\,t
+	\\
+	& \overset{{\color{white}\textnormal{\Huge$1$}}}{=} &
+		\int_{0}^{2\pi}\,
+			\left[\;
+			\left(\,\dfrac{-\,r\sin t}{r^{2}}\,\right) \cdot (\,-r \sin t\,)
+			\; + \;
+			\left(\,\dfrac{r \cos t}{r^{2}}\,\right) \cdot (\,r \cos t\,)
+			\,\right]
+			\;\d\,t
+	\;\; = \;\;
+		\int_{0}^{2\pi}\,
+			\left[\, \dfrac{r^{2}\cdot(\sin^{2}t+\cos^{2}t)}{r^{2}} \,\right]
+			\;\d\,t
+	\\
+	& \overset{{\color{white}\textnormal{\Huge$1$}}}{=} &
+		\int_{0}^{2\pi}\,
+			\left[\;\overset{{\color{white}.}}{1}\;\right]
+			\;\d\,t
+	\\
+	& \overset{{\color{white}\textnormal{\Huge$1$}}}{=} &
+		2\,\pi
+	\;\; \neq \;\;
+		0
+	\end{eqnarray*}
+	We thus see that the closed $1$-form
+	\,$\omega \,\in\, \left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)$\,
+	cannot be exact.
+	This proves that, for \,$U = X \,\backslash \{\,0\,\} = \Re^{2} \,\backslash \{\,0\,\}$,\,
+	the map
+	\begin{equation*}
+	\begin{array}{cccl}
+	d_{U} : & C^{\infty}(U) & \longrightarrow & \left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp}\!(U)
+	\end{array}
+	\end{equation*}
+	is not surjective.
+	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
