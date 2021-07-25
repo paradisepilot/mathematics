@@ -733,6 +733,83 @@ containing the image sub-presheaf \,$\iota(\mathscr{P}) \,\subset\, \mathscr{D}(
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{theorem}[Properties of the sheafification of a presheaf]\label{PropertiesSheafification}
+\mbox{}\vskip 0.1cm
+\begin{enumerate}
+\item
+	Suppose \,$\mathscr{P}$\, is a presheaf over a topological space \,$X$.\,
+	Then, the series of morphisms of presheaves
+	\begin{equation*}
+	\mathscr{P}
+	\;\;\overset{\iota}{\longrightarrow}\;\;
+		\mathscr{P}^{\flat}
+	\;\;\subset\;\;
+		\mathscr{P}^{\sharp}
+	\;\;\subset\;\;
+		\mathscr{D}(\mathscr{P})
+	\end{equation*}
+	induce respective isomorphisms between stalks
+	\begin{equation*}
+	\mathscr{P}_{x}
+	\;\;\overset{\sim}{\longrightarrow}\;\;
+		\mathscr{P}^{\flat}_{x}
+	\;\;\overset{\sim}{\longrightarrow}\;\;
+		\mathscr{P}^{\sharp}_{x}
+	\;\;\overset{\sim}{\longrightarrow}\;\;
+		\mathscr{D}(\mathscr{P})_{x}\,,
+	\quad
+	\textnormal{for each \,$x \,\in\, X$}
+	\end{equation*}
+\item
+	Suppose \,$\mathscr{F}$\, and \,$\mathscr{G}$\, are presheaves over a topological space \,$X$,\,
+	and \,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\, is a morphism of presheaves.
+	Then, there exist unique morphisms of presheaves
+	\,$\varphi^{\flat} : \mathscr{F}^{\flat} \longrightarrow \mathscr{G}^{\flat}$\,
+	and
+	\,$\varphi^{\sharp} : \mathscr{F}^{\sharp} \longrightarrow \mathscr{G}^{\sharp}$\,
+	such that the following diagram commutes:
+	\begin{equation*}
+	\begin{tikzcd}	\mathscr{F} \arrow[r, "\iota"] \arrow[d, "\varphi"'] &
+	\mathscr{F}^{\flat} \arrow[r, hook] \arrow[d, "\varphi^{\flat}"] &
+	\mathscr{F}^{\sharp} \arrow[r, hook] \arrow[d, "\varphi^{\sharp}"] &
+	\mathscr{D}(\mathscr{F}) \arrow[d, "\mathscr{D}(\varphi)"]
+	\\	\mathscr{G} \arrow[r, "\iota"'] &
+	\mathscr{G}^{\flat} \arrow[r, hook] &	\mathscr{G}^{\sharp} \arrow[r, hook] &	\mathscr{D}(\mathscr{G}) &	\end{tikzcd}
+	\end{equation*}
+\item
+	Suppose \,$\mathscr{P}$\, is a presheaf over a topological space \,$X$.\,
+	Then,
+	\begin{equation*}
+	\left(\,\id_{\mathscr{P}}\,\right)^{\flat}
+	\;\; = \;\;
+		\id_{\mathscr{P}^{\flat}}
+	\quad\quad\textnormal{and}\quad\quad
+	\left(\,\id_{\mathscr{P}}\,\right)^{\sharp}
+	\;\; = \;\;
+		\id_{\mathscr{P}^{\sharp}}
+	\end{equation*}
+\item
+	Suppose \,$\mathscr{F}$, \,$\mathscr{G}$, \,$\mathscr{H}$ are presheaves over a topological space \,$X$,\,
+	and
+	\,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\,,
+	\,$\psi : \mathscr{G} \longrightarrow \mathscr{H}$\,
+	are morphisms of presheaves.
+	Then,
+	\begin{equation*}
+	(\,\psi \,\circ\, \varphi\,)^{\flat}
+	\;\; = \;\;
+		\psi^{\flat} \,\circ\, \varphi^{\flat}
+	\quad\quad\textnormal{and}\quad\quad
+	(\,\psi \,\circ\, \varphi\,)^{\sharp}
+	\;\; = \;\;
+		\psi^{\sharp} \,\circ\, \varphi^{\sharp}
+	\end{equation*}
+\end{enumerate}
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{remark}[Local set-theoretic description of $\mathscr{P}^{\sharp}$]
 \mbox{}\vskip 0.1cm
 \noindent
@@ -779,5 +856,17 @@ containing the image sub-presheaf \,$\iota(\mathscr{P}) \,\subset\, \mathscr{D}(
 		\,\right\}
 \end{eqnarray*}
 \end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\proofof Proposition \ref{PropertiesSheafification}
+\begin{enumerate}
+\item
+\item
+\item
+\item
+\end{enumerate}
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
