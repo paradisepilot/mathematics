@@ -372,7 +372,9 @@ respectively.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 1.0cm
 \subsection{Technical results}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
@@ -387,7 +389,7 @@ A sub-presheaf of a decent presheaf is itself decent.
 \qed
 
 \vskip 0.5cm
-\begin{proposition}
+\begin{proposition}[Smallest sub-sheaf containing a sub-presheaf of a sheaf]
 \mbox{}\vskip 0.1cm
 \noindent
 Suppose \,$\mathscr{S}$\, is sheaf over a topological space \,$X$\,
@@ -589,6 +591,110 @@ This completes the proof of the Proposition.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{proposition}[Image sub-presheaf of a morphism of presheaves]
+\mbox{}\vskip 0.1cm
+\noindent
+Suppose \,$\mathscr{F}$\, and \,$\mathscr{G}$\, are presheaves over a topological space \,$X$,\,
+and \,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\, is a morphism of presheaves.
+For each open subset \,$U \subset X$,\, define:
+\begin{equation*}
+\varphi(\mathscr{F})(U)
+\;\; := \;\;
+	\varphi_{U}\!\left(\,\overset{{\color{white}.}}{\mathscr{F}(U)}\,\right)
+\;\; \in \;\;
+	\mathscr{G}(U)
+\end{equation*}
+Then,
+\begin{enumerate}
+\item
+	$\varphi(\mathscr{F})$\, is a sub-presheaf of the presheaf \,$\mathscr{G}$,\, and
+\item
+	$\varphi(\mathscr{F})_{x}$ \,$=$\, $\varphi_{x}\!\left(\,\mathscr{F}_{x}\,\right)$ \,$\subset$\, $\mathscr{G}_{x}$,\,
+	for each \,$x \in X$.
+\end{enumerate}
+We shall call \,$\varphi(\mathscr{F})$\, the \underline{\textbf{image sub-presheaf}} of \,$\mathscr{F}$\,
+under the morphism \,$\varphi$.
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	We need to show that for each open subsets $V \subset U \subset X$,
+	the restriction map of $\mathscr{G}$ from $U$ to $V$ maps
+	$\varphi(\mathscr{F})(U)$ into $\varphi(\mathscr{F})(V)$.
+	Hence, let \,$\sigma \,\in\, \mathscr{F}(U)$,\, and
+	$\tau$
+	\,$:=$\, $\varphi_{U}(\,\sigma\,)$
+	\,$\in$\, $\varphi_{U}\!\left(\,\overset{{\color{white}.}}{\mathscr{F}(U)}\,\right)$
+	\,$=:$\, $\varphi(\mathscr{F})(U)$.
+	\begin{equation*}
+	\left.\overset{{\color{white}.}}{\tau}\,\right\vert^{(\mathscr{G})}_{\,V}
+	\;\; = \;\;
+		\left.\overset{{\color{white}.}}{\varphi_{U}(\,\sigma\,)}\,\right\vert^{(\mathscr{G})}_{\,V}
+	\;\; = \;\;
+		\varphi_{V}\!\left(\,
+			\left.\overset{{\color{white}.}}{\sigma}\,\right\vert^{(\mathscr{F})}_{\,V}
+			\,\right)
+	\;\; \in \;\;
+		\varphi_{V}\!\left(\,\overset{{\color{white}.}}{\mathscr{F}(V)}\,\right)
+	\;\; =: \;\;
+		\varphi(\mathscr{F})(V)
+	\end{equation*}
+\item
+	\textbf{Claim 1:}\;\; $\varphi(\mathscr{F})_{x} \;\subset\; \varphi_{x}(\,\mathscr{F}_{x}\,)$
+	\vskip 0.2cm
+	Proof of Claim 1:\quad
+	Let \,$\tau_{x} \,\in\, \mathscr{\varphi}(\mathscr{F})_{x}$,\, and
+	let \,$\widetilde{\tau} \,\in\, \varphi(\mathscr{F})(U) \,:=\, \varphi_{U}\!\left(\,\overset{{\color{white}.}}{\mathscr{F}(U)}\,\right)$\,
+	be a representative of \,$\tau_{x}$,\, where \,$U \,\ni\, x$.\,
+	Then, \,$\widetilde{\tau}$
+	\,$=$\, $\varphi_{U}(\,\sigma\,)$
+	\,$\in$\, $\varphi_{U}\!\left(\,\overset{{\color{white}.}}{\mathscr{F}(U)}\,\right)$
+	\,$=:$\, $\varphi(\mathscr{F})(U)$,\,
+	for some \,$\sigma \,\in\, \mathscr{F}(U)$.\,
+	Hence,
+	\,$\tau_{x}$
+	\,$=$\, $\left(\,\widetilde{\tau}\,\right)_{x}$
+	\,$=$\, $\left(\,\overset{{\color{white}.}}{\varphi_{U}(\sigma)}\,\right)_{x}$
+	\,$=$\, $\varphi_{x}(\,\sigma_{x}\,)$
+	\,$\in$\, $\varphi_{x}\!\left(\,\mathscr{F}_{x}\,\right)$.\,
+	This proves Claim 1.
+	
+	\vskip 0.5cm
+	\textbf{Claim 2:}\;\; $\varphi(\mathscr{F})_{x} \;\supset\; \varphi_{x}(\,\mathscr{F}_{x}\,)$
+	\vskip 0.2cm
+	Proof of Claim 2:\quad
+	Let \,$\varphi_{x}(\,\sigma_{x}\,) \,\in\, \varphi_{x}(\,\mathscr{F}_{x}\,)$.\,
+	Let \,$\widetilde{\sigma} \,\in\, \mathscr{F}(U)$\, be representative of \,$\sigma_{x}$,\,
+	where \,$U \,\ni\, x$.\,
+	Then, since
+	\,$\varphi_{U}(\,\widetilde{\sigma}\,)$
+	\,$\in$\, $\varphi_{U}\!\left(\,\mathscr{F}(\overset{{\color{white}.}}{U})\,\right)$
+	\,$=:$\, $\overset{{\color{white}.}}{\varphi(\mathscr{F})(U)}$,\,
+	we see that
+	\begin{equation*}
+	\varphi_{x}(\,\sigma_{x}\,)
+	\;\; = \;\;
+		\left(\,\overset{{\color{white}1}}{\varphi}_{U}(\,\widetilde{\sigma}\,)\,\right)_{x}
+	\;\; \in \;\;
+		\overset{{\color{white}.}}{\varphi(\mathscr{F})}_{x}
+	\end{equation*}
+	This proves Claim 2.
+	
+	\vskip 0.3cm
+	\noindent
+	It follows immediately from Claim 1 and Claim 2 that
+	\,$\varphi(\mathscr{F})_{x}$
+	\,$=$\, $\varphi_{x}\!\left(\,\mathscr{F}_{x}\,\right)$
+	\,$\subset$\, $\mathscr{G}_{x}$,\,
+	for each \,$x \in X$.
+	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
 \subsection{The sheafification of a presheaf}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
