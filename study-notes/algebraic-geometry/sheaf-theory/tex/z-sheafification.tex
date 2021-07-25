@@ -1,7 +1,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Sheafification}
+\section{Sheafification of presheaves}
 
 %\cite{vanDerVaart1996}
 %\cite{Kosorok2008}
@@ -229,8 +229,13 @@ is a sheaf, which completes the proof of the Proposition.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
+\vskip 1.0cm
+\subsection{The discretization morphism of a presheaf}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
 \begin{lemma}
 \mbox{}\vskip 0.1cm
 \noindent
@@ -252,6 +257,10 @@ respectively.
 	Then,
 	\,$\mathscr{F}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{F})$\,
 	is a morphism of presheaves.
+	\vskip 0.05cm
+	We call
+	\,$\mathscr{F}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{F})$\,
+	the \textbf{discretization morphism} of the presheaf \,$\mathscr{F}$.
 \item
 	For each morphism of presheaves
 	\,$\mathscr{F}\,\overset{\varphi}{\longrightarrow}\,\mathscr{G}$,\,
@@ -375,7 +384,7 @@ respectively.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 1.0cm
-\subsection{Technical results}
+\subsection{Some important properties of sub-presheaves}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
 
@@ -389,7 +398,7 @@ A sub-presheaf of a decent presheaf is itself decent.
 \qed
 
 \vskip 0.5cm
-\begin{proposition}[Smallest sub-sheaf containing a sub-presheaf of a sheaf]
+\begin{proposition}[The smallest sub-sheaf containing a sub-presheaf of a sheaf]
 \mbox{}\vskip 0.1cm
 \noindent
 Suppose \,$\mathscr{S}$\, is sheaf over a topological space \,$X$\,
@@ -591,8 +600,8 @@ This completes the proof of the Proposition.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
-\begin{proposition}[Image sub-presheaf of a morphism of presheaves]
+\vskip 1.0cm
+\begin{proposition}[The image of a presheaf morphism is a sub-presheaf of the codomain presheaf]
 \mbox{}\vskip 0.1cm
 \noindent
 Suppose \,$\mathscr{F}$\, and \,$\mathscr{G}$\, are presheaves over a topological space \,$X$,\,
@@ -698,5 +707,77 @@ under the morphism \,$\varphi$.
 \subsection{The sheafification of a presheaf}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
+
+\begin{definition}
+\mbox{}\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\mathscr{P}$\, is a presheaf over a topological space \,$X$,
+\item
+	$\mathscr{D}(\mathscr{P})$\, is the sheaf of discontinuous sections of \,$\mathscr{P}$,\,
+\item
+	$\mathscr{P}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{P})$\,
+	is the discretization morphism of \,$\mathscr{P}$\, and
+\item
+	$\mathscr{P}^{\flat}$ \,$:=$\, $\iota(\mathscr{P})$\, is the image sub-presheaf of \,$\mathscr{P}$\,
+	under its discretization morphism
+	\,$\mathscr{P}\,\overset{\iota}{\longrightarrow}\,\mathscr{D}(\mathscr{P})$.\,
+\end{itemize}
+Then, the \textbf{sheafification} \,$\mathscr{P}^{\sharp}$\, of \,$\mathscr{P}$\,
+is by definition the smallest sub-sheaf of $\mathscr{D}(\mathscr{P})$
+containing the image sub-presheaf \,$\iota(\mathscr{P}) \,\subset\, \mathscr{D}(\mathscr{P})$.\,
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}[Local set-theoretic description of $\mathscr{P}^{\sharp}$]
+\mbox{}\vskip 0.1cm
+\noindent
+\begin{eqnarray*}
+\mathscr{P}^{\sharp}(U)
+& := &
+	\left\{\;\,
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
+		\,\;\left\vert\;
+			\begin{array}{c}
+			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\, such that}
+			\\
+			\textnormal{$\left.\left(\overset{{\color{white}.}}{(\,\sigma_{x}\,)_{x \in U}}\right)\,\right\vert^{(\mathscr{S})}_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$\,,\, for each \,$\alpha$}
+			\end{array}
+			\right.
+		\right\}
+\\ & {\color{white}\textnormal{\large$1$}} &
+\\
+& = &
+	\left\{\;\,
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
+		\,\;\left\vert\;
+			\begin{array}{c}
+			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\, such that}
+			\\
+			\textnormal{$\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$\,,\, for each \,$\alpha$}
+			\end{array}
+			\right.
+		\right\}
+\\ & {\color{white}\textnormal{\large$1$}} &
+\\
+& = &
+	\left\{\;\;
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
+		\;\,\left\vert\;
+			\begin{array}{c}
+			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$,\, and{\color{white}2222.}}
+			\\
+			\textnormal{there exists \,$\widetilde{\sigma}_{\alpha} \,\in \mathscr{P}(U_{\alpha})$,\, for each \,$\alpha$,\, such that}
+			\\
+			\textnormal{$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\sigma_{x}} \,=\, \left(\;\overset{{\color{white}.}}{\widetilde{\sigma}_{\alpha}}\,\right)_{x}$\,,\, for each \,$x \in U_{\alpha}$,\, for each $\alpha$}
+			\end{array}
+			\right.
+		\,\right\}
+\end{eqnarray*}
+\end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
