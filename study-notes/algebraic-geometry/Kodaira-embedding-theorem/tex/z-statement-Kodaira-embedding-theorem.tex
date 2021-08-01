@@ -23,34 +23,74 @@ the Kodaira Embedding Theorem.
 \mbox{}
 \vskip 0.1cm
 \noindent
-Let \,$M$\, be a compact complex manifold,
-and \,$L \longrightarrow M$\, a positive line bundle on \,$M$.\,
+Let \,$X$\, be a compact complex manifold,
+and \,$L \longrightarrow X$\, a positive line bundle on \,$X$.\,
 Then, there exists \,$k_{0} \in \N$\, such that, for each \,$k \geq k_{0}$,\,
 the map
 \begin{equation*}
-\iota_{L^{k}} \, : \, M \, \longrightarrow \, \C\P^{N}
+\iota_{L^{k}} \, : \, X \, \longrightarrow \, \C\P^{N}
 \end{equation*}
-is well-defined and is an embedding of \,$M$\, into $\C\P^{N}$.
+is well-defined and is an embedding of \,$X$\, into $\C\P^{N}$.
 \end{theorem}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{remark}
-\mbox{}
-\vskip 0.1cm
+\proofoutline
+\vskip 0.2cm
 \noindent
-To prove the Kodaira Embedding Theorem, it suffices to establish that,
+In order to prove the Kodaira Embedding Theorem, it suffices to establish that,
 under its hypothesis, the map
 \begin{equation*}
-\iota_{L^{k}} \, : \, M \, \longrightarrow \, \C\P^{N}
+\iota_{L^{k}} \, : \, X \, \longrightarrow \, \C\P^{N}
 \end{equation*}
-is an injective immersion, since every injective immersion from a compact complex manifold
-into another (not necessarily compact) complex manifold is an embedding
+is well-defined and is an {\color{red}injective immersion}, since every injective immersion from a compact complex manifold
+into another (not necessarily compact) complex manifold is necessarily an embedding
 (see, for example, Proposition 5.9, p.214, \cite{FritzscheGrauert2002}).
-\end{remark}
+
+\vskip 0.3cm
+\noindent
+Hence, we will proceed by show that each of the following implications:
+\begin{itemize}
+\item
+	\,$\iota_{L^{k}} \, : \, X \, \longrightarrow \, \C\P^{N}$\, is well-defined if
+	\begin{equation*}
+	H^{1}\!\left(\,\Bl_{x}(X) \,,\,\widetilde{L^{k}}+Y\,\right) \,=\, 0\,,
+	\quad
+	\textnormal{for each \,$x \in X$},
+	\end{equation*}
+	where \,$\Bl_{x}(X)$\, is the blow-up of $X$ at $x \in X$,
+	\,$\widetilde{L^{k}}$\, is the pull-back line bundle on \,$\Bl_{x}(X)$,\,
+	and \,$Y \subset \Bl_{x}(X)$\, is the exceptional divisor.
+	\vskip 0.3cm
+\item
+	\,$\iota_{L^{k}} \, : \, X \, \longrightarrow \, \C\P^{N}$\, is an injective map if
+	\begin{equation*}
+	H^{1}\!\left(\,\Bl_{x_{1},x_{2}}(X) \,,\, \widetilde{L^{k}}+Y_{1}+Y_{2}\,\right) \,=\, 0,\,
+	\quad
+	\textnormal{for each \,$x_{1}, x_{2} \in X$},
+	\end{equation*}
+	where \,$\Bl_{x_{1},x_{2}}(X)$\, is the blow-up of $X$ at the two points $x_{1}, x_{2} \in X$,
+	\,$\widetilde{L^{k}}$\, is the pull-back line bundle on \,$\Bl_{x_{1},x_{2}}(X)$,\,
+	and \,$Y_{1}, Y_{2} \subset \Bl_{x}(X)$\, are the two exceptional divisors.
+	\vskip 0.3cm
+\item
+	\,$\iota_{L^{k}} \, : \, X \, \longrightarrow \, \C\P^{N}$\, is an immersion (i.e. its differential at each point of $X$ is injective) if
+	\begin{equation*}
+	H^{1}\!\left(\,\Bl_{x}(X) \,,\,\widetilde{L^{k}}+2 \cdot Y\,\right) \,=\, 0\,,
+	\quad
+	\textnormal{for each \,$x \in X$},
+	\end{equation*}
+	where \,$\Bl_{x}(X)$\, is the blow-up of $X$ at $x \in X$,
+	\,$\widetilde{L^{k}}$\, is the pull-back line bundle on \,$\Bl_{x}(X)$,\,
+	and \,$Y \subset \Bl_{x}(X)$\, is the exceptional divisor.
+\end{itemize}
+Once the above implications have been established, the Kodaira Embedding Theorem
+follows readily from the Kodaira Vanishing Theorem.
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \begin{theorem}[Another very interesting result, p.178, \cite{GriffithHarris1978}]
 \mbox{}
 \vskip 0.1cm
