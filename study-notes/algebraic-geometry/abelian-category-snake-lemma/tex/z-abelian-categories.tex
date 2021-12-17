@@ -1,0 +1,203 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Abelian categories}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Category]
+\mbox{}
+\vskip 0.15cm
+\noindent
+A \,\textbf{category}\, $\mathfrak{C}$ consists of the following:
+\begin{itemize}
+\item
+	a class $\Obj(\mathfrak{C})$,
+\item
+	a set $\Mor_{\mathfrak{C}}(A,B)$, for each $A, B \in \Obj(\mathfrak{C})$,
+\item
+	a \textbf{composition map}
+	\begin{equation*}
+	\Mor_{\mathfrak{C}}(A,B) \times \Mor_{\mathfrak{C}}(B,C) \longrightarrow \Mor_{\mathfrak{C}}(A,C) : (f,g) \longmapsto g \circ f\,,
+	\end{equation*}
+	for each $A, B, C \in \Obj(\mathfrak{C})$,
+\end{itemize}
+satisfying:
+\begin{enumerate}
+\item
+	the sets $\Mor_{\mathfrak{C}}(\,\cdot\,,\,\cdot\,)$ are pairwise disjoint, i.e.,
+	for $A_{1}, B_{1}, A_{2}, A_{2} \in \Obj(\mathfrak{C})$, we have:
+	\begin{equation*}
+	\Mor_{\mathfrak{C}}(A_{1},B_{2})\;\bigcap\;\Mor_{\mathfrak{C}}(A_{1},B_{2})
+	\; = \;
+		\varemptyset\,,
+	\;\;
+	\textnormal{whenever $A_{1} \neq A_{2}$ or $B_{1} \neq B_{2}$}
+	\end{equation*}
+\item
+	for each $A \in \Obj(\mathfrak{C})$, there exists $1_{A} \in \Mor_{\mathfrak{C}}(A,A)$ such that
+	\begin{equation*}
+	f \circ 1_{A} = f
+	\;\;\;\;\textnormal{and}\;\;\;\;
+	1_{B} \circ f = f,
+	\quad
+	\textnormal{for each $f \in \Mor_{\mathfrak{C}}(A,B)$, \,$B \in \Obj(\mathfrak{C})$}
+	\end{equation*}
+\item
+	the composition map is associative, i.e.,
+	\begin{equation*}
+	(f \circ g) \circ h
+	\;\; = \;\;
+	f \circ (g \circ h)\,,
+	\end{equation*}
+	for each
+	$h \in \Mor_{\mathfrak{C}}(A,B)$,
+	$g \in \Mor_{\mathfrak{C}}(B,C)$,
+	$f \in \Mor_{\mathfrak{C}}(C,D)$,\;
+	where
+	\,$A,B,C,D \in \Obj(\mathfrak{C})$.
+\end{enumerate}
+The elements of $\Obj(\mathfrak{C})$ are called the \textbf{objects} of $\mathfrak{C}$.
+For $A, B \in \Obj(\mathfrak{C})$, the elements of  $\Mor_{\mathfrak{C}}(A,B)$
+are called the \textbf{morphisms} in $\mathfrak{C}$ from $A$ to $B$.
+For each $A \in \Obj(\mathfrak{C})$, $1_{A} \in \Mor_{\mathfrak{C}}(A,A)$ is called
+the \textbf{identity morphism} of $A$.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Initial object, terminal object, zero object]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category.
+\begin{itemize}
+\item
+	An object $A \in \Obj(\mathfrak{C})$ is called an \textbf{initial object} if $\Mor_{\mathfrak{C}}(A,X)$ is a singleton set,
+	for each $X \in \Obj(\mathfrak{C})$.
+\item
+	An object $\Omega \in \Obj(\mathfrak{C})$ is called a \textbf{terminal object} if $\Mor_{\mathfrak{C}}(X,\Omega)$ is a singleton set,
+	for each $X \in \Obj(\mathfrak{C})$.
+\item
+	An object of $\Obj(\mathfrak{C})$ is called a \textbf{zero object} if it is both initial and terminal.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Product, coproduct]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category, and
+$\{\,A_{i}\,\}_{i \in I}$ a family of objects of $\mathfrak{C}$ indexed by a set $I$.
+\begin{itemize}
+\item
+	A \textbf{product} is an ordered pair
+	\,$\left(\,C\,,\,\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}\,\right)$\,
+	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
+	$\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}$ of morphisms in $\mathfrak{C}$
+	such that,
+	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $f_{i} \in \Mor_{\mathfrak{C}}(X,A_{i})$,
+	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(X,C)$ such that,
+	for each $i \in I$, the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	& {\color{red}C} \arrow[d, "p_{i}", red] \\	X \arrow[ru, dashed,"\exists\,!\;\theta"] \arrow[r, swap, "f_{i}"] & {\color{red}A_{i}}	\end{tikzcd}
+	\end{center}
+	If the product exists, it is denoted by: $\underset{i \in I}{\bigsqcap}\,A_{i}$.
+	It is unique up to isomorphism.
+\item
+	A \textbf{coproduct} is an ordered pair
+	\,$\left(\,C\,,\,\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}\,\right)$\,
+	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
+	$\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}$ of morphisms in $\mathfrak{C}$
+	such that,
+	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $g_{i} \in \Mor_{\mathfrak{C}}(A_{i},X)$,
+	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(C,X)$ such that,
+	for each $i \in I$, the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	& {\color{red}C} \arrow[ld, dashed, swap, "\exists\,!\;\theta"] \\	X & {\color{red}A_{i}} \arrow[l, "g_{i}"] \arrow[u, swap, "\alpha_{i}", red]	\end{tikzcd}
+	\end{center}
+	If the coproduct exists, it is denoted by: $\underset{i \in I}{\bigsqcup}\,A_{i}$.
+	It is unique up to isomorphism.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Additive category]
+\mbox{}
+\vskip 0.15cm
+\noindent
+A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
+\begin{itemize}
+\item
+	$\Mor_{\mathfrak{C}}(A,B)$ is an abelian group, for each \,$A, B \in \Obj(\mathfrak{C})$,
+\item
+	the distributive law holds for the morphism composition map, i.e.
+	\begin{equation*}
+	h \circ (f + g) \; = \; h \circ f + h \circ g
+	\quad\textnormal{and}\quad
+	(f + g) \circ k \; = \; f \circ k + g \circ k
+	\end{equation*}
+	for each
+	$f, g \in \Mor_{\mathfrak{C}}(A,B)$,
+	$h \in \Mor_{\mathfrak{C}}(B,Y)$,
+	$k \in \Mor_{\mathfrak{C}}(X,A)$,
+	$A, B, X, Y \in \Obj(\mathfrak{C})$,
+\item
+	the category $\mathfrak{C}$ has a zero object, and
+\item
+	finite products and finite coproducts exist in $\mathfrak{C}$.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.15cm
+\noindent
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Kernels and cokernels of morphisms in a additive category]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be an additive category, and $f : A \longrightarrow B$ a morphism in $\mathfrak{C}$.
+\begin{itemize}
+\item
+	A \textbf{kernel} of $f$ is a morphism $i : K \longrightarrow A$ in $\mathfrak{C}$ such that,
+	for each $r \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ r = 0$,
+	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "r"] \arrow[rrd, "0"] & & \\	{\color{red}K} \arrow[r, swap, "i", red] & {\color{red}A} \arrow[r, swap, "f"] & B	\end{tikzcd}
+	\end{center}
+\item
+	A \textbf{cokernel} of $f$ is a morphism $\pi : B \longrightarrow Q$ in $\mathfrak{C}$ such that,
+	for each $s \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$s \circ f = 0$,
+	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$ such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "s"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\	& & Y	\end{tikzcd}
+	\end{center}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
