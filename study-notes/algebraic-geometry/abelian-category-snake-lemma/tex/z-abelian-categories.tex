@@ -121,6 +121,29 @@ Let \,$\mathfrak{C}$\, be a category.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{lemma}[Existence and uniqueness of zero morphisms in a category with zero objects]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category with zero objects.
+Then, for each $A, B \in \Obj(\mathfrak{C})$, we have:
+\begin{equation*}
+\iota_{0_{1},B}\circ\iota_{A,0_{1}}
+\;\; = \;\;
+	\iota_{0_{2},B}\circ\iota_{A,0_{2}}
+\;\; \in \;\;
+	\Mor_{\mathfrak{C}}(A,B),
+\end{equation*}
+where
+$0_{1}, 0_{2} \in \Obj(\mathfrak{C})$ are two arbitrary zero objects,
+$\iota_{A,0_{k}}$ is the unique element in $\Mor_{\mathfrak{C}}(A,0_{k})$,
+$\iota_{0_{k},B}$ is the unique element in $\Mor_{\mathfrak{C}}(0_{k},B)$,
+$i = 1,2$.
+\end{lemma}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{definition}[Product, coproduct]
 \mbox{}
 \vskip 0.15cm
@@ -188,15 +211,6 @@ A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 	finite products and finite coproducts exist in $\mathfrak{C}$.
 \end{itemize}
 \end{definition}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\begin{proposition}
-\mbox{}
-\vskip 0.15cm
-\noindent
-\end{proposition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
