@@ -234,7 +234,7 @@ Then,
 Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarrow B$ a morphism in $\mathfrak{C}$.
 \begin{itemize}
 \item
-	A \textbf{kernel} of $f$ is a morphism $\kappa : K \longrightarrow A$ in $\mathfrak{C}$ such that
+	A \textbf{kernel} of $f$ (if it exists) is a morphism $\kappa : K \longrightarrow A$ in $\mathfrak{C}$ such that
 	\begin{itemize}
 	\item
 		\vskip -0.15cm
@@ -247,7 +247,7 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		\end{center}
 	\end{itemize}
 \item
-	A \textbf{cokernel} of $f$ is a morphism $\pi : B \longrightarrow Q$ in $\mathfrak{C}$ such that
+	A \textbf{cokernel} of $f$ (if it exists) is a morphism $\pi : B \longrightarrow Q$ in $\mathfrak{C}$ such that
 	\begin{itemize}
 	\item
 		\vskip -0.15cm
@@ -259,8 +259,8 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		\begin{tikzcd}		A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\		& & Y		\end{tikzcd}
 		\end{center}
 	\end{itemize}
-\item
-	An \textbf{image} of $f$ is a kernel of a cokernel of $f$.
+%\item
+%	An \textbf{image} of $f$ is a kernel of a cokernel of $f$.
 \end{itemize}
 \end{definition}
 
@@ -317,7 +317,7 @@ Then, the following statements are true:
 	\begin{tikzcd}	K_{1} \arrow[d, dashed, swap, "\exists !\,\theta_{12}", blue] \arrow[ddr, "\kappa_{1}"] \arrow[ddrr,"0"] \\
 	{\color{blue}K_{2}} \arrow[d, dashed, swap, "\exists !\,\theta_{21}", red] \arrow[dr, swap, "\kappa_{2}", blue] \arrow[rrd, "0"] & & \\	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & A \arrow[r, swap, "f"] & B	\end{tikzcd}
 	\end{center}
-	By universal property again, we see that we must have
+	Again, by the universal property of kernels, we see that we must have
 	$\theta_{21} \circ \theta_{12} \,=\, 1_{K_{1}}$.
 	By symmetry (i.e., interchanging the indices 1 and 2), we have $\theta_{12} \circ \theta_{21} \,=\, 1_{K_{2}}$.
 	This shows that $\theta_{12}$ and $\theta_{21}$ are isomorphisms and are inverses of each other.
@@ -329,7 +329,7 @@ Then, the following statements are true:
 	\begin{center}
 	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] \arrow[ddrr, swap, "0"] & B \arrow[rd, "\pi_{2}", blue] \arrow[rdd, swap, "\pi_{1}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta_{12}", red] \\	& & {\color{blue}Q_{2}} \arrow[d, dashed, "\;\exists !\,\theta_{21}", blue] \\	& & Q_{1} \\	\end{tikzcd}
 	\end{center}
-	By universal property again, we see that we must have
+	Again, by the universal property of cokernels, we see that we must have
 	$\theta_{21} \circ \theta_{12} \,=\, 1_{Q_{1}}$.
 	By symmetry (i.e., interchanging the indices 1 and 2), we have $\theta_{12} \circ \theta_{21} \,=\, 1_{Q_{2}}$.
 	This shows that $\theta_{12}$ and $\theta_{21}$ are isomorphisms and are inverses of each other.
@@ -408,5 +408,79 @@ This shows that $\pi$ can be right cancelled.
 Hence, it is an epimorphism.
 This completes the proof of the Proposition.
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+
+\vskip 0.5cm
+\begin{definition}[Images of a morphisms in a category]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category, and $f : A \longrightarrow B$ a morphism in $\mathfrak{C}$.
+\begin{itemize}
+\item
+	\vskip -0.1cm
+	An \textbf{image} of $f$ (if it exists) is a monomorphism $\iota : I \longrightarrow B$ in $\mathfrak{C}$ such that
+	\begin{itemize}
+	\item
+		$f = \iota \circ \nu$,\, for some \,$\nu \in \Mor_{\mathfrak{C}}(A,I)$, and
+	\item
+		for each factorization $f = \iota^{\prime} \circ \nu^{\prime}$ of $f$
+		where $\iota^{\prime} \in \Mor_{\mathfrak{C}}(I^{\prime},B)$ is a monomorphism,
+		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(I,I^{\prime})$ such that the following diagram commutes:
+		\begin{center}
+		\begin{tikzcd}		A \arrow[rr, "f"] \arrow[dr, swap, "\nu"] \arrow[ddr, bend right, swap, "\nu^{\prime}"] && B \\		& {\color{red}I} \arrow[ur, hook, swap, "\iota", red] \arrow[d, dashed, "\;\exists ! \, \theta"] & \\		& I^{\prime} \arrow[uur, bend right, hook, swap, "\iota^{\prime}"] & \\		\end{tikzcd}
+		\end{center}
+	\end{itemize}
+\item
+	A \textbf{coimage} of $f$ (if it exists) is an epimorphism $\varepsilon : A \longrightarrow C$ in $\mathfrak{C}$ such that
+	\begin{itemize}
+	\item
+		$f \,=\, \mu \circ \varepsilon$,\, for some $\mu \in \Mor_{\mathfrak{C}}(C,B)$, and
+	\item
+		for each factorization $f = \mu^{\prime} \circ \varepsilon^{\prime}$ of $f$
+		where $\varepsilon^{\prime} \in \Mor_{\mathfrak{C}}(J,B)$ is an epimorphism,
+		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(C^{\prime},C)$ such that the following diagram commutes:
+		\begin{center}
+		\begin{tikzcd}		A \arrow[rr, "f"] \arrow[dr, two heads, swap, "\varepsilon", red] \arrow[ddr, two heads, bend right, swap, "\varepsilon^{\prime}"] && B \\		& {\color{red}C} \arrow[ur, swap, "\mu"] & \\		& C^{\prime} \arrow[u, dashed, swap, "\;\exists ! \, \theta"] \arrow[uur, bend right, swap, "\mu"] & \\		\end{tikzcd}
+		\end{center}
+	\end{itemize}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Lemma 14.4, p.17, \cite{Mitchell1965}]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\mathfrak{C}$\, is a category with zero objects,
+\,$A, B \in \Obj(\mathfrak{C})$,\, and
+\,$f \in \Mor_{\mathfrak{C}}(A,B)$.
+If
+\begin{itemize}
+\item
+	$\pi_{f} \in \Mor_{\mathfrak{C}}(B,Q)$\, is a cokernel of $f$, and
+\item
+	$\kappa(\pi_{f}) \in \Mor_{\mathfrak{C}}(I,B)$\, is a kernel of \,$\pi_{f}$,
+\end{itemize}
+then the following statements are true:
+\begin{enumerate}
+\item
+	There exists a unique morphism \,$\widetilde{f} \in \Mor_{\mathfrak{C}}(A,I)$\,
+	that makes the following diagram commute: %(due to the universal property of $\kappa(\pi_{f})$):
+	\begin{center}
+	\begin{tikzcd}	A \arrow[r, dashed, "\exists !\,\widetilde{f}", red] \arrow[rr, bend right = 40, "f"] \arrow[rrr, bend right = 50, swap, "0"] & I \arrow[r, "\kappa(\pi_{f})"] & B \arrow[r, "\pi_{f}"] & Q	\end{tikzcd}
+	\end{center}
+\item
+	If $\mathfrak{C}$ has cokernels and
+	is normal\,\footnote{A category is normal if every monomorphism in it is a kernel.},
+	then $\kappa(\pi_{f})$ is an image of $f$.
+\item
+	Furthermore, if $\mathfrak{C}$ has equalizers, then $\widetilde{f}$ is a coimage of $f$.
+\end{enumerate}
+\end{proposition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
