@@ -259,6 +259,63 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{proposition}[Kernels and cokernels are unique up to canonical isomorphism]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category with zero objects.
+Let \,$f \in \Mor_{\mathfrak{C}}(A,B)$,\, where \,$A, B \in \Obj(\mathfrak{C})$.
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	If \,$\kappa_{1} \in \Mor_{\mathfrak{C}}(K_{1},A)$\, and \,$\kappa_{2} \in \Mor_{\mathfrak{C}}(K_{2},A)$
+	are two kernels of $f$, then there exists a unique isomorphism $\theta \in \Mor_{\mathfrak{C}}(K_{2},K_{1})$
+	such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	K_{2} \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\kappa_{2}"] \arrow[rrd, "0"] & & \\	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & {\color{red}A} \arrow[r, swap, "f"] & B	\end{tikzcd}
+	\end{center}
+\item
+	If \,$\pi_{1} \in \Mor_{\mathfrak{C}}(B,Q_{1})$\, and \,$\pi_{2} \in \Mor_{\mathfrak{C}}(B,Q_{2})$
+	are two cokernels of $f$, then there exists a unique isomorphism $\theta \in \Mor_{\mathfrak{C}}(Q_{1},Q_{2})$
+	such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\pi_{2}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta"] \\	& & Q_{2}	\end{tikzcd}
+	\end{center}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	By the definition of kernels (universal property), there exist unique morphisms
+	$\theta_{12} \in \Mor_{\mathfrak{C}}(K_{1},K_{2})$ and $\theta_{21} \in \Mor_{\mathfrak{C}}(K_{2},K_{1})$
+	such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	K_{1} \arrow[d, dashed, swap, "\exists !\,\theta_{12}", blue] \arrow[ddr, "\kappa_{1}"] \arrow[ddrr,"0"] \\
+	{\color{blue}K_{2}} \arrow[d, dashed, swap, "\exists !\,\theta_{21}", red] \arrow[dr, swap, "\kappa_{2}", blue] \arrow[rrd, "0"] & & \\	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & A \arrow[r, swap, "f"] & B	\end{tikzcd}
+	\end{center}
+	By universal property again, we see that we must have
+	$\theta_{21} \circ \theta_{12} \,=\, 1_{K_{1}}$.
+	By symmetry (i.e., interchanging the indices 1 and 2), we have $\theta_{12} \circ \theta_{21} \,=\, 1_{K_{2}}$.
+	This shows that $\theta_{12}$ and $\theta_{21}$ are isomorphisms and are inverses of each other.
+	Taking $\theta$ in the proposition statement to be $\theta_{21}$, this completes the proof.
+\item
+	By the definition of cokernels (universal property), there exist unique morphisms
+	$\theta_{12} \in \Mor_{\mathfrak{C}}(Q_{1},Q_{2})$ and $\theta_{21} \in \Mor_{\mathfrak{C}}(Q_{2},Q_{1})$
+	such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] \arrow[ddrr, swap, "0"] & B \arrow[rd, "\pi_{2}", blue] \arrow[rdd, swap, "\pi_{1}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta_{12}", red] \\	& & {\color{blue}Q_{2}} \arrow[d, dashed, "\;\exists !\,\theta_{21}", blue] \\	& & Q_{1} \\	\end{tikzcd}
+	\end{center}
+	By universal property again, we see that we must have
+	$\theta_{21} \circ \theta_{12} \,=\, 1_{Q_{1}}$.
+	By symmetry (i.e., interchanging the indices 1 and 2), we have $\theta_{12} \circ \theta_{21} \,=\, 1_{Q_{2}}$.
+	This shows that $\theta_{12}$ and $\theta_{21}$ are isomorphisms and are inverses of each other.
+	Taking $\theta$ in the proposition statement to be $\theta_{12}$, this completes the proof.
+	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{definition}[Monomorphism, epimorphism]
 \mbox{}
 \vskip 0.1cm
