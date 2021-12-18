@@ -234,10 +234,10 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		\vskip -0.15cm
 		$f \circ \kappa \,=\, 0_{K,B}$, and
 	\item
-		for each $r \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ r = 0_{X,B}$,
+		for each $\rho \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ \rho = 0_{X,B}$,
 		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that the following diagram commutes:
 		\begin{center}
-		\begin{tikzcd}		X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "r"] \arrow[rrd, "0"] & & \\		{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B		\end{tikzcd}
+		\begin{tikzcd}		X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\rho"] \arrow[rrd, "0"] & & \\		{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B		\end{tikzcd}
 		\end{center}
 	\end{itemize}
 \item
@@ -247,10 +247,10 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		\vskip -0.15cm
 		$\pi \circ f \,=\, 0_{A,Q}$, and
 	\item
-		for each $s \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$s \circ f = 0$,
+		for each $\sigma \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$\sigma \circ f = 0$,
 		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$ such that the following diagram commutes:
 		\begin{center}
-		\begin{tikzcd}		A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "s"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\		& & Y		\end{tikzcd}
+		\begin{tikzcd}		A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\		& & Y		\end{tikzcd}
 		\end{center}
 	\end{itemize}
 \end{itemize}
@@ -261,7 +261,7 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 \vskip 0.5cm
 \begin{definition}[Monomorphism, epimorphism]
 \mbox{}
-\vskip 0.15cm
+\vskip 0.1cm
 \noindent
 Let $\mathfrak{C}$ be a category, and $A, B \in \Obj(\mathfrak{C})$.
 A morphism $f \in \Mor_{\mathfrak{C}}(A,B)$ is called
@@ -282,73 +282,50 @@ A morphism $f \in \Mor_{\mathfrak{C}}(A,B)$ is called
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-%\vskip 0.5cm
-%\begin{definition}[Product, coproduct]
-%\mbox{}
-%\vskip 0.15cm
-%\noindent
-%Let \,$\mathfrak{C}$\, be a category, and
-%$\{\,A_{i}\,\}_{i \in I}$ a family of objects of $\mathfrak{C}$ indexed by a set $I$.
-%\begin{itemize}
-%\item
-%	A \textbf{product} is an ordered pair
-%	\,$\left(\,C\,,\,\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}\,\right)$\,
-%	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
-%	$\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}$ of morphisms in $\mathfrak{C}$
-%	such that,
-%	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $f_{i} \in \Mor_{\mathfrak{C}}(X,A_{i})$,
-%	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(X,C)$ such that,
-%	for each $i \in I$, the following diagram commutes:
-%	\begin{center}
-%	\begin{tikzcd}%	& {\color{red}C} \arrow[d, "p_{i}", red] \\%	X \arrow[ru, dashed,"\exists\,!\;\theta"] \arrow[r, swap, "f_{i}"] & {\color{red}A_{i}}%	\end{tikzcd}
-%	\end{center}
-%	If the product exists, it is denoted by: $\underset{i \in I}{\bigsqcap}\,A_{i}$.
-%	It is unique up to isomorphism.
-%\item
-%	A \textbf{coproduct} is an ordered pair
-%	\,$\left(\,C\,,\,\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}\,\right)$\,
-%	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
-%	$\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}$ of morphisms in $\mathfrak{C}$
-%	such that,
-%	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $g_{i} \in \Mor_{\mathfrak{C}}(A_{i},X)$,
-%	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(C,X)$ such that,
-%	for each $i \in I$, the following diagram commutes:
-%	\begin{center}
-%	\begin{tikzcd}%	& {\color{red}C} \arrow[ld, dashed, swap, "\exists\,!\;\theta"] \\%	X & {\color{red}A_{i}} \arrow[l, "g_{i}"] \arrow[u, swap, "\alpha_{i}", red]%	\end{tikzcd}
-%	\end{center}
-%	If the coproduct exists, it is denoted by: $\underset{i \in I}{\bigsqcup}\,A_{i}$.
-%	It is unique up to isomorphism.
-%\end{itemize}
-%\end{definition}
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+In a category with zero objects, every kernel of a morphism is a monomorphism, and
+every cokernel of a morphism is an epimorphism.\end{proposition}
+\proof
+Let $\mathfrak{C}$ be a category with zero objects.
+Let $\kappa \in \Mor_{\mathfrak{C}}(K,A)$ be a kernel of $f \in \Mor_{\mathfrak{C}}(A,B)$.
+Let $\eta, \mu \in \Mor_{\mathfrak{C}}(X,K)$ be such that
+$\kappa \circ \eta \,=\, \kappa \circ \mu \,\in\, \Mor_{\mathfrak{C}}(X,A)$.
+We need to show that $\eta = \mu$.
+To this end, first, we define $\rho \,:=\, \kappa \circ \eta \,=\, \kappa \circ \mu \,\in\, \Mor_{\mathfrak{C}}(X,A)$.
+Then, note
+$f \circ \rho \,=\, f \circ (\kappa \circ \eta) \,=\, (f \circ \kappa) \circ \eta \,=\, 0_{K,B} \circ \eta \,=\, 0_{X,B}$.
+Since $\kappa$ is a kernel of $f$, we see that there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that
+the following diagram commutes:
+\begin{center}
+\begin{tikzcd}X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\rho"] \arrow[rrd, "0"] & & \\{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B\end{tikzcd}
+\end{center}
+The uniqueness of $\theta$ therefore implies $\eta = \theta = \mu$, as required.
+This shows that $\kappa$ can be left cancelled.
+Hence, it is a monomorphism.
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-%\vskip 0.5cm
-%\begin{definition}[Additive category]
-%\mbox{}
-%\vskip 0.15cm
-%\noindent
-%A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
-%\begin{itemize}
-%\item
-%	the category $\mathfrak{C}$ has a zero object,
-%\item
-%	$\Mor_{\mathfrak{C}}(A,B)$ is an abelian group, for each \,$A, B \in \Obj(\mathfrak{C})$,
-%\item
-%	the distributive law holds for the morphism composition map, i.e.
-%	\begin{equation*}
-%	h \circ (f + g) \; = \; h \circ f + h \circ g
-%	\quad\textnormal{and}\quad
-%	(f + g) \circ k \; = \; f \circ k + g \circ k
-%	\end{equation*}
-%	for each
-%	$f, g \in \Mor_{\mathfrak{C}}(A,B)$,
-%	$h \in \Mor_{\mathfrak{C}}(B,Y)$,
-%	$k \in \Mor_{\mathfrak{C}}(X,A)$,
-%	$A, B, X, Y \in \Obj(\mathfrak{C})$, and
-%\item
-%	finite products and finite coproducts exist in $\mathfrak{C}$.
-%\end{itemize}
-%\end{definition}
+\vskip 0.1cm
+The second part follows similarly.
+Indeed, let 
+$\pi \in \Mor_{\mathfrak{C}}(B,Q)$ be a cokernel of $f \in \Mor_{\mathfrak{C}}(A,B)$.
+Let $\zeta, \nu \in \Mor_{\mathfrak{C}}(Q,Y)$ be such that
+$\zeta \circ \pi \,=\, \nu \circ \pi \,\in\, \Mor_{\mathfrak{C}}(B,Y)$.
+We need to show that $\zeta = \nu$.
+To this end, we define $\sigma \,:=\, \zeta \circ \pi \,=\, \nu \circ \pi \,\in\, \Mor_{\mathfrak{C}}(B,Y)$.
+Then, we have: 
+$\sigma \circ f \,=\, (\zeta \circ \pi) \circ f \,=\, \zeta \circ (\pi \circ f) \,=\, \zeta \circ 0_{A,Q} \,=\, 0_{A,Y}$.
+Since $\pi$ is a cokernel of $f$, we see that there is a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$
+such that the following diagram commutes:
+\begin{center}
+\begin{tikzcd}A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\& & Y\end{tikzcd}
+\end{center}
+The uniqueness of $\theta$ therefore implies $\zeta = \theta = \nu$, as required.
+This shows that $\pi$ can be right cancelled.
+Hence, it is an epimorphism.
+This completes the proof of the Proposition.
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
