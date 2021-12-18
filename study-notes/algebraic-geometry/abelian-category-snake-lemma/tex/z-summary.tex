@@ -15,13 +15,33 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-%$\mathfrak{A}$, $\mathscr{F}$ $\mathcal{F}$
+Homological algebra ``makes sense'' in the category of $R$-modules,
+in the sense that every short exact sequence of (co)chain complexes of $R$-modules
+gives rise to a long exact sequence of (co)homology groups.
+
+We would like to extend homological algebra to the setting of categories.
+This extended theory, when applied to, for example,
+the abelian category of sheaves of $\mathcal{O}_{X}$-modules
+on a scheme or complex analytic space $(X,\mathcal{O}_{X})$,
+allows us to construct sheaf cohomology groups as invariants for $(X,\mathcal{O}_{X})$.
+The foundation of modern algebraic geometry constitutes in large part the vast body of sheaf-cohomological results established
+for various types of schemes and complex analytic spaces.
+
+Clearly, it is not possible to develop homological algebra
+(short exact sequence of (co)chain complex giving rise to long exact sequence of (co)homologies)
+in an arbitrary category.
+More precisely, at least we would need to work in a category with sufficient structure
+for the notion of short exact sequences of complexes to be well-defined.
+In particular, one can begin the development of homological algebra only in a category
+in which the notions of zero objects/morphisms, kernels of morphisms, and images of morphisms are defined.
+
+Abelian categories are precisely the categories in which homological algebra makes sense.
 In an abelian category, the following statements are true:
 \begin{itemize}
 \item
 	A zero object exists.
 	Kernels and cokernels of morphisms exist.
-	Hence, short exact sequences make sense.
+	Hence, the notion of a short exact sequence makes sense.
 \item
 	The Snake Lemma holds, which in turn implies that
 	short exact sequences of cochain complexes generate long exact sequences in cohomology.
