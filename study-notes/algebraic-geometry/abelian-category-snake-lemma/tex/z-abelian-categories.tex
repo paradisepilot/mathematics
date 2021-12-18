@@ -196,20 +196,30 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 \begin{itemize}
 \item
 	A \textbf{kernel} of $f$ is a morphism $\kappa : K \longrightarrow A$ in $\mathfrak{C}$ such that
-	$f \circ \kappa = 0_{K,B}$ and,
-	for each $r \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ r = 0_{X,B}$,
-	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that the following diagram commutes:
-	\begin{center}
-	\begin{tikzcd}	X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "r"] \arrow[rrd, "0"] & & \\	{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B	\end{tikzcd}
-	\end{center}
+	\begin{itemize}
+	\item
+		\vskip -0.15cm
+		$f \circ \kappa \,=\, 0_{K,B}$, and
+	\item
+		for each $r \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ r = 0_{X,B}$,
+		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that the following diagram commutes:
+		\begin{center}
+		\begin{tikzcd}		X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "r"] \arrow[rrd, "0"] & & \\		{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B		\end{tikzcd}
+		\end{center}
+	\end{itemize}
 \item
 	A \textbf{cokernel} of $f$ is a morphism $\pi : B \longrightarrow Q$ in $\mathfrak{C}$ such that
-	$\pi \circ f = 0_{A,Q}$, and
-	for each $s \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$s \circ f = 0$,
-	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$ such that the following diagram commutes:
-	\begin{center}
-	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "s"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\	& & Y	\end{tikzcd}
-	\end{center}
+	\begin{itemize}
+	\item
+		\vskip -0.15cm
+		$\pi \circ f \,=\, 0_{A,Q}$, and
+	\item
+		for each $s \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$s \circ f = 0$,
+		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$ such that the following diagram commutes:
+		\begin{center}
+		\begin{tikzcd}		A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "s"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\		& & Y		\end{tikzcd}
+		\end{center}
+	\end{itemize}
 \end{itemize}
 \end{definition}
 
