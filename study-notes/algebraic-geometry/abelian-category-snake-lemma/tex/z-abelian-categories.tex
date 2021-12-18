@@ -1,7 +1,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Abelian categories}
+\section{Categories with zero objects}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
 
@@ -220,6 +220,30 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		\begin{tikzcd}		A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "s"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\		& & Y		\end{tikzcd}
 		\end{center}
 	\end{itemize}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Monomorphism, epimorphism]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let $\mathfrak{C}$ be a category, and $A, B \in \Obj(\mathfrak{C})$.
+A morphism $f \in \Mor_{\mathfrak{C}}(A,B)$ is called
+\begin{itemize}
+\item
+	a \textbf{monomorphism} if it can be {\color{red}left} cancelled in the sense that
+	$f \circ g = f \circ h$  implies that $g = h$.
+\item
+	a \textbf{epimorphism} if it can be {\color{red}right} cancelled in the sense that
+	$g \circ f = h \circ f$  implies that $g = h$.
+\item
+	an \textbf{isomorphism} if there is a morphism $g \in \Mor_{\mathfrak{C}}(B,A)$
+	such that $g \circ f = 1_{A}$ and $f \circ g = 1_{B}$.
+	Clearly, such a morphism $g$ is unique, and it is called the inverse of $f$.
+	The inverse of $f$, if exists, is denoted by $f^{-1}$.
 \end{itemize}
 \end{definition}
 
