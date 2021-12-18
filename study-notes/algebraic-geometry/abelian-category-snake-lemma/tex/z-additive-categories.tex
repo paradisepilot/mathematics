@@ -1,0 +1,92 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Additive categories}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Product, coproduct]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category, and
+$\{\,A_{i}\,\}_{i \in I}$ a family of objects of $\mathfrak{C}$ indexed by a set $I$.
+\begin{itemize}
+\item
+	A \textbf{product} is an ordered pair
+	\,$\left(\,C\,,\,\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}\,\right)$\,
+	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
+	$\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}$ of morphisms in $\mathfrak{C}$
+	such that,
+	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $f_{i} \in \Mor_{\mathfrak{C}}(X,A_{i})$,
+	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(X,C)$ such that,
+	for each $i \in I$, the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}C} \arrow[d, "p_{i}", red] \\
+	X \arrow[ru, dashed,"\exists\,!\;\theta"] \arrow[r, swap, "f_{i}"] & {\color{red}A_{i}}
+	\end{tikzcd}
+	\end{center}
+	If the product exists, it is denoted by: $\underset{i \in I}{\bigsqcap}\,A_{i}$.
+	It is unique up to isomorphism.
+\item
+	A \textbf{coproduct} is an ordered pair
+	\,$\left(\,C\,,\,\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}\,\right)$\,
+	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
+	$\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}$ of morphisms in $\mathfrak{C}$
+	such that,
+	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $g_{i} \in \Mor_{\mathfrak{C}}(A_{i},X)$,
+	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(C,X)$ such that,
+	for each $i \in I$, the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}C} \arrow[ld, dashed, swap, "\exists\,!\;\theta"] \\
+	X & {\color{red}A_{i}} \arrow[l, "g_{i}"] \arrow[u, swap, "\alpha_{i}", red]
+	\end{tikzcd}
+	\end{center}
+	If the coproduct exists, it is denoted by: $\underset{i \in I}{\bigsqcup}\,A_{i}$.
+	It is unique up to isomorphism.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Additive category]
+\mbox{}
+\vskip 0.15cm
+\noindent
+A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
+\begin{itemize}
+\item
+	the category $\mathfrak{C}$ has a zero object,
+\item
+	$\Mor_{\mathfrak{C}}(A,B)$ is an abelian group, for each \,$A, B \in \Obj(\mathfrak{C})$,
+\item
+	the distributive law holds for the morphism composition map, i.e.
+	\begin{equation*}
+	h \circ (f + g) \; = \; h \circ f + h \circ g
+	\quad\textnormal{and}\quad
+	(f + g) \circ k \; = \; f \circ k + g \circ k
+	\end{equation*}
+	for each
+	$f, g \in \Mor_{\mathfrak{C}}(A,B)$,
+	$h \in \Mor_{\mathfrak{C}}(B,Y)$,
+	$k \in \Mor_{\mathfrak{C}}(X,A)$,
+	$A, B, X, Y \in \Obj(\mathfrak{C})$, and
+\item
+	finite products and finite coproducts exist in $\mathfrak{C}$.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
