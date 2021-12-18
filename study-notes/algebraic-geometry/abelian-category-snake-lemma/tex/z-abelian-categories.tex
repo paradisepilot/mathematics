@@ -188,6 +188,34 @@ where $0$ denotes an arbitrary zero object of $\mathfrak{C}$.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{definition}[Kernels and cokernels of morphisms in a category with zero objects]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarrow B$ a morphism in $\mathfrak{C}$.
+\begin{itemize}
+\item
+	A \textbf{kernel} of $f$ is a morphism $\kappa : K \longrightarrow A$ in $\mathfrak{C}$ such that
+	$f \circ \kappa = 0_{K,B}$ and,
+	for each $r \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ r = 0_{X,B}$,
+	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "r"] \arrow[rrd, "0"] & & \\	{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B	\end{tikzcd}
+	\end{center}
+\item
+	A \textbf{cokernel} of $f$ is a morphism $\pi : B \longrightarrow Q$ in $\mathfrak{C}$ such that
+	$\pi \circ f = 0_{A,Q}$, and
+	for each $s \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$s \circ f = 0$,
+	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$ such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "s"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\	& & Y	\end{tikzcd}
+	\end{center}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{definition}[Product, coproduct]
 \mbox{}
 \vskip 0.15cm
@@ -253,32 +281,6 @@ A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 	$A, B, X, Y \in \Obj(\mathfrak{C})$, and
 \item
 	finite products and finite coproducts exist in $\mathfrak{C}$.
-\end{itemize}
-\end{definition}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\begin{definition}[Kernels and cokernels of morphisms in an additive category]
-\mbox{}
-\vskip 0.15cm
-\noindent
-Let \,$\mathfrak{C}$\, be an additive category, and $f : A \longrightarrow B$ a morphism in $\mathfrak{C}$.
-\begin{itemize}
-\item
-	A \textbf{kernel} of $f$ is a morphism $i : K \longrightarrow A$ in $\mathfrak{C}$ such that,
-	for each $r \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ r = 0$,
-	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that the following diagram commutes:
-	\begin{center}
-	\begin{tikzcd}	X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "r"] \arrow[rrd, "0"] & & \\	{\color{red}K} \arrow[r, swap, "i", red] & {\color{red}A} \arrow[r, swap, "f"] & B	\end{tikzcd}
-	\end{center}
-\item
-	A \textbf{cokernel} of $f$ is a morphism $\pi : B \longrightarrow Q$ in $\mathfrak{C}$ such that,
-	for each $s \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$s \circ f = 0$,
-	there exists a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$ such that the following diagram commutes:
-	\begin{center}
-	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "s"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\	& & Y	\end{tikzcd}
-	\end{center}
 \end{itemize}
 \end{definition}
 
