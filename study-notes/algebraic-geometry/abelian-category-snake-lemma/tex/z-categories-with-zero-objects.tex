@@ -259,8 +259,26 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		\begin{tikzcd}		A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\		& & Y		\end{tikzcd}
 		\end{center}
 	\end{itemize}
+\item
+	An \textbf{image} of $f$ is a kernel of a cokernel of $f$.
 \end{itemize}
 \end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}[Motivation behind the definition of the image of a morphism]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Suppose $V$ and $W$ are vector spaces and $f : V \longrightarrow W$ is a linear map.
+Then, we have:
+\begin{center}
+\begin{tikzcd}V \arrow[r, "f"] & W \arrow[r, "\pi"] & \textnormal{coker}(f) & \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\! :=\, W/\textnormal{image}(f)\end{tikzcd}
+\end{center}
+where $\pi$ is the standard projection map, and
+\,$\textnormal{image}(f) \,=\, \ker(\pi) \,\subset\, W$.
+\end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
