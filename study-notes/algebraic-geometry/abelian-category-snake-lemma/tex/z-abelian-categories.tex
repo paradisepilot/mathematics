@@ -121,7 +121,7 @@ Let \,$\mathfrak{C}$\, be a category.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{lemma}[Existence and uniqueness of zero morphisms in a category with zero objects]
+\begin{lemma}[Existence and uniqueness of zero morphisms in a category with zero objects]\label{ZeroMorphisms}
 \mbox{}
 \vskip 0.15cm
 \noindent
@@ -140,6 +140,50 @@ $\iota_{A,0_{k}}$ is the unique element in $\Mor_{\mathfrak{C}}(A,0_{k})$,
 $\iota_{0_{k},B}$ is the unique element in $\Mor_{\mathfrak{C}}(0_{k},B)$,
 $i = 1,2$.
 \end{lemma}
+\proof
+Note that $\iota_{0_{1},0_{2}}\circ\iota_{A,0_{1}}$ and $\iota_{A,0_{2}}$ are both elements of $\Mor_{\mathfrak{C}}(A,0_{2})$,
+which is a singleton set since $0_{2}$ is a zero object. Hence, we conclude:
+\begin{equation*}
+\iota_{0_{1},0_{2}}\circ\iota_{A,0_{1}} \; = \; \iota_{A,0_{2}} \;\; \in \;\; \Mor_{\mathfrak{C}}(A,0_{2})
+\end{equation*}
+Similarly,
+\begin{equation*}
+\iota_{0_{2},B}\circ\iota_{0_{1},0_{2}} \; = \; \iota_{0_{1},B} \;\; \in \;\; \Mor_{\mathfrak{C}}(0_{1},B)
+\end{equation*}
+Hence,
+\begin{equation*}
+\iota_{0_{1},B} \circ \iota_{A,0_{1}}
+\; = \;
+	(\,\iota_{0_{2},B}\circ\iota_{0_{1},0_{2}}\,) \circ \iota_{A,0_{1}}
+\; = \;
+	\iota_{0_{2},B} \circ (\,\iota_{0_{1},0_{2}} \circ \iota_{A,0_{1}}\,)
+\; = \;
+	\iota_{0_{2},B} \circ \iota_{A,0_{2}}
+\end{equation*}
+\qed
+
+\vskip 0.5cm
+\noindent
+Lemma \ref{ZeroMorphisms} implies that the following is well-defined:
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Zero morphisms in a category with zero objects]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category with zero objects, and $A, B \in \Obj(\mathfrak{C})$.
+The \textbf{zero morphism} in $\Mor_{\mathfrak{C}}(A,B)$ is, by definition,
+\begin{equation*}
+0_{A,B}
+\; := \;
+	\iota_{B,0} \circ \iota_{A,0}
+\;\; \in \;\;
+	\Mor_{\mathfrak{C}}(A,B),
+\end{equation*}
+where $0$ denotes an arbitrary zero object of $\mathfrak{C}$.
+\end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -192,6 +236,8 @@ $\{\,A_{i}\,\}_{i \in I}$ a family of objects of $\mathfrak{C}$ indexed by a set
 A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 \begin{itemize}
 \item
+	the category $\mathfrak{C}$ has a zero object,
+\item
 	$\Mor_{\mathfrak{C}}(A,B)$ is an abelian group, for each \,$A, B \in \Obj(\mathfrak{C})$,
 \item
 	the distributive law holds for the morphism composition map, i.e.
@@ -204,9 +250,7 @@ A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 	$f, g \in \Mor_{\mathfrak{C}}(A,B)$,
 	$h \in \Mor_{\mathfrak{C}}(B,Y)$,
 	$k \in \Mor_{\mathfrak{C}}(X,A)$,
-	$A, B, X, Y \in \Obj(\mathfrak{C})$,
-\item
-	the category $\mathfrak{C}$ has a zero object, and
+	$A, B, X, Y \in \Obj(\mathfrak{C})$, and
 \item
 	finite products and finite coproducts exist in $\mathfrak{C}$.
 \end{itemize}
