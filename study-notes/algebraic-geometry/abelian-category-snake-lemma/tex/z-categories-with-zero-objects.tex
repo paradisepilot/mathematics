@@ -459,8 +459,23 @@ Since $\pi$ is a cokernel of $f$, we see that there is a unique $\theta \in \Mor
 such that the following diagram commutes:
 \begin{center}
 \begin{tikzcd}
-A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\
-& & Y
+& & &
+	{\color{red}Q}
+	\arrow[dd, thick, dashed, bend left = 90, "\;\exists !\,\theta", blue]
+	\arrow[dd, shift left, "\eta"]
+	\arrow[dd, shift right, swap, "\zeta"]
+\\
+A
+	\arrow[rr, "f"]
+	\arrow[urrr, bend left = 15, swap, "0", gray]
+	\arrow[drrr, bend right = 15, swap, "0", blue]
+	&&
+	{\color{red}B}
+	\arrow[ur, "\pi", red]
+	\arrow[rd, thick, "\sigma", blue]
+	&
+\\
+& & & Y
 \end{tikzcd}
 \end{center}
 The uniqueness of $\theta$ therefore implies $\zeta = \theta = \nu$, as required.
