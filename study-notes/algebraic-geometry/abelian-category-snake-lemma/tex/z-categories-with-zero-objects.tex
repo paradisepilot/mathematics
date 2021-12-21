@@ -243,7 +243,19 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		for each $\rho \in \Mor_{\mathfrak{C}}(X,A)$ satisfying $f \circ \rho = 0_{X,B}$,
 		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that the following diagram commutes:
 		\begin{center}
-		\begin{tikzcd}		X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\rho"] \arrow[rrd, "0"] & & \\		{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B		\end{tikzcd}
+		\begin{tikzcd}
+		{\color{blue}X}
+			\arrow[dd, thick, dashed, swap, "\exists !\,\theta{\color{white}.}", blue]
+			\arrow[dr, thick, swap, "\rho", blue]
+			\arrow[drrr, bend left = 15, "0", blue] & & &
+		\\
+		& {\color{red}A}
+			\arrow[rr, swap, "f{\color{white}...}"] & & B
+		\\
+		{\color{red}K}
+			\arrow[ur, swap, "\kappa", red]
+			\arrow[urrr, bend right = 15, swap, "0", gray]
+		\end{tikzcd}
 		\end{center}
 	\end{itemize}
 \item
@@ -256,7 +268,22 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 		for each $\sigma \in \Mor_{\mathfrak{C}}(B,Y)$ satisfying \,$\sigma \circ f = 0$,
 		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$ such that the following diagram commutes:
 		\begin{center}
-		\begin{tikzcd}		A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\		& & Y		\end{tikzcd}
+		\begin{tikzcd}
+		& & & {\color{red}Q}
+			\arrow[dd, thick, dashed, "\;\exists !\,\theta", blue]
+		\\
+		A 
+			\arrow[rr, "{\color{white}...}f"]
+			\arrow[rrru, bend left = 15, "0", gray]
+			\arrow[rrrd, bend right = 15, swap, "0", blue]
+			& &
+			{\color{red}B}
+			\arrow[rd, thick, "\sigma", blue]
+			\arrow[ur, "\pi", red]
+			&
+		\\
+		& & & {\color{blue}Y}
+		\end{tikzcd}
 		\end{center}
 	\end{itemize}
 %\item
@@ -274,7 +301,9 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 Suppose $V$ and $W$ are vector spaces and $f : V \longrightarrow W$ is a linear map.
 Then, we have:
 \begin{center}
-\begin{tikzcd}V \arrow[r, "f"] & W \arrow[r, "\pi"] & \textnormal{coker}(f) & \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\! :=\, W/\textnormal{image}(f)\end{tikzcd}
+\begin{tikzcd}
+V \arrow[r, "f"] & W \arrow[r, "\pi"] & \textnormal{coker}(f) & \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\! :=\, W/\textnormal{image}(f)
+\end{tikzcd}
 \end{center}
 where $\pi$ is the standard projection map, and
 \,$\textnormal{image}(f) \,=\, \ker(\pi) \,\subset\, W$.
@@ -296,14 +325,20 @@ Then, the following statements are true:
 	are two kernels of $f$, then there exists a unique isomorphism $\theta \in \Mor_{\mathfrak{C}}(K_{2},K_{1})$
 	such that the following diagram commutes:
 	\begin{center}
-	\begin{tikzcd}	K_{2} \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\kappa_{2}"] \arrow[rrd, "0"] & & \\	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & {\color{red}A} \arrow[r, swap, "f"] & B	\end{tikzcd}
+	\begin{tikzcd}
+	K_{2} \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\kappa_{2}"] \arrow[rrd, "0"] & & \\
+	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & {\color{red}A} \arrow[r, swap, "f"] & B
+	\end{tikzcd}
 	\end{center}
 \item
 	If \,$\pi_{1} \in \Mor_{\mathfrak{C}}(B,Q_{1})$\, and \,$\pi_{2} \in \Mor_{\mathfrak{C}}(B,Q_{2})$
 	are two cokernels of $f$, then there exists a unique isomorphism $\theta \in \Mor_{\mathfrak{C}}(Q_{1},Q_{2})$
 	such that the following diagram commutes:
 	\begin{center}
-	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\pi_{2}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta"] \\	& & Q_{2}	\end{tikzcd}
+	\begin{tikzcd}
+	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\pi_{2}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta"] \\
+	& & Q_{2}
+	\end{tikzcd}
 	\end{center}
 \end{enumerate}
 \end{proposition}
@@ -314,8 +349,11 @@ Then, the following statements are true:
 	$\theta_{12} \in \Mor_{\mathfrak{C}}(K_{1},K_{2})$ and $\theta_{21} \in \Mor_{\mathfrak{C}}(K_{2},K_{1})$
 	such that the following diagram commutes:
 	\begin{center}
-	\begin{tikzcd}	K_{1} \arrow[d, dashed, swap, "\exists !\,\theta_{12}", blue] \arrow[ddr, "\kappa_{1}"] \arrow[ddrr,"0"] \\
-	{\color{blue}K_{2}} \arrow[d, dashed, swap, "\exists !\,\theta_{21}", red] \arrow[dr, swap, "\kappa_{2}", blue] \arrow[rrd, "0"] & & \\	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & A \arrow[r, swap, "f"] & B	\end{tikzcd}
+	\begin{tikzcd}
+	K_{1} \arrow[d, dashed, swap, "\exists !\,\theta_{12}", blue] \arrow[ddr, "\kappa_{1}"] \arrow[ddrr,"0"] \\
+	{\color{blue}K_{2}} \arrow[d, dashed, swap, "\exists !\,\theta_{21}", red] \arrow[dr, swap, "\kappa_{2}", blue] \arrow[rrd, "0"] & & \\
+	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & A \arrow[r, swap, "f"] & B
+	\end{tikzcd}
 	\end{center}
 	Again, by the universal property of kernels, we see that we must have
 	$\theta_{21} \circ \theta_{12} \,=\, 1_{K_{1}}$.
@@ -327,7 +365,11 @@ Then, the following statements are true:
 	$\theta_{12} \in \Mor_{\mathfrak{C}}(Q_{1},Q_{2})$ and $\theta_{21} \in \Mor_{\mathfrak{C}}(Q_{2},Q_{1})$
 	such that the following diagram commutes:
 	\begin{center}
-	\begin{tikzcd}	A \arrow[r, "f"] \arrow[rrd, swap, "0"] \arrow[ddrr, swap, "0"] & B \arrow[rd, "\pi_{2}", blue] \arrow[rdd, swap, "\pi_{1}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta_{12}", red] \\	& & {\color{blue}Q_{2}} \arrow[d, dashed, "\;\exists !\,\theta_{21}", blue] \\	& & Q_{1} \\	\end{tikzcd}
+	\begin{tikzcd}
+	A \arrow[r, "f"] \arrow[rrd, swap, "0"] \arrow[ddrr, swap, "0"] & B \arrow[rd, "\pi_{2}", blue] \arrow[rdd, swap, "\pi_{1}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta_{12}", red] \\
+	& & {\color{blue}Q_{2}} \arrow[d, dashed, "\;\exists !\,\theta_{21}", blue] \\
+	& & Q_{1} \\
+	\end{tikzcd}
 	\end{center}
 	Again, by the universal property of cokernels, we see that we must have
 	$\theta_{21} \circ \theta_{12} \,=\, 1_{Q_{1}}$.
@@ -369,7 +411,8 @@ A morphism $f \in \Mor_{\mathfrak{C}}(A,B)$ is called
 \vskip 0.1cm
 \noindent
 In a category with zero objects, every kernel of a morphism is a monomorphism, and
-every cokernel of a morphism is an epimorphism.\end{proposition}
+every cokernel of a morphism is an epimorphism.
+\end{proposition}
 \proof
 Let $\mathfrak{C}$ be a category with zero objects.
 Let $\kappa \in \Mor_{\mathfrak{C}}(K,A)$ be a kernel of $f \in \Mor_{\mathfrak{C}}(A,B)$.
@@ -382,7 +425,21 @@ $f \circ \rho \,=\, f \circ (\kappa \circ \eta) \,=\, (f \circ \kappa) \circ \et
 Since $\kappa$ is a kernel of $f$, we see that there exists a unique $\theta \in \Mor_{\mathfrak{C}}(X,K)$ such that
 the following diagram commutes:
 \begin{center}
-\begin{tikzcd}X \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\rho"] \arrow[rrd, "0"] & & \\{\color{red}K} \arrow[r, swap, "\kappa", red] & {\color{red}A} \arrow[r, swap, "f"] & B\end{tikzcd}
+\begin{tikzcd}
+X
+	\arrow[dd, thick, dashed, bend right = 90, swap, "\exists !\,\theta{\color{white}.}", blue]
+	\arrow[dd, shift left, "\mu"]
+	\arrow[dd, shift right, swap, "\eta"]
+	\arrow[dr, thick, "\rho", blue]
+	\arrow[drrr, bend left = 15, "0", blue]
+	& &
+\\
+	& A \arrow[rr, swap, "f"] & & B
+\\
+{\color{red}K}
+	\arrow[ur, swap, "\kappa", red]
+	\arrow[urrr, bend right = 15, swap, "0", gray]
+\end{tikzcd}
 \end{center}
 The uniqueness of $\theta$ therefore implies $\eta = \theta = \mu$, as required.
 This shows that $\kappa$ can be left cancelled.
@@ -401,7 +458,10 @@ $\sigma \circ f \,=\, (\zeta \circ \pi) \circ f \,=\, \zeta \circ (\pi \circ f) 
 Since $\pi$ is a cokernel of $f$, we see that there is a unique $\theta \in \Mor_{\mathfrak{C}}(Q,Y)$
 such that the following diagram commutes:
 \begin{center}
-\begin{tikzcd}A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\& & Y\end{tikzcd}
+\begin{tikzcd}
+A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\sigma"] \arrow[r, "\pi", red]& {\color{red}Q} \arrow[d, dashed, "\;\exists !\,\theta"] \\
+& & Y
+\end{tikzcd}
 \end{center}
 The uniqueness of $\theta$ therefore implies $\zeta = \theta = \nu$, as required.
 This shows that $\pi$ can be right cancelled.
@@ -430,7 +490,11 @@ Let \,$\mathfrak{C}$\, be a category, and $f : A \longrightarrow B$ a morphism i
 		where $\iota^{\prime} \in \Mor_{\mathfrak{C}}(I^{\prime},B)$ is a monomorphism,
 		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(I,I^{\prime})$ such that the following diagram commutes:
 		\begin{center}
-		\begin{tikzcd}		A \arrow[rr, "f"] \arrow[dr, swap, "\nu"] \arrow[ddr, bend right, swap, "\nu^{\prime}"] && B \\		& {\color{red}I} \arrow[ur, hook, swap, "\iota", red] \arrow[d, dashed, "\;\exists ! \, \theta"] & \\		& I^{\prime} \arrow[uur, bend right, hook, swap, "\iota^{\prime}"] & \\		\end{tikzcd}
+		\begin{tikzcd}
+		A \arrow[rr, "f"] \arrow[dr, swap, "\nu"] \arrow[ddr, bend right, swap, "\nu^{\prime}"] && B \\
+		& {\color{red}I} \arrow[ur, hook, swap, "\iota", red] \arrow[d, dashed, "\;\exists ! \, \theta"] & \\
+		& I^{\prime} \arrow[uur, bend right, hook, swap, "\iota^{\prime}"] & \\
+		\end{tikzcd}
 		\end{center}
 	\end{itemize}
 \item
@@ -443,7 +507,11 @@ Let \,$\mathfrak{C}$\, be a category, and $f : A \longrightarrow B$ a morphism i
 		where $\varepsilon^{\prime} \in \Mor_{\mathfrak{C}}(J,B)$ is an epimorphism,
 		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(C^{\prime},C)$ such that the following diagram commutes:
 		\begin{center}
-		\begin{tikzcd}		A \arrow[rr, "f"] \arrow[dr, two heads, swap, "\varepsilon", red] \arrow[ddr, two heads, bend right, swap, "\varepsilon^{\prime}"] && B \\		& {\color{red}C} \arrow[ur, swap, "\mu"] & \\		& C^{\prime} \arrow[u, dashed, swap, "\;\exists ! \, \theta"] \arrow[uur, bend right, swap, "\mu"] & \\		\end{tikzcd}
+		\begin{tikzcd}
+		A \arrow[rr, "f"] \arrow[dr, two heads, swap, "\varepsilon", red] \arrow[ddr, two heads, bend right, swap, "\varepsilon^{\prime}"] && B \\
+		& {\color{red}C} \arrow[ur, swap, "\mu"] & \\
+		& C^{\prime} \arrow[u, dashed, swap, "\;\exists ! \, \theta"] \arrow[uur, bend right, swap, "\mu"] & \\
+		\end{tikzcd}
 		\end{center}
 	\end{itemize}
 \end{itemize}
@@ -472,7 +540,20 @@ then the following statements are true:
 	There exists a unique morphism \,$\widetilde{f} \in \Mor_{\mathfrak{C}}(A,I)$\,
 	that makes the following diagram commute: %(due to the universal property of $\kappa(\pi_{f})$):
 	\begin{center}
-	\begin{tikzcd}	A \arrow[r, dashed, "\exists !\,\widetilde{f}", red] \arrow[rr, bend right = 40, "f"] \arrow[rrr, bend right = 50, swap, "0"] & I \arrow[r, "\kappa(\pi_{f})"] & B \arrow[r, "\pi_{f}"] & Q	\end{tikzcd}
+	\begin{tikzcd}
+	A
+		\arrow[dr, thick, swap, "f", blue]
+		\arrow[dd, thick, dashed, swap, "\exists !\,\widetilde{f}{\color{white}.}", blue]
+		\arrow[drrr, bend left = 20, "0", blue]
+	\\
+		&
+		B
+		\arrow[rr, "\pi_{f}{\color{white}..}"] & & Q
+	\\
+	I
+		\arrow[ur, swap, "\kappa(\pi_{f})", red] 
+		\arrow[urrr, bend right = 20, swap, "0", gray]
+	\end{tikzcd}
 	\end{center}
 \item
 	If $\mathfrak{C}$ has cokernels and
