@@ -688,7 +688,7 @@ then the following statements are true:
 		\arrow[rr, "\pi_{f}{\color{white}..}"] & & Q
 	\\
 	I
-		\arrow[ur, swap, "\kappa(\pi_{f})", red] 
+		\arrow[ur, hook, swap, "\kappa(\pi_{f})", red] 
 		\arrow[urrr, bend right = 20, swap, "0", gray]
 	\end{tikzcd}
 	\end{center}
@@ -700,5 +700,41 @@ then the following statements are true:
 	Furthermore, if $\mathfrak{C}$ has equalizers, then $\widetilde{f}$ is a coimage of $f$.
 \end{enumerate}
 \end{proposition}
+\proof
+\begin{enumerate}
+\item
+	This follows immediate from two facts:
+	(a)	\,$\pi_{f} \circ f = 0$\, ($\pi_{f}$ being a cokernel of $f$), and
+	(b)	the universal property of \,$\kappa(\pi_{f})$\, as a kernel of \,$\pi_{f}$.\,
+\item
+	First of all, we already know \,$f = \kappa(\pi_{f}) \circ \widetilde{f}$,\,
+	with \,$\kappa(\pi_{f})$\, being a monomorphism (since $\kappa(\pi_{f})$ is a kernel).
+	\begin{center}
+	\begin{tikzcd}
+	&A
+		\arrow[dr, swap, "f"]
+		\arrow[dd, dashed, swap, "\exists !\,\widetilde{f}{\color{white}.}"]
+		\arrow[drrr, bend left = 20, "0", gray]
+		\arrow[dddl, thick, bend right = 50, swap, "\varepsilon", blue]
+	\\
+	&& B
+		\arrow[rr, "\pi_{f}{\color{white}..}"] & & Q
+	\\
+	& I
+		\arrow[ur, hook, swap, "\!\!\kappa(\pi_{f})", red] 
+		\arrow[urrr, bend right = 20, swap, "0", gray]
+	\\
+	{\color{blue}I^{\prime}}
+		\arrow[uurr, thick, hook, bend right = 68, swap, "\mu", blue]
+		\arrow[ur, thick, dashed, "\exists !\,\theta", blue]
+	\end{tikzcd}
+	\end{center}
+	In order to show that \,$\kappa(\pi_{f})$\, is indeed an image of \,$f$,\,
+	we need to show that, for each factorization \,$f = \mu \circ \varepsilon$\, of \,$f$\,
+	with \,$\mu$\, a monomorphism, there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(I^{\prime},I)$\,
+	such that the above diagram commutes.
+\item
+\end{enumerate}
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
