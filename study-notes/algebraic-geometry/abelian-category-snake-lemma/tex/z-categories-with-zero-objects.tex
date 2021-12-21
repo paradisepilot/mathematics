@@ -714,25 +714,71 @@ then the following statements are true:
 	&A
 		\arrow[dr, swap, "f"]
 		\arrow[dd, dashed, swap, "\exists !\,\widetilde{f}{\color{white}.}"]
-		\arrow[drrr, bend left = 20, "0", gray]
+		\arrow[drrr, bend left = 155, "0", gray]
 		\arrow[dddl, thick, bend right = 50, swap, "\varepsilon", blue]
+	&&& Q_{\mu}
 	\\
 	&& B
-		\arrow[rr, "\pi_{f}{\color{white}..}"] & & Q
+		\arrow[rr, "{\color{white}.....}\pi_{f}"]
+		\arrow[urr, "\pi_{\mu}"]
+	&& Q
+		\arrow[u, thick, dashed, swap, "\;\;\exists !\;q"]
 	\\
 	& I
 		\arrow[ur, hook, swap, "\!\!\kappa(\pi_{f})", red] 
-		\arrow[urrr, bend right = 20, swap, "0", gray]
+		\arrow[urrr, bend right = 150, swap, "0", gray]
+		\arrow[dl, thick, dashed, swap, "\exists !\,\theta", blue]
 	\\
 	{\color{blue}I^{\prime}}
 		\arrow[uurr, thick, hook, bend right = 68, swap, "\mu", blue]
-		\arrow[ur, thick, dashed, "\exists !\,\theta", blue]
 	\end{tikzcd}
 	\end{center}
 	In order to show that \,$\kappa(\pi_{f})$\, is indeed an image of \,$f$,\,
 	we need to show that, for each factorization \,$f = \mu \circ \varepsilon$\, of \,$f$\,
-	with \,$\mu$\, a monomorphism, there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(I^{\prime},I)$\,
-	such that the above diagram commutes.
+	with \,$\mu$\, a monomorphism, there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(I,I^{\prime})$\,
+	such that \,$\widetilde{f} = \theta \circ \varepsilon$\, and \,$\mu = \kappa(\pi_{f}) \circ \theta$.
+	
+	\vskip 0.1cm
+	\noindent
+	To this end, let \,$\pi_{\mu} \in \Mor_{\mathfrak{C}}(B,Q_{\mu})$\, be a cokernel of \,$\mu$.\,
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\;\; $\pi_{\mu} \circ f = 0$
+	\vskip -0.1cm
+	\noindent
+	Proof of Claim 1:\;
+	$\pi_{\mu} \circ f$
+	\;$=$\; $\pi_{\mu} \circ \left(\,\mu \overset{{\color{white}1}}{\circ}\varepsilon\,\right)$
+	\;$=$\; $\left(\,\pi_{\mu} \overset{{\color{white}1}}{\circ} \mu \,\right) \circ \varepsilon$
+	\;$=$\; $0 \circ \varepsilon$
+	\;$=$\; $0$,\,
+	as required
+	
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\;\; There exists a unique \,$q \in \Mor_{\mathfrak{C}}(Q,Q_{\mu})$\,
+	such that \,$\pi_{\mu} = q \circ \pi_{f}$.\,
+	\vskip 0.05cm
+	\noindent
+	Proof of Claim 2:\;
+	This follows from two facts:\;
+	(a)	\,$\pi_{\mu} \circ f = 0$\, (Claim 1), and
+	(b)	\,the universal property of \,$\pi_{f}$\, as a cokernel of \,$f$.\,
+	
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 3:}\;\; $\pi_{\mu} \,\circ\, \kappa(\pi_{f}) \,=\, 0$
+	\vskip -0.1cm
+	\noindent
+	Proof of Claim 3:\;
+	$\pi_{\mu} \circ \kappa(\pi_{f})$
+	\;$=$\; $\left(\, q \overset{{\color{white}1}}{\circ} \pi_{f} \,\right) \circ \kappa(\pi_{f})$
+	\;$=$\; $q \circ \left(\, \pi_{f} \overset{{\color{white}1}}{\circ} \kappa(\pi_{f}) \,\right)$
+	\;$=$\; $q \circ 0$
+	\;$=$\; $0$,\,
+	as required.
+	
 \item
 \end{enumerate}
 \qed
