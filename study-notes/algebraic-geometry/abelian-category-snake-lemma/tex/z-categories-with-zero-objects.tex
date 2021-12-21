@@ -326,8 +326,17 @@ Then, the following statements are true:
 	such that the following diagram commutes:
 	\begin{center}
 	\begin{tikzcd}
-	K_{2} \arrow[d, dashed, swap, "\exists !\,\theta"] \arrow[dr, swap, "\kappa_{2}"] \arrow[rrd, "0"] & & \\
-	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & {\color{red}A} \arrow[r, swap, "f"] & B
+	{\color{blue}K_{2}}
+		\arrow[dd, thick, dashed, swap, "\exists !\,\theta{\color{white}.}", blue]
+		\arrow[dr, thick, swap, "\kappa_{2}", blue]
+		\arrow[drrr, bend left = 15, "0", blue] & & &
+	\\
+	& {\color{red}A}
+		\arrow[rr, swap, "f{\color{white}...}"] & & B
+	\\
+	{\color{red}K_{1}}
+		\arrow[ur, swap, "\kappa_{1}", red]
+		\arrow[urrr, bend right = 15, swap, "0", gray]
 	\end{tikzcd}
 	\end{center}
 \item
@@ -336,8 +345,20 @@ Then, the following statements are true:
 	such that the following diagram commutes:
 	\begin{center}
 	\begin{tikzcd}
-	A \arrow[r, "f"] \arrow[rrd, swap, "0"] & {\color{red}B} \arrow[rd, "\pi_{2}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta"] \\
-	& & Q_{2}
+	& & & {\color{red}Q_{1}}
+		\arrow[dd, thick, dashed, "\;\exists !\,\theta", blue]
+	\\
+	A 
+		\arrow[rr, "{\color{white}...}f"]
+		\arrow[rrru, bend left = 15, "0", gray]
+		\arrow[rrrd, bend right = 15, swap, "0", blue]
+		& &
+		{\color{red}B}
+		\arrow[ur, "\pi_{1}", red]
+		\arrow[rd, thick, "\pi_{2}", blue]
+		&
+	\\
+	& & & {\color{blue}Q_{2}}
 	\end{tikzcd}
 	\end{center}
 \end{enumerate}
@@ -350,9 +371,18 @@ Then, the following statements are true:
 	such that the following diagram commutes:
 	\begin{center}
 	\begin{tikzcd}
-	K_{1} \arrow[d, dashed, swap, "\exists !\,\theta_{12}", blue] \arrow[ddr, "\kappa_{1}"] \arrow[ddrr,"0"] \\
-	{\color{blue}K_{2}} \arrow[d, dashed, swap, "\exists !\,\theta_{21}", red] \arrow[dr, swap, "\kappa_{2}", blue] \arrow[rrd, "0"] & & \\
-	{\color{red}K_{1}} \arrow[r, swap, "\kappa_{1}", red] & A \arrow[r, swap, "f"] & B
+	{\color{blue}K_{2}}
+		\arrow[dd, thick, dashed, bend right = 90, swap, "\exists !\,\theta_{21}{\color{white}.}", blue]
+		\arrow[dr, thick, swap, "\kappa_{2}", blue]
+		\arrow[drrr, bend left = 15, "0", blue] & & &
+	\\
+	& {\color{red}A}
+		\arrow[rr, swap, "f{\color{white}...}"] & & B
+	\\
+	{\color{red}K_{1}}
+		\arrow[ur, swap, "\kappa_{1}", red]
+		\arrow[uu, thick, dashed, bend left = 60, swap, "\;\,\exists !\,\theta_{12}{\color{white}.}", red]
+		\arrow[urrr, bend right = 15, swap, "0", red]
 	\end{tikzcd}
 	\end{center}
 	Again, by the universal property of kernels, we see that we must have
@@ -366,9 +396,21 @@ Then, the following statements are true:
 	such that the following diagram commutes:
 	\begin{center}
 	\begin{tikzcd}
-	A \arrow[r, "f"] \arrow[rrd, swap, "0"] \arrow[ddrr, swap, "0"] & B \arrow[rd, "\pi_{2}", blue] \arrow[rdd, swap, "\pi_{1}"] \arrow[r, "\pi_{1}", red]& {\color{red}Q_{1}} \arrow[d, dashed, "\;\exists !\,\theta_{12}", red] \\
-	& & {\color{blue}Q_{2}} \arrow[d, dashed, "\;\exists !\,\theta_{21}", blue] \\
-	& & Q_{1} \\
+	& & & {\color{red}Q_{1}}
+		\arrow[dd, thick, bend left = 90, dashed, "\;\exists !\,\theta_{12}", blue]
+	\\
+	A 
+		\arrow[rr, "{\color{white}...}f"]
+		\arrow[rrru, bend left = 15, "0", gray]
+		\arrow[rrrd, bend right = 15, swap, "0", blue]
+		& &
+		{\color{red}B}
+		\arrow[ur, "\pi_{1}", red]
+		\arrow[rd, thick, "\pi_{2}", blue]
+		&
+	\\
+	& & & {\color{blue}Q_{2}}
+		\arrow[uu, thick, bend right = 60, dashed, "\;\exists !\,\theta_{21}\,", red]
 	\end{tikzcd}
 	\end{center}
 	Again, by the universal property of cokernels, we see that we must have
