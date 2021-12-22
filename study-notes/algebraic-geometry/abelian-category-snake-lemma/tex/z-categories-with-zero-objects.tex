@@ -534,96 +534,116 @@ Let \,$\mathfrak{C}$\, be a category with zero objects,
 \,$f \in \Mor_{\mathfrak{C}}(A,B)$.\,
 \vskip 0.1cm
 \noindent
-Suppose:
-\begin{itemize}
+Then, the following statements are true:
+\begin{enumerate}
 \item
-	$f$\, is a kernel of some morphism (in particular, $f$ is a monomorphism), and
+	If:
+	\begin{itemize}
+	\item
+		$f$\, is a kernel of some morphism (in particular, $f$ is a monomorphism), and
+	\item
+		$\pi_{f} \in \Mor_{\mathfrak{C}}(B,Q)$\, is a cokernel of \,$f$,
+	\end{itemize}
+	then: \,$f$\, is a kernel of \,$\pi_{f}$.
 \item
-	$\pi_{f} \in \Mor_{\mathfrak{C}}(B,Q)$\, is a cokernel of \,$f$.
-\end{itemize}
-Then, \,$f$\, is a kernel of \,$\pi_{f}$.
+	Dually, if:
+	\begin{itemize}
+	\item
+		$f$\, is a cokernel of some morphism (in particular, $f$ is an epimorphism), and
+	\item
+		$\kappa_{f} \in \Mor_{\mathfrak{C}}(K,A)$\, is a kernel of \,$f$,
+	\end{itemize}
+	then: \,$f$\, is a cokernel of \,$\kappa_{f}$.
+\end{enumerate}
 \end{lemma}
 \proof
-Consider the following diagram:
-\begin{center}
-\begin{tikzcd}
-X
-	\arrow[drr, thick, "\rho"]
-	\arrow[dd, dashed, thick, swap, "\exists !\; \theta\,", red]
-	\arrow[rrrr, swap, bend left = 20, swap, "0", red]
-& & & &
-Q
-	\arrow[d, dashed, "\;\exists !\,\varphi", blue]
-\\
-& &
-B
-	\arrow[urr, "\pi_{f}", blue]
-	\arrow[rr, "\mu"]
-& &
-C
-\\
-{\color{red}A}
-	\arrow[urr, hook, swap, "f \,=\, \kappa_{\mu}", red]
-	\arrow[urrrr, bend right = 25, swap, "0", blue]
-\end{tikzcd}
-\end{center}
-In order to prove that \,$f$\, is a kernel of \,$\pi_{f}$,\,
-we need to show that, for any \,$\rho \in \Mor_{\mathfrak{C}}(X,B)$\,
-satisfying \,$\pi_{f} \circ \rho = 0$,\,
-there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,A)$\,
-such that \,$\rho = f \circ \theta$.\,
+\begin{enumerate}
+\item
 
-\vskip 0.3cm
-\noindent
-By hypothesis, \,$f$\, is a kernel of some morphism \,$\mu \in \Mor_{\mathfrak{C}}(B,C)$.\,
-We write \,$\kappa_{\mu}$\, for kernel of \,$\mu$.\, Hence, \,$f = \kappa_{\mu}$.
+	Consider the following diagram:
+	\begin{center}
+	\begin{tikzcd}
+	X
+		\arrow[drr, thick, "\rho"]
+		\arrow[dd, dashed, thick, swap, "\exists !\; \theta\,", red]
+		\arrow[rrrr, swap, bend left = 20, swap, "0", red]
+	& & & &
+	Q
+		\arrow[d, dashed, "\;\exists !\,\varphi", blue]
+	\\
+	& &
+	B
+		\arrow[urr, "\pi_{f}", blue]
+		\arrow[rr, "\mu"]
+	& &
+	C
+	\\
+	{\color{red}A}
+		\arrow[urr, hook, swap, "f \,=\, \kappa_{\mu}", red]
+		\arrow[urrrr, bend right = 25, swap, "0", blue]
+	\end{tikzcd}
+	\end{center}
+	In order to prove that \,$f$\, is a kernel of \,$\pi_{f}$,\,
+	we need to show that, for any \,$\rho \in \Mor_{\mathfrak{C}}(X,B)$\,
+	satisfying \,$\pi_{f} \circ \rho = 0$,\,
+	there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,A)$\,
+	such that \,$\rho = f \circ \theta$.\,
 
-\vskip 0.3cm
-\noindent
-\textit{Aside (Plan of Proof):
-Thanks to the universal property of $f = \kappa_{\mu}$ as a kernel of $\mu$,
-a look at the diagram above shows that
-the existence and uniqueness of \,$\theta$ will follow as soon as we establish
-that $\mu \circ \rho = 0$, which in turn follows from the existence of the morphism \,$\varphi$,
-which in turn follows from the universal property of $\pi_{f}$ as a cokernel of $f$.}
+	\vskip 0.3cm
+	\noindent
+	By hypothesis, \,$f$\, is a kernel of some morphism \,$\mu \in \Mor_{\mathfrak{C}}(B,C)$.\,
+	We write \,$\kappa_{\mu}$\, for kernel of \,$\mu$.\, Hence, \,$f = \kappa_{\mu}$.
 
-\vskip 0.3cm
-\noindent
-\textbf{Claim 1:}\;\; There exists a unique \,$\varphi \in \Mor_{\mathfrak{C}}(Q,C)$\, such that \,$\mu = \varphi \circ \pi_{f}$.
-\vskip 0.1cm
-\noindent
-Proof of Claim 1:\;
-This follows immediately from two facts:
-(a)	\,$\mu \circ f \,=\, \mu \circ \kappa_{\mu} \,=\, 0$, and
-(b)	the universal property of \,$\pi_{f}$\, as a cokernel of $f$.
+	\vskip 0.3cm
+	\noindent
+	\textit{Aside (Plan of Proof):
+	Thanks to the universal property of $f = \kappa_{\mu}$ as a kernel of $\mu$,
+	a look at the diagram above shows that
+	the existence and uniqueness of \,$\theta$ will follow as soon as we establish
+	that $\mu \circ \rho = 0$, which in turn follows from the existence of the morphism \,$\varphi$,
+	which in turn follows from the universal property of $\pi_{f}$ as a cokernel of $f$.}
 
-\vskip 0.3cm
-\noindent
-\textbf{Claim 2:}\;\; $\mu \circ \rho \,=\, 0$
-\vskip 0.1cm
-\noindent
-Proof of Claim 2:\;
-$\mu \circ \rho$
-\;$=$\; $\left(\,\varphi \overset{{\color{white}1}}{\circ} \pi_{f}\right)\circ \rho$
-\;$=$\; $\varphi \circ \left(\, \pi_{f} \overset{{\color{white}1}}{\circ} \rho\, \right)$
-\;$=$\; $\varphi \circ 0$
-\;$=$\; $0$,\,
-as required.
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\;\; There exists a unique \,$\varphi \in \Mor_{\mathfrak{C}}(Q,C)$\, such that \,$\mu = \varphi \circ \pi_{f}$.
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\;
+	This follows immediately from two facts:
+	(a)	\,$\mu \circ f \,=\, \mu \circ \kappa_{\mu} \,=\, 0$, and
+	(b)	the universal property of \,$\pi_{f}$\, as a cokernel of $f$.
 
-\vskip 0.3cm
-\noindent
-\textbf{Claim 3:}\;\;
-There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,A)$\, such that \,$\rho = f \circ \theta$.
-\vskip 0.1cm
-\noindent
-Proof of Claim 3:\;
-This follows immediately from two facts:
-(a)	\,$\mu \circ \rho \,=\, 0$ (Claim 2), and
-(b)	the universal property of \,$f = \kappa_{\mu}$\, as a kernel of \,$\mu$.
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\;\; $\mu \circ \rho \,=\, 0$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 2:\;
+	$\mu \circ \rho$
+	\;$=$\; $\left(\,\varphi \overset{{\color{white}1}}{\circ} \pi_{f}\right)\circ \rho$
+	\;$=$\; $\varphi \circ \left(\, \pi_{f} \overset{{\color{white}1}}{\circ} \rho\, \right)$
+	\;$=$\; $\varphi \circ 0$
+	\;$=$\; $0$,\,
+	as required.
 
-\vskip 0.3cm
-\noindent
-This completes the proof of the Lemma.
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 3:}\;\;
+	There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,A)$\, such that \,$\rho = f \circ \theta$.
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 3:\;
+	This follows immediately from two facts:
+	(a)	\,$\mu \circ \rho \,=\, 0$ (Claim 2), and
+	(b)	the universal property of \,$f = \kappa_{\mu}$\, as a kernel of \,$\mu$.
+
+	\vskip 0.3cm
+	\noindent
+	This completes the proof.
+
+\item
+
+\end{enumerate}
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -712,7 +732,7 @@ Then, \,$\kappa_{f}$\, is a kernel of \,$\pi(\kappa_{f})$.
 
 \vskip 1.0cm
 \noindent
-\textbf{\large Images and coimages of morphisms in an arbitrary category}
+\textbf{\large Images of morphisms in a normal category with zero objects and cokernels}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -760,12 +780,6 @@ Let \,$\mathfrak{C}$\, be a category, and $f : A \longrightarrow B$ a morphism i
 	\end{itemize}
 \end{itemize}
 \end{definition}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 1.0cm
-\noindent
-\textbf{\large Images of morphisms in a normal category with zero objects and cokernels}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
