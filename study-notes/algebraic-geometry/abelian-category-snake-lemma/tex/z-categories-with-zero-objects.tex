@@ -524,90 +524,8 @@ This completes the proof of the Proposition.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{proposition}[Proposition 13.3, p.16, \cite{Mitchell1965}]
-\mbox{}
-\vskip 0.1cm
-\noindent
-Suppose \,$\mathfrak{C}$\, is a category with zero objects,
-\,$A, B \in \Obj(\mathfrak{C})$,\, and
-\,$f \in \Mor_{\mathfrak{C}}(A,B)$.
-Let \,$\kappa_{f} \in \Mor_{\mathfrak{C}}(K,A)$\, be a kernel of \,$f$,\,
-and \,$\pi(\kappa_{f}) \in \Mor_{\mathfrak{C}}(A,Q)$\, be a cokernel of \,$\kappa_{f}$.\,
-Then, \,$\kappa_{f}$\, is a kernel of \,$\pi(\kappa_{f})$.
-\end{proposition}
-\proof
-Consider the following diagram:
-\begin{center}
-\begin{tikzcd}
-X
-	\arrow[dd, thick, dashed, swap, "\exists !\,\theta\;", red]
-	\arrow[drr, thick, swap, "\rho"]
-	\arrow[rrrr, bend left = 20, "0", red]
-&&&&
-Q
-	\arrow[d, dashed, "\;\exists !\,\varphi\;", blue]
-\\
-&& A
-	\arrow[urr, swap, "\pi(\kappa_{f})", blue]
-	\arrow[rr, swap, "f"]
-&& B
-\\
-K
-	\arrow[urr, swap, "\kappa_{f}", red]
-	\arrow[urrrr, bend right = 30, swap, "0", blue]
-\end{tikzcd}
-\end{center}
-In order to establish that \,$\kappa_{f}$\, is in fact also the kernel of \,$\pi(\kappa_{f})$,\,
-we need to show that, for each \,$\rho \in \Mor_{\mathfrak{C}}(X,A)$\, satisfying \,$\pi(\kappa_{f}) \circ \rho = 0$,\,
-there exists unique \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\, such that the above diagram commutes, i.e.,
-\,$\rho = \kappa_{f} \circ \theta$.\,
-
-\vskip 0.3cm
-\noindent
-\textbf{Claim 1:}\;\, There exists a unique \,$\varphi \in \Mor_{\mathfrak{C}}(Q,B)$\,
-such that \,$f = \varphi \circ \pi(\kappa_{f})$.
-\vskip 0.1cm
-\noindent
-Proof of Claim 1:\; This follows immediately from two facts:
-(a) \,$f \circ \kappa_{f} = 0$\, ($\kappa_{f}$ being a kernel of $f$), and
-(b) the universal property of \,$\pi(\kappa_{f})$\, as a cokernel of \,$\kappa_{f}$.\,
-This proves Claim 1.
-
-\vskip 0.3cm
-\noindent
-\textbf{Claim 2:}\;\, $f \circ \rho = 0$.
-\vskip 0.05cm
-\noindent
-Proof of Claim 2:\;
-$f \circ \rho$
-\;$=$\; $\left(\,\varphi \overset{{\color{white}1}}{\circ} \pi(\kappa_{f})\,\right) \circ \rho$
-\;$=$\; $\varphi \circ \left(\, \pi(\kappa_{f}) \overset{{\color{white}1}}{\circ} \rho\,\right)$
-\;$=$\; $\varphi \circ 0$
-\;$=$\; $0$,\,
-where the first equality follows from Claim 1, while the last equality follows by hypothesis on \,$\rho$.\,
-This proves Claim 2.
-
-\vskip 0.3cm
-\noindent
-\textbf{Claim 3:}\;\, There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\,
-such that \,$\rho = \kappa_{f} \circ \theta$.
-\vskip 0.1cm
-\noindent
-Proof of Claim 3:\; This follows immediately from two facts:
-(a) \,$f \circ \rho = 0$\, (Claim 2),
-and (b) the universal property of \,$\kappa_{f}$\, as a kernel of \,$f$.\,
-This proves Claim 3.
-
-\vskip 0.3cm
-\noindent
-The proof of the Proposition is complete.
-\qed
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\begin{lemma}[A kernel in a category with zero objects is the kernel of its cokernel.]
-\label{AMorphismIsTheKernelOfItsCokernel}
+\begin{lemma}[A kernel in a category with zero objects is the kernel of its own cokernel.]
+\label{AKernelsTheKernelOfItsOwnCokernel}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -707,6 +625,88 @@ This follows immediately from two facts:
 \noindent
 This completes the proof of the Lemma.
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{corollary}[Proposition 13.3, p.16, \cite{Mitchell1965}]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\mathfrak{C}$\, is a category with zero objects,
+\,$A, B \in \Obj(\mathfrak{C})$,\, and
+\,$f \in \Mor_{\mathfrak{C}}(A,B)$.
+Let \,$\kappa_{f} \in \Mor_{\mathfrak{C}}(K,A)$\, be a kernel of \,$f$,\,
+and \,$\pi(\kappa_{f}) \in \Mor_{\mathfrak{C}}(A,Q)$\, be a cokernel of \,$\kappa_{f}$.\,
+Then, \,$\kappa_{f}$\, is a kernel of \,$\pi(\kappa_{f})$.
+\end{corollary}
+%\proof
+%Consider the following diagram:
+%\begin{center}
+%\begin{tikzcd}
+%X
+%	\arrow[dd, thick, dashed, swap, "\exists !\,\theta\;", red]
+%	\arrow[drr, thick, swap, "\rho"]
+%	\arrow[rrrr, bend left = 20, "0", red]
+%&&&&
+%Q
+%	\arrow[d, dashed, "\;\exists !\,\varphi\;", blue]
+%\\
+%&& A
+%	\arrow[urr, swap, "\pi(\kappa_{f})", blue]
+%	\arrow[rr, swap, "f"]
+%&& B
+%\\
+%K
+%	\arrow[urr, swap, "\kappa_{f}", red]
+%	\arrow[urrrr, bend right = 30, swap, "0", blue]
+%\end{tikzcd}
+%\end{center}
+%In order to establish that \,$\kappa_{f}$\, is in fact also the kernel of \,$\pi(\kappa_{f})$,\,
+%we need to show that, for each \,$\rho \in \Mor_{\mathfrak{C}}(X,A)$\, satisfying \,$\pi(\kappa_{f}) \circ \rho = 0$,\,
+%there exists unique \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\, such that the above diagram commutes, i.e.,
+%\,$\rho = \kappa_{f} \circ \theta$.\,
+%
+%\vskip 0.3cm
+%\noindent
+%\textbf{Claim 1:}\;\, There exists a unique \,$\varphi \in \Mor_{\mathfrak{C}}(Q,B)$\,
+%such that \,$f = \varphi \circ \pi(\kappa_{f})$.
+%\vskip 0.1cm
+%\noindent
+%Proof of Claim 1:\; This follows immediately from two facts:
+%(a) \,$f \circ \kappa_{f} = 0$\, ($\kappa_{f}$ being a kernel of $f$), and
+%(b) the universal property of \,$\pi(\kappa_{f})$\, as a cokernel of \,$\kappa_{f}$.\,
+%This proves Claim 1.
+%
+%\vskip 0.3cm
+%\noindent
+%\textbf{Claim 2:}\;\, $f \circ \rho = 0$.
+%\vskip 0.05cm
+%\noindent
+%Proof of Claim 2:\;
+%$f \circ \rho$
+%\;$=$\; $\left(\,\varphi \overset{{\color{white}1}}{\circ} \pi(\kappa_{f})\,\right) \circ \rho$
+%\;$=$\; $\varphi \circ \left(\, \pi(\kappa_{f}) \overset{{\color{white}1}}{\circ} \rho\,\right)$
+%\;$=$\; $\varphi \circ 0$
+%\;$=$\; $0$,\,
+%where the first equality follows from Claim 1, while the last equality follows by hypothesis on \,$\rho$.\,
+%This proves Claim 2.
+%
+%\vskip 0.3cm
+%\noindent
+%\textbf{Claim 3:}\;\, There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\,
+%such that \,$\rho = \kappa_{f} \circ \theta$.
+%\vskip 0.1cm
+%\noindent
+%Proof of Claim 3:\; This follows immediately from two facts:
+%(a) \,$f \circ \rho = 0$\, (Claim 2),
+%and (b) the universal property of \,$\kappa_{f}$\, as a kernel of \,$f$.\,
+%This proves Claim 3.
+%
+%\vskip 0.3cm
+%\noindent
+%The proof of the Proposition is complete.
+%\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -854,7 +854,7 @@ then the following statements are true:
 	\vskip 0.1cm
 	\noindent
 	To this end, let \,$\pi_{\mu} \in \Mor_{\mathfrak{C}}(B,Q_{\mu})$\, be a cokernel of \,$\mu$
-	(this is valid since \,$\mathfrak{C}$\, has cokernels).\,
+	(this is valid since \,{\color{red}$\mathfrak{C}$\, has cokernels}).\,
 
 	\vskip 0.3cm
 	\noindent
@@ -898,7 +898,9 @@ then the following statements are true:
 	\textbf{Claim 4:}\;\; $\mu$\, is a kernel of \,$\pi_{\mu}$.
 	\vskip -0.1cm
 	\noindent
-	Proof of Claim 4:\; Immediate by Lemma \ref{AMorphismIsTheKernelOfItsCokernel}
+	Proof of Claim 4:\;
+	Since {\color{red}$\mathfrak{C}$ is a normal category}, the monomorphism $\mu$ is a kernel of some morphism.
+	Claim 4 now follows immediate by Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}.
 
 	\vskip 0.3cm
 	\noindent
