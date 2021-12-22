@@ -1001,7 +1001,7 @@ then the following statements are true:
 	\;$=$\; $\left(\,\pi_{\mu} \overset{{\color{white}1}}{\circ} \mu \,\right) \circ \varepsilon$
 	\;$=$\; $0 \circ \varepsilon$
 	\;$=$\; $0$,\,
-	as required
+	as required.
 
 	\vskip 0.3cm
 	\noindent
@@ -1065,6 +1065,86 @@ then the following statements are true:
 	\noindent
 	We may now conclude that \,$\kappa(\pi_{f})$\, is indeed an image of \,$f$.
 \item
+	Consider the following diagram:
+	\begin{center}
+	\begin{tikzcd}
+	&A
+		\arrow[dr, "f"]
+		\arrow[dd, dashed, swap, "\exists !\,\widetilde{f}{\color{white}.}"]
+		\arrow[drrr, bend left = 25, "0", gray]
+		\arrow[dddl, two heads, thick, bend right = 50, swap, "\varepsilon"]
+	% &&& Q_{\mu}
+	\\
+	&& B
+		\arrow[rr, "{\color{white}..}\pi_{f}"]
+		%\arrow[urr, "\pi_{\mu}"]
+	&& Q
+		%\arrow[u, thick, dashed, swap, "\;\;\exists !\;q", cyan]
+	\\
+	& I
+		\arrow[ur, hook, swap, "\!\!\kappa(\pi_{f})", red]
+	\\
+	I^{\prime}
+		\arrow[uurr, thick, bend right = 68, swap, "\mu"]
+		\arrow[ur, thick, dashed, "\exists !\,\theta", red]
+		\arrow[uurrrr, bend right = 51, swap, "0", red]
+	\end{tikzcd}
+	\end{center}
+	First, \,$\widetilde{f}$\, is an epimorphism, by Lemma ???? and
+	the hypothesis that \,{\color{red}$\mathfrak{C}$\, has equalizers}.
+
+	\vskip 0.3cm
+	In order to show that \,$\widetilde{f}$\, is indeed a coimage of \,$f$,\,
+	we need to show furthermore that, for each factorization \,$f = \mu \circ \varepsilon$\, of \,$f$\,
+	with \,$\varepsilon$\, an epimorphism, there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(I^{\prime},I)$\,
+	such that \,$\widetilde{f} = \theta \circ \varepsilon$\, and \,$\mu = \kappa(\pi_{f}) \circ \theta$.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\;\; $\pi_{f} \circ \mu \,=\, 0$
+	\vskip -0.05cm
+	\noindent
+	Proof of Claim 1:\;
+	$\mu \circ \varepsilon \,=\, f$
+	\;\;$\Longrightarrow$\;\;
+	$\pi_{f} \circ \mu \circ \varepsilon$
+	\;$=$\; $\pi_{f} \circ f$
+	\;$=$\; $0_{A,Q}$
+	\;$=$\; $0_{I^{\prime},Q} \circ \varepsilon$
+	\;\;$\Longrightarrow$\;\;
+	$\pi_{f} \circ \mu = 0_{I^{\prime},Q}$,\,
+	since \,$\varepsilon$\, is an epimorphism and can be cancelled on the right.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\;\; There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(I^{\prime},I)$\,
+	such that \,$\mu \,=\, \kappa(\pi_{f}) \circ \theta$.\,
+	\vskip -0.05cm
+	\noindent
+	Proof of Claim 2:\;
+	This follows from two facts:\;
+	(a)	\,$\pi_{f} \circ \mu \,=\, 0$\, (Claim 1), and
+	(b)	\,the universal property of \,$\kappa(\pi_{f})$\, as a kernel of \,$\pi_{f}$.\,
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 3:}\;\; $\widetilde{f} \,=\, \theta \circ \varepsilon$
+	\vskip -0.05cm
+	\noindent
+	Proof of Claim 3:\; Note that
+	\,$\kappa(\pi_{f}) \circ \widetilde{f}$
+	\;$=$\; $f$
+	\;$=$\; $\mu \circ \varepsilon$
+	\;$=$\; $\kappa(\pi_{f}) \circ \theta \circ \varepsilon$,\, by Claim 2.
+	Hence, we have
+	\,$\widetilde{f} \,=\, \theta \circ \varepsilon$,\,
+	since \,$\kappa(\pi_{f})$\, is a monomorphism (being a kernel)
+	and can be cancelled on the left.
+	
+	\vskip 0.3cm
+	\noindent
+	This completes the proof that \,$\widetilde{f}$\, is a coimage of \,$f$.
+
 \item
 	$\widetilde{f}$ is an epimorphism.
 	
