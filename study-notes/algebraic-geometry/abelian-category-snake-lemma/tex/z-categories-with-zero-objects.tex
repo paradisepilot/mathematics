@@ -524,7 +524,7 @@ This completes the proof of the Proposition.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{lemma}[A kernel in a category with zero objects is the kernel of its own cokernel.]
+\begin{lemma}[A kernel in a category with zero objects is the kernel of its own cokernel + dual]
 \label{AKernelsTheKernelOfItsOwnCokernel}
 \mbox{}
 \vskip 0.1cm
@@ -559,7 +559,6 @@ Then, the following statements are true:
 \proof
 \begin{enumerate}
 \item
-
 	Consider the following diagram:
 	\begin{center}
 	\begin{tikzcd}
@@ -642,9 +641,110 @@ Then, the following statements are true:
 	This completes the proof.
 
 \item
+	Consider the dualized version of the preceding diagram:
+	\begin{center}
+	\begin{tikzcd}
+	Y
+	& & & &
+	K
+		\arrow[dll, swap, "\kappa_{f}", blue]
+		\arrow[llll, bend right = 20, swap, "0", red]
+	\\
+	& &
+	A
+		\arrow[ull, thick, "\rho"]
+		\arrow[dll, two heads, "f \,=\, \pi_{\mu}", red]
+	& &
+	C
+		\arrow[u, dashed, swap, "\;\exists !\,\varphi", blue]
+		\arrow[ll, "\mu"]
+		\arrow[dllll, bend left = 25, "0", blue]
+	\\
+	{\color{red}B}
+		\arrow[uu, dashed, thick, "\exists !\,\theta\;", red]
+	\end{tikzcd}
+	\end{center}
+%	\begin{center}
+%	\begin{tikzcd}
+%	X
+%		\arrow[drr, thick, "\rho"]
+%		\arrow[dd, dashed, thick, swap, "\exists !\; \theta\,", red]
+%		\arrow[rrrr, swap, bend left = 20, swap, "0", red]
+%	& & & &
+%	Q
+%		\arrow[d, dashed, "\;\exists !\,\varphi", blue]
+%	\\
+%	& &
+%	B
+%		\arrow[urr, "\pi_{f}", blue]
+%		\arrow[rr, "\mu"]
+%	& &
+%	C
+%	\\
+%	{\color{red}A}
+%		\arrow[urr, hook, swap, "f \,=\, \kappa_{\mu}", red]
+%		\arrow[urrrr, bend right = 25, swap, "0", blue]
+%	\end{tikzcd}
+%	\end{center}
+	In order to prove that \,$f$\, is a cokernel of \,$\kappa_{f}$,\,
+	we need to show that, for any \,$\rho \in \Mor_{\mathfrak{C}}(A,Y)$\,
+	satisfying \,$\rho \circ \kappa_{f} = 0$,\,
+	there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(B,Y)$\,
+	such that \,$\rho = \theta \circ f$.\,
 
+	\vskip 0.3cm
+	\noindent
+	By hypothesis, \,$f$\, is a cokernel of some morphism \,$\mu \in \Mor_{\mathfrak{C}}(C,A)$.\,
+	We write \,$\pi_{\mu}$\, for cokernel of \,$\mu$.\, Hence, \,$f = \pi_{\mu}$.
+
+	\vskip 0.3cm
+	\noindent
+	\textit{Aside (Plan of Proof):
+	Thanks to the universal property of $f = \pi_{\mu}$ as a cokernel of $\mu$,
+	a look at the diagram above shows that
+	the existence and uniqueness of \,$\theta$ will follow as soon as we establish
+	that $\rho \circ \mu = 0$, which in turn follows from the existence of the morphism \,$\varphi$,
+	which in turn follows from the universal property of $\kappa_{f}$ as a kernel of $f$.}
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\;\; There exists a unique \,$\varphi \in \Mor_{\mathfrak{C}}(C,K)$\, such that \,$\mu = \kappa_{f} \circ \varphi$.
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\;
+	This follows immediately from two facts:
+	(a)	\,$f \circ \mu \,=\, \pi_{\mu} \circ \mu \,=\, 0$, and
+	(b)	the universal property of \,$\kappa_{f}$\, as a kernel of $f$.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\;\; $\rho \circ \mu \,=\, 0$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 2:\;
+	$\rho \circ \mu$
+	\;$=$\; $\rho \circ \left(\, \kappa_{f} \overset{{\color{white}1}}{\circ} \varphi \,\right)$
+	\;$=$\; $\left(\, \rho \overset{{\color{white}1}}{\circ} \kappa_{f} \right) \circ \varphi$
+	\;$=$\; $0 \circ \varphi$
+	\;$=$\; $0$,\,
+	as required.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 3:}\;\;
+	There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(B,Y)$\, such that \,$\rho = \theta \circ f$.
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 3:\;
+	This follows immediately from two facts:
+	(a)	\,$\rho \circ \mu \,=\, 0$ (Claim 2), and
+	(b)	the universal property of \,$f = \pi_{\mu}$\, as a cokernel of \,$\mu$.
+
+	\vskip 0.3cm
+	\noindent
+	This completes the proof.
+	\qed
 \end{enumerate}
-\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
