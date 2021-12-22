@@ -610,17 +610,23 @@ The proof of the Proposition is complete.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{lemma}
+\begin{lemma}\label{AMorphismIsTheKernelOfItsCokernel}
 \mbox{}
 \vskip 0.1cm
 \noindent
-Let \,$\mathfrak{C}$\, be a category with zero objects,
+A monomorphism in a normal category with zero objects is the kernel of its cokernel.
+\vskip 0.1cm
+\noindent
+More precisely, let \,$\mathfrak{C}$\, be a category with zero objects,
 \,$A, B \in \Obj(\mathfrak{C})$,\, and
 \,$f \in \Mor_{\mathfrak{C}}(A,B)$.\,
+\vskip 0.1cm
+\noindent
 Suppose:
 \begin{itemize}
 \item
-	$\mathfrak{C}$\, is a normal category (i.e., every monomorphim in $\mathfrak{C}$ is a kernel), 
+	$\mathfrak{C}$\, is a normal category (i.e., every monomorphim in $\mathfrak{C}$ is a kernel),
+	and \,$\mathfrak{C}$\, has cokernels,
 \item
 	$f$\, is a monomorphism, and
 \item
@@ -831,7 +837,7 @@ then the following statements are true:
 	In order to show that \,$\kappa(\pi_{f})$\, is indeed an image of \,$f$,\,
 	we need to show that, for each factorization \,$f = \mu \circ \varepsilon$\, of \,$f$\,
 	with \,$\mu$\, a monomorphism, there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(I,I^{\prime})$\,
-	such that \,$\widetilde{f} = \theta \circ \varepsilon$\, and \,$\mu = \kappa(\pi_{f}) \circ \theta$.
+	such that \,$\varepsilon = \theta \circ \widetilde{f}$\, and \,$\kappa(\pi_{f}) = \mu \circ \theta$.
 	
 	\vskip 0.1cm
 	\noindent
@@ -880,8 +886,22 @@ then the following statements are true:
 	\textbf{Claim 4:}\;\; $\mu$\, is a kernel of \,$\pi_{\mu}$.
 	\vskip -0.1cm
 	\noindent
-	Proof of Claim 4:\;
+	Proof of Claim 4:\; Immediate by Lemma \ref{AMorphismIsTheKernelOfItsCokernel}
 
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 5:}\;\; There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(I,I^{\prime})$\,
+	such that \,$\kappa(\pi_{f}) = \mu \circ \theta$.\,
+	\vskip 0.05cm
+	\noindent
+	Proof of Claim 5:\;
+	This follows from two facts:\;
+	(a)	\,$\pi_{\mu} \,\circ\, \kappa(\pi_{f}) \,=\, 0$\, (Claim 3), and
+	(b)	\,the universal property of \,$\mu$\, as a kernel of \,$\pi_{\mu}$.
+	
+	\vskip 0.3cm
+	\noindent
+	We may now conclude that \,$\kappa(\pi_{f})$\, is indeed an image of \,$f$.
 \item
 \end{enumerate}
 \qed
