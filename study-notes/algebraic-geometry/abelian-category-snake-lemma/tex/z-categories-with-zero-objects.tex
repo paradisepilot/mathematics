@@ -83,6 +83,36 @@ the \textbf{identity morphism} of $A$.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{definition}[Monomorphism, epimorphism]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let $\mathfrak{C}$ be a category, and $A, B \in \Obj(\mathfrak{C})$.
+A morphism $f \in \Mor_{\mathfrak{C}}(A,B)$ is called
+\begin{itemize}
+\item
+	a \textbf{monomorphism} if it can be {\color{red}left} cancelled in the sense that
+	$f \circ g = f \circ h$  implies that $g = h$.
+\item
+	a \textbf{epimorphism} if it can be {\color{red}right} cancelled in the sense that
+	$g \circ f = h \circ f$  implies that $g = h$.
+\item
+	an \textbf{isomorphism} if there is a morphism $g \in \Mor_{\mathfrak{C}}(B,A)$
+	such that $g \circ f = 1_{A}$ and $f \circ g = 1_{B}$.
+	Clearly, such a morphism $g$ is unique, and it is called the inverse of $f$.
+	The inverse of $f$, if exists, is denoted by $f^{-1}$.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\noindent
+\textbf{\large Zero morphisms in a category with zero objects}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{definition}[Initial object, terminal object, zero object]
 \mbox{}
 \vskip 0.15cm
@@ -221,8 +251,15 @@ Then,
 	& = &
 		0_{A,Y}
 	\end{eqnarray*}
+	\vskip -0.5cm
+	\qed
 \end{enumerate}
-\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\noindent
+\textbf{\large Kernels and cokernels of morphisms in a category with zero objects}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -290,24 +327,6 @@ Let \,$\mathfrak{C}$\, be a category with zero objects, and $f : A \longrightarr
 %	An \textbf{image} of $f$ is a kernel of a cokernel of $f$.
 \end{itemize}
 \end{definition}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\begin{remark}[Motivation behind the definition of the image of a morphism]
-\mbox{}
-\vskip 0.15cm
-\noindent
-Suppose $V$ and $W$ are vector spaces and $f : V \longrightarrow W$ is a linear map.
-Then, we have:
-\begin{center}
-\begin{tikzcd}
-V \arrow[r, "f"] & W \arrow[r, "\pi"] & \textnormal{coker}(f) & \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\! :=\, W/\textnormal{image}(f)
-\end{tikzcd}
-\end{center}
-where $\pi$ is the standard projection map, and
-\,$\textnormal{image}(f) \,=\, \ker(\pi) \,\subset\, W$.
-\end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -424,30 +443,6 @@ Then, the following statements are true:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{definition}[Monomorphism, epimorphism]
-\mbox{}
-\vskip 0.1cm
-\noindent
-Let $\mathfrak{C}$ be a category, and $A, B \in \Obj(\mathfrak{C})$.
-A morphism $f \in \Mor_{\mathfrak{C}}(A,B)$ is called
-\begin{itemize}
-\item
-	a \textbf{monomorphism} if it can be {\color{red}left} cancelled in the sense that
-	$f \circ g = f \circ h$  implies that $g = h$.
-\item
-	a \textbf{epimorphism} if it can be {\color{red}right} cancelled in the sense that
-	$g \circ f = h \circ f$  implies that $g = h$.
-\item
-	an \textbf{isomorphism} if there is a morphism $g \in \Mor_{\mathfrak{C}}(B,A)$
-	such that $g \circ f = 1_{A}$ and $f \circ g = 1_{B}$.
-	Clearly, such a morphism $g$ is unique, and it is called the inverse of $f$.
-	The inverse of $f$, if exists, is denoted by $f^{-1}$.
-\end{itemize}
-\end{definition}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
 \begin{proposition}
 \mbox{}
 \vskip 0.1cm
@@ -544,21 +539,22 @@ Then, \,$\kappa_{f}$\, is a kernel of \,$\pi(\kappa_{f})$.
 Consider the following diagram:
 \begin{center}
 \begin{tikzcd}
-K
-	\arrow[drr, "\kappa_{f}"]
-	\arrow[rrrr, bend left = 10, "0", gray]
-&&&& B
+X
+	\arrow[dd, thick, dashed, swap, "\exists !\,\theta\;", red]
+	\arrow[drr, thick, swap, "\rho"]
+	\arrow[rrrr, bend left = 20, "0", red]
+&&&&
+Q
+	\arrow[d, dashed, "\;\exists !\,\varphi\;", blue]
 \\
 && A
-	\arrow[urr, "f"]
-	\arrow[rr, swap, "\pi(\kappa_{f})"]
-&& Q
-	\arrow[u, thick, dashed, swap, "\;\exists !\,\varphi\;", red]
+	\arrow[urr, swap, "\pi(\kappa_{f})", blue]
+	\arrow[rr, swap, "f"]
+&& B
 \\
-{\color{blue}X}
-	\arrow[uu, thick, dashed, "\exists !\,\theta\;", blue]
-	\arrow[urr, thick, swap, "\rho", blue]
-	\arrow[urrrr, bend right = 15, swap, "0", blue]
+K
+	\arrow[urr, swap, "\kappa_{f}", red]
+	\arrow[urrrr, bend right = 30, swap, "0", blue]
 \end{tikzcd}
 \end{center}
 In order to establish that \,$\kappa_{f}$\, is in fact also the kernel of \,$\pi(\kappa_{f})$,\,
@@ -610,14 +606,12 @@ The proof of the Proposition is complete.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{lemma}\label{AMorphismIsTheKernelOfItsCokernel}
+\begin{lemma}[A kernel in a category with zero objects is the kernel of its cokernel.]
+\label{AMorphismIsTheKernelOfItsCokernel}
 \mbox{}
 \vskip 0.1cm
 \noindent
-A monomorphism in a normal category with zero objects is the kernel of its cokernel.
-\vskip 0.1cm
-\noindent
-More precisely, let \,$\mathfrak{C}$\, be a category with zero objects,
+Let \,$\mathfrak{C}$\, be a category with zero objects,
 \,$A, B \in \Obj(\mathfrak{C})$,\, and
 \,$f \in \Mor_{\mathfrak{C}}(A,B)$.\,
 \vskip 0.1cm
@@ -625,10 +619,7 @@ More precisely, let \,$\mathfrak{C}$\, be a category with zero objects,
 Suppose:
 \begin{itemize}
 \item
-	$\mathfrak{C}$\, is a normal category (i.e., every monomorphim in $\mathfrak{C}$ is a kernel),
-	and \,$\mathfrak{C}$\, has cokernels,
-\item
-	$f$\, is a monomorphism, and
+	$f$\, is a kernel of some morphism (in particular, $f$ is a monomorphism), and
 \item
 	$\pi_{f} \in \Mor_{\mathfrak{C}}(B,Q)$\, is a cokernel of \,$f$.
 \end{itemize}
@@ -638,24 +629,24 @@ Then, \,$f$\, is a kernel of \,$\pi_{f}$.
 Consider the following diagram:
 \begin{center}
 \begin{tikzcd}
-{\color{blue}X}
-	\arrow[drr, thick, "\rho", blue]
-	\arrow[dd, dashed, thick, swap, "\exists !\; \theta\,", blue]
-	\arrow[drrrr, swap, bend left = 20, swap, "0", blue]
-&&
+X
+	\arrow[drr, thick, "\rho"]
+	\arrow[dd, dashed, thick, swap, "\exists !\; \theta\,", red]
+	\arrow[rrrr, swap, bend left = 20, swap, "0", red]
+& & & &
+Q
+	\arrow[d, dashed, "\;\exists !\,\varphi", blue]
 \\
 & &
 B
-	\arrow[rr, "\pi_{f}"]
-	\arrow[drr, "\mu"]
+	\arrow[urr, "\pi_{f}", blue]
+	\arrow[rr, "\mu"]
 & &
-Q
-	\arrow[d, dashed, "\;\exists !\,\varphi", cyan]
+C
 \\
 {\color{red}A}
 	\arrow[urr, hook, swap, "f \,=\, \kappa_{\mu}", red]
-& & & &
-C
+	\arrow[urrrr, bend right = 25, swap, "0", blue]
 \end{tikzcd}
 \end{center}
 In order to prove that \,$f$\, is a kernel of \,$\pi_{f}$,\,
@@ -666,8 +657,17 @@ such that \,$\rho = f \circ \theta$.\,
 
 \vskip 0.3cm
 \noindent
-First, we note that, since \,$\mathfrak{C}$\, is normal, the monomorphism \,$f$\, is a kernel of some morphism
-\,$\mu \in \Mor_{\mathfrak{C}}(B,C)$.\,
+By hypothesis, \,$f$\, is a kernel of some morphism \,$\mu \in \Mor_{\mathfrak{C}}(B,C)$.\,
+We write \,$\kappa_{\mu}$\, for kernel of \,$\mu$.\, Hence, \,$f = \kappa_{\mu}$.
+
+\vskip 0.3cm
+\noindent
+\textit{Aside (Plan of Proof):
+Thanks to the universal property of $f = \kappa_{\mu}$ as a kernel of $\mu$,
+a look at the diagram above shows that
+the existence and uniqueness of \,$\theta$ will follow as soon as we establish
+that $\mu \circ \rho = 0$, which in turn follows from the existence of the morphism \,$\varphi$,
+which in turn follows from the universal property of $\pi_{f}$ as a cokernel of $f$.}
 
 \vskip 0.3cm
 \noindent
@@ -710,8 +710,14 @@ This completes the proof of the Lemma.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 1.0cm
+\noindent
+\textbf{\large Images and coimages of morphisms in an arbitrary category}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 0.5cm
-\begin{definition}[Images of a morphisms in a category]
+\begin{definition}[Images and coimages of morphisms in an arbitrary category]
 \mbox{}
 \vskip 0.15cm
 \noindent
@@ -754,6 +760,12 @@ Let \,$\mathfrak{C}$\, be a category, and $f : A \longrightarrow B$ a morphism i
 	\end{itemize}
 \end{itemize}
 \end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\noindent
+\textbf{\large Images of morphisms in a normal category with zero objects and cokernels}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -901,9 +913,34 @@ then the following statements are true:
 	
 	\vskip 0.3cm
 	\noindent
+	\textbf{Claim 6:}\;\; $\varepsilon = \theta \circ \widetilde{f}$.\,
+	\vskip 0.05cm
+	\noindent
+	Proof of Claim 6:\;
+
+	\vskip 0.3cm
+	\noindent
 	We may now conclude that \,$\kappa(\pi_{f})$\, is indeed an image of \,$f$.
 \item
 \end{enumerate}
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}[Image as kernel of cokernel in the category of vector spaces]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Suppose $V$ and $W$ are vector spaces and $f : V \longrightarrow W$ is a linear map.
+Then, we have:
+\begin{center}
+\begin{tikzcd}
+V \arrow[r, "f"] & W \arrow[r, "\pi"] & \textnormal{coker}(f) & \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\! :=\, W/\textnormal{image}(f)
+\end{tikzcd}
+\end{center}
+where $\pi$ is the standard projection map, and
+\,$\textnormal{image}(f) \,=\, \ker(\pi) \,\subset\, W$.
+\end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
