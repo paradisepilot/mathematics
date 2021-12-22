@@ -827,23 +827,23 @@ then the following statements are true:
 	&A
 		\arrow[dr, swap, "f"]
 		\arrow[dd, dashed, swap, "\exists !\,\widetilde{f}{\color{white}.}"]
-		\arrow[drrr, bend left = 155, "0", gray]
+		\arrow[drrr, bend left = 155, "0", cyan]
 		\arrow[dddl, thick, bend right = 50, swap, "\varepsilon", blue]
 	&&& Q_{\mu}
 	\\
 	&& B
-		\arrow[rr, "{\color{white}.....}\pi_{f}"]
+		\arrow[rr, "{\color{white}.....}\pi_{f}", cyan]
 		\arrow[urr, "\pi_{\mu}"]
 	&& Q
-		\arrow[u, thick, dashed, swap, "\;\;\exists !\;q"]
+		\arrow[u, thick, dashed, swap, "\;\;\exists !\;q", cyan]
 	\\
 	& I
-		\arrow[ur, hook, swap, "\!\!\kappa(\pi_{f})", red] 
-		\arrow[urrr, bend right = 150, swap, "0", gray]
-		\arrow[dl, thick, dashed, swap, "\exists !\,\theta", blue]
+		\arrow[ur, hook, swap, "\!\!\kappa(\pi_{f})"] 
+		\arrow[uurrr, bend right = 90, swap, "0", red]
+		\arrow[dl, thick, dashed, swap, "\exists !\,\theta", red]
 	\\
 	{\color{blue}I^{\prime}}
-		\arrow[uurr, thick, hook, bend right = 68, swap, "\mu", blue]
+		\arrow[uurr, thick, hook, bend right = 68, swap, "\mu \,=\, \kappa(\pi_{\mu})", red]
 	\end{tikzcd}
 	\end{center}
 	In order to show that \,$\kappa(\pi_{f})$\, is indeed an image of \,$f$,\,
@@ -916,7 +916,14 @@ then the following statements are true:
 	\textbf{Claim 6:}\;\; $\varepsilon = \theta \circ \widetilde{f}$.\,
 	\vskip 0.05cm
 	\noindent
-	Proof of Claim 6:\;
+	Proof of Claim 6:\; Note that
+	\,$\mu \circ \varepsilon$
+	\,$=$\, $f$
+	\,$=$\, $\mu \circ \theta \circ \widetilde{f}$,\,
+	which implies
+	\,$\varepsilon$ \,$=$\, $\theta \circ \widetilde{f}$,
+	since \,$\mu$\, is a monomorphism and can be cancelled on the left.
+	This proves Claim 6.
 
 	\vskip 0.3cm
 	\noindent
