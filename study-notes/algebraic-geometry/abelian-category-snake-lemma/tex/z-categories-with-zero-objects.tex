@@ -886,7 +886,70 @@ If \,$\iota$\, is a monomorphism, then, for any morphism \,$\kappa \in \Mor_{\ma
 \end{equation*}
 \end{lemma}
 \proof
+Consider the following diagram:
+\begin{center}
+\begin{tikzcd}
+{\color{blue}X}
+	\arrow[dd, thick, dashed, swap, "\exists !\,\theta{\color{white}.}", blue]
+	\arrow[dr, thick, swap, "\rho", blue]
+	\arrow[drrr, bend left = 25, "0", blue]
+	\arrow[drrrrr, bend left = 30, "0", blue]
+\\
+& {\color{red}A}
+	\arrow[rr, thick, "\widetilde{f}{\color{white}..}"]
+	\arrow[rrrr, thick, bend right = 32, swap, "f"]
+&&
+I
+	\arrow[rr, thick, hook, "\iota"]
+&&
+B
+\\
+{\color{red}K}
+	\arrow[ur, swap, "\kappa", red]
+	\arrow[urrr, bend right = 25, swap, "0", gray]
+	\arrow[urrrrr, bend right = 30, swap, "0", gray]
+\end{tikzcd}
+\end{center}
 
+\noindent
+\underline{(\,$\Longrightarrow$\,)}\;\;
+Suppose \,$\kappa \in \Mor_{\mathfrak{C}}(K,A)$\, is a kernel of \,$f$.\,
+We need to show \,$\kappa$\, is also a kernel of \,$\widetilde{f}$\,;\,
+in other words, for each morphism \,$\rho \in \Mor_{\mathfrak{C}}(X,A)$\, such that \,$\widetilde{f} \circ \rho = 0$,\,
+we need to show that there exists a unique morphism \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\,
+such that \,$\rho = \kappa \circ \theta$.\,
+To this end, note that
+\,$\widetilde{f} \circ \rho \,=\, 0$
+\;\;$\Longrightarrow$\;\; $\iota \circ (\,\widetilde{f} \circ \rho\,) \,=\, \iota \circ 0 \,=\, 0$\,
+\;\;$\Longrightarrow$\;\; $(\,\iota \circ \widetilde{f} \,) \circ \rho \,=\, 0$\,
+\;\;$\Longrightarrow$\;\; $f \circ \rho \,=\, 0$.\,
+Thus, by the universal property of \,$\kappa$\, as a kernel of \,$f$,\,
+there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\,
+such that \,$\rho \,=\, \kappa \circ \theta$.\,
+This proves that \,$\kappa$\, is indeed a kernel of \,$\widetilde{f}$.
+
+\vskip 0.4cm
+\noindent
+\underline{(\,$\Longleftarrow$\,)}\;\;
+Conversely, suppose \,$\kappa \in \Mor_{\mathfrak{C}}(K,A)$\, is a kernel of \,$\widetilde{f}$.\,
+We need to show \,$\kappa$\, is also a kernel of \,$f$\,;\,
+in other words, for each morphism \,$\rho \in \Mor_{\mathfrak{C}}(X,A)$\, such that \,$f \circ \rho = 0$,\,
+we need to show that there exists a unique morphism \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\,
+such that \,$\rho = \kappa \circ \theta$.\,
+To this end, note that
+\,$f \circ \rho \,=\, 0$
+\;\;$\Longleftrightarrow$\;\; $(\,\iota \,\circ\, \widetilde{f} \,) \,\circ\, \rho \,=\, 0$\,
+\;\;$\Longrightarrow$\;\; $\iota \,\circ\, (\,\widetilde{f} \,\circ\, \rho\,) \,=\, 0 \,=\, \iota \,\circ\, 0$\,
+\;\;$\Longrightarrow$\;\; $\widetilde{f} \,\circ\, \rho \,=\, 0$,\,
+since \,$\iota$\, is by hypothesis a monomorphism and can be cancelled on the left.
+Thus, by the universal property of \,$\kappa$\, as a kernel of \,$\widetilde{f}$,\,
+there exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,K)$\,
+such that \,$\rho \,=\, \kappa \circ \theta$.\,
+This proves that \,$\kappa$\, is indeed a kernel of \,$f$.
+
+\vskip 0.4cm
+\noindent
+This completes the proof of the Lemma.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
