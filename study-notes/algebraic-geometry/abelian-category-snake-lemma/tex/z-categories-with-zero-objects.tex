@@ -23,7 +23,7 @@ in order to define the notions of kernels and cokernels of morphisms
 
 \vskip 0.5cm
 \noindent
-\textbf{\large Basic category-theoretic notions}
+\textbf{\large Basic category-theoretic notions and results}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -130,9 +130,20 @@ Let \,$\mathfrak{C}$\, be a category, and $f : A \longrightarrow B$ a morphism i
 		there exists a unique $\theta \in \Mor_{\mathfrak{C}}(I,I^{\prime})$ such that the following diagram commutes:
 		\begin{center}
 		\begin{tikzcd}
-		A \arrow[rr, "f"] \arrow[dr, swap, "\nu"] \arrow[ddr, bend right, swap, "\nu^{\prime}"] && B \\
-		& {\color{red}I} \arrow[ur, hook, swap, "\iota", red] \arrow[d, dashed, "\;\exists ! \, \theta"] & \\
-		& I^{\prime} \arrow[uur, bend right, hook, swap, "\iota^{\prime}"] &
+		A
+			\arrow[rr, "f"]
+			\arrow[dr, swap, "\nu"]
+			\arrow[ddr, bend right, swap, "\nu^{\prime}"]
+		&&
+		B
+		\\
+		& {\color{red}I}
+			\arrow[ur, hook, swap, "\iota", red]
+			\arrow[d, dashed, "\;\exists ! \, \theta"]
+		\\
+		& I^{\prime}
+			\arrow[uur, bend right, hook, swap, "\iota^{\prime}"]
+		&
 		\end{tikzcd}
 		\end{center}
 	\end{itemize}
@@ -166,6 +177,274 @@ Let \,$\mathfrak{C}$\, be a category, and $f : A \longrightarrow B$ a morphism i
 	\end{itemize}
 \end{itemize}
 \end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Equalizer]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let $\mathfrak{C}$ be a category, $A, B \in \Obj(\mathfrak{C})$, and $f, g \in \Mor_{\mathfrak{C}}(A,B)$.
+\vskip 0.1cm
+\noindent
+An \textbf{equalizer} of $f$ and $g$ is a morphism $\gamma \in \Mor_{\mathfrak{C}}(E,A)$ such that
+\begin{itemize}
+\item
+	$f \circ \gamma = g \circ \gamma$, and
+\item
+	for each morphism $q \in \Mor_{\mathfrak{C}}(X,A)$ satisfying \,$f \circ q = g \circ q$,\,
+	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(X,E)$ such that
+	$q = \gamma \circ \theta$.
+	\begin{center}
+	\begin{tikzcd}
+	{\color{red}E}
+		\arrow[rr, "\gamma", red]
+	&&
+	A
+		\arrow[rr, shift left, "f"]
+		\arrow[rr, shift right, swap, "g"]
+	&&
+	B
+	\\
+	&
+	X
+		\arrow[ur, swap, "q"]
+		\arrow[ul, dashed, "\exists !\;\theta"]
+	\end{tikzcd}
+	\end{center}
+\end{itemize}
+The category $\mathfrak{C}$ is said to be \textbf{with equalizers}
+if an equalizer exists for each pair of morphisms with the same domain and codomain.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{lemma}\label{EqualizersAreMonomorphisms}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Every equalizer is a monomorphism.
+\end{lemma}
+\proof
+Let $\mathfrak{C}$ be an arbitrary category, $A, B \in \Obj(\mathfrak{C})$, $f, g \in \Mor_{\mathfrak{C}}(A,B)$, and
+$\gamma \in \Mor_{\mathfrak{C}}(E,A)$ be an equalizer of $f$ and $g$.
+We need to show that $\gamma$ is a monomorphism, i.e.,
+for every pair of morphisms $h_{1}, h_{2} \in \Mor_{\mathfrak{C}}(X,E)$
+satisfying \,$\gamma \circ h_{1} = \gamma \circ h_{2}$,\,
+we in fact must have: $h_{1} = h_{2}$.
+
+\vskip 0.3cm
+\noindent
+To this end, define \,$q \,:=\, \gamma \circ h_{1} \,=\, \gamma \circ h_{2}$.\,
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\; $f \circ q \,=\, f \circ q$.
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;
+Note: $f \circ q \,=\, f \circ (\gamma \circ h_{1}) \,=\, (f \circ \gamma) \circ h_{1} \,=\, (g \circ \gamma) \circ h_{1} \,=\, g \circ (\gamma \circ h_{1}) \,=\, g \circ q$, as required.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\;\; There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(X,E)$\, such that \,$q = \gamma \circ \theta$.
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;
+This follows immediately from two facts:
+(a)	\,$f \circ q \,=\, f \circ q$ (Claim 1), and
+(b)	the universal property of \,$\gamma$\, as an equalizer of $f$ and $g$.
+\begin{center}
+\begin{tikzcd}
+{\color{red}E}
+	\arrow[rr, "\gamma", red]
+&&
+A
+	\arrow[rr, shift left, "f"]
+	\arrow[rr, shift right, swap, "g"]
+&&
+B
+\\
+&
+X
+	\arrow[ur, swap, "q"]
+	\arrow[ul, dashed, "\exists !\;\theta"]
+\end{tikzcd}
+\end{center}
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\;\;  $h_{1} \,=\, \theta \,=\, h_{2}$
+\vskip 0.1cm
+\noindent
+Proof of Claim 3:\;
+Recall that \,$q \,:=\, \gamma \circ h_{1} \,=\, \gamma \circ h_{2}$.\,
+Hence, we have the following augmented commutative diagram:
+\begin{center}
+\begin{tikzcd}
+{\color{red}E}
+	\arrow[rr, "\gamma", red]
+&&
+A
+	\arrow[rr, shift left, "f"]
+	\arrow[rr, shift right, swap, "g"]
+&&
+B
+\\
+&
+X
+	\arrow[ur, "q"]
+	\arrow[ul, dashed, "\exists !\;\theta"]
+	\arrow[dr, shift left, "h_{1}", blue]
+	\arrow[dr, shift right, swap, "h_{2}", blue]
+\\
+&&
+{\color{blue}E}
+	\arrow[uu, swap, "\gamma", blue]
+\end{tikzcd}
+\end{center}
+Now, note that in the above diagram,
+$\theta$ can be replaced with either $h_{1}$ or $h_{2}$ while maintaining commutativity of the diagram.
+Therefore, the uniqueness of $\theta$ implies: $h_{1} = \theta = h_{2}$.
+This proves Claim 3, as well as completes the proof of the Lemma.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{lemma}\label{fTildeIsEpimorphism}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let $\mathfrak{C}$ be a category, $A, B \in \Obj(\mathfrak{C})$, and $f \in \Mor_{\mathfrak{C}}(A,B)$.
+\vskip 0.1cm
+\noindent
+If
+\begin{itemize}
+\item
+	$\mathfrak{C}$ is a category with equalizers,
+\item
+	$f \,=\, \iota \circ \widetilde{f}$, where $\iota$ is an image of $f$,
+\end{itemize}
+then: \,$\widetilde{f}$\, is an epimorphism.
+\end{lemma}
+\proof
+Suppose \,$g_{1} \circ \widetilde{f} \,=\, g_{2} \circ \widetilde{f}$,\,
+where \,$g_{1}, g_{2} \in \Mor_{\mathfrak{C}}(I,C)$.\,
+We need to prove that \,$g_{1} \,=\, g_{2}$.\,
+\vskip 0.3cm
+\noindent
+Since $\mathfrak{C}$ is a category with equalizers,
+we may fix an equalizer \,$\gamma \in \Mor_{\mathfrak{C}}(E,I)$\, of \,$g_{1}$\, and \,$g_{2}$.
+\begin{center}
+\begin{tikzcd}
+&
+A
+	\arrow[rr, "f"]
+	\arrow[dr, "\widetilde{f}"]
+	\arrow[dl, dashed, swap, "\exists !\; \theta", red]
+&&
+B
+\\
+E
+	\arrow[rr, thick, hook, "\gamma"]
+&&
+I
+	\arrow[ur, hook, swap, "\iota"]
+	\arrow[dr, shift left, "g_{1}"]
+	\arrow[dr, shift right, swap, "g_{2}"]
+	\arrow[ll, thick, dashed, bend left = 50, "\exists ! \; \varphi", blue]
+\\
+&&&
+C
+\end{tikzcd}
+\end{center}
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;\; There exists a unique \,$\theta \in \Mor_{\mathfrak{C}}(A,E)$\, such that \,$\widetilde{f} \,=\, \gamma \circ \theta$.
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\; This follows immediately from the hypothesis that
+\,$g_{1} \circ \widetilde{f} \,=\, g_{2} \circ \widetilde{f}$,\,
+and the universal property of \,$\gamma$\, as an equalizer of \,$f$\, and \,$g$.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\;\; There exists a unique \,$\varphi \in \Mor_{\mathfrak{C}}(I,E)$\, such that
+\,$\theta \,=\, \varphi \circ \widetilde{f}$\,
+and
+\,$\iota \,=\, \iota \circ \gamma \circ \varphi$.\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\; 
+By Lemma \ref{EqualizersAreMonomorphisms}, we see that \,$\gamma$\, is a monomorphism,
+hence, $\iota \circ \gamma$ is itself a monomorphism, being a composition of two monomorphisms.
+Claim 2 now follows immediately from the fact that
+\,$f \,=\, (\iota \circ \gamma) \circ \theta$,\,
+with \,$\iota \circ \gamma$\, being a monomphism,
+and the universal property of \,$\iota$\, as an image of \,$f$.\,
+See the following diagram:
+\begin{center}
+\begin{tikzcd}
+A
+	\arrow[rr, "f"]
+	\arrow[dr, swap, "\widetilde{f}"]
+	\arrow[ddr, dashed, bend right, swap, "\theta", red]
+&&
+B
+\\
+& I
+	\arrow[ur, hook, swap, "\iota"]
+	\arrow[d, dashed, "\;\exists ! \, \varphi", blue]
+\\
+& E
+	\arrow[uur, bend right, hook, swap, "\,\iota\,\circ\,\gamma"]
+&
+\end{tikzcd}
+\end{center}
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\;\; $\gamma \circ \varphi \,=\, 1_{I}$\, and \,$\varphi \circ \gamma \,=\, 1_{E}$;
+hence, \,$\gamma$\, and \,$\varphi$\, are isomorphisms and are inverses of each other.
+\vskip 0.1cm
+\noindent
+Proof of Claim 3:\;  Note:
+\,$\iota \circ (\,\gamma \circ \varphi\,)$
+\;$=$\; $(\,\iota \circ \gamma\,) \circ \varphi$
+\;$=$\; $\iota$
+\;$=$\; $\iota \circ 1_{I}$,\,
+which implies
+\,$\gamma \circ \varphi \,=\, 1_{I}$,\,
+since the image \,$\iota$\, is a monomorphism and can be cancelled on the left.
+This proves the first equality.
+For the second equality, note:
+\,$\gamma \circ 1_{E}$
+\;$=$\; $\gamma$
+\;$=$\; $1_{I} \circ \gamma$
+\;$=$\; $(\,\gamma \circ \varphi\,) \circ \gamma$
+\;$=$\; $\gamma \circ (\,\varphi \circ \gamma\,)$,\,
+which implies
+\,$1_{E} \,=\, \varphi \circ \gamma$,\,
+since \,$\gamma$\, is a monomorphism (being an equalizer; see Lemma \ref{EqualizersAreMonomorphisms}).
+
+\vskip 0.4cm
+\noindent
+\textbf{Claim 4:}\;\; $g_{1} \,=\, g_{2}$.
+\vskip 0.1cm
+\noindent
+Proof of Claim 4:\;  Recall that \,$\gamma$\, is an equalizer of \,$g_{1}$\, and \,$g_{2}$.\,
+Hence, we have: \,$g_{1} \circ \gamma \,=\, g_{2} \circ \gamma$.\,
+By Claim 3, \,$\gamma$\, is an isomorphism, and hence can be cancelled on the right,
+which yields \,$g_{1} \,=\, g_{2}$,\, as required.
+
+\vskip 0.3cm
+\noindent
+The proof of the present Lemma is complete.
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -1090,7 +1369,7 @@ then the following statements are true:
 		\arrow[uurrrr, bend right = 51, swap, "0", red]
 	\end{tikzcd}
 	\end{center}
-	First, \,$\widetilde{f}$\, is an epimorphism, by Lemma ???? and
+	First, \,$\widetilde{f}$\, is an epimorphism, by Lemma \ref{fTildeIsEpimorphism} and
 	the hypothesis that \,{\color{red}$\mathfrak{C}$\, has equalizers}.
 
 	\vskip 0.3cm
