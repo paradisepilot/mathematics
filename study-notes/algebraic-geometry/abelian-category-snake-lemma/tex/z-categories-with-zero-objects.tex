@@ -867,6 +867,32 @@ This completes the proof of the Proposition.
 
 \vskip 0.5cm
 \begin{lemma}[A kernel in a category with zero objects is the kernel of its own cokernel + dual]
+\label{CompositionOnTheLeftByAMonomorphismPreservesKernels}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category with zero objects,
+\,$f \in \Mor_{\mathfrak{C}}(A,B)$,\,
+\,$\widetilde{f} \in \Mor_{\mathfrak{C}}(A,I)$,\,
+\,$\iota \in \Mor_{\mathfrak{C}}(I,B)$,\,
+and \,$f \,=\, \iota \circ \widetilde{f}$.
+\vskip 0.1cm
+\noindent
+If \,$\iota$\, is a monomorphism, then, for any morphism \,$\kappa \in \Mor_{\mathfrak{C}}(K,A)$,
+\begin{equation*}
+\textnormal{$\kappa$\, is a kernel of \,$f$}
+\quad\Longleftrightarrow\quad 
+\textnormal{$\kappa$\, is a kernel of \,$\widetilde{f}$}
+\end{equation*}
+\end{lemma}
+\proof
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{lemma}[A kernel in a category with zero objects is the kernel of its own cokernel + dual]
 \label{AKernelsTheKernelOfItsOwnCokernel}
 \mbox{}
 \vskip 0.1cm
@@ -1221,7 +1247,7 @@ then the following statements are true:
 \item
 	If, in addition, $\mathfrak{C}$ has equalizers, then $\widetilde{f}$ is a coimage of $f$.
 \item
-	If, in addition, $\mathfrak{C}$ is
+	If, in addition, $\mathfrak{C}$ has kernels and is
 	conormal\,\footnote{A category is said to be \textbf{conormal} if every epimorphism in it is a cokernel.},
 	then $\widetilde{f}$ is a cokernel of a kernel of $f$.
 \end{enumerate}
@@ -1425,12 +1451,22 @@ then the following statements are true:
 	This completes the proof that \,$\widetilde{f}$\, is a coimage of \,$f$.
 
 \item
-	We have established that $\widetilde{f}$ is an epimorphism.
-	Here, we have assumed the additional hypothesis that $\mathfrak{C}$ is a conormal category.
-	Hence, $\widetilde{f}$ is a cokernel of some morphism $g$.
+	We have already established that $\widetilde{f}$ is an epimorphism.
 	
-	So, it remains only to prove that $g$ is a kernel of $f$.
+	Here, we are assuming the additional hypothesis that $\mathfrak{C}$ has kernels and is a conormal category.
+	Consequently, a kernel \,$\kappa_{\widetilde{f}}$\, of \,$\widetilde{f}$\, exists, and
+	\,$\widetilde{f}$\, is a cokernel of some morphism.
+	
+	By Lemma \ref{AKernelsTheKernelOfItsOwnCokernel},
+	\,$\widetilde{f}$\, is a cokernel of \,$\kappa_{\widetilde{f}}$.
+	
+	So, to complete the proof, it remains only to prove that \,$\kappa_{\widetilde{f}}$\, is in fact also a kernel of $f$.
+	
+	But this last fact follows immediately by Lemma \ref{CompositionOnTheLeftByAMonomorphismPreservesKernels},
+	since \,$f \,=\, \kappa(\pi_{f}) \circ \widetilde{f}$,\, with \,$\kappa(\pi_{f})$\, a monomorphism.
 \end{enumerate}
+\vskip 0.3cm
+This completes the proof of the Proposition.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
