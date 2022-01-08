@@ -1261,6 +1261,78 @@ Then, \,$\kappa_{f}$\, is a kernel of \,$\pi(\kappa_{f})$.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{lemma}\label{CokernelOfAnIsomorphismIsZero}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Every cokernel of an isomorphism is a zero morphism.
+\end{lemma}
+\proof
+Let
+\,$X \,\overset{h}{\longrightarrow}\, Y$\,
+be an isomorphism, with inverse
+\,$Y \,\overset{h^{-1}}{\longrightarrow}\, X$.\,
+
+\vskip 0.4cm
+\noindent
+\textbf{Claim 1:}\quad
+If a morphism \,$Y \,\overset{\sigma}{\longrightarrow}\, Z$\, satisfies \,$\sigma \circ h = 0$,\,
+then \,$\sigma$\, is a zero morphism.
+\vskip 0.2cm
+\noindent
+Proof of Claim 1:\;\;
+Simply observe that
+\begin{equation*}
+\sigma
+\;\; = \;\;
+	\sigma \circ 1_{Y}
+\;\; = \;\;
+	\sigma \circ \left(\,h \overset{{\color{white}!}}{\circ} h^{-1}\right)
+\;\; = \;\;
+	 \left(\, \sigma \overset{{\color{white}!}}{\circ} h \,\right) \circ h^{-1}
+\;\; = \;\;
+	 0 \circ h^{-1}
+\;\; = \;\;
+	 0
+\end{equation*}
+This proves Claim 1.
+
+\vskip 0.4cm
+\noindent
+Now, in the following diagram, we set
+\,$Y \,\overset{\pi_{h}}{\longrightarrow} Q_{h}$\,
+to be the zero morphism:
+\begin{center}
+\begin{tikzcd}
+X
+	\arrow[rr, swap, "h"]
+	\arrow[drrrr, bend right = 17, swap, "0", gray]
+&&
+Y
+	\arrow[ll, bend right = 30, swap, "h^{-1}"]
+	\arrow[rr, "\pi_{h}", red]
+	\arrow[drr, swap, "\sigma"]
+&&
+{\color{red}Q_{h}}
+	\arrow[d, dashed, "\exists !\,\theta", red]
+\\
+&&&&
+Z
+\end{tikzcd}
+\end{center}
+For any morphism
+\,$Y \,\overset{\sigma}{\longrightarrow}\, Z$\, satisfying \,$\sigma \circ h = 0$,\,
+we have by Claim 1 that \,$\sigma = 0$.
+Consequently, there exists a unique morphism \,$\theta$\, that makes the above diagram
+commute for the given \,$\sigma$,\, namely, $\theta = 0$ (since $\sigma = 0$).
+This proves that the zero morphism \,$Y \,\overset{0}{\longrightarrow}\, 0$\, is a cokernel of $h$.
+Since cokernels are unique up to isomorphism, and compositions with zero morphisms are themselves zero morphisms,
+we may now conclude that every cokernel of \,$h$\, is a zero morphism, as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 1.0cm
 \noindent
 \textbf{\large Images of morphisms in a normal category with zero objects and cokernels}
@@ -1268,7 +1340,7 @@ Then, \,$\kappa_{f}$\, is a kernel of \,$\pi(\kappa_{f})$.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{proposition}[Lemma 14.4, p.17, \cite{Mitchell1965}]
+\begin{proposition}[Lemma 14.4, p.17, \cite{Mitchell1965}]\label{FactorizationIntoImageCoimage}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1551,5 +1623,179 @@ V \arrow[r, "f"] & W \arrow[r, "\pi"] & \textnormal{coker}(f) & \!\!\!\!\!\!\!\!
 where $\pi$ is the standard projection map, and
 \,$\textnormal{image}(f) \,=\, \ker(\pi) \,\subset\, W$.
 \end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\noindent
+\textbf{\large Homology of two morphisms that compose to zero in a category with zero objects}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}\label{propositionHomology}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category with zero objects,
+%\,$A, B,C \in \Obj(\mathfrak{C})$,\,
+\,$f \in \Mor_{\mathfrak{C}}(A,B)$,\,
+\,$g \in \Mor_{\mathfrak{C}}(B,C)$,\, such that
+\,$g \circ f = 0 \in \Mor_{\mathfrak{C}}(A,C)$.\,
+\vskip 0.1cm
+\noindent
+Suppose the category \,$\mathfrak{C}$\,
+\begin{itemize}
+\item
+	has kernels, cokernels, equalizers, and
+\item
+	is normal and conormal.
+\end{itemize}
+Let
+\begin{itemize}
+\item
+	$\pi_{f}$\, be a cokernel of \,$f$,
+\item
+	$\kappa(\pi_{f})$\, a kernel of \,$\pi_{f}$, and
+\item
+	$\kappa_{g}$\, a kernel of \,$g$.
+\end{itemize}
+Then,
+\begin{enumerate}
+\item
+	there exists a unique morphism \,$\varepsilon_{f} \in \Mor_{\mathfrak{C}}(A,I_{f})$\,
+	such that \,$f \,=\, \kappa(\pi_{f}) \circ \varepsilon_{f}$,\, and
+\item
+	the morphism \,$\varepsilon_{f}$\, is a coimage of \,$f$,\, and
+	it is a cokernel of a kernel of \,$f$,\, and
+\item
+	there exists a unique morphism \,$\theta \in \Mor_{\mathfrak{C}}(I_{f},K_{g})$\,
+	such that \,$\kappa(\pi_{f}) \,=\, \kappa_{g} \circ \theta$.
+\end{enumerate}
+\begin{center}
+\begin{tikzcd}
+&& && Q_{f}
+	\arrow[dd, dashed, "\psi"]
+\\ \\
+A
+	\arrow[rr, "f"]
+	\arrow[dd, thick, dashed, two heads, swap, "\varepsilon_{f}", blue]
+	\arrow[rrrr, bend left = 30, "0", gray]
+&&
+B
+	\arrow[rr, "g"]
+	\arrow[uurr, two heads, "\pi_{f}"]
+&&
+C
+\\ \\
+I_{f}
+	\arrow[uurr, hook, "\kappa(\pi_{f})"]
+	\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+&&
+K_{g}
+	\arrow[uu, hook, swap, "\kappa_{g}"]
+\end{tikzcd}
+\end{center}
+\end{proposition}
+\proof
+Note that \,(i)\, and \,(ii)\, are immediate consequences of Proposition \ref{FactorizationIntoImageCoimage}.
+Thus, we need only prove \,(iii).\,
+To this end, note that, by the universal property of \,$\kappa_{g}$\, as a kernel of \,$g$,\,
+the desired unique morphism \,$\theta$\, will exist provided that \,$g \circ \kappa(\pi_{f}) = 0$,\,
+which in turn easily follows from:
+\begin{equation*}
+g \circ \kappa(\pi_{f})
+\;\; = \;\;
+	\left(\,\psi \overset{{\color{white}!}}{\circ} \pi_{f}\,\right) \circ \kappa(\pi_{f})
+\;\; = \;\;
+	\psi \circ \left(\,\pi_{f} \overset{{\color{white}!}}{\circ} \kappa(\pi_{f})\,\right)
+\;\; = \;\;
+	\psi \circ 0
+\;\; = \;\;
+	0
+\end{equation*}
+This completes the proof of the Proposition.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Exactness and homology of two morphisms composing to zero]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\mathfrak{C}$\, is a category which has zero objects, kernels, cokernels, equalizers, and which is normal and conormal.
+\item
+	$f \in \Mor_{\mathfrak{C}}(A,B)$,\, and \,$g \in \Mor_{\mathfrak{C}}(B,C)$,\,
+	are such that
+	\,$g \circ f = 0 \in \Mor_{\mathfrak{C}}(A,C)$.\,
+\end{itemize}
+Let the entities in the following (commutative) diagram be as described in Proposition \ref{propositionHomology}:
+\begin{center}
+\begin{tikzcd}
+&& && Q_{f}
+	\arrow[dd, dashed, "\psi"]
+\\ \\
+A
+	\arrow[rr, "f"]
+	\arrow[dd, dashed, two heads, swap, "\varepsilon_{f}"]
+	\arrow[rrrr, bend left = 30, "0", gray]
+&&
+B
+	\arrow[rr, "g"]
+	\arrow[uurr, two heads, "\pi_{f}"]
+&&
+C
+\\ \\
+I_{f}
+	\arrow[uurr, hook, "\kappa(\pi_{f})"]
+	\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+&&
+K_{g}
+	\arrow[uu, hook, swap, "\kappa_{g}"]
+	\arrow[rr, thick, two heads, "\pi_{\theta}", red]
+&&
+Q_{\theta}
+\end{tikzcd}
+\end{center}
+Then, we make the following definitions:
+\begin{itemize}
+\item
+	The composition
+	\,$A \,\overset{f}{\longrightarrow}\, B \,\overset{g}{\longrightarrow}\, C$\,
+	is said to be \,\textbf{exact}\, (or, \,\textbf{exact at $B$}) if
+	\,$\theta$\, is an isomorphism.
+\item
+	A \,\textbf{homology morphism}\, of the composition
+	\,$A \,\overset{f}{\longrightarrow}\, B \,\overset{g}{\longrightarrow}\, C$\,
+	is any cokernel \,$\pi_{\theta}$\, of \,$\theta$.
+\item
+	A \,\textbf{homology object}\, of
+	\,$A \,\overset{f}{\longrightarrow}\, B \,\overset{g}{\longrightarrow}\, C$\,
+	is the codomain \,$Q_{\theta}$
+	of any homology morphism \,$K_{g}\,\overset{\pi_{\theta}}{\longrightarrow}\,Q_{\theta}$\,
+	of
+	\,$A \,\overset{f}{\longrightarrow}\, B \,\overset{g}{\longrightarrow}\, C$.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+If the composition
+\,$A \,\overset{f}{\longrightarrow}\, B \,\overset{g}{\longrightarrow}\, C$\,
+is exact, then its homology morphism is a zero morphism.
+\end{remark}
+\proof
+Immediately by Lemma \ref{CokernelOfAnIsomorphismIsZero} (that every cokernel of an isomorphism is a zero morphism).
+\qed
+
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
