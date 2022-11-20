@@ -1,0 +1,134 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The spectrum of a bounded linear operator on a Hilbert space}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}\mbox{}
+\vskip 0.1cm
+\noindent
+Let $H$ be a Hilbert space over $\C$, $B(H)$ the vector space of bounded linear operators on $H$.
+For each $T \in B(H)$,
+\begin{itemize}
+\item
+	the \textbf{point spectrum} \,$\sigma_{\textnormal{pt}}(\,T\,)$\, of $T$ is defined as follows:
+	\begin{equation*}
+	\sigma_{\textnormal{pt}}(\,\overset{{\color{white}.}}{T}\,)
+	\;\; := \;\;
+		\left\{\;
+			\left.
+				\lambda \overset{{\color{white}1}}{\in} \C
+		\;\;\right\vert\;\,
+			\lambda \;\;\textnormal{is an eigenvalue of $T$}
+			\;\right\}
+	\;\; = \;\;
+		\left\{\;
+			\left.
+				\lambda \overset{{\color{white}1}}{\in} \C
+		\;\;\right\vert\;\,
+			\ker\!\left(\,T \overset{{\color{white}.}}{-} \lambda \cdot \textnormal{id}_{H}\,\right) \neq \{\,0\,\}
+			\;\right\},
+	\end{equation*}
+\item
+	the \textbf{spectrum} \,$\sigma(\,T\,)$\, of $T$ is defined as follows:
+	\begin{equation*}
+	\sigma(\,\overset{{\color{white}.}}{T}\,)
+	\;\; := \;\;
+		\left\{\;
+			\left.
+				\lambda \overset{{\color{white}1}}{\in} \C
+		\;\;\right\vert\;\,
+			T - \lambda \cdot \textnormal{id}_{H} \;\;\textnormal{is not invertible}
+			\;\right\},
+	\;\textnormal{and}
+	\end{equation*}
+\item
+	the \textbf{resolvent set} \,$\rho(\,T\,)$\, of $T$ is the complement in $\C$ of $\sigma(\,T\,)$, i.e.,
+	\begin{equation*}
+	\rho\,\overset{{\color{white}.}}{T}\,)
+	\;\; := \;\;
+		\C \left\backslash \sigma(\,\overset{{\color{white}.}}{T}\,)\right.
+	\;\; = \;\;
+		\left\{\;
+			\left.
+			\lambda \overset{{\color{white}1}}{\in} \C
+			\;\;\right\vert\;\,
+			T - \lambda \cdot \textnormal{id}_{H} \;\;\textnormal{is invertible}
+			\;\right\}
+	\end{equation*}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}\mbox{}
+\vskip 0.1cm
+\noindent
+Let $H$ be a Hilbert space over $\C$, and $B(H)$ the vector space of bounded linear operators on $H$.
+Then, for each $T \in B(H)$, the following statements are true:
+\begin{enumerate}
+\item
+	$\sigma_{\textnormal{pt}}(\,T\,) \,\subset\, \sigma(\,T\,)$.
+\item
+	$\sigma(\,T\,) \subset \C$ is a closed subset of $\C$.
+\item
+	\begin{equation*}
+	\sigma(\,T\,)
+	\;\; \subset \;\;
+		\left\{\;
+			\left.
+			\lambda \overset{{\color{white}1}}{\in} \C
+			\;\;\,\right\vert\;\,
+			\vert\,\lambda\,\vert \leq \Vert\,T\,\Vert
+			\;\right\}
+	\end{equation*}
+\item
+	\begin{equation*}
+	\sigma(\,T^{*}\,)
+	\;\; = \;\;
+		\left\{\;
+			\left.
+			\overline{\lambda} \overset{{\color{white}1}}{\in} \C
+			\;\;\,\right\vert\;\,
+			\lambda \in \sigma(\,T\,)
+			\;\right\}
+	\end{equation*}
+\item
+	\begin{equation*}
+	\sigma(\,T^{-1}\,)
+	\;\; = \;\;
+		\left\{\;
+			\left.
+			\frac{1}{\lambda} \overset{{\color{white}1}}{\in} \C
+			\;\;\,\right\vert\;\,
+			\lambda \in \sigma(\,T\,)
+			\;\right\},
+	\;\;\textnormal{whenever $T$ is invertible (which implies $0 \notin \sigma(\,T\,)$)}
+	\end{equation*}
+\item
+	\begin{equation*}
+	\sigma(\,p(T)\,)
+	\;\; = \;\;
+		\left\{\;
+			\left.
+			p(\lambda) \overset{{\color{white}1}}{\in} \C
+			\;\;\,\right\vert\;\,
+			\lambda \in \sigma(\,T\,)
+			\;\right\},
+	\;\;\textnormal{where $p(\,\cdot\,)$ is a polynomial with coefficients in $\C$}
+	\end{equation*}
+\end{enumerate}
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
