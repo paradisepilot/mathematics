@@ -1,0 +1,53 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Compact linear maps between normed vector spaces}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}\mbox{}
+\vskip 0.1cm
+\noindent
+Let $X$ and $Y$ be normed vector spaces, and $T : X \longrightarrow Y$ a linear map from $X$ into $Y$.
+$T$ is said to be \textbf{compact} if the image under $T$ of every bounded subset of $X$ has compact closure in $Y$.
+The set of compact linear maps from $X$ into $Y$ is denoted by $K(X,Y)$.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}\mbox{}
+\vskip 0.1cm
+\noindent
+Let $X$ and $Y$ be normed vector spaces over $\F = \Re \;\textnormal{or}\; \C$,
+$B(X,Y)$ the vector space of bounded linear maps from $X$ into $Y$,
+and $K(X,Y)$ that of compact linear maps from $X$ into $Y$.
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	$K(X,Y)$ is a vector subspace of $B(X,Y)$.
+\item
+	If $\dim X < \infty$ or $\dim Y < \infty$, then $K(X,Y) = B(X,Y)$.
+\item
+	For each $T \in K(X,Y)$, \;$\image(T)$ and \,$\overline{\image(T)}$ are separable.
+\item
+	If $\dim X = \infty$, then \,$\textnormal{id}_{X} \in B(X) := B(X,X)$ is not compact.
+\item
+	If $\dim X = \infty$, then $T$ is not invertible, for each $T \in K(X) := K(X,X)$.
+\item
+	If $Y$ is Banach, then $B(X,Y)$ is Banach.
+\item
+	If $Y$ is Banach, then $K(X,Y)$ is a closed subspace of $B(X,Y)$, and hence $K(X,Y)$ is Banach.
+\end{enumerate}
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
