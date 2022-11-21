@@ -35,19 +35,38 @@ Let $H$ be a Hilbert space over $\C$, and $K(H)$ the vector space of compact lin
 Then, for each $T \in K(H)$, the following statements are true:
 \begin{enumerate}
 \item
+	$\image(T)$\, and \,$\overline{\image(T)}$\, are separable.
+%\item
+%	For each $\lambda \in \C \left\backslash\{\,0\,\}\right.$,
+%	\begin{equation*}
+%	\dim\ker\!\left(\,T \overset{{\color{white}.}}{-} \lambda\cdot\textnormal{id}_{H}\,\right) < \infty,
+%	\quad\textnormal{and}\quad
+%	\image\!\left(\,T \overset{{\color{white}.}}{-} \lambda\cdot\textnormal{id}_{H}\,\right)\;\;\textnormal{is closed}
+%	\end{equation*}
+\item
+	For each $\lambda \in \C \left\backslash\{\,0\,\}\right.$, we have:
+	\begin{itemize}
+	\item
+		$\image\!\left(\,T \overset{{\color{white}.}}{-} \lambda\cdot\textnormal{id}_{H}\,\right)$\, is closed,
+	\item
+		$\dim\ker\!\left(\,T \overset{{\color{white}.}}{-} \lambda\cdot\textnormal{id}_{H}\,\right)$
+		$=$
+		$\dim\ker\!\left(\,T^{*} \overset{{\color{white}.}}{-} \overline{\lambda}\cdot\textnormal{id}_{H}\,\right)$
+		$<$ $\infty$,
+	\item
+		%\begin{equation*}
+		either\;\;
+		$(\,\lambda\,, \overline{\lambda}\,) \,\in\, \rho(\,T\,) \times \rho(T^{*})$		\;\; or \;\;
+		$(\,\lambda\,, \overline{\lambda}\,) \,\in\, \sigma_{\textnormal{pt}}(\,T\,) \times \sigma_{\textnormal{pt}}(T^{*})$
+		%\end{equation*}
+	\end{itemize}
+\item
 	If \,$\dim H = \infty$,\, then \,$0 \in \sigma(\,T\,)$.
 \item
 	If \,$H$\, is not separable, then \,$0 \in \sigma_{\textnormal{pt}}(\,T\,)$.
 \item
 	If \,$H$\, is separable, then either \,$0 \in \sigma_{\textnormal{pt}}(\,T\,)$,\, or
 	\,$0 \in \sigma(\,T\,) \left\backslash \sigma_{\textnormal{pt}}(\,\overset{{\color{white}.}}{T}\,)\right.$.
-\item
-	For each $\lambda \in \C \left\backslash\{\,0\,\}\right.$,
-	\begin{equation*}
-	\dim\ker\!\left(\,T \overset{{\color{white}.}}{-} \lambda\cdot\textnormal{id}_{H}\,\right) < \infty,
-	\quad\textnormal{and}\quad
-	\image\!\left(\,T \overset{{\color{white}.}}{-} \lambda\cdot\textnormal{id}_{H}\,\right)\;\;\textnormal{is closed}
-	\end{equation*}
 \item
 	For each real $r > 0$, the set of distinct eigenvalues $\lambda \in \C$ of $T$
 	satisfying \,$\vert\,\lambda\,\vert \geq r$\, is finite.
@@ -56,21 +75,6 @@ Then, for each $T \in K(H)$, the following statements are true:
 \item
 	$0 \in \C$\, is the only possible accumulation point of \,$\sigma_{\textnormal{pt}}(\,T\,)$;\,
 	in other words, every infinite sequence of distinct eigenvalues of \,$T$\, converges to \,$0 \in \C$.
-\item
-	If \,$T$\, is compact, then, for each $\lambda \in \C \left\backslash\{\,0\,\}\right.$, we have:
-	\begin{itemize}
-	\item
-		$\dim\ker\!\left(\,T \overset{{\color{white}.}}{-} \lambda\cdot\textnormal{id}_{H}\,\right)$
-		$=$
-		$\dim\ker\!\left(\,T^{*} \overset{{\color{white}.}}{-} \overline{\lambda}\cdot\textnormal{id}_{H}\,\right)$
-		$<$ $\infty$,\, and
-	\item
-		%\begin{equation*}
-		either\;\;
-		$(\,\lambda\,, \overline{\lambda}\,) \,\in\, \rho(\,T\,) \times \rho(T^{*})$		\;\; or \;\;
-		$(\,\lambda\,, \overline{\lambda}\,) \,\in\, \sigma_{\textnormal{pt}}(\,T\,) \times \sigma_{\textnormal{pt}}(T^{*})$
-		%\end{equation*}
-	\end{itemize}
 \end{enumerate}
 \end{theorem}
 
