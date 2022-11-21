@@ -1,0 +1,83 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Compact self-adjoint operators on Hilbert spaces}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}\mbox{}
+\vskip 0.1cm
+\noindent
+Let $H$ be a Hilbert space over $\C$.
+Then, for each compact self-adjoint linear operator $T \in K(H)$ on $H$, the following statements are true:
+\begin{enumerate}
+\item
+	$\left\{\,\overset{{\color{white}.}}{\pm}\Vert\,T\,\Vert\,\right\} \,\bigcap\, \sigma_{\textnormal{pt}}(\,T\,)$
+	$\neq$ $\varemptyset$.
+\item
+	The set of non-zero eigenvalues of T is non-empty and is either finite or consists	of a sequence which tends to zero. Each non-zero eigenvalue is real and has finite	multiplicity. Eigenvectors corresponding to different eigenvalues are orthogonal.
+\item
+	The number of non-zero eigenvalues of T (repeated according to multiplicity)
+	is equal to the rank \,$r(T)$\, of \,$T$.\,
+	(Note that $r(T)$ may be $\infty$.)
+	There exists a (finite or infinite) sequence
+	\,$\left\{\,\overset{{\color{white}.}}{v_{n}}\,\right\}^{r(T)}_{n=1}$\,
+	of mutually orthogonal unit eigenvectors of $T$
+	that forms an orthonormal basis for the closure
+	\,$\overline{\image(T)}$\,
+	of the image of \,$T$,\, and the operator \,$T$\, has the representation
+	\begin{equation*}
+	T(x)
+	\;\; = \;\;
+		\overset{r(T)}{\underset{n=1}{\sum}}\;\,
+		\lambda_{n}\,\langle\, x , v_{n} \,\rangle\,v_{n}\,,
+	\quad
+	\textnormal{for each \,$x \in H$},	\end{equation*}
+	where 	\,$\left\{\,\overset{{\color{white}.}}{\lambda_{n}}\,\right\}^{r(T)}_{n=1}$\,
+	%\,$\left\{\,\lambda_{n}\,\right\}^{r(T)}_{n=1}$\,
+	is the set of non-zero eigenvalues of \,$T$.
+\item
+	$H \,=\, \ker\!\left(\,T\,\right) \,\oplus\, \overline{\image(T)}$\,
+	gives an orthogonal decomposition of \,$H$\, into two closed subpaces.
+\item
+	If \,$\ker(\,T\,) = \{\,0\,\}$,\, then the eigenvectors of \,$T$ form an orthonormal basis for \,$H$
+	(hence, \,$H$\, is separable).
+\item
+	If \,$\ker(\,T\,) = \{\,0\,\}$\, and \,$\dim H = \infty$,\,
+	then \,$T$ has infinitely many distinct eigenvalues.
+\item
+	If \,$H$\, is separable, then there exists an orthonormal basis \,$\mathfrak{B}$\, for \,$H$\,	consisting entirely of eigenvectors of \,$T$,\, where \,$\mathfrak{B}$\, is of the following form:
+	\begin{equation*}
+	\mathfrak{B}
+	\;\; = \;\;
+		\left\{\;\overset{{\color{white}.}}{z_{m}}\;\right\}_{m =1}^{\textnormal{null}(T)}
+		\;\;\bigsqcup\;\;
+		\left\{\;\overset{{\color{white}.}}{v_{n}}\;\right\}_{n =1}^{r(T)},
+	\end{equation*}
+	where
+	\begin{itemize}
+	\item
+		$\textnormal{null}(T) \,:=\, \dim\ker(\,T\,) \,\in\, \{\,0,\infty\,\}\,\cup\,\N$,\,
+	\item
+		$\left\{\;\overset{{\color{white}.}}{z_{m}}\;\right\}_{m =1}^{\textnormal{null}(T)}$\,
+		is an orthonormal basis for \,$\ker(\,T\,)$,\, and
+	\item
+		\,$\left\{\;\overset{{\color{white}.}}{v_{n}}\;\right\}_{n =1}^{r(T)}$\,
+		is an orthonormal basis for
+		\,$\overline{\image(\,T\,)}$.\,
+	\end{itemize}
+%	This basis has the form {en}r(T)%n=1%∪%{zm}n(T)%m=1, where {en}r(T)%n=1 is an orthonormal basis of Im T and {zm}n(T)%m=1 is an%orthonormal basis of Ker T.
+\end{enumerate}
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
