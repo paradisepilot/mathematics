@@ -394,14 +394,22 @@ and the universal property of \,$\gamma$\, as an equalizer of \,$g_{1}$\, and \,
 \textbf{Claim 2:}\;\; There exists a unique \,$\varphi \in \Mor_{\mathfrak{C}}(I,E)$\, such that
 \,$\theta \,=\, \varphi \circ \widetilde{f}$\,
 and
-\,$\iota \,=\, \iota \circ \gamma \circ \varphi$.\,
+\,$\iota \,=\, (\,\iota \circ \gamma\,) \circ \varphi$.\,
 \vskip 0.1cm
 \noindent
 Proof of Claim 2:\; 
 By Lemma \ref{EqualizersAreMonomorphisms}, we see that \,$\gamma$\, is a monomorphism,
 hence, $\iota \circ \gamma$ is itself a monomorphism, being a composition of two monomorphisms.
 Claim 2 now follows immediately from the fact that
-\,$f \,=\, (\iota \circ \gamma) \circ \theta$,\,
+\begin{equation*}
+f
+\;\; = \;\;
+	\iota \circ \widetilde{f}
+\;\; = \;\;
+	\iota \circ (\,\gamma \circ \theta\,)
+\;\; = \;\;
+	(\,\iota \circ \gamma\,) \circ \theta
+\end{equation*}
 with \,$\iota \circ \gamma$\, being a monomphism,
 and the universal property of \,$\iota$\, as an image of \,$f$.\,
 See the following diagram:
@@ -437,7 +445,7 @@ Proof of Claim 3:\;  Note:
 \;$=$\; $\iota \circ 1_{I}$,\,
 which implies
 \,$\gamma \circ \varphi \,=\, 1_{I}$,\,
-since the image \,$\iota$\, is a monomorphism and can be cancelled on the left.
+since the image \,$\iota$\, is a monomorphism (being an image of $f$) and can be cancelled on the left.
 This proves the first equality.
 For the second equality, note:
 \,$\gamma \circ 1_{E}$
