@@ -19,7 +19,7 @@
 \mbox{}
 \vskip 0.15cm
 \noindent
-Let \,$\mathfrak{A}$ be an abelian category with enough projectives, and
+Let \,$\mathfrak{A}$\, be an abelian category with enough projectives, and
 the following be a commutative diagram with exact rows of morphisms in \,$\mathfrak{A}$:
 \begin{center}
 \begin{tikzcd}
@@ -264,6 +264,30 @@ Then, the following statements are true:
 \clearpage
 \item
 	The morphism $\delta$ is defined as follows:
+	\begin{itemize}
+	\item
+		Since \,$\mathfrak{A}$\, is an (abelian) category with enough projectives,
+		there exists an epimorphism
+		\,$\varepsilon_{P} : P \longrightarrow K^{\prime\prime}$,\,
+		with \,$P \in \Obj(\mathfrak{A})$\, being a projective object.
+	\item
+		Since \,$P$\, is a projective object and 
+		\,$\varepsilon_{A} : A \longrightarrow A^{\prime\prime}$\,
+		is an epimorphism, there exists
+		\,$f_{1} : P \longrightarrow A$\,
+		such that
+		\,$\kappa^{\prime\prime} \circ \varepsilon_{P} \,=\, \varepsilon_{A} \circ f_{1}$\,
+	\item
+		Next, observe that
+		\,$\varepsilon_{B} \circ (\,f \circ f_{1}\,)$
+		\,$=$\, $(\,\varepsilon_{B} \circ f\,) \circ f_{1}$
+		\,$=$\, $(\,f^{\prime\prime} \circ \varepsilon_{A}\,) \circ f_{1}$
+		\,$=$\, $f^{\prime\prime} \circ (\,\varepsilon_{A} \circ f_{1}\,)$
+		\,$=$\, $f^{\prime\prime} \circ (\,\kappa^{\prime\prime} \circ \varepsilon_{P}\,)$
+		\,$=$\, $(\,f^{\prime\prime} \circ \kappa^{\prime\prime}\,) \circ \varepsilon_{P}$
+		\,$=$\, $0 \circ \varepsilon_{P}$
+		\,$=$\, $0$.
+	\end{itemize}
 %	\begin{center}
 %	\begin{tikzcd}
 %	K^{\prime}
@@ -308,7 +332,6 @@ Then, the following statements are true:
 %	Q^{\prime\prime}
 %	\end{tikzcd}
 %	\end{center}
-
 	\begin{center}
 	\begin{tikzcd}
 	&&&
@@ -321,7 +344,7 @@ Then, the following statements are true:
 	&
 	&
 	{\color{blue}P}
-		\arrow[dr, "\varepsilon_{P}", blue]
+		\arrow[dr, two heads, "\varepsilon_{P}", blue]
 		\arrow[dddl, "f_{1}", red]
 		\arrow[dddddlll, swap, "f_{2}", red]
 		\arrow[dddddddlll, bend right = 110, "f_{3}", red]
