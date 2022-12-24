@@ -261,7 +261,115 @@ Then, the following statements are true:
 	\,$\varepsilon_{Q} : Q \longrightarrow Q^{\prime\prime}$.
 	\vskip 0.5cm
 
+\clearpage
 \item
+	The morphism $\delta$ is defined as follows:
+%	\begin{center}
+%	\begin{tikzcd}
+%	K^{\prime}
+%		\arrow[dd,swap, "\kappa^{\prime}"]
+%		\arrow[rr, thick, dashed, "\mu_{K}", red]
+%	&&
+%	K
+%		\arrow[dd, "\kappa"]
+%		\arrow[rr, thick, dashed, "\varepsilon_{K}", red]
+%	&&
+%	K^{\prime\prime}
+%		\arrow[dd, "\kappa^{\prime\prime}"]
+%	\\ \\
+%	A^{\prime}
+%		\arrow[dd, swap, "f^{\prime}"]
+%		\arrow[rr, "\mu_{A}"]
+%	&&
+%	A
+%		\arrow[dd, "f"]
+%		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+%	&&
+%	A^{\prime\prime}
+%		\arrow[dd, "f^{\prime\prime}"]
+%	\\ \\
+%	B^{\prime}
+%		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+%		\arrow[dd, swap, "\pi^{\prime}"]
+%	&&
+%	B
+%		\arrow[rr, swap, "\varepsilon_{B}"]
+%		\arrow[dd, "\pi"]
+%	&&
+%	B^{\prime\prime}
+%		\arrow[dd, "\pi^{\prime\prime}"]
+%	\\ \\
+%	Q^{\prime}
+%		\arrow[rr, thick, dashed, swap, "\mu_{Q}", red]
+%	&&
+%	Q
+%		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}", red]
+%	&&
+%	Q^{\prime\prime}
+%	\end{tikzcd}
+%	\end{center}
+
+	\begin{center}
+	\begin{tikzcd}
+	&&&
+	{\color{blue}K_{P}}
+		\arrow[d, "\kappa_{P}", blue]
+	&
+	\\
+	&
+	{\color{white}K_{P}}
+	&
+	&
+	{\color{blue}P}
+		\arrow[dr, "\varepsilon_{P}", blue]
+		\arrow[dddl, "f_{1}", red]
+		\arrow[dddddlll, swap, "f_{2}", red]
+		\arrow[dddddddlll, bend right = 110, "f_{3}", red]
+	&
+	\\
+	K^{\prime}
+		\arrow[dd, swap, "\kappa^{\prime}"]
+		\arrow[rr, thick, dashed, "\mu_{K}"]
+	&&
+	K
+		\arrow[dd, "\kappa"]
+		\arrow[rr, thick, dashed, "\varepsilon_{K}"]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, "\kappa^{\prime\prime}"]
+	\\ \\
+	A^{\prime}
+		\arrow[dd, swap, "f^{\prime}"]
+		\arrow[rr, "\mu_{A}"]
+	&&
+	A
+		\arrow[dd, "f"]
+		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, "f^{\prime\prime}"]
+	\\ \\
+	B^{\prime}
+		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+		\arrow[dd, swap, "\pi^{\prime}"]
+	&&
+	B
+		\arrow[rr, swap, "\varepsilon_{B}"]
+		\arrow[dd, "\pi"]
+	&&
+	B^{\prime\prime}
+		\arrow[dd, "\pi^{\prime\prime}"]
+	\\ \\
+	Q^{\prime}
+		\arrow[rr, thick, dashed, swap, "\mu_{Q}"]
+	&&
+	Q
+		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}"]
+	&&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+
 \end{enumerate}
 \qed
 
