@@ -193,6 +193,35 @@ Then, the following statements are true:
 \proof
 \begin{enumerate}
 \item
+	\underline{Existence of $\mu_{K} \in \Mor_{\mathfrak{C}}(K^{\prime},K)$}
+	\vskip -0.01cm
+	First, note that
+	\,$f \circ (\,\mu_{A} \circ \kappa^{\prime}\,)$
+	\;$=$\; $(\,f \circ \mu_{A}\,)\circ \kappa^{\prime}$
+	\;$=$\; $(\,\mu_{B}\circ f^{\prime}\,) \circ \kappa^{\prime}$
+	\;$=$\; $\mu_{B} \circ (\,f^{\prime} \circ \kappa^{\prime}\,)$
+	\;$=$\; $\mu_{B} \circ 0$
+	\;$=$\; $0$.\,
+	The universal property of $\kappa : K \longrightarrow A$ as a kernel of $f : A \longrightarrow B$
+	now implies the existence (and uniqueness) of $\mu_{K} : K^{\prime} \longrightarrow K$.
+	\vskip 0.3cm
+
+	\underline{Existence of $\varepsilon_{K} \in \Mor_{\mathfrak{C}}(K,K^{\prime\prime})$}
+	\vskip -0.01cm
+	This proof is completely analogous as the preceding one.
+	More precisely, note that
+	\,$f^{\prime\prime} \circ (\,\varepsilon_{A} \circ \kappa\,)$
+	\;$=$\; $(\,f^{\prime\prime} \circ \varepsilon_{A}\,)\circ \kappa$
+	\;$=$\; $(\,\varepsilon_{B} \circ f\,) \circ \kappa$
+	\;$=$\; $\varepsilon_{B} \circ (\,f \circ \kappa\,)$
+	\;$=$\; $\varepsilon_{B} \circ 0$
+	\;$=$\; $0$.\,
+	The universal property of
+	\,$\kappa^{\prime\prime} : K^{\prime\prime} \longrightarrow A^{\prime\prime}$\,
+	as a kernel of
+	\,$f^{\prime\prime} : A^{\prime\prime} \longrightarrow B^{\prime\prime}$\,
+	now implies the existence (and uniqueness) of
+	\,$\varepsilon_{K} : K \longrightarrow K^{\prime\prime}$.
 \item
 \end{enumerate}
 \qed
