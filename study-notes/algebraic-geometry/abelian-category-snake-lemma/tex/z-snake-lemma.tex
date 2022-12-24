@@ -261,9 +261,8 @@ Then, the following statements are true:
 	\,$\varepsilon_{Q} : Q \longrightarrow Q^{\prime\prime}$.
 	\vskip 0.5cm
 
-\clearpage
 \item
-	The morphism $\delta$ is defined as follows:
+	First, we construct the morphism \,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$,\, as follows:
 	\begin{itemize}
 	\item
 		Since \,$\mathfrak{A}$\, is an (abelian) category with enough projectives,
@@ -278,7 +277,14 @@ Then, the following statements are true:
 		such that
 		\,$\kappa^{\prime\prime} \circ \varepsilon_{P} \,=\, \varepsilon_{A} \circ f_{1}$\,
 	\item
-		Next, observe that
+		Since \,$\mu_{B}$\, is a monomorphism
+		and the composition
+		\,$B^{\prime} \overset{\mu_{B}}{\longrightarrow} B \overset{\varepsilon_{B}}{\longrightarrow} B^{\prime\prime}$\,
+		is exact, it follows
+		by Proposition \ref{MonomorphicFirstFactorInExactSequenceIsKernelOfSecondFactor}
+		that
+		\,$\mu_{B}$\, is a kernel of \,$\varepsilon_{B}$.\,
+		On the other hand, observe that
 		\,$\varepsilon_{B} \circ (\,f \circ f_{1}\,)$
 		\,$=$\, $(\,\varepsilon_{B} \circ f\,) \circ f_{1}$
 		\,$=$\, $(\,f^{\prime\prime} \circ \varepsilon_{A}\,) \circ f_{1}$
@@ -286,7 +292,14 @@ Then, the following statements are true:
 		\,$=$\, $f^{\prime\prime} \circ (\,\kappa^{\prime\prime} \circ \varepsilon_{P}\,)$
 		\,$=$\, $(\,f^{\prime\prime} \circ \kappa^{\prime\prime}\,) \circ \varepsilon_{P}$
 		\,$=$\, $0 \circ \varepsilon_{P}$
-		\,$=$\, $0$.
+		\,$=$\, $0$.\,
+		Hence, there exists a unique
+		\,$f_{2} : P \longrightarrow B^{\prime}$\,
+		such that
+		\,$f \circ f_{1} = \mu_{B} \circ f_{2}$.\,
+	\item
+		Next, we simply define
+		\,$f_{3} \,:=\, \pi^{\prime} \circ f_{2}$.\,
 	\end{itemize}
 %	\begin{center}
 %	\begin{tikzcd}
@@ -333,6 +346,7 @@ Then, the following statements are true:
 %	\end{tikzcd}
 %	\end{center}
 	\begin{center}
+	\vskip -1.5cm
 	\begin{tikzcd}
 	&&&
 	{\color{blue}K_{P}}
@@ -393,7 +407,14 @@ Then, the following statements are true:
 	Q^{\prime\prime}
 	\end{tikzcd}
 	\end{center}
-
+	\vskip 0.3cm
+	\textbf{Claim:} \;$f_{3}$\, factors through \,$\varepsilon_{P}$;\,
+	more precisely, there exists
+	\,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\,
+	such that
+	\,$f_{3} \,=\, \delta \circ \varepsilon_{P}$.
+	\vskip 0.1cm
+	Proof of Claim 1:\;
 \end{enumerate}
 \qed
 
