@@ -1,7 +1,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{The Snake Lemma in abelian categories with enough projectives}
+\section{The Snake Lemma for abelian categories with enough projectives}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
 
@@ -15,7 +15,30 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{theorem}[Snake Lemma]
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\mathfrak{A}$\, be abelian category.
+\begin{itemize}
+\item
+	$\mathfrak{A}$\, is said to \textbf{have enough projectives},
+	if for every object \,$B \in \Obj(\mathfrak{A})$,\,
+	there is a projective object \,$P \in \Obj(\mathfrak{A})$,\,
+	together with an epimorphism \,$\varepsilon \in \Mor_{\mathfrak{A}}(P,B)$.
+\item	
+	Dually, \,$\mathfrak{A}$\, is said to \textbf{have enough injectives},
+	if for every object \,$A \in \Obj(\mathfrak{A})$,\,
+	there is an injective object \,$I \in \Obj(\mathfrak{A})$\,
+	together with a monomorphism \,$\mu \in \Mor_{\mathfrak{A}}(A,I)$.
+\end{itemize}
+\end{definition}
+
+\vskip 0.5cm
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}[Snake Lemma for abelian categories with enough projectives]
 \mbox{}
 \vskip 0.15cm
 \noindent
@@ -346,11 +369,11 @@ Then, the following statements are true:
 %	\end{tikzcd}
 %	\end{center}
 	\begin{center}
-	\vskip -1.5cm
+	\vskip -2.5cm
 	\begin{tikzcd}
 	&&&
-	{\color{blue}K_{P}}
-		\arrow[d, "\kappa_{P}", blue]
+	{K_{P}}
+		\arrow[d, "\kappa_{P}"]
 	&
 	\\
 	&
@@ -406,6 +429,7 @@ Then, the following statements are true:
 	&&
 	Q^{\prime\prime}
 	\end{tikzcd}
+	{\color{white}?????????????????????}
 	\end{center}
 
 	\vskip 0.3cm
