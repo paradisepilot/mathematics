@@ -371,11 +371,13 @@ Then, the following statements are true:
 	\begin{center}
 	\vskip -2.5cm
 	\begin{tikzcd}
+	&&
 	&&&
 	{K_{P}}
 		\arrow[d, "\kappa_{P}"]
 	&
 	\\
+	&&
 	&
 	{\color{white}K_{P}}
 	&
@@ -387,6 +389,7 @@ Then, the following statements are true:
 		\arrow[dddddddlll, bend right = 110, "f_{3}", red]
 	&
 	\\
+	&&
 	K^{\prime}
 		\arrow[dd, swap, "\kappa^{\prime}"]
 		\arrow[rr, thick, dashed, "\mu_{K}"]
@@ -399,6 +402,7 @@ Then, the following statements are true:
 		\arrow[dd, "\kappa^{\prime\prime}"]
 		\arrow[ddddddllll, thick, dashed, bend left = 29, "\textnormal{\Large$\delta$}", red]
 	\\ \\
+	&&
 	A^{\prime}
 		\arrow[dd, swap, "f^{\prime}"]
 		\arrow[rr, "\mu_{A}"]
@@ -410,6 +414,7 @@ Then, the following statements are true:
 	A^{\prime\prime}
 		\arrow[dd, "f^{\prime\prime}"]
 	\\ \\
+	&&
 	B^{\prime}
 		\arrow[rr, thick, hook, swap, "\mu_{B}"]
 		\arrow[dd, swap, "\pi^{\prime}"]
@@ -421,6 +426,7 @@ Then, the following statements are true:
 	B^{\prime\prime}
 		\arrow[dd, "\pi^{\prime\prime}"]
 	\\ \\
+	&&
 	Q^{\prime}
 		\arrow[rr, thick, dashed, swap, "\mu_{Q}"]
 	&&
@@ -436,6 +442,109 @@ Then, the following statements are true:
 	\textbf{Claim 1:} \;\,$f_{3} \circ \kappa_{P} \,=\, 0$.\,
 	\vskip 0.01cm
 	Proof of Claim 1:\;
+	Consider the following augmented diagram, with the object \,$I_{\mu_{A}}$\, added:
+	\begin{center}
+	\vskip -1.5cm
+	\begin{tikzcd}
+	&&
+	&&&
+	K_{P}
+		\arrow[d, "\kappa_{P}"]
+		\arrow[dddddll, dashed, bend right = 30, swap, "f_{1}^{\prime}", red]		
+	&
+	\\
+	&&
+	&
+	{\color{white}K_{P}}
+	&
+	&
+	P
+		\arrow[dr, two heads, "\varepsilon_{P}"]
+		\arrow[dddl, "f_{1}", blue]
+		\arrow[dddddlll, bend right = 35, swap, "f_{2}", blue]
+		\arrow[dddddddlll, bend right = 110, "f_{3}", blue]
+	&
+	\\
+	&&
+	K^{\prime}
+		\arrow[dd, swap, "\kappa^{\prime}"]
+		\arrow[rr, thick, dashed, "\mu_{K}"]
+	&&
+	K
+		\arrow[dd, "\kappa"]
+		\arrow[rr, thick, dashed, "\varepsilon_{K}"]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, "\kappa^{\prime\prime}"]
+		\arrow[ddddddllll, thick, dashed, bend left = 29, "\textnormal{\Large$\delta$}", blue]
+	\\ \\
+	{\color{red}K_{0}}
+		\arrow[rr, "\kappa(\,\widetilde{\mu_{A}}\,)", red]
+	&&
+	A^{\prime}
+		\arrow[dd, swap, "f^{\prime}"]
+		\arrow[rr, "\mu_{A}"]
+		\arrow[dr, two heads, "\widetilde{\mu_{A}}", red]
+	&&
+	A
+		\arrow[dd, "f"]
+		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, "f^{\prime\prime}"]
+	\\
+	&&
+	&
+	{\color{red}I_{\mu_{A}}}
+		\arrow[ur, hook, swap, "\!\!\iota(\mu_{A}){\color{white}}", red]		
+		\arrow[dl, dashed, "f_{2}^{\prime}", red]		
+	&&&
+	\\
+	&&
+	B^{\prime}
+		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+		\arrow[dd, swap, "\pi^{\prime}"]
+	&&
+	B
+		\arrow[rr, swap, "\varepsilon_{B}"]
+		\arrow[dd, "\pi"]
+	&&
+	B^{\prime\prime}
+		\arrow[dd, "\pi^{\prime\prime}"]
+	\\ \\
+	&&
+	Q^{\prime}
+		\arrow[rr, thick, dashed, swap, "\mu_{Q}"]
+	&&
+	Q
+		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}"]
+	&&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	{\color{white}?????????????????????}
+	\end{center}
+	Here, by definition, the monomorphism
+	\,$\iota(\mu_{A}) : I_{\mu_{A}} \longrightarrow A$\,
+	is an image of
+	\,$\mu_{A}$.\,
+	By Lemma \ref{fTildeIsEpimorphism}, the accompanying morphism
+	\,$\widetilde{\mu_{A}} : A^{\prime} \longrightarrow I_{\mu_{A}}$\,
+	is an epimorphism.
+	Next, note that
+	\,$\mu_{B} \circ f^{\prime} \circ \kappa(\widetilde{\mu_{A}})$
+	\,$=$\, $f \circ \iota(\mu_{A}) \circ \widetilde{\mu_{A}} \circ \kappa(\widetilde{\mu_{A}})$
+	\,$=$\, $f \circ \iota(\mu_{A}) \circ 0$
+	\,$=$\, $0$.\,
+	Since \,$\mu_{B}$\, is a monomorphism, it can be cancelled on the left,
+	which yields
+	\,$ f^{\prime} \circ \kappa(\widetilde{\mu_{A}}) \,=\, 0$.\,
+	Next, observe that
+	\,$\pi^{\prime} \circ f_{2}^{\prime} \circ \widetilde{\mu_{A}}$
+	\,$=$\, $ZZZ$
+
+
+	\,$f_{3} \circ \kappa_{P}$
+	\,$=$\, $\pi^{\prime} \circ f_{2}^{\prime} \circ f_{1}^{\prime}$
 	This completes the proof of Claim 1.
 
 
