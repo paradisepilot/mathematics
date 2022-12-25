@@ -748,7 +748,8 @@ Then, the following statements are true:
 	the epimorphism \,$\widetilde{\mu_{A}}$\, is a cokernel (of some morphism),
 	and thus, by Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}(ii),
 	\,$\widetilde{\mu_{A}}$\, is a cokernel of its own kernel
-	\,$\kappa(\widetilde{\mu_{A}})$.\,\\
+	\,$\kappa(\widetilde{\mu_{A}})$.
+
 	Next, note that
 	\,$\mu_{B} \,\circ\, f^{\prime} \,\circ\, \kappa(\widetilde{\mu_{A}})$
 	\,$=$\, $f \,\circ\, \iota(\mu_{A}) \,\circ\, \widetilde{\mu_{A}} \,\circ\, \kappa(\widetilde{\mu_{A}})$
@@ -757,7 +758,7 @@ Then, the following statements are true:
 	Since \,$\mu_{B}$\, is a monomorphism, it can be cancelled on the left,
 	which yields
 	\,$ f^{\prime} \circ \kappa(\widetilde{\mu_{A}}) \,=\, 0$.\,
-	Since \,$\widetilde{\mu_{A}}$\, is a cokernel of \,$\kappa(\widetilde{\mu_{A}})$\, (just established above),
+	Since \,$\widetilde{\mu_{A}}$\, is a cokernel of \,$\kappa(\widetilde{\mu_{A}})$\, (established in preceding paragraph),
 	we see that there exists a (unique) morphism
 	\,$f_{2}^{\prime} : I_{\mu_{A}} \longrightarrow B^{\prime}$\,
 	such that
@@ -766,16 +767,23 @@ Then, the following statements are true:
 	
 
 	\vskip 0.3cm
-	\noindent
-	Next, observe that
-	\,$\pi^{\prime} \circ f_{2}^{\prime} \circ \widetilde{\mu_{A}}$
-	\,$=$\, $ZZZ$
-
-	\vskip 0.3cm
-	\noindent
-	\,$f_{3} \circ \kappa_{P}$
-	\,$=$\, $\pi^{\prime} \circ f_{2}^{\prime} \circ f_{1}^{\prime}$
-	This completes the proof of Claim 1.
+	\textbf{Claim 6:} \;$f_{3} \,\circ\, \kappa_{P} \,=\, 0$.
+		\vskip 0.01cm
+	Proof of Claim 6:\;
+	Note that we now have
+	\,$f_{3} \,\circ\, \kappa_{P}$
+	\,$=$\, $\pi^{\prime} \,\circ\, f_{2}^{\prime} \,\circ\, f_{1}^{\prime}$.\,
+	On the other hand,
+	\,$\pi^{\prime} \,\circ\, f_{2}^{\prime} \,\circ\, \widetilde{\mu_{A}} \,=\, \pi^{\prime} \,\circ\, f^{\prime} \,=\, 0$.\,
+	Since \,$\widetilde{\mu_{A}}$\, is an epimorphism and can be cancelled on the right,
+	we have
+	\,$\pi^{\prime} \,\circ\, f_{2}^{\prime} \,=\, 0$.\,
+	This therefore implies
+	\,$f_{3} \,\circ\, \kappa_{P}$
+	\,$=$\, $\pi^{\prime} \,\circ\, f_{2}^{\prime} \,\circ\, f_{1}^{\prime}$
+	\,$=$\, $0 \,\circ\, f_{1}^{\prime}$
+	\,$=$\, $0$.\,
+	This completes the proof of Claim 6.
 
 
 	\vskip 0.3cm
@@ -783,23 +791,23 @@ Then, the following statements are true:
 	more precisely, there exists
 	\,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\,
 	such that
-	\,$f_{3} \,=\, \delta \circ \varepsilon_{P}$.
+	\,$f_{3} \,=\, \delta \,\circ\, \varepsilon_{P}$.
 	\vskip 0.01cm
 	Proof of Claim 7:\;
-	Since \,$\mathfrak{A}$\, is an abelian category, every morphism in \,$\mathfrak{A}$\,
-	admits a kernel.
-	Let \,$\kappa_{P} : K_{P} \longrightarrow P$\, be a kernel of the epimorphism
-	\,$\varepsilon_{P} : P \longrightarrow K^{\prime\prime}$.\,
-	Again, since \,$\mathfrak{A}$\, is an abelian category, it is in particular conormal, i.e.,
+	Since \,$\mathfrak{A}$\, is an abelian category, it is in particular conormal, i.e.,
 	every epimorphism in \,$\mathfrak{A}$\, is a cokernel.
 	By Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}(ii),
-	the epimorphism \,$\varepsilon_{P}$\, is thus a cokernel of of its kernel \,$\kappa_{P}$.\,
-	On the other hand, by Claim 1, we have \,$f_{3} \circ \kappa_{P} \,=\, 0$.\,
+	the epimorphism \,$\varepsilon_{P}$\, is thus a cokernel of of its own kernel \,$\kappa_{P}$.\,
+	By Claim 6, we have \,$f_{3} \,\circ\, \kappa_{P} \,=\, 0$.\,
 	Thus, the existence and uniqueness of the morphism
 	\,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\,
 	now follows by the universal property of
 	\,$\varepsilon_{P}$\, as a cokernel of \,$\kappa_{P}$.\,
 	This completes the proof of Claim 7.
+
+
+	\vskip 0.3cm
+	This construction of the (snake or connection) morphism \,$\delta$\, is now complete.
 \end{enumerate}
 \qed
 
