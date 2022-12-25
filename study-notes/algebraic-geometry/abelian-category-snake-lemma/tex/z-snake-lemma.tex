@@ -316,7 +316,9 @@ Then, the following statements are true:
 		\,$=$\, $(\,f^{\prime\prime} \circ \kappa^{\prime\prime}\,) \circ \varepsilon_{P}$
 		\,$=$\, $0 \circ \varepsilon_{P}$
 		\,$=$\, $0$.\,
-		Hence, there exists a unique
+		Hence, by the universal property of
+		\,$\mu_{B}$\, as a kernel of \,$\varepsilon_{B}$,\,
+		we see that there exists a unique
 		\,$f_{2} : P \longrightarrow B^{\prime}$\,
 		such that
 		\,$f \circ f_{1} = \mu_{B} \circ f_{2}$.\,
@@ -368,83 +370,80 @@ Then, the following statements are true:
 %	Q^{\prime\prime}
 %	\end{tikzcd}
 %	\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\begin{center}
+%	\vskip -2.5cm
+%	\begin{tikzcd}
+%	&&
+%	&&&
+%	{K_{P}}
+%		\arrow[d, "\kappa_{P}"]
+%	&
+%	\\
+%	&&
+%	&
+%	{\color{white}K_{P}}
+%	&
+%	&
+%	{\color{blue}P}
+%		\arrow[dr, two heads, "\varepsilon_{P}", blue]
+%		\arrow[dddl, "f_{1}", red]
+%		\arrow[dddddlll, swap, "f_{2}", red]
+%		\arrow[dddddddlll, bend right = 110, "f_{3}", red]
+%	&
+%	\\
+%	&&
+%	K^{\prime}
+%		\arrow[dd, swap, "\kappa^{\prime}"]
+%		\arrow[rr, thick, dashed, "\mu_{K}"]
+%	&&
+%	K
+%		\arrow[dd, "\kappa"]
+%		\arrow[rr, thick, dashed, "\varepsilon_{K}"]
+%	&&
+%	K^{\prime\prime}
+%		\arrow[dd, "\kappa^{\prime\prime}"]
+%		\arrow[ddddddllll, thick, dashed, bend left = 29, "\textnormal{\Large$\delta$}", red]
+%	\\ \\
+%	&&
+%	A^{\prime}
+%		\arrow[dd, swap, "f^{\prime}"]
+%		\arrow[rr, "\mu_{A}"]
+%	&&
+%	A
+%		\arrow[dd, "f"]
+%		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+%	&&
+%	A^{\prime\prime}
+%		\arrow[dd, "f^{\prime\prime}"]
+%	\\ \\
+%	&&
+%	B^{\prime}
+%		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+%		\arrow[dd, swap, "\pi^{\prime}"]
+%	&&
+%	B
+%		\arrow[rr, swap, "\varepsilon_{B}"]
+%		\arrow[dd, "\pi"]
+%	&&
+%	B^{\prime\prime}
+%		\arrow[dd, "\pi^{\prime\prime}"]
+%	\\ \\
+%	&&
+%	Q^{\prime}
+%		\arrow[rr, thick, dashed, swap, "\mu_{Q}"]
+%	&&
+%	Q
+%		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}"]
+%	&&
+%	Q^{\prime\prime}
+%	\end{tikzcd}
+%	{\color{white}?????????????????????}
+%	\end{center}
+	Consider the following diagram:
 	\begin{center}
-	\vskip -2.5cm
-	\begin{tikzcd}
-	&&
-	&&&
-	{K_{P}}
-		\arrow[d, "\kappa_{P}"]
-	&
-	\\
-	&&
-	&
-	{\color{white}K_{P}}
-	&
-	&
-	{\color{blue}P}
-		\arrow[dr, two heads, "\varepsilon_{P}", blue]
-		\arrow[dddl, "f_{1}", red]
-		\arrow[dddddlll, swap, "f_{2}", red]
-		\arrow[dddddddlll, bend right = 110, "f_{3}", red]
-	&
-	\\
-	&&
-	K^{\prime}
-		\arrow[dd, swap, "\kappa^{\prime}"]
-		\arrow[rr, thick, dashed, "\mu_{K}"]
-	&&
-	K
-		\arrow[dd, "\kappa"]
-		\arrow[rr, thick, dashed, "\varepsilon_{K}"]
-	&&
-	K^{\prime\prime}
-		\arrow[dd, "\kappa^{\prime\prime}"]
-		\arrow[ddddddllll, thick, dashed, bend left = 29, "\textnormal{\Large$\delta$}", red]
-	\\ \\
-	&&
-	A^{\prime}
-		\arrow[dd, swap, "f^{\prime}"]
-		\arrow[rr, "\mu_{A}"]
-	&&
-	A
-		\arrow[dd, "f"]
-		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
-	&&
-	A^{\prime\prime}
-		\arrow[dd, "f^{\prime\prime}"]
-	\\ \\
-	&&
-	B^{\prime}
-		\arrow[rr, thick, hook, swap, "\mu_{B}"]
-		\arrow[dd, swap, "\pi^{\prime}"]
-	&&
-	B
-		\arrow[rr, swap, "\varepsilon_{B}"]
-		\arrow[dd, "\pi"]
-	&&
-	B^{\prime\prime}
-		\arrow[dd, "\pi^{\prime\prime}"]
-	\\ \\
-	&&
-	Q^{\prime}
-		\arrow[rr, thick, dashed, swap, "\mu_{Q}"]
-	&&
-	Q
-		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}"]
-	&&
-	Q^{\prime\prime}
-	\end{tikzcd}
-	{\color{white}?????????????????????}
-	\end{center}
-
-	\vskip 0.3cm
-	\textbf{Claim 1:} \;\,$f_{3} \circ \kappa_{P} \,=\, 0$.\,
-	\vskip 0.01cm
-	Proof of Claim 1:\;
-	Consider the following augmented diagram, with the object \,$I_{\mu_{A}}$\, added:
-	\begin{center}
-	\vskip -1.5cm
 	\begin{tikzcd}
 	&&
 	&&&
@@ -476,7 +475,7 @@ Then, the following statements are true:
 	&&
 	K^{\prime\prime}
 		\arrow[dd, "\kappa^{\prime\prime}"]
-		\arrow[ddddddllll, thick, dashed, bend left = 29, "\textnormal{\Large$\delta$}", blue]
+		\arrow[ddddddllll, thick, dashed, bend left = 29, swap, "\textnormal{\Large$\delta$}", blue]
 	\\ \\
 	{\color{red}K_{0}}
 		\arrow[rr, "\kappa(\,\widetilde{\mu_{A}}\,)", red]
@@ -523,39 +522,270 @@ Then, the following statements are true:
 	\end{tikzcd}
 	{\color{white}?????????????????????}
 	\end{center}
-	Here, by definition, the monomorphism
+	Here,
+	\,$K_{P} \overset{\kappa_{P}}{\longrightarrow}$ P\,
+	is a kernel of
+	\,$P \overset{\varepsilon_{P}}{\longrightarrow} K^{\prime\prime}$.\,
+	Also, by definition, the monomorphism
 	\,$\iota(\mu_{A}) : I_{\mu_{A}} \longrightarrow A$\,
 	is an image of
 	\,$\mu_{A}$.\,
+	By Proposition \ref{FactorizationIntoImageCoimage}(ii),
+	we may take \,$\iota(\mu_{A})$\, to be any kernel of any cokernel of \,$\mu_{A}$.\,
 	By Lemma \ref{fTildeIsEpimorphism}, the accompanying morphism
 	\,$\widetilde{\mu_{A}} : A^{\prime} \longrightarrow I_{\mu_{A}}$\,
 	is an epimorphism.
+
+
+	\vskip 0.3cm
+	\textbf{Claim 1:}\;
+	\,$\varepsilon_{A} \,\circ\, \iota(\mu_{A}) \,=\, 0$.\,
+	\vskip 0.01cm
+	Proof of Claim 1:\; Simply note that
+	\,$0 \,=\, \varepsilon_{A} \,\circ\, \mu_{A} \,=\,\varepsilon_{A} \,\circ\, \iota(\mu_{A}) \,\circ\, \widetilde{\mu_{A}}$,\,
+	which implies
+	\,$\varepsilon_{A} \,\circ\, \iota(\mu_{A}) = 0$,\,
+	since \,$\widetilde{\mu_{A}}$\, is an epimorphism and can be cancelled on the right.
+	This completes the proof of Claim 1.	
+
+
+	\vskip 0.3cm
+	\textbf{Claim 2:}\;
+	The composition
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	is exact.
+	%\;\,$f_{3} \circ \kappa_{P} \,=\, 0$.\,
+	\vskip 0.01cm
+	Proof of Claim 2:\;
+	Next, we argue that the composition
+	This follows readily from the exactness of
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$.\,
+	Recall from Definition \ref{defnExactness} that, in general, the exactness of the composition
+	\,$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
+	means that the unique morphism \,$\theta$\, in the diagram below is an isomorphism:
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{f}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	A
+		\arrow[rr, "f"]
+		\arrow[dd, dashed, two heads, swap, "\varepsilon_{f}"]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	B
+		\arrow[rr, "g"]
+		\arrow[uurr, two heads, "\pi_{f}"]
+	&&
+	C
+	\\ \\
+	I_{f}
+		\arrow[uurr, hook, "\kappa(\pi_{f})"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	&&
+	K_{g}
+		\arrow[uu, hook, swap, "\kappa_{g}"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	Since \,$\mathfrak{A}$\, is an abelian category,
+	the morphism \,$\kappa(\pi_{f})$\, -- kernel of cokernel of \,$f$ --
+	is an image of \,$f$,\,
+	while the morphism \,$\varepsilon_{f}$\, is a coimage of \,$f$.\,
+	In other words, since \,$\mathfrak{A}$\, is an abelian category,
+	the defining diagram of exactness of
+	\,$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
+	is equivalent to:
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{f}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	A
+		\arrow[rr, "f"]
+		\arrow[dd, dashed, two heads, swap, "\widetilde{f}\;"]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	B
+		\arrow[rr, "g"]
+		\arrow[uurr, two heads, "\pi_{f}"]
+	&&
+	C
+	\\ \\
+	I_{f}
+		\arrow[uurr, hook, "\iota(f)"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	&&
+	K_{g}
+		\arrow[uu, hook, swap, "\kappa_{g}"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	Applying this alternative but equivalent exactness-defining diagram to 
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	gives:	
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{\mu_{A}}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	A^{\prime}
+		\arrow[rr, "\mu_{A}"]
+		\arrow[dd, dashed, two heads, swap, "\widetilde{\mu_{A}}{\color{white}..}", blue]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	A
+		\arrow[rr, "\varepsilon_{A}"]
+		\arrow[uurr, two heads, "\pi(\mu_{A})\!\!\!"]
+	&&
+	A^{\prime\prime}
+	\\ \\
+	I_{\mu_{A}}
+		\arrow[uurr, hook, "\iota(\mu_{A})\!\!"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	&&
+	K_{\varepsilon_{A}}
+		\arrow[uu, hook, swap, "\;\kappa(\varepsilon_{A})"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	The exactness of
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	means that the unique morphism \,$\theta$\, in the above diagram is an isomorphism.
+	Next, we consider the composition
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$.\,
+	Noting that \,$\iota(\mu_{A})$\, is a monomorphism, and hence it is an image of itself,
+	and the identity morphism \,$\textnormal{id}_{I_{\mu_{A}}}$\, is an (accompanying) coimage of \,$\iota(\mu_{A})$,\,
+	we see that the exactness of
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	is precisely the property that the morphism \,$\theta$\, in the following diagram is an isomorphism:
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{\mu_{A}}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	I_{\mu_{A}} %A^{\prime}
+		\arrow[rr, hook, "\iota(\mu_{A})"]
+		%\arrow[dd, dashed, two heads, swap, "\widetilde{\mu_{A}}{\color{white}..}"]
+		%\arrow[dd, dashed, two heads, swap, "\varepsilon_{\mu_{A}}{\color{white}..}", blue]
+		\arrow[dd, equal, swap, "\textnormal{id}\;"]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	A
+		\arrow[rr, "\varepsilon_{A}"]
+		\arrow[uurr, two heads, "\pi(\mu_{A})\!\!\!"]
+	&&
+	A^{\prime\prime}
+	\\ \\
+	I_{\mu_{A}}
+		\arrow[uurr, hook, "\iota(\mu_{A})\!\!"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	&&
+	K_{\mu_{A}}
+		\arrow[uu, hook, swap, "\;\kappa(\varepsilon_{A})"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	Comparing the two immediately preceding diagrams,
+	see that the exactness of
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	implies the exactness of
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$.\,
+	This completes the proof of Claim 2.	
+
+
+	\vskip 0.3cm
+	\textbf{Claim 3:}\;
+	The image monomorphism \,$\iota(\mu_{A})$\, of \,$\mu_{A}$\, is a kernel of \,$\varepsilon_{A}$.\,
+	\vskip 0.01cm
+	Proof of Claim 3:\;
+	Immediate by Claim 1, Claim 2 and
+	Proposition \ref{MonomorphicFirstFactorInExactSequenceIsKernelOfSecondFactor}.
+	This completes the proof of Claim 3.
+
+	\vskip 0.3cm
+	\textbf{Claim 4:}\;
+	There exists a morphism
+	\,$f_{1}^{\prime} : K_{P} \longrightarrow I_{\mu_{A}}$\,
+	such that
+	\,$(\,f_{1} \,\circ\, \kappa_{P}\,) \,=\, \iota(\mu_{A}) \,\circ\, f_{1}^{\prime}$.\,
+	\vskip 0.01cm
+	Proof of Claim 4:\;
+	By Claim 3, \,$\iota(\mu_{A})$\, is a kernel of \,$\varepsilon_{A}$.\,
+	In order to proof Claim 4, by the universal property of
+	\,$\iota(\mu_{A})$\, as kernel of \,$\varepsilon_{A}$,\,
+	it suffices to establish that
+	\,$\varepsilon_{A} \,\circ\, (\,f_{1} \,\circ\, \kappa_{P}\,) \,=\, 0$.\,
+	To this end, simply note that
+	\,$\varepsilon_{A} \,\circ\, (\,f_{1} \,\circ\, \kappa_{P}\,)$
+	\,$=$\, (\,$\varepsilon_{A} \,\circ\, f_{1}\,) \,\circ\, \kappa_{P}$
+	\,$=$\, (\,$\kappa^{\prime\prime} \,\circ\, \varepsilon_{P}\,) \,\circ\, \kappa_{P}$
+	\,$=$\, $\kappa^{\prime\prime} \,\circ\, (\,\varepsilon_{P} \,\circ\, \kappa_{P}\,)$
+	\,$=$\, $0$.\,
+	This completes the proof of Claim 4.
+
+
+	\vskip 0.3cm
+	\textbf{Claim 5:}\;
+	There exists a morphism
+	\,$f_{2}^{\prime} : I_{\mu_{A}} \longrightarrow B^{\prime}$\,
+	such that
+	\,$f^{\prime} \,=\, f_{2}^{\prime} \,\circ\, \widetilde{\mu_{A}}$.\,
+	\vskip 0.01cm
+	Proof of Claim 5:\;
+	%Next, we establish the existence of a morphism
+	%\,$f_{2}^{\prime} : I_{\mu_{A}} \longrightarrow B^{\prime}$\,
+	%which makes the above diagram commute.
+	Recall that, since \,$\mathfrak{A}$\, is an abelian category,
+	the epimorphism \,$\widetilde{\mu_{A}}$\, is a cokernel (of some morphism),
+	and thus, by Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}(ii),
+	\,$\widetilde{\mu_{A}}$\, is a cokernel of its own kernel
+	\,$\kappa(\widetilde{\mu_{A}})$.\,\\
 	Next, note that
-	\,$\mu_{B} \circ f^{\prime} \circ \kappa(\widetilde{\mu_{A}})$
-	\,$=$\, $f \circ \iota(\mu_{A}) \circ \widetilde{\mu_{A}} \circ \kappa(\widetilde{\mu_{A}})$
-	\,$=$\, $f \circ \iota(\mu_{A}) \circ 0$
+	\,$\mu_{B} \,\circ\, f^{\prime} \,\circ\, \kappa(\widetilde{\mu_{A}})$
+	\,$=$\, $f \,\circ\, \iota(\mu_{A}) \,\circ\, \widetilde{\mu_{A}} \,\circ\, \kappa(\widetilde{\mu_{A}})$
+	\,$=$\, $f \,\circ\, \iota(\mu_{A}) \,\circ\, 0$
 	\,$=$\, $0$.\,
 	Since \,$\mu_{B}$\, is a monomorphism, it can be cancelled on the left,
 	which yields
 	\,$ f^{\prime} \circ \kappa(\widetilde{\mu_{A}}) \,=\, 0$.\,
+	Since \,$\widetilde{\mu_{A}}$\, is a cokernel of \,$\kappa(\widetilde{\mu_{A}})$\, (just established above),
+	we see that there exists a (unique) morphism
+	\,$f_{2}^{\prime} : I_{\mu_{A}} \longrightarrow B^{\prime}$\,
+	such that
+	\,$f^{\prime} \,=\, f_{2}^{\prime} \,\circ\, \widetilde{\mu_{A}}$.\,
+	This completes the proof of Claim 5.
+	
+
+	\vskip 0.3cm
+	\noindent
 	Next, observe that
 	\,$\pi^{\prime} \circ f_{2}^{\prime} \circ \widetilde{\mu_{A}}$
 	\,$=$\, $ZZZ$
 
-
+	\vskip 0.3cm
+	\noindent
 	\,$f_{3} \circ \kappa_{P}$
 	\,$=$\, $\pi^{\prime} \circ f_{2}^{\prime} \circ f_{1}^{\prime}$
 	This completes the proof of Claim 1.
 
 
 	\vskip 0.3cm
-	\textbf{Claim 2:} \;$f_{3}$\, factors through \,$\varepsilon_{P}$;\,
+	\textbf{Claim 7:} \;$f_{3}$\, factors through \,$\varepsilon_{P}$;\,
 	more precisely, there exists
 	\,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\,
 	such that
 	\,$f_{3} \,=\, \delta \circ \varepsilon_{P}$.
 	\vskip 0.01cm
-	Proof of Claim 2:\;
+	Proof of Claim 7:\;
 	Since \,$\mathfrak{A}$\, is an abelian category, every morphism in \,$\mathfrak{A}$\,
 	admits a kernel.
 	Let \,$\kappa_{P} : K_{P} \longrightarrow P$\, be a kernel of the epimorphism
@@ -569,7 +799,7 @@ Then, the following statements are true:
 	\,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\,
 	now follows by the universal property of
 	\,$\varepsilon_{P}$\, as a cokernel of \,$\kappa_{P}$.\,
-	This completes the proof of Claim 2.
+	This completes the proof of Claim 7.
 \end{enumerate}
 \qed
 
