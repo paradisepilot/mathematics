@@ -216,7 +216,22 @@ If
 then: \,$\widetilde{f}$\, is itself a monomorphism.
 \end{lemma}
 \proof
-
+Suppose \,$\widetilde{f} \circ g \,=\, \widetilde{f} \circ h$.\,
+We need to show that \,$g \,=\, h$.\,
+Now,
+\begin{eqnarray*}
+\widetilde{f} \circ g \,=\, \widetilde{f} \circ h
+&\Longrightarrow&
+	\iota \circ \widetilde{f} \circ g \,=\, \iota \circ \widetilde{f} \circ h
+\\
+&\Longrightarrow&
+	f \circ g \,=\, f \circ h
+\\
+&\Longrightarrow&
+	g \,=\, h,
+	\quad\textnormal{since \,$f$\, is a monomorphism and can be cancelled on the left}
+\end{eqnarray*}
+This completes the proof of the Lemma.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%

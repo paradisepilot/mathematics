@@ -17,6 +17,7 @@
 
 \vskip 0.5cm
 \begin{proposition}[Proposition 1.2.9, p.24, \cite{Lal2021Algebra3}; Theorem 2.12, p.37, \cite{freyd1964abelian}]
+\label{AbelianImpliesIsomorphismIFFMonoEpi}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -42,13 +43,63 @@ such that
 \item
 	$g \circ f = 0$,\, and
 \item
-	\,$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
+	$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
 	is exact.
 \end{itemize}
 Then, \,$f$\, is a kernel of \,$g$.
 \end{proposition}
 \proof
-
+The exactness of
+\,$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
+means that the unique morphism \,$\theta$\, in the following diagram is an isomorphism:
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{f}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	A
+		\arrow[rr, "f"]
+		\arrow[dd, dashed, two heads, swap, "\varepsilon_{f}"]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	B
+		\arrow[rr, "g"]
+		\arrow[uurr, two heads, "\pi_{f}"]
+	&&
+	C
+	\\ \\
+	I_{f}
+		\arrow[uurr, hook, "\kappa(\pi_{f})"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	&&
+	K_{g}
+		\arrow[uu, hook, swap, "\kappa_{g}"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+Since \,$\mathfrak{A}$\, is an abelian category, it in particular has cokernels and is normal.
+By Proposition \ref{FactorizationIntoImageCoimage}, we see that
+\,$\kappa(\pi_{f})$\, is an image of \,$f$.\,
+Since \,$\mathfrak{A}$\, is an abelian category, it in particular is normal and has cokernels and equalizers.
+By Proposition \ref{FactorizationIntoImageCoimage} again, we see that
+\,$\varepsilon_{f}$\, is a coimage of \,$f$, which we denote by \,$\widetilde{f}$\, from now on.
+By Lemma \ref{fTildeIsMonomorphismWheneverFIs},
+since \,$f$\, is a monomorphism, it follows that \,$\varepsilon_{f} \,=\, \widetilde{f}$\,
+is itself a monomorphism.
+Thus, 
+\,$\varepsilon_{f} \,=\, \widetilde{f}$\,
+is both a monomorphism and an epimorphism.
+By Proposition \ref{AbelianImpliesIsomorphismIFFMonoEpi}, we see that
+\,$\varepsilon_{f} \,=\, \widetilde{f}$\,
+is an isomorphism.
+Thus,
+\,$f \,=\, \kappa_{g} \,\circ\, \theta \,\circ\, \varepsilon_{f}$,\,
+where \,$\theta$\, and \,$\varepsilon_{f}$\, are isomorphisms.
+Since \,$\kappa_{g}$\, is a kernel of \,$g$,\,
+we may now conclude that \,$f$\, is also a kernel of \,$g$.\, 
+This completes the proof of the Proposition.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
