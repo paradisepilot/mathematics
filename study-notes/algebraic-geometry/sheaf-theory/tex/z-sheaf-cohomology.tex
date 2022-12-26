@@ -1,0 +1,151 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Sheaf cohomology}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Sheaf cohomology theory -- a summary}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+\begin{itemize}
+\item
+	The category of sheaves of abelian groups on any topological space is an abelian category with enough injectives.
+	See Example III.1.0.3, p.202, \cite{hartshorne1977algebraic}, and Corollary III.2.3, p.207, \cite{hartshorne1977algebraic}.
+	\vskip 0.05cm
+	The category of sheaves of \,$\mathcal{O}_{X}$-modules\, on any ringed space \,$(X,\mathcal{O}_{X})$\,
+	is an abelian category with enough injectives.
+	See Example III.1.0.4, p.202, \cite{hartshorne1977algebraic}, and Proposition III.2.2, p.207, \cite{hartshorne1977algebraic}.
+	\vskip 0.05cm
+	The category of quasi-coherent sheaves of \,$\mathcal{O}_{X}$-modules\,
+	on a scheme \,$(X,\mathcal{O}_{X})$\, is an abelian category.
+	See Example III.1.0.4, p.202, \cite{hartshorne1977algebraic}.
+	\vskip 0.05cm
+	The category of coherent sheaves of \,$\mathcal{O}_{X}$-modules\,
+	on a noetherian scheme \,$(X,\mathcal{O}_{X})$\, is an abelian category.
+	See Example III.1.0.6, p.202, \cite{hartshorne1977algebraic}.
+	\vskip 0.3cm
+
+\item
+	Recall:\; A covariant functor \,$F : \mathfrak{A} \longrightarrow \mathfrak{B}$\,
+	is said to be \textbf{left-exact} if the exactness of
+	\begin{equation*}
+	0 \longrightarrow A^{\prime} \overset{\alpha}{\longrightarrow} A \overset{\beta}{\longrightarrow} A^{\prime\prime}
+	\end{equation*}
+	implies the exactness of
+	\begin{equation*}
+	0
+	\longrightarrow F(A^{\prime})
+	\overset{F(\alpha)}{\longrightarrow} F(A)
+	\overset{F(\beta)}{\longrightarrow} G(A^{\prime\prime})
+	\end{equation*}
+	\vskip 0.3cm
+
+\item
+	Let \,$\mathfrak{A}$\, be an abelian category with enough injectives.
+	Let \,$F : \mathfrak{A} \longrightarrow \mathfrak{B}$\, be a covariant left-exact functor
+	from \,$\mathfrak{A}$\, to another abelian category \,$\mathfrak{B}$.\,
+
+	For each integer \,$p \geq 0$,\, the \textbf{$p$-th right derived functor} \,$R^{p}\,F$\, of \,$F$\, is defined by:
+	\begin{equation*}
+	R^{p}\,F(A)
+	\;\; := \;\;
+		H^{p}\!\left(\,F(I_{A}^{\bullet})\right)
+	\;\; := \;\;
+		\dfrac{
+			\ker\!\left(\,\overset{{\color{white}.}}{F(\alpha^{p})}\,\right)
+		}{
+			\image\!\left(\,\overset{{\color{white}.}}{F(\alpha^{p-1})}\,\right)
+		}\,,
+	\quad
+	\textnormal{for each object \,$A \in \Obj(\mathfrak{A})$},
+	\end{equation*}
+	where \,$I_{A}^{\bullet}$\, is the sequence:\,
+	\begin{equation*}
+	0
+	\;\;\overset{\alpha^{-1}}{\longrightarrow}\;\;
+		I_{A}^{0}
+	\;\;\overset{\alpha^{0}}{\longrightarrow}\;\;
+		I_{A}^{1}
+	\;\;\overset{\alpha^{1}}{\longrightarrow}\;\;
+		\cdots
+	\end{equation*}
+	obtained by left-truncating an arbitrary injective resolution of \,$A$:\,
+	\begin{equation}\label{injectiveResolutionOfA}
+	0
+	\;\;\longrightarrow\;\;
+		A 
+	\;\;\overset{\iota}{\longrightarrow}\;\;
+		I_{A}^{0}
+	\;\;\overset{\alpha^{0}}{\longrightarrow}\;\;
+		I_{A}^{1}
+	\;\;\overset{\alpha^{1}}{\longrightarrow}\;\;
+		\cdots
+	\end{equation}
+	Recall that the sequence \eqref{injectiveResolutionOfA} being an injective resolution of \,$A$\,
+	means that \eqref{injectiveResolutionOfA} is exact, and \,$I_{A}^{k} \in \Obj(\mathfrak{A})$\,
+	is an injective object, for each \,$p = 0, 1, 2, \ldots$\,
+
+	Note that, for \,$p = 0$,\, we have:
+	\begin{equation*}
+	R^{0}\,F(A)
+	\; := \;
+		H^{0}\!\left(\,F(I_{A}^{\bullet})\right)
+	\; := \;
+		\dfrac{
+			\ker\!\left(\,\overset{{\color{white}.}}{F(\alpha^{0})}\,\right)
+		}{
+			\image\!\left(\,\overset{{\color{white}.}}{F(\alpha^{-1})}\,\right)
+		}\
+	\; = \;
+		\ker\!\left(\,\overset{{\color{white}.}}{F(\alpha^{0})}\,\right)
+	\; = \;
+		\image\!\left(\,\overset{{\color{white}.}}{F(\iota)}\,\right)
+	\; = \;
+		F(A)\,,
+	\end{equation*}
+	where the last two equalities follows from the left-exactness of \,$F$.\,
+	\vskip 0.3cm
+
+\item
+	Let \,$X$\, be a topological space.
+	Let \,$\Gamma_{X} : \mathfrak{Ab}(X) \longrightarrow \mathfrak{Ab}$\,
+	be the global section functor,
+	where  \,$\mathfrak{Ab}(X)$\, denotes the category of sheaves of abelian groups on \,$X$,\, and
+	\,$\mathfrak{Ab}$\ denotes the category of abelian groups.
+	\vskip 0.05cm
+	Let \,$\mathscr{F} \in \Obj(\mathfrak{Ab}(X))$\, be a sheaf of abelian groups defined on \,$X$.\,
+	Since \,$\mathfrak{Ab}(X)$\, has enough injectives, we may choose an injective resolution for \,$\mathscr{F}$:\,
+	\begin{equation*}
+	0
+	\;\;\longrightarrow\;\;
+		\mathscr{F} 
+	\;\;\longrightarrow\;\;
+		I_{\mathscr{F}}^{0}
+	\;\;\longrightarrow\;\;
+		I_{\mathscr{F}}^{1}
+	\;\;\longrightarrow\;\;
+		\cdots
+	\end{equation*}
+	For each \,$p = 0, 1, 2, \ldots$\,,\, we define:
+	\begin{equation*}
+	H^{p}(X,\mathscr{F})
+	\;\; := \;\;
+		R^{p}\,\Gamma_{X}(\mathscr{F})
+	\;\; := \;\;
+		H^{p}\!\left(\,\Gamma_{X}(I_{\mathscr{F}}^{\bullet})\right)
+	\end{equation*}
+	
+	
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
