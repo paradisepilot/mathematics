@@ -31,20 +31,24 @@ Suppose:
 \end{itemize}
 Then, the sequence of morphisms (of sheaves of Abelian groups)
 \begin{equation*}
-\begin{tikzcd}0                 \arrow[r] &
+\begin{tikzcd}
+0                 \arrow[r] &
 \mathscr{F} \arrow[r, "\varphi"] &
 \mathscr{G} \arrow[r, "\psi"] &
 \mathscr{H} \arrow[r] &
-0\end{tikzcd}
+0
+\end{tikzcd}
 \end{equation*}
 is called a \textbf{short exact sequence of sheaves of Abelian groups}
 if, for each $x \in X$, the induced sequence between stalks at $x$
 \begin{equation*}
-\begin{tikzcd}0                 \arrow[r] &
+\begin{tikzcd}
+0                 \arrow[r] &
 \mathscr{F}_{x} \arrow[r, "\varphi_{x}"] &
 \mathscr{G}_{x} \arrow[r, "\psi_{x}"] &
 \mathscr{H}_{x} \arrow[r] &
-0\end{tikzcd}
+0
+\end{tikzcd}
 \end{equation*}
 is a short exact sequence of Abelian groups.
 \end{definition}
@@ -56,11 +60,13 @@ is a short exact sequence of Abelian groups.
 \noindent
 The sequence of morphisms (of sheaves of Abelian groups)
 \begin{equation*}
-\begin{tikzcd}0                 \arrow[r] &
+\begin{tikzcd}
+0                 \arrow[r] &
 \mathscr{F} \arrow[r, "\varphi"] &
 \mathscr{G} \arrow[r, "\psi"] &
 \mathscr{H} \arrow[r] &
-0\end{tikzcd}
+0
+\end{tikzcd}
 \end{equation*}
 is a short exact sequence of sheaves of Abelian groups
 if and only if the following two conditions are true:
@@ -68,7 +74,8 @@ if and only if the following two conditions are true:
 \item
 	For each open subset \,$U \subset X$,\, the following is an exact sequence of Abelian groups:
 	\begin{equation*}
-	\begin{tikzcd}	0                 \arrow[r] &
+	\begin{tikzcd}
+	0                 \arrow[r] &
 	\mathscr{F}(U) \arrow[r, "\varphi_{U}"] &
 	\mathscr{G}(U) \arrow[r, "\psi_{U}"] &
 	\mathscr{H}(U)
@@ -79,12 +86,14 @@ if and only if the following two conditions are true:
 	\,$\psi(\mathscr{G}) \subset \mathscr{H}$\,
 	of \,$\mathscr{G}$\, under \,$\psi$;\, more precisely, there exists an isomorphism of sheaves of Abelian groups
 	\begin{equation*}
-	\begin{tikzcd}	\mathscr{H} \arrow[r, "\sim"] & \left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)^{\sharp}
+	\begin{tikzcd}
+	\mathscr{H} \arrow[r, "\sim"] & \left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)^{\sharp}
 	\end{tikzcd}
 	\end{equation*}
 	such that the following diagram commutes:
 	\begin{equation*}
-	\begin{tikzcd}	\mathscr{G} \arrow[r, "\psi"] & \psi(\mathscr{G}) \arrow[r, hook] \arrow[dr] & \mathscr{H} \arrow[d, "\sim"]
+	\begin{tikzcd}
+	\mathscr{G} \arrow[r, "\psi"] & \psi(\mathscr{G}) \arrow[r, hook] \arrow[dr] & \mathscr{H} \arrow[d, "\sim"]
 	\\
 	&& \left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)^{\sharp} \arrow[r, hook] & \mathscr{D}\!\left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)
 	\end{tikzcd}
@@ -196,11 +205,13 @@ Then, the following statements hold:
 \item
 	The following is a short exact sequence of sheaves of Abelian groups:
 	\begin{equation*}
-	\begin{tikzcd}	0                 \arrow[r] &
+	\begin{tikzcd}
+	0                 \arrow[r] &
 	\Re^{\sharp} \arrow[r, hook] &
 	C^{\infty} \arrow[r, "d"] &
 	\left(\,\overset{{\color{white}.}}{d(C^{\infty})}\,\right)^{\sharp} \arrow[r] &
-	0	\end{tikzcd}
+	0
+	\end{tikzcd}
 	\end{equation*}
 	where \,$\Re^{\sharp}$\, is the sheaf over $X$ of locally constant $\Re$-valued functions.
 \item
@@ -349,7 +360,8 @@ Then, the following statements hold:
 	\begin{eqnarray*}
 	\displaystyle\int_{\,\Gamma}\;\omega
 	& = &
-		\ointctrclockwise\;
+		%\ointctrclockwise\;
+		\displaystyle\int_{\,\Gamma}\;
 			\left(\dfrac{-\,y}{x^{2}+y^{2}}\right)\d\,x
 			\;+\;
 			\left(\dfrac{x}{x^{2}+y^{2}}\right)\d\,y
