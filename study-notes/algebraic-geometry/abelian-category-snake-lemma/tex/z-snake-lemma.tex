@@ -665,7 +665,7 @@ Then, the following statements are true:
 	and the identity morphism \,$\textnormal{id}_{I_{\mu_{A}}}$\, is an (accompanying) coimage of \,$\iota(\mu_{A})$,\,
 	we see that the exactness of
 	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
-	is precisely the property that the morphism \,$\theta$\, in the following diagram is an isomorphism:
+	is precisely the property that the unique morphism \,$\theta_{1}$\, in the following diagram is an isomorphism:
 	\begin{center}
 	\begin{tikzcd}
 	&& && Q_{\mu_{A}}
@@ -686,7 +686,7 @@ Then, the following statements are true:
 	\\ \\
 	I_{\mu_{A}}
 		\arrow[uurr, hook, "\iota(\mu_{A})\!\!"]
-		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta_{1}", red]
 	&&
 	K_{\mu_{A}}
 		\arrow[uu, hook, swap, "\;\kappa(\varepsilon_{A})"]
@@ -695,8 +695,15 @@ Then, the following statements are true:
 	%Q_{\theta}
 	\end{tikzcd}
 	\end{center}
-	Comparing the two immediately preceding diagrams,
-	see that the exactness of
+	Lastly, the fact that \,$\theta_{1}$\, must be an isomorphism follows from the uniqueness of
+	\,$\theta$\, and \,$\theta_{1}$\, in their respective diagrams.
+	Indeed, comparing the two immediately preceding diagrams, and noting the uniqueness of
+	\,$\theta$\, and \,$\theta_{1}$\, in their respective diagrams,
+	we see that we in fact must have \,$\theta = \theta_{1}$.\,
+	Since \,$\theta_{1} \,=\, \theta$\, is an isomorphism
+	(since \,$\theta$\, is an isomorphism, by the exactness hypothesis on
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$).
+	Thus, the exactness of
 	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
 	implies the exactness of
 	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$.\,
