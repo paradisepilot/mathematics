@@ -38,16 +38,36 @@
 \item
 	Recall:\; A covariant functor \,$F : \mathfrak{A} \longrightarrow \mathfrak{B}$\,
 	is said to be \textbf{left-exact} if the exactness of
-	\begin{equation*}
-	0 \longrightarrow A^{\prime} \overset{\alpha}{\longrightarrow} A \overset{\beta}{\longrightarrow} A^{\prime\prime}
-	\end{equation*}
-	implies the exactness of
-	\begin{equation*}
+	\begin{center}
+	\begin{tikzcd}
 	0
-	\longrightarrow F(A^{\prime})
-	\overset{F(\alpha)}{\longrightarrow} F(A)
-	\overset{F(\beta)}{\longrightarrow} G(A^{\prime\prime})
-	\end{equation*}
+		\arrow[r]
+		%\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&
+	 A^{\prime}
+		\arrow[r, "\alpha"]
+	&
+	A
+		\arrow[r, "\beta"]
+	&
+	A^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+	implies the exactness of
+	\begin{center}
+	\begin{tikzcd}
+	0
+		\arrow[r]
+	&
+	 F(A^{\prime})
+		\arrow[r, "F(\alpha)"]
+	&
+	F(A)
+		\arrow[r, "F(\beta)"]
+	&
+	F(A^{\prime\prime})
+	\end{tikzcd}
+	\end{center}
 	\vskip 0.3cm
 
 \item
@@ -114,6 +134,341 @@
 		F(A)\,,
 	\end{equation*}
 	where the last two equalities follows from the left-exactness of \,$F$.\,
+	
+	For any short exact sequence,
+	\begin{center}
+	\begin{tikzcd}
+	0
+		\arrow[r]
+	&
+	A^{\prime}
+		\arrow[r]
+	&
+	A
+		\arrow[r]
+	&
+	A^{\prime\prime}
+		\arrow[r]
+	&
+	0
+	\end{tikzcd}
+	\end{center}
+	there exists, for each non-negative integer \,$p \geq 0$,\,
+	a natural morphism
+	\,$\delta^{i} : R^{p}F(A^{\prime\prime}) \longrightarrow R^{p+1}F(A^{\prime})$\,
+	such that we obtain a long exact sequence
+	\begin{equation*}
+	\cdots
+	\;\longrightarrow\; R^{p}F(A^{\prime})
+	\;\longrightarrow\; R^{p}F(A)
+	\;\longrightarrow\; R^{p}F(A^{\prime\prime})
+	\;\overset{\delta^{p}}{\longrightarrow}\; R^{p+1}F(A^{\prime})
+	\;\longrightarrow\; R^{p+1}F(A)
+	\;\longrightarrow\; R^{p+1}F(A^{\prime\prime})
+	\;\longrightarrow\; \cdots
+	\end{equation*}
+	For a proof of  this fact, see Theorem 11.31, p.479, \cite{gallier2022homology}.
+
+	We give however an outline: The existence of such a long exact sequence follows
+	from the Horseshoe Lemma and the Snake Lemma.
+	For the Horseshoe Lemma, see Proposition 11.25, p.463, \cite{gallier2022homology}.
+	For a proof of the ``projective'' version of the Horseshoe Lemma,
+	see Proposition 6.24, p. 349, \cite{rotman2008introduction}.
+	For the Snake Lemma, see, for example, \cite{Surowski2000}, or
+	Lemma 12.1.1, p.297, \cite{kashiwara2005categories}.
+
+	The Horsehoe Lemma states that, given
+	\begin{itemize}
+	\item
+		a short exact sequence
+		\begin{center}
+		\begin{tikzcd}
+		0
+			\arrow[r]
+		&
+		A^{\prime}
+			\arrow[r]
+		&
+		A
+			\arrow[r]
+		&
+		A^{\prime\prime}
+			\arrow[r]
+		&
+		0\,,
+		\quad
+		\textnormal{and}
+		\end{tikzcd}
+		\end{center}
+	\item
+		injective resolutions of \,$A^{\prime}$\, and \,$A^{\prime\prime}$\,
+		\begin{center}
+		\begin{tikzcd}
+		0
+			\arrow[r]
+		&
+		A^{\prime}
+			\arrow[r]
+		&
+		I^{\,0}_{A^{\prime}}
+			\arrow[r]
+		&
+		I^{\,1}_{A^{\prime}}
+			\arrow[r]
+		&
+		\cdots
+		\\
+		0
+			\arrow[r]
+		&
+		A^{\prime\prime}
+			\arrow[r]
+		&
+		I^{\,0}_{A^{\prime\prime}}
+			\arrow[r]
+		&
+		I^{\,1}_{A^{\prime\prime}}
+			\arrow[r]
+		&
+		\cdots
+		\end{tikzcd}
+		\end{center}
+	\end{itemize}
+	there exists an injective resolution of \,$A$\,
+		\begin{center}
+		\begin{tikzcd}
+		0
+			\arrow[r]
+		&
+		A
+			\arrow[r]
+		&
+		I^{\,0}_{A}
+			\arrow[r]
+		&
+		I^{\,1}_{A}
+			\arrow[r]
+		&
+		\cdots
+		\end{tikzcd}
+		\end{center}
+	and morphisms
+	\begin{equation*}
+	I^{p}_{A^{\prime}} \longrightarrow I^{p}_{A}
+	\quad\quad\quad\textnormal{and}\quad\quad\quad
+	I^{p}_{A} \longrightarrow I^{p}_{A^{\prime\prime}}
+	\end{equation*}
+	\vskip 0.2cm
+	such that the following diagram commutes and has exact rows and exact columns:
+	\begin{center}
+	\begin{tikzcd}
+	&\vdots&{\color{red}\vdots}&\vdots&
+	\\
+	0
+		\arrow[r]
+	&
+	I^{\,1}_{A^{\prime}}
+		\arrow[r, red]
+		\arrow[u]
+	&
+	{\color{red}I^{\,1}_{A}}
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	I^{\,1}_{A^{\prime\prime}}
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	0
+		\arrow[r]
+	&
+	I^{\,0}_{A^{\prime}}
+		\arrow[r, red]
+		\arrow[u]
+	&
+	{\color{red}I^{\,0}_{A}}
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	I^{\,0}_{A^{\prime\prime}}
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	0
+		\arrow[r]
+	&
+	A^{\prime}
+		\arrow[r]
+		\arrow[u]
+	&
+	A
+		\arrow[r]
+		\arrow[u, red]
+	&
+	A^{\prime\prime}
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	&
+	0
+		\arrow[u]
+	&
+	0
+		\arrow[u]
+	&
+	0
+		\arrow[u]
+	&
+	\end{tikzcd}
+	\end{center}
+	Removing the bottom row
+	($0 \longrightarrow A^{\prime} \longrightarrow A \longrightarrow A^{\prime\prime} \longrightarrow 0$),
+	we get a short exact sequence of cochain complexes:
+	\begin{center}
+	\begin{tikzcd}
+	&\vdots&{\color{red}\vdots}&\vdots&
+	\\
+	0
+		\arrow[r]
+	&
+	I^{\,2}_{A^{\prime}}
+		\arrow[r, red]
+		\arrow[u]
+	&
+	{\color{red}I^{\,1}_{A}}
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	I^{\,2}_{A^{\prime\prime}}
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	0
+		\arrow[r]
+	&
+	I^{\,2}_{A^{\prime}}
+		\arrow[r, red]
+		\arrow[u]
+	&
+	{\color{red}I^{\,1}_{A}}
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	I^{\,1}_{A^{\prime\prime}}
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	0
+		\arrow[r]
+	&
+	I^{\,0}_{A^{\prime}}
+		\arrow[r, red]
+		\arrow[u]
+	&
+	{\color{red}I^{\,0}_{A}}
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	I^{\,0}_{A^{\prime\prime}}
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	&
+	0
+		\arrow[u]
+	&
+	0
+		\arrow[u]
+	&
+	0
+		\arrow[u]
+	&
+	\end{tikzcd}
+	\end{center}
+	Apply the functor \,$F$\,
+	\begin{center}
+	\begin{tikzcd}
+	&\vdots&{\color{red}\vdots}&\vdots&
+	\\
+	0
+		\arrow[r]
+	&
+	F(\,I^{\,2}_{A^{\prime}}\,)
+		\arrow[r, red]
+		\arrow[u]
+	&
+	F(\,{\color{red}I^{\,1}_{A}}\,)
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	F(\,I^{\,2}_{A^{\prime\prime}}\,)
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	0
+		\arrow[r]
+	&
+	F(\,I^{\,2}_{A^{\prime}}\,)
+		\arrow[r, red]
+		\arrow[u]
+	&
+	F(\,{\color{red}I^{\,1}_{A}}\,)
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	F(\,I^{\,1}_{A^{\prime\prime}}\,)
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	0
+		\arrow[r]
+	&
+	F(\,I^{\,0}_{A^{\prime}}\,)
+		\arrow[r, red]
+		\arrow[u]
+	&
+	F(\,{\color{red}I^{\,0}_{A}}\,)
+		\arrow[r, red]
+		\arrow[u, red]
+	&
+	F(\,I^{\,0}_{A^{\prime\prime}}\,)
+		\arrow[r]
+		\arrow[u]
+	&
+	0
+	\\
+	&
+	0
+		\arrow[u]
+	&
+	0
+		\arrow[u]
+	&
+	0
+		\arrow[u]
+	&
+	\end{tikzcd}
+	\end{center}
+	Each row in the above diagram is exact ({\color{red}Why?}
+	See proof of Theorem 11.31 p.482, \cite{gallier2022homology}).
+	Thus, it remains a short exact sequence of cochain complexes.
+	The Snake Lemma now implies that we obtain the desired long exact sequence of cohomology groups.
 	\vskip 0.3cm
 
 \item
@@ -125,17 +480,23 @@
 	\vskip 0.05cm
 	Let \,$\mathscr{F} \in \Obj(\mathfrak{Ab}(X))$\, be a sheaf of abelian groups defined on \,$X$.\,
 	Since \,$\mathfrak{Ab}(X)$\, has enough injectives, we may choose an injective resolution for \,$\mathscr{F}$:\,
-	\begin{equation*}
+	\begin{center}
+	\begin{tikzcd}
 	0
-	\;\;\longrightarrow\;\;
-		\mathscr{F} 
-	\;\;\longrightarrow\;\;
-		I_{\mathscr{F}}^{0}
-	\;\;\longrightarrow\;\;
-		I_{\mathscr{F}}^{1}
-	\;\;\longrightarrow\;\;
-		\cdots
-	\end{equation*}
+		\arrow[r]
+	&
+	\mathscr{F} 
+		\arrow[r]
+	&
+	I_{\mathscr{F}}^{0}
+		\arrow[r]
+	&
+	I_{\mathscr{F}}^{1}
+		\arrow[r]
+	&
+	\cdots
+	\end{tikzcd}
+	\end{center}
 	For each \,$p = 0, 1, 2, \ldots$\,,\, we define:
 	\begin{equation*}
 	H^{p}(X,\mathscr{F})
@@ -144,8 +505,30 @@
 	\;\; := \;\;
 		H^{p}\!\left(\,\Gamma_{X}(I_{\mathscr{F}}^{\bullet})\right)
 	\end{equation*}
-	
-	
+	\vskip 0.3cm
+
+\item
+	Let \,$X$\, be a topological space, and let
+	\begin{center}
+	\begin{tikzcd}
+	0
+		\arrow[r]
+		%\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&
+	\mathscr{F}
+		\arrow[r]
+	&
+	\mathscr{G}
+		\arrow[r]
+	&
+	\mathscr{H}
+		\arrow[r]
+	&
+	0
+	\end{tikzcd}
+	\end{center}
+	be a short exact sequence of sheaves of abelian groups defined on \,$X$.\,
+
 \end{itemize}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
