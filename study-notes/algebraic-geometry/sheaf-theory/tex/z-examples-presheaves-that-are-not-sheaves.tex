@@ -1,0 +1,57 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Examples: presheaves that are not sheaves}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{example}[A presheaf that is not decent, hence not a sheaf]
+\mbox{}\vskip 0.1cm
+\noindent
+Let \,$X$\, be a two-point topological space \,$\{\,x,y\,\}$\, with the discrete topology.
+Define a presheaf \,$\mathscr{F}$\, as follows:
+\begin{itemize}
+\item
+	$
+	\mathscr{F}(\varemptyset) \;=\; \{\,0\,\},
+	\quad
+	\mathscr{F}(\{\,x\,\}) \;=\; \Re,
+	\quad
+	\mathscr{F}(\{\,y\,\}) \;=\; \Re,
+	\quad
+	\mathscr{F}(\,X\,) \;=\; \mathscr{F}(\{\,x,y\,\}) \;=\; \Re \times \Re \times \Re
+	$
+\item
+	The restriction map
+	\,$\mathscr{F}(\{\,x,y\,\}) \longrightarrow \mathscr{F}(\{\,x\,\})$\,
+	is the projection onto the first factor of
+	\,$\mathscr{F}(\{\,x,y\,\}) \,=\, \Re \times \Re \times \Re$,\,
+	while the restriction map
+	\,$\mathscr{F}(\{\,x,y\,\}) \longrightarrow \mathscr{F}(\{\,y\,\})$\,
+	is the projection onto the second factor of \,$\Re \times \Re \times \Re$.\,
+\end{itemize}
+It is straightforward to check that the above indeed defines a presheaf.
+Now, consider the two sections
+\begin{equation*}
+s \;=\; (\,1,2,3\,), \quad s^{\prime} \;=\; (\,1,2,4\,) \;\;\in\;\; \mathscr{F}(\,X\,) \;=\; \mathscr{F}(\{\,x,y\,\})
+\end{equation*}
+Note that \,$s \neq s^{\prime}$,\, but \,$s$\, and \,$s^{\prime}$\, have the same restrictions:
+\begin{equation*}
+s\,\vert_{\varemptyset} \;=\; s^{\prime}\,\vert_{\varemptyset} \;=\; 0,
+\quad\textnormal{and}\quad
+s\,\vert_{\{x\}} \;=\; s^{\prime}\,\vert_{\{x\}} \;=\; 1,
+\quad\textnormal{and}\quad
+s\,\vert_{\{y\}} \;=\; s^{\prime}\,\vert_{\{y\}} \;=\; 2
+\end{equation*}
+This proves that \,$\mathscr{F}$\, is not a decent presheaf; in particular, it is not a sheaf.
+\end{example}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
