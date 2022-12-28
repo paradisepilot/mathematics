@@ -55,3 +55,38 @@ This proves that \,$\mathscr{F}$\, is not a decent presheaf; in particular, it i
 \end{example}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{example}[A presheaf that fails the gluing condition, hence not a sheaf]
+\mbox{}\vskip 0.1cm
+\noindent
+Let \,$X = \Re$\, be the $one$-dimensional Euclidean space.
+Define a presheaf \,$\mathscr{F}$\, as follows:
+\begin{itemize}
+\item
+	$
+	\mathscr{F}(\varemptyset) \;=\; \{\,0\,\},
+	\quad
+	\mathscr{F}(U) \;=\; \left\{\begin{array}{c}
+		\textnormal{all bounded $\Re$-valued functions}
+		\\
+		\textnormal{defined on $U$}
+		\end{array}\right\},
+		\;\;\textnormal{for each open subset \,$U \subset \Re$}
+	$
+\item
+	The restriction maps are the usual set-theoretic restriction maps.
+\end{itemize}
+It is straightforward to check that the above indeed defines a presheaf.
+Now, consider the sequence of sections
+\begin{equation*}
+s_{n} \;=\; \textnormal{id}_{U_{n}},
+\quad\textnormal{where}\quad 
+U_{n} \;=\; (\,-n,n\,),
+\quad\textnormal{for each \,$n = 1, 2, 3, \ldots$}
+\end{equation*}
+Clearly the sections \,$s_{n} \in \mathscr{F}(U_{n})$\, are compatible under restrictions.
+However, there are no sections in \,$\mathscr{F}(X)$\, that restrict to \,$s_{n}$\, on \,$U_{n}$,\, for each \,$n = 1, 2, 3, \ldots\,$.\,
+This proves that \,$\mathscr{F}$\, does not satisfy the gluing condition; in particular, it is not a sheaf.
+\end{example}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
