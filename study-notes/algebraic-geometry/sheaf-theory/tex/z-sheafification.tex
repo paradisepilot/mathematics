@@ -394,46 +394,6 @@ respectively.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{remark}
-\mbox{}\vskip 0.1cm
-\noindent
-Warning: In general, the discretization morphism
-\,$\mathscr{F} \overset{\iota}{\longrightarrow} \mathscr{D}(\mathscr{F})$\,
-from a presheaf to its sheaf of discontinuous sections
-need NOT be ``injective'' or ``monomorphic'' or an ``embedding.''
-In particular, there could indeed be ``information loss'' when passing to stalks.
-The amount of information loss due to passing to stalks can be described in the following Lemma.
-\end{remark}
-
-\vskip 0.5cm
-\begin{lemma}
-\mbox{}\vskip 0.1cm
-\noindent
-Let \,$X$\, be a topological space, and \,$\mathscr{F}$\, a presheaf defined on \,$X$.\,
-Then, for each open subset \,$U \subset X$\, and sections \,$\sigma,\, \tau \in \mathscr{F}(U)$,\,
-\begin{equation*}
-\begin{array}{c}
-\textnormal{$\sigma_{x} \,=\, \tau_{x}$}
-\\
-\overset{{\color{white}.}}{\textnormal{for each \,$x \in U$}}
-\end{array}
-\quad
-\textnormal{\large$\Longleftrightarrow$}
-\quad
-\begin{array}{c}
-\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$}
-\\
-\overset{{\color{white}.}}{\textnormal{such that \,$\sigma\,\vert_{U_{\alpha}} = \tau\,\vert_{U_{\alpha}}$\,,\, for each \,$\alpha$}}
-\end{array}
-\end{equation*}
-\end{lemma}
-\proof
-
-\qed
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
 \vskip 1.0cm
 \subsection{Some important properties of sub-presheaves}
 \setcounter{theorem}{0}
@@ -866,10 +826,143 @@ containing the image sub-presheaf \,$\iota(\mathscr{P}) \,\subset\, \mathscr{D}(
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.3cm
+\proof
+\begin{enumerate}
+\item
+\item
+\item
+\item
+\end{enumerate}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 0.5cm
-\begin{remark}[Local set-theoretic description of $\mathscr{P}^{\sharp}$]
+\begin{remark}
 \mbox{}\vskip 0.1cm
 \noindent
+Warning: In general, the discretization morphism
+\,$\mathscr{F} \overset{\iota}{\longrightarrow} \mathscr{D}(\mathscr{F})$\,
+from a presheaf to its sheaf of discontinuous sections
+need NOT be ``injective'' or ``monomorphic'' or an ``embedding.''
+In particular, there could indeed be ``information loss'' when passing to stalks.
+The amount of information loss due to passing to stalks can be described in the following Lemma.
+\end{remark}
+
+\vskip 0.5cm
+\begin{lemma}
+\mbox{}\vskip 0.1cm
+\noindent
+Let \,$X$\, be a topological space, and \,$\mathscr{F}$\, a presheaf defined on \,$X$.\,
+Then, for each open subset \,$U \subset X$\, and sections \,$\sigma,\, \tau \in \mathscr{F}(U)$,\,
+\begin{equation*}
+\begin{array}{c}
+\textnormal{$\sigma_{x} \,=\, \tau_{x}$}
+\\
+\overset{{\color{white}.}}{\textnormal{for each \,$x \in U$}}
+\end{array}
+\quad
+\textnormal{\large$\Longleftrightarrow$}
+\quad
+\begin{array}{c}
+\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$}
+\\
+\overset{{\color{white}.}}{\textnormal{such that \,$\sigma\,\vert_{U_{\alpha}} = \tau\,\vert_{U_{\alpha}}$\,,\, for each \,$\alpha$}}
+\end{array}
+\end{equation*}
+(Note that the sections \,$\sigma$\, and \,$\tau$\, may or may not be equal as sections in \,$\mathscr{F}(U)$.)
+\end{lemma}
+\proof
+
+\qed
+
+\begin{remark}
+\mbox{}\vskip 0.1cm
+\noindent
+The crux of the preceding Lemma is that, given two sections
+\,$\sigma, \,\tau \in \mathscr{F}(U)$\,
+defined on a common (open) domain \,$U \subset X$\,
+of a presheaf \,$\mathscr{F}$\, over a topological space \,$X$,\,
+the agreement of \,$\sigma$\, and \,$\tau$\, in the stalk at each \,$x \in U$\,
+is equivalent ONLY to the agreement of
+\,$\sigma$\, and \,$\tau$\,
+AFTER restrictions to the constituent open subsets of a certain open cover
+\,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$.\,
+In particular,
+the agreement of \,$\sigma$\, and \,$\tau$\, in the stalk at each \,$x \in U$\,
+does NOT imply that
+\,$\sigma$\, and \,$\tau$\, are equal as sections in \,$\mathscr{F}(U)$.
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}[Local set-theoretic description of $\mathscr{P}^{\flat}$ and $\mathscr{P}^{\sharp}$ of a presheaf $\mathscr{P}$]
+\mbox{}\vskip 0.1cm
+\noindent
+Let \,$\mathscr{P}$\, be a presheaf over a topological space \,$X$.\,
+Then, for each open subset \,$U \subset X$,\, we have:
+\begin{eqnarray*}
+\mathscr{P}^{\flat}(U)
+& := &
+	\left\{\;\,
+		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
+		\,\;\left\vert\;
+			\begin{array}{c}
+			\textnormal{there exists a section \,$\widetilde{\sigma} \in \mathscr{P}(U)$\, such that}
+			\\
+			\overset{{\color{white}1}}{\textnormal{$\sigma_{x} \,=\, \left(\,\widetilde{\sigma}\,\right)_{x}$\,,\, for each \,$x \in U$}}
+			\end{array}
+			\right.
+		\right\}
+\\ & {\color{white}\textnormal{\large$.$}} &
+\\
+& \cong &
+	\mathscr{P}(U)\,\slash\sim\,,
+%	\left\{\;\,
+%		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
+%		\,\;\left\vert\;
+%			\begin{array}{c}
+%			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\, such that}
+%			\\
+%			\textnormal{$\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$\,,\, for each \,$\alpha$}
+%			\end{array}
+%			\right.
+%		\right\}
+%\\ & {\color{white}\textnormal{\large$1$}} &
+%\\
+%& = &
+%	\left\{\;\;
+%		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
+%		\;\,\left\vert\;
+%			\begin{array}{c}
+%			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$,\, and{\color{white}2222.}}
+%			\\
+%			\textnormal{there exists \,$\widetilde{\sigma}_{\alpha} \,\in \mathscr{P}(U_{\alpha})$,\, for each \,$\alpha$,\, such that}
+%			\\
+%			\textnormal{$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\sigma_{x}} \,=\, \left(\;\overset{{\color{white}.}}{\widetilde{\sigma}_{\alpha}}\,\right)_{x}$\,,\, for each \,$x \in U_{\alpha}$,\, for each $\alpha$}
+%			\end{array}
+%			\right.
+%		\,\right\}
+\end{eqnarray*}
+where \,$\sim$\, denotes the equivalence relation on \,$\mathscr{P}(U)$\, given by:
+\begin{equation*}
+\sigma \,\sim\, \tau \,\in\, \mathscr{P}(U)\,,
+\quad
+\textnormal{if \;$\sigma_{x} \,=\, \tau_{x}$\,,\; for each \,$x \in U$}
+\end{equation*}
+Equivalently, \,$\sim$\, can also be given by:
+\begin{equation*}
+\sigma \,\sim\, \tau \,\in\, \mathscr{P}(U)\,,
+\quad
+\textnormal{if there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\;
+such that \,$\sigma\,\vert_{U_{\alpha}} \,=\, \tau\,\vert_{U_{\alpha}}$,\; for each \,$\alpha$}
+\end{equation*}
+And,
 \begin{eqnarray*}
 \mathscr{P}^{\sharp}(U)
 & := &
@@ -879,23 +972,23 @@ containing the image sub-presheaf \,$\iota(\mathscr{P}) \,\subset\, \mathscr{D}(
 			\begin{array}{c}
 			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\, such that}
 			\\
-			\textnormal{$\left.\left(\overset{{\color{white}.}}{(\,\sigma_{x}\,)_{x \in U}}\right)\,\right\vert^{(\mathscr{S})}_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$\,,\, for each \,$\alpha$}
+			\textnormal{$\left.\left(\overset{{\color{white}.}}{(\,\sigma_{x}\,)_{x \in U}}\right)\,\right\vert^{(\mathscr{D}(\mathscr{P}))}_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$\,,\, for each \,$\alpha$}
 			\end{array}
 			\right.
 		\right\}
-\\ & {\color{white}\textnormal{\large$1$}} &
-\\
-& = &
-	\left\{\;\,
-		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
-		\,\;\left\vert\;
-			\begin{array}{c}
-			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\, such that}
-			\\
-			\textnormal{$\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$\,,\, for each \,$\alpha$}
-			\end{array}
-			\right.
-		\right\}
+%\\ & {\color{white}\textnormal{\large$1$}} &
+%\\
+%& = &
+%	\left\{\;\,
+%		\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{P})(U)
+%		\,\;\left\vert\;
+%			\begin{array}{c}
+%			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\, such that}
+%			\\
+%			\textnormal{$\left(\,\overset{{\color{white}.}}{\sigma_{x}}\,\right)_{\,U_{\alpha}} \,\in\, \mathscr{P}(U_{\alpha})$\,,\, for each \,$\alpha$}
+%			\end{array}
+%			\right.
+%		\right\}
 \\ & {\color{white}\textnormal{\large$1$}} &
 \\
 & = &
@@ -913,17 +1006,5 @@ containing the image sub-presheaf \,$\iota(\mathscr{P}) \,\subset\, \mathscr{D}(
 		\,\right\}
 \end{eqnarray*}
 \end{remark}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\proofof Proposition \ref{PropertiesSheafification}
-\begin{enumerate}
-\item
-\item
-\item
-\item
-\end{enumerate}
-\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
