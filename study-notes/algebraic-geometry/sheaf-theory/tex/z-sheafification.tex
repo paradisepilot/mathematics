@@ -394,6 +394,46 @@ respectively.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{remark}
+\mbox{}\vskip 0.1cm
+\noindent
+Warning: In general, the discretization morphism
+\,$\mathscr{F} \overset{\iota}{\longrightarrow} \mathscr{D}(\mathscr{F})$\,
+from a presheaf to its sheaf of discontinuous sections
+need NOT be ``injective'' or ``monomorphic'' or an ``embedding.''
+In particular, there could indeed be ``information loss'' when passing to stalks.
+The amount of information loss due to passing to stalks can be described in the following Lemma.
+\end{remark}
+
+\vskip 0.5cm
+\begin{lemma}
+\mbox{}\vskip 0.1cm
+\noindent
+Let \,$X$\, be a topological space, and \,$\mathscr{F}$\, a presheaf defined on \,$X$.\,
+Then, for each open subset \,$U \subset X$\, and sections \,$\sigma,\, \tau \in \mathscr{F}(U)$,\,
+\begin{equation*}
+\begin{array}{c}
+\textnormal{$\sigma_{x} \,=\, \tau_{x}$}
+\\
+\overset{{\color{white}.}}{\textnormal{for each \,$x \in U$}}
+\end{array}
+\quad
+\textnormal{\large$\Longleftrightarrow$}
+\quad
+\begin{array}{c}
+\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$}
+\\
+\overset{{\color{white}.}}{\textnormal{such that \,$\sigma\,\vert_{U_{\alpha}} = \tau\,\vert_{U_{\alpha}}$\,,\, for each \,$\alpha$}}
+\end{array}
+\end{equation*}
+\end{lemma}
+\proof
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 1.0cm
 \subsection{Some important properties of sub-presheaves}
 \setcounter{theorem}{0}
@@ -609,6 +649,7 @@ that contains the sub-presheaf \,$\mathscr{P} \subset \mathscr{S}$.\,
 This completes the proof of the Proposition.
 \qed
 
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 1.0cm
