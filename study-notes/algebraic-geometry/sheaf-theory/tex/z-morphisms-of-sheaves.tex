@@ -1,0 +1,105 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{Morphisms of sheaves of abelian groups}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Summary}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+\begin{itemize}
+\item
+	Let \,$X$\, be topological space, and \,$\mathscr{F}$,\, $\mathscr{G}$\, sheaves of abelian groups over \,$X$.\,
+\item
+	Definition of a morphism \,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\,
+	from the sheaf \,$\mathscr{F}$\, to the sheaf \,$\mathscr{G}$.\,
+\item
+	Definition of the kernel presheaf of \,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$.\,
+	
+	The kernel presheaf of
+	\,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\,
+	is in fact always a sheaf and a subsheaf of
+	\,$\mathscr{F}$.\,
+\item
+	Definition of the image presheaf of \,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$.\,
+	
+	The image presheaf of
+	\,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\,
+	is a sub-presheaf of
+	\,$\mathscr{G}$\,
+	that is in general NOT a sheaf.
+
+	The image (sheaf) of
+	\,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\,
+	is the sheafification of the image presheaf of
+	\,$\varphi$.\,
+
+	This image sheaf is a subsheaf of
+	\,$\mathscr{G}$.\,
+\item
+	If the sheaf \,$\mathscr{F}$\, is a subsheaf of the sheaf \,$\mathscr{G}$,\,
+	then one can define the quotient sub-presheaf via
+	\begin{equation*}
+	\left(\,\mathscr{G} \overset{{\color{white}.}}{\slash} \mathscr{F}\,\right)(U)
+	\;\; := \;\;
+		\left. \overset{{\color{white}.}}{\mathscr{G}(U)} \,\right\slash\mathscr{F}(U)
+	\end{equation*}
+	The quotient sub-presheaf need not be a sheaf.
+	
+	The quotient sheaf is, by definition, the sheafification of the quotient sub-presheaf.
+\item
+`	Suppose
+	\,$\varphi : \mathscr{F} \longrightarrow \mathscr{G}$\,
+	is a morphism of sheaves.
+	
+	Recall from above that the image sheaf of \,$\varphi$\, is a subsheaf of $\mathscr{G}$.\,
+	
+	We can thus define the cokernel presheaf of \,$\varphi$\, by
+	\begin{equation*}
+	\coker(\,\varphi\,)(U)
+	\;\; := \;\;
+		% \left. \overset{{\color{white}.}}{\mathscr{G}(U)}} \;\right\slash \mathscr{F}(U)
+		\left. \overset{{\color{white}.}}{\mathscr{G}(U)} \;\right\slash \varphi_{U}\!\left(\,\overset{{\color{white}.}}{\mathscr{F}(U)}\,\right)
+	\end{equation*}
+	The cokernel sheaf of the morphism \,$\varphi$\, is the sheafification of its cokernel presheaf.
+\item
+	Suppose
+	\,$\mathscr{F} \overset{\varphi}{\longrightarrow} \mathscr{G} \overset{\psi}{\longrightarrow} \mathscr{H}$\,
+	is the composition of two morphisms
+	\,$\varphi$\,, \,$\psi$\,
+	of sheaves of abelian groups.
+	Recall that the image sheaf \,$\image(\varphi)$\, of \,$\varphi$\, and the kernel sheaf \,$\ker(\varphi)$\,
+	are both subsheaves of \,$\mathscr{G}$.\,
+	
+	The sequence
+	\,$\mathscr{F} \overset{\varphi}{\longrightarrow} \mathscr{G} \overset{\psi}{\longrightarrow} \mathscr{H}$\,
+	is said to be \textbf{exact at \,$\mathscr{G}$\,} if
+	$\image(\varphi) \,=\, \ker(\psi)$.
+
+	The sequence
+	\,$
+	0 \longrightarrow \mathscr{F}
+	\overset{\varphi}{\longrightarrow} \mathscr{G}
+	\overset{\psi}{\longrightarrow} \mathscr{H}
+	\longrightarrow
+	0
+	$\,
+	is called \textbf{a short exact sequence} of morphisms of sheaves over \,$X$,\,
+	if it is exact at each of
+	\,$\mathscr{F}$,\,
+	\,$\mathscr{G}$,\, and
+	\,$\mathscr{H}$\,
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
