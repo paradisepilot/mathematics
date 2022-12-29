@@ -1,0 +1,91 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Definitions of presheaves and sheaves}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{lemma}\label{germEqualityLocalEquality}
+\mbox{}\vskip 0.1cm
+\noindent
+Let \,$\mathscr{P}$\, be a presheaf over a topological space \,$X$.\,
+Then, for each open subset \,$U \subset X$\, and each two sections $\sigma,\, \tau \in \mathscr{P}(U)$,
+\begin{equation*}
+\begin{array}{c}
+\sigma_{x} \,=\, \tau_{x}
+\\
+\overset{{\color{white}.}}{\textnormal{for each \,$x \in U$}}
+\end{array}
+\quad\Longleftrightarrow\quad
+\begin{array}{c}
+\textnormal{$U$\, admits an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$}
+\\
+\overset{{\color{white}.}}{\textnormal{such that}}\;
+\,\left.\overset{{\color{white}1}}{\sigma}\;\right\vert^{(\mathscr{F})}_{U_{\alpha}}
+\;=\,
+\,\left.\overset{{\color{white}1}}{\tau}\;\right\vert^{(\mathscr{F})}_{U_{\alpha}},
+\;\;
+\textnormal{for each \,$\alpha$}
+\end{array}
+\end{equation*}
+\end{lemma}
+\proof
+This is an immediate consequence of the definition of germs.
+\qed
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}\label{defnDecentPresheaf}
+\mbox{}\vskip 0.1cm
+\noindent
+A presheaf \,$\mathscr{P}$\, over a topological space \,$X$\, is said to be \textbf{decent}
+if, for each open subset \,$U \subset X$\, and each two sections $\sigma,\, \tau \in \mathscr{P}(U)$,
+\begin{equation*}
+\begin{array}{c}
+\sigma_{x} \,=\, \tau_{x}
+\\
+\overset{{\color{white}.}}{\textnormal{for each \,$x \in U$}}
+\end{array}
+\quad\Longrightarrow\quad
+\sigma \,=\, \tau \,\in\, \mathscr{P}(U)
+\end{equation*}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}\label{defnSheaf}
+\mbox{}\vskip 0.1cm
+\noindent
+A sheaf \,$\mathscr{F}$\, over a topological space \,$X$\, is a decent presheaf that satisfies the following condition:
+For every family \,$\sigma_{\alpha} \,\in\, \mathscr{F}(U_{\alpha})$\, of sections,
+\begin{equation*}
+\begin{array}{c}
+\left.\overset{{\color{white}1}}{\sigma_{\alpha}}\,\right\vert^{(\mathscr{F})}_{U_{\alpha}\cap\,U_{\beta}}
+\; = \;
+\left.\overset{{\color{white}1}}{\sigma_{\beta}}\,\right\vert^{(\mathscr{F})}_{U_{\alpha}\cap\,U_{\beta}}
+\\
+\overset{{\color{white}1}}{\textnormal{for each \,$\alpha$, $\beta$}}
+\end{array}
+\quad\Longrightarrow\quad
+\begin{array}{c}
+\textnormal{there exists a section \,$\sigma \,\in\, \mathscr{F}(U)$}
+\\
+\textnormal{such that \,$\left.\overset{{\color{white}1}}{\sigma}\;\right\vert^{(\mathscr{F})}_{U_{\alpha}} \,=\; \sigma_{\alpha}$},
+\;\;
+\textnormal{for each \,$\alpha$}
+\end{array}
+\end{equation*}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
