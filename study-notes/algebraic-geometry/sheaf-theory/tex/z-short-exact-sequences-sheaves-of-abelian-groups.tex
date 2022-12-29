@@ -108,21 +108,168 @@ if and only if the following two conditions are true:
 \underline{(\,$\Longrightarrow$\,)}\quad
 Suppose
 \,$0 \longrightarrow \mathscr{F} \overset{\varphi}{\longrightarrow} \mathscr{G} \overset{\psi}{\longrightarrow} \mathscr{H} \longrightarrow 0$\,
-is a short exact sequence of sheaves of Abelian groups.
-Then, for each $x \in X$, the following is a short exact sequence of Abelian groups:
+is a short exact sequence of sheaves of Abelian groups, i.e.,
+for each $x \in X$, the following is a short exact sequence of Abelian groups:
 \,$0 \longrightarrow \mathscr{F}_{x} \overset{\varphi_{x}}{\longrightarrow} \mathscr{G}_{x} \overset{\psi_{x}}{\longrightarrow} \mathscr{H}_{x} \longrightarrow 0$.\,
-Now, exactness at \,$\mathscr{H}$\, means precisely:
+
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 1:}\; $\ker(\,\varphi_{U}\,) = \{\,0\,\}$,\, for each open subset \,$U \subset X$.
+\vskip 0.2cm
+\noindent
+Proof of Claim 1:\;
+Let \,$U \subset X$\, be an arbitrary open subset.
+We need to establish that
+\begin{equation*}
+\ker\!\left(\,\varphi_{U}\,\right) \,=\, \{\,0\,\}
+\quad\textnormal{and}\quad
+\image\!\left(\,\varphi_{U}\,\right) \,=\, \ker\!\left(\,\psi_{U}\,\right)
+\end{equation*}
+Now, suppose \,$\sigma \in \ker\!\left(\,\varphi_{U}\,\right)$,\, i.e.,
+\,$\varphi_{U}(\sigma) = 0 \in \mathscr{G}(U)$.\,
+This implies
+\,$\varphi_{x}(\,\sigma_{x}\,) = 0_{x} \in \mathscr{G}_{x}$,\,
+for each \,$x \in U$.\,
+By the exactness hypothesis on
+\,$0 \longrightarrow \mathscr{F}_{x} \overset{\varphi_{x}}{\longrightarrow} \mathscr{G}_{x} \overset{\psi_{x}}{\longrightarrow} \mathscr{H}_{x} \longrightarrow 0$\,
+(which implies \,$\ker(\,\varphi_{x}\,) = \{\,0\,\}$), we see that \,$\sigma_{x} \,=\, 0 \in \mathscr{F}_{x}$.\,
+Hence, there exists an open subset \,$V_{x} \subset U$\, such that \,$\sigma\,\vert^{(\mathscr{F})}_{V_{x}} = 0 \in \mathscr{F}(V_{x})$.\,
+Therefore, we see that \,$U$\, admits an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$\,
+such that \,$\sigma\,\vert^{(\mathscr{F})}_{U_{\alpha}} \,=\, 0 \,\in\, \mathscr{F}(U_{\alpha})$.
+{\color{red}Since \,$\mathscr{F}$\, is a sheaf}, we may now conclude that
+\,$\sigma = 0 \in \mathscr{F}(U)$.\,
+This proves that \,$\ker(\,\varphi_{U}\,) \,=\, \{\,0\,\}$,\, and completes the proof of Claim 1.
+
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 2:}\; $\image\!\left(\,\varphi_{U}\,\right) \,\subset\, \ker\!\left(\,\psi_{U}\,\right)$.\,
+\vskip 0.2cm
+\noindent
+Proof of Claim 2:\;
+Let \,$\sigma \in \mathscr{F}(U)$\, and consider
+\,$\varphi_{U}(\,\sigma\,) \in \image\!\left(\,\varphi_{U}\,\right) \subset \mathscr{G}(U)$.\,
+Then,
+\,$\left(\,\varphi_{U}(\sigma)\,\right)_{x}$
+\,$=$\, $\varphi_{x}(\,\sigma_{x}\,)$
+\,$\in$\, $\image\!\left(\,\varphi_{x}\,\right)$
+\,$=$\, $\ker\!\left(\,\psi_{x}\,\right)$
+\,$\subset$\, $\mathscr{G}_{x}$,\,
+for each \,$x \in U$,\, by the stalk-level exactness hypothesis.
+Hence,
+\,$\left(\,\psi_{U} \overset{{\color{white}1}}{\circ} \varphi_{U}(\sigma)\,\right)_{x}$
+\,$=$\, $\left(\,\psi_{x} \overset{{\color{white}1}}{\circ} \varphi_{x}\,\right)\!(\,\sigma_{x}\,)$
+\,$=$\, $0$
+\,$\in$\, $\mathscr{H}_{x}$,\,
+for each \,$x \in U$.\,
+Thus, we see that \,$U$\, admits an open cover \,$U \,=\, \underset{\beta}{\bigcup}\;U_{\beta}$\,
+such that
+\,$\left.\psi_{U}\overset{{\color{white}1}}{\circ}\varphi_{U}(\sigma)\,\right\vert^{(\mathscr{H})}_{U_{\beta}}$
+\,$=$\, $0$
+\,$\in$\,$\mathscr{H}(U_{\beta})$,\,
+for each \,$\beta$.\,
+{\color{red}Since \,$\mathscr{H}$\, is a sheaf}, we may now conclude that
+\,$\psi_{U}\overset{{\color{white}1}}{\circ}\varphi_{U}(\sigma) \,=\, 0 \,\in\, \mathscr{H}(U)$.\,
+This completes the proof of Claim 2.
+
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 3:}\; $\image\!\left(\,\varphi_{U}\,\right) \,\supset\, \ker\!\left(\,\psi_{U}\,\right)$.\,
+\vskip 0.2cm
+\noindent
+Proof of Claim 3:\;
+Let \,$\tau \,\in\, \ker(\,\psi_{U}\,) \,\subset\, \mathscr{G}(U)$.\,
+Then,
+\,$\psi_{U}(\,\tau\,) = 0 \in \mathscr{H}(U)$,\,
+which implies
+\,$\psi_{x}(\tau_{x}) = 0 \in\mathscr{H}_{x}$,\, for each \,$x \in U$.\,
+Thus,
+\,$\tau_{x} \in \ker(\,\psi_{x}\,) = \image(\,\varphi_{x}\,) \subset \mathscr{G}_{x}$,\, for each \,$x \in U$.\,
+Thus, we see that \,$U$\, admits an open cover \,$U \,=\, \underset{\gamma}{\bigcup}\;U_{\gamma}$\,
+and, that for each \,$\gamma$,\, there exists
+\,$\sigma_{\gamma} \in \mathscr{F}(U_{\gamma})$\,
+such that
+\,$\left.\overset{{\color{white}.}}{\tau}\;\right\vert^{(\mathscr{G})}_{U_{\gamma}}$
+\,$=$\, $\varphi_{U_{\gamma}}(\,\sigma_{\gamma}\,)$
+\,$\in$\, $\varphi_{U_{\gamma}}\!\left(\,\overset{{\color{white}.}}{\mathscr{F}(U_{\gamma})}\,\right)$,\,
+for each \,$\gamma$.\,
+Now, observe that, for each
+\,$x \in U_{\gamma_{1}}\cap U_{\gamma_{2}}$,\,
+we have
+\,$\varphi_{x}\!\left(\,(\overset{{\color{white}1}}{\sigma_{\gamma_{1}}})_{x}\,\right)$
+\,$=$\, $\tau_{x}$
+\,$=$\, $\varphi_{x}\!\left(\,(\overset{{\color{white}1}}{\sigma_{\gamma_{2}}})_{x}\,\right)$,\,
+which implies
+\,$(\sigma_{\gamma_{1}})_{x}$ \,$=$\, $(\sigma_{\gamma_{2}})_{x}$,\,
+since \,$\ker(\,\varphi_{x}\,) = \{\,0\,\}$.\,
+{\color{red}Since \,$\mathscr{F}$\, is a sheaf} (hence, in particular, it is a decent presheaf),
+we see that
+\,$\left.\overset{{\color{white}1}}{\sigma_{\gamma_{1}}}\,\right\vert^{(\mathscr{F})}_{U_{\gamma_{1}}\cap\,U_{\gamma_{2}}}$
+\,$=$\,
+\,$\left.\overset{{\color{white}1}}{\sigma_{\gamma_{2}}}\,\right\vert^{(\mathscr{F})}_{U_{\gamma_{1}}\cap\,U_{\gamma_{2}}}$
+\,$\in$\, $\mathscr{F}(U_{\gamma_{1}}\cap\,U_{\gamma_{2}})$,\,
+by Definition \ref{defnDecentPresheaf} and Definition \ref{defnSheaf}.
+Again, {\color{red}since \,$\mathscr{F}$\, is a sheaf}, we see that there exists \,$\sigma \in \mathscr{F}(U)$\,
+such that
+\,$\left.\overset{{\color{white}1}}{\sigma}\,\right\vert^{(\mathscr{F})}_{U_{\gamma}} \,=\; \sigma_{\gamma}$.\,
+Lastly, observe that we now have, for each \,$x \in U$,\,
+\,$\left(\,\overset{{\color{white}.}}{\varphi_{U}(\sigma)}\,\right)_{x}$
+\,$=$\, $\varphi_{x}(\,\sigma_{x}\,)$
+\,$=$\, $\tau_{x}$.\,
+It thus follows that
+\,$\varphi_{U}(\sigma) \,=\, \tau$,\,
+{\color{red}since \,$\mathscr{F}$\, is a sheaf} (in particular, a decent presheaf).
+So, \,$\tau \,\in\, \image(\,\varphi_{U}\,)$,\,
+and we have established that indeed
+\,$\ker(\,\psi_{U}\,) \subset \image(\,\varphi_{U}\,)$.
+\vskip 0.2cm
+\noindent
+This completes the proof of Claim 3.
+
+\vskip 0.5cm
+\noindent
+Now, note that Claim 1, Claim 2 and Claim 3 together imply the exactness of
+\begin{equation*}
+\begin{tikzcd}
+0
+	\arrow[r] &
+\mathscr{F}(U)
+	\arrow[r, "\varphi_{U}"] &
+\mathscr{G}(U)
+	\arrow[r, "\psi_{U}"] &
+\mathscr{H}(U)
+\end{tikzcd}
+\end{equation*}
+
+
+\vskip 0.5cm
+\noindent
+\textbf{Claim 4:}\; $\mathscr{H} \,\cong\, \left(\,\overset{{\color{white}1}}{\psi(\mathscr{G})}\,\right)^{\sharp}$.\,
+\vskip 0.2cm
+\noindent
+Proof of Claim 4:\;
+Recall that exactness of
+\,$
+0
+\longrightarrow \mathscr{F}
+\overset{\varphi}{\longrightarrow} \mathscr{G}
+\overset{\psi}{\longrightarrow} \mathscr{H}
+\longrightarrow 0
+$\,
+at \,$\mathscr{H}$\, means precisely:
 For each \,$\tau_{x} \in \mathscr{H}_{x}$,\, the following are true:
 \begin{itemize}
 \item
 	there exists \,$\sigma_{x} \in \mathscr{G}_{x}$\, such that \,$\tau_{x} = \psi_{x}(\sigma_{x})$,
 \item
-	there exists open
+	hence, there exists open
 	\,$U \ni x$,\, \,$\widetilde{\tau} \in \mathscr{H}(U)$,\, and \,$\widetilde{\sigma} \in \mathscr{G}(U)$\,
 	such that
 	\,$\tau_{x} \,=\, \left(\,\widetilde{\tau}\,\right)_{x},$\,
 	\,$\widetilde{\tau} \,=\, \psi_{U}(\,\widetilde{\sigma}\,)$,\, and
-	\,$\sigma_{x} \,=\, \left(\,\widetilde{\sigma}\,\right)_{x}$,\, hence
+	\,$\sigma_{x} \,=\, \left(\,\widetilde{\sigma}\,\right)_{x}$\,;\, thus
 	\begin{equation*}
 	\tau_{x}
 	\;\; = \;\;
@@ -137,19 +284,21 @@ These observations imply:
 \begin{eqnarray*}
 \mathscr{H}(U)
 & = &
-	\mathscr{H}^{\sharp}(U)
+	\mathscr{H}^{\sharp}(U),
+	\quad
+	\textnormal{since \,$\mathscr{H}$ is a sheaf}
 \\ & {\color{white}\textnormal{\large$1$}} &
 \\
 & := &
 	\left\{\;
-		\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, {\color{white}1}\mathscr{D}(\mathscr{H})(U){\color{white}1}
+		\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{H})(U)
 		\;\,\left\vert\;
 			\begin{array}{c}
 			\textnormal{there exists an open cover \,$U \,=\, \underset{\alpha}{\bigcup}\;U_{\alpha}$,\, and{\color{white}2222.}}
 			\\
-			\textnormal{there exists \,$\widetilde{\tau}_{\alpha} \,\in \mathscr{H}(U_{\alpha})$,\, for each \,$\alpha$,\, such that}
+			\textnormal{there exists \,$\widetilde{\tau}_{\alpha} \,\in \mathscr{H}^{\,\flat}(U_{\alpha}) = \mathscr{H}(U_{\alpha})$,\, for each \,$\alpha$,}
 			\\
-			\textnormal{$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\tau_{x}} \,=\, \left(\;\overset{{\color{white}.}}{\widetilde{\tau}_{\alpha}}\,\right)_{x}$\,,\, for each \,$x \in U_{\alpha}$,\, for each $\alpha$}
+			\textnormal{such that \,$\overset{{\color{white}\textnormal{\normalsize$1$}}}{\tau_{x}} \,=\, \left(\;\overset{{\color{white}.}}{\widetilde{\tau}_{\alpha}}\,\right)_{x}$\,,\, for each \,$x \in U_{\alpha}$,\, for each $\alpha$}
 			\end{array}
 			\right.
 		\,\right\}
@@ -157,7 +306,7 @@ These observations imply:
 \\
 & = &
 	\left\{\;
-		\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\psi(\mathscr{G}))(U)
+		\left(\,\overset{{\color{white}.}}{\tau_{x}}\,\right)_{x \in U} \,\in\, \mathscr{D}(\mathscr{H})(U)
 		\;\,\left\vert\;
 			\begin{array}{c}
 			\textnormal{there exists an open cover \,$U \,=\, \underset{\beta}{\bigcup}\;U_{\beta}$,\, and{\color{white}2222.}}
@@ -170,9 +319,15 @@ These observations imply:
 		\,\right\}
 \\ & {\color{white}\textnormal{\large$1$}} &
 \\
-& =: &
-	\mathscr{D}(\psi(\mathscr{G}))^{\sharp}(U)
+& \cong &
+	\left(\,\overset{{\color{white}.}}{\psi(\mathscr{G})}\,\right)^{\sharp}(U)
 \end{eqnarray*}
+This completes the proof of Claim 4, as we as the proof of \,$(\,\Longrightarrow\,)$.
+
+\vskip 0.5cm
+\noindent
+\underline{(\,$\Longleftarrow$\,)}\quad
+
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
