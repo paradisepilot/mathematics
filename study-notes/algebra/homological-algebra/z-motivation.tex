@@ -23,8 +23,8 @@
 Suppose $R$ is a ring with identity, and the following is
 a short exact sequence of $R$-modules
 \begin{equation}\label{givenShortExactSequence}
-0
-\;\; \longrightarrow \;\;
+%0
+%\;\; \longrightarrow \;\;
 	L
 \;\; \overset{\psi}{\longrightarrow} \;\;
 	M
@@ -171,11 +171,15 @@ Consider the following diagram:
 \begin{center}
 \begin{tikzcd}
 0 \arrow[r]
-& L \arrow[r, "\psi"] \arrow[d, "\xi{\color{white}.}" swap]& M \arrow[r, "\varphi"] \arrow[dr] \arrow[dl, dashrightarrow, "\exists{\color{white}.}\eta{\color{white}.}?", red]& N \arrow[d, "{\color{white}.}\zeta_{1}\textnormal{,\,}\zeta_{2}"] \arrow[r]
+& L \arrow[r, "\psi"] \arrow[d, "\xi{\color{white}.}" swap]
+& M \arrow[r, "\varphi"] \arrow[dr] \arrow[dl, dashrightarrow, "\exists{\color{white}.}\eta{\color{white}.}?", red]
+& N \arrow[d, "{\color{white}.}\zeta_{1}\textnormal{,\,}\zeta_{2}"] \arrow[r]
 & 0
 \\
 & D
-&& D\end{tikzcd}\end{center}
+&
+& D
+\end{tikzcd}\end{center}
 \begin{itemize}
 \item
 	The exactness of \eqref{inducedExactSequence} at \,$\Hom_{R}(N,D)$
@@ -226,17 +230,42 @@ that measure the degree to which
 more precisely, the aforementioned algebraic objects are abelian groups
 that extend \eqref{inducedExactSequence} into a long exact sequence:
 \begin{center}
-\begin{tikzcd}0 \arrow[r]
-& \Hom_{R}(N,D) \arrow[r, "\varphi^{\prime}"]& \Hom_{R}(M,D) \arrow[r, "\psi^{\prime}"] \arrow[d, phantom, ""{coordinate, name=Z}]& \Hom_{R}(L,D) 
-\arrow[dll,rounded corners,to path={ -- ([xshift=2ex]\tikztostart.east)|- (Z) [near end]\tikztonodes-| ([xshift=-2ex]\tikztotarget.west)-- (\tikztotarget)}]
+\begin{tikzcd}
+0 \arrow[r]
+& \Hom_{R}(N,D) \arrow[r, "\varphi^{\prime}"]
+& \Hom_{R}(M,D) \arrow[r, "\psi^{\prime}"] \arrow[d, phantom, ""{coordinate, name=Z}]
+& \Hom_{R}(L,D) 
+\arrow[dll,
+rounded corners,
+to path={ -- ([xshift=2ex]\tikztostart.east)
+|- (Z) [near end]\tikztonodes
+-| ([xshift=-2ex]\tikztotarget.west)
+-- (\tikztotarget)}]
 \\
-& {\color{white}.}\Ext^{1}_{R}(N,D){\color{white}.} \arrow[r]& {\color{white}.}\Ext^{1}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]& {\color{white}.}\Ext^{1}_{R}(L,D){\color{white}.} 
-\arrow[dll,rounded corners,to path={ -- ([xshift=2ex]\tikztostart.east)|- (Z) [near end]\tikztonodes-| ([xshift=-2ex]\tikztotarget.west)-- (\tikztotarget)}]
+& {\color{white}.}\Ext^{1}_{R}(N,D){\color{white}.} \arrow[r]
+& {\color{white}.}\Ext^{1}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]
+& {\color{white}.}\Ext^{1}_{R}(L,D){\color{white}.} 
+\arrow[dll,
+rounded corners,
+to path={ -- ([xshift=2ex]\tikztostart.east)
+|- (Z) [near end]\tikztonodes
+-| ([xshift=-2ex]\tikztotarget.west)
+-- (\tikztotarget)}]
 \\
-& {\color{white}.}\Ext^{2}_{R}(N,D){\color{white}.} \arrow[r]& {\color{white}.}\Ext^{2}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]& {\color{white}.}\Ext^{2}_{R}(L,D){\color{white}.}
-\arrow[dll,rounded corners,to path={ -- ([xshift=2ex]\tikztostart.east)|- (Z) [near end]\tikztonodes-| ([xshift=-2ex]\tikztotarget.west)-- (\tikztotarget)}]
+& {\color{white}.}\Ext^{2}_{R}(N,D){\color{white}.} \arrow[r]
+& {\color{white}.}\Ext^{2}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]
+& {\color{white}.}\Ext^{2}_{R}(L,D){\color{white}.}
+\arrow[dll,
+rounded corners,
+to path={ -- ([xshift=2ex]\tikztostart.east)
+|- (Z) [near end]\tikztonodes
+-| ([xshift=-2ex]\tikztotarget.west)
+-- (\tikztotarget)}]
 \\
-& {\color{white}.}\Ext^{3}_{R}(N,D){\color{white}.} \arrow[r]& {\color{white}.}\cdots\;\;\cdots\;\;\cdots{\color{white}.} \arrow[r, white]& {\color{white}.\Ext^{3}_{R}(N,D).}\end{tikzcd}\end{center}
+& {\color{white}.}\Ext^{3}_{R}(N,D){\color{white}.} \arrow[r]
+& {\color{white}.}\cdots\;\;\cdots\;\;\cdots{\color{white}.} \arrow[r, white]
+& {\color{white}.\Ext^{3}_{R}(N,D).}
+\end{tikzcd}\end{center}
 Consequently, the non-vanishing of the group
 \,$\Ext^{1}_{R}(N,D)$\,
 can therefore be regarded as {\color{red}obstruction} to
