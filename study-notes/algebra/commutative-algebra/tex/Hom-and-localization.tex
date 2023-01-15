@@ -204,12 +204,99 @@ Then, the following statements are true:
 	This completes the proof of Claim 1.
 
 	\vskip 0.3cm
-	\textbf{Claim 2}:\;\; If \,$M = \overset{m}{\underset{i =1}{\bigoplus}}\, R$ is a free \,$R$-module of finite rank \,$m \geq 1$,\,
+	\textbf{Claim 2}:\;\; If \,$M = \overset{m}{\underset{i =1}{\bigoplus}}\, R$\, is a free \,$R$-module of finite rank \,$m \geq 1$,\,
 	(i.e., the direct sum of \,$m$\, copies of \,$R$),
 	then \,$\alpha$\, is an isomorphism.
 	\vskip 0.01cm
 	Proof of Claim 2:\;\;
+	Recall that the functions \,$\Hom$\, and \,$\otimes$\, both commute with finite direct sums.
+	Consequently, \,$\alpha_{M}$\, decomposes by summands, i.e.,
+	\,$\alpha_{M}$ \,$=$\, $\overset{m}{\underset{i=1}{\bigoplus}}\;\alpha_{R}$.\,
+	Since each copy of \,$\alpha_{R}$\, is an isomorphism onto its own image (by Claim 1),
+	\,$\alpha_{M}$\, itself is an isomorphism.
+	This completes the proof of Claim 2.
 
+	\vskip 0.3cm
+	\textbf{Claim 3}:\;\; If \,$M$\, is a finitely presented \,$R$-module,
+	then \,$\alpha$\, is an isomorphism.
+	\vskip 0.01cm
+	Proof of Claim 3:\;\;
+
+	\begin{equation}\label{finitePresentationOfM}
+	\begin{tikzcd}
+	\overset{b}{\underset{i=1}{\oplus}}R
+		\arrow[r]
+	&
+	\overset{a}{\underset{i=1}{\oplus}}R
+		\arrow[r]
+	&
+	M
+		\arrow[r]
+	&
+	0
+	\end{tikzcd}
+	\end{equation}
+	Since tensoring is right-exact, we get the exact sequence:
+	\begin{equation}\label{STensorFinitePresentationOfM}
+	\begin{tikzcd}
+	S\otimes_{R}\left(\,\overset{b}{\underset{i=1}{\oplus}}R\,\right)
+		\arrow[r]
+	&
+	S\otimes_{R}\left(\,\overset{a}{\underset{i=1}{\oplus}}R\,\right)
+		\arrow[r]
+	&
+	S\otimes_{R}M
+		\arrow[r]
+	&
+	0
+	\end{tikzcd}
+	\end{equation}
+	Now, consider the following commutative diagram:
+	\begin{equation}\label{stackedExactSequence}
+	\begin{tikzcd}
+	0
+		\arrow[r]
+	&
+	S \,\otimes_{R}\, \Hom_{R}\!\left(\,M\,,\,N\,\right)
+		\arrow[dd, swap, "\alpha\;"]
+		\arrow[r]
+	&
+	S \,\otimes_{R} \Hom_{S}\!\left(\,\overset{a}{\underset{i=1}{\oplus}}R\,,\,N\,\right)
+		\arrow[dd, swap, "\cong\;"]
+		\arrow[r]
+	&
+	S \,\otimes_{R} \Hom_{S}\!\left(\,\overset{b}{\underset{i=1}{\oplus}}R\,,\,N\,\right)
+		\arrow[dd, "\;\cong"]
+	\\
+	\\
+	0
+		\arrow[r]
+	&
+	\Hom_{S}\!\left(\overset{{\color{white}.}}{S} \otimes_{R}M , S \otimes_{R}M\right)
+		\arrow[r]
+	&
+	\Hom_{S}\!\left(\overset{{\color{white}.}}{S}\otimes_{R}\!\left(\overset{a}{\underset{i=1}{\oplus}}R\right),S\otimes_{R}N\right)
+		\arrow[r]
+	&
+	\Hom_{S}\!\left(\overset{{\color{white}.}}{S}\otimes_{R}\!\left(\overset{b}{\underset{i=1}{\oplus}}R\right),S\otimes_{R}N\right)
+	\end{tikzcd}
+	\end{equation}
+	The top row of  \eqref{stackedExactSequence} is obtained from \eqref{finitePresentationOfM}
+	by applying \,$\Hom(\;\cdot\,,N\,)$\, followed by tensoring \,$S\otimes_{R}(\,\cdot\,)$.
+	Left-exactness (and contravariance) of \,$\Hom(\;\cdot\,,N\,)$\,
+	and flatness of \,$S$\ imply that the top row of \eqref{stackedExactSequence} is exact.
+
+	\vskip 0.2cm
+	The bottom row of  \eqref{stackedExactSequence} is obtained from \eqref{STensorFinitePresentationOfM}
+	by applying \,$\Hom(\;\cdot\,,S\otimes_{R}N\,)$.\, 
+	Left-exactness (and contravariance) of \,$\Hom(\;\cdot\,,S\otimes_{R}N\,)$\,
+	implies that the bottom row of \eqref{stackedExactSequence} is exact.
+
+	\vskip 0.2cm
+	By Claim 2, the middle and rightmost vertical arrows in \eqref{stackedExactSequence}.
+
+	\vskip 0.2cm
+	That \,$\alpha$\, is an isomorphism can be established via a diagram chase.
 \end{enumerate}
 
 \vskip 0.25cm
