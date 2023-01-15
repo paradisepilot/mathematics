@@ -1,0 +1,382 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Hom and localiazation}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}[Proposition 2.10, \S2.2, p.69, \cite{eisenbud1995commutative}]
+\label{HomAndLocalization}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose that \,$R$\, is a commutative ring with multiplicative identity, \,$S$\, is an $R$-algebra, and \,$M$,\, $N$\, are \,$R$-modules.
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	There is a unique $S$-module homomorphism
+	\begin{equation*}
+	\alpha : S \otimes_{R} \Hom_{R}(M,N) \longrightarrow \Hom_{S}\!\left(\,S\otimes_{R}M\,,\,S\otimes_{R}N\,\right)
+	\end{equation*}
+	that takes an element
+	\,$1_{S}\,\otimes\,\varphi \in S \otimes_{R} \Hom_{R}(M, N)$\,
+	to the $S$-module homomorphism	\,$\id_{S} \,\otimes_{R}\, \varphi : S \otimes_{R} M \longrightarrow S \otimes_{R} N$\,
+	in
+	\,$\Hom_{S}(S \otimes_{R} M, S \otimes_{R} N)$.
+%	\begin{equation*}
+%	\left(\,\id_{S} \overset{{\color{white}.}}{\otimes_{R}} \varphi\,\right)\!\left(\,s \otimes_{R} m\,\right)
+%	\;\; = \;\;
+%		s \otimes_{R} \varphi(m)
+%	\end{equation*}
+%	\begin{center}
+%	\begin{tikzcd}
+%	A
+%		\arrow[rr, "f"]
+%		\arrow[dr, swap, "\nu"]
+%		\arrow[ddr, bend right, swap, "\nu^{\prime}"]
+%	&&
+%	B
+%	\\
+%	& {\color{red}I}
+%		\arrow[ur, hook, swap, "\iota", red]
+%		\arrow[d, dashed, "\;\exists ! \, \theta"]
+%	\\
+%	& I^{\prime}
+%		\arrow[uur, bend right, hook, swap, "\iota^{\prime}"]
+%	&
+%	\end{tikzcd}
+%	\end{center}
+\item
+	If $S$ is flat over $R$ and $M$ is finitely presented, then $\alpha$ is an isomorphism.\item
+	In particular, if $M$ is finitely presented, then $\Hom_{R}(M, N)$ localizes in the	sense that the map $\alpha$ provides a natural isomorphism
+	\begin{equation*}
+	D^{-1}\,\Hom_{R}\!\left(\,M\,,\,N\,\right)
+	\;\;\cong\;\;
+		\Hom_{D^{-1}R}\!\left(\,D^{-1}M\,,\,D^{-1}N\,\right)
+	\end{equation*}
+	for any subset $D \subset R$.
+\end{enumerate}
+\end{proposition}
+\proof
+
+\begin{enumerate}
+\item
+	It is clear that the set-theoretic map
+	\begin{equation*}
+	\alpha^{\prime} \;:\; \Hom_{R}(M,N)
+		\;\; \longrightarrow \;\;
+		\Hom_{S}\!\left(\, S \otimes_{R} M \,,\, S \otimes_{R} N \,\right)
+	\;\;:\;\;
+		\varphi \;\; \longmapsto \;\; \id_{S} \,\otimes_{R}\, \varphi
+	\end{equation*}
+	is an $R$-module homomorphism.
+	The map
+	\,$\alpha : S \otimes_{R} \Hom_{R}(M,N) \longrightarrow \Hom_{S}\!\left(\,S\otimes_{R}M\,,\,S\otimes_{R}N\,\right)$\,
+	is obtained from \,$\alpha^{\prime}$\, by extending its domain from
+	\,$\Hom_{R}(M,N)$\, to \,$S \otimes_{R} \Hom_{R}(M,N)$.\,
+	The following commutative diagram describes the relation between \,$\alpha$\, and \,$\alpha^{\prime}$:\,
+	\begin{center}
+	\begin{tikzcd}
+	\varphi
+		\arrow[rr, maps to]
+	&
+	&
+	\id_{S} \otimes \varphi
+	\\
+	\Hom_{R}(M,N)
+		\arrow[rr, "\alpha^{\prime}"]
+		\arrow[dd]
+	&
+	&
+		\Hom_{S}\!\left(\,S\otimes_{R}M\,,\,S\otimes_{R}N\,\right)
+		\arrow[dd, equal]
+	\\ \\
+	S\,\otimes_{R}\Hom_{R}(M,N)
+		\arrow[rr, swap, "\alpha"]
+	&
+	&
+		\Hom_{S}\!\left(\,S\otimes_{R}M\,,\,S\otimes_{R}N\,\right)
+	\\
+	1_{S}\,\otimes\,\varphi
+		\arrow[rr, maps to]
+	&
+	&
+	\id_{S} \otimes \varphi
+	\end{tikzcd}
+	\end{center}
+	Since \,$\alpha$\, is an $S$-module homomorphism, its value on a general element
+	\,$\xi \,\otimes\, \varphi \,\in\, S \,\otimes_{R}\, \Hom_{R}(M,N)$\,
+	is determined by \,$\alpha^{\prime}$\, via:
+	\begin{eqnarray*}
+	\alpha\!\left(\, \xi \,\overset{{\color{white}.}}{\otimes}\, \varphi \,\right)
+	& = &
+		\alpha\!\left(\, (\,\xi \cdot 1_{S}) \,\overset{{\color{white}.}}{\otimes}\, \varphi \,\right)
+	\;\; = \;\;
+		\alpha\!\left(\, \xi \cdot (\,1_{S} \,\overset{{\color{white}.}}{\otimes}\, \varphi\,) \,\right)
+	\;\; = \;\;
+		\xi \,\cdot\, \alpha\!\left(\, 1_{S} \,\overset{{\color{white}.}}{\otimes}\, \varphi \,\right)
+	\;\; = \;\;
+		\xi \cdot \left(\, \id_{S} \,\overset{{\color{white}.}}{\otimes}\, \varphi \,\right)
+	\\
+	& = &
+		\xi(\,\cdot\,) \,\overset{{\color{white}.}}{\otimes}\, \varphi\,,
+	\end{eqnarray*}
+	where \,$\xi(\,\cdot\,) : S \longrightarrow S$\, denotes multiplication by \,$\xi \in S$\, on \,$S$,\,
+	and the last equality follows from the following observation:
+	\begin{equation*}
+	\left[\;\xi \cdot \left(\, \id_{S} \,\overset{{\color{white}.}}{\otimes}\, \varphi \,\right)\,\right](\,s \,\otimes\, m\,)
+	\;\; = \;\;
+		\xi \cdot \left(\, \id_{S}(s) \,\overset{{\color{white}.}}{\otimes}\, \varphi(m) \,\right)
+	\;\; = \;\;
+		\xi \cdot \left(\, s \,\overset{{\color{white}.}}{\otimes}\, \varphi(m) \,\right)
+	\;\; = \;\;
+		\xi(s) \,\overset{{\color{white}.}}{\otimes}\, \varphi(m)
+	\end{equation*}
+%	$\alpha^{\prime}(\varphi)(s \otimes m)$
+%	\,$=$\, $\left(\,\id_{S}\overset{{\color{white}.}}{\otimes}\varphi\,\right)(s \otimes m)$
+%	\,$=$\, $\left(\,\id_{S}(\overset{{\color{white}1}}{s})\,\right) \otimes \left(\, \varphi(\overset{{\color{white}1}}{m}) \,\right)$
+%	\,$=$\, $s \otimes \varphi(m)$	
+%	$\left(\,s \overset{{\color{white}.}}{\otimes_{R}} \varphi\,\right)\!(\,m\,)$
+%	\,$=$\, $s \otimes_{R} \varphi(m)$.
+\end{enumerate}
+
+\vskip 0.25cm
+\noindent
+\underline{Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(N,D)$, i.e. {\color{red}injectivity of $\varphi^{\prime}$}{\color{white}.}}
+\vskip 0.25cm
+\noindent
+Let $\zeta_{1}, \zeta_{2} \in \Hom_{R}(N,D)$ be such that
+$\varphi^{\prime}(\zeta_{1}) = \varphi^{\prime}(\zeta_{2}) \in \Hom_{R}(M,D)$, i.e.
+$\zeta_{1} \circ \varphi = \zeta_{2} \circ \varphi$.
+We need to show that $\zeta_{1} = \zeta_{2} \in \Hom_{R}(N,D)$.
+But, this follows immediately from the {\color{red}surjectivity of} ${\color{red}\varphi} \in \Hom_{R}(M,N)$.
+
+
+\vskip 0.50cm
+\noindent
+\underline{Exactness of \eqref{inducedExactSequence} at $\Hom_{R}(M,D)$,\, i.e. $\image(\psi^{\prime}) = \ker(\varphi^{\prime})$}
+\vskip 0.25cm
+\noindent
+We need to show that \,$\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)$.\,
+First, we establish \,$\image(\,\varphi^{\prime}\,) \subset \ker(\,\psi^{\prime}\,)$,\,
+equivalently, \,$\psi^{\prime} \circ \varphi^{\prime} = 0$.\,
+To this end, let
+$\varphi^{\prime}(\zeta) \;=\; \zeta \circ \varphi \;\in\; \image(\,\varphi^{\prime}\,) \;\subset\; \Hom_{R}(M,D)$.
+Then, observe that
+\begin{equation*}
+(\,\psi^{\prime}\circ\varphi^{\prime}\,)(\zeta)
+\;\; = \;\;
+	\psi^{\prime}(\,\varphi^{\prime}(\zeta)\,)
+\;\; = \;\;
+	\psi^{\prime}(\,\zeta \circ \varphi\,)
+\;\; = \;\;
+	(\,\zeta \circ \varphi\,) \circ \psi
+\;\; = \;\;
+	\zeta \circ (\,\varphi \circ \psi\,),
+\quad
+	\textnormal{for each \,$\zeta \in \Hom_{R}(N,D)$}
+\end{equation*}
+Hence,
+\begin{equation*}
+\textnormal{exactness of \eqref{givenShortExactSequence} at $M$}
+\; \Longleftrightarrow \;
+	{\color{red}\image(\,\psi\,) \,=\, \ker(\,\varphi\,)}
+\; \Longrightarrow \;
+	\varphi \,\circ\, \psi \,= 0
+\;\; {\color{red}\Longrightarrow} \;\;
+	\psi^{\prime} \circ \varphi^{\prime} = 0
+\; \Longleftrightarrow \;
+	{\color{red}\image(\,\varphi^{\prime}\,) \subset \ker(\,\psi^{\prime}\,)}
+\end{equation*}
+as required.
+
+\vskip 0.25cm
+\noindent
+Next, we show that
+\,$\image(\,\varphi^{\prime}\,) \supset \ker(\,\psi^{\prime}\,)$.\,
+To this end, let \,$\beta \in \ker(\,\psi^{\prime}\,) \subset \Hom_{R}(M,D)$,\,
+i.e. \,$\psi^{\prime}(\beta) = \beta \circ \psi = 0$.\,
+We need to show \,$\beta \in \image(\,\varphi^{\prime}\,)$,\,
+i.e. there exists \,$\alpha \in \Hom_{R}(N,D)$\, such that
+\,$\beta = \varphi^{\prime}(\alpha) = \alpha \circ \varphi \in \Hom_{R}(M,D)$.\,
+So, we now construct/define such an \,$\alpha \in \Hom_{R}(N,D)$,\, as follows:
+\begin{equation*}
+\alpha(\,n\,) \; := \; \beta(\,m\,),
+\quad
+\textnormal{for any \,$m \in \varphi^{-1}(n)$,\; for each \,$n \in N$}
+\end{equation*}
+For \,$\alpha$\, to be set-theoretically well-defined, we must have:
+\begin{itemize}
+\item
+	$\varphi^{-1}(n) \,\neq\, \varemptyset$,\, for each \,$n \in N$, and
+\item
+	$\beta(\,m_{1}\,) \,=\, \beta(\,m_{2}\,)$,\, for any \,$m_{1}, m_{2} \in \varphi^{-1}(n)$,\, for each \,$n \in N$.	
+\end{itemize}
+The first bullet is exactly the {\color{red}surjectivity of \,$\varphi$},\,
+equivalently, the exactness of \eqref{givenShortExactSequence} at $N$.
+For the second bullet, note that
+\begin{eqnarray*}
+m_{1}, m_{2} \in \varphi^{-1}(n)
+& \Longleftrightarrow &
+	\varphi(m_{1}) \,=\, n \,=\, \varphi(m_{2})
+\;\; \Longleftrightarrow \;\;
+	m_{1} - m_{2} \,\in\, {\color{red}\ker(\varphi) \,=\, \image(\psi)}
+\\
+& \overset{{\color{white}1}}{\Longrightarrow} &
+	\beta(\,m_{1} - m_{2}\,) \,\in\, \beta\!\left(\,\image(\psi)\,\right) \,=\, \{\,0\,\},
+	\;\;
+	\textnormal{since \,$\psi^{\prime}(\beta) \,=\, \beta \circ \psi \,=\, 0$}
+\\
+& \overset{{\color{white}1}}{\Longrightarrow} &
+	\beta(\,m_{1}\,) \,=\, \beta(\,m_{2}\,) \,\in\, D.
+\end{eqnarray*}
+This establishes that \,$\alpha : N \longrightarrow D$\, is indeed set-theoretically well-defined.
+It is routine to show that \,$\alpha$\, is furthermore an $R$-module homomorphism.
+By construction/definition of \,$\alpha$,\, we have
+\begin{equation*}
+\beta(\,m\,) \; = \; \alpha(\varphi(m)),
+\quad
+\textnormal{for each \,$m \in M$},
+\end{equation*}
+i.e. \,$\beta = \alpha \circ \varphi = \varphi^{\prime}(\alpha) \in \image(\varphi^{\prime})$.\,
+This proves that
+\,$\ker(\,\psi^{\prime}\,) \subset \image(\,\varphi^{\prime}\,)$,\,
+and hence
+\,$\image(\,\varphi^{\prime}\,) = \ker(\,\psi^{\prime}\,)$,\,
+i.e. the exactness of \eqref{inducedExactSequence} at \,$\Hom_{R}(M,D)$.\,
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Consider the following diagram:
+\begin{center}
+\begin{tikzcd}
+0 \arrow[r]
+& L \arrow[r, "\psi"] \arrow[d, "\xi{\color{white}.}" swap]
+& M \arrow[r, "\varphi"] \arrow[dr] \arrow[dl, dashrightarrow, "\exists{\color{white}.}\eta{\color{white}.}?", red]
+& N \arrow[d, "{\color{white}.}\zeta_{1}\textnormal{,\,}\zeta_{2}"] \arrow[r]
+& 0
+\\
+& D
+&
+& D
+\end{tikzcd}\end{center}
+\begin{itemize}
+\item
+	The exactness of \eqref{inducedExactSequence} at \,$\Hom_{R}(N,D)$
+	is equivalent to the injectivity of $\varphi^{\prime}$,
+	which is a consequence of the surjectivity of $\varphi$.
+\item
+	The exactness of \eqref{inducedExactSequence} at \,$\Hom_{R}(M,D)$
+	is equivalent to \,$\psi^{\prime}\circ\varphi^{\prime} = 0$,\,
+	which follows from the exactness of \eqref{givenShortExactSequence} at \,$M$
+	(which in turn is equivalent to \,$\varphi \circ \psi = 0$),
+	since
+	\begin{equation*}
+	(\,\psi^{\prime}\circ\varphi^{\prime}\,)(\zeta)
+	\;\; = \;\;
+		\psi^{\prime}(\,\varphi^{\prime}(\zeta)\,)
+	\;\; = \;\;
+		\psi^{\prime}(\,\zeta \circ \varphi\,)
+	\;\; = \;\;
+		(\,\zeta \circ \varphi\,) \circ \psi
+	\;\; = \;\;
+		\zeta \circ (\,\varphi \circ \psi\,),
+	\quad
+		\textnormal{for each \,$\zeta \in \Hom_{R}(N,D)$}
+	\end{equation*}
+	as mentioned in the proof of Proposition \ref{homologicalAlgebraMotivation}.
+\item
+	The induced exact sequence \eqref{inducedExactSequence}
+	in general cannot be extended on the right to a short exact sequence.
+	Indeed, this extendibility is equivalent to the surjectivity of $\psi^{\prime}$,
+	which in turn is equivalent to the following statement:
+	\begin{center}
+	\begin{minipage}{6.0in}
+	\textnormal{For each $R$-module homomorphism
+	\,$L\,\overset{\xi}{\longrightarrow}\,D$,\,
+	there exists an $R$-module homomorphism
+	\,$M\,\overset{\eta}{\longrightarrow}\,D$,\,
+	such that
+	\,$\xi \,=\, \psi^{\prime}(\eta) \,=\, \eta \circ \psi$
+	}
+	\end{minipage}
+	\end{center}
+	And, the above statement is clearly not true in general.
+\end{itemize}
+Homological algebra defines, and provides tools to compute, algebraic objects
+that measure the degree to which
+\eqref{inducedExactSequence}
+{\color{red}fails to extend to a short exact sequence};
+more precisely, the aforementioned algebraic objects are abelian groups
+that extend \eqref{inducedExactSequence} into a long exact sequence:
+\begin{center}
+\begin{tikzcd}
+0 \arrow[r]
+& \Hom_{R}(N,D) \arrow[r, "\varphi^{\prime}"]
+& \Hom_{R}(M,D) \arrow[r, "\psi^{\prime}"] \arrow[d, phantom, ""{coordinate, name=Z}]
+& \Hom_{R}(L,D) 
+\arrow[dll,
+rounded corners,
+to path={ -- ([xshift=2ex]\tikztostart.east)
+|- (Z) [near end]\tikztonodes
+-| ([xshift=-2ex]\tikztotarget.west)
+-- (\tikztotarget)}]
+\\
+& {\color{white}.}\Ext^{1}_{R}(N,D){\color{white}.} \arrow[r]
+& {\color{white}.}\Ext^{1}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]
+& {\color{white}.}\Ext^{1}_{R}(L,D){\color{white}.} 
+\arrow[dll,
+rounded corners,
+to path={ -- ([xshift=2ex]\tikztostart.east)
+|- (Z) [near end]\tikztonodes
+-| ([xshift=-2ex]\tikztotarget.west)
+-- (\tikztotarget)}]
+\\
+& {\color{white}.}\Ext^{2}_{R}(N,D){\color{white}.} \arrow[r]
+& {\color{white}.}\Ext^{2}_{R}(M,D){\color{white}.} \arrow[r] \arrow[d, phantom, ""{coordinate, name=Z}]
+& {\color{white}.}\Ext^{2}_{R}(L,D){\color{white}.}
+\arrow[dll,
+rounded corners,
+to path={ -- ([xshift=2ex]\tikztostart.east)
+|- (Z) [near end]\tikztonodes
+-| ([xshift=-2ex]\tikztotarget.west)
+-- (\tikztotarget)}]
+\\
+& {\color{white}.}\Ext^{3}_{R}(N,D){\color{white}.} \arrow[r]
+& {\color{white}.}\cdots\;\;\cdots\;\;\cdots{\color{white}.} \arrow[r, white]
+& {\color{white}.\Ext^{3}_{R}(N,D).}
+\end{tikzcd}\end{center}
+Consequently, the non-vanishing of the group
+\,$\Ext^{1}_{R}(N,D)$\,
+can therefore be regarded as {\color{red}obstruction} to
+\begin{itemize}
+\item
+	the extendibility of \eqref{inducedExactSequence} to a short exact sequence, or equivalently
+\item
+	the surjectivity \,$\psi^{\prime}$\, in \eqref{inducedExactSequence}, or equivalently
+\item
+	the lifting of an arbitrary \,$\gamma \in \Hom_{R}(L,D)$\, to an element in $\Hom_{R}(M,D)$ via \,$\psi$,\,
+	i.e. the existence of $\beta \in \Hom_{R}(M,D)$ such that $\gamma = \beta \circ \psi = \psi^{\prime}(\beta)$.
+\end{itemize}
+Put yet in another way, an element \,$\gamma \in \Hom_{R}(L,D)$\, can be lifted via \,$\psi$
+to an element in $\Hom_{R}(M,D)$ if and only if $\gamma$ maps to zero in
+\,$\Ext^{1}_{R}(N,D)$.\,
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
