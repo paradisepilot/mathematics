@@ -142,12 +142,74 @@ Then, the following statements are true:
 	\;\; = \;\;
 		\xi(s) \,\overset{{\color{white}.}}{\otimes}\, \varphi(m)
 	\end{equation*}
+	\vskip 0.3cm
 %	$\alpha^{\prime}(\varphi)(s \otimes m)$
 %	\,$=$\, $\left(\,\id_{S}\overset{{\color{white}.}}{\otimes}\varphi\,\right)(s \otimes m)$
 %	\,$=$\, $\left(\,\id_{S}(\overset{{\color{white}1}}{s})\,\right) \otimes \left(\, \varphi(\overset{{\color{white}1}}{m}) \,\right)$
 %	\,$=$\, $s \otimes \varphi(m)$	
 %	$\left(\,s \overset{{\color{white}.}}{\otimes_{R}} \varphi\,\right)\!(\,m\,)$
 %	\,$=$\, $s \otimes_{R} \varphi(m)$.
+\item
+	Suppose \,$S$\, is flat over \,$R$\, and \,$M$\, is finitely presented \,$R$-module.\,
+	We need to show that, in this case, the map \,$\alpha$\, is an isomorphism.
+	
+	\vskip 0.3cm
+	\textbf{Claim 1}:\;\; If \,$M = R$,\, then \,$\alpha$\, is an isomorphism.
+	\vskip 0.01cm
+	Proof of Claim 1:\;\;
+	In this case, we may identify \,$\Hom_{R}(M,N) \,=\, \Hom_{R}(R,N)$\,
+	with \,$N$\, by mapping each \,$\varphi \in \Hom_{R}(R,N)$\, to \,$\varphi(1_{R})$.\,
+	On the other hand, we have \,$S\,\otimes_{R}M \,=\, S\,\otimes_{R}R  \,\cong\, S$.\,
+	Hence,
+	\,$\Hom_{S}(\,S\otimes_{R}M\,,\,S\otimes_{R}N\,)$
+	\,$\cong$\, $\Hom_{S}(\,S\otimes_{R}R\,,\,S\otimes_{R}N\,)$
+	\,$\cong$\, $\Hom_{S}(\,S\,,\,S\otimes_{R}N\,)$
+	\,$\cong$\, $S\otimes_{R}N$.\,
+	These identifications fit into the following commutative diagram:
+	\begin{center}
+	\begin{tikzcd}
+	S\,\otimes_{R}\Hom_{R}(M,N)
+		\arrow[rr, "\alpha"]
+		\arrow[dd, equal]
+	&
+	&
+		\Hom_{S}\!\left(\,S\otimes_{R}M\,,\,S\otimes_{R}N\,\right)
+		\arrow[d, equal]
+	\\
+	&
+	&
+		\Hom_{S}\!\left(\,S\otimes_{R}R\,,\,S\otimes_{R}N\,\right)
+		\arrow[d, "\;\cong"]
+	\\
+	S\,\otimes_{R}\Hom_{R}(R,N)
+		\arrow[d, swap, "\cong\;"]
+	&
+	&
+		\Hom_{S}\!\left(\,S\,,\,S\otimes_{R}N\,\right)
+		\arrow[d, "\;\cong"]
+%	\\
+%	&
+%	&
+%		\Hom_{S}\!\left(\,S\,,\,S\otimes_{R}N\,\right)
+	\\
+	S\,\otimes_{R}N
+		\arrow[rr, swap, "\id"]
+	&
+	&
+		S\,\otimes_{R}N
+	\end{tikzcd}
+	\end{center}
+	The above diagram shows that \,$\alpha$\, corresponds, in this case, to the identify map
+	on \,$S \,\otimes_{R}\, N$;\, in particular, we see that \,$\alpha$\, is an isomorphism.
+	This completes the proof of Claim 1.
+
+	\vskip 0.3cm
+	\textbf{Claim 2}:\;\; If \,$M = \overset{m}{\underset{i =1}{\bigoplus}}\, R$ is a free \,$R$-module of finite rank \,$m \geq 1$,\,
+	(i.e., the direct sum of \,$m$\, copies of \,$R$),
+	then \,$\alpha$\, is an isomorphism.
+	\vskip 0.01cm
+	Proof of Claim 2:\;\;
+
 \end{enumerate}
 
 \vskip 0.25cm
