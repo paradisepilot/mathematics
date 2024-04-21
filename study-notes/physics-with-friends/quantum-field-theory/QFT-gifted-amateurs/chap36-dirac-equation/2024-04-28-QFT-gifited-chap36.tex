@@ -119,13 +119,61 @@
 \usepackage[T1]{fontenc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\F}{\mathbb{F}}
+%\newcommand*{\proof}{\noindent {\small P{\scriptsize ROOF}} \quad}
+%\newcommand*{\proofof}{\noindent {\small P{\scriptsize ROOF OF }}}
+%\newcommand*{\proofoutline}{\noindent {\small O{\scriptsize UTLINE OF PROOF}} \quad}
+%\newcommand*{\proofoutlineof}{\noindent {\small O{\scriptsize UTLINE OF PROOF OF }}}
+%\newcommand*{\qed}{\hfill $\Box$}
+%\newcommand*{\hdiamond}{\hfill $\Diamond$}
+
+\renewcommand*{\Re}{\mathbb{R}}
+\renewcommand*{\d}{\textnormal{d}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
-\renewcommand{\Re}{\mathbb{R}}
-\newcommand{\ord}{\textnormal{ord}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\varemptyset}{\varnothing}
+\renewcommand{\i}{\textnormal{\bf i}}
 
-\renewcommand{\theequation}{\thesection .\arabic{equation}}
+\newcommand{\diag}{\textnormal{diag}}
+\newcommand{\proj}{\textnormal{proj}}
+\newcommand{\rot}{\textnormal{rot}}
+
+\newcommand{\ev}{\textnormal{ev}}
+\newcommand{\rank}{\textnormal{rank}}
+\renewcommand*{\span}{\textnormal{span}}
+\newcommand*{\domain}{\textnormal{domain}}
+\newcommand*{\codomain}{\textnormal{codomain}}
+\newcommand{\Col}{\textnormal{Col}}
+\newcommand{\image}{\textnormal{image}}
+\newcommand{\Var}{\textnormal{Var}}
+%\newcommand{\Hess}{\textnormal{Hess}}
+\newcommand{\Hess}{\nabla^{2}}
+\newcommand{\Cov}{\textnormal{Cov}}
+\newcommand{\MSE}{\textnormal{MSE}}
+\newcommand{\SVar}{\textnormal{SVar}}
+
+\newcommand*{\longhookrightarrow}{\ensuremath{\lhook\joinrel\relbar\joinrel\rightarrow}}
+
+%\newcommand{\Czo}{C([0,1],\Re)}
+\newcommand{\Czo}{C[0,1]}
+
+\newcommand{\logisticBetaX}{
+	\dfrac{\exp\!\left(\,\beta^{T} \cdot x \,\right)}{1 \,+\, \exp\!\left(\,\beta^{T} \cdot x \,\right)}
+}
+
+\newcommand{\oneMinusLogisticBetaX}{
+	\dfrac{1}{1 \,+\, \exp\!\left(\,\beta^{T} \cdot x \,\right)}
+}
+
+\newcommand{\argmin}{\textnormal{argmin}}
+\newcommand{\argmax}{\textnormal{argmax}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\theequation}{\thesection .\arabic{equation}}
+\renewcommand{\theequation}{\arabic{equation}}
 
 %\newcounter{theorem}
 
@@ -189,8 +237,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{tex/outline}
+%\input{tex/outline}
+\input{tex/equation-Schrodinger}
+\input{tex/equation-Klein-Gordon}
+\input{tex/equation-Dirac}
 \input{tex/thanks}
+
+\tiny
+\bibliographystyle{acm}
+\bibliography{tex/z-bibliography}
+\normalsize
 
 \appendix
 \input{tex/outline}
