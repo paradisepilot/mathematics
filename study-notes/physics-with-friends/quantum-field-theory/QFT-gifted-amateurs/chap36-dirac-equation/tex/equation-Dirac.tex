@@ -1,0 +1,73 @@
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\LARGE The Dirac equation}
+
+\scriptsize
+\vskip 0.25cm
+
+\begin{itemize}
+\item
+	Dirac sought a new equation of motion by seeking a first-order linear differential operator
+	\begin{equation*}
+	D
+	\;=\;
+		\gamma^{\mu}\partial_{\mu}
+	\;=\;
+		\gamma^{0}\dfrac{\partial}{\partial x_{0}} 
+		\,+\, \gamma^{1}\dfrac{\partial}{\partial x_{1}} 
+		\,+\, \gamma^{2}\dfrac{\partial}{\partial x_{2}} 
+		\,+\, \gamma^{3}\dfrac{\partial}{\partial x_{3}} 
+	\end{equation*}
+	whose square is the Minkowskian d'Alembertian
+	\;$\textnormal{\large$\Box$}
+	\;=\;
+		\dfrac{\partial^{2}}{\partial t^{2}} \,-\, \Delta
+	\;=\;
+		\dfrac{\partial^{2}}{\partial t^{2}}
+		\,-\, \dfrac{\partial^{2}}{\partial x_{1}^{2}}
+		\,-\, \dfrac{\partial^{2}}{\partial x_{2}^{2}}
+		\,-\, \dfrac{\partial^{2}}{\partial x_{3}^{2}}
+	$.\,
+\item
+	Dirac arrived at the famous Dirac equation:
+	\begin{equation*}
+	\left(\,\i\cdot\gamma^{\mu}\partial_{\mu} - m\,\right)\psi \, = \, 0
+	\end{equation*}
+	The requirement
+	\,$\left(\,\i\cdot\gamma^{\mu}\partial_{\mu} - m\,\right)^{2} \,=\, \textnormal{\large$\Box$} + m^{2}$\,
+	implies that the ``coefficients'' \,$\gamma^{\mu}$\, must satisfy:
+	\begin{equation}
+	\label{GammaMatricesSatisfyCliffordRelation}
+	\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\}
+	\;=\;
+		2\cdot g^{\mu\nu}\,,
+	\end{equation}
+	where
+	\,$\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\} \,:=\, \gamma^{\mu}\gamma^{\nu} + \gamma^{\mu}\gamma^{\nu}$\,
+	and
+	\,$g^{\mu\nu} \,=\, \diag(1,-1,-1,-1)$.
+\end{itemize}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\LARGE The Dirac equation (cont'd)}
+
+\scriptsize
+\vskip 0.25cm
+
+\begin{itemize}
+\item
+	Dirac realized that the condition \eqref{GammaMatricesSatisfyCliffordRelation} cannot be satisfied
+	if the \,$\gamma^{\mu}$'s\, were just complex numbers, but that condition is indeed satisfied by
+	certain $4 \times 4$ complex matrices.
+\item
+	This observation led to the following realization (when expressed in modern geometric language):
+	The ``wave function'' \,$\psi$\, must be smooth sections of a spinor bundle over spacetime.
+\end{itemize}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
