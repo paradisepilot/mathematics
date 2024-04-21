@@ -1,0 +1,202 @@
+% $Header: /cvsroot/latex-beamer/latex-beamer/solutions/generic-talks/generic-ornate-15min-45min.en.tex,v 1.5 2007/01/28 20:48:23 tantau Exp $
+
+%\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169,handout]{beamer}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[arc]{xy}
+\usepackage{wasysym} % for using $\smiley$
+\usepackage{appendixnumberbeamer}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]{}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+%\newcommand{\headingColor}{\color[rgb]{0.1,0.4,0.1}}
+%\newcommand{\headingColor}{\color[rgb]{0.455,0.604,0.15}}
+%\newcommand{\structureColor}{\color[rgb]{0.455,0.604,0.15}}
+%\newcommand{\hyperlinkColor}{\color[rgb]{0.455,0.604,0.15}}
+%\newcommand{\highlightColor}{\color[rgb]{1,0.4,0}}
+%\newcommand{\highlightColor}{\color[rgb]{0.98,0.5,0.44}}
+%\newcommand{\structureColor}{\color[rgb]{116,154,38}}
+
+\newcommand{\headingColor}{\color[rgb]{0.294,0.294,0.294}}
+\newcommand{\structureColor}{\color[rgb]{0.882,0.882,0.882}}
+\newcommand{\hyperlinkColor}{\color[rgb]{0.294,0.294,0.294}}
+\newcommand{\highlightColor}{\color[rgb]{0.941,0.313,0.313}}
+\definecolor{titlefontblue}{RGB}{45,45,80}
+
+% This file is a solution template for:
+
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+
+\mode<presentation> {
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}  %% My favourite
+  
+%\usetheme{Copenhagen}  %%  ``Standard'' split top and bottom bars.
+%\usetheme{Darmstadt} %% Very nice.
+%\usetheme{default}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}  %% Right side bar indicating progress of presentation.
+  
+%\usetheme{Hannover}  %% Left side bar indication progress of presentation.
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Madrid}  %% Favourite
+%\usetheme{Malmoe}
+  
+%\usetheme{Marburg} %% Pretty right side bar
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}  %% No top/bottom/side bars whatsoever.
+%\usetheme{Rochester}
+  
+\usetheme{Singapore}  %% Pretty gradient-coloured top bar.
+%\usetheme{Szeged}
+%\usetheme{Warsaw}  %% ``Standard'' split top and bottom bars.
+% or ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{default}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{sidebartab}
+%\usecolortheme[RGB={128,0,0}]{structure}  % Dark Red
+%\usecolortheme[RGB={204,85,0}]{structure}  % Burnt Orange
+%\usecolortheme[RGB={154,205,50}]{structure}  % Yellow Green
+%\usecolortheme[RGB={116,154,38}]{structure}  % Dark Yellow Green
+\usecolortheme[RGB={100,100,100}]{structure}  % Gray
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+}
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\Re}{\mathbb{R}}
+\newcommand{\ord}{\textnormal{ord}}
+
+\renewcommand{\theequation}{\thesection .\arabic{equation}}
+
+%\newcounter{theorem}
+
+%\newtheorem{example}[theorem]{Example}
+%\renewcommand{\theexample}{ \thesection .\arabic{example}}
+
+%\newtheorem{definition}[theorem]{Definition}
+%\renewcommand{\thedefinition}{\thesection .\arabic{definition}}
+
+%\newtheorem{theorem}[theorem]{Theorem}
+%\renewcommand{\thetheorem}{\thesection .\arabic{theorem}}
+
+\newtheorem{proposition}[theorem]{Proposition}
+\renewcommand{\theproposition}{\thesection .\arabic{proposition}}
+
+\newtheorem{remark}[theorem]{Remark}
+\renewcommand{\theremark}{\thesection .\arabic{remark}}
+
+\newtheorem{notation}[theorem]{Notation}
+\renewcommand{\thenotation}{\thesection .\arabic{notation}}
+
+\renewcommand{\thetable} {\thesection .\arabic{table}}
+
+\renewcommand{\thefigure}{\thesection .\arabic{figure}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{itemize items}[ball]
+%\usepackage{enumitem}
+%\setlist[itemize]{leftmargin=*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtocounter{framenumber}{-1}
+
+\begin{frame}[plain]
+
+%\titlepage
+
+\begin{center}
+
+\vskip 2.0cm
+\textbf{\fontsize{16}{18}\selectfont\itshape Physics with Friends -- QFT}
+\vskip 0.40cm
+\textbf{\fontsize{41}{43}\selectfont\itshape The Dirac Equation}
+\vskip 0.35cm
+\textbf{\fontsize{16}{18}\selectfont\itshape Chapter 36, QFT for Gifted Amateurs}
+
+\vskip 1.0cm
+\textbf{\Large Kenneth Chu}
+
+\vskip 0.5cm
+\textbf{April 28, 2024}
+
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{tex/outline}
+\input{tex/thanks}
+
+\appendix
+\input{tex/outline}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
