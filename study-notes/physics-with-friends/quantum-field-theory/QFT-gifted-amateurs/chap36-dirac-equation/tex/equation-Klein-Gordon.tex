@@ -1,0 +1,63 @@
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\LARGE The Klein-Gordon equation}
+
+\scriptsize
+\vskip 0.25cm
+
+\begin{itemize}
+\item
+	Special-relativistic Energy-Momentum Relation for a {\color{red}free} particle (see \S3.4, \cite{DeFariaDeMelo2010}):
+	\begin{equation}
+	\label{RelativisticEnergyMomentumRelation}
+	E^{2} \;=\; p^{2} \,+\, m^{2}
+	\end{equation}
+	\vskip 1.0px
+\item
+	First quantization on \eqref{RelativisticEnergyMomentumRelation}:
+	\begin{equation*}
+	E \;\longmapsto\; \i\,\dfrac{\partial}{\partial t}\,,
+	\quad\quad
+	p_{j} \;\longmapsto\; -\,\i\,\dfrac{\partial}{\partial x_{j}}
+	\end{equation*}
+	now yields the Klein-Gordon equation for a free particle:
+	\begin{equation}
+	\label{equationKleinGordon}
+	\left(\; \textnormal{\large$\Box$} \,+\, m^{2} \,\right)\psi
+	\;=\,
+	\left(\; \partial_{\mu}\partial^{\mu} \,+\, m^{2} \,\right)\psi
+	\;=\,
+	\left(\,\dfrac{\partial^{2}}{\partial t^{2}}
+	- \left(
+		\dfrac{\partial^{2}}{\partial x_{1}^{2}}
+		+ \dfrac{\partial^{2}}{\partial x_{2}^{2}}
+		+ \dfrac{\partial^{2}}{\partial x_{3}^{2}}
+		\right)
+	\,+\,
+		m^{2}
+		\,\right)
+	\psi
+	\;=\;
+		0
+	\end{equation}
+\item
+	The Klein-Gordon equation is indeed Lorentz-invariant but:
+	\vskip 1.5px
+	\begin{itemize}\itemindent=-10px
+	{\scriptsize
+	\item
+		it permits negative-energy eigenstates; see Example 6.1, \cite{LancasterBlundell2014}
+	\item
+		 probabilistic interpretation of (squared modulus of)
+		 Schr\"odinger's wave function is lost; see \S6.2, \cite{LancasterBlundell2014}
+	}
+	\end{itemize}
+	\vskip 5.0px
+\item
+	The Dirac equation addresses the second problem (i.e., restores dynamical/probabilistic interpretation).
+\end{itemize}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
