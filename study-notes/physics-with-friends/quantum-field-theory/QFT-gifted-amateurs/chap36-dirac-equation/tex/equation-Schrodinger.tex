@@ -1,0 +1,74 @@
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\LARGE The Schr\"odinger equation}
+
+\scriptsize
+\vskip 0.25cm
+
+\begin{itemize}
+\item
+	Newtonian Energy-Momentum Relation for a {\color{red}free} particle (no force acting on it; zero potential):
+	\begin{equation}
+	\label{NewtonionEnergyMomentumRelation}
+	E \;=\; \dfrac{\Vert\,\mathbf{p}\,\Vert^{2}}{2m}
+	\quad\;\;
+	\Longleftrightarrow
+	\quad\;\;
+	E \,-\, \dfrac{1}{2m}\left(\,p_{1}^{2} \overset{{\color{white}.}}{+} p_{2}^{2} + p_{3}^{2}\,\right) \;=\; 0
+	\end{equation}
+	{\tiny
+	\begin{equation*}
+	\textnormal{Proof:}
+	\quad\quad\quad\quad\quad\quad
+	E
+	\,:=\,
+		\left(\!\begin{array}{c} \textnormal{total energy} \\ \textnormal{of the} \\ \textnormal{free particle} \end{array}\!\right)
+	\,=\,
+		\left(\!\begin{array}{c} \textnormal{kinetic energy} \\ \textnormal{of the} \\ \textnormal{particle} \end{array}\!\right)
+	\,=\,
+		\dfrac{1}{2}\,m\,\Vert\,\mathbf{v}\,\Vert^{2}
+	\,=\,
+		\dfrac{(\,\Vert\,m\cdot\mathbf{v}\,\Vert\,)^{2}}{2m}
+	\,=\,
+		\dfrac{\Vert\,\mathbf{p}\,\Vert^{2}}{2m}
+	\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+	{\color{white}.}
+	\end{equation*}
+	}
+	\vskip 1.0px
+\item
+	\textbf{First quantization:}\;\; Replacing
+	\,$E$, $p_{1}$, $p_{2}$, $p_{3}$\,
+	respectively with differential operators:
+	\begin{equation}
+	\label{FirstQuantization}
+	E \;\longmapsto\; \i\,\dfrac{\partial}{\partial t}\,,
+	\quad\quad
+	p_{j} \;\longmapsto\; -\,\i\,\dfrac{\partial}{\partial x_{j}}\,,
+	\quad\quad
+	\textnormal{and}
+	\end{equation}
+	letting the resulting differential operator act on the wave function
+	\,$\psi(t,x_{1},x_{2},x_{3})$\,
+	yields the Schr\"odinger equation for a free particle:
+	\begin{equation}
+	\label{equationSchrodinger}
+	\left(\;\i\,\dfrac{\partial}{\partial t} + \dfrac{1}{2m}\!
+		\left(
+			\dfrac{\partial^{2}}{\partial x_{1}^{2}}
+			+ \dfrac{\partial^{2}}{\partial x_{2}^{2}}
+			+ \dfrac{\partial^{2}}{\partial x_{3}^{2}}
+			\right)
+		\right)
+	\psi
+	\,=\,
+		0
+	\end{equation}
+\item
+	Schr\"odinger equation is NOT Lorentz-invariant (e.g., asymmetry between time and space) -- incompatible with Special Relativity.
+\end{itemize}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
