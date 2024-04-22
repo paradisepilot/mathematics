@@ -11,17 +11,19 @@
 	\begin{equation*}
 	D
 	\;=\;
-		\gamma^{\mu}\partial_{\mu}
+		\i\,\gamma^{\mu}\partial_{\mu}
 	\;=\;
-		\gamma^{0}\dfrac{\partial}{\partial x_{0}} 
-		\,+\, \gamma^{1}\dfrac{\partial}{\partial x_{1}} 
-		\,+\, \gamma^{2}\dfrac{\partial}{\partial x_{2}} 
-		\,+\, \gamma^{3}\dfrac{\partial}{\partial x_{3}} 
+		\i\left(\,
+			\gamma^{0}\dfrac{\partial}{\partial x_{0}} 
+			\,+\, \gamma^{1}\dfrac{\partial}{\partial x_{1}} 
+			\,+\, \gamma^{2}\dfrac{\partial}{\partial x_{2}} 
+			\,+\, \gamma^{3}\dfrac{\partial}{\partial x_{3}} 
+			\,\right)
 	\end{equation*}
-	whose square is the Minkowskian d'Alembertian
+	whose square is {\color{red}minus} the Minkowskian d'Alembertian
 	\;$\textnormal{\large$\Box$}
-	\;=\;
-		\dfrac{\partial^{2}}{\partial t^{2}} \,-\, \Delta
+	%\;=\;
+	%	\dfrac{\partial^{2}}{\partial t^{2}} \,-\, \Delta
 	\;=\;
 		\dfrac{\partial^{2}}{\partial t^{2}}
 		\,-\, \dfrac{\partial^{2}}{\partial x_{1}^{2}}
@@ -33,9 +35,23 @@
 	\begin{equation*}
 	\left(\,\i\cdot\gamma^{\mu}\partial_{\mu} - m\,\right)\psi \, = \, 0
 	\end{equation*}
+	\vskip -6.0px
 	The requirement
-	\,$\left(\,\i\cdot\gamma^{\mu}\partial_{\mu} - m\,\right)^{2} \,=\, \textnormal{\large$\Box$} + m^{2}$\,
-	implies that the ``coefficients'' \,$\gamma^{\mu}$\, must satisfy:
+	\,$
+	-\,g^{\mu\nu}\partial_{\mu}\partial_{\nu}
+	\,=\,
+		{\color{red}-\,\textnormal{\large$\Box$}}
+	\;{\color{red}=}\;
+		{\color{red}\left(\,\i\cdot\gamma^{\mu}\partial_{\mu}\,\right)^{2}}
+	%\,=\,
+	%	\left(\,\i\cdot\gamma^{\mu}\partial_{\mu}\,\right)
+	%	\left(\,\i\cdot\gamma^{\nu}\partial_{\nu}\,\right)
+	\,=\,
+		-\,\gamma^{\mu}\gamma^{\nu}\partial_{\mu}\partial_{\nu}
+	\,=\,
+		-\left(\dfrac{\gamma^{\mu}\gamma^{\nu}+\gamma^{\nu}\gamma^{\mu}}{2}\right)\partial_{\mu}\partial_{\nu}
+		$\,
+	implies that \,$\gamma^{\mu}$\, must satisfy:
 	\begin{equation}
 	\label{GammaMatricesSatisfyCliffordRelation}
 	\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\}
@@ -46,6 +62,20 @@
 	\,$\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\} \,:=\, \gamma^{\mu}\gamma^{\nu} + \gamma^{\mu}\gamma^{\nu}$\,
 	and
 	\,$g^{\mu\nu} \,=\, \diag(1,-1,-1,-1)$.
+\item
+	\begin{equation*}
+	\begin{array}{c}\textnormal{Dirac} \\ \textnormal{equation} \end{array}
+	\Longleftrightarrow\;\;\,
+	\i\,\gamma^{\mu}\partial_{\mu}\psi = m\,\psi
+	\;\;\Longrightarrow\;\;
+	%\i\,\gamma^{\mu}\partial_{\mu}\left(\i\,\gamma^{\mu}\partial_{\mu}\overset{{\color{white}$.$}{\psi}\right) = m\,\i\,\gamma^{\mu}\partial_{\mu}\psi
+	\underset{-\,\Box\psi}{\underbrace{{\color{white}.}{\color{red}\i\,\gamma^{\mu}\partial_{\mu}}\!\left(
+		\i\,\gamma^{\nu}\partial_{\nu}\overset{{\color{white}.}}{\psi}
+		\right)}}
+		= m\cdot\underset{m\,\psi}{\underbrace{{\color{red}\i\,\gamma^{\mu}\partial_{\mu}}\overset{{\color{white}.}}{\psi}}}
+	\;\;\,\Longrightarrow
+	\begin{array}{c}\textnormal{Klein-Gordon} \\ \textnormal{equation} \end{array}
+	\end{equation*}
 \end{itemize}
 
 \end{frame}
