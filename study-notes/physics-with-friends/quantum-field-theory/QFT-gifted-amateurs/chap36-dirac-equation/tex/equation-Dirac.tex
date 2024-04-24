@@ -30,11 +30,13 @@
 		\,-\, \dfrac{\partial^{2}}{\partial x_{2}^{2}}
 		\,-\, \dfrac{\partial^{2}}{\partial x_{3}^{2}}
 	$.\,
+	\vskip 5px
 \item
 	Dirac arrived at the famous Dirac equation:
-	\begin{equation*}
+	\begin{equation}
+	\label{TheDiracEquation}
 	\left(\,\i\cdot\gamma^{\mu}\partial_{\mu} - m\,\right)\psi \, = \, 0
-	\end{equation*}
+	\end{equation}
 	\vskip -6.0px
 	The requirement
 	\,$
@@ -62,7 +64,10 @@
 	\,$\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\} \,:=\, \gamma^{\mu}\gamma^{\nu} + \gamma^{\mu}\gamma^{\nu}$\,
 	and
 	\,$g^{\mu\nu} \,=\, \diag(1,-1,-1,-1)$.
+	\vskip 12px
 \item
+	{\color{white}.}
+	\vskip -22px
 	\begin{equation*}
 	\begin{array}{c}\textnormal{Dirac} \\ \textnormal{equation} \end{array}
 	\Longleftrightarrow\;\;\,
@@ -89,12 +94,83 @@
 
 \begin{itemize}
 \item
-	Dirac realized that the condition \eqref{GammaMatricesSatisfyCliffordRelation} cannot be satisfied
-	if the \,$\gamma^{\mu}$'s\, were just complex numbers, but that condition is indeed satisfied by
-	certain $4 \times 4$ complex matrices.
+	Condition \eqref{GammaMatricesSatisfyCliffordRelation} cannot be satisfied by complex numbers:
+	\begin{equation*}
+	\left.\begin{array}{c}
+		{\color{red}\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\} \;=\;2\cdot g^{\mu\nu}}
+		\\
+		\overset{{\color{white}1}}{\gamma_{\mu}}\;\in\;\C,\;\;\forall\;\mu = 0,1,2,3
+	\end{array}\right\}
+	\quad\Longrightarrow\quad
+	\textnormal{contradiction}
+	\end{equation*}
+	But, Dirac observed that Condition \eqref{GammaMatricesSatisfyCliffordRelation}
+	could indeed be satisfied by a set of {\color{red}$4 \times 4$} complex matrices:
+	\begin{equation*}
+	\gamma^{0}
+	\,=\,
+		\textnormal{\tiny$\left(\!\!\begin{array}{rrrr}
+			0 & 0 & {\color{white}-}1 & 0 \\
+			0 & 0 & 0 & {\color{white}-}1 \\
+			{\color{white}-}1 & 0 & 0 & 0 \\
+			0 & {\color{white}-}1 & 0 & 0
+			\end{array}\!\right)$}
+	\,=\,
+		\textnormal{\tiny$\left(\!\begin{array}{cc}
+			0 & I_{2} \\
+			I_{2} & \overset{{\color{white}.}}{0} \\
+			\end{array}\!\!\right)$},
+	\quad\quad
+	\gamma^{1}
+	\,=\,
+		\textnormal{\tiny$\left(\!\begin{array}{rrrr}
+			0 & 0 & 0 & {\color{white}-}1 \\
+			0 & 0 & {\color{white}-}1 & 0 \\
+			0 & -1 & 0 & 0 \\
+			-1 & 0 & 0 & 0
+			\end{array}\right)$}
+	\,=\,
+		\textnormal{\tiny$\left(\!\begin{array}{cc}
+			0 & \sigma_{1} \\
+			\sigma_{1} & \overset{{\color{white}.}}{0} \\
+			\end{array}\!\!\right)$}
+	\end{equation*}
+	\begin{equation*}
+	\gamma^{2}
+	\,=\,
+		\textnormal{\tiny$\left(\!\begin{array}{rrrr}
+			0 & 0 & 0 & -\i \\
+			0 & 0 & {\color{white}-}\i & 0 \\
+			0 & {\color{white}-}\i & 0 & 0 \\
+			-\i & 0 & 0 & 0
+			\end{array}\right)$}
+	\,=\,
+		\textnormal{\tiny$\left(\!\begin{array}{cc}
+			0 & \sigma_{2} \\
+			\sigma_{2} & \overset{{\color{white}.}}{0} \\
+			\end{array}\!\!\right)$},
+	\quad\quad
+	\gamma^{3}
+	\,=\,
+		\textnormal{\tiny$\left(\!\begin{array}{rrrr}
+			0 & 0 & {\color{white}-}1 & 0\\
+			0 & 0 & 0 & -1 \\
+			{\color{white}-}1 & 0 & 0 & 0 \\
+			0 & -1 & 0 & 0
+			\end{array}\right)$}
+	\,=\,
+		\textnormal{\tiny$\left(\!\begin{array}{cc}
+			0 & \sigma_{3} \\
+			\sigma_{3} & \overset{{\color{white}.}}{0} \\
+			\end{array}\!\!\right)$}
+	\end{equation*}
+	\vskip 5px
 \item
-	This observation led to the following realization (when expressed in modern geometric language):
-	The ``wave function'' \,$\psi$\, must be smooth sections of a spinor bundle over spacetime.
+	So, Dirac sought solutions \,$\psi \in C^{\infty}(\mathcal{M},{\color{red}\C^{4}})$\,
+	for the Dirac equation: \,$\left(\,\i\,{\color{red}\gamma^{\mu}}\partial_{\mu} \overset{{\color{white}.}}{-} m\right)\psi = 0$.\,
+%\item
+%	This observation led to the following realization (when expressed in modern geometric language):
+%	The ``wave function'' \,$\psi$\, must be smooth sections of a spinor bundle over spacetime.
 \end{itemize}
 
 \end{frame}
