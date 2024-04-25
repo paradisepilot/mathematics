@@ -1,0 +1,110 @@
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\LARGE What is a \textit{spinor}?}
+
+\scriptsize
+
+\textbf{Clifford algebra, Lorentz group \& Spin group}
+\begin{itemize}
+\item
+	Condition \eqref{GammaMatricesSatisfyCliffordRelation}
+	\,({\color{red}$\gamma^{\mu}\gamma^{\nu} \,=\, 2\,g^{\mu\nu}$}, with $g^{\mu\nu} = \diag(1,-1-1-1)$)\,
+	is the defining relations of what is known as the Clifford algebra \,$\Cl(1,3)$; see \S6.3, \cite{Hamilton2017}.
+\item
+	$\Cl(1,3)$\, contains the orthochronous spin group \,$\Spin^{\uparrow}(1,3)$;\,
+	see Proposition 6.5.4, \cite{Hamilton2017}.
+\item
+	$\Spin^{\uparrow}(1,3)$\, is the universal covering of the {\color{red}proper orthochronous Lorentz group}
+	\,$\SO^{\uparrow}(1,3)$;\, see Definition 6.1.16 and Corollary 6.5.16, \cite{Hamilton2017}.\,
+	$\ker\!\left(\Spin^{\uparrow}(1,3) \overset{\pi}{\longrightarrow} \SO^{\uparrow}(1,3)\right) \,=\, \{\,\pm1\,\}$;\,
+	see Theorem 6.5.13, \cite{Hamilton2017}.
+\item
+	Condition \eqref{GammaMatricesSatisfyCliffordRelation}
+	\,$\Longrightarrow$\,
+	$\Spin^{\uparrow}(1,3)$\, acts on the space of solutions of the Dirac equation.
+\end{itemize}
+
+\vskip 10px
+\textbf{Symmetry group of a quantum system \& action of $\SO^{\uparrow}(1,3)$ on the system}
+\begin{itemize}
+\item
+	The state space of a quantum system is the projective space $\P(H)$ over a complex Hilbert space $H$.
+\item
+	The \textbf{symmetry group} of a quantum system with state space $\P(H)$ is the projective unitary group of $H$, i.e.
+	\vskip -5.0px
+	\begin{equation*}
+	\P U(H) \; := \; \left.\overset{{\color{white}.}}{U(H)}\,\right/\{\,e^{\i\,\theta}\cdot\mathbf{1}_{H}\,\}_{\theta\in\Re}
+	\end{equation*}
+\item
+	The action of \,$\SO^{\uparrow}(1,3)$\, on a quantum system with state space \,$\P(H)$\,
+	is thus a (Lie group) homomorphism
+	\,$\SO^{\uparrow}(1,3) \longrightarrow \P U(H)$,\,
+	i.e., a projective unitary representation of \,$\SO^{\uparrow}(1,3)$.
+\end{itemize}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\LARGE What is a \textit{spinor}? (cont'd)}
+
+\scriptsize
+\vskip 10px
+
+\textbf{Relations between \,$\SO^{\uparrow}(1,3) \longrightarrow \P U(H)$, \,$\SO^{\uparrow}(1,3) \longrightarrow U(H)$,\, and \,$\Spin^{\uparrow}(1,3) \longrightarrow U(H)$}
+\begin{itemize}
+\item
+	Every \,$\SO^{\uparrow}(1,3) \overset{\theta}{\longrightarrow} U(H)$\, gives rise to a
+	projective unitary representation (symmetry group of a quantum system) simply via composition
+	\,$\SO^{\uparrow}(1,3) \overset{\theta}{\longrightarrow} U(H) \overset{Q}{\longrightarrow} \P U(H) := U(H)\;/\,\{\,e^{\i\,\theta}\cdot\mathbf{1}_{H}\,\}$.
+	\vskip 5px
+	\textbf{\color{red}Converse is false.}
+	\vskip 5px
+	\begin{center}
+	\begin{tikzcd}
+	\& U(H) \arrow[d, "Q"]
+	\\
+	\SO^{\uparrow}(1,3)
+		\arrow[ru, dashed, "{\color{red}\exists\;\theta\,?}"]
+		\arrow[r, swap, "\rho"]
+	\& \P U(H)
+	\end{tikzcd}
+	\quad\quad\quad\quad\quad\quad
+	\begin{tikzcd}
+	\Spin^{\uparrow}(1,3) %\,=\,\widetilde{\SO^{\uparrow}(1,3)}
+		\arrow[r, "{\color{red}\widetilde{\rho}}"]		
+		\arrow[d, swap, "\pi"]
+	\& U(H) \arrow[d, "Q"]
+	\\
+	\SO^{\uparrow}(1,3)
+		\arrow[r, swap, "\rho"]
+	\& \P U(H)
+	\end{tikzcd}
+	\end{center}
+	\vskip 10px
+\item
+	However, a \textbf{partial converse} is true: If \,$\dim_{\C}(H) < \infty$,\, then, for each projective unitary representation
+	\,$\SO^{\uparrow}(1,3) \overset{\rho}{\longrightarrow} \P U(H)$,\,
+	there exists an (ordinary) unitary representation
+	\,$\widetilde{\SO^{\uparrow}(1,3)} = \Spin^{\uparrow}(1,3) \overset{\widetilde{\rho}}{\longrightarrow} U(H)$\,
+	such that \,$\rho \circ \pi = Q \circ \widetilde{\rho}$\,;\, see Theorem 16.47, \cite{Hall2013}.
+	\vskip 10px
+\item
+	So, there are {\color{red}two} types of finite-dimensional projective unitary representations
+	\,$\SO^{\uparrow}(1,3) \overset{\rho}{\longrightarrow} \P U(H)$\,:\,
+	\begin{itemize}\itemindent=-10px
+	{\scriptsize
+	\item
+		either \,$\rho$\, is induced by an (ordinary) unitary representation
+		\,$\SO^{\uparrow}(1,3) \overset{\theta}{\longrightarrow} U(H)$\,
+	\item
+		or \,\,$\rho$\, cannot be so induced (\,still have \,$\Spin^{\uparrow}(1,3) \overset{\widetilde{\rho}}{\longrightarrow} U(H)$\,;\,
+		{\color{red}elements of $H$ are then called \textit{spinors}}\,)
+	}
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
