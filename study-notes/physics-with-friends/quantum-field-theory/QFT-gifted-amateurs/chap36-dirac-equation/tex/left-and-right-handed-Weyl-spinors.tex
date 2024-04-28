@@ -1,11 +1,10 @@
 
 %%%%%%%%%%
-\begin{frame}{\headingColor\bf\Large Left- \& Right-handed Weyl Spinors + Dirac spinors}
+\begin{frame}{\headingColor\bf\Large Representations of $\Spin^{\uparrow}(1,3) \,\cong\, \widetilde{\SO^{\uparrow}(1,3)}$}
 
 \scriptsize
 \vskip 5px
 
-\textbf{Representations of $\Spin^{\uparrow}(1,3) \,\cong\, \widetilde{\SO^{\uparrow}(1,3)}$}
 \begin{itemize}
 \item
 	$\widetilde{\SO^{\uparrow}(1,3)} \,=\, \Spin^{\uparrow}(1,3) \;\,{\color{red}\cong}\;\, {\color{red}\SL(2,\C)}$.
@@ -13,6 +12,34 @@
 	$\mathfrak{sl}(2,\C) \,\cong\, \mathfrak{su}(2) + \i\,\mathfrak{su}(2)$\; (the copies of $\mathfrak{su}(2)$ commute)
 	\vskip 1px
 	{\tiny(Skew self-adjoint matrices with trace zero plus self-adjoint matrices with trace zero gives all matrices with trace zero.)}
+\item
+	Generators of \,$\mathfrak{sl}(2,\C) \,\cong\, \mathfrak{spin}(1,3)$:
+	\vskip -5px
+	\begin{equation*}
+	\textnormal{\textbf{spatial rotations:}}\; J_{x}, J_{y}, J_{z}\,,
+	\quad
+	\textnormal{\textbf{boosts:}}\; K_{x}, K_{y}, K_{z}
+	\end{equation*}
+	\begin{equation*}
+	[\,J_{i},J_{j}\,] = \i\,\epsilon_{ijk}\,J_{k}\,,
+	\quad
+	[\,J_{i},K_{j}\,] = \i\,\epsilon_{ijk}\,K_{k}\,,
+	\quad
+	[\,K_{i},K_{j}\,] = -\,\i\,\epsilon_{ijk}\,J_{k}
+	\end{equation*}
+	\begin{equation*}
+	N^{\pm}_{i} \; := \; {\color{red}\dfrac{1}{2}}\!\left(\,J_{i}\,\pm\,\i\,K_{i}\,\right)
+	\quad\Longrightarrow\quad
+	[\,N^{+}_{i},N^{+}_{j}\,] = \i\,\epsilon_{ijk}\,N^{+}_{k}\,,
+	\quad
+	[\,N^{-}_{i},N^{-}_{j}\,] = \i\,\epsilon_{ijk}\,N^{-}_{k}\,,
+	\quad
+	[\,N^{-}_{i},N^{+}_{j}\,] = 0
+	\end{equation*}
+	Hence, $\langle\,N^{+}_{x},N^{+}_{y},N^{+}_{z}\,\rangle \,\cong\, \langle\,N^{-}_{x},N^{-}_{y},N^{-}_{z}\,\rangle \,\cong\, \mathfrak{su}(2)$.
+\item
+	Aside:\, The $\frac{1}{2}$ above \,$\Longrightarrow$\,
+	{\color{red}for spinors, a spatial (planar) rotation of $360^{\circ}$ induces multiplication by $-1$.}
 \item
 	The finite-dimensional irreducible representations of \,$\SU(2)$\, have been classified.
 	\vskip 5px
@@ -27,18 +54,40 @@
 	See Theorem on page 517, \cite{Woit2017}.
 \end{itemize}
 
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\Large Left- \& Right-handed Weyl Spinors + Dirac spinors}
+
+\scriptsize
 \vskip 5px
+
+\textbf{Representations of $\Spin^{\uparrow}(1,3) \,\cong\, \widetilde{\SO^{\uparrow}(1,3)}$}
+\begin{itemize}
+\item
+	The irreducible representations of \,$\Spin^{\uparrow}(1,3)$\, are parametrized by
+	the ordered pairs {\color{red}\,$(s_{+},s_{-})$\,} of non-negative multiples of \,$\frac{1}{2}$,\, where
+	\,$s_{+}$\, refers to \,$\mathfrak{su}(2) \subset \mathfrak{sl}(2,\C)$\,
+	and
+	\,$s_{-}$\, refers to \,$\i\,\mathfrak{su}(2) \subset \mathfrak{sl}(2,\C)$.\,
+	See Theorem on page 517, \cite{Woit2017}.
+\end{itemize}
+
+\vskip 10px
+
 \textbf{Weyl spinors}
 \begin{itemize}
 \item
 	Left-handed: $\left(\frac{1}{2},0\right)$ representation of $\Spin^{\uparrow}(1,3)$\,;\;\,
 	right-handed: $\left(0,\frac{1}{2}\right)$
 \item
-	The \textbf{\color{red}parity transformation} transforms left-handed Weyl spinors to right-handed ones, and vice versa.
+	Aside:\, The \textbf{\color{red}parity transformation} transforms left-handed Weyl spinors to right-handed ones, and vice versa.
 	See page 174, \cite{Robinson2011}.
+	Full Lorentz invariance implies both types of Weyl spinors must ``occur in nature.''
 \end{itemize}
 
-\vskip 5px
+\vskip 10px
 \textbf{Dirac spinors:}\,
 The $\left(\frac{1}{2},0\right) \oplus \left(0,\frac{1}{2}\right)$ representation of $\Spin^{\uparrow}(1,3)$
 \begin{itemize}
