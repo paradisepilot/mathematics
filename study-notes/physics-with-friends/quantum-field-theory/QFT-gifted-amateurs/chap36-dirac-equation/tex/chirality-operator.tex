@@ -1,0 +1,55 @@
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\LARGE The Chirality Operator}
+
+\scriptsize
+\vskip 5px
+
+\begin{itemize}
+\item
+	Recall the \textbf{chiral representation} of the Clifford algebra $\Cl(1,3)$:
+	\vskip -7px
+	\input{tex/chiral-representation-of-Clifford-algebra}
+	\vskip 5px
+\item
+	Define the \textbf{chirality operator}:
+	\begin{equation*}
+	\gamma^{5}
+	\;\; := \;\;
+		\i\,\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}
+	\;\; = \;\;
+		\cdots
+	\;\; = \;\;
+		\left(\begin{array}{rr} -I_{2} & 0 \\ 0 & {\color{white}-}I_{2}\end{array}\right)
+	\end{equation*}
+	\begin{equation*}
+	P_{L} \; := \; \dfrac{1}{2}\!\left(1 - \gamma^{5}\right) \; = \; \left(\begin{array}{rr} I_{2} & 0 \\ 0 & 0 \end{array}\right),
+	\quad\quad
+	P_{R} \; := \; \dfrac{1}{2}\!\left(1 + \gamma^{5}\right) \; = \; \left(\begin{array}{rr} 0 & 0 \\ 0 & I_{2}\end{array}\right)
+	\end{equation*}
+\item
+	Hence,
+	\vskip 1px
+	$\psi_{L}
+	\;\, := \;
+		P_{L}\,\psi
+	\;\, := \;
+		P_{L}\!\left(\begin{array}{c} \psi_{1} \\ \psi_{2} \end{array}\right)
+	\;\, = \;
+		\left(\begin{array}{c} \psi_{1} \\ 0 \end{array}\right)$\,
+	is a left-handed Weyl spinor, and
+	\vskip 5px
+	$\psi_{R}
+	\; := \;
+		P_{R}\,\psi
+	\; := \;
+		P_{R}\!\left(\begin{array}{c} \psi_{1} \\ \psi_{2} \end{array}\right)
+	\; = \;
+		\left(\begin{array}{c} 0 \\ \psi_{2} \end{array}\right)$\,
+	a right-handed one.
+\end{itemize}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
