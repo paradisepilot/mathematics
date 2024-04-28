@@ -8,10 +8,12 @@
 \begin{itemize}
 \item
 	$\widetilde{\SO^{\uparrow}(1,3)} \,=\, \Spin^{\uparrow}(1,3) \;\,{\color{red}\cong}\;\, {\color{red}\SL(2,\C)}$.
+	\vskip 5px
 \item
 	$\mathfrak{sl}(2,\C) \,\cong\, \mathfrak{su}(2) + \i\,\mathfrak{su}(2)$\; (the copies of $\mathfrak{su}(2)$ commute)
 	\vskip 1px
 	{\tiny(Skew self-adjoint matrices with trace zero plus self-adjoint matrices with trace zero gives all matrices with trace zero.)}
+	\vskip 5px
 \item
 	Generators of \,$\mathfrak{sl}(2,\C) \,\cong\, \mathfrak{spin}(1,3)$:
 	\vskip -5px
@@ -37,20 +39,24 @@
 	[\,N^{-}_{i},N^{+}_{j}\,] = 0
 	\end{equation*}
 	Hence, $\langle\,N^{+}_{x},N^{+}_{y},N^{+}_{z}\,\rangle \,\cong\, \langle\,N^{-}_{x},N^{-}_{y},N^{-}_{z}\,\rangle \,\cong\, \mathfrak{su}(2)$.
+	\vskip 5px
 \item
 	Aside:\, The $\frac{1}{2}$ above \,$\Longrightarrow$\,
-	{\color{red}for spinors, a spatial (planar) rotation of $360^{\circ}$ induces multiplication by $-1$.}
+	for spinors, a spatial (planar) rotation of {\color{red}$360^{\circ}$ induces multiplication by $-1$.}
+	\vskip 5px
 \item
 	The finite-dimensional irreducible representations of \,$\SU(2)$\, have been classified.
 	\vskip 5px
 	For each \,$s = 0, \frac{1}{2}, 1, \frac{3}{2}, \ldots\,$,\, there exists a unique representation 
 	\,$\rho_{s} : \SU(2) \longrightarrow \GL(\Re,2s+1)$
+	\vskip 5px
 \item
-	The irreducible representations of \,$\Spin^{\uparrow}(1,3)$\, are parametrized by
-	the ordered pairs {\color{red}\,$(s_{+},s_{-})$\,} of non-negative multiples of \,$\frac{1}{2}$,\, where
+	The irreducible representations of \,$\Spin^{\uparrow}(1,3)$\, are
+	{\color{red}parametrized by the ordered pairs \,$(s_{+},s_{-})$\,} of non-negative multiples of \,$\frac{1}{2}$,\, where
 	\,$s_{+}$\, refers to \,$\mathfrak{su}(2) \subset \mathfrak{sl}(2,\C)$\,
 	and
-	\,$s_{-}$\, refers to \,$\i\,\mathfrak{su}(2) \subset \mathfrak{sl}(2,\C)$.\,
+	\,$s_{-}$\, refers to \,$\i\,\mathfrak{su}(2) \subset \mathfrak{sl}(2,\C)$.
+	\vskip 2.5px
 	See Theorem on page 517, \cite{Woit2017}.
 \end{itemize}
 
@@ -61,7 +67,7 @@
 \begin{frame}{\headingColor\bf\Large Left- \& Right-handed Weyl Spinors + Dirac spinors}
 
 \scriptsize
-\vskip 5px
+\vskip 7.5px
 
 \textbf{Representations of $\Spin^{\uparrow}(1,3) \,\cong\, \widetilde{\SO^{\uparrow}(1,3)}$}
 \begin{itemize}
@@ -88,6 +94,7 @@
 \end{itemize}
 
 \vskip 10px
+
 \textbf{Dirac spinors:}\,
 The reducible \,$\left(\frac{1}{2},0\right) \oplus \left(0,\frac{1}{2}\right)$\, representation of \,$\Spin^{\uparrow}(1,3)$
 \begin{itemize}
@@ -95,6 +102,33 @@ The reducible \,$\left(\frac{1}{2},0\right) \oplus \left(0,\frac{1}{2}\right)$\,
 	{\color{red}$\left(\frac{1}{2},0\right) \oplus \left(0,\frac{1}{2}\right)$\,
 	corresponds to action of Dirac $\gamma$-matrices on $\C^{4}$.}
 	See \S4.3.7, \cite{Robinson2011} \,or\, \S41.2, \cite{Woit2017}.
+	%\vskip 2.5px
+	%{\color{blue}Still not sure:\; Whether action of Dirac $\gamma$-matrices includes parity.}
+\item
+	Aside: \,$\lambda \in \left(\frac{1}{2},0\right)$
+	\;$\Longrightarrow$\;\,
+	$\i\,\sigma^{2}\!\left(\overline{\lambda}\right) \in \left(0,\frac{1}{2}\right)$.\,
+	See \S4.3.12, \cite{Robinson2011}.
+	\vskip 1.5px
+	Hence, can write general element of
+	\,$\left(\frac{1}{2},0\right) \oplus \left(0,\frac{1}{2}\right)$\,
+	as
+	\,$\left(\!\begin{array}{c} \lambda \\ \i\,\sigma^{2}\!\left(\overline{\rho}\right)\!\!\end{array}\right)$,\,
+	where
+	\;$\lambda,\, \rho \in \left(\frac{1}{2},0\right)$.\,
+	Thus,
+	\vskip 1px
+	\begin{equation*}
+	\i\,\gamma^{2}(\,\overline{\,\cdot\,}\,)
+		\,:\,
+		\left(\frac{1}{2},0\right) \oplus \left(0,\frac{1}{2}\right)
+		\,\longrightarrow\,
+		\left(\frac{1}{2},0\right) \oplus \left(0,\frac{1}{2}\right)
+		\,:\,
+		\left(\!\begin{array}{c} \lambda \\ \i\,\sigma^{2}\!\left(\overline{\rho}\right)\!\!\end{array}\right)
+		\,\longmapsto\,
+		\left(\!\begin{array}{c} \rho \\ \i\,\sigma^{2}\!\left(\overline{\lambda}\right)\!\!\end{array}\right)
+	\end{equation*}
 \end{itemize}
 
 \end{frame}
