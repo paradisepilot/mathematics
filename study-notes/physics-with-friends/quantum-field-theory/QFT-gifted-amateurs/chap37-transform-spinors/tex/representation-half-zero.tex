@@ -153,19 +153,24 @@
 	\; = \;
 		I_{2}
 		+ \dfrac{\i\,\theta_{x}}{2}\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)
-		+ \dfrac{1}{2}\left(\,\dfrac{\i\,\theta_{x}}{2}\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)\right)^{2}
+		+ \dfrac{1}{2!}\!\left(\,\dfrac{\i\,\theta_{x}}{2}\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)\right)^{2}
+		+ \dfrac{1}{3!}\!\left(\,\dfrac{\i\,\theta_{x}}{2}\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)\right)^{3}
 		+ \;\cdots
 	\\
 	& = &
-		I_{2}
-		+ \i\cdot\dfrac{\theta_{x}}{2}\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)
-		+ \dfrac{\i^{\,2}}{2}\left(\!\dfrac{\theta_{x}}{2}\!\right)^{\!2}\left(\!\!\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array}\!\!\!\right)
-		+ \dfrac{\i^{\,3}}{3!}\left(\!\dfrac{\theta_{x}}{2}\!\right)^{\!3}\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)
-		+ \dfrac{\i^{\,4}}{4!}\left(\!\dfrac{\theta_{x}}{2}\!\right)^{\!4}\left(\!\!\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array}\!\!\!\right)
+		{\color{blue}I_{2}}
+		+ \i\cdot\!\left(\dfrac{\theta_{x}}{2}\right)\!\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)
+		+ {\color{blue}\dfrac{\i^{\,2}}{2!}\!\left(\!\dfrac{\theta_{x}}{2}\!\right)^{\!2}\left(\!\!\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array}\!\!\!\right)}
+		+ \dfrac{\i^{\,3}}{3!}\!\left(\!\dfrac{\theta_{x}}{2}\!\right)^{\!3}\left(\!\!\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\!\!\!\right)
+		+ {\color{blue}\dfrac{\i^{\,4}}{4!}\!\left(\!\dfrac{\theta_{x}}{2}\!\right)^{\!4}\left(\!\!\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array}\!\!\!\right)}
 		+ \;\cdots
 	\\
 	& = &
-		\left(\!\!\begin{array}{rr} \cos(\theta_{x}/2) & \i\,\sin(\theta_{x}/2) \\ \i\,\sin(\theta_{x}/2) & \cos(\theta_{x}/2) \end{array}\!\!\!\right)
+		\left(\!\!\begin{array}{rr}
+			{\color{blue}\cos(\theta_{x}/2)} & \i\,\sin(\theta_{x}/2)
+			\\
+			\i\,\sin(\theta_{x}/2) & {\color{blue}\cos(\theta_{x}/2)}
+			\end{array}\!\!\!\right)
 	\end{eqnarray*}
 	\vskip 5px
 \item
