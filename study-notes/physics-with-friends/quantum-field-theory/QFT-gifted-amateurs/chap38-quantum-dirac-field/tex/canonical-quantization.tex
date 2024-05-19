@@ -1,0 +1,174 @@
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\Large Canonical quantization -- Dirac equation}
+
+\small
+
+\vskip 0.5cm
+\textbf{Euler-Lagrange equation for classical fields}
+\begin{equation*}
+\dfrac{\partial\mathcal{L}}{\partial\psi^{\alpha}}
+\;-\; \partial^{\mu}\!\left(\,\dfrac{\partial\mathcal{L}}{\partial(\partial_{\mu}\psi^{\alpha})}\,\right)
+\;\; = \;\; 0
+\end{equation*}
+
+\vskip 0.3cm
+\textbf{The Dirac Lagrangian density}
+\begin{equation*}
+\mathcal{L}_{\textnormal{Dirac}}
+\;\; := \;\;
+	\overline{\psi}\cdot\left(\,\i\,\gamma^{\mu}\,\partial_{\mu}\,-\,m\,\right)\psi
+\;\; = \;\;
+	\i\,\overline{\psi}\,\gamma^{\mu}\,\partial_{\mu}\psi \,-\, m\cdot\overline{\psi}\cdot\psi
+\end{equation*}
+
+\vskip 0.3cm
+\textbf{Dirac equation as Euler-Lagrange equation of
+\,$\mathcal{L}_{\textnormal{Dirac}}$\,
+{\color{red}with respect to \,$\overline{\psi}$}
+}
+\begin{equation*}
+\dfrac{\partial\mathcal{L}_{\textnormal{Dirac}}}{\partial(\partial\overline{\psi})} = 0
+\quad\quad\textnormal{and}\quad\quad
+\dfrac{\partial\mathcal{L}_{\textnormal{Dirac}}}{\partial\overline{\psi}}
+\;=\; \i\,\gamma^{\mu}\,\partial_{\mu}\psi \,-\, m\cdot\psi
+\end{equation*}
+Hence:
+\begin{equation*}
+0
+\;\; = \;\;
+	\dfrac{\partial\mathcal{L}_{\textnormal{Dirac}}}{\partial\overline{\psi}}
+	\,-\,
+	\dfrac{\partial\mathcal{L}_{\textnormal{Dirac}}}{\partial(\partial\overline{\psi})}
+\;\; = \;\;
+	\left(\,\overset{{\color{white}.}}{\i}\,\gamma^{\mu}\,\partial_{\mu}\psi \,-\, m\cdot\psi\,\right)
+	\,-\,
+	\left(\,\overset{{\color{white}.}}{0}\,\right)
+\;\; = \;\;
+	\i\,\gamma^{\mu}\,\partial_{\mu}\psi \,-\, m\cdot\psi
+\end{equation*}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\Large Canonical quantization -- conjugate momentum}
+
+\small
+
+\vskip 0.5cm
+\textbf{The Dirac Lagrangian density}
+\begin{equation*}
+\mathcal{L}_{\textnormal{Dirac}}
+\;\; := \;\;
+	\overline{\psi}\cdot\left(\,\i\,\gamma^{\mu}\,\partial_{\mu}\,-\,m\,\right)\psi
+\;\; = \;\;
+	\i\,\overline{\psi}\,\gamma^{\mu}\,\partial_{\mu}\psi \,-\, m\cdot\overline{\psi}\cdot\psi
+\end{equation*}
+
+\vskip 0.5cm
+\textbf{Conjugate momentum}
+\begin{equation*}
+\Pi_{\psi}^{0}
+\;\; := \;\;
+	\dfrac{\partial\mathcal{L}_{\textnormal{Dirac}}}{\partial(\partial_{0}\psi)}
+\;\; = \;\;
+	\i\,\overline{\psi}\,\gamma^{0}
+\quad\quad\textnormal{and}\quad\quad
+\Pi_{\overline{\psi}}^{0}
+\;\; := \;\;
+	\dfrac{\partial\mathcal{L}_{\textnormal{Dirac}}}{\partial(\partial_{0}\overline{\psi})}
+\;\; = \;\;
+	0
+\end{equation*}
+
+\begin{eqnarray*}
+\mathcal{H}_{\textnormal{Dirac}}
+& = &
+	\Pi_{\psi}^{0}\cdot\partial_{0}\psi
+	\;+\; \Pi_{\overline{\psi}}^{0}\cdot\partial_{0}\overline{\psi}
+	\;-\; \mathcal{L}_{\textnormal{Dirac}}
+\;\; = \;\;
+	\i\,\overline{\psi}\,\gamma^{0}\,\partial_{0}\psi
+	\;-\; \mathcal{L}_{\textnormal{Dirac}}
+\;\; = \;\;
+	\cdots
+\\
+& = &
+	\psi^{\dagger}\,\i\,\partial_{0}\psi
+\end{eqnarray*}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
+\begin{frame}{\headingColor\bf\Large Canonical quantization -- mode expansions}
+
+\small
+
+\vskip 0.5cm
+\textbf{Second quantization of Eqn's (36.45) and (36.47), p.331, \cite{LancasterBlundell2014}}
+\begin{eqnarray*}
+\widehat{\psi}(x)
+& = &
+	\int\left(
+		\dfrac{1}{(2E_{p})^{1/2}}\,
+		\overset{2}{\underset{s=1}{\sum}}
+		\left(\,
+			u^{s}(p)\widehat{a}_{s,\mathbf{p}}\,e^{-\i\,p\cdot x}
+			+
+			v^{s}(p)\widehat{b}^{\dagger}_{s,\mathbf{p}}\,e^{+\i\,p\cdot x}
+			\,\right)
+		\right)
+		\dfrac{\d^{3}p}{(2\pi)^{3/2}}
+\\
+\widehat{\overline{\psi}}(x)
+& = &
+	\int\left(
+		\dfrac{1}{(2E_{p})^{1/2}}\,
+		\overset{2}{\underset{s=1}{\sum}}
+		\left(\,
+			\overline{u}^{s}(p)\widehat{a}^{\dagger}_{s,\mathbf{p}}\,e^{+\i\,p\cdot x}
+			+
+			\overline{v}^{s}(p)\widehat{b}_{s,\mathbf{p}}\,e^{-\i\,p\cdot x}
+			\,\right)
+		\right)
+		\dfrac{\d^{3}p}{(2\pi)^{3/2}}
+\end{eqnarray*}
+
+\vskip 0.3cm
+\textbf{Anti-commutation relations}
+\begin{equation*}
+\left.
+	\begin{array}{c}
+	\left\{\,\widehat{\psi}_{a}(t,\mathbf{x})\,,\,\widehat{\psi}^{\dagger}_{b}(t,\mathbf{y})\,\right\}
+	\;=\;
+		\delta_{ab}\cdot\delta^{(3)}(\mathbf{x}-\mathbf{y}) 
+	\\
+	\left\{\,\widehat{\psi}_{a}(t,\mathbf{x})\,,\,\widehat{\psi}_{b}(t,\mathbf{y})\,\right\}
+	\;=\;
+		\overset{{\color{white}\textnormal{\Huge-}}}{0}
+	\\
+	\left\{\,\widehat{\psi}^{\dagger}_{a}(t,\mathbf{x})\,,\,\widehat{\psi}^{\dagger}_{b}(t,\mathbf{y})\,\right\}
+	\;=\;
+		\overset{{\color{white}\textnormal{\Huge-}}}{0}
+	\end{array}
+\right\}
+\;\;\Longrightarrow\;\;
+\left\{
+	\begin{array}{c}
+	\left\{\,\widehat{a}_{s,\mathbf{p}}\,,\,\widehat{a}^{\dagger}_{r,\mathbf{q}}\,\right\}
+	\;=\;
+		\delta_{sr}\cdot\delta^{(3)}(\mathbf{p}-\mathbf{q}) 
+	\\
+	\left\{\,\widehat{b}_{s,\mathbf{p}}\,,\,\widehat{b}^{\dagger}_{r,\mathbf{q}}\,\right\}
+	\;\overset{{\color{white}\textnormal{\Large1}}}{=}\;
+		\delta_{sr}\cdot\delta^{(3)}(\mathbf{p}-\mathbf{q}) 
+	\end{array}
+\right.
+\end{equation*}
+
+\end{frame}
+\normalsize
+
+%%%%%%%%%%
