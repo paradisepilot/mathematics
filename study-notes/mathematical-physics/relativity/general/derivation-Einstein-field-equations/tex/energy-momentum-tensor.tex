@@ -1,0 +1,217 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Energy-momentum tensor}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{equation*}
+T^{\alpha\beta}
+\;\; := \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{\alpha}$-component}
+		\\
+		\textnormal{of energy-momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{orthogonal to \,$\mathbf{e}_{\beta}$}
+		\end{array}
+		\,\right)
+\end{equation*}
+
+\begin{eqnarray*}
+T^{11}
+& := &
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of energy-momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{orthogonal to \,$\mathbf{e}_{1}$}
+		\end{array}
+		\,\right)
+\;\; = \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{0}$, $\mathbf{e}_{2}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\,\right)
+\\
+& = &
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of momentum}
+		\\
+		\textnormal{crossing a unit area spanned by $\mathbf{e}_{2}$ and $\mathbf{e}_{3}$}
+		\\
+		\textnormal{in unit time ($\mathbf{e}_{0}$ direction)}
+		\end{array}
+		\,\right)
+\;\; = \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{flux}
+		\\
+		\textnormal{of $x_{1}$-component of momentum}
+		\\
+		\textnormal{across a unit area}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{2}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\,\right)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+T^{12}
+& := &
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of energy-momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{orthogonal to \,$\mathbf{e}_{2}$}
+		\end{array}
+		\,\right)
+\;\; = \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{0}$, $\mathbf{e}_{1}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\,\right)
+\\
+& = &
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of momentum}
+		\\
+		\textnormal{crossing a unit area spanned by $\mathbf{e}_{1}$ and $\mathbf{e}_{3}$}
+		\\
+		\textnormal{in unit time ($\mathbf{e}_{0}$ direction)}
+		\end{array}
+		\,\right)
+\;\; = \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{flux}
+		\\
+		\textnormal{of $x_{1}$-component of momentum}
+		\\
+		\textnormal{across a unit area}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{1}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\,\right)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+T^{00}
+& := &
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{0}$-component}
+		\\
+		\textnormal{of energy-momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{orthogonal to \,$\mathbf{e}_{0}$}
+		\end{array}
+		\,\right)
+\;\; = \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{energy}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{1}$, $\mathbf{e}_{2}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\,\right)
+\;\; = \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{energy}
+		\\
+		\textnormal{density}
+		\end{array}
+		\,\right)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+T^{01}
+& := &
+	\left(\,
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{0}$-component}
+		\\
+		\textnormal{of energy-momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{orthogonal to \,$\mathbf{e}_{1}$}
+		\end{array}
+		\,\right)
+\;\; = \;\;
+	\left(\,
+		\begin{array}{c}
+		\textnormal{energy}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{0}$, $\mathbf{e}_{2}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\,\right)
+\\
+& = &
+	\left(\,
+		\begin{array}{c}
+		\textnormal{flux of energy}
+		\\
+		\textnormal{across a unit area}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{2}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\,\right)
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
