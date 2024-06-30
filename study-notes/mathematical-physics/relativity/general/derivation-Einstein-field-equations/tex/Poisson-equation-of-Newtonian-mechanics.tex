@@ -1,7 +1,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Poisson's equation of a conservative gravitational field expressed in terms of second-order derivatives of metric tensor components}
+\section{Guiding example: a weak gravitational field whose Newtonian limit satisfies a special form of Poisson's equation in which second-order derivatives of metric tensor components appear}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
 
@@ -15,7 +15,18 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-The Gauss Law of Gravity states that,
+In this section, we describe a special scenario in which
+second-order derivatives of metric tensor components
+of a weak gravitational field appear in the Poisson equation
+of the Newtonian limit of the given gravitational field.
+This modified form of the Poisson equation is what will be
+extended to tensorial form in order to derive the Einstein field equations.
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.3cm
+\noindent
+We begin by recalling the Gauss Law of Gravity, which states that,
 for an arbitrary open set
 \,$\Omega \subset \textnormal{domain}(\,\mathbf{g}\,) \cap \textnormal{domain}(\,\rho\,)$\,
 with smooth boundary \,$\partial\,\Omega$,\,
@@ -71,20 +82,30 @@ The differential form of Gauss' Law of Gravity therefore becomes the Poisson equ
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{remark}[Gravitational potential \,$\phi$\, is related to a metric tensor component]
+\vskip 0.3cm
+\begin{remark}[Special scenario where \,$\phi$\, in Poisson equation becomes a metric tensor component]
+\label{remarkPoissonWithMetricComponent}
 \mbox{}
-\vskip -0.01cm
+\vskip 0.1cm
 \noindent
-Next, we see how the gravitational potential \,$\phi$\, is related to metric tensor components.
-Suppose:
+Here, we show that, under a special scenario, the gravitational potential \,$\phi$\,
+in the Poisson equation \eqref{eqnPoisson} can be replaced
+with (a constant multiple of) a metric tensor component.
+The resulting equation inspires us how to seek the Einstein field equations;
+more precisely, the Einstein field equations will be sought as a geometric (tensorial) generalization
+of that modified form of Poisson equation.
+To this end, suppose:
 \begin{itemize}
 \item
-	A material particle \,$q$\, freely falling in a weak gravitational field.
+	A material particle \,$q$\, is freely falling in a {\color{red}weak} gravitational field.
 \item
-	The particle is observed by an inertial observer \,$\omega$,\,
+	The particle \,$q$\, is observed by an observer \,$\omega$,\,
 	with respect to whom the speed of \,$q$\, is small.
+\item
+	The gravitational field is {\color{red}conservative} and {\color{red}approximately static}
+	as observed by \,$\omega$.
 \end{itemize}
-Since the material particle \,$\alpha$\, is freely falling in the given gravitational field,
+Since the material particle \,$q$\, is freely falling in the given gravitational field,
 its worldline \,$x^{\mu}(\tau)$\, -- where \,$\tau$\, is the proper time of \,$q$ --
 obeys the geodesic equation:
 \begin{equation*}
@@ -98,7 +119,7 @@ where
 \begin{equation*}
 \Gamma^{\mu}_{\alpha\beta}
 \;\; = \;\;
-	\dfrac{1}{2}\,g^{\mu\nu}\left(\;
+	\dfrac{1}{2}\,g^{\mu\gamma}\left(\;
 		\dfrac{\partial g_{\alpha\gamma}}{\partial x^{\beta}}
 		\,+\,
 		\dfrac{\partial g_{\gamma\beta}}{\partial x^{\alpha}}
@@ -107,7 +128,20 @@ where
 		\,\right)
 \end{equation*}
 are the Christoffel symbols of the metric tensor \,$g_{\alpha\beta}$\, of the gravitational field.
-Let \,$t$\, be the proper time of the observer \,$\omega$.\,
+Note that, since the gravitational field is assumed to be weak, we have:
+\begin{equation*}
+g^{\alpha\beta} \; \approx \; \diag(+1,-1,-1,-1)
+\quad\quad
+\textnormal{and}
+\quad\quad
+g_{\alpha\beta} \; \approx \; \diag(+1,-1,-1,-1)
+\end{equation*}
+Furthermore, since the gravitational field is assumed to be approximately static as observed by \,$\omega$,\,
+we have:
+\begin{equation*}
+\dfrac{\partial\,g^{\alpha\beta}}{\partial\,x^{0}} \; \approx \; 0
+\end{equation*}
+Now, let \,$t$\, be the proper time of the observer \,$\omega$.\,
 Recall that \,$t$\, and \,$\tau$\, are related by:
 \begin{equation*}
 \dfrac{\d t}{\d\tau} \; = \; \dfrac{1}{\sqrt{\;1 - v(\tau)^{2}\,}}\,,
@@ -124,38 +158,109 @@ Since we have assumed that \,$v(\tau) \ll 1$,\, it follows that:
 \;\;
 \textnormal{for \,$k = 1,2,3$}
 \end{equation*}
-Hence, we see that the geodesic equation can be approximated by:
+Hence, we see that the spatial components of the geodesic equation can be approximated by:
 \begin{equation*}
-\dfrac{\d^{2}x^{\mu}}{\d t^{2}}
+\dfrac{\d^{2}x^{k}}{\d t^{2}}
 \;\; \approx \;\;
-	-\,\Gamma^{\mu}_{00}\,,
+	-\,\Gamma^{k}_{00}
+\;\; \approx \;\;
+	-\,\dfrac{1}{2}\,\dfrac{\partial\,g_{00}}{\partial\,x^{k}}\,,
+\quad
+\textnormal{for \,$k = 1,2,3$}\,,
 \end{equation*}
 since
 \begin{eqnarray*}
-\dfrac{\d^{2}x^{\mu}}{\d t^{2}}
+\dfrac{\d^{2}x^{k}}{\d t^{2}}
 & \approx &
-	\dfrac{\d^{2}x^{\mu}}{\d\tau^{2}}
+	\dfrac{\d^{2}x^{k}}{\d\tau^{2}}
 \;\; = \;\;
-	-\,\Gamma^{\mu}_{\alpha\beta}\,\dfrac{\d x^{\alpha}}{\d\tau}\,\dfrac{\d x^{\beta}}{\d\tau}
+	-\,\Gamma^{k}_{\alpha\beta}\,\dfrac{\d x^{\alpha}}{\d\tau}\,\dfrac{\d x^{\beta}}{\d\tau}
 \;\; = \;\;
-	-\,\Gamma^{\mu}_{00}\,\dfrac{\d x^{0}}{\d\tau}\,\dfrac{\d x^{0}}{\d\tau}
+	-\,\Gamma^{k}_{00}\,\dfrac{\d x^{0}}{\d\tau}\,\dfrac{\d x^{0}}{\d\tau}
 	-\,\underset{(\alpha,\beta)\neq(0,0)}{\sum}
-	\Gamma^{\mu}_{\alpha\beta}\,\dfrac{\d x^{\alpha}}{\d\tau}\,\dfrac{\d x^{\beta}}{\d\tau}
+	\Gamma^{k}_{\alpha\beta}\,\dfrac{\d x^{\alpha}}{\d\tau}\,\dfrac{\d x^{\beta}}{\d\tau}
 \\
 & \approx &
-	-\,\Gamma^{\mu}_{00}
+	-\,\Gamma^{k}_{00}
 \;\; = \;\;
-	\dfrac{1}{2}\,g^{\mu\nu}\left(\;
-		\dfrac{\partial g_{0\gamma}}{\partial x^{0}}
+	-\,\dfrac{1}{2}\,g^{k\gamma}\left(\;
+		\dfrac{\partial\,g_{0\gamma}}{\partial\,x^{0}}
 		\,+\,
-		\dfrac{\partial g_{\gamma0}}{\partial x^{0}}
+		\dfrac{\partial\,g_{\gamma0}}{\partial\,x^{0}}
 		\,-\,
-		\dfrac{\partial g_{00}}{\partial x^{\gamma}}
+		\dfrac{\partial\,g_{00}}{\partial\,x^{\gamma}}
 		\,\right)
+\\
+& \approx &
+	\dfrac{1}{2}\,g^{k\gamma}\,\dfrac{\partial\,g_{00}}{\partial\,x^{\gamma}}\,,
+	\;\;
+	\textnormal{
+		since \,$g_{\alpha\beta}$\, is approximately static,
+		i.e., \,$\dfrac{\partial\,g_{\alpha\beta}}{\partial\,x^{0}} \,\approx\,0$
+		}
+\\
+& \overset{{\color{white}\textnormal{\Large1}}}{\approx} &
+	\,-\, \dfrac{1}{2}\,\dfrac{\partial\,g_{00}}{\partial\,x^{k}}\,,
+	\;\;
+	\textnormal{
+		since \,$k \in \{1,2,3\}$\, and the gravitational field is weak,
+		i.e., \,$g^{\alpha\beta}\,\approx\,\diag(+1,-1,-1,-1)$
+		}
 \end{eqnarray*}
+Since the gravitational field is assumed to be conservative as observed by \,$\omega$,\,
+the gravitational field as observed by \,$\omega$\, can be given as \,$-\,\nabla\phi$,\,
+where \,$\phi$\, is the gravitational potential. Hence,
+\begin{eqnarray*}
+-\,\nabla\phi
+& = &
+	\left(\!
+		\begin{array}{c}
+		\textnormal{gravitational}
+		\\
+		\textnormal{field}
+		\end{array}
+		\!\right)
+\;\; = \;\;
+	\left(\!
+		\begin{array}{c}
+		\textnormal{gravitational}
+		\\
+		\textnormal{acceleration}
+		\end{array}
+		\!\right)
+\\
+& \overset{{\color{white}\textnormal{\huge1}}}{=} &
+	\left(\,
+		\dfrac{\d^{2}x^{1}}{\d\,t^{2}}\,,\,
+		\dfrac{\d^{2}x^{2}}{\d\,t^{2}}\,,\,
+		\dfrac{\d^{2}x^{3}}{\d\,t^{2}}
+		\,\right)
+\;\; {\color{red}\approx} \;\;
+	-\,\dfrac{1}{2}
+	\left(\,
+		\dfrac{\partial\,g_{00}}{\partial\,x^{1}}\,,\,
+		\dfrac{\partial\,g_{00}}{\partial\,x^{2}}\,,\,
+		\dfrac{\partial\,g_{00}}{\partial\,x^{3}}
+		\,\right)
+\\
+& \overset{{\color{white}\textnormal{\LARGE1}}}{=} &
+	-\,\dfrac{1}{2}\,\nabla\,g_{00}\,,
+\end{eqnarray*}
+which immediately implies
 \begin{equation*}
-\nabla^{2}\!\left(\,\overset{{\color{white}.}}{g^{00}}\,\right) \;\; = \;\; 8 \pi G \, \rho,
+\nabla\!\left(\,\phi \,-\, \dfrac{g_{00}}{2}\,\right) \;\; \approx \;\; 0\,,
 \end{equation*}
+and hence,
+\begin{equation*}
+\phi \;\; \approx \;\; \dfrac{g_{00}}{2} \,+\, \textnormal{constant}
+\end{equation*}
+Substituting this into the Poisson equation \eqref{eqnPoisson} yields:
+\begin{equation}\label{eqnPoissonWithMetricComponent}
+\nabla^{2}\!\left(\,\overset{{\color{white}.}}{g_{00}}\,\right) \;\; \approx \;\; 8 \pi G \, \rho
+\end{equation}
+Equation \eqref{eqnPoissonWithMetricComponent} is the promised special form
+of the Poisson equation \eqref{eqnPoisson}
+in which the gravitational potential \,$\phi$\, is replaced with a scalar multiple of a metric tensor component.
 \end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -187,9 +292,12 @@ since
 	It turns out that \,$T^{\alpha\beta}$\, is also divergence-free,
 	which corresponds to the conservation of energy and momentum.
 \item
-	On the other hand, up to first order, the gravitational potential \,$\phi$\,
-	is equal to an affine function of a certain component of the metric tensor.
-	Hence, the L.H.S. of \eqref{eqnPoisson} involves second-order derivatives of metric tensor components.
+	On the other hand, 
+	under the special scenario described in Remark \ref{remarkPoissonWithMetricComponent},
+	the gravitational potential \,$\phi$\, is well approximated by a scalar multiple of a metric tensor component.
+	The Poisson equation \eqref{eqnPoisson} is then well approximated by \eqref{eqnPoissonWithMetricComponent}.
+	Now, the L.H.S. of \eqref{eqnPoissonWithMetricComponent} involves
+	second-order derivatives of metric tensor components.
 	Consequently, the L.H.S. of the Einstein field equation \eqref{eqnEinsteinAnsatz} is expected to involve
 	the Riemann curvature tensor, as that tensor also involves second-order derivatives of metric tensor components.
 \item
