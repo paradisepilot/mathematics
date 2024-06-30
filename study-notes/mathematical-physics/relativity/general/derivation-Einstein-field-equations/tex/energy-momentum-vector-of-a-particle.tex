@@ -1,0 +1,324 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Energy-momentum vector of a material particle in special relativity}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}
+\mbox{}
+\vskip -0.01cm
+\noindent
+A \,\textbf{spacetime} is a
+connected time-oriented four-dimensional
+Lorentz manifold.
+\end{definition}
+
+\begin{remark}
+\mbox{}
+\vskip -0.01cm
+\noindent
+Recall that a Lorentz manifold is a pseudo-Riemannian manifold of signature $(-,+,\cdots,+)$.
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.4cm
+\begin{definition}
+\mbox{}
+\vskip -0.01cm
+\noindent
+A \,\textbf{material particle}\, in Minkowski spacetime \,$\Re^{1,3}$\, is a differentiable map
+\,$\alpha : I \longrightarrow \Re^{1,3}$\,
+where \,$I \subset \Re$\, is an interval such that
+\begin{itemize}
+\item
+	the tangent vector \,$\alpha^{\prime} : I \longrightarrow T(\Re^{1,3})$\,
+	is everywhere time-like and future-pointing, and
+\item
+	$\Vert\,\alpha^{\prime}(\tau)\,\Vert = 1$, for each \,$\tau \in I$. 
+\end{itemize}
+The parameter \,$\tau \in I$\, is called the Lorentz proper time of the particle \,$\alpha$.
+\end{definition}
+
+\begin{remark}
+\mbox{}
+\vskip -0.01cm
+\noindent
+An \,\textbf{observer}\, in \,$\Re^{1,3}$\, is just a material particle;
+this alternative terminology suggests a different role.
+\end{remark}
+
+\begin{definition}
+\mbox{}
+\vskip -0.01cm
+\noindent
+A material particle
+\,$\alpha : I \longrightarrow \Re^{1,3}$\,
+is said to be \,\textbf{freely falling}\,
+if \,$\alpha$\, is a geodesic.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.4cm
+\begin{definition}[Energy-momentum vector of a material particle]
+\mbox{}
+\vskip -0.01cm
+\noindent
+The \,\textbf{energy-momentum vector field}\,
+of a material particle 
+\,$\alpha : I \longrightarrow \Re^{1,3}$\,
+of rest mass \,$m$\, is the vector field
+\,$P : I \longrightarrow T(\Re^{1,3})$\,
+defined by:
+\,$P(\tau) \,:=\, m\cdot\alpha^{\prime}(\tau)$,\,
+for each $\tau \in I$.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.4cm
+\begin{proposition}
+\mbox{}
+\vskip -0.01cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	\,$\omega : \Re \longrightarrow \Re^{1,3}$\, is the freely falling observer
+	corresponding to the $x^{0}$-axis of \,$\Re^{1,3}$.\,
+\item
+	\,$\alpha = (\alpha^{0},\alpha^{1},\alpha^{2},\alpha^{3}) : I \longrightarrow \Re^{1,3}$\, is a material particle,
+	with proper time \,$\tau \in I$.
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	$\dfrac{\d\alpha^{0}(\tau)}{\d\tau} \,\geq\, 1$,\, for each \,$\tau \in I$.
+	Thus, there exists \,$\varphi : I \longrightarrow [\,0,\infty)$\,
+	such that
+	\begin{equation*}
+	\dfrac{\d\alpha^{0}(\tau)}{\d\tau} \, = \, \cosh\varphi(\tau),
+	\quad
+	\textnormal{for each \,$\tau \in I$}.
+	\end{equation*}
+	Reminder: \,$\cosh : [\,0,\infty) \longrightarrow [\,1,\infty)$\, is bijective.
+\item
+	The $3$-velocity (as a function of $\tau$) of \;$\alpha$\, as observed by \,$\omega$\, is {\color{red}defined} to be:
+	\begin{equation*}
+	\left(\;
+		\dfrac{\d\alpha^{1}}{\d t},
+		\dfrac{\d\alpha^{2}}{\d t},
+		\dfrac{\d\alpha^{3}}{\d t}
+		\,\right)
+	\; = \;
+	\left(\;
+		\dfrac{\d\alpha^{1}/\d\tau}{\d\alpha^{0}/\d\tau},
+		\dfrac{\d\alpha^{2}/\d\tau}{\d\alpha^{0}/\d\tau},
+		\dfrac{\d\alpha^{3}/\d\tau}{\d\alpha^{0}/\d\tau}
+		\,\right),
+	\end{equation*}
+	where \,$t = t(\tau) = \alpha^{0}(\tau)$.\,
+	The speed (as a function of $\tau$) of \,$\alpha$\, as observed by \,$\omega$\, is defined to be
+	the Euclidean norm of its 3-velocity as observed by \,$\omega$.\,
+	The speed of \;$\alpha$\, as observed by \,$\omega$\, is given by:
+	\begin{equation*}
+	\left\Vert\;\left(\;
+		\dfrac{\d\alpha^{1}}{\d t},
+		\dfrac{\d\alpha^{2}}{\d t},
+		\dfrac{\d\alpha^{3}}{\d t}
+		\,\right)\;\right\Vert
+	\;\; = \;\;
+	\left\Vert\;\left(\;
+		\dfrac{\d\alpha^{1}/\d\tau}{\d\alpha^{0}/\d\tau},
+		\dfrac{\d\alpha^{2}/\d\tau}{\d\alpha^{0}/\d\tau},
+		\dfrac{\d\alpha^{3}/\d\tau}{\d\alpha^{0}/\d\tau}
+		\,\right)\;\right\Vert
+	\;\; = \;\;
+		\tanh\varphi(\tau)
+	\;\; =: \;\;
+		v(\tau)
+	\;\; \in \;\;
+		[\,0,1)
+	\end{equation*}
+	Reminder: \,$v(\tau)$\, and \,$\varphi(\tau)$\, are related by:
+	\,$\cosh\varphi(\tau) \; = \; \dfrac{1}{\sqrt{\,1 - v(\tau)^{2}\,}} \; \geq \; 1$.
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	Observer that:
+	\begin{equation*}
+	-1
+	\; = \;
+		\left\langle\;\alpha^{\prime}(\tau)
+		\,\overset{{\color{white}\textnormal{\Large1}}}{,}\,
+		\alpha^{\prime}(\tau)\;\right\rangle
+	\; = \;
+		-\left(\dfrac{\d\alpha^{0}}{\d\tau}\right)^{2}
+		+\left(\dfrac{\d\alpha^{1}}{\d\tau}\right)^{2}
+		+\left(\dfrac{\d\alpha^{2}}{\d\tau}\right)^{2}
+		+\left(\dfrac{\d\alpha^{3}}{\d\tau}\right)^{2}
+	\end{equation*}
+	which implies
+	\begin{equation*}
+	\left(\dfrac{\d\alpha^{0}}{\d\tau}\right)^{2}
+	\; = \;\;
+		1\,
+		+\left(\dfrac{\d\alpha^{1}}{\d\tau}\right)^{2}
+		+\left(\dfrac{\d\alpha^{2}}{\d\tau}\right)^{2}
+		+\left(\dfrac{\d\alpha^{3}}{\d\tau}\right)^{2}
+	\;\; \geq \;\;
+		1
+	\end{equation*}
+	On the other hand, since \,$\alpha^{\prime}(\tau)$\, is future-pointing, we have:
+	\begin{equation*}
+	0
+	\; > \;
+		\left\langle\;
+		\alpha^{\prime}(\tau)
+		\,\overset{{\color{white}\textnormal{\Large1}}}{,}\,
+		\widehat{e}_{0}
+		\;\right\rangle
+	\; = \;
+		-\dfrac{\d\alpha^{0}}{\d\tau}
+	\end{equation*}
+	which implies
+	\begin{equation*}
+	\dfrac{\d\alpha^{0}}{\d\tau} \; > \; 0
+	\end{equation*}
+	Thus, we may conclude that:
+	\begin{equation*}
+	\dfrac{\d\alpha^{0}}{\d\tau}
+	\; = \;\;
+		+\;\sqrt{\;
+			1\,
+			+\left(\dfrac{\d\alpha^{1}}{\d\tau}\right)^{2}
+			+\left(\dfrac{\d\alpha^{2}}{\d\tau}\right)^{2}
+			+\left(\dfrac{\d\alpha^{3}}{\d\tau}\right)^{2}
+			\,}
+	\;\; \geq \;\;
+		1
+	\end{equation*}
+	Now, recall that \,$\cosh : [\,0,\infty) \longrightarrow [\,1,\infty)$\, is bijective;
+	hence, we may define
+	\,$\varphi : I \longrightarrow [\,0,\infty)$\,
+	by:
+	\begin{equation*}
+	\varphi(\tau)
+	\; := \;
+		\cosh^{-1}\!\left(\,
+			\dfrac{\d\alpha^{0}(\tau)}{\d\tau}
+			\,\right),
+	\quad
+	\textnormal{for each \,$\tau \in I$}.
+	\end{equation*}
+\item
+	Observe that:
+	\begin{eqnarray*}
+	\left\Vert\;\left(\;
+		\dfrac{\d\alpha^{1}}{\d t},
+		\dfrac{\d\alpha^{2}}{\d t},
+		\dfrac{\d\alpha^{3}}{\d t}
+		\,\right)\;\right\Vert^{2}
+	& = &
+	\left\Vert\;\left(\;
+		\dfrac{\d\alpha^{1}/\d\tau}{\d\alpha^{0}/\d\tau},
+		\dfrac{\d\alpha^{2}/\d\tau}{\d\alpha^{0}/\d\tau},
+		\dfrac{\d\alpha^{3}/\d\tau}{\d\alpha^{0}/\d\tau}
+		\,\right)\;\right\Vert^{2}
+	\\
+	& \overset{{\color{white}\textnormal{\Huge1}}}{=} &
+		\dfrac{
+			(\d\alpha^{1}/\d\tau)^{2}
+			+
+			(\d\alpha^{2}/\d\tau)^{2}
+			+
+			(\d\alpha^{3}/\d\tau)^{2}
+		}{
+			(\d\alpha^{0}/\d\tau)^{2}
+		}
+	\;\; = \;\;
+		\dfrac{
+			(\d\alpha^{0}/\d\tau)^{2} - 1
+		}{
+			(\d\alpha^{0}/\d\tau)^{2}
+		}
+	\\
+	& \overset{{\color{white}\textnormal{\Huge1}}}{=} &
+		\dfrac{
+			\cosh^{2}\varphi(\tau) - 1
+		}{
+			\cosh^{2}\varphi(\tau)
+		}
+	\;\; = \;\;
+		\dfrac{
+			\sinh^{2}\varphi(\tau)
+		}{
+			\cosh^{2}\varphi(\tau)
+		}
+	\;\; = \;\;
+		\tanh^{2}\varphi(\tau)
+	\end{eqnarray*}
+	Hence,
+	\begin{eqnarray*}
+	\left\Vert\;\left(\;
+		\dfrac{\d\alpha^{1}}{\d t},
+		\dfrac{\d\alpha^{2}}{\d t},
+		\dfrac{\d\alpha^{3}}{\d t}
+		\,\right)\;\right\Vert
+	& = &
+		\left\vert\;\,\overset{{\color{white}.}}{\tanh\varphi(\tau)}\;\right\vert
+	\;\; = \;\;
+		\tanh\varphi(\tau)
+	\;\; \in \;\;
+		[\,0,1)\,,
+	\end{eqnarray*}
+	where the last equality follows from the fact that
+	\,$\tanh : [\,0,\infty) \longrightarrow [\,0,1)$\, is bijective,
+	and
+	\,$\varphi : I \longrightarrow [\,0,\infty)$.\,
+	Lastly, since
+	\,$v(\tau) \,:=\, \tanh\varphi(\tau) \,\in\, [\,0,1)$,\,
+	we have:
+	\begin{eqnarray*}
+	1
+	\;\; \leq \;\;
+		\dfrac{1}{1 - v(\tau)^{2}}
+	& = &
+		\dfrac{1}{1 - \tanh^{2}\varphi(\tau)}
+	\; = \;
+		\dfrac{1}{1 - \left(\sinh^{2}\varphi(\tau)/\cosh^{2}\varphi(\tau)\right)}
+	\; = \;
+		\dfrac{\cosh^{2}\varphi(\tau)}{\cosh^{2}\varphi(\tau) - \sinh^{2}\varphi(\tau)}
+	\\
+	& \overset{{\color{white}\textnormal{\large1}}}{=} &
+		\cosh^{2}\varphi(\tau)
+	\end{eqnarray*}
+	Recalling that
+	\,$\varphi(\tau) \in [\,0,\infty)$,\,
+	we see that:
+	\begin{equation*}
+	\cosh\varphi(\tau)
+	\;\; = \;\;
+		\dfrac{1}{\sqrt{\;1 - v(\tau)^{2}}}
+	\;\; \geq \;\;
+		1.
+	\end{equation*}
+\end{enumerate}
+This completes the proof of the Proposition.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
