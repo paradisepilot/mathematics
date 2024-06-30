@@ -1,7 +1,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Poisson's equation of a conservative gravitational field expressed in terms of second-order derivatives of the metric}
+\section{Poisson's equation of a conservative gravitational field expressed in terms of second-order derivatives of metric tensor components}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
 
@@ -72,11 +72,14 @@ The differential form of Gauss' Law of Gravity therefore becomes the Poisson equ
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{remark}[Gravitational potential $\phi$ is related to a metric tensor component]
+\begin{remark}[Gravitational potential \,$\phi$\, is related to a metric tensor component]
 \mbox{}
 \vskip -0.01cm
 \noindent
-1234
+Next, we see how the gravitational potential \,$\phi$\, is related to metric tensor components.
+\begin{equation*}
+\nabla^{2}\!\left(\,\overset{{\color{white}.}}{g^{00}}\,\right) \;\; = \;\; 8 \pi G \, \rho,
+\end{equation*}
 \end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -86,20 +89,22 @@ The differential form of Gauss' Law of Gravity therefore becomes the Poisson equ
 \textbf{Action Plan}
 \begin{itemize}
 \item
-	We seek a tensorial generalization
+	The Poisson equation \eqref{eqnPoisson} is not tensorial and is thus inadmissble
+	as a physical law within the framework of Einstein's relativistic theory of gravitation.
+	We seek therefore a tensorial generalization
 	\begin{equation}\label{eqnEinsteinAnsatz}
 	G^{\alpha\beta} \;\; = \;\; \kappa\,T^{\alpha\beta}
 	\end{equation}
 	of the Poisson equation \eqref{eqnPoisson} that admits the the Poisson equation
 	as low-speed, week-gravity-field limit.
-	This tensorial generalization will be what we are seeking, i.e.,
+	This tensorial generalization is what we are seeking, i.e.,
 	the Einstein field equations.
 \item
 	First, note that, in going
 	from the Poisson equation \eqref{eqnPoisson}
-	to the ansatz \eqref{eqnEinsteinAnsatz} of the Einstein field equation,
+	to the ansatz \eqref{eqnEinsteinAnsatz} of the Einstein field equations,
 	the (scalar) mass density \,$\rho$\, on the R.H.S. of \eqref{eqnPoisson}
-	will be replaced with what is called the energy-momentum tensor \,$T^{\alpha\beta}$.
+	is replaced with what is called the energy-momentum tensor \,$T^{\alpha\beta}$.
 \item
 	It turns out that \,$T^{\alpha\beta}$\, is symmetric.
 \item
@@ -110,7 +115,7 @@ The differential form of Gauss' Law of Gravity therefore becomes the Poisson equ
 	is equal to an affine function of a certain component of the metric tensor.
 	Hence, the L.H.S. of \eqref{eqnPoisson} involves second-order derivatives of metric tensor components.
 	Consequently, the L.H.S. of the Einstein field equation \eqref{eqnEinsteinAnsatz} is expected to involve
-	the Riemann curvature tensor, as that also contains second-order derivatives of metric tensor components.
+	the Riemann curvature tensor, as that tensor also involves second-order derivatives of metric tensor components.
 \item
 	Hence, we seek a suitable contraction of the Riemann curvature tensor
 	which gives a symmetric divergence-free $(2,0)$-tensor.
@@ -123,10 +128,6 @@ The differential form of Gauss' Law of Gravity therefore becomes the Poisson equ
 
 \vskip 0.3cm
 \noindent
-Next, we see how the gravitational potential \,$\phi$\, is related to metric tensor components.
-\begin{equation*}
-\nabla^{2}\!\left(\,\overset{{\color{white}.}}{g^{00}}\,\right) \;\; = \;\; 8 \pi G \, \rho,
-\end{equation*}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
