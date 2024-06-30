@@ -76,6 +76,83 @@ The differential form of Gauss' Law of Gravity therefore becomes the Poisson equ
 \vskip -0.01cm
 \noindent
 Next, we see how the gravitational potential \,$\phi$\, is related to metric tensor components.
+Suppose:
+\begin{itemize}
+\item
+	A material particle \,$q$\, freely falling in a weak gravitational field.
+\item
+	The particle is observed by an inertial observer \,$\omega$,\,
+	with respect to whom the speed of \,$q$\, is small.
+\end{itemize}
+Since the material particle \,$\alpha$\, is freely falling in the given gravitational field,
+its worldline \,$x^{\mu}(\tau)$\, -- where \,$\tau$\, is the proper time of \,$q$ --
+obeys the geodesic equation:
+\begin{equation*}
+\dfrac{\d^{2}x^{\mu}}{\d\tau^{2}}
+\,+\,
+\Gamma^{\mu}_{\alpha\beta}\,\dfrac{\d x^{\alpha}}{\d\tau}\,\dfrac{\d x^{\beta}}{\d\tau}
+\; = \;
+	0\,,
+\end{equation*}
+where
+\begin{equation*}
+\Gamma^{\mu}_{\alpha\beta}
+\;\; = \;\;
+	\dfrac{1}{2}\,g^{\mu\nu}\left(\;
+		\dfrac{\partial g_{\alpha\gamma}}{\partial x^{\beta}}
+		\,+\,
+		\dfrac{\partial g_{\gamma\beta}}{\partial x^{\alpha}}
+		\,-\,
+		\dfrac{\partial g_{\beta\alpha}}{\partial x^{\gamma}}
+		\,\right)
+\end{equation*}
+are the Christoffel symbols of the metric tensor \,$g_{\alpha\beta}$\, of the gravitational field.
+Let \,$t$\, be the proper time of the observer \,$\omega$.\,
+Recall that \,$t$\, and \,$\tau$\, are related by:
+\begin{equation*}
+\dfrac{\d t}{\d\tau} \; = \; \dfrac{1}{\sqrt{\;1 - v(\tau)^{2}\,}}\,,
+\end{equation*}
+where \,$v(\tau)$\, is the speed (expressed as a function of the proper time \,$\tau$\, of \,$q$) of $q$
+with respect to \,$\omega$.\,
+Since we have assumed that \,$v(\tau) \ll 1$,\, it follows that:
+\begin{equation*}
+\dfrac{\d x^{0}}{\d\tau} \; = \; \dfrac{\d t}{\d\tau} \; = \; \dfrac{1}{\sqrt{\;1 - v(\tau)^{2}}} \; \approx \; 1
+\quad\quad
+\textnormal{and}
+\quad\quad
+\dfrac{\d x^{k}}{\d\tau} \; = \; \dfrac{\d x^{k}}{\d t}\,\dfrac{\d t}{\d\tau} \; \approx \; \dfrac{\d x^{k}}{\d t} \; \approx \; 0\,,
+\;\;
+\textnormal{for \,$k = 1,2,3$}
+\end{equation*}
+Hence, we see that the geodesic equation can be approximated by:
+\begin{equation*}
+\dfrac{\d^{2}x^{\mu}}{\d t^{2}}
+\;\; \approx \;\;
+	-\,\Gamma^{\mu}_{00}\,,
+\end{equation*}
+since
+\begin{eqnarray*}
+\dfrac{\d^{2}x^{\mu}}{\d t^{2}}
+& \approx &
+	\dfrac{\d^{2}x^{\mu}}{\d\tau^{2}}
+\;\; = \;\;
+	-\,\Gamma^{\mu}_{\alpha\beta}\,\dfrac{\d x^{\alpha}}{\d\tau}\,\dfrac{\d x^{\beta}}{\d\tau}
+\;\; = \;\;
+	-\,\Gamma^{\mu}_{00}\,\dfrac{\d x^{0}}{\d\tau}\,\dfrac{\d x^{0}}{\d\tau}
+	-\,\underset{(\alpha,\beta)\neq(0,0)}{\sum}
+	\Gamma^{\mu}_{\alpha\beta}\,\dfrac{\d x^{\alpha}}{\d\tau}\,\dfrac{\d x^{\beta}}{\d\tau}
+\\
+& \approx &
+	-\,\Gamma^{\mu}_{00}
+\;\; = \;\;
+	\dfrac{1}{2}\,g^{\mu\nu}\left(\;
+		\dfrac{\partial g_{0\gamma}}{\partial x^{0}}
+		\,+\,
+		\dfrac{\partial g_{\gamma0}}{\partial x^{0}}
+		\,-\,
+		\dfrac{\partial g_{00}}{\partial x^{\gamma}}
+		\,\right)
+\end{eqnarray*}
 \begin{equation*}
 \nabla^{2}\!\left(\,\overset{{\color{white}.}}{g^{00}}\,\right) \;\; = \;\; 8 \pi G \, \rho,
 \end{equation*}
