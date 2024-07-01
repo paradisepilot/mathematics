@@ -175,9 +175,9 @@ T^{11}
 \;\; = \;\;
 	\left(\,
 		\begin{array}{c}
-		\textnormal{flux}
+		\textnormal{$x_{1}$-component of}
 		\\
-		\textnormal{of $x_{1}$-component of momentum}
+		\textnormal{flux of momentum}
 		\\
 		\textnormal{across a unit area}
 		\\
@@ -226,9 +226,9 @@ T^{12}
 \;\; = \;\;
 	\left(\!
 		\begin{array}{c}
-		\textnormal{flux}
+		\textnormal{$x_{1}$-component of}
 		\\
-		\textnormal{of $x_{1}$-component of momentum}
+		\textnormal{flux of momentum}
 		\\
 		\textnormal{across a unit area}
 		\\
@@ -293,7 +293,6 @@ T^{01}
 	\underset{*\,\rightarrow\,0}{\lim}\;\;
 	\dfrac{{\color{red}\Delta p^{1}}}{{\color{red}\Delta x^{1}}\cdot\Delta x^{2}\cdot\Delta x^{3}}\,,
 	\quad
-	%\textnormal{since \,$\dfrac{\Delta p^{1}}{\Delta E} \,=\, v^{1} \,=\, \dfrac{\Delta x^{1}}{\Delta t} \,=\, \dfrac{\Delta x^{1}}{\Delta x^{0}}$}
 	\textnormal{since \,$
 		{\color{red}\Delta p^{1}
 		\,=\,
@@ -341,9 +340,123 @@ T^{01}
 		\end{array}
 		\!\right)
 \\
-&=&
+& =: &
 	\overset{{\color{white}\textnormal{\large1}}}{
 		T^{10}
+		}
+\end{eqnarray*}
+
+\vskip 0.3cm
+\noindent
+\textbf{Observation:}\; $T^{12} = T^{21}$
+\begin{eqnarray*}
+T^{12}
+& := &
+	\left(\!
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of energy-momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{orthogonal to \,$\mathbf{e}_{2}$}
+		\end{array}
+		\!\right)
+\;\; = \;\;
+	\left(\!
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{0}$, $\mathbf{e}_{1}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\!\right)
+\\
+& = &
+	\left(\!
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{1}$-component}
+		\\
+		\textnormal{of momentum}
+		\\
+		\textnormal{crossing a unit area spanned by $\mathbf{e}_{1}$ and $\mathbf{e}_{3}$}
+		\\
+		\textnormal{in unit time ($\mathbf{e}_{0}$ direction)}
+		\end{array}
+		\!\right)
+\;\; = \;\;
+	\left(\!
+		\begin{array}{c}
+		\textnormal{$x_{1}$-component of}
+		\\
+		\textnormal{flux of momentum}
+		\\
+		\textnormal{across a unit area}
+		\\
+		\textnormal{spanned by $\mathbf{e}_{1}$ and $\mathbf{e}_{3}$}
+		\end{array}
+		\!\right)
+\\
+& \overset{{\color{white}\textnormal{\Huge1}}}{=} &
+	\underset{*\,\rightarrow\,0}{\lim}\;\;
+	\dfrac{{\color{red}\Delta p^{1}}}{\Delta x^{0}\cdot{\color{red}\Delta x^{1}}\cdot\Delta x^{3}}
+\\
+& \overset{{\color{white}\textnormal{\Huge1}}}{=} &
+	\underset{*\,\rightarrow\,0}{\lim}\;\;
+	\dfrac{{\color{red}\Delta p^{2}}}{\Delta x^{0}\cdot{\color{red}\Delta x^{2}}\cdot\Delta x^{3}}\,,
+	\quad
+	\textnormal{since \,$
+		{\color{red}\Delta p^{k}
+		\,=\,
+			\left(\,\overset{{\color{white}.}}{\Delta E}\,\right) \cdot v^{k}}
+%		\,=\,
+%			\left(\,\overset{{\color{white}.}}{\Delta E}\,\right)\cdot\dfrac{\Delta x^{k}}{\Delta t}
+		\,=\,
+			\left(\,\overset{{\color{white}.}}{\Delta E}\,\right)\cdot\dfrac{\Delta x^{k}}{\Delta x^{0}}
+		\;\; \Longrightarrow \;\;
+		\dfrac{\Delta p^{1}}{\Delta x^{1}}
+		\,=\,
+			\dfrac{\Delta E}{\Delta x^{0}}
+		\,=\,
+			\dfrac{\Delta p^{2}}{\Delta x^{2}}
+		$}
+\\
+&=&
+	\overset{{\color{white}\textnormal{\LARGE1}}}{
+		\left(\!
+			\begin{array}{c}
+			\textnormal{$x_{2}$-component of}
+			\\
+			\textnormal{flux of momentum}
+			\\
+			\textnormal{across a unit area}
+			\\
+			\textnormal{spanned by $\mathbf{e}_{2}$ and $\mathbf{e}_{3}$}
+			\end{array}
+			\!\right)
+		}
+\;\; = \;\;
+	\cdots
+\;\; = \;\;
+	\left(\!
+		\begin{array}{c}
+		\textnormal{``amount'' of the $x_{2}$-component}
+		\\
+		\textnormal{of energy-momentum}
+		\\
+		\textnormal{within a unit hyper-cube}
+		\\
+		\textnormal{orthogonal to \,$\mathbf{e}_{1}$}
+		\end{array}
+		\!\right)
+\\
+& =: &
+	\overset{{\color{white}\textnormal{\large1}}}{
+		T^{21}
 		}
 \end{eqnarray*}
 \qed
