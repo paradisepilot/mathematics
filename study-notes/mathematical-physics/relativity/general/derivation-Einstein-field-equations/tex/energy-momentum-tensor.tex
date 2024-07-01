@@ -463,6 +463,68 @@ T^{12}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{theorem}
+\mbox{}
+\vskip 0.05cm
+\noindent
+The energy-momentum tensor is divergence-free, i.e.,
+\begin{equation*}
+\nabla_{\alpha}\,T^{\alpha\beta} \;\; = \;\; 0\,,
+\quad
+\textnormal{for each \,$\beta = 0,1,2,3$}\,,
+\end{equation*}
+where \,$\nabla_{\alpha}$\, is covariant differentiation.
+\end{theorem}
+\proof
+
+\noindent
+\textbf{Claim 1:}\;\;
+$\partial_{\beta}\,T^{\,\alpha\beta} \,=\, T^{\,\alpha\beta}_{\;{\color{white}\alpha\beta},\,\beta} \,=\, 0$\,
+holds for each freely falling observer.
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:
+\vskip 0.1cm
+\noindent
+By the {\color{red}principle of equivalence}, all gravitational effects are locally (observationally) eliminated
+for freely falling observers.
+Hence, we need establish Claim 1 only in the framework of special relativity.
+Now, the {\color{red}conservation of energy-momentum} states that there are no sources nor sinks
+of energy-momentum.
+Hence, the total flux of energy-momentum out of the (assumed smooth) three-dimensional boundary
+\,$\partial\,\Omega$\, of an arbitrary finite region \,$\Omega \subset \Re^{1,3}$\, in Minkowski spacetime is zero. 
+\begin{equation*}
+0
+\;\; = \;\;
+	\left(\begin{array}{c}
+		\textnormal{$\alpha$-component}
+		\\
+		\textnormal{of total momentum flux}
+		\\
+		\textnormal{out of $\Omega$}
+		\end{array}\right)
+\;\; = \;\;
+	\int_{\,\partial\,\Omega}\;T^{\,\alpha\beta}\,n_{\beta}\;\d^{3}S
+\;\; = \;\;
+	\int_{\,\Omega}\;T^{\,\alpha\beta}_{\;{\color{white}\alpha\beta},\,\beta}\;\d^{4}V\,,
+\end{equation*}
+where \,$n_{\beta}$\, is the outward-pointing normal unit (relative to the Euclidean inner product on $\Re^{4}$)
+vector field on \,$\partial\,\Omega$,\,
+and the last equality follows from {\color{red}Gauss' Divergence Theorem} (applied in a four-dimensional setting).
+Since \,$\Omega$\, is arbitrary, we may conclude that
+\,$T^{\,\alpha\beta}_{\;{\color{white}\alpha\beta},\,\beta} \,=\, 0$.\,
+This completes the proof of Claim 1.
+
+\vskip 0.3cm
+\noindent
+The Theorem now follows from Claim 1,
+the {\color{red}principle of general covariance} (see \S9.5, p.165, \cite{dInverno2021}),
+and the {\color{red}principle of minimal gravitational coupling} (see \S9.6, p.165, \cite{dInverno2021}),
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
