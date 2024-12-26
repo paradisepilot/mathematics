@@ -24,14 +24,15 @@
 
 \usepackage{color}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{verbatim}
 %\usepackage{doublespace}
 \usepackage{colortbl}
 \usepackage{tcolorbox}
+\usepackage[shortlabels]{enumitem}
 
+\usepackage{epsfig}
 \usepackage{tikz-cd}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,7 +41,9 @@
 \renewcommand{\labelenumi}{\mbox{}\;\theenumi.$\;$}
 
 \renewcommand{\theenumii}{\alph{enumii}}
-\renewcommand{\labelenumii}{\mbox{}\;\;\,\theenumii)$\quad$}
+%\renewcommand{\labelenumii}{\mbox{}{\color{white}.}\;\;\;\;{\color{white}.}(\theenumii)$\quad$}
+\renewcommand{\labelenumii}{\textnormal{(\theenumii)$\quad\;\;$}}
+\setlist[enumerate,2]{leftmargin=1.25cm}
 
 \renewcommand{\theenumiii}{\roman{enumiii}}
 \renewcommand{\labelenumiii}{\mbox{}\;\;\,\theenumiii)$\quad$}
