@@ -50,9 +50,33 @@ The \textbf{special orthogonal group} is defined as follows:
 \end{equation*}
 \end{definition}
 
+\begin{proposition}[Lie algebras of $\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
+\begin{eqnarray*}
+\mathfrak{o}(n)
+& = &
+	\left\{\;\,
+		X \overset{{\color{white}.}}{\in} \mathfrak{gl}(n,\Re)
+		\;\left\vert\;\,
+			X^{T} = -X
+			\right.
+		\;\right\}
+\\
+\mathfrak{so}(n)
+& = &
+	\left\{\;\,
+		X \overset{{\color{white}.}}{\in} \mathfrak{gl}(n,\Re)
+		\;\left\vert\;\,
+			X^{T} = -X\,,
+			\;
+			\textnormal{trace}(X) = 0
+			\right.
+		\;\right\}
+\end{eqnarray*}
+\end{proposition}
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Generators of \,$\textnormal{SO}(3)$\, and \,$\mathfrak{so}(3)$}
+\section{Generators of \;$\textnormal{SO}(3)$\, and \,$\mathfrak{so}(3)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -210,16 +234,79 @@ J_{3}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Commutators in \,$\mathfrak{so}(3)$}
+\section{Properties of the generators \,$J_{1}, J_{2}, J_{3} \,\in\, \mathfrak{so}(3)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\begin{theorem}[Commutation relations in $J_{1}$, $J_{2}$ and $J_{3}$]
-\begin{equation*}
-\left[\,J_{k}\,\overset{{\color{white}1}}{,}\,J_{l}\,\right]
-\;\; = \;\;
-	\sqrt{-1}\;\overset{3}{\underset{m=1}{\sum}}\,\varepsilon_{klm}\cdot J_{m}
-\end{equation*}
+\begin{theorem}
+{\color{white}.}\vskip -0.5cm{\color{white}.}
+\begin{enumerate}
+\item
+	\textbf{Commutation relations:}\;\;
+	\begin{equation*}
+	\left[\,J_{k}\,\overset{{\color{white}1}}{,}\,J_{l}\,\right]
+	\;\; = \;\;
+		\sqrt{-1}\;\overset{3}{\underset{m=1}{\sum}}\,\varepsilon_{klm}\cdot J_{m}\,,
+	\quad
+	\textnormal{for each \,$k, l \in \{\,1,2,3\,\}$}\,,
+	\end{equation*}
+	where \,$\varepsilon_{klm}$\, is the fully anti-symmetric tensor.
+\item
+	\textbf{Casimir operator:}\;\;
+	Define \,$J^{2} \, := \, (J_{1})^{2} + (J_{2})^{2} + (J_{3})^{2} \,\in\, \mathfrak{so}(3) \,\subset\, \mathfrak{so}(3) \otimes \C$.
+	Then,
+	\begin{equation*}
+	\left[\,J^{2}\,\overset{{\color{white}1}}{,}\,J_{k}\,\right]
+	\;\; = \;\;
+		0\,,
+	\quad
+	\textnormal{for each \,$k \in \{\,1,2,3\,\}$}\,.
+	\end{equation*}
+	Consequently (by Schur's Lemma, Corollary 4.30, \cite{Hall2015}), 
+	\,$J^{2} \in \mathfrak{so}(3) \otimes \C$\, acts as a scalar multiple of the identity in every irreducible
+	representation\footnote{Furthermore, this scalar $\lambda \in \C$ uniquely determines
+	the irreducible representation.
+	Look up the classification theory of irreducible finite-dimensional complex representations
+	of complex semisimple Lie algebras.
+	Key words: Casimir operator, universal enveloping algebra. See Chapters 9 and 10, \cite{Hall2015}.}
+	of \,$\mathfrak{so}(3) \otimes \C$;\, more precisely, for each irreducible finite-dimensional
+	complex representation
+	\,$\rho : \mathfrak{so}(3) \otimes \C \longrightarrow \mathfrak{gl}(V)$,\,
+	we have \,$\rho(J^{2}) = \lambda \cdot \textnormal{\textbf{1}}_{V}$,\,
+	for some \,$\lambda \in \C$.
+\item
+	\textbf{Raising and lowering operators:}\;\; Define \,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3)\otimes\C$\, as follows:
+	\begin{equation*}
+	J_{\pm} \;\; := \;\; J_{1} \, \pm \sqrt{-1}\,J_{2}.
+	\end{equation*}
+	Then, the following equalities hold:
+	\begin{enumerate}
+	\item
+		$\left[\,J_{3}\,,\,J_{+}\,\right] \;=\; J_{+}$\,,
+		\quad
+		$\left[\,J_{3}\,,\,J_{-}\,\right] \;=\; -\,J_{-}$\,,
+		\quad
+		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
+	\item
+		$J^{2}$
+		\; $=$ \; $(J_{3})^{2} \,-\, J_{3} \,+\, J_{+}J_{-}$
+		\; $=$ \; $(J_{3})^{2} \,+\, J_{3} \,+\, J_{-}J_{+}$
+	\item
+		$(J_{\pm})^{\dagger} \; = \; J_{\mp}$
+	\end{enumerate}
+\item
+	Suppose
+	\,$\rho : \mathfrak{so}(3) \otimes \C \longrightarrow \mathfrak{gl}(V)$\,
+	is an irreducible finite-dimensional complex representation, and
+	\,$v \in V \backslash\{0\}$\, is an eigenvector of \,$\rho(J_{3})$\,
+	corresponding to the eigenvalue \,$\lambda \in \Re$;\, thus, \,$\rho(J_{3})(v) \,=\, \lambda\,v$.
+	Then, we have:
+	\begin{equation*}
+	\rho(J_{3})\!\left(\,\rho(J_{+})(\overset{{\color{white}-}}{v})\,\right) \, = \; (\lambda+1)\cdot\rho(J_{+})(v)\,
+	\quad\textnormal{and}\quad\;
+	\rho(J_{3})\!\left(\,\rho(J_{-})(\overset{{\color{white}-}}{v})\,\right) \, = \; (\lambda-1)\cdot\rho(J_{-})(v)
+	\end{equation*}
+\end{enumerate}
 \end{theorem}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
