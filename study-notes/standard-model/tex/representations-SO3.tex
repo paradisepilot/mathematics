@@ -314,3 +314,77 @@ J_{3}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{theorem}
+{\color{white}.}\vskip -0.1cm
+\noindent
+\begin{enumerate}
+\item
+	The finite-dimensional irreducible representations of $\mathfrak{so}(3) \otimes_{\Re} \C$ is parametrized by the set
+	\begin{equation*}
+	\dfrac{1}{2} \cdot \Z
+	\;\; := \;\;
+		\left\{\;0 \,,\, \dfrac{1}{2} \,,\, 1 \,,\, \frac{3}{2} \,,\, 2 \,,\, \frac{5}{2} \,,\, \ldots \;\right\},
+	\end{equation*}
+	of non-negative integer multiples of \,$\dfrac{1}{2}$, in that, for each
+	$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$,
+	there exists a unique (up to equivalence) complex representation
+	$\rho_{s} : \mathcal{U}(\mathfrak{so}(3)\otimes_{\Re}\C) \longrightarrow \textnormal{End}(V_{s})$
+	such that
+	\begin{equation*}
+	\rho_{s}(J^{2}) \; = \; s(s+1)\cdot\textnormal{\textbf{1}}_{V_{s}}.
+	\end{equation*}
+\item
+	$\dim_{\C}(V_{s}) \, = \, 2s + 1$,\, for each
+	\,$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$.
+\item
+	For each
+	\,$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$,\,
+	the spectrum
+	$\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+	of the operator $\rho_{s}(J_{3}) \in \textnormal{End}(V_{s})$
+	consists of only eigenvalues and is given by:
+	\begin{equation*}
+	\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)
+	\;\; = \;\;
+		\left\{\;
+			-\overset{{\color{white}-}}{s} \,,\, -(s-1), -(s-2)
+			\,,\;\, \ldots \,\;,\,
+			(s-2) \,,\, (s-1) \,,\, s
+			\;\right\},
+	\end{equation*}
+	and each eigenvalue in 
+	$\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+	has multiplicity one.
+\item
+	For each
+	\,$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$,\,
+	let \,$v^{(s)}_{k} \in V_{s}\backslash\{0\}$\, be any normalized eigenvector
+	of $\rho_{s}(J_{3})$ corresponding to the eigenvalue
+	\,$k$ $\in$ $\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+	$=$ $\left\{\;-\overset{{\color{white}-}}{s} \,,\, -(s-1) \,,\, \;\ldots\;,\, (s-1) \,,\, s\;\right\}$.\,
+	Then, 
+	\begin{enumerate}
+	\item
+		the eigenvectors
+		\,$v^{(s)}_{-s} \,,\, v^{(s)}_{-(s-1)} \,,\; \ldots \;,\, v^{(s)}_{s-1} \,,\, v^{(s)}_{s}$\,
+		form an orthonormal basis for $V_{s}$, and
+	\item
+		for each \,$k$ $\in$ $\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+		$=$ $\left\{\;-\overset{{\color{white}-}}{s} \,,\, -(s-1) \,,\, \;\ldots\;,\, (s-1) \,,\, s\;\right\}$,\,
+		we have:
+		\begin{equation*}
+		J_{\pm}\!\left(\,v^{(s)}_{k}\,\right)
+		\; = \;
+			\sqrt{{\color{white}.}
+			s(s+1) - k(k \pm 1)
+			{\color{white}.}}
+			\,\cdot\,
+			v^{(s)}_{k \pm 1}
+		\end{equation*}
+		In particular, \,$J_{\pm}\!\left(\,v^{(s)}_{\pm s}\,\right) \; = \; 0$.
+	\end{enumerate}
+\end{enumerate}
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
