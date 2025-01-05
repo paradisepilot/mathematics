@@ -85,6 +85,12 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareFontFamily{U}{mathx}{}
+\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+%\DeclareMathAccent{\widehat}{0}{mathx}{"70}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+
 \newcommand*{\proof}{\noindent {\small P{\scriptsize ROOF}} \quad}
 \newcommand*{\proofof}{\noindent {\small P{\scriptsize ROOF OF }}}
 \newcommand*{\proofoutline}{\noindent {\small O{\scriptsize UTLINE OF PROOF}} \quad}
@@ -181,6 +187,7 @@
 \input{tex/irreducible-representations-Casimir-operators}
 \input{tex/representations-SO3}
 \input{tex/representations-Poincare-group}
+\input{tex/solution-of-Klein-Gordon-equation-via-Fourier-Transform}
 %\input{tex/z-exercises}
 %\input{tex/z-technicalLemmas}
 
