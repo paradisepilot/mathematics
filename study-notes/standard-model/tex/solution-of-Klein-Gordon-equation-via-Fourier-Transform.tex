@@ -159,6 +159,158 @@ Then, the following statements are true:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 1.0cm
+\section{Lorentz-invariant measure on the positive-energy mass shell}
+
+In the section, we follow Section 4.4, p.111--115, \cite{Talagrand2022}.
+For $m \geq 0$, the positive-energy mass shell $X_{m}$ is the subset
+of the energy-momentum Minkowski space defined as follows:
+\begin{equation*}
+X_{m}
+\;\; := \;\;
+	\left\{\;\,
+		\overset{{\color{white}-}}{p} = (p_{0},p_{1},p_{2},p_{3}) \in \Re^{1,3}
+		\,\;\left\vert\;
+		\begin{array}{c}
+			{\color{red}p_{0} \,\geq\, 0}
+			\\
+			\overset{{\color{white}-}}{p_{0}} \,=\, p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + m^{2}
+			\end{array}
+		\right.
+		\right\}
+\end{equation*}
+First, we make a few remarks:
+\begin{itemize}
+\item
+	For $m > 0$, $X_{m}$ is the $\textnormal{SO}^{\uparrow}(1,3)$ orbit of $(m,0,0,0)$.
+\item
+	For $m = 0$, $X_{0} \backslash \{\,0\,\}$ is the $\textnormal{SO}^{\uparrow}(1,3)$ orbit of $(1,0,0,1)$.
+\end{itemize}
+We will show that the following is a Lorentz-invariant measure on $X_{m}$:
+\begin{equation*}
+\int_{X_{m}}\; f(E_{m,\mathbf{p}},\mathbf{p})\;\d\lambda_{m}
+\;\; := \;\;
+	\dfrac{1}{(2\pi)^{3}}\,\int f(E_{m,\mathbf{p}},\mathbf{p}) \; \dfrac{\d^{3}\mathbf{p}}{2\,\omega_{p}}\,,
+\end{equation*}
+where \,$E_{m,\mathbf{p}} \,:=\, +\,\sqrt{m^{2}+\mathbf{p}^{2}}$.
+
+\begin{lemma}
+\mbox{}
+\vskip 0.1cm
+\noindent
+For $m \geq 0$ and $\varepsilon > 0$, we define:
+\begin{equation*}
+X_{m,\varepsilon}
+\;\; := \;\;
+	\left\{\;\,
+		\overset{{\color{white}-}}{p} = (p_{0},p_{1},p_{2},p_{3}) \in \Re^{1,3}
+		\,\;\left\vert\;
+		\begin{array}{c}
+			{\color{red}p_{0} \,\geq\, 0}
+			\\
+			\overset{{\color{white}-}}{m^{2}} \,<\, p_{0}^{2} - p_{1}^{2} - p_{2}^{2} - p_{3}^{2} \,<\, m^{2} + \varepsilon
+			\end{array}
+		\right.
+		\right\}
+\end{equation*}
+Then, for continuous $f : \Re^{1,3} \longrightarrow \C$, the following limit:
+\begin{equation*}
+\underset{{\color{white}..}\varepsilon\rightarrow 0^{+}}{\lim}\;
+\dfrac{1}{\varepsilon}
+\cdot
+\int_{X_{m,\varepsilon}} f(p_{0},p_{1},p_{2},p_{3}) \;\d p_{0}\,\d p_{1}\,\d p_{2}\,\d p_{3} 
+\end{equation*}
+exists and equals
+\begin{equation*}
+\underset{{\color{white}..}\varepsilon\rightarrow 0^{+}}{\lim}\,
+\dfrac{1}{\varepsilon}
+\cdot
+\int_{X_{m,\varepsilon}} f(p_{0},p_{1},p_{2},p_{3}) \;\d p_{0}\,\d p_{1}\,\d p_{2}\,\d p_{3}
+\;\; = \;\;
+	\int_{\Re^{3}}\;
+		f(E_{m,\mathbf{p}},p_{1},p_{2},p_{3})
+	\;\dfrac{
+		\d p_{1}\,\d p_{2}\,\d p_{3} 
+		}{
+		2 E_{m,\mathbf{p}}
+		}
+\end{equation*}
+\end{lemma}
+\proof
+Let $h_{\mathbf{p}}(x) := \sqrt{x + \mathbf{p}^{2}}$.
+Then, $h^{\prime}_{\mathbf{p}}(x) = \dfrac{1}{2}\left(x + \mathbf{p}^{2}\right)^{-1/2}$.
+So, $h^{\prime}_{\mathbf{p}}(m^{2})$ $=$ $\dfrac{1}{2\sqrt{m^{2}+\mathbf{p}^{2}}}$
+$=$ $\dfrac{1}{2 E_{m,\mathbf{p}}}$.
+Hence,
+\begin{equation*}
+\sqrt{m^{2}+\mathbf{p}^{2}+\varepsilon}
+\;\; = \;\;
+	h_{\mathbf{p}}(m^{2}+\varepsilon)
+\;\; \approx \;\;
+	h_{\mathbf{p}}(m^{2})
+	\;+\;
+	\varepsilon\,h^{\prime}_{\mathbf{p}}(m^{2})
+\;\; \approx \;\;
+	E_{m,\mathbf{p}}
+	\;+\;
+	\dfrac{\varepsilon}{2 E_{m,\mathbf{p}}}
+\end{equation*}
+Thus, to first order in $\varepsilon$, we have the following approximation:
+\begin{eqnarray*}
+\int_{X_{m,\varepsilon}} f(p_{0},p_{1},p_{2},p_{3}) \;\d p_{0}\,\d p_{1}\,\d p_{2}\,\d p_{3} 
+& = &
+	\int_{\Re^{3}}
+	\left(\,
+		\int_{\sqrt{m^{2}+\mathbf{p}^{2}}}^{\sqrt{m^{2}+\mathbf{p}^{2}+\varepsilon}}
+		f(p_{0},p_{1},p_{2},p_{3})
+		\;\d p_{0}
+		\right)
+	\d p_{1}\,\d p_{2}\,\d p_{3} 
+\\
+& \approx &
+	\int_{\Re^{3}}
+	\left(\,
+		\int_{E_{m,\mathbf{p}}}^{\,E_{m,\mathbf{p}}+\varepsilon/2E_{m,\mathbf{p}}}
+		f({\color{red}E_{m,\mathbf{p}}},p_{1},p_{2},p_{3})
+		\;\d p_{0}
+		\right)
+	\d p_{1}\,\d p_{2}\,\d p_{3} 
+\\
+& = &
+	\int_{\Re^{3}}
+	\left(\,
+		\dfrac{\varepsilon}{2 E_{m,\mathbf{p}}}
+		\cdot
+		f(E_{m,\mathbf{p}},p_{1},p_{2},p_{3})
+		\right)
+	\d p_{1}\,\d p_{2}\,\d p_{3} 
+\end{eqnarray*}
+The above arguments show that the following limit:
+\begin{equation*}
+\underset{{\color{white}..}\varepsilon\rightarrow 0^{+}}{\lim}\;
+\dfrac{1}{\varepsilon}
+\cdot
+\int_{X_{m,\varepsilon}} f(p_{0},p_{1},p_{2},p_{3}) \;\d p_{0}\,\d p_{1}\,\d p_{2}\,\d p_{3} 
+\end{equation*}
+exists and equals
+\begin{equation*}
+\underset{{\color{white}..}\varepsilon\rightarrow 0^{+}}{\lim}\;
+\dfrac{1}{\varepsilon}
+\cdot
+\int_{X_{m,\varepsilon}} f(p_{0},p_{1},p_{2},p_{3}) \;\d p_{0}\,\d p_{1}\,\d p_{2}\,\d p_{3}
+\;\; = \;\;
+	\int_{\Re^{3}}\;
+		f(E_{m,\mathbf{p}},p_{1},p_{2},p_{3})
+	\;\dfrac{
+		\d p_{1}\,\d p_{2}\,\d p_{3} 
+		}{
+		2 E_{m,\mathbf{p}}
+		}
+\end{equation*}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
 \section{The Klein-Gordon equation}
 
 \noindent
@@ -234,6 +386,35 @@ Thus, the most general form of the solution to the Klein-Gordon can be given as 
 \end{equation*}
 where
 \,$\delta(\,\cdot\,)$\, is the Dirac delta functional on \,$\Re^{1,3}$,\, and
-\,$a(p) = a(p_{0},p_{1},p_{2},p_{3})$\, is an arbitrary $\C$-valued function.
+\,$a(p) = a(p_{0},p_{1},p_{2},p_{3})$\, is an arbitrary measurable $\C$-valued function.
+We note that the above solution has support on both the positive-energy and negative energy mass shells.
+Using the Lorentz-invariance measure on the positive-energy mass shell $X_{m}$ described in the preceding section,
+we can express the general solution of the Klein-Gordon equation as follows:
+\begin{equation*}
+\phi(x)
+\; = \;
+	\dfrac{1}{(2\pi)^{3}}\,
+	\int_{\Re^{3}} \left(
+		e^{-\,\overset{{\color{white}.}}{\sqrt{-1}}\,
+			(x_{0} \cdot E_{m,\mathbf{p}} - \mathbf{x} \bullet \mathbf{p})
+			}
+		\cdot
+		a(\mathbf{p})
+		\; + \;
+		e^{+\,\overset{{\color{white}.}}{\sqrt{-1}}\,
+			(x_{0} \cdot E_{m,\mathbf{p}} - \mathbf{x} \bullet \mathbf{p})
+			}
+		\cdot
+		b^{*}(\mathbf{p})
+		\right)
+		\dfrac{\d^{3}\mathbf{p}}{2 E_{m,\mathbf{p}}}\,,
+\quad
+\end{equation*}
+for each \,$x \in \Re^{1,3}$,
+where
+\,$a(\mathbf{p}) = a(p_{1},p_{2},p_{3})$\,
+and
+\,$b(\mathbf{p}) = b(p_{1},p_{2},p_{3})$\,
+are arbitrary measurable $\C$-valued functions.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
