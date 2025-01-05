@@ -1,0 +1,222 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{General solution of the Klein-Gordon equation via the Fourier Transform}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Solving linear PDE with constant coefficients via the Fourier transform}
+
+We follow Section 4.3.1, p.177--186, \cite{Evans2010}.
+
+\begin{definition}[Fourier and inverse Fourier transforms of $u \in L^{{\color{red}1}}(\Re^{n},\C)$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{Fourier transform} $\widehat{u}$ of $u \in L^{1}(\Re^{n},\C)$ is, by definition,
+\begin{equation*}
+\widehat{u}(y)
+\;\; := \;\;
+	\dfrac{1}{(2\pi)^{n/2}}\,
+	\int_{\Re^{n}}
+		\exp\!\left({\color{red}-}\,\sqrt{-1}\, y \overset{{\color{white}.}}{\bullet} x\right) \cdot u(x)
+		\;\d x\,,
+\quad
+\textnormal{for each \,$y \in \Re^{n}$}
+\end{equation*}
+Similarly, the \textbf{inverse Fourier transform} $\widecheck{u}$ of $u$ is, by definition,
+\begin{equation*}
+\widecheck{u}(x)
+\;\; := \;\;
+	\dfrac{1}{(2\pi)^{n/2}}\,
+	\int_{\Re^{n}}
+		\exp\!\left({\color{red}+}\,\sqrt{-1}\, x \overset{{\color{white}.}}{\bullet} y\right) \cdot u(y)
+		\;\d y\,,
+\quad
+\textnormal{for each \,$x \in \Re^{n}$}
+\end{equation*}
+\end{definition}
+Note that $u \in L^{1}(\Re^{n},\C)$ \,$\Longrightarrow$\, $\widehat{u}$, $\widecheck{u}$ $\in$ $L^{1}(\Re^{n},\C)$,
+since $\vert\,\exp(\pm\sqrt{-1})\,x \bullet y\,\vert \equiv 1$.
+
+\vskip 0.5cm
+\begin{theorem}[Plancherel's Theorem]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$u \,\in\, L^{1}(\Re^{n},\C) \,\bigcap\, L^{2}(\Re^{2},\C)$.\,
+Then,
+\begin{enumerate}
+\item
+	$\widehat{u}$, $\widecheck{u}$ $\in$ $L^{2}(\Re^{n}),\C$, and
+\item
+	\begin{equation*}
+	\left\Vert\;\overset{{\color{white}-}}{u}\;\right\Vert_{L^{2}}
+	\;\; = \;\;
+		\left\Vert\;\overset{{\color{white}.}}{\widehat{u}}\;\right\Vert_{L^{2}}
+	\;\; = \;\;
+		\left\Vert\;\overset{{\color{white}.}}{\widecheck{u}}\;\right\Vert_{L^{2}}
+	\end{equation*}
+\end{enumerate}
+\end{theorem}
+
+\vskip 0.5cm
+\begin{definition}[Fourier and inverse Fourier transforms of $u \in L^{{\color{red}2}}(\Re^{n},\C)$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{Fourier transform} $\widehat{u} \in L^{2}(\Re^{n},\C)$ of $u \in L^{2}(\Re^{n},\C)$ is, by definition,
+the unique element $\widehat{u} \in L^{2}(\Re^{n},\C)$ such that
+\begin{equation*}
+\underset{k \rightarrow\infty}{\lim} \left\Vert\; \widehat{u} \,-\, \widehat{u}_{k} \;\right\Vert_{L^{2}}  \;\; := \;\;0\,,
+\end{equation*}
+where $\{\,u_{k}\,\}_{k=1}^{\infty} \subset L^{1}(\Re^{n},\C) \,\bigcap\, L^{2}(\Re^{n},\C)$
+is an arbitrary sequence such that
+\begin{equation*}
+\underset{k \rightarrow\infty}{\lim} \left\Vert\; u \,-\, u_{k} \;\right\Vert_{L^{2}}  \;\; := \;\;0\,,
+\end{equation*}
+The \textbf{inverse Fourier transform} $\widecheck{u} \in L^{2}(\Re^{n},\C)$ of $u \in L^{2}(\Re^{n},\C)$ can be defined analogously.
+\end{definition}
+
+\vskip 0.5cm
+\begin{theorem}[Properties of the Fourier transform]
+\label{ThmPropertiesFourierTransform}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$u \,\in\, L^{2}(\Re^{2},\C)$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	The Fourier transform preserves the $L^{2}$ inner product, i.e.,
+	\begin{equation*}
+	\int_{\Re}\, u(x) \cdot \overline{v(x)} \;\d x
+	\;\; = \;\;
+		\int_{\Re}\, \widehat{u}(y) \cdot \overline{\widehat{v}(x)} \;\d y
+	\end{equation*}
+\item
+	For each multiindex $\alpha$ such that $D^{\alpha}u \in L^{2}(\Re^{n},\C)$, we have
+	\begin{equation*}
+	\left(\,D^{\alpha}u\,\right)^{\wedge}
+	\;\; = \;\;
+		\left(\,\sqrt{-1}\,y\,\right)^{\alpha}\cdot \widehat{u}
+	\end{equation*}
+\item
+	For $u$, $v$ $\in$ $L^{1}(\Re^{n},\C) \bigcap L^{2}(\Re^{n},\C)$, we have
+	\begin{equation*}
+	\left(\,u * v\,\right)^{\wedge}
+	\;\; = \;\;
+		(2\pi)^{n/2} \cdot \widehat{u} \cdot \widehat{v}
+	\end{equation*}
+\item
+	The Fourier transform and inverse Fourier transform are inverses of each other, i.e.,
+	\begin{equation*}
+	u \;\; = \;\; \left(\;\overset{{\color{white}.}}{\widehat{u}}\;\right)^{\vee}
+	\end{equation*}
+	More explicitly,
+	\begin{equation*}
+	u(x)
+	\;\; = \;\;
+		(\widehat{u})^{\vee}(x)
+	\;\; = \;\;
+		\dfrac{1}{(2\pi)^{n/2}}\,
+		\int_{\Re^{n}}
+			\exp\!\left({\color{red}+}\,\sqrt{-1}\, x \overset{{\color{white}.}}{\bullet} y\right) \cdot \widehat{u}(y)
+			\;\d y\,,
+	\quad
+	\textnormal{for each \,$x \in \Re^{n}$}
+	\end{equation*}
+\end{enumerate}
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip0.5cm
+\noindent
+\textbf{Implications of Theorem \ref{ThmPropertiesFourierTransform} for solving linear constant-coefficient PDEs via the Fourier transform:}
+\begin{itemize}
+\item
+	By Theorem \ref{ThmPropertiesFourierTransform}(ii), applying the Fourier transform
+	to both sides of a linear constant-coefficient PDE yields an algebraic equation
+	involving the Fourier transform $\widehat{\phi}$ of the unknown function $\phi$
+	(desired solution to the given PDE).
+\item
+	If this resulting algebraic equation can be solved for $\widehat{\phi}$,
+	then solving the original PDF for $\phi$ is reduced to computing
+	inverse Fourier transform of $\widehat{\phi}$.
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\section{The Klein-Gordon equation}
+
+\noindent
+The Klein-Gordon equation is the following equation
+for \,$\phi : \Re^{(+,-,-,-)} \longrightarrow \C$:
+\begin{equation*}
+\dfrac{\partial^{2}\phi}{\partial x_{0}^{2}}
+\,-\,
+\dfrac{\partial^{2}\phi}{\partial x_{1}^{2}}
+\,-\,
+\dfrac{\partial^{2}\phi}{\partial x_{2}^{2}}
+\,-\,
+\dfrac{\partial^{2}\phi}{\partial x_{3}^{2}}
+\,+\,
+m^{2}\phi
+\; = \;
+0
+\end{equation*}
+We write the Fourier transform \,$\widehat{\phi}$\, of \,$\phi$\, as follows:
+\begin{equation*}
+\widehat{\phi}(p)
+\;\; := \;\;
+	\dfrac{1}{(2\pi)^{n/2}}\,
+	\int_{\Re^{n}}
+		\exp\!\left({\color{red}-}\,\sqrt{-1}\, p \overset{{\color{white}.}}{\bullet} x\right) \cdot \phi(x)
+		\;\d x\,,
+\quad
+\textnormal{for each \,$p = (p_{0},p_{1},p_{2},p_{3}) \in \Re^{n}$}
+\end{equation*}
+Applying the Fourier transform to the Klein-Gordon equation yields
+the following algebraic equation for $\widehat{\phi}$:
+\begin{equation*}
+\left(\;
+	-\,
+	p_{0}^{2}
+	\,+\,
+	p_{1}^{2}
+	\,+\,
+	p_{2}^{2}
+	\,+\,
+	p_{3}^{2}
+	\,+\,
+	m^{2}
+	\;\right)
+	\cdot\,\widehat{\phi}
+\; = \;
+	0\,,
+\end{equation*}
+which immediately implies that \,$\widehat{\phi} \in L^{2}(\Re^{n},\C)$\, is given by:
+\begin{equation*}
+\widehat{\phi}(p_{0},p_{1},p_{2},p_{3})
+\;\; = \;\;
+	\left\{\begin{array}{cl}
+		0, & \textnormal{for \,$p_{0}^{2} \,\neq\, p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + m^{2}$}\,,
+		\\
+		\overset{{\color{white}1}}{\textnormal{arbitrary value}}, & \textnormal{otherwise (i.e., $p_{0}^{2} \,=\, p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + m^{2}$)}
+		\end{array}\right.
+\end{equation*}
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
