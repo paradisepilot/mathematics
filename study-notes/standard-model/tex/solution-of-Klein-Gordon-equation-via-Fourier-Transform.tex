@@ -377,7 +377,7 @@ Thus, the most general form of the solution to the Klein-Gordon can be given as 
 	\int_{\Re^{1,3}}
 		\exp\!\left({\color{red}+}\,\sqrt{-1}\, x \overset{{\color{white}.}}{\bullet} p\right)
 		\cdot
-		a(p)
+		f(p)
 		\cdot
 		\delta(-p_{0}^{2} + p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + m^{2})
 		\;\d p\,,
@@ -386,16 +386,33 @@ Thus, the most general form of the solution to the Klein-Gordon can be given as 
 \end{equation*}
 where
 \,$\delta(\,\cdot\,)$\, is the Dirac delta functional on \,$\Re^{1,3}$,\, and
-\,$a(p) = a(p_{0},p_{1},p_{2},p_{3})$\, is an arbitrary measurable $\C$-valued function.
-We note that the above solution has support on both the positive-energy and negative energy mass shells.
+\,$f(p) = f(p_{0},p_{1},p_{2},p_{3})$\, is an arbitrary measurable $\C$-valued function.
+We note that the above solution has support on {\color{red}both} the positive-energy and negative energy mass shells.
 Using the Lorentz-invariance measure on the positive-energy mass shell $X_{m}$ described in the preceding section,
 we can express the general solution of the Klein-Gordon equation as follows:
-\begin{equation*}
+\begin{eqnarray*}
 \phi(x)
-\; = \;
+& = &
 	\dfrac{1}{(2\pi)^{3}}\,
 	\int_{\Re^{3}} \left(
-		e^{-\,\overset{{\color{white}.}}{\sqrt{-1}}\,
+		e^{+\,\overset{{\color{white}.}}{\sqrt{-1}}\,
+			({\color{red}-}\,x_{0} \cdot E_{m,\mathbf{p}} - \mathbf{x} \bullet \mathbf{p})
+			}
+		\cdot
+		(-a(-\mathbf{p}))
+		\; + \;
+		e^{+\,\overset{{\color{white}.}}{\sqrt{-1}}\,
+			(x_{0} \cdot E_{m,\mathbf{p}} - \mathbf{x} \bullet \mathbf{p})
+			}
+		\cdot
+		b^{*}(\mathbf{p})
+		\right)
+		\dfrac{\d^{3}\mathbf{p}}{2 E_{m,\mathbf{p}}}\,,
+\\
+& = &
+	\dfrac{1}{(2\pi)^{3}}\,
+	\int_{\Re^{3}} \left(
+		e^{{\color{red}-}\,\overset{{\color{white}.}}{\sqrt{-1}}\,
 			(x_{0} \cdot E_{m,\mathbf{p}} - \mathbf{x} \bullet \mathbf{p})
 			}
 		\cdot
@@ -408,8 +425,7 @@ we can express the general solution of the Klein-Gordon equation as follows:
 		b^{*}(\mathbf{p})
 		\right)
 		\dfrac{\d^{3}\mathbf{p}}{2 E_{m,\mathbf{p}}}\,,
-\quad
-\end{equation*}
+\end{eqnarray*}
 for each \,$x \in \Re^{1,3}$,
 where
 \,$a(\mathbf{p}) = a(p_{1},p_{2},p_{3})$\,
