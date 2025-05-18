@@ -1,0 +1,197 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Time-dependent perturbation theory and the interaction picture}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+We want to determine the time-evolution of a system under the time-varying Hamiltonian
+\begin{equation*}
+H(t) \;\; = \;\; H_{0} \,+\, H_{1}(t)
+\end{equation*}
+
+\vskip 0.5cm
+\noindent
+\textbf{Comments}
+\begin{itemize}
+\item
+	We seek solution in the form of a one-parameter family of unitary operators
+	\,$U(t)$\, which satisfies
+	\begin{equation*}
+	\dfrac{\d}{\d t}\,U(t) \;\; = \;\; -\,\i\,H(t)\,U(t)\,,
+	\quad
+	\textnormal{where \,$\i \,:=\, \sqrt{-1}$}
+	\end{equation*}
+\item
+	We assume we know that the time-evolution of a system under the constant (with respect to time)
+	Hamiltonian $H_{0}$ is given by
+	\begin{equation*}
+	U_{0}(t) \;\; = \;\; \exp\left(\,-\,\i\,t\,H_{0}\,\right),
+	\end{equation*}
+	which is determined as the solution of:
+	\begin{equation*}
+	\left\{\;\;
+		\begin{array}{ccc}
+		\dfrac{\d}{\d t}\,U_{0}(t) & = & -\,\i\,H_{0}\,U_{0}(t)
+		\\
+		\overset{{\color{white}1}}{U_{0}(0)} & = & \textnormal{identity operator}
+		\end{array}
+		\right.
+	\end{equation*}
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{The interaction picture}
+
+The situation where we time-evolve the operator \,$A$\, according to
+\begin{equation*}
+A(t) \;\; = \;\; U_{0}(-t) \cdot A \cdot U_{0}(t)
+\end{equation*}
+and the state \,$x(t)$\, according to
+\begin{equation*}
+x(t) \;\; = \;\; U_{0}(-t) \cdot U(t) \cdot x
+\end{equation*}
+is called the \textbf{interaction picture}.
+Note that the interaction picture is consistent with both the Schr\"odinger and the Heisenberg pictures:
+\begin{eqnarray*}
+\left\langle\; \overset{{\color{white}.}}{x(t)} \,,\, A(t) \cdot x(t) \;\right\rangle
+& = &
+	\left\langle\;
+		\overset{{\color{white}.}}{U_{0}(-t)} \cdot U(t) \cdot x
+		\;\,,\;
+		U_{0}(-t) \cdot A \cdot U_{0}(t) \cdot U_{0}(-t) \cdot U(t) \cdot x
+		\;\right\rangle
+\\
+& = &
+	\left\langle\;
+		\overset{{\color{white}.}}{U(t)} \cdot x
+		\;\,,\;
+		A \cdot U(t) \cdot x
+		\;\right\rangle
+	\quad\quad
+	\textnormal{(Schr\"odinger picture)}
+\\
+& = &
+	\left\langle\;
+		\overset{{\color{white}.}}{U(-t)} \cdot U(t) \cdot x
+		\;\,,\;
+		U(-t) \cdot A \cdot U(t) \cdot x
+		\;\right\rangle
+\\
+& = &
+	\left\langle\;
+		x
+		\;\,,\;
+		\overset{{\color{white}.}}{U(-t)} \cdot A \cdot U(t) \cdot x
+		\;\right\rangle
+	\quad\quad
+	\textnormal{(Heisenberg picture)}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{The Dyson expansion}
+\begin{proposition}[Dyson expansion]
+\mbox{}\vskip 0.2cm
+\noindent
+Define \,$V(t) \, := \, U_{0}(t)^{-1} \cdot U(t) \, = \, U_{0}(-t) \cdot U(t)$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	We have:\quad $U(t) \,= \, U_{0}(t) \cdot V(t)$
+\item
+	$V(t)$\, satisfies:
+	\begin{equation*}
+	\dfrac{\d}{\d t}\,V(t) \;\; = \;\; -\,\i\,\widetilde{H}_{1}(t)\,V(t)\,,
+	\end{equation*}	
+	where
+	\begin{equation*}
+	\widetilde{H}_{1}(t) \;\; := \;\; U_{0}(-t) \cdot H_{1}(t) \cdot U_{0}(t)
+	\end{equation*}	
+\item
+	$V(t)$ can be expressed as:
+	\begin{equation*}
+	V(t) \;\; = \;\; \mathbf{1} \, + \, \overset{\infty}{\underset{n = 1}{\sum}}\,W_{n}(t)\,,
+	\end{equation*}
+	where
+	\begin{equation*}
+	W_{n}(t) \;\; = \;\; (-\i)^{n}\cdot
+		\int_{0}^{t}\d\theta_{1} \, \int_{0}^{\theta_{1}}\d\theta_{2} \;\, \cdots \,  \int_{0}^{\theta_{n-1}}\d\theta_{n}
+			\left(\,
+				\overset{{\color{white}1}}{\widetilde{H}_{1}(\theta_{1})}
+				\cdot
+				\widetilde{H}_{1}(\theta_{2})
+				\,\cdots\,
+				\widetilde{H}_{1}(\theta_{n})
+				\,\right),
+	\;\;
+	\end{equation*}
+	for \,$n = 1, 2, \ldots$
+\item
+	For \,$n = 1, 2, \ldots$\,, \,$W_{n}(t)$\, can be expressed as:
+	\begin{equation*}
+	W_{n}(t) \;\; = \;\; \dfrac{(-\i)^{n}}{n!}\cdot
+		\int_{0}^{t}\d\theta_{1} \, \int_{0}^{t}\d\theta_{2} \;\, \cdots \,  \int_{0}^{t}\d\theta_{n}\;
+			\mathcal{T}\!\left(\,
+				\overset{{\color{white}1}}{\widetilde{H}_{1}(\theta_{1})}
+				\cdot
+				\widetilde{H}_{1}(\theta_{2})
+				\,\cdots\,
+				\widetilde{H}_{1}(\theta_{n})
+				\,\right),
+	\end{equation*}
+	where \,$\mathcal{T}(\,\cdot\,)$ is the \textbf{chronological operator}, defined as follows:
+	\begin{equation*}
+	\mathcal{T}\!\left(\,
+		\overset{{\color{white}1}}{\widetilde{H}_{1}(\theta_{1})}
+		\cdot
+		\widetilde{H}_{1}(\theta_{2})
+		\,\cdots\,
+		\widetilde{H}_{1}(\theta_{n})
+		\,\right)
+	\;\; := \;\;
+		\overset{{\color{white}1}}{\widetilde{H}_{1}(\theta_{\sigma(1)})}
+		\cdot
+		\widetilde{H}_{1}(\theta_{\sigma(2)})
+		\,\cdots\,
+		\widetilde{H}_{1}(\theta_{\sigma(n)})\,,
+	\end{equation*}
+	where \,$\sigma \in S_{n}$\, is any permutation of $\{1,2,\cdots,n\}$ such that
+	\begin{equation*}
+	\theta_{\sigma(1)} \; \leq \; \theta_{\sigma(2)} \; \leq \; \cdots \; \leq \; \theta_{\sigma(n)}
+	\end{equation*}
+\item
+	For \,$H_{1}(t) \,=\, \kappa\,H_{I}$,\,
+	\begin{equation*}
+	V(t) \;\; = \;\; \mathbf{1} \, + \,
+		\overset{\infty}{\underset{n = 1}{\sum}}\, \dfrac{(-\i\,\kappa)^{n}}{n!}
+		\cdot
+		\int_{0}^{t}\d\theta_{1} \, \int_{0}^{t}\d\theta_{2} \;\, \cdots \,  \int_{0}^{t}\d\theta_{n}\;
+			\mathcal{T}\!\left(\,
+				\overset{{\color{white}1}}{H_{I}(\theta_{1})}
+				\cdot
+				H_{I}(\theta_{2})
+				\,\cdots\,
+				H_{I}(\theta_{n})
+				\,\right),
+	\end{equation*}
+	where \,$H_{I}(t) \, := \, U_{0}(-t) \cdot H_{I} \cdot U_{0}(t)$.
+\end{enumerate}
+\end{proposition}
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
