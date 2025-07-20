@@ -91,6 +91,7 @@ In a quantum field theory:
 	\mathcal{L} \;\; = \;\; \mathcal{L}\!\left(\,\overset{{\color{white}.}}{\phi}\,,D_{A}(\,\phi\,)\right).
 	\end{equation*}
 \item
+	The Lagrangian density will be of the form:
 	\begin{equation*}
 	\mathcal{L}
 	\;\; = \;\;
@@ -98,6 +99,39 @@ In a quantum field theory:
 	\,+\,
 		\mathcal{L}_{\textnormal{\,int}}\!\left(\,\overset{{\color{white}.}}{\phi}\,,D_{A}(\,\phi\,)\right)
 	\end{equation*}
+	\begin{itemize}
+	\item
+		The ``free'' part $\mathcal{L}_{\textnormal{\,free}}\!\left(\,\overset{{\color{white}.}}{\phi}\,,D_{A}(\,\phi\,)\right)$
+		describes non-interacting particles.
+	\item
+		In order to use perturbative methods, the full Lagrangian
+		$\mathcal{L} = \mathcal{L}_{\textnormal{\,free}} + \mathcal{L}_{\textnormal{\,int}}$
+		needs to be a small perturbation of $\mathcal{L}_{\textnormal{\,free}}$.
+	\item
+		Usually, one derives/guesses the relativistic wave equation satisfied by a
+		non-interacting field $\phi_{\,\textnormal{free}}(x)$.
+		Then, the free part $\mathcal{L}_{\textnormal{\,free}}$ can be reverse-engineered
+		from the relativistic wave equation, knowing the latter is the Euler-Lagrange equation
+		of the former ($\mathcal{L}_{\textnormal{\,free}}$).
+	\item
+		The relativistic wave equation will turn out to be second-order partial differential equations
+		with constant coefficients, and can be solved using Fourier transforms as integrals over
+		momentum Minkowski space of scalar multiples of plane wave solutions
+		(indexed by momentum $4$-vector).
+		The coefficients $a(p)$ and $a^{\dagger}(p)$
+		of the plane wave solutions $\exp(-\,\sqrt{-1}\cdot xp)$ and $\exp(+\,\sqrt{-1}\cdot xp)$
+		in the integrand are thus functions defined momentum $4$-space.
+	\item
+		The notion/procedure of \textit{second quantization} involves ``re-interpreting''
+		$\phi_{\,\textnormal{free}}(x)$ as operators on a suitable complex Hilbert space (Fock space)
+		satisfying certain commutation relations.
+		These commutation relations (satisfied by $\phi_{\,\textnormal{free}}$) will in turn imply that
+		the resulting operators corresponding to $a(p)$ and $a^{\dagger}(p)$ will satisfying
+		the same commutation relations as those satisfied by the annihilation and creation operators
+		of quantized harmonic oscillators.
+		Application of $\hat{a}^{\dagger}(p)$ on the vacuum $\vert 0 \rangle$ of the Fock space
+		is then interpreted as a particle with momentum $p$.
+	\end{itemize}
 \end{itemize}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
