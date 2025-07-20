@@ -1,0 +1,96 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{The structure of a quantum field theory}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+A quantum field theory is a modification of quantum mechanics
+so that the resulting theory becomes compatible with special relativity,
+at least in the following sense:
+\begin{itemize}
+\item
+	space and time must be treated on equal footing in a quantum field theory, and
+\item
+	a quantum field theory must be able to describe (highly energetic)
+	interactions of (initial) particles where
+	\begin{itemize}
+	\item
+		the final (i.e., post-interaction) number of particles is different
+		from the initial (i.e., pre-interaction) number of particles, and
+	\item
+		the species of the post-interaction particles are different
+		from those of the pre-interaction particles.
+	\end{itemize}
+	This is because, according to special relativity, energy and mass are exchangeable;
+	hence, sufficiently (highly) energetic particle interactions are capable of converting
+	the mass and energy of the pre-interaction particles into a collection of post-interaction
+	particles that has a different number of particles and are of different species as the pre-interaction particles.
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\noindent
+In a quantum field theory:
+\begin{itemize}
+\item
+	Recall that, in quantum mechanics, the states of a particle are represented by one-dimensional subspaces
+	in a complex Hilbert space $\mathcal{H}$.
+	\vskip 0.1cm
+	Recall that the Poincaré group is the symmetry group of spacetime in special relativity.
+	One thus expects that the Poincaré group to admit a unitary action on $\mathcal{H}$.
+	\vskip 0.1cm
+	We assume that the particle is ``elementary'' (i.e., is not the bound state of more elementary constituent particles)
+	if and only if its corresponding Poincaré group (unitary) action on $\mathcal{H}$ is irreducible.
+\item
+	Since elementary particles exhibit ``internal symmetry'', we also expect that,
+	for each species of elementary particles and
+	for each internal symmetry exhibited by this given species of elementary particles,
+	there corresponds an irreducible unitary representation of the internal symmetry group
+	on some finite-dimensional complex Hilbert space.
+	The finite-dimensionality assumption here is due to the belief (and experimental observations)
+	that the number of possible states ``generated'' under each such internal symmetry group action is finite.
+\item
+	In order to avoid ``action at a distance'', one therefore expects that each (non-interacting) species
+	of elementary particles to be mathematically describable -- in ``pre-quantized'' form -- by a section of a complex vector bundle
+	over spacetime (position Minkowski space), equipped with a Poincaré group action
+	as well as (fibrewise) actions of internal symmetry groups.
+	The fibre of this complex vector bundle will be the tensor product of $L^{2}(\Re^{1,3},\d\mu)$
+	with the state spaces (which are finite-dimensional complex Hilbert spaces) of the internal symmetry groups
+	of the given elementary particle species.
+	\vskip 0.1cm
+	One such appropriate class of complex vector bundles is the vector bundles associated with principle fibre bundles.	
+\item
+	Since physical phenomena should be unaffected by the aforementioned
+	vector bundles and principal fibre bundles are ``coordinatized'', one expects that
+	any physical law to be Poincaré-invariant as well as gauge invariant (i.e., invariant under the internal symmetry actions). 
+\item
+	Poincaré-invariant and gauge-invariant Lagrangian density: $\mathcal{L}(\,\cdots\,)$.
+	From classical mechanics, one expects the Lagrangian to involve the field $\phi$ as well as its first derivatives:
+	\begin{equation*}
+	\mathcal{L} \;\; = \;\; \mathcal{L}(\phi,\partial\phi),
+	\end{equation*}
+	where the occurrence of the first derivative $\partial\phi$ of the field $\phi$ is expected to be related to dynamics.
+	\vskip 0.1cm
+	However, on an associated vector bundle of a principal fibre bundle, there is in fact no canonically defined notion
+	of derivatives (of sections of the vector bundle).
+	We need the extra structure of a \textit{connection} $A$ on the principal fibre bundle
+	in order to be able to define the (covariant) derivative $D_{A}(\,\phi\,)$ of $\phi$ with respect to $A$.
+	Thus, we expect the Lagrangian to be of the following form instead:
+	\begin{equation*}
+	\mathcal{L} \;\; = \;\; \mathcal{L}\!\left(\,\overset{{\color{white}.}}{\phi}\,,D_{A}(\,\phi\,)\right).
+	\end{equation*}
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
