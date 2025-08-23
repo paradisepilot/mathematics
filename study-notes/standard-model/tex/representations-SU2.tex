@@ -15,11 +15,10 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Definition of \,$\textnormal{SU}(2)$\, and \,$\mathfrak{su}(2)$}
+\section{Definition and parametrization of \,$\textnormal{SU}(2)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.1cm
 \begin{definition}[$\textnormal{U}(n)$ and $\mathfrak{u}(n)$]
 \mbox{}
 \vskip 0.1cm
@@ -58,8 +57,7 @@ The \textbf{special unitary group} is defined as follows:
 \end{definition}
 
 \vskip 0.5cm
-\noindent
-\begin{proposition}[Parametrization of $\textnormal{SU}(2)$]
+\begin{proposition}[Parametrization of \,$\textnormal{SU}(2)$]
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -80,11 +78,14 @@ $\textnormal{SU}(2)$ admits the following parametrization:
 			\vert\, a \,\vert^{2} \,+\, \vert\, b \,\vert^{2} \,=\, 1
 		\;\right\}
 \end{equation*}
+Hence, the (real) Lie group $\textnormal{SU}(2)$ is diffeomorphic to $S^{3}$, the $3$-dimensional unit sphere
+(in $4$-dimensional Euclidean space).
+In particular, $\textnormal{SU}(2)$ is a simply connected $3$-dimensional real manifold.
 \end{proposition}
 \proof
 Suppose:
 \begin{equation*}
-X
+g
 \; = \;
 	\left(\begin{array}{cc}
 		a & c
@@ -94,7 +95,7 @@ X
 \; \in \;
 \textnormal{SU}(2)
 \end{equation*}
-Then, \,$X$\, satisfies \,$\det(X) = 1$\, and
+First note that the component form of the condition \,$g^{\dagger}\cdot g = I_{2}$\, is:
 \begin{equation*}
 \left(\begin{array}{cc}
 	1 & 0
@@ -102,7 +103,7 @@ Then, \,$X$\, satisfies \,$\det(X) = 1$\, and
 	\overset{{\color{white}-}}{0} & 1
 	\end{array}\right)
 \; = \;
-	X^{\dagger} \cdot X
+	g^{\dagger} \cdot g
 \; = \;
 	\left(\begin{array}{cc}
 		\overline{a} & \overline{b}
@@ -121,11 +122,27 @@ Then, \,$X$\, satisfies \,$\det(X) = 1$\, and
 		\\
 		\overset{{\color{white}-}}{a\overline{c} + b\overline{d}} & c\overline{c} + d\overline{d}
 		\end{array}\right)
-\; \in \;
-\textnormal{SU}(2)
 \end{equation*}
-The above matrix equation together with \,$\det(X)=1$\, are equivalent to the following system of equations:
+Thus, we see that
 \begin{equation*}
+g
+\; = \;
+	\left(\begin{array}{cc}
+		a & c
+		\\
+		\overset{{\color{white}-}}{b} & d
+		\end{array}\right)
+\;\in\;
+	\textnormal{SU}(2)
+\quad\Longleftrightarrow\quad
+\left\{
+	\begin{array}{ccc}
+		g^{\dagger} \cdot g &=& I_{2}
+		\\
+		\det(g) &=& \overset{{\color{white}1}}{1}
+		\end{array}
+		\right.
+\quad\Longleftrightarrow\quad
 \left\{
 	\begin{array}{ccc}
 	\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2} &=& 1
@@ -138,7 +155,7 @@ The above matrix equation together with \,$\det(X)=1$\, are equivalent to the fo
 	\end{array}
 	\right.
 \end{equation*}
-First, note that
+Next, note that
 \begin{equation*}
 a\overline{c} + b\overline{d} = 0
 \quad\Longleftrightarrow\quad
@@ -152,7 +169,7 @@ a\overline{c} + b\overline{d} = 0
 \end{equation*}
 Since
 \,$\dim_{\C}\left(\begin{array}{c} a \\ b \end{array}\right)^{\perp} =\, 1$,\,
-the above equality (i.e., orthogonality of the two columns of $X$) implies:
+the above equality (i.e., orthogonality of the two columns of \,$g$) implies:
 \begin{equation*}
 \left(\begin{array}{c} c \\ d \end{array}\right)
 \; \in \;
@@ -168,9 +185,9 @@ the above equality (i.e., orthogonality of the two columns of $X$) implies:
 	\;\;
 	\textnormal{for some $\lambda \in \C$}
 \end{equation*}
-So, we now know that $X$ has the form:
+So, we now know that $g$ has the form:
 \begin{equation*}
-X
+g
 \; = \;
 	\left(\begin{array}{rr}
 		a & -\lambda\,\overline{b}
@@ -181,7 +198,7 @@ X
 Next,
 \begin{equation*}
 1
-\,=\, \det(X)
+\,=\, \det(g)
 \,=\, a\cdot(\lambda\,\overline{a}) - b \cdot (-\lambda\,\overline{b})
 \,=\, \lambda\cdot(\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2})
 \quad\Longrightarrow\quad
@@ -189,7 +206,7 @@ Next,
 \end{equation*}
 We may now conclude that
 \begin{equation*}
-X
+g
 \; = \;
 	\left(\begin{array}{rr}
 		a & -\,\overline{b}
@@ -201,6 +218,175 @@ X
 \end{equation*}
 This completes the proof of the Proposition.
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Generators of \,$\mathfrak{su}(2)$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}[Characterizations of \,$\mathfrak{sl}(n)$, \,$\mathfrak{u}(n)$, and $\mathfrak{su}(n)$]
+\mbox{}
+\vskip 0.1cm
+\begin{enumerate}
+\item
+	\begin{equation*}
+	\mathfrak{sl}(n,\C)
+	\; = \;
+		\left\{\;
+			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+			\;\left\vert\;\,
+				\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
+				\right.
+			\,\right\}
+	\end{equation*}
+\item
+	\begin{equation*}
+	\mathfrak{u}(n)
+	\; = \;
+		\left\{\;
+			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+			\;\left\vert\;\,
+				X + X^{\dagger} = \overset{{\color{white}1}}{0}
+				\right.
+			\,\right\}
+	\end{equation*}
+\item
+	\begin{equation*}
+	\mathfrak{su}(n)
+	\; = \;
+		\left\{\;
+			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+			\;\left\vert\;\,
+				\begin{array}{c}
+				X + X^{\dagger} = \overset{{\color{white}1}}{0}
+				\\
+				\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
+				\end{array}
+				\right.
+			\,\right\}
+	\end{equation*}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	We invoke the fact that \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)}$,
+	for each \,$X \in \C^{n \times n}$.
+	Thus,
+	\begin{eqnarray*}
+	&&
+		X \,\in\, \mathfrak{sl}(n,\C)
+		\quad\Longrightarrow\quad
+		e^{\,t\cdot\,X} \,\in\, \textnormal{SL}(n,\C)
+		\quad\Longrightarrow\quad
+		\det\!\left(\,e^{\,t\cdot\,X}\,\right) \,=\, 1
+	\\
+	& \Longrightarrow\quad &
+		\textnormal{trace}(X)
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,\textnormal{trace}(X)}}\,\right)
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{\det(e^{\,t\,\cdot\,X})}\,\right)
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{1}\,\right)
+		\; = \;
+			0
+	\end{eqnarray*}
+	Conversely, suppose \,$\textnormal{trace}(X) = 0$.\,
+	Then, \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)} \,=\, e^{\,t\,\cdot\,0} \,=\, 1$,\,
+	which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{SL}(n,\C)$,\, hence \,$X \,\in\, \mathfrak{sl}(n,\C)$.
+	This completes the proof of the equality (of sets) in question.
+\item
+	\begin{eqnarray*}
+	&&
+		X \,\in\, \mathfrak{u}(n)
+		\quad\Longrightarrow\quad
+		e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)
+	\\
+	& \Longrightarrow\quad &
+		I_{n}
+			\,=\, \left(\,e^{\,t\,\cdot\,X}\,\right)^{\!\dagger} \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
+			\,=\, \left(\,e^{\,t\,\cdot\,X^{\dagger}}\,\right) \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
+			\,=\, e^{\,t\,\cdot\,(X^{\dagger}+X)}
+	\\
+	& \Longrightarrow\quad &
+		X \,+\, X^{\dagger}
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,(X+X^{\dagger})}}\,\right)
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{I_{n}}\,\right)
+		\; = \;
+			0
+	\end{eqnarray*}
+	Conversely, suppose \,$X + X^{\dagger} \,=\, 0$.\,
+	Then, \,$I_{n}$
+	\,$=$\, $e^{\,0_{n \times n}}$
+	\,$=$\, $e^{\,t\,\cdot(X^{\dagger}+X)}$
+	\,$=\, \cdots \,=$\, $\left(e^{\,t\,\cdot\,X}\right)^{\!\dagger}\cdot\left(e^{\,t\,\cdot\,X}\right)$,\,
+	which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)$,\, hence \,$X \,\in\, \mathfrak{u}(n)$.
+	This completes the proof of the equality (of sets) in question.
+\item
+	Immediate by the preceding two statements.
+\end{enumerate}
+\qed
+
+\vskip 0.5cm
+\begin{corollary}[Generators of \,$\mathfrak{su}(2)$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\sigma_{1},\, \sigma_{2},\, \sigma_{3} \,\in\, \C^{2 \times 2}$\, be the \textbf{Pauli spin matrices}, i.e.,
+\begin{equation*}
+\sigma_{1} \,=\, \sigma_{x} \,:=\, \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right),
+\quad
+\sigma_{2} \,=\, \sigma_{y} \,:=\, \left(\begin{array}{rr} 0 & -\i \\ \i & 0 \end{array}\right),
+\quad
+\sigma_{3} \,=\, \sigma_{z} \,:=\, \left(\begin{array}{rr} 1 & 0 \\ 0 & -1 \end{array}\right).
+\end{equation*}
+Define \,$J_{1},\, J_{2},\, J_{3},\, J_{+},\, J_{-} \,\in\, \C^{2 \times 2}$\, as follows:
+\begin{equation*}
+J_{1} \,:=\, \dfrac{\i}{2}\cdot\sigma_{1} \,=\, \dfrac{\i}{2}\cdot\left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right),
+\quad
+J_{2} \,:=\, \mathbf{{\color{red}-}}\,\dfrac{\i}{2}\cdot\sigma_{2} \,=\, \dfrac{1}{2}\cdot\left(\begin{array}{rr} 0 & -1 \\ 1 & 0 \end{array}\right),
+\quad
+J_{3} \,:=\, \dfrac{\i}{2}\cdot\sigma_{3} \,=\, \dfrac{\i}{2}\cdot\left(\begin{array}{rr} 1 & 0 \\ 0 & -1 \end{array}\right),
+\end{equation*}
+\begin{equation*}
+S_{+} \,:=\, \dfrac{1}{\i}\left(\,J_{1} + \i\,J_{2}\,\right) \,=\, \left(\begin{array}{cc} 0 & 0 \\ 1 & 0 \end{array}\right),
+\quad
+S_{-} \,:=\, \dfrac{1}{\i}\left(\,J_{1} - \i\,J_{2}\,\right) \,=\, \left(\begin{array}{rr} 0 & 1 \\ 0 & 0 \end{array}\right),
+\quad
+S_{3} \,:=\, \i\cdot J_{3} \,=\, \dfrac{1}{2}\cdot\left(\begin{array}{rr} -1 & 0 \\ 0 & 1 \end{array}\right).
+\end{equation*}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	$J_{1},\, J_{2},\, J_{3} \,\in\, \mathfrak{su}(2)$\,
+\item
+	$J_{1},\, J_{2},\, J_{3}$\,
+	form a set of generators for the (real) Lie algebra \,$\mathfrak{su}(2)$\, of the (real) Lie group \,$\textnormal{SU}(2)$.
+\item
+	$J_{1},\, J_{2},\, J_{3}$\, satisfy the following commutation relations:
+	\begin{equation*}
+	\left[\,J_{a}\,,\,J_{b}\,\right] \;\; = \;\; \overset{3}{\underset{c\,=\,1}{\sum}}\;\epsilon_{abc}\,J_{c}\,,
+	\quad
+	\textnormal{for \,$a, b = 1,2,3$}.
+	\end{equation*}
+\item
+	$S_{+},\; S_{-},\; S_{3}$\, satisfy the following commutation relations:
+	\begin{equation*}
+	\left[\,S_{+}\,,\,S_{-}\,\right] \, = \, 2\,S_{3}\,,
+	\quad
+	\left[\,S_{3}\,,\,S_{\pm}\,\right] \, = \, \pm\,S_{\pm}
+	\end{equation*}
+\end{enumerate}
+\end{corollary}
+\proof
+The Corollary follows straightforwardly by direct computations.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
 \begin{definition}[$\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
@@ -232,6 +418,8 @@ The \textbf{special orthogonal group} is defined as follows:
 		\;\right\}
 \end{equation*}
 \end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \begin{proposition}[Lie algebras of $\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
 \begin{eqnarray*}
