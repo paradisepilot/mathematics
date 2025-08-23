@@ -1,0 +1,577 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Irreducible representations of $\mathfrak{su}(2)$}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Definition of \,$\textnormal{SU}(2)$\, and \,$\mathfrak{su}(2)$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.1cm
+\begin{definition}[$\textnormal{U}(n)$ and $\mathfrak{u}(n)$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{unitary group} is defined as follows:
+\begin{equation*}
+\textnormal{U}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
+		\;\left\vert\;\,
+			g^{\dagger} \cdot g = I_{n}
+			\right.
+		\;\right\}
+\end{equation*}
+where \,$g^{\dagger}$\, is the conjugate transpose of
+\,$g \in \textnormal{GL}(n,\C)$\,
+and
+\,$I_{n} \in \textnormal{GL}(n,\C)$\,
+is the identity matrix.
+\vskip 0.1cm
+\noindent
+The \textbf{special unitary group} is defined as follows:
+\begin{equation*}
+\textnormal{SU}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
+		\;\left\vert\;\,
+			g^{\dagger} \cdot g = I_{n}\,,
+			\;
+			\textnormal{det}(g) = 1
+			\right.
+		\;\right\}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\noindent
+\begin{proposition}[Parametrization of $\textnormal{SU}(2)$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+$\textnormal{SU}(2)$ admits the following parametrization:
+\begin{equation*}
+\textnormal{SU}{(2)}
+\; := \;
+	\left\{\,
+		\left.
+		\left(\begin{array}{rr}
+		a & -\overline{b}
+		\\
+		\overset{{\color{white}-}}{b} & \overline{a}
+		\end{array}\right)
+		\overset{{\color{white}.}}{\in}
+		\C^{2 \times 2}
+		\;\;\right\vert\;\,
+			\vert\, a \,\vert^{2} \,+\, \vert\, b \,\vert^{2} \,=\, 1
+		\;\right\}
+\end{equation*}
+\end{proposition}
+\proof
+Suppose:
+\begin{equation*}
+X
+\; = \;
+	\left(\begin{array}{cc}
+		a & c
+		\\
+		\overset{{\color{white}-}}{b} & d
+		\end{array}\right)
+\; \in \;
+\textnormal{SU}(2)
+\end{equation*}
+Then, \,$X$\, satisfies \,$\det(X) = 1$\, and
+\begin{equation*}
+\left(\begin{array}{cc}
+	1 & 0
+	\\
+	\overset{{\color{white}-}}{0} & 1
+	\end{array}\right)
+\; = \;
+	X^{\dagger} \cdot X
+\; = \;
+	\left(\begin{array}{cc}
+		\overline{a} & \overline{b}
+		\\
+		\overset{{\color{white}-}}{\overline{c}} & \overline{d}
+		\end{array}\right)
+	\cdot
+	\left(\begin{array}{cc}
+		a & c
+		\\
+		\overset{{\color{white}-}}{b} & d
+		\end{array}\right)
+\; = \;
+	\left(\begin{array}{cc}
+		a\overline{a} + b\overline{b} & \overline{a}c + \overline{b}d
+		\\
+		\overset{{\color{white}-}}{a\overline{c} + b\overline{d}} & c\overline{c} + d\overline{d}
+		\end{array}\right)
+\; \in \;
+\textnormal{SU}(2)
+\end{equation*}
+The above matrix equation together with \,$\det(X)=1$\, are equivalent to the following system of equations:
+\begin{equation*}
+\left\{
+	\begin{array}{ccc}
+	\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2} &=& 1
+	\\
+	\vert\,c\,\vert^{2} + \vert\,d\,\vert^{2} &\overset{{\color{white}1}}{=}& 1
+	\\
+	a\overline{c} \;\, + \,\; b\overline{d} &\overset{{\color{white}1}}{=}& 0
+	\\
+	ad \;\, - \,\; bc &\overset{{\color{white}1}}{=}& 1
+	\end{array}
+	\right.
+\end{equation*}
+First, note that
+\begin{equation*}
+a\overline{c} + b\overline{d} = 0
+\quad\Longleftrightarrow\quad
+	\left\langle
+		\left(\begin{array}{c} a \\ b \end{array}\right)
+		\,,\,
+		\left(\begin{array}{c} c \\ d \end{array}\right)
+		\right\rangle_{\C^{2}}
+	\;=\;
+	0
+\end{equation*}
+Since
+\,$\dim_{\C}\left(\begin{array}{c} a \\ b \end{array}\right)^{\perp} =\, 1$,\,
+the above equality (i.e., orthogonality of the two columns of $X$) implies:
+\begin{equation*}
+\left(\begin{array}{c} c \\ d \end{array}\right)
+\; \in \;
+	\left(\begin{array}{c} a \\ b \end{array}\right)^{\perp}
+\; = \;
+	\textnormal{span}_{\C}\left\{
+		\left(\begin{array}{r} -\overline{b} \\ \overline{a} \end{array}\right)
+		\right\}
+\quad\Longleftrightarrow\quad
+\left(\begin{array}{c} c \\ d \end{array}\right)
+\; = \;
+	\lambda \left(\begin{array}{r} -\overline{b} \\ \overline{a} \end{array}\right),
+	\;\;
+	\textnormal{for some $\lambda \in \C$}
+\end{equation*}
+So, we now know that $X$ has the form:
+\begin{equation*}
+X
+\; = \;
+	\left(\begin{array}{rr}
+		a & -\lambda\,\overline{b}
+		\\
+		\overset{{\color{white}-}}{b} & \lambda\,\overline{a}
+		\end{array}\right)
+\end{equation*}
+Next,
+\begin{equation*}
+1
+\,=\, \det(X)
+\,=\, a\cdot(\lambda\,\overline{a}) - b \cdot (-\lambda\,\overline{b})
+\,=\, \lambda\cdot(\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2})
+\quad\Longrightarrow\quad
+	\lambda = 1
+\end{equation*}
+We may now conclude that
+\begin{equation*}
+X
+\; = \;
+	\left(\begin{array}{rr}
+		a & -\,\overline{b}
+		\\
+		\overset{{\color{white}-}}{b} & \overline{a}
+		\end{array}\right),\,
+\quad
+\textnormal{where \,$\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2} = 1$}
+\end{equation*}
+This completes the proof of the Proposition.
+\qed
+
+\vskip 0.5cm
+\begin{definition}[$\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{orthogonal group} is defined as follows:
+\begin{equation*}
+\textnormal{O}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\Re)
+		\;\left\vert\;\,
+			g^{T} \cdot g = I_{n}
+			\right.
+		\;\right\}
+\end{equation*}
+The \textbf{special orthogonal group} is defined as follows:
+\begin{equation*}
+\textnormal{SO}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\Re)
+		\;\left\vert\;\,
+			g^{T} \cdot g = I_{n}\,,
+			\;
+			\textnormal{det}(g) = 1
+			\right.
+		\;\right\}
+\end{equation*}
+\end{definition}
+
+\begin{proposition}[Lie algebras of $\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
+\begin{eqnarray*}
+\mathfrak{o}(n)
+& = &
+	\left\{\;\,
+		X \overset{{\color{white}.}}{\in} \mathfrak{gl}(n,\Re)
+		\;\left\vert\;\,
+			X^{T} = -X
+			\right.
+		\;\right\}
+\\
+\mathfrak{so}(n)
+& = &
+	\left\{\;\,
+		X \overset{{\color{white}.}}{\in} \mathfrak{gl}(n,\Re)
+		\;\left\vert\;\,
+			X^{T} = -X\,,
+			\;
+			\textnormal{trace}(X) = 0
+			\right.
+		\;\right\}
+\end{eqnarray*}
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Generators of \;$\textnormal{SO}(3)$\, and \,$\mathfrak{so}(3)$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.1cm
+\noindent
+\textbf{Euler matrices}
+\begin{equation*}
+R_{1}(\phi)
+\; := \;
+	\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}\cos\phi & -\sin\phi \\
+			{\color{white}-}0 & {\color{white}-}\sin\phi & {\color{white}-}\cos\phi \\
+			\end{array}
+		\,\right)
+\end{equation*}
+\begin{equation*}
+R_{2}(\psi)
+\; := \;
+	\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{white}-}\sin\psi \\
+			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
+			-\sin\psi & {\color{white}-}0 & {\color{white}-}\cos\psi \\
+			\end{array}
+		\,\right)
+\end{equation*}
+\begin{equation*}
+R_{3}(\theta)
+\; := \;
+	\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}\cos\theta & -\sin\theta & {\color{white}-}0 \\
+			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+			\end{array}
+		\,\right)
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\textbf{The generators \,$J_{n} \in \C^{3 \times 3}$\, of the Euler matrices}
+\begin{equation*}
+R_{n}(\theta)
+\; = \;
+	\exp\!\left(\;\sqrt{-1}\cdot\theta \overset{{\color{white}1}}{\cdot} J_{n}\,\right)
+\; = \;
+	\exp\!\left(\;\i\cdot\theta \overset{{\color{white}1}}{\cdot} J_{n}\,\right)
+\end{equation*}
+Alternatively, note:
+\begin{equation*}
+\i \cdot J_{1}
+\;\; = \;\;
+	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
+\;\; = \;
+	\left.\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}\sin\phi & {\color{white}-}\cos\phi \\
+			{\color{white}-}0 & {\color{black}-}\cos\phi & {\color{white}-}\sin\phi \\
+			\end{array}
+		\,\right)\right\vert_{\phi = 0}
+\;\; = \;
+	\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{equation*}
+Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
+\begin{equation*}
+J_{1}
+\;\; = \;
+	\left(\!\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+			{\color{white}-}0 & {\color{white}-}\i & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{equation*}
+Similarly,
+\begin{equation*}
+\i \cdot J_{2}
+\;\; = \;\;
+	\left.\dfrac{\d}{\d\,\psi}\right\vert_{\psi = 0} R_{2}(\psi)
+\;\; = \;
+	\left.\left(\!\!
+		\begin{array}{ccc}
+			{\color{white}-}\sin\psi & {\color{white}-}0 & {\color{black}-}\cos\psi \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{white}-}\sin\psi \\
+			\end{array}
+		\,\right)\right\vert_{\psi = 0}
+\;\; = \;
+	\left(\!\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{equation*}
+Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
+\begin{equation*}
+J_{2}
+\;\; = \;
+	\left(\!\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}\i \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{black}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{equation*}
+Lastly,
+\begin{equation*}
+\i \cdot J_{3}
+\;\; = \;\;
+	\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
+\;\; = \;
+	\left.\left(\!
+		\begin{array}{ccc}
+			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}-}0 \\
+			{\color{black}-}\cos\theta & {\color{white}-}\sin\theta & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)\right\vert_{\psi = 0}
+\;\; = \;
+	\left(
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
+			{\color{black}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{equation*}
+Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
+\begin{equation*}
+J_{3}
+\;\; = \;
+	\left(\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}0 \\
+			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Properties of the generators \,$J_{1}, J_{2}, J_{3} \,\in\, \mathfrak{so}(3) \otimes_{\Re} \C$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}
+{\color{white}.}\vskip -0.5cm{\color{white}.}
+\begin{enumerate}
+\item
+	\textbf{Commutation relations:}\;\;
+	\begin{equation*}
+	\left[\,J_{k}\,\overset{{\color{white}1}}{,}\,J_{l}\,\right]
+	\;\; = \;\;
+		\sqrt{-1}\;\overset{3}{\underset{m=1}{\sum}}\,\varepsilon_{klm}\cdot J_{m}\,,
+	\quad
+	\textnormal{for each \,$k, l \in \{\,1,2,3\,\}$}\,,
+	\end{equation*}
+	where \,$\varepsilon_{klm}$\, is the fully anti-symmetric tensor.
+\item
+	\textbf{Raising and lowering operators:}\;\;
+	Define \,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3) \otimes_{\Re} \C \subset \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$\, as follows:
+	\begin{equation*}
+	J_{\pm} \;\; := \;\; J_{1} \, \pm \sqrt{-1}\,J_{2}.
+	\end{equation*}
+	Then, the following equalities (of elements of $\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$) hold:
+	\begin{enumerate}
+	\item
+		$\left[\,J_{3}\,,\,J_{+}\,\right] \;=\; J_{+}$\,,
+		\quad
+		$\left[\,J_{3}\,,\,J_{-}\,\right] \;=\; -\,J_{-}$\,,
+		\quad
+		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
+	\item
+		$J^{2}$
+		\; $=$ \; $(J_{3})^{2} \,-\, J_{3} \,+\, J_{+}J_{-}$
+		\; $=$ \; $(J_{3})^{2} \,+\, J_{3} \,+\, J_{-}J_{+}$
+	\item
+		$(J_{\pm})^{\dagger} \; = \; J_{\mp}$
+	\end{enumerate}
+\item
+	Suppose
+	\,$\rho : \mathfrak{so}(3) \otimes_{\Re} \C \longrightarrow \mathfrak{gl}(V)$\,
+	is an irreducible finite-dimensional complex representation, and
+	\,$v \in V \backslash\{0\}$\, is an eigenvector of \,$\rho(J_{3})$\,
+	corresponding to the eigenvalue \,$\lambda \in \Re$;\, thus, \,$\rho(J_{3})(v) \,=\, \lambda\,v$.
+	Then, we have:
+	\begin{equation*}
+	\rho(J_{3})\!\left(\,\rho(J_{+})(\overset{{\color{white}-}}{v})\,\right) \, = \; (\lambda+1)\cdot\rho(J_{+})(v)\,
+	\quad\textnormal{and}\quad\;
+	\rho(J_{3})\!\left(\,\rho(J_{-})(\overset{{\color{white}-}}{v})\,\right) \, = \; (\lambda-1)\cdot\rho(J_{-})(v)
+	\end{equation*}
+\item
+	\textbf{Casimir operator:}\;\;
+	Define
+	\,$J^{2}$
+	\,$:=$\,
+	$(J_{1})^{2} + (J_{2})^{2} + (J_{3})^{2}$
+	\,$\in$\
+	 $\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$.
+	Then,
+	\begin{equation*}
+	\left[\,J^{2}\,\overset{{\color{white}1}}{,}\,J_{k}\,\right]
+	\;\; = \;\;
+		0\,,
+	\quad
+	\textnormal{for each \,$k \in \{\,1,2,3\,\}$}\,.
+	\end{equation*}
+	Consequently (by Schur's Lemma, Corollary 4.30, \cite{Hall2015}), 
+	\,$J^{2} \in \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$\,
+	acts as a scalar multiple of the identity in every irreducible
+	representation\footnote{Furthermore, this scalar $\lambda \in \C$ uniquely determines
+	the irreducible representation.
+	Look up the classification theory of irreducible finite-dimensional complex representations
+	of complex semisimple Lie algebras.
+	Key words: Casimir operator, universal enveloping algebra. See Chapters 9 and 10, \cite{Hall2015}.}
+	of \,$\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$;\,
+	more precisely, for each irreducible finite-dimensional complex representation
+	\,$\rho : \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right) \longrightarrow \mathfrak{gl}(V)$,\,
+	we have \,$\rho(J^{2}) = \lambda \cdot \textnormal{\textbf{1}}_{V}$,\,
+	for some \,$\lambda \in \C$.
+\end{enumerate}
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}
+{\color{white}.}\vskip -0.1cm
+\noindent
+\begin{enumerate}
+\item
+	The finite-dimensional irreducible representations of $\mathfrak{so}(3) \otimes_{\Re} \C$ is parametrized by the set
+	\begin{equation*}
+	\dfrac{1}{2} \cdot \Z
+	\;\; := \;\;
+		\left\{\;0 \,,\, \dfrac{1}{2} \,,\, 1 \,,\, \frac{3}{2} \,,\, 2 \,,\, \frac{5}{2} \,,\, \ldots \;\right\},
+	\end{equation*}
+	of non-negative integer multiples of \,$\dfrac{1}{2}$, in that, for each
+	$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$,
+	there exists a unique (up to equivalence) complex representation
+	$\rho_{s} : \mathcal{U}(\mathfrak{so}(3)\otimes_{\Re}\C) \longrightarrow \textnormal{End}(V_{s})$
+	such that
+	\begin{equation*}
+	\rho_{s}(J^{2}) \; = \; s(s+1)\cdot\textnormal{\textbf{1}}_{V_{s}}.
+	\end{equation*}
+\item
+	$\dim_{\C}(V_{s}) \, = \, 2s + 1$,\, for each
+	\,$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$.
+\item
+	For each
+	\,$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$,\,
+	the spectrum
+	$\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+	of the operator $\rho_{s}(J_{3}) \in \textnormal{End}(V_{s})$
+	consists of only eigenvalues and is given by:
+	\begin{equation*}
+	\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)
+	\;\; = \;\;
+		\left\{\;
+			-\overset{{\color{white}-}}{s} \,,\, -(s-1), -(s-2)
+			\,,\;\, \ldots \,\;,\,
+			(s-2) \,,\, (s-1) \,,\, s
+			\;\right\},
+	\end{equation*}
+	and each eigenvalue in 
+	$\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+	has multiplicity one.
+\item
+	For each
+	\,$s \in \dfrac{1}{2} \cdot \Z = \left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$,\,
+	let \,$v^{(s)}_{k} \in V_{s}\backslash\{0\}$\, be any normalized eigenvector
+	of $\rho_{s}(J_{3})$ corresponding to the eigenvalue
+	\,$k$ $\in$ $\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+	$=$ $\left\{\;-\overset{{\color{white}-}}{s} \,,\, -(s-1) \,,\, \;\ldots\;,\, (s-1) \,,\, s\;\right\}$.\,
+	Then, 
+	\begin{enumerate}
+	\item
+		the eigenvectors
+		\,$v^{(s)}_{-s} \,,\, v^{(s)}_{-(s-1)} \,,\; \ldots \;,\, v^{(s)}_{s-1} \,,\, v^{(s)}_{s}$\,
+		form an orthonormal basis for $V_{s}$, and
+	\item
+		for each \,$k$ $\in$ $\sigma\!\left(\,\overset{{\color{white}-}}{\rho}_{s}(J_{3})\,\right)$
+		$=$ $\left\{\;-\overset{{\color{white}-}}{s} \,,\, -(s-1) \,,\, \;\ldots\;,\, (s-1) \,,\, s\;\right\}$,\,
+		we have:
+		\begin{equation*}
+		J_{\pm}\!\left(\,v^{(s)}_{k}\,\right)
+		\; = \;
+			\sqrt{{\color{white}.}
+			s(s+1) - k(k \pm 1)
+			{\color{white}.}}
+			\,\cdot\,
+			v^{(s)}_{k \pm 1}
+		\end{equation*}
+		In particular, \,$J_{\pm}\!\left(\,v^{(s)}_{\pm s}\,\right) \; = \; 0$.
+	\end{enumerate}
+\end{enumerate}
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
