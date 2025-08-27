@@ -1,7 +1,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\chapter{Irreducible representations of the Lorentz algebra $\mathfrak{so}^{+}(1,3)$}
+\chapter{Irreducible representations of the Lorentz algebra $\so(1,3)$}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
 
@@ -60,16 +60,16 @@ For each \,$A \in \textnormal{O}(1,n)$, we have:
 \qed
 
 \vskip 0.5cm
-\begin{definition}[$\textnormal{SO}(1,n)$\, and \,$\textnormal{SO}^{\uparrow}(1,n)$]
+\begin{definition}[$\SO(1,n)$\, and \,$\SO^{\uparrow}(1,n)$]
 \mbox{}
 \vskip 0.1cm
 \noindent
 The \textbf{proper Lorentz} group is defined to be:
 \begin{equation*}
-\textnormal{SO}(1,n)
+\SO(1,n)
 \; := \;
 	\left\{\;\,
-		A \overset{{\color{white}.}}{\in} \textnormal{GL}(n+1,\Re)
+		A \overset{{\color{white}.}}{\in} \GL(n+1,\Re)
 		\;\left\vert\;\,
 			\begin{array}{ccc}
 			A^{T} \cdot Q_{(1,n)} \cdot A \,=\, Q_{(1,n)}\,,
@@ -81,10 +81,10 @@ The \textbf{proper Lorentz} group is defined to be:
 \end{equation*}
 The \textbf{proper orthochronous Lorentz} group is defined to be:
 \begin{equation*}
-\textnormal{SO}^{\uparrow}(1,n)
+\SO^{\uparrow}(1,n)
 \; := \;
 	\left\{\;\,
-		A \overset{{\color{white}.}}{\in} \textnormal{GL}(n+1,\Re)
+		A \overset{{\color{white}.}}{\in} \GL(n+1,\Re)
 		\;\left\vert\;\,
 			\begin{array}{ccc}
 			A^{T} \cdot Q_{(1,n)} \cdot A \,=\, Q_{(1,n)}\,,
@@ -103,7 +103,8 @@ The \textbf{proper orthochronous Lorentz} group is defined to be:
 \mbox{}
 \vskip 0.1cm
 \noindent
-$\so(1,3)$ admits the following parametrization:
+The Lie algebra \,$\so(1,3)$\, of the real Lie group \,$\SO^{\uparrow}(1,3)$\,
+admits the following parametrization:
 \begin{equation*}
 \so{(1,3)}
 \; = \;
@@ -293,8 +294,18 @@ A
 \;\; \in \;\;
 	\Re^{4 \times 4}
 \end{equation*}
-We seek to establish that \,$A \in \so(1,3)$.\,
-First, note that \,$A \in \Re^{4 \times 4}$\, satisfies:
+The required reverse inclusion amounts to the statement that \,$A \in \so(1,3)$.\,
+Now, define:
+\begin{equation*}
+\alpha : \Re \longrightarrow \Re^{4 \times 4} : t \longmapsto \exp\!\left(\,t \cdot \overset{{\color{white}.}}{A}\,\right)
+\end{equation*}
+Then, \,$\alpha^{\prime}(0) \,=\, A$.\,
+Thus, to show that \,$A \in \so(1,3)$,\, it remains only to establish that
+\,$\alpha(t) \in \SO^{\uparrow}(1,3)$.\,
+
+\vskip 0.2cm
+\noindent
+To this end, first note that \,$A \in \Re^{4 \times 4}$\, satisfies:
 \,$A^{T} \cdot \Qot + \Qot \cdot A \,=\, 0_{4 \times 4}$,\,
 which implies:
 \begin{equation*}
@@ -312,14 +323,7 @@ which in turn implies:
 \,=\,
 	(-1)^{k} \cdot \Qot \cdot A^{k}
 \end{equation*}
-Next, define:
-\begin{equation*}
-\alpha : \Re \longrightarrow \Re^{4 \times 4} : t \longmapsto \exp\!\left(\,t \cdot \overset{{\color{white}.}}{A}\,\right)
-\end{equation*}
-Then, \,$\alpha^{\prime}(0) \,=\, A$.\,
-Thus, to show that \,$A \in \so(1,3)$,\, it remains only to establish that
-\,$\alpha(t) \in \SO^{\uparrow}(1,3)$.\,
-To this end, first note that
+Therefore,
 \begin{equation*}
 \exp\!\left(\,t\overset{{\color{white}.}}{A}\,\right)^{T} \cdot \Qot \cdot \exp\!\left(\,t\overset{{\color{white}.}}{A}\,\right)
 \,=\,
@@ -374,8 +378,9 @@ Thus, we see furthermore that
 \end{equation*}
 However, we also have \,$\alpha(0) \,=\, \exp(0\cdot\!A) \,=\, I_{4 \times 4}$.\,
 Continuity of \,$\alpha(\,\cdot\,)$\, now implies that \,$\alpha(\,\cdot\,)$\,
-must map all of \,$\Re$\, into the identity component of \,$\SO(1,3)$,\, i.e.,
-\,$\alpha(t) \in \SO^{\uparrow}(1,3)$.\,
+must map all of \,$\Re$\, into the identity component of \,$\SO(1,3)$,\,
+i.e., \,$\alpha(t) \in \SO^{\uparrow}(1,3)$,\,
+for each \,$t \in \Re$.\,
 This proves the reverse inclusion:
 \begin{equation*}
 \so{(1,3)}
