@@ -99,30 +99,34 @@ The \textbf{proper orthochronous Lorentz} group is defined to be:
 \end{definition}
 
 \vskip 0.5cm
-\begin{proposition}[Parametrization of \,$\textnormal{SU}(2)$]
+\begin{proposition}[Parametrization of \,$\mathfrak{so}(1,3)$]
 \mbox{}
 \vskip 0.1cm
 \noindent
-$\textnormal{SU}(2)$ admits the following parametrization:
+$\mathfrak{so}(1,3)$ admits the following parametrization:
 \begin{equation*}
-\textnormal{SU}{(2)}
-\; := \;
-	\left\{\,
-		\left.
-		\left(\begin{array}{rr}
-		a & -\overline{b}
-		\\
-		\overset{{\color{white}-}}{b} & \overline{a}
-		\end{array}\right)
+\mathfrak{so}{(1,3)}
+\; = \;
+	\left\{\;
+		A
 		\overset{{\color{white}.}}{\in}
-		\C^{2 \times 2}
-		\;\;\right\vert\;\,
-			\vert\, a \,\vert^{2} \,+\, \vert\, b \,\vert^{2} \,=\, 1
+		\Re^{4 \times 4}
+		\;\;\left\vert\;\;
+			A \;=\;
+			\left(\begin{array}{rrrr}
+			        0 &   a_{01} &  a_{02} & a_{03} \\
+			a_{01} &           0 &  a_{12} & a_{13} \\
+			a_{02} & -a_{12} &           0 & a_{23} \\
+			a_{03} & -a_{13} & -a_{23} &          0 \\
+			\end{array}\right)
+			\right.
 		\;\right\}
 \end{equation*}
-Hence, the (real) Lie group $\textnormal{SU}(2)$ is diffeomorphic to $S^{3}$, the $3$-dimensional unit sphere
-(in $4$-dimensional Euclidean space).
-In particular, $\textnormal{SU}(2)$ is a simply connected $3$-dimensional real manifold.
+In particular,
+\,$\dim_{\Re}\!\left(\overset{{\color{white}.}}{\textnormal{SO}^{\uparrow}(1,3)}\right)$
+\,$=$\,
+\,$\dim_{\Re}\!\left(\overset{{\color{white}.}}{\mathfrak{so}(1,3)}\right)$
+\,$=$\, $6$.\,
 \end{proposition}
 \proof
 Suppose:
