@@ -99,13 +99,13 @@ The \textbf{proper orthochronous Lorentz} group is defined to be:
 \end{definition}
 
 \vskip 0.5cm
-\begin{proposition}[Parametrization of \,$\mathfrak{so}(1,3)$]
+\begin{proposition}[Parametrization of \,$\so(1,3)$]
 \mbox{}
 \vskip 0.1cm
 \noindent
-$\mathfrak{so}(1,3)$ admits the following parametrization:
+$\so(1,3)$ admits the following parametrization:
 \begin{equation*}
-\mathfrak{so}{(1,3)}
+\so{(1,3)}
 \; = \;
 	\left\{\;
 		A
@@ -123,146 +123,279 @@ $\mathfrak{so}(1,3)$ admits the following parametrization:
 		\;\right\}
 \end{equation*}
 In particular,
-\,$\dim_{\Re}\!\left(\overset{{\color{white}.}}{\textnormal{SO}^{\uparrow}(1,3)}\right)$
+\,$\dim_{\Re}\!\left(\overset{{\color{white}.}}{\SO^{\uparrow}(1,3)}\right)$
 \,$=$\,
-\,$\dim_{\Re}\!\left(\overset{{\color{white}.}}{\mathfrak{so}(1,3)}\right)$
+\,$\dim_{\Re}\!\left(\overset{{\color{white}.}}{\so(1,3)}\right)$
 \,$=$\, $6$.\,
 \end{proposition}
 \proof
-Suppose:
+First, recall that every element of \,$\so(1,3)$\, is of the form \,$\alpha^{\prime}(0) \in \Re^{4 \times 4}$,\,
+where
+\,$\alpha : (-\varepsilon,\varepsilon) \longrightarrow \SO^{\uparrow}(1,3)$\,
+is a smooth map from an open subinterval \,$(-\varepsilon,\varepsilon) \subset \Re$\,
+containing \,$0 \in \Re$\, into
+\,$\SO^{\uparrow}(1,3)$\,
+such that
+\,$\alpha(0) = I_{4 \times 4}$.\,
+Thus, \,$\alpha(\,\cdot\,)$\, satisfies:
 \begin{equation*}
-g
-\; = \;
-	\left(\begin{array}{cc}
-		a & c
-		\\
-		\overset{{\color{white}-}}{b} & d
-		\end{array}\right)
-\; \in \;
-\textnormal{SU}(2)
-\end{equation*}
-First note that the component form of the condition \,$g^{\dagger}\cdot g = I_{2}$\, is:
-\begin{equation*}
-\left(\begin{array}{cc}
-	1 & 0
-	\\
-	\overset{{\color{white}-}}{0} & 1
-	\end{array}\right)
-\; = \;
-	g^{\dagger} \cdot g
-\; = \;
-	\left(\begin{array}{cc}
-		\overline{a} & \overline{b}
-		\\
-		\overset{{\color{white}-}}{\overline{c}} & \overline{d}
-		\end{array}\right)
-	\cdot
-	\left(\begin{array}{cc}
-		a & c
-		\\
-		\overset{{\color{white}-}}{b} & d
-		\end{array}\right)
-\; = \;
-	\left(\begin{array}{cc}
-		a\overline{a} + b\overline{b} & \overline{a}c + \overline{b}d
-		\\
-		\overset{{\color{white}-}}{a\overline{c} + b\overline{d}} & c\overline{c} + d\overline{d}
-		\end{array}\right)
-\end{equation*}
-Thus, we see that
-\begin{equation*}
-g
-\; = \;
-	\left(\begin{array}{cc}
-		a & c
-		\\
-		\overset{{\color{white}-}}{b} & d
-		\end{array}\right)
-\;\in\;
-	\textnormal{SU}(2)
-\quad\Longleftrightarrow\quad
-\left\{
-	\begin{array}{ccc}
-		g^{\dagger} \cdot g &=& I_{2}
-		\\
-		\det(g) &=& \overset{{\color{white}1}}{1}
-		\end{array}
-		\right.
-\quad\Longleftrightarrow\quad
-\left\{
-	\begin{array}{ccc}
-	\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2} &=& 1
-	\\
-	\vert\,c\,\vert^{2} + \vert\,d\,\vert^{2} &\overset{{\color{white}1}}{=}& 1
-	\\
-	a\overline{c} \;\, + \,\; b\overline{d} &\overset{{\color{white}1}}{=}& 0
-	\\
-	ad \;\, - \,\; bc &\overset{{\color{white}1}}{=}& 1
-	\end{array}
-	\right.
-\end{equation*}
-Next, note that
-\begin{equation*}
-a\overline{c} + b\overline{d} = 0
-\quad\Longleftrightarrow\quad
-	\left\langle
-		\left(\begin{array}{c} a \\ b \end{array}\right)
-		\,,\,
-		\left(\begin{array}{c} c \\ d \end{array}\right)
-		\right\rangle_{\C^{2}}
-	\;=\;
-	0
-\end{equation*}
-Since
-\,$\dim_{\C}\left(\begin{array}{c} a \\ b \end{array}\right)^{\perp} =\, 1$,\,
-the above equality (i.e., orthogonality of the two columns of \,$g$) implies:
-\begin{equation*}
-\left(\begin{array}{c} c \\ d \end{array}\right)
-\; \in \;
-	\left(\begin{array}{c} a \\ b \end{array}\right)^{\perp}
-\; = \;
-	\textnormal{span}_{\C}\left\{
-		\left(\begin{array}{r} -\overline{b} \\ \overline{a} \end{array}\right)
-		\right\}
-\quad\Longleftrightarrow\quad
-\left(\begin{array}{c} c \\ d \end{array}\right)
-\; = \;
-	\lambda \left(\begin{array}{r} -\overline{b} \\ \overline{a} \end{array}\right),
-	\;\;
-	\textnormal{for some $\lambda \in \C$}
-\end{equation*}
-So, we now know that $g$ has the form:
-\begin{equation*}
-g
-\; = \;
-	\left(\begin{array}{rr}
-		a & -\lambda\,\overline{b}
-		\\
-		\overset{{\color{white}-}}{b} & \lambda\,\overline{a}
-		\end{array}\right)
-\end{equation*}
-Next,
-\begin{equation*}
-1
-\,=\, \det(g)
-\,=\, a\cdot(\lambda\,\overline{a}) - b \cdot (-\lambda\,\overline{b})
-\,=\, \lambda\cdot(\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2})
-\quad\Longrightarrow\quad
-	\lambda = 1
-\end{equation*}
-We may now conclude that
-\begin{equation*}
-g
-\; = \;
-	\left(\begin{array}{rr}
-		a & -\,\overline{b}
-		\\
-		\overset{{\color{white}-}}{b} & \overline{a}
-		\end{array}\right),\,
+\alpha(t)^{T} \cdot \Qot \cdot \alpha(t) \;\; = \;\; \Qot,
 \quad
-\textnormal{where \,$\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2} = 1$}
+\textnormal{for each \,$t \in (-\varepsilon,\varepsilon)$}
 \end{equation*}
-This completes the proof of the Proposition.
+Differentiation with respect to \,$t$\, yields:
+\begin{equation*}
+\alpha^{\prime}(t)^{T} \cdot \Qot \cdot \alpha(t) \;+\; \alpha(t)^{T} \cdot \Qot \cdot \alpha^{\prime}(t) \;\; = \;\; 0_{4 \times 4}
+\end{equation*}
+Evaluating at \,$t = 0$\, and recalling \,$\alpha(0) = I_{4 \times 4}$\, yields:
+\begin{equation*}
+\alpha^{\prime}(0)^{T} \cdot \Qot \;+\; \Qot \cdot \alpha^{\prime}(0) \;\; = \;\; 0_{4 \times 4}
+\end{equation*}
+Now, write:
+\begin{equation*}
+\alpha^{\prime}(0)
+\;\; = \;\;
+	\left(\begin{array}{cccc}
+	a_{00} & a_{01} & a_{02} & a_{03}
+	\\
+	a_{10} & a_{11} & a_{12} & a_{13}
+	\\
+	a_{20} & a_{21} & a_{22} & a_{23}
+	\\
+	a_{30} & a_{31} & a_{32} & a_{33}
+	\end{array}\right)
+\;\; \in \;\;
+	\Re^{4 \times 4}
+\end{equation*}
+Then,
+\begin{equation*}
+\alpha^{\prime}(0)^{T} \cdot \Qot
+\;\; = \;\;
+	\left(\begin{array}{cccc}
+	a_{00} & a_{10} & a_{20} & a_{30}
+	\\
+	a_{01} & a_{11} & a_{21} & a_{31}
+	\\
+	a_{02} & a_{12} & a_{22} & a_{32}
+	\\
+	a_{03} & a_{13} & a_{23} & a_{33}
+	\end{array}\right)
+	\cdot
+	\left(\begin{array}{rrrr}
+	-1 & 0 & 0 & 0
+	\\
+	0 & 1 & 0 & 0
+	\\
+	0 & 0 & 1 & 0
+	\\
+	0 & 0 & 0 & 0
+	\end{array}\right)
+\;\; = \;\;
+	\left(\begin{array}{cccc}
+	-\,a_{00} & a_{10} & a_{20} & a_{30}
+	\\
+	-\,a_{01} & a_{11} & a_{21} & a_{31}
+	\\
+	-\,a_{02} & a_{12} & a_{22} & a_{32}
+	\\
+	-\,a_{03} & a_{13} & a_{23} & a_{33}
+	\end{array}\right)
+\end{equation*}
+and
+\begin{equation*}
+\Qot \cdot \alpha^{\prime}(0)
+\;\; = \;\;
+	\left(\begin{array}{rrrr}
+	-1 & 0 & 0 & 0
+	\\
+	0 & 1 & 0 & 0
+	\\
+	0 & 0 & 1 & 0
+	\\
+	0 & 0 & 0 & 0
+	\end{array}\right)
+	\cdot
+	\left(\begin{array}{cccc}
+	a_{00} & a_{01} & a_{02} & a_{03}
+	\\
+	a_{10} & a_{11} & a_{12} & a_{13}
+	\\
+	a_{20} & a_{21} & a_{22} & a_{23}
+	\\
+	a_{30} & a_{31} & a_{32} & a_{33}
+	\end{array}\right)
+\;\; = \;\;
+	\left(\begin{array}{rrrr}
+	-\,a_{00} & -\,a_{01} & -\,a_{02} & -\,a_{03}
+	\\
+	a_{10} & a_{11} & a_{12} & a_{13}
+	\\
+	a_{20} & a_{21} & a_{22} & a_{23}
+	\\
+	a_{30} & a_{31} & a_{32} & a_{33}
+	\end{array}\right)
+\end{equation*}
+Thus,
+\begin{equation*}
+\alpha^{\prime}(0)^{T} \cdot \Qot \;+\; \Qot \cdot \alpha^{\prime}(0)
+\;\; = \;\;
+	\left(\begin{array}{cccc}
+	-\,2\,a_{00} & a_{10}\,-\,a_{01} & a_{20}\,-\,a_{02} & a_{30}\,-\,a_{03}
+	\\
+	-\,a_{01} \,+\, a_{10} & 2\,a_{11} & a_{21}\,+\,a_{12} & a_{31}\,+\,a_{13}
+	\\
+	-\,a_{02} \,+\, a_{20} & a_{12}\,+\,a_{21} & 2\,a_{22} & a_{32}\,+\,a_{23}
+	\\
+	-\,a_{03} \,+\, a_{30} & a_{13}\,+\,a_{31} & a_{23}\,+\,a_{32} & 2\,a_{33}
+	\end{array}\right)
+\end{equation*}
+Consequently,
+\begin{equation*}
+\alpha^{\prime}(0)^{T} \cdot \Qot \;+\; \Qot \cdot \alpha^{\prime}(0) \;\; = \;\; 0_{4 \times 4}
+\quad\Longleftrightarrow\quad
+\left\{\begin{array}{c}
+	a_{00} \,=\, a_{11} \,=\, a_{22} \,=\, a_{33} \,=\, 0\,,
+	\\
+	a_{10} \,=\, a_{01}\,, a_{20} \,=\, a_{02}\,, a_{30} \,=\, a_{03}\,,
+	\\
+	a_{21} \,=\, -\,a_{12}\,, a_{31} \,=\, -\,a_{13}\,, a_{32} \,=\, -\,a_{23}\,.
+	\end{array}\right.
+\end{equation*}
+This proves:
+\begin{equation*}
+\so{(1,3)}
+\;\; \subset \;\;
+	\left\{\;
+		A
+		\overset{{\color{white}.}}{\in}
+		\Re^{4 \times 4}
+		\;\;\left\vert\;\;
+			A \;=\;
+			\left(\begin{array}{rrrr}
+			        0 &   a_{01} &  a_{02} & a_{03} \\
+			a_{01} &           0 &  a_{12} & a_{13} \\
+			a_{02} & -a_{12} &           0 & a_{23} \\
+			a_{03} & -a_{13} & -a_{23} &          0 \\
+			\end{array}\right)
+			\right.
+		\;\right\}
+\end{equation*}
+For the reverse inclusion, consider:
+\begin{equation*}
+A
+\;\; = \;\;
+	\left(\begin{array}{rrrr}
+	        0 &   a_{01} &  a_{02} & a_{03} \\
+		a_{01} &           0 &  a_{12} & a_{13} \\
+		a_{02} & -a_{12} &           0 & a_{23} \\
+		a_{03} & -a_{13} & -a_{23} &          0 \\
+		\end{array}\right)
+\;\; \in \;\;
+	\Re^{4 \times 4}
+\end{equation*}
+We seek to establish that \,$A \in \so(1,3)$.\,
+First, note that \,$A \in \Re^{4 \times 4}$\, satisfies:
+\,$A^{T} \cdot \Qot + \Qot \cdot A \,=\, 0_{4 \times 4}$,\,
+which implies:
+\begin{equation*}
+A^{T} \cdot \Qot \,=\, -\,\Qot \cdot A\,,
+\end{equation*}
+which in turn implies:
+\begin{equation*}
+\left(\,A^{T}\,\right)^{k} \cdot \Qot
+\,=\,
+	(-1) \cdot \left(\,A^{T}\,\right)^{k-1} \cdot \Qot \cdot A
+\,=\,
+	(-1)^{2} \cdot \left(\,A^{T}\,\right)^{k-2} \cdot \Qot \cdot A^{2}
+\,=\,
+	\cdots
+\,=\,
+	(-1)^{k} \cdot \Qot \cdot A^{k}
+\end{equation*}
+Next, define:
+\begin{equation*}
+\alpha : \Re \longrightarrow \Re^{4 \times 4} : t \longmapsto \exp\!\left(\,t \cdot \overset{{\color{white}.}}{A}\,\right)
+\end{equation*}
+Then, \,$\alpha^{\prime}(0) \,=\, A$.\,
+Thus, to show that \,$A \in \so(1,3)$,\, it remains only to establish that
+\,$\alpha(t) \in \SO^{\uparrow}(1,3)$.\,
+To this end, first note that
+\begin{equation*}
+\exp\!\left(\,t\overset{{\color{white}.}}{A}\,\right)^{T} \cdot \Qot \cdot \exp\!\left(\,t\overset{{\color{white}.}}{A}\,\right)
+\,=\,
+	\exp\!\left(\,\overset{{\color{white}.}}{t}A^{T}\,\right) \cdot \Qot \cdot \exp\!\left(\,t\overset{{\color{white}.}}{A}\,\right)
+\,=\,
+	\Qot \cdot \exp\!\left(\,-\,\overset{{\color{white}.}}{t}A\,\right) \cdot \exp\!\left(\,t\overset{{\color{white}.}}{A}\,\right)
+\,=\,
+	\Qot\,,
+\end{equation*}
+where the second last equality follows from:
+\begin{eqnarray*}
+\Qot \cdot \exp\!\left(\,-\,\overset{{\color{white}.}}{t}A\,\right)
+& = &
+	\Qot \cdot \left(\;\overset{\infty}{\underset{k=0}{\sum}}\,\dfrac{(-1)^{k}t^{k}A^{k}}{k!}\,\right)
+\;\; = \;\;
+	\left(\;\overset{\infty}{\underset{k=0}{\sum}}\,\dfrac{t^{k}\cdot(-1)^{k}\,\Qot\,A^{k}}{k!}\,\right)
+\\
+& = &
+	\left(\;\overset{\infty}{\underset{k=0}{\sum}}\,\dfrac{t^{k}\cdot(A^{T})^{k}\,\Qot}{k!}\,\right)
+\;\; = \;\;
+	\left(\;\overset{\infty}{\underset{k=0}{\sum}}\,\dfrac{t^{k}\,(A^{T})^{k}}{k!}\,\right)
+	\cdot\Qot
+\\
+& = &
+	\exp\!\left(\,\overset{{\color{white}.}}{t}A^{T}\,\right) \cdot \Qot
+\end{eqnarray*}
+Thus, we now see that
+\,$\alpha(t) \in \textnormal{O}(1,3)$,\, for each \,$t \in \Re$.\,
+Next, recall that
+\begin{equation*}
+\det\!\left(\,\exp(t\overset{{\color{white}.}}{X})\,\right)
+\,=\,
+	e^{\trace(tX)}\,,
+\quad
+\textnormal{for each \,$t \in \Re$\, and \,$X \in \Re^{4 \times 4}$}
+\end{equation*}
+Hence,
+\begin{equation*}
+\det\!\left(\, \alpha(\overset{{\color{white}.}}{t}) \,\right)
+\,=\,
+	\det\!\left(\,\exp(t\overset{{\color{white}.}}{A})\,\right)
+\,=\,
+	e^{\trace(tA)}
+\,=\,
+	e^{0}
+\,=\,
+	1
+\end{equation*}
+Thus, we see furthermore that
+\begin{equation*}
+\alpha(t) \,\in\, \SO(1,3).
+\end{equation*}
+However, we also have \,$\alpha(0) \,=\, \exp(0\cdot\!A) \,=\, I_{4 \times 4}$.\,
+Continuity of \,$\alpha(\,\cdot\,)$\, now implies that \,$\alpha(\,\cdot\,)$\,
+must map all of \,$\Re$\, into the identity component of \,$\SO(1,3)$,\, i.e.,
+\,$\alpha(t) \in \SO^{\uparrow}(1,3)$.\,
+This proves the reverse inclusion:
+\begin{equation*}
+\so{(1,3)}
+\;\; \supset \;\;
+	\left\{\;
+		A
+		\overset{{\color{white}.}}{\in}
+		\Re^{4 \times 4}
+		\;\;\left\vert\;\;
+			A \;=\;
+			\left(\begin{array}{rrrr}
+			        0 &   a_{01} &  a_{02} & a_{03} \\
+			a_{01} &           0 &  a_{12} & a_{13} \\
+			a_{02} & -a_{12} &           0 & a_{23} \\
+			a_{03} & -a_{13} & -a_{23} &          0 \\
+			\end{array}\right)
+			\right.
+		\;\right\}
+\end{equation*}
+and thus completes the proof of the Proposition.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
