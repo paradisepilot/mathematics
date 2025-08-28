@@ -405,6 +405,109 @@ and thus completes the proof of the Proposition.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{corollary}[Generators of \,$\so(1,3)$\, \& their commutation relations]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Define the following six matrices with real entries:
+\begin{equation*}
+R_{12}
+\, := \,
+	\left(\,\begin{array}{rrrr}
+	0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+	0 & 0 & -1 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 0 \\
+	\end{array}\right),
+\;\;
+R_{13}
+\, := \,
+	\left(\,\begin{array}{rrrr}
+	0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+	0 & 0 & 0 & -1 \\
+	0 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	\end{array}\right),
+\;\;
+R_{23}
+\, := \,
+	\left(\,\begin{array}{rrrr}
+	0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+	0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & -1 \\
+	0 & 0 & 1 & 0 \\
+	\end{array}\right)
+\end{equation*}
+\begin{equation*}
+B_{01}
+\, := \,
+	\left(\,\begin{array}{rrrr}
+	0 & {\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+	1 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 \\
+	\end{array}\right),
+\;\;
+B_{02}
+\, := \,
+	\left(\,\begin{array}{rrrr}
+	0 & {\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
+	0 & 0 & 0 & 0 \\
+	1 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 \\
+	\end{array}\right),
+\;\;
+B_{03}
+\, := \,
+	\left(\,\begin{array}{rrrr}
+	0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+	0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 \\
+	1 & 0 & 0 & 0 \\
+	\end{array}\right)
+\end{equation*}
+\begin{enumerate}
+\item
+	The matrices
+	\,$R_{12},\; R_{12},\; R_{12},\; B_{01},\; B_{02},\; B_{03}$\,
+	are elements of
+	\,$\so(1,3)$,\, and they form a basis for \,$\so(1,3)$.
+\item
+	The 15 commutation relations satisfied by
+	\,$R_{12},\; R_{12},\; R_{12},\; B_{01},\; B_{02},\; B_{03}$\,
+	are the following:
+	\begin{equation*}
+	\begin{array}{lll}
+	\left[\,R_{12}\,,\,R_{13}\,\right] \,=\, +\,R_{23}, &
+	\left[\,R_{12}\,,\,R_{23}\,\right] \,=\, -\,R_{13}, &
+	\left[\,R_{13}\,,\,R_{23}\,\right] \,=\, +\,R_{12},
+	\\ \\
+	\left[\,B_{01}\,,\,B_{02}\,\right] \,=\, -\,R_{12}, &
+	\left[\,B_{01}\,,\,B_{03}\,\right] \,=\, -\,R_{13}, &
+	\left[\,B_{02}\,,\,B_{03}\,\right] \,=\, -\,R_{23},
+	\\ \\
+	\left[\,B_{01}\,,\,R_{12}\,\right] \,=\, -\,B_{02}, &
+	\left[\,B_{01}\,,\,R_{13}\,\right] \,=\, -\,B_{03}, &
+	\left[\,B_{01}\,,\,R_{23}\,\right] \,=\, {\color{white}-}\,0,\;\;\;\;
+	\\
+	\left[\,B_{02}\,,\,R_{12}\,\right] \,=\, +\,B_{01}, &
+	\left[\,B_{02}\,,\,R_{13}\,\right] \,=\, {\color{white}-}\,0,\;\;\;\; &
+	\left[\,B_{02}\,,\,R_{23}\,\right] \,=\, -\,B_{03}, 
+	\\
+	\left[\,B_{03}\,,\,R_{12}\,\right] \,=\, {\color{white}-}\,0,\;\;\;\; &
+	\left[\,B_{03}\,,\,R_{13}\,\right] \,=\, +\,B_{01}, &
+	\left[\,B_{03}\,,\,R_{23}\,\right] \,=\, +\,B_{02}.
+	\end{array}
+	\end{equation*}
+\end{enumerate}
+\end{corollary}
+\proof
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 %\section{Generators of \,$\mathfrak{su}(2)$}
 %
 %          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
