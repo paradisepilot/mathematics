@@ -162,9 +162,9 @@ print( commutator(B03,R23) - (B02)   );
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 X1 <- matrix(
     data = c(
-         0, 0, 0,
-         0, 0,-1,
-         0, 1, 0),
+         0,-1, 0,
+         1, 0, 0,
+         0, 0, 0),
     byrow = TRUE,
     nrow  = 3
     );
@@ -184,23 +184,23 @@ print( X2   );
 
 X3 <- matrix(
     data = c(
-         0,-1, 0,
-         1, 0, 0,
-         0, 0, 0),
+         0, 0, 0,
+         0, 0,-1,
+         0, 1, 0),
     byrow = TRUE,
     nrow  = 3
     );
 cat("\nX3\n");
 print( X3   );
 
-cat("\ncommutator(X1,X2) - (-X3)\n");
-print( commutator(X1,X2) - (-X3)   );
+cat("\ncommutator(X1,X2) - (X3)\n");
+print( commutator(X1,X2) - (X3)   );
 
-cat("\ncommutator(X1,X3) - (X2)\n");
-print( commutator(X1,X3) - (X2)   );
+cat("\ncommutator(X3,X1) - (X2)\n");
+print( commutator(X3,X1) - (X2)   );
 
-cat("\ncommutator(X2,X3) - (-X1)\n");
-print( commutator(X2,X3) - (-X1)   );
+cat("\ncommutator(X2,X3) - (X1)\n");
+print( commutator(X2,X3) - (X1)   );
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 
