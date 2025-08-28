@@ -82,15 +82,15 @@ The \textbf{special orthogonal group} is defined as follows:
 
 \vskip 0.1cm
 \noindent
-\textbf{Euler matrices}
+Define:
 \begin{equation*}
-R_{1}(\phi)
+R_{1}(\theta)
 \; := \;
 	\left(\,
 		\begin{array}{ccc}
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}\cos\phi & -\sin\phi \\
-			{\color{white}-}0 & {\color{white}-}\sin\phi & {\color{white}-}\cos\phi \\
+			{\color{white}-}\cos\theta & -\sin\theta & {\color{white}-}0 \\
+			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
 			\end{array}
 		\,\right)
 \end{equation*}
@@ -106,13 +106,13 @@ R_{2}(\psi)
 		\,\right)
 \end{equation*}
 \begin{equation*}
-R_{3}(\theta)
+R_{3}(\phi)
 \; := \;
 	\left(\,
 		\begin{array}{ccc}
-			{\color{white}-}\cos\theta & -\sin\theta & {\color{white}-}0 \\
-			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}\cos\phi & -\sin\phi \\
+			{\color{white}-}0 & {\color{white}-}\sin\phi & {\color{white}-}\cos\phi \\
 			\end{array}
 		\,\right)
 \end{equation*}
@@ -123,21 +123,21 @@ R_{3}(\theta)
 \begin{equation*}
 X_{1}
 \;\; := \;\;
-	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
+	\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
 \;\; = \;
-	\left.\left(\,
+	\left.\left(\!
 		\begin{array}{ccc}
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
-			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
-			\end{array}
-		\,\right)\right\vert_{\phi = 0}
-\;\; = \;
-	\left(\,
-		\begin{array}{ccc}
+			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
+			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)\right\vert_{\psi = 0}
+\;\; = \;
+	\left(
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
 \end{equation*}
@@ -165,37 +165,37 @@ X_{2}
 \begin{equation*}
 X_{3}
 \;\; := \;\;
-	\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
+	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
 \;\; = \;
-	\left.\left(\!
+	\left.\left(\,
 		\begin{array}{ccc}
-			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
-			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)\right\vert_{\psi = 0}
-\;\; = \;
-	\left(
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
 			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
+			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
+			\end{array}
+		\,\right)\right\vert_{\phi = 0}
+\;\; = \;
+	\left(\,
+		\begin{array}{ccc}
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
 \end{equation*}
 
 \vskip 0.5cm
 \begin{equation*}
-\left[\,X_{1}\,,\,X_{2}\,\right] \;=\; -\,X_{3}
+\left[\,X_{1}\,,\,X_{2}\,\right] \;=\; +\,X_{3}
 \quad
-\left[\,X_{1}\,,\,X_{3}\,\right] \;=\; +\,X_{2}
+\left[\,X_{3}\,,\,X_{1}\,\right] \;=\; +\,X_{2}
 \quad
-\left[\,X_{2}\,,\,X_{3}\,\right] \;=\; -\,X_{1}
+\left[\,X_{2}\,,\,X_{3}\,\right] \;=\; +\,X_{1}
 \end{equation*}
 
 \vskip 0.5cm
 \begin{equation*}
-\left[\,X_{a}\,,\,X_{b}\,\right] \;=\; -\,\epsilon_{abc}\,X_{c}
+\left[\,X_{a}\,,\,X_{b}\,\right] \;=\; \epsilon_{abc}\,X_{c}
 \end{equation*}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
