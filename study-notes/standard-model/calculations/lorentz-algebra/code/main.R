@@ -37,30 +37,6 @@ commutator <- function(X,Y) {
     }
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-R12 <- matrix(
-    data = c(
-         0, 0, 0, 0,
-         0, 0,-1, 0,
-         0, 1, 0, 0,
-         0, 0, 0, 0),
-    byrow = TRUE,
-    nrow  = 4
-    );
-cat("\nR12\n");
-print( R12   );
-
-R13 <- matrix(
-    data = c(
-         0, 0, 0, 0,
-         0, 0, 0,-1,
-         0, 0, 0, 0,
-         0, 1, 0, 0),
-    byrow = TRUE,
-    nrow  = 4
-    );
-cat("\nR13\n");
-print( R13   );
-
 R23 <- matrix(
     data = c(
          0, 0, 0, 0,
@@ -72,6 +48,30 @@ R23 <- matrix(
     );
 cat("\nR23\n");
 print( R23   );
+
+R31 <- matrix(
+    data = c(
+         0, 0, 0, 0,
+         0, 0, 0, 1,
+         0, 0, 0, 0,
+         0,-1, 0, 0),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nR31\n");
+print( R31   );
+
+R12 <- matrix(
+    data = c(
+         0, 0, 0, 0,
+         0, 0,-1, 0,
+         0, 1, 0, 0,
+         0, 0, 0, 0),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nR12\n");
+print( R12   );
 
 B01 <- matrix(
     data = c(
@@ -110,31 +110,31 @@ cat("\nB03\n");
 print( B03   );
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-cat("\ncommutator(R12,R13) - (R23)\n");
-print( commutator(R12,R13) - (R23)   );
+cat("\ncommutator(R23,R31) - (R12)\n");
+print( commutator(R23,R31) - (R12)   );
 
-cat("\ncommutator(R12,R23) - (-R13)\n");
-print( commutator(R12,R23) - (-R13)   );
+cat("\ncommutator(R12,R23) - (R31)\n");
+print( commutator(R12,R23) - (R31)   );
 
-cat("\ncommutator(R13,R23) - (R12)\n");
-print( commutator(R13,R23) - (R12)   );
+cat("\ncommutator(R31,R12) - (R23)\n");
+print( commutator(R31,R12) - (R23)   );
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 cat("\ncommutator(B01,B02) - (-R12)\n");
 print( commutator(B01,B02) - (-R12)   );
 
-cat("\ncommutator(B01,B03) - (-R13)\n");
-print( commutator(B01,B03) - (-R13)   );
-
 cat("\ncommutator(B02,B03) - (-R23)\n");
 print( commutator(B02,B03) - (-R23)   );
+
+cat("\ncommutator(B03,B01) - (-R31)\n");
+print( commutator(B03,B01) - (-R31)   );
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 cat("\ncommutator(B01,R12) - (-B02)\n");
 print( commutator(B01,R12) - (-B02)   );
 
-cat("\ncommutator(B01,R13) - (-B03)\n");
-print( commutator(B01,R13) - (-B03)   );
+cat("\ncommutator(B01,R31) - ( B03)\n");
+print( commutator(B01,R31) - ( B03)   );
 
 cat("\ncommutator(B01,R23)\n");
 print( commutator(B01,R23)   );
@@ -143,8 +143,8 @@ print( commutator(B01,R23)   );
 cat("\ncommutator(B02,R12) - (B01)\n");
 print( commutator(B02,R12) - (B01)   );
 
-cat("\ncommutator(B02,R13)\n");
-print( commutator(B02,R13)   );
+cat("\ncommutator(B02,R31)\n");
+print( commutator(B02,R31)   );
 
 cat("\ncommutator(B02,R23) - (-B03)\n");
 print( commutator(B02,R23) - (-B03)   );
@@ -153,8 +153,8 @@ print( commutator(B02,R23) - (-B03)   );
 cat("\ncommutator(B03,R12)\n");
 print( commutator(B03,R12)   );
 
-cat("\ncommutator(B03,R13) - (B01)\n");
-print( commutator(B03,R13) - (B01)   );
+cat("\ncommutator(B03,R31) - (-B01)\n");
+print( commutator(B03,R31) - (-B01)   );
 
 cat("\ncommutator(B03,R23) - (B02)\n");
 print( commutator(B03,R23) - (B02)   );
@@ -162,16 +162,16 @@ print( commutator(B03,R23) - (B02)   );
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 X1 <- matrix(
     data = c(
-         0,-1, 0,
-         1, 0, 0,
-         0, 0, 0),
+         0, 0, 0,
+         0, 0,-1,
+         0, 1, 0),
     byrow = TRUE,
     nrow  = 3
     );
 cat("\nX1\n");
 print( X1   );
 
-X2 <- matrix(
+X2 <- - matrix(
     data = c(
          0, 0,-1,
          0, 0, 0,
@@ -184,9 +184,9 @@ print( X2   );
 
 X3 <- matrix(
     data = c(
-         0, 0, 0,
-         0, 0,-1,
-         0, 1, 0),
+         0,-1, 0,
+         1, 0, 0,
+         0, 0, 0),
     byrow = TRUE,
     nrow  = 3
     );
@@ -343,6 +343,108 @@ cat("\ncommutator(Splus,Sminus) - (2 * S3)\n");
 print( commutator(Splus,Sminus) - (2 * S3)   );
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+J1 <- sqrt(as.complex(-1)) * matrix(
+    data = c(
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0,-1,
+        0, 0, 1, 0
+        ),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nJ1\n");
+print( J1   );
+
+J2 <- sqrt(as.complex(-1)) * matrix(
+    data = c(
+        0, 0, 0, 0,
+        0, 0, 0, 1,
+        0, 0, 0, 0,
+        0,-1, 0, 0
+        ),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nJ2\n");
+print( J2   );
+
+J3 <- sqrt(as.complex(-1)) * matrix(
+    data = c(
+        0, 0, 0, 0,
+        0, 0,-1, 0,
+        0, 1, 0, 0,
+        0, 0, 0, 0
+        ),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nJ3\n");
+print( J3   );
+
+cat("\ncommutator(J1,J2) - (sqrt(as.complex(-1)) * J3)\n");
+print( commutator(J1,J2) - (sqrt(as.complex(-1)) * J3)   );
+
+cat("\ncommutator(J3,J1) - (sqrt(as.complex(-1)) * J2)\n");
+print( commutator(J3,J1) - (sqrt(as.complex(-1)) * J2)   );
+
+cat("\ncommutator(J2,J3) - (sqrt(as.complex(-1)) * J1)\n");
+print( commutator(J2,J3) - (sqrt(as.complex(-1)) * J1)   );
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+K1 <- sqrt(as.complex(-1)) * matrix(
+    data = c(
+        0, 1, 0, 0,
+        1, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0
+        ),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nK1\n");
+print( K1   );
+
+K2 <- sqrt(as.complex(-1)) * matrix(
+    data = c(
+        0, 0, 1, 0,
+        0, 0, 0, 0,
+        1, 0, 0, 0,
+        0, 0, 0, 0
+        ),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nK2\n");
+print( K2   );
+
+K3 <- sqrt(as.complex(-1)) * matrix(
+    data = c(
+        0, 0, 0, 1,
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        1, 0, 0, 0
+        ),
+    byrow = TRUE,
+    nrow  = 4
+    );
+cat("\nK3\n");
+print( K3   );
+
+cat("\ncommutator(K1,K2)\n");
+print( commutator(K1,K2)   );
+
+cat("\ncommutator(K1,K2) - (- sqrt(as.complex(-1)) * J3)\n");
+print( commutator(K1,K2) - (- sqrt(as.complex(-1)) * J3)   );
+
+cat("\ncommutator(K3,K1) - (- sqrt(as.complex(-1)) * J2)\n");
+print( commutator(K3,K1) - (- sqrt(as.complex(-1)) * J2)   );
+
+cat("\ncommutator(K2,K3) - (- sqrt(as.complex(-1)) * J1)\n");
+print( commutator(K2,K3) - (- sqrt(as.complex(-1)) * J1)   );
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+
 
 ###################################################
 ###################################################
