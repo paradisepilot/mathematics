@@ -83,67 +83,64 @@ The \textbf{special orthogonal group} is defined as follows:
 \vskip 0.1cm
 \noindent
 Define:
-\begin{equation*}
-R_{1}(\theta)
-\; := \;
+\begin{eqnarray*}
+R_{1}(\phi)
+& := &
 	\left(\,
 		\begin{array}{ccc}
-			{\color{white}-}\cos\theta & -\sin\theta & {\color{white}-}0 \\
-			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+			{\color{white}--}1 & {\color{white}-.}0 & {\color{white}-}0 \\
+			{\color{white}--}0 & {\color{white}-.}\cos\phi & -\sin\phi \\
+			{\color{white}--}0 & {\color{white}-.}\sin\phi & {\color{white}-}\cos\phi \\
 			\end{array}
 		\,\right)
-\end{equation*}
-\begin{equation*}
+\\
 R_{2}(\psi)
-\; := \;
+& := &
 	\left(\,
 		\begin{array}{ccc}
-			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{black}-}\sin\psi \\
-			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
-			{\color{white}-}\sin\psi & {\color{white}-}0 & {\color{white}-}\cos\psi \\
+			{\color{white}-}\cos\psi & {\color{white}-.}0 & {\color{white}--}\sin\psi \\
+			{\color{white}-}0 & {\color{white}-.}1 & {\color{white}--}0 \\
+			{\color{red}-}\sin\psi & {\color{white}-.}0 & {\color{white}--}\cos\psi \\
 			\end{array}
-		\,\right)
-\end{equation*}
-\begin{equation*}
-R_{3}(\phi)
-\; := \;
+		\right)
+\\
+R_{3}(\theta)
+& := &
 	\left(\,
 		\begin{array}{ccc}
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}\cos\phi & -\sin\phi \\
-			{\color{white}-}0 & {\color{white}-}\sin\phi & {\color{white}-}\cos\phi \\
+			{\color{white}-}\cos\theta & -\sin\theta & {\color{white}--}0 \\
+			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}--}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}--}1 \\
 			\end{array}
-		\,\right)
-\end{equation*}
+		\;\,\right)
+\end{eqnarray*}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{equation*}
+\begin{eqnarray*}
 X_{1}
-\;\; := \;\;
-	\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
-\;\; = \;
-	\left.\left(\!
+& := &
+	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
+\;\;\; = \;
+	\left.\left(\,
 		\begin{array}{ccc}
-			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
-			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
+			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
 			\end{array}
-		\,\right)\right\vert_{\psi = 0}
-\;\; = \;
+		\,\right)\right\vert_{\phi = 0}
+\,\, = \;
 	\left(
 		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
-\end{equation*}
-\begin{equation*}
+\\
 X_{2}
-\;\; := \;\;
+& := &
 	\left.\dfrac{\d}{\d\,\psi}\right\vert_{\psi = 0} R_{2}(\psi)
 \;\; = \;
 	\left.\left(\!\!
@@ -154,35 +151,34 @@ X_{2}
 			\end{array}
 		\,\right)\right\vert_{\psi = 0}
 \;\; = \;
-	\left(\!\!
+	\left(
 		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{black}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
-\end{equation*}
-\begin{equation*}
+\\
 X_{3}
-\;\; := \;\;
-	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
-\;\; = \;
-	\left.\left(\,
+& := &
+	\,\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
+\;\;\;\, = \;
+	\left.\left(\!
 		\begin{array}{ccc}
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
-			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
-			\end{array}
-		\,\right)\right\vert_{\phi = 0}
-\;\; = \;
-	\left(\,
-		\begin{array}{ccc}
+			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
+			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)\right\vert_{\psi = 0}
+\;\;\, = \;
+	\left(
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
-\end{equation*}
+\end{eqnarray*}
 
 \vskip 0.5cm
 \begin{equation*}
@@ -212,11 +208,11 @@ J_{1}
 & := &
 	\i \cdot X_{1}
 \;\; = \;\;
-	\left(\!
+	\left(\!\!
 		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}0 \\
-			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+			{\color{white}-}0 & {\color{white}-}\i & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
 \\
@@ -226,9 +222,9 @@ J_{2}
 \;\; = \;\;
 	\left(\!\!
 		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}\i \\
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{black}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
 \\
@@ -236,118 +232,14 @@ J_{3}
 & := &
 	\i \cdot X_{3}
 \;\; = \;\;
-	\left(\!\!
+	\left(\!
 		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}0 \\
+			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
-			{\color{white}-}0 & {\color{white}-}\i & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
 \end{eqnarray*}
-%Alternatively, note:
-%\begin{equation*}
-%\i \cdot J_{1}
-%\;\; = \;\;
-%	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
-%\;\; = \;
-%	\left.\left(\,
-%		\begin{array}{ccc}
-%			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
-%			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
-%			\end{array}
-%		\,\right)\right\vert_{\phi = 0}
-%\;\; = \;
-%	\left(\,
-%		\begin{array}{ccc}
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-%			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
-%			\end{array}
-%		\,\right)
-%\end{equation*}
-%Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
-%\begin{equation*}
-%J_{1}
-%\;\; = \;
-%	\left(\!\!
-%		\begin{array}{ccc}
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
-%			{\color{white}-}0 & {\color{white}-}\i & {\color{white}-}0 \\
-%			\end{array}
-%		\,\right)
-%\end{equation*}
-%Similarly,
-%\begin{equation*}
-%\i \cdot J_{2}
-%\;\; = \;\;
-%	\left.\dfrac{\d}{\d\,\psi}\right\vert_{\psi = 0} R_{2}(\psi)
-%\;\; = \;
-%	\left.\left(\!\!
-%		\begin{array}{ccc}
-%			{\color{black}-}\sin\psi & {\color{white}-}0 & {\color{black}-}\cos\psi \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{black}-}\sin\psi \\
-%			\end{array}
-%		\,\right)\right\vert_{\psi = 0}
-%\;\; = \;
-%	\left(\!\!
-%		\begin{array}{ccc}
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-%			\end{array}
-%		\,\right)
-%\end{equation*}
-%Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
-%\begin{equation*}
-%J_{2}
-%\;\; = \;
-%	\left(\!\!
-%		\begin{array}{ccc}
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}\i \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{black}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
-%			\end{array}
-%		\,\right)
-%\end{equation*}
-%Lastly,
-%\begin{equation*}
-%\i \cdot J_{3}
-%\;\; = \;\;
-%	\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
-%\;\; = \;
-%	\left.\left(\!
-%		\begin{array}{ccc}
-%			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
-%			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			\end{array}
-%		\,\right)\right\vert_{\psi = 0}
-%\;\; = \;
-%	\left(
-%		\begin{array}{ccc}
-%			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
-%			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			\end{array}
-%		\,\right)
-%\end{equation*}
-%Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
-%\begin{equation*}
-%J_{3}
-%\;\; = \;
-%	\left(\!
-%		\begin{array}{ccc}
-%			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}0 \\
-%			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
-%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-%			\end{array}
-%		\,\right)
-%\end{equation*}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -376,9 +268,9 @@ J_{3}
 	\;\; := \;\;
 	\left(\!
 		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}1 \\
-			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{black}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+			{\color{white}-}1 & {\color{white}-}\i & {\color{white}-}0 \\
 			\end{array}
 		\,\right),
 	\quad\quad
@@ -386,9 +278,9 @@ J_{3}
 	\;\; := \;\;
 	\left(\!
 		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{black}-}\i & {\color{black}-}1 \\
-			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+			{\color{black}-}1 & {\color{white}-}\i & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
 	\end{equation*}
