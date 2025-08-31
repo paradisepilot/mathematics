@@ -22,6 +22,7 @@ require(survey);
 
 files.R <- c(
     'do-Lorentz.R',
+    'do-Poincare.R',
     'do-so3.R',
     'do-su2.R'
     );
@@ -40,9 +41,10 @@ commutator <- function(X,Y) {
     }
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-do.so3();
-do.su2();
-do.Lorentz();
+# do.so3();
+# do.su2();
+# do.Lorentz();
+do.Poincare();
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 
