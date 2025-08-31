@@ -195,7 +195,7 @@ X_{3}
 
 \vskip 0.5cm
 \begin{equation*}
-\left[\,X_{a}\,,\,X_{b}\,\right] \;\;=\;\; \overset{3}{\underset{c=1}{\sum}}\;\epsilon_{abc}\,X_{c}
+\left[\,X_{a}\,,\,X_{b}\,\right] \;\;=\;\; \overset{3}{\underset{c=1}{\sum}}\;\varepsilon_{abc}\,X_{c}
 \end{equation*}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -207,107 +207,11 @@ X_{3}
 
 \noindent
 \textbf{The generators \,$J_{n} \in \C^{3 \times 3}$\, of the Euler matrices}
-\begin{equation*}
-R_{n}(\theta)
-\; = \;
-	\exp\!\left(\;\sqrt{-1}\cdot\theta \overset{{\color{white}1}}{\cdot} J_{n}\,\right)
-\; = \;
-	\exp\!\left(\;\i\cdot\theta \overset{{\color{white}1}}{\cdot} J_{n}\,\right)
-\end{equation*}
-Alternatively, note:
-\begin{equation*}
-\i \cdot J_{1}
-\;\; = \;\;
-	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
-\;\; = \;
-	\left.\left(\,
-		\begin{array}{ccc}
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
-			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
-			\end{array}
-		\,\right)\right\vert_{\phi = 0}
-\;\; = \;
-	\left(\,
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\end{equation*}
-Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
-\begin{equation*}
+\begin{eqnarray*}
 J_{1}
-\;\; = \;
-	\left(\!\!
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
-			{\color{white}-}0 & {\color{white}-}\i & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\end{equation*}
-Similarly,
-\begin{equation*}
-\i \cdot J_{2}
+& := &
+	\i \cdot X_{1}
 \;\; = \;\;
-	\left.\dfrac{\d}{\d\,\psi}\right\vert_{\psi = 0} R_{2}(\psi)
-\;\; = \;
-	\left.\left(\!\!
-		\begin{array}{ccc}
-			{\color{black}-}\sin\psi & {\color{white}-}0 & {\color{black}-}\cos\psi \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{black}-}\sin\psi \\
-			\end{array}
-		\,\right)\right\vert_{\psi = 0}
-\;\; = \;
-	\left(\!\!
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\end{equation*}
-Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
-\begin{equation*}
-J_{2}
-\;\; = \;
-	\left(\!\!
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}\i \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{black}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\end{equation*}
-Lastly,
-\begin{equation*}
-\i \cdot J_{3}
-\;\; = \;\;
-	\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
-\;\; = \;
-	\left.\left(\!
-		\begin{array}{ccc}
-			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
-			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)\right\vert_{\psi = 0}
-\;\; = \;
-	\left(
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\end{equation*}
-Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
-\begin{equation*}
-J_{3}
-\;\; = \;
 	\left(\!
 		\begin{array}{ccc}
 			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}0 \\
@@ -315,7 +219,133 @@ J_{3}
 			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
 			\end{array}
 		\,\right)
-\end{equation*}
+\\
+J_{2}
+& := &
+	\i \cdot X_{2}
+\;\; = \;\;
+	\left(\!\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\\
+J_{3}
+& := &
+	\i \cdot X_{3}
+\;\; = \;\;
+	\left(\!\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+			{\color{white}-}0 & {\color{white}-}\i & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{eqnarray*}
+%Alternatively, note:
+%\begin{equation*}
+%\i \cdot J_{1}
+%\;\; = \;\;
+%	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
+%\;\; = \;
+%	\left.\left(\,
+%		\begin{array}{ccc}
+%			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
+%			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
+%			\end{array}
+%		\,\right)\right\vert_{\phi = 0}
+%\;\; = \;
+%	\left(\,
+%		\begin{array}{ccc}
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+%			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
+%			\end{array}
+%		\,\right)
+%\end{equation*}
+%Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
+%\begin{equation*}
+%J_{1}
+%\;\; = \;
+%	\left(\!\!
+%		\begin{array}{ccc}
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+%			{\color{white}-}0 & {\color{white}-}\i & {\color{white}-}0 \\
+%			\end{array}
+%		\,\right)
+%\end{equation*}
+%Similarly,
+%\begin{equation*}
+%\i \cdot J_{2}
+%\;\; = \;\;
+%	\left.\dfrac{\d}{\d\,\psi}\right\vert_{\psi = 0} R_{2}(\psi)
+%\;\; = \;
+%	\left.\left(\!\!
+%		\begin{array}{ccc}
+%			{\color{black}-}\sin\psi & {\color{white}-}0 & {\color{black}-}\cos\psi \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{black}-}\sin\psi \\
+%			\end{array}
+%		\,\right)\right\vert_{\psi = 0}
+%\;\; = \;
+%	\left(\!\!
+%		\begin{array}{ccc}
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+%			\end{array}
+%		\,\right)
+%\end{equation*}
+%Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
+%\begin{equation*}
+%J_{2}
+%\;\; = \;
+%	\left(\!\!
+%		\begin{array}{ccc}
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}\i \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{black}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+%			\end{array}
+%		\,\right)
+%\end{equation*}
+%Lastly,
+%\begin{equation*}
+%\i \cdot J_{3}
+%\;\; = \;\;
+%	\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
+%\;\; = \;
+%	\left.\left(\!
+%		\begin{array}{ccc}
+%			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
+%			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			\end{array}
+%		\,\right)\right\vert_{\psi = 0}
+%\;\; = \;
+%	\left(
+%		\begin{array}{ccc}
+%			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
+%			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			\end{array}
+%		\,\right)
+%\end{equation*}
+%Multiplying both sides by \,$-\,\i = -\,\sqrt{-1}$\, gives:
+%\begin{equation*}
+%J_{3}
+%\;\; = \;
+%	\left(\!
+%		\begin{array}{ccc}
+%			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}0 \\
+%			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+%			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+%			\end{array}
+%		\,\right)
+%\end{equation*}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -327,20 +357,43 @@ J_{3}
 \item
 	\textbf{Commutation relations:}\;\;
 	\begin{equation*}
-	\left[\,J_{k}\,\overset{{\color{white}1}}{,}\,J_{l}\,\right]
+	\left[\,J_{a}\,\overset{{\color{white}1}}{,}\,J_{b}\,\right]
 	\;\; = \;\;
-		\sqrt{-1}\;\overset{3}{\underset{m=1}{\sum}}\,\varepsilon_{klm}\cdot J_{m}\,,
+		\sqrt{-1}\,\cdot\overset{3}{\underset{c=1}{\sum}}\;\varepsilon_{abc}\cdot J_{c}\,,
 	\quad
-	\textnormal{for each \,$k, l \in \{\,1,2,3\,\}$}\,,
+	\textnormal{for each \,$a, b \in \{\,1,2,3\,\}$}\,,
 	\end{equation*}
-	where \,$\varepsilon_{klm}$\, is the fully anti-symmetric tensor.
+	where \,$\varepsilon_{abc}$\, is the fully anti-symmetric tensor.
 \item
 	\textbf{Raising and lowering operators:}\;\;
-	Define \,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3) \otimes_{\Re} \C \subset \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$\, as follows:
+	%Define \,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3) \otimes_{\Re} \C \subset \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$\, as follows:
+	Define \,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3) \otimes_{\Re} \C$\, as follows:
 	\begin{equation*}
 	J_{\pm} \;\; := \;\; J_{1} \, \pm \sqrt{-1}\,J_{2}.
 	\end{equation*}
-	Then, the following equalities (of elements of $\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$) hold:
+	So,
+	\begin{equation*}
+	J_{+}
+	\;\; := \;\;
+	\left(\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}1 \\
+			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{black}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right),
+	\quad\quad
+	J_{-}
+	\;\; := \;\;
+	\left(\!
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{black}-}\i & {\color{black}-}1 \\
+			{\color{white}-}\i & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+	\end{equation*}
+	Then, the following equalities hold:
 	\begin{enumerate}
 	\item
 		$\left[\,J_{3}\,,\,J_{+}\,\right] \;=\; J_{+}$\,,
@@ -348,10 +401,6 @@ J_{3}
 		$\left[\,J_{3}\,,\,J_{-}\,\right] \;=\; -\,J_{-}$\,,
 		\quad
 		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
-	\item
-		$J^{2}$
-		\; $=$ \; $(J_{3})^{2} \,-\, J_{3} \,+\, J_{+}J_{-}$
-		\; $=$ \; $(J_{3})^{2} \,+\, J_{3} \,+\, J_{-}J_{+}$
 	\item
 		$(J_{\pm})^{\dagger} \; = \; J_{\mp}$
 	\end{enumerate}
@@ -374,14 +423,24 @@ J_{3}
 	\,$:=$\,
 	$(J_{1})^{2} + (J_{2})^{2} + (J_{3})^{2}$
 	\,$\in$\
-	 $\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$.
-	Then,
+	 $\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$.\,
+	Then, the following equalities of elements of
+	\;$\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$
+	hold:
 	\begin{equation*}
-	\left[\,J^{2}\,\overset{{\color{white}1}}{,}\,J_{k}\,\right]
+	J^{2}
+	\;\; =\;\;
+		(J_{3})^{2} \,-\, J_{3} \,+\, J_{+}J_{-}
+	\;\; =\;\;
+		(J_{3})^{2} \,+\, J_{3} \,+\, J_{-}J_{+}\,,
+	\end{equation*}
+	and
+	\begin{equation*}
+	\left[\,J^{2}\,\overset{{\color{white}1}}{,}\,J_{a}\,\right]
 	\;\; = \;\;
 		0\,,
 	\quad
-	\textnormal{for each \,$k \in \{\,1,2,3\,\}$}\,.
+	\textnormal{for each \,$a \in \{\,1,2,3\,\}$}\,.
 	\end{equation*}
 	Consequently (by Schur's Lemma, Corollary 4.30, \cite{Hall2015}), 
 	\,$J^{2} \in \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$\,
