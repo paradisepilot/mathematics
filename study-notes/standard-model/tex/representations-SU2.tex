@@ -346,45 +346,60 @@ Let \,$\sigma_{1},\, \sigma_{2},\, \sigma_{3} \,\in\, \C^{2 \times 2}$\, be the 
 \end{equation*}
 Define \,$J_{1},\, J_{2},\, J_{3},\, S_{+},\, S_{-},\, S_{3} \,\in\, \C^{2 \times 2}$\, as follows:
 \begin{equation*}
-J_{1} \,:=\, \dfrac{\i}{2}\cdot\sigma_{1} \,=\, \dfrac{\i}{2}\cdot\left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right),
+Y_{1} \,:=\, \dfrac{\i}{2}\cdot\sigma_{1} \,=\, \dfrac{\i}{2}\cdot\left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right),
 \quad
-J_{2} \,:=\, \mathbf{{\color{red}-}}\,\dfrac{\i}{2}\cdot\sigma_{2} \,=\, \dfrac{1}{2}\cdot\left(\begin{array}{rr} 0 & -1 \\ 1 & 0 \end{array}\right),
+Y_{2} \,:=\, \mathbf{{\color{red}-}}\,\dfrac{\i}{2}\cdot\sigma_{2} \,=\, \dfrac{1}{2}\cdot\left(\begin{array}{rr} 0 & -1 \\ 1 & 0 \end{array}\right),
 \quad
-J_{3} \,:=\, \dfrac{\i}{2}\cdot\sigma_{3} \,=\, \dfrac{\i}{2}\cdot\left(\begin{array}{rr} 1 & 0 \\ 0 & -1 \end{array}\right),
+Y_{3} \,:=\, \dfrac{\i}{2}\cdot\sigma_{3} \,=\, \dfrac{\i}{2}\cdot\left(\begin{array}{rr} 1 & 0 \\ 0 & -1 \end{array}\right),
 \end{equation*}
 \begin{equation*}
-S_{+} \,:=\, \dfrac{1}{\i}\left(\,J_{1} + \i\,J_{2}\,\right) \,=\, \left(\begin{array}{cc} 0 & 0 \\ 1 & 0 \end{array}\right),
+S_{1} \,:=\, \i \cdot Y_{1} \,=\, \dfrac{-1}{2} \cdot \left(\begin{array}{rr} 0 & 1 \\ 1 & 0 \end{array}\right),
 \quad
-S_{-} \,:=\, \dfrac{1}{\i}\left(\,J_{1} - \i\,J_{2}\,\right) \,=\, \left(\begin{array}{rr} 0 & 1 \\ 0 & 0 \end{array}\right),
+S_{2} \,:=\, \i \cdot Y_{2} \,=\, \dfrac{\i}{2} \cdot \left(\begin{array}{rr} 0 & -1 \\ 1 & 0 \end{array}\right),
 \quad
-S_{3} \,:=\, \i\cdot J_{3} \,=\, \dfrac{1}{2}\cdot\left(\begin{array}{rr} -1 & 0 \\ 0 & 1 \end{array}\right).
+S_{3} \,:=\, \i \cdot Y_{3} \,=\, \dfrac{1}{2}\cdot\left(\begin{array}{rr} -1 & 0 \\ 0 & 1 \end{array}\right).
+\end{equation*}
+\begin{equation*}
+S_{+} \; := \; S_{1} + \i\,S_{2} \; = \; \left(\begin{array}{rr} 0 & 0 \\ -1 & 0 \end{array}\right),
+\quad\quad
+S_{-} \; := \; S_{1} - \i\,S_{2} \; = \; \left(\begin{array}{rr} 0 & -1 \\ 0 & 0 \end{array}\right).
 \end{equation*}
 Then, the following statements are true:
 \begin{enumerate}
 \item
-	$J_{1},\, J_{2},\, J_{3} \,\in\, \mathfrak{su}(2)$\,
-\item
+	$J_{1},\, J_{2},\, J_{3} \,\in\, \mathfrak{su}(2)$.\,
 	$J_{1},\, J_{2},\, J_{3}$\,
-	form a set of generators for the (real) Lie algebra \,$\mathfrak{su}(2)$\, of the (real) Lie group \,$\textnormal{SU}(2)$.
-\item
+	form a set of generators for the (real) Lie algebra \,$\mathfrak{su}(2)$\, of the (real) Lie group \,$\textnormal{SU}(2)$.\,
 	$J_{1},\, J_{2},\, J_{3}$\, satisfy the following commutation relations:
 	\begin{equation*}
-	\left[\,J_{a}\,,\,J_{b}\,\right] \;\; = \;\; \overset{3}{\underset{c\,=\,1}{\sum}}\;\epsilon_{abc}\,J_{c}\,,
+	\left[\,J_{a}\,,\,J_{b}\,\right] \;\; = \;\; \overset{3}{\underset{c\,=\,1}{\sum}}\;\varepsilon_{abc}\,J_{c}\,,
 	\quad
 	\textnormal{for \,$a, b = 1,2,3$}.
 	\end{equation*}
 \item
-	$S_{+},\, S_{-},\, S_{3} \,\in\, \mathfrak{su}(2) \otimes_{\Re} \C$,\,
+	$S_{1},\, S_{2},\, S_{3} \,\in\, \mathfrak{su}(2) \otimes_{\Re} \C$,\,
 	where
 	\,$\mathfrak{su}(2) \otimes_{\Re} \C$\,
 	is the complexification of (the real Lie algebra)
-	\,$\mathfrak{su}(2)$.
-\item
-	$S_{+},\; S_{-},\; S_{3}$\, satisfy the following commutation relations:
+	\,$\mathfrak{su}(2)$.\,
+	\,$S_{1},\, S_{2},\, S_{3}$\,
+	satisfy the following commutation relations:
 	\begin{equation*}
-	\left[\,S_{+}\,,\,S_{-}\,\right] \, = \, 2\,S_{3}\,,
+	\left[\,S_{a}\,\overset{{\color{white}1}}{,}\,S_{b}\,\right]
+	\;\; = \;\;
+		\sqrt{-1}\,\cdot\overset{3}{\underset{c\,=\,1}{\sum}}\;\varepsilon_{abc}\cdot S_{c}\,,
 	\quad
-	\left[\,S_{3}\,,\,S_{\pm}\,\right] \, = \, \pm\,S_{\pm}
+	\textnormal{for each \,$a, b \in \{\,1,2,3\,\}$}\,,
+	\end{equation*}
+	where \,$\varepsilon_{abc}$\, is the fully anti-symmetric tensor.
+\item
+	$S_{+},\, S_{-} \,\in\, \mathfrak{su}(2) \otimes_{\Re} \C$,\,
+	and
+	\,$S_{+},\; S_{-},\; S_{3}$\, satisfy the following commutation relations:
+	\begin{equation*}
+	\left[\,S_{3}\,,\,S_{\pm}\,\right] \, = \, \pm\,S_{\pm}\,,
+	\quad
+	\left[\,S_{+}\,,\,S_{-}\,\right] \, = \, 2\,S_{3}
 	\end{equation*}
 \item
 	Suppose
