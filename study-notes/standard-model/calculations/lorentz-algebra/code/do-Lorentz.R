@@ -251,6 +251,51 @@ do.Lorentz <- function(
     print( commutator(J3,K3)   );
 
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+    ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+    Np1 <- (J1 + sqrt(as.complex(-1)) * K1) / 2;
+    Np2 <- (J2 + sqrt(as.complex(-1)) * K2) / 2;
+    Np3 <- (J3 + sqrt(as.complex(-1)) * K3) / 2;
+
+    Nm1 <- (J1 - sqrt(as.complex(-1)) * K1) / 2;
+    Nm2 <- (J2 - sqrt(as.complex(-1)) * K2) / 2;
+    Nm3 <- (J3 - sqrt(as.complex(-1)) * K3) / 2;
+
+    cat("\nNp1\n");
+    print( Np1   );
+    cat("\nNp2\n");
+    print( Np2   );
+    cat("\nNp3\n");
+    print( Np3   );
+
+    cat("\ncommutator(Np1,Np2) - (sqrt(as.complex(-1)) * Np3)\n");
+    print( commutator(Np1,Np2) - (sqrt(as.complex(-1)) * Np3)   );
+    cat("\ncommutator(Np3,Np1) - (sqrt(as.complex(-1)) * Np2)\n");
+    print( commutator(Np3,Np1) - (sqrt(as.complex(-1)) * Np2)   );
+    cat("\ncommutator(Np2,Np3) - (sqrt(as.complex(-1)) * Np1)\n");
+    print( commutator(Np2,Np3) - (sqrt(as.complex(-1)) * Np1)   );
+
+    cat("\nNm1\n");
+    print( Nm1   );
+    cat("\nNm2\n");
+    print( Nm2   );
+    cat("\nNm3\n");
+    print( Nm3   );
+
+    cat("\ncommutator(Nm1,Nm2) - (sqrt(as.complex(-1)) * Nm3)\n");
+    print( commutator(Nm1,Nm2) - (sqrt(as.complex(-1)) * Nm3)   );
+    cat("\ncommutator(Nm3,Nm1) - (sqrt(as.complex(-1)) * Nm2)\n");
+    print( commutator(Nm3,Nm1) - (sqrt(as.complex(-1)) * Nm2)   );
+    cat("\ncommutator(Nm2,Nm3) - (sqrt(as.complex(-1)) * Nm1)\n");
+    print( commutator(Nm2,Nm3) - (sqrt(as.complex(-1)) * Nm1)   );
+
+    cat("\ncommutator(Np1,Nm2)\n");
+    print( commutator(Np1,Nm2)   );
+    cat("\ncommutator(Np3,Nm1)\n");
+    print( commutator(Np3,Nm1)   );
+    cat("\ncommutator(Np2,Nm3)\n");
+    print( commutator(Np2,Nm3)   );
+
+    ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
     base::cat(base::paste0("\n# ",thisFunctionName,"() quits."));
     base::cat("\n### ~~~~~~~~~~~~~~~~~~~~ ###\n");
     base::return( NULL );
