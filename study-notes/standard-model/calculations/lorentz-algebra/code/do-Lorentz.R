@@ -176,26 +176,26 @@ do.Lorentz <- function(
     print( commutator(B03,B01) - (-R31)   );
 
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-    cat("\ncommutator(B01,R12) - (-B02)\n");
-    print( commutator(B01,R12) - (-B02)   );
-    cat("\ncommutator(B01,R31) - ( B03)\n");
-    print( commutator(B01,R31) - ( B03)   );
-    cat("\ncommutator(B01,R23)\n");
-    print( commutator(B01,R23)   );
+    cat("\ncommutator(R23,B01)\n");
+    print( commutator(R23,B01)   );
+    cat("\ncommutator(R23,B02) - ( B03)\n");
+    print( commutator(R23,B02) - ( B03)   );
+    cat("\ncommutator(R23,B03) - (-B02)\n");
+    print( commutator(R23,B03) - (-B02)   );
 
-    cat("\ncommutator(B02,R12) - (B01)\n");
-    print( commutator(B02,R12) - (B01)   );
-    cat("\ncommutator(B02,R31)\n");
-    print( commutator(B02,R31)   );
-    cat("\ncommutator(B02,R23) - (-B03)\n");
-    print( commutator(B02,R23) - (-B03)   );
+    cat("\ncommutator(R31,B01) - (-B03)\n");
+    print( commutator(R31,B01) - (-B03)   );
+    cat("\ncommutator(R31,B02)\n");
+    print( commutator(R31,B02)   );
+    cat("\ncommutator(R31,B03) - ( B01)\n");
+    print( commutator(R31,B03) - ( B01)   );
 
-    cat("\ncommutator(B03,R12)\n");
-    print( commutator(B03,R12)   );
-    cat("\ncommutator(B03,R31) - (-B01)\n");
-    print( commutator(B03,R31) - (-B01)   );
-    cat("\ncommutator(B03,R23) - (B02)\n");
-    print( commutator(B03,R23) - (B02)   );
+    cat("\ncommutator(R12,B01) - ( B02)\n");
+    print( commutator(R12,B01) - ( B02)   );
+    cat("\ncommutator(R12,B02) - (-B01)\n");
+    print( commutator(R12,B02) - (-B01)   );
+    cat("\ncommutator(R12,B03)\n");
+    print( commutator(R12,B03)   );
 
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
@@ -229,6 +229,26 @@ do.Lorentz <- function(
     print( commutator(K2,K3) - (- sqrt(as.complex(-1)) * J1)   );
 
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+    cat("\ncommutator(J1,K1)\n");
+    print( commutator(J1,K1)   );
+    cat("\ncommutator(J1,K2) - (  sqrt(as.complex(-1)) * K3)\n");
+    print( commutator(J1,K2) - (  sqrt(as.complex(-1)) * K3)   );
+    cat("\ncommutator(J1,K3) - (- sqrt(as.complex(-1)) * K2)\n");
+    print( commutator(J1,K3) - (- sqrt(as.complex(-1)) * K2)   );
+
+    cat("\ncommutator(J2,K1) - (- sqrt(as.complex(-1)) * K3)\n");
+    print( commutator(J2,K1) - (- sqrt(as.complex(-1)) * K3)   );
+    cat("\ncommutator(J2,K2)\n");
+    print( commutator(J2,K2)   );
+    cat("\ncommutator(J2,K3) - (  sqrt(as.complex(-1)) * K1)\n");
+    print( commutator(J2,K3) - (  sqrt(as.complex(-1)) * K1)   );
+
+    cat("\ncommutator(J3,K1) - (  sqrt(as.complex(-1)) * K2)\n");
+    print( commutator(J3,K1) - (  sqrt(as.complex(-1)) * K2)   );
+    cat("\ncommutator(J3,K2) - (- sqrt(as.complex(-1)) * K1)\n");
+    print( commutator(J3,K2) - (- sqrt(as.complex(-1)) * K1)   );
+    cat("\ncommutator(J3,K3)\n");
+    print( commutator(J3,K3)   );
 
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
     base::cat(base::paste0("\n# ",thisFunctionName,"() quits."));
