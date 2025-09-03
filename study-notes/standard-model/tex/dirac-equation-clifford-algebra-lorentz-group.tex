@@ -1,0 +1,251 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{From the Dirac equation, to the Clifford algebra, to the Lorentz group}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Schr\"odinger equation}
+
+\begin{itemize}
+\item
+	Newtonian Energy-Momentum Relation for a {\color{red}free} particle (no force acting on it; zero potential):
+	\begin{equation}
+	\label{NewtonionEnergyMomentumRelation}
+	E \;=\; \dfrac{\Vert\,\mathbf{p}\,\Vert^{2}}{2m}
+	\quad\;\;
+	\Longleftrightarrow
+	\quad\;\;
+	E \,-\, \dfrac{1}{2m}\left(\,p_{1}^{2} \overset{{\color{white}.}}{+} p_{2}^{2} + p_{3}^{2}\,\right) \;=\; 0
+	\end{equation}
+	{\tiny
+	\begin{equation*}
+	\textnormal{Proof:}
+	\quad\quad\quad\quad\quad\quad
+	E
+	\,:=\,
+		\left(\!\begin{array}{c} \textnormal{total energy} \\ \textnormal{of the} \\ \textnormal{free particle} \end{array}\!\right)
+	\,=\,
+		\left(\!\begin{array}{c} \textnormal{kinetic energy} \\ \textnormal{of the} \\ \textnormal{particle} \end{array}\!\right)
+	\,=\,
+		\dfrac{1}{2}\,m\,\Vert\,\mathbf{v}\,\Vert^{2}
+	\,=\,
+		\dfrac{(\,\Vert\,m\cdot\mathbf{v}\,\Vert\,)^{2}}{2m}
+	\,=\,
+		\dfrac{\Vert\,\mathbf{p}\,\Vert^{2}}{2m}
+	\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+	{\color{white}.}
+	\end{equation*}
+	}
+	\vskip 1.0px
+\item
+	\textbf{First quantization:}\;\; Replacing
+	\,$E$, $p_{1}$, $p_{2}$, $p_{3}$\,
+	respectively with differential operators:
+	\begin{equation}
+	\label{FirstQuantization}
+	E \;\longmapsto\; \i\,\dfrac{\partial}{\partial t}\,,
+	\quad\quad
+	p_{j} \;\longmapsto\; -\,\i\,\dfrac{\partial}{\partial x_{j}}\,,
+	\quad\quad
+	\textnormal{and}
+	\end{equation}
+	letting the resulting differential operator act on the wave function
+	\,$\psi(t,x_{1},x_{2},x_{3})$\,
+	yields the Schr\"odinger equation for a free particle:
+	\begin{equation}
+	\label{equationSchrodinger}
+	\left(\;\i\,\dfrac{\partial}{\partial t} + \dfrac{1}{2m}\!
+		\left(
+			\dfrac{\partial^{2}}{\partial x_{1}^{2}}
+			+ \dfrac{\partial^{2}}{\partial x_{2}^{2}}
+			+ \dfrac{\partial^{2}}{\partial x_{3}^{2}}
+			\right)
+		\right)
+	\psi
+	\,=\,
+		0
+	\end{equation}
+\item
+	Schr\"odinger equation is NOT Lorentz-invariant (e.g., asymmetry between time and space) -- incompatible with Special Relativity.
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Klein-Gordon equation}
+
+\begin{itemize}
+\item
+	Special-relativistic Energy-Momentum Relation for a {\color{red}free} particle (see \S3.4, \cite{DeFariaDeMelo2010}):
+	\begin{equation}
+	\label{RelativisticEnergyMomentumRelation}
+	E^{2} \;=\; p^{2} \,+\, m^{2}
+	\end{equation}
+	\vskip 1.0px
+\item
+	First quantization on \eqref{RelativisticEnergyMomentumRelation}:
+	\begin{equation*}
+	E \;\longmapsto\; \i\,\dfrac{\partial}{\partial t}\,,
+	\quad\quad
+	p_{j} \;\longmapsto\; -\,\i\,\dfrac{\partial}{\partial x_{j}}
+	\end{equation*}
+	now yields the Klein-Gordon equation for a free particle:
+	\begin{equation}
+	\label{equationKleinGordon}
+	\left(\; \textnormal{\large$\Box$} \,+\, m^{2} \,\right)\psi
+	\;=\,
+	\left(\; \partial_{\mu}\partial^{\mu} \,+\, m^{2} \,\right)\psi
+	\;=\,
+	\left(\,\dfrac{\partial^{2}}{\partial t^{2}}
+	- \left(
+		\dfrac{\partial^{2}}{\partial x_{1}^{2}}
+		+ \dfrac{\partial^{2}}{\partial x_{2}^{2}}
+		+ \dfrac{\partial^{2}}{\partial x_{3}^{2}}
+		\right)
+	\,+\,
+		m^{2}
+		\,\right)
+	\psi
+	\;=\;
+		0
+	\end{equation}
+\item
+	The Klein-Gordon equation is indeed Lorentz-invariant but:
+	\vskip 1.5px
+	\begin{itemize}\itemindent=-10px
+	{\scriptsize
+	\item
+		it permits negative-energy eigenstates; see Example 6.1, \cite{LancasterBlundell2014}
+	\item
+		 probabilistic interpretation of (squared modulus of)
+		 Schr\"odinger's wave function is lost; see \S6.2, \cite{LancasterBlundell2014}
+	}
+	\end{itemize}
+	\vskip 5.0px
+\item
+	The Dirac equation addresses the second problem (i.e., restores dynamical/probabilistic interpretation).
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Dirac equation}
+
+\begin{itemize}
+\item
+	Dirac sought a new equation of motion by seeking a first-order linear differential operator
+	\begin{equation*}
+	D
+	\;=\;
+		\i\,\gamma^{\mu}\partial_{\mu}
+	\;=\;
+		\i\left(\,
+			\gamma^{0}\dfrac{\partial}{\partial x_{0}} 
+			\,+\, \gamma^{1}\dfrac{\partial}{\partial x_{1}} 
+			\,+\, \gamma^{2}\dfrac{\partial}{\partial x_{2}} 
+			\,+\, \gamma^{3}\dfrac{\partial}{\partial x_{3}} 
+			\,\right)
+	\end{equation*}
+	whose square is {\color{red}minus} the Minkowskian d'Alembertian
+	\;$\textnormal{\large$\Box$}
+	%\;=\;
+	%	\dfrac{\partial^{2}}{\partial t^{2}} \,-\, \Delta
+	\;=\;
+		\dfrac{\partial^{2}}{\partial t^{2}}
+		\,-\, \dfrac{\partial^{2}}{\partial x_{1}^{2}}
+		\,-\, \dfrac{\partial^{2}}{\partial x_{2}^{2}}
+		\,-\, \dfrac{\partial^{2}}{\partial x_{3}^{2}}
+	$.\,
+	\vskip 5px
+\item
+	Dirac arrived at the famous Dirac equation:
+	\begin{equation}
+	\label{TheDiracEquation}
+	\left(\,\i\cdot\gamma^{\mu}\partial_{\mu} - m\,\right)\psi \, = \, 0
+	\end{equation}
+	\vskip -6.0px
+	The requirement
+	\,$
+	-\,g^{\mu\nu}\partial_{\mu}\partial_{\nu}
+	\,=\,
+		{\color{red}-\,\textnormal{\large$\Box$}}
+	\;{\color{red}=}\;
+		{\color{red}\left(\,\i\cdot\gamma^{\mu}\partial_{\mu}\,\right)^{2}}
+	%\,=\,
+	%	\left(\,\i\cdot\gamma^{\mu}\partial_{\mu}\,\right)
+	%	\left(\,\i\cdot\gamma^{\nu}\partial_{\nu}\,\right)
+	\,=\,
+		-\,\gamma^{\mu}\gamma^{\nu}\partial_{\mu}\partial_{\nu}
+	\,=\,
+		-\left(\dfrac{\gamma^{\mu}\gamma^{\nu}+\gamma^{\nu}\gamma^{\mu}}{2}\right)\partial_{\mu}\partial_{\nu}
+		$\,
+	implies that \,$\gamma^{\mu}$\, must satisfy:
+	\begin{equation}
+	\label{GammaMatricesSatisfyCliffordRelation}
+	\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\}
+	\;=\;
+		2\cdot g^{\mu\nu}\,,
+	\end{equation}
+	where
+	\,$\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\} \,:=\, \gamma^{\mu}\gamma^{\nu} + \gamma^{\nu}\gamma^{\mu}$\,
+	and
+	\,$g^{\mu\nu} \,=\, \diag(1,-1,-1,-1)$.
+	\vskip 12px
+\item
+	{\color{white}.}
+	\vskip -22px
+	\begin{equation*}
+	\begin{array}{c}\textnormal{Dirac} \\ \textnormal{equation} \end{array}
+	\Longleftrightarrow\;\;\,
+	\i\,\gamma^{\mu}\partial_{\mu}\psi = m\,\psi
+	\;\;\Longrightarrow\;\;
+	%\i\,\gamma^{\mu}\partial_{\mu}\left(\i\,\gamma^{\mu}\partial_{\mu}\overset{{\color{white}$.$}{\psi}\right) = m\,\i\,\gamma^{\mu}\partial_{\mu}\psi
+	\underset{-\,\Box\psi}{\underbrace{{\color{white}.}{\color{red}\i\,\gamma^{\mu}\partial_{\mu}}\!\left(
+		\i\,\gamma^{\nu}\partial_{\nu}\overset{{\color{white}.}}{\psi}
+		\right)}}
+		= m\cdot\underset{m\,\psi}{\underbrace{{\color{red}\i\,\gamma^{\mu}\partial_{\mu}}\overset{{\color{white}.}}{\psi}}}
+	\;\;\,\Longrightarrow
+	\begin{array}{c}\textnormal{Klein-Gordon} \\ \textnormal{equation} \end{array}
+	\end{equation*}
+\end{itemize}
+
+\vskip 0.5cm
+\begin{itemize}
+\item
+	Condition \eqref{GammaMatricesSatisfyCliffordRelation} cannot be satisfied by complex numbers:
+	\begin{equation*}
+	\left.\begin{array}{c}
+		{\color{red}\left\{\,\gamma^{\mu}\,,\,\gamma^{\nu}\,\right\} \;=\;2\cdot g^{\mu\nu}}
+		\\
+		\overset{{\color{white}1}}{\gamma_{\mu}}\;\in\;\C,\;\;\forall\;\mu = 0,1,2,3
+	\end{array}\right\}
+	\quad\Longrightarrow\quad
+	\textnormal{contradiction}
+	\end{equation*}
+	But, Dirac observed that Condition \eqref{GammaMatricesSatisfyCliffordRelation}
+	could indeed be satisfied by a set of {\color{red}$4 \times 4$} complex matrices:
+	\vskip -10px
+	\input{tex/chiral-representation-of-Clifford-algebra}
+	\vskip 5px
+\item
+	So, Dirac sought solutions \,$\psi \in C^{\infty}(\mathcal{M},{\color{red}\C^{4}})$\,
+	for the Dirac equation: \,$\left(\,\i\,{\color{red}\gamma^{\mu}}\partial_{\mu} \overset{{\color{white}.}}{-} m\right)\psi = 0$.\,
+%\item
+%	This observation led to the following realization (when expressed in modern geometric language):
+%	The ``wave function'' \,$\psi$\, must be smooth sections of a spinor bundle over spacetime.
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
