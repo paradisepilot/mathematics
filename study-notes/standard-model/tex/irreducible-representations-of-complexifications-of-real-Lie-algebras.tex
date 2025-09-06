@@ -1,0 +1,199 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Irreducible complex representations of a real Lie algebra versus those of its complexification}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Complexifications of real Lie algebras}
+
+\begin{definition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let \,$V$\, be a finite-dimensional vector space over \,$\Re$.\,
+Then, the \textbf{complexification} \,$V_{\C}$\, is
+the (finite-dimensional) vector space \,$\C$\, obtained as follows:
+\begin{itemize}
+\item
+	The underlying set (of vectors) of \,$V_{\C}$\, is the set of all formal linear combinations
+	of the form:
+	\begin{equation*}
+	v_{1} \, + \, \i\cdot v_{2}\,,
+	\end{equation*}
+	where \,$v_{1}, v_{2} \in V$.\,
+\item
+	Complex scalar multiplication on \,$V_{\C}$\, is defined as follows:
+	\begin{equation*}
+	(a + \i \, b) \cdot \left(\;\overset{{\color{white}.}}{v_{1}} \, + \, \i\cdot v_{2}\,\right)
+	\;\; := \;\;
+		\left(\,a\cdot\overset{{\color{white}.}}{v_{1}} - b \cdot v_{2} \,\right)
+		\; + \;
+		\i\cdot\left(\,a\cdot\overset{{\color{white}.}}{v_{2}} + b \cdot v_{1} \,\right)
+	\end{equation*}	
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let \,$\mathfrak{g}$\, be a finite-dimensional real Lie algebra and
+\,$\mathfrak{g}_{\C}$\, its vector-space complexification.
+Then, the Lie bracket of \,$\mathfrak{g}$\, has a unique extension to \,$\mathfrak{g}_{\C}$\,
+that makes  \,$\mathfrak{g}_{\C}$\, into a complex Lie algebra.
+The resulting complex Lie algebra -- still denoted as \,$\mathfrak{g}_{\C}$\, -- is called
+the \textbf{complexification} of \,$\mathfrak{g}$.\,
+\end{proposition}
+\proof
+The unique extension
+\,$[\;\cdot\,,\,\cdot\,]_{\mathfrak{g}_{\C}}$\,
+to \,$\mathfrak{g}_{\C}$\, of
+\,$[\;\cdot\,,\,\cdot\,]_{\mathfrak{g}}$\,
+is given by
+\begin{equation*}
+\left[\;
+	X_{1} \overset{{\color{white}.}}{+} \i\cdot Y_{1}
+	\;,\,
+	X_{2} \overset{{\color{white}.}}{+} \i\cdot Y_{2}
+	\,\right]_{\mathfrak{g}_{\C}}
+\;\, := \;\;
+	\left(\;
+		[\,X_{1},X_{2}\,]_{\mathfrak{g}}
+		\; \overset{{\color{white}1}}{-} \,
+		[\,Y_{1},Y_{2}\,]_{\mathfrak{g}}
+		\,\right)
+	\; + \;
+	\i \cdot\! \left(\;
+		[\,X_{1},Y_{2}\,]_{\mathfrak{g}}
+		\; \overset{{\color{white}1}}{+} \,
+		[\,Y_{1},X_{2}\,]_{\mathfrak{g}}
+		\,\right)
+\end{equation*}
+for each \,$X_{1}, Y_{1}, X_{2}, Y_{2} \in \mathfrak{g}$.
+For the proof, see Proposition 3.37, p.65, \cite{Hall2015}.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}[Universal property of the complexification of a real Lie algebra]
+\label{UniqueExtensionOfRealLieAlgebraHomomorphisms}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let \,$\mathfrak{g}$\, be a finite-dimensional real Lie algebra and
+\,$\mathfrak{g}_{\C}$\, its Lie-algebra complexification.
+Let \,$\mathfrak{h}$\, be an arbitrary complex Lie algebra.
+Then, every real Lie algebra homomorphism \,$\pi$\,
+from \,$\mathfrak{g}$\, into \,$\mathfrak{h}$\,
+extends uniquely to a complex Lie algebra homomorphsim \,$\pi_{\C}$\,
+from \,$\mathfrak{g}_{\C}$\, into \,$\mathfrak{h}$.\,
+\end{proposition}
+\proof
+The unique extension \,$\pi_{\C}$\, is given by
+\begin{equation*}
+\pi_{\C}\!\left(\,X \overset{{\color{white}.}}{+} \i\cdot Y \right)
+\;\, := \;\;
+	\pi(X) \overset{{\color{white}.}}{+} \i\cdot \pi(Y)\,,
+\quad
+\textnormal{for each \,$X, Y \in \mathfrak{g}$}
+\end{equation*}
+For the proof, see Proposition 3.39, p.67, \cite{Hall2015}.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Irreducible representations of the complexification of a real Lie algebra}
+
+\begin{proposition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let \,$\mathfrak{g}$\, be a real Lie algebra and
+\,$\mathfrak{g}_{\C}$\, its Lie-algebra complexification.
+Let \,$V$\, be an arbitrary finite-dimensional complex vector space.
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	Every real Lie algebra homomorphism
+	\,$\pi : \mathfrak{g} \longrightarrow \End_{\Re}(V)$\,
+	has a unique extension to a complex Lie algebra homomorphism
+	\,$\pi_{\C} : \mathfrak{g}_{\C} \longrightarrow \End_{\C}(V)$.\,
+\item
+	$\pi$\, is irreducible if and only if \,$\pi_{\C}$\, is irreducible.
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	Immediate by Proposition \ref{UniqueExtensionOfRealLieAlgebraHomomorphisms}.
+\item
+	Recall that a representation of (real or complex) Lie algebra is irreducible if it has
+	no non-trivial invariant subspaces.
+	Thus, the equivalence of the irreducibility of \,$\pi$\, and that of \,$\pi_{\C}$\,
+	will follow from the fact that the two representations share the same collection
+	of invariant subspaces. In other words, it suffices to establish the following:
+	\vskip 0.2cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	Suppose \,$\{\,0\,\} \subsetneq W \subsetneq V$\, is a proper (complex) subspace of \,$V$.\,
+	Then, \,$W$\, is \,$\pi$-invariant if and only if it is \,$\pi_{\C}$-invariant. 
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\quad
+	Let \,$w \in W$\, be an arbitrary element of \,$W$.\,
+	Suppose first that \,$W$\, is \,$\pi$-invariant.
+	Then, for each \,$X, Y \in \mathfrak{g}$,\, we have:
+	\begin{eqnarray*}
+	\pi_{\C}\!\left(\,X \overset{{\color{white}.}}{+} \i\cdot Y \right) \cdot [\,w\,]
+	& = &
+		\left(\,\pi(X) \overset{{\color{white}.}}{+} \i\cdot \pi(Y) \right) \cdot [\,w\,]
+	\\
+	& = &
+		\pi(X) \cdot w \;\overset{{\color{white}.}}{+}\; \i\cdot \pi(Y) \cdot w
+	\;\; \in \;\;
+		W \; + \; \i \cdot W
+	\;\; = \;\;
+		W,
+	\end{eqnarray*}
+	which proves that \,$W$\, is also \,$\pi_{\C}$-invariant.
+	Conversely, now suppose that \,$W$\, is \,$\pi_{\C}$-invariant.
+	Then, for each \,$X \in \mathfrak{g}$,\, we have:
+	\begin{equation*}
+	\pi(X)\cdot w
+	\;\; = \;\;
+		\left(\,\pi(X) \overset{{\color{white}.}}{+} \i\cdot \pi(0_{\mathfrak{g}}) \right) \cdot [\,w\,]
+	\;\; = \;\;
+		\pi_{\C}\!\left(\,X \overset{{\color{white}.}}{+} \i\cdot 0_{\mathfrak{g}} \right) \cdot [\,w\,]
+	\;\; \in \;\;
+		W,
+	\end{equation*}
+	which proves that \,$W$\, is also \,$\pi$-invariant.
+	This proves Claim 1, as well as completes the proof of the Proposition.
+\end{enumerate}
+\qed
+
+\vskip 0.5cm
+\begin{remark}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Intuitively speaking, the preceding Proposition says that
+the set of irreducible finite-dimensional complex representations of a real Lie algebra
+is a ``subset'' of 
+the set of irreducible finite-dimensional complex representations of its (Lie-algebra) complexification.
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
