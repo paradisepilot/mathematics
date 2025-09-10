@@ -1,0 +1,250 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Induced representations of semidirect products \,$G_{0} \ltimes H$\, with \,$H$\, abelian}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Semi-direct products}
+
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$G$\, and \,$H$\, are two groups, and
+\item
+	$\rho : G \longrightarrow \textnormal{Aut}(H)$\,
+	is a left action of \,$G$\, on \,$H$.\,
+\end{itemize}
+Then, the \textbf{semidirect product} \,$G \ltimes_{\rho}\! H$\,
+of \,$G$\, and \,$H$\, \textbf{\color{red}with respect to \,$\rho$}\,
+is defined to be the group
+obtained by defining on the Cartesian product
+\,$G \times N$\,
+the multiplication law:
+\begin{equation*}
+(\,g_{1},h_{1}\,) \cdot (\,g_{2},h_{2}\,)
+\;\; = \;\;
+	\left(\,
+		\overset{{\color{white}1}}{g_{1}} \cdot g_{2}
+		\,\overset{{\color{white}1}}{,}\,
+		h_{1} \cdot \rho(g_{1}) \cdot h_{2}
+		\,\right)
+\end{equation*}
+The identity element of \,$G \ltimes_{\rho}\! H$\, is then
+\begin{equation*}
+1_{G \ltimes H}
+\;\; = \;\;
+	\left(\,
+		\overset{{\color{white}1}}{1_{G}}
+		\,\overset{{\color{white}1}}{,}\,
+		1_{H}
+		\,\right)
+\end{equation*}
+and the inverse of \,$(\,g,h\,) \in G \ltimes_{\rho}\! H$\, is given by:
+\begin{equation*}
+(\, g \,,\, n \,)^{-1}
+\;\; = \;\;
+	\left(\;
+		g^{-1}
+		\;\overset{{\color{white}1}}{,}\;
+		\overset{{\color{white}1}}{\rho}(g^{-1}) \cdot n^{-1}
+		\;\right)
+\end{equation*}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$G$\, is a group, \,$H$\, an {\color{red}abelian} group, and
+\item
+	$\rho : G \longrightarrow \textnormal{Aut}(H)$\,
+	is a left action of \,$G$\, on \,$H$,\,
+\item
+	$\pi : G \ltimes_{\rho}\! H \longrightarrow \GL(V)$\,
+	is an arbitrary representation of the semidirect product
+	\,$G \ltimes_{\rho}\! H$\, with respect to \,$\rho$,\, and
+\item
+	$\pi_{G} : G \longrightarrow \GL(V)$\, and \,$\pi_{H} : G \longrightarrow \GL(V)$\,
+	are the restrictions of \,$\pi$\, to \,$G$\, and \,$H$,\, respectively; i.e.,
+	\,$\pi_{G}$\, and \,$\pi_{H}$\,
+	are given by:
+	\begin{equation*}
+	\pi_{G}(\,g\,) \; := \; \pi\!\left(\,(\,\overset{{\color{white}1}}{g}\,,0\,)\,\right),
+	\quad\quad
+	\textnormal{and}
+	\quad\quad
+	\pi_{H}(\,h\,) \; := \; \pi\!\left(\,(\,1_{G}\,,\overset{{\color{white}1}}{h}\,)\,\right).
+	\end{equation*}
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	$\pi$\, is completely determined by its restrictions \,$\pi_{G}$\, and \,$\pi_{H}$,\, and
+\item
+	\,$\pi_{G}$\, and \,$\pi_{H}$\, satisfy the following equality:
+	\begin{equation*}
+	\pi_{H}\!\left(\,\rho(g) \cdot \overset{{\color{white}.}}{h}\,\right)
+	\;\; = \;\;
+		\pi_{G}\!\left(\; \overset{{\color{white}.}}{g} \,\right)
+		\cdot
+		\pi_{H}\!\left(\overset{{\color{white}.}}{{\color{white}g}}\!\! h \,\right)
+		\cdot
+		\pi_{G}\!\left(\; g^{-1} \,\right)
+	\end{equation*}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	Note that
+	\,$(\,g\,,h\,) \;=\; \left(\;1_{G} \cdot g\,,\, h + \rho(g)\cdot \overset{{\color{white}.}}{0}\,\right) \;=\; (\,1_{G}\,,h\,)\cdot (\,g\,,0\,)$.\,
+	Hence,
+	\begin{equation*}
+	\pi\!\left(\;(\,\overset{{\color{white}1}}{g}\,,h\,)\;\right)
+	\;\; = \;\;
+		\pi\!\left(\;
+			(\,1_{G}\,,h\,)
+			\cdot
+			(\,\overset{{\color{white}1}}{g}\,,0\,)
+			\;\right)
+	\;\; = \;\;
+		\pi\!\left(\;
+			(\,1_{G}\,,\overset{{\color{white}.}}{h}\,)
+			\;\right)
+		\cdot
+		\pi\!\left(\;
+			(\,\overset{{\color{white}.}}{g}\,,\overset{{\color{white}.}}{0}\,)
+			\;\right)
+	\;\; = \;\;
+		\pi_{H}(\,h\,) \cdot \pi_{G}(\,g\,),
+	\end{equation*}
+	which proves that \,$\pi$\, is indeed completely determined by
+	\,$\pi_{G}$\, and \,$\pi_{H}$.\,
+\item
+	Recall the multiplication law of \,$G \ltimes_{\rho}\! H$:\,
+	\begin{equation*}
+	(\,g_{1},h_{1}\,) \cdot (\,g_{2},h_{2}\,)
+	\;\; = \;\;
+		\left(\;
+			\overset{{\color{white}1}}{g_{1}} \cdot g_{2}
+			\;\overset{{\color{white}1}}{,}\;
+			h_{1} + \rho(g_{1}) \cdot h_{2}
+			\;\right)
+	\end{equation*}
+	Hence,
+	\begin{eqnarray*}
+	\pi_{H}(\,h_{1}\,) \cdot \pi_{G}(\,g_{1}\,)
+	\cdot
+	\pi_{H}(\,h_{2}\,) \cdot \pi_{G}(\,g_{2}\,)
+	& = &
+		\pi\!\left(\;
+			(\,\overset{{\color{white}1}}{g_{1}},h_{1}\,)
+			\;\right)
+		\cdot
+		\pi\!\left(\;
+			(\,\overset{{\color{white}1}}{g_{2}},h_{2}\,)
+			\;\right)
+	\\
+	& = &
+		\pi\!\left(\;
+			(\,g_{1},h_{1}\,) \overset{{\color{white}1}}{\cdot} (\,g_{2},h_{2}\,)
+			\;\right)
+	\\
+	& = &
+		\pi\!\left(\;
+			\left(\;
+				\overset{{\color{white}1}}{g_{1}} \cdot g_{2}
+				\;\overset{{\color{white}1}}{,}\;
+				h_{1} + \rho(g_{1}) \cdot h_{2}
+				\;\right)
+			\;\right)
+	\\
+	& = &
+		\pi_{H}\!\left(\;h_{1} + \rho(g_{1}) \overset{{\color{white}1}}{\cdot} h_{2}\;\right)
+		\cdot
+		\pi_{G}(\;g_{1}\cdot g_{2}\,)
+	\\
+	& = &
+		\pi_{H}\!\left(\;\overset{{\color{white}.}}{h_{1}}\;\right)
+		\cdot
+		\pi_{H}\!\left(\;\rho(g_{1}) \overset{{\color{white}1}}{\cdot} h_{2}\;\right)
+		\cdot
+		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g_{1}}\;\right)
+		\cdot
+		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g_{2}}\;\right)
+	\end{eqnarray*}
+	Hence,
+	\begin{equation*}
+		\pi_{H}\!\left(\;\overset{{\color{white}.}}{h_{1}}\;\right)
+		\cdot
+		\pi_{H}\!\left(\;\rho(g_{1}) \overset{{\color{white}1}}{\cdot} h_{2}\;\right)
+		\cdot
+		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g_{1}}\;\right)
+		\cdot
+		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g_{2}}\;\right)
+	\;\; = \;\;
+		\pi_{H}(\,h_{1}\,) \cdot \pi_{G}(\,g_{1}\,)
+		\cdot
+		\pi_{H}(\,h_{2}\,) \cdot \pi_{G}(\,g_{2}\,)
+	\end{equation*}
+	Setting, in the above equality,
+	\,$g_{1} = g$,\,  $h_{1} = 0$,\, $g_{2} = 1_{G}$\, and \,$h_{2} = h$\,
+	yields
+	\begin{equation*}
+		\pi_{H}\!\left(\;\overset{{\color{white}.}}{0}\;\right)
+		\cdot
+		\pi_{H}\!\left(\;\rho(g) \overset{{\color{white}1}}{\cdot} h\;\right)
+		\cdot
+		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g}\;\right)
+		\cdot
+		\pi_{G}\!\left(\;\overset{{\color{white}.}}{1_{G}}\;\right)
+	\;\; = \;\;
+		\pi_{H}(\,0\,) \cdot \pi_{G}(\,g\,)
+		\cdot
+		\pi_{H}(\,h\,) \cdot \pi_{G}(\,1_{G}\,)\,,
+	\end{equation*}
+	which simplifies to
+	\begin{equation*}
+		\pi_{H}\!\left(\;\rho(g) \overset{{\color{white}1}}{\cdot} h\;\right)
+		\cdot
+		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g}\;\right)
+	\;\; = \;\;
+		\pi_{G}(\,g\,)
+		\cdot
+		\pi_{H}(\,h\,)
+	\end{equation*}
+	which can further be rewritten as
+	\begin{equation*}
+		\pi_{H}\!\left(\;\rho(g) \overset{{\color{white}-}}{\cdot} h\;\right)
+	\;\; = \;\;
+		\pi_{G}(\,g\,)
+		\cdot
+		\pi_{H}(\,h\,)
+		\cdot
+		\pi_{G}\!\left(\,\overset{{\color{white}.}}{{\color{white}g}}\!\!g^{-1}\;\right),
+	\end{equation*}
+	as required. \qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
