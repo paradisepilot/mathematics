@@ -21,11 +21,11 @@
 \vskip 0.05cm
 \noindent
 Intuitively speaking, one could say that
-the set of irreducible finite-dimensional {\color{red}complex representations} of a {\color{red}real Lie algebra}
-is a ``subset'' of 
-the set of irreducible finite-dimensional complex representations of its (Lie-algebra) {\color{red}complexification}.
-The precise statement is stated in
-Proposition \ref{propnIrreducibleComplexRepresentationsOfRealLieAlgebras}
+the collection of irreducible finite-dimensional {\color{red}complex representations} of a {\color{red}real Lie algebra}
+is the ``same'' as
+the collection of irreducible finite-dimensional complex representations of its (Lie-algebra) {\color{red}complexification}.
+The precise statement is stated as
+Corollary \ref{ComplexIrrrepsOfARealLieAlgebraAreTheSameAsTheRealOnes}
 \end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -148,21 +148,33 @@ For the proof, see Proposition 3.39, p.67, \cite{Hall2015}.
 \vskip 0.05cm
 \noindent
 Let \,$\mathfrak{g}$\, be a real Lie algebra and
-\,$\mathfrak{g}_{\C}$\, its Lie-algebra complexification.
-Let \,$V$\, be an arbitrary finite-dimensional complex vector space.
+\,$\mathfrak{g}_{\C} = \mathfrak{g} + \i\cdot\mathfrak{g}$\,
+its Lie-algebra complexification.
+Let \,$V$\, be an arbitrary finite-dimensional complex vector space,
+and \,$\gl(V)$\, the complex Lie algebra of all complex-linear maps from \,$V$\, into itself.
 Then, the following statements are true:
 \begin{enumerate}
 \item
+	Every complex Lie algebra homomorphism
+	\,$\rho : \mathfrak{g}_{\C} \longrightarrow \gl(V)$\,
+	induces a real Lie algebra homomorphism
+	\,$\rho_{\,\Re} : \mathfrak{g} \longrightarrow \gl(V)$\,
+	simply by restricting the domain of
+	\,$\rho$\, from \,$\mathfrak{g}_{\C}$\, to \,$\mathfrak{g}$,\,
+	and restricting the scalar field from \,$\C$\, to \,$\Re$.\, 
+\item
 	Every real Lie algebra homomorphism
-	\,$\pi : \mathfrak{g} \longrightarrow \End_{\Re}(V)$\,
+	\,$\pi : \mathfrak{g} \longrightarrow \gl(V)$\,
 	has a unique extension to a complex Lie algebra homomorphism
-	\,$\pi_{\C} : \mathfrak{g}_{\C} \longrightarrow \End_{\C}(V)$.\,
+	\,$\pi_{\C} : \mathfrak{g}_{\C} \longrightarrow \gl(V)$.\,
 \item
 	$\pi$\, is irreducible if and only if \,$\pi_{\C}$\, is irreducible.
 \end{enumerate}
 \end{proposition}
 \proof
 \begin{enumerate}
+\item
+	Trivial.
 \item
 	Immediate by Proposition \ref{UniqueExtensionOfRealLieAlgebraHomomorphisms}.
 \item
@@ -208,7 +220,48 @@ Then, the following statements are true:
 	\end{equation*}
 	which proves that \,$W$\, is also \,$\pi$-invariant.
 	This proves Claim 1, as well as completes the proof of the Proposition.
+	\qed
 \end{enumerate}
-\qed
+
+\vskip 0.5cm
+\begin{corollary}
+\label{ComplexIrrrepsOfARealLieAlgebraAreTheSameAsTheRealOnes}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let \,$\mathfrak{g}$\, be a real Lie algebra and
+\,$\mathfrak{g}_{\C} = \mathfrak{g} + \i\cdot\mathfrak{g}$\,
+its Lie-algebra complexification.
+Then, there is a bijection between their respective collections of finite-dimensional complex representations:
+\begin{equation*}
+\left\{\begin{array}{c}
+	\textnormal{{\color{red}real} Lie algebra homomorphisms}
+	\\
+	{\color{red}\mathfrak{g}} \longrightarrow \gl(V),
+	\\
+	\textnormal{where $V$ is a finite-dimensional}
+	\\
+	\textnormal{\textbf{complex} vector space}
+	\end{array}\right\}
+\quad
+\begin{array}{c}
+\overset{\underset{{\color{white}.}}{\textnormal{extension}}}{\textnormal{\Huge$\longrightarrow$}}
+\\
+\underset{{\textnormal{restriction}}}{\textnormal{\Huge$\longleftarrow$}}
+\end{array}
+\quad
+\left\{\begin{array}{c}
+	\textnormal{{\color{red}complex} Lie algebra homomorphisms}
+	\\
+	{\color{red}\mathfrak{g}_{\C}} \longrightarrow \gl(V),
+	\\
+	\textnormal{where $V$ is a finite-dimensional}
+	\\
+	\textnormal{\textbf{complex} vector space}
+	\end{array}\right\}
+\end{equation*}
+Furthermore, the above bijection preserves irreducibility.
+\end{corollary}
+
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
