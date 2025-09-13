@@ -425,3 +425,251 @@ The Proposition follows straightforwardly by direct computations.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[The representations \,\textnormal{$\pi_{d} : \su(2) \otimes_{\Re} \C \longrightarrow \gl\!\left(\,\overset{{\color{white}.}}{\C}[X,Y]_{d}\,\right)$}]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$d \,\in\, \{\,0, 1, 2, 3, \ldots\,\}$,
+\item
+	$\C[X,Y]_{d}$\,
+	is the complex vector space of homogeneous polynomials of degree $d$
+	in the indeterminates $X$ and $Y$ with complex coefficients.
+\item
+	Define
+	\,$\pi_{d} : \su(2) \otimes_{\Re} \C \longrightarrow \gl\!\left(\,\overset{{\color{white}.}}{\C}[X,Y]_{d}\,\right)$\,
+	by complex-linearly extending:
+	\begin{equation*}
+	\pi_{d}\!\left(\,S_{+}\,\right)
+	\; := \;
+		-\,Y\cdot\dfrac{\partial}{\partial\,X},
+	\quad\;\;\;
+	\pi_{d}\!\left(\,S_{-}\,\right)
+	\; := \;
+		-\,X\cdot\dfrac{\partial}{\partial\,Y},
+	\quad\;\;\;
+	\pi_{d}\!\left(\,S_{3}\,\right)
+	\; := \;
+		-\,\dfrac{1}{2}\cdot\left(\,X\cdot\dfrac{\partial}{\partial\,X} - Y\cdot\dfrac{\partial}{\partial\,Y}\right)
+	\end{equation*}
+\end{itemize}
+Then, 
+\,$\pi_{d} : \su(2) \otimes_{\Re} \C \longrightarrow \gl\!\left(\,\overset{{\color{white}.}}{\C}[X,Y]_{d}\,\right)$\,
+is an irreducible finite-dimensional complex representation of the complex Lie algebra
+\,$\su(2) \otimes_{\Re} \C$.\,
+\end{proposition}
+\proof
+We first establish that \,$\pi_{d}$\, is indeed a representation (i.e., it is a Lie algebra homomorphism).
+To this end, it suffices to establish that \,$\pi_{d}$\, preserves commutation relations.
+Now, observe that:
+\begin{eqnarray*}
+\left[\;
+	\overset{{\color{white}1}}{\pi_{d}}\!\left(\,S_{+}\,\right)
+	\, , \,
+	\pi_{d}\!\left(\,S_{-}\,\right)
+	\,\right]
+	(X^{m}Y^{n})
+& = &
+	\left[\;
+		-\,Y\cdot\dfrac{\partial}{\partial\,X}
+		\;\; , \,
+		-\,X\cdot\dfrac{\partial}{\partial\,Y}
+		\,\right]
+		(X^{m}Y^{n})
+\\
+& = &
+	\left[\;
+		Y\cdot\dfrac{\partial}{\partial\,X}
+		\;\; , \,
+		X\cdot\dfrac{\partial}{\partial\,Y}
+		\,\right]
+		(X^{m}Y^{n})
+\\
+& = &
+	Y\cdot\dfrac{\partial}{\partial\,X}\!\left(\,
+		\overset{{\color{white}.}}{X}\,X^{m} \cdot n \cdot Y^{n-1}
+		\,\right)
+	\, - \,
+	X\cdot\dfrac{\partial}{\partial\,Y}\!\left(\,
+		\overset{{\color{white}.}}{Y} \cdot m \cdot X^{m-1} \, Y^{n}
+		\,\right)
+\\
+& = &
+	n \cdot Y \cdot \dfrac{\partial}{\partial\,X}\!\left(\,
+		\overset{{\color{white}.}}{X^{m+1}} - Y^{n-1}
+		\,\right)
+	\, - \,
+	m \cdot X \cdot \dfrac{\partial}{\partial\,X}\!\left(\,
+		\overset{{\color{white}.}}{X^{m-1}} - Y^{n+1}
+		\,\right)
+\\
+& = &
+	n(m+1) \cdot \overset{{\color{white}1}}{X^{m}}\,Y^{n} \, - \, m(n+1) \cdot X^{m}\,Y^{n}
+\\
+& = &
+	(n-m) \cdot \overset{{\color{white}1}}{X^{m}\,Y^{n}}
+\end{eqnarray*}
+On the other hand,
+\begin{eqnarray*}
+\pi_{d}(S_{3})\!\left(\,\overset{{\color{white}.}}{X^{m}Y^{n}}\,\right)
+& = &
+	-\,\dfrac{1}{2}\cdot\left(\,X\cdot\dfrac{\partial}{\partial\,X} - Y\cdot\dfrac{\partial}{\partial\,Y}\right)
+	\!\left(\,\overset{{\color{white}.}}{X^{m}Y^{n}}\,\right)
+\\
+& = &
+	-\,\dfrac{1}{2}\cdot\left(\,
+		\overset{{\color{white}.}}{X} \cdot m \cdot X^{m-1}\,Y^{n}
+		\, - \,
+		Y \cdot X^{m} \cdot n \cdot Y^{n-1}
+		\,\right)
+\\
+& = &
+	- \, \dfrac{1}{2} \cdot (m-n) \cdot \overset{{\color{white}1}}{X^{m}\,Y^{n}}
+\;\; = \;\;
+	\dfrac{1}{2} \cdot (n-m) \cdot \overset{{\color{white}1}}{X^{m}\,Y^{n}}
+\\
+& = &
+	\dfrac{1}{2} \cdot
+	\left[\;
+		\overset{{\color{white}1}}{\pi_{d}}\!\left(\,S_{+}\,\right)
+		\, , \,
+		\pi_{d}\!\left(\,S_{-}\,\right)
+		\,\right]
+		(X^{m}Y^{n})
+\end{eqnarray*}
+This proves that
+\begin{equation*}
+\left[\;
+	\overset{{\color{white}1}}{\pi_{d}}\!\left(\,S_{+}\,\right)
+	\, , \,
+	\pi_{d}\!\left(\,S_{-}\,\right)
+	\,\right]
+\;\; = \;\;
+	2 \cdot \pi_{d}(S_{3})
+\end{equation*}
+Next, note
+\begin{eqnarray*}
+\left[\;
+	\overset{{\color{white}1}}{\pi_{d}}\!\left(\,S_{3}\,\right)
+	\, , \,
+	\pi_{d}\!\left(\,S_{+}\,\right)
+	\,\right]
+	(X^{m}Y^{n})
+& = &
+	\left[\;\,
+		-\,\dfrac{1}{2}\cdot\left(\,X\cdot\dfrac{\partial}{\partial\,X} - Y\cdot\dfrac{\partial}{\partial\,Y}\right)
+		\; , \;
+		-\,Y\cdot\dfrac{\partial}{\partial\,X}
+		\,\right]
+		(X^{m}Y^{n})
+\\
+& = &
+	\left[\;\,
+		\dfrac{1}{2}\cdot\left(\,X\cdot\dfrac{\partial}{\partial\,X} - Y\cdot\dfrac{\partial}{\partial\,Y}\right)
+		\; , \;
+		Y\cdot\dfrac{\partial}{\partial\,X}
+		\,\right]
+		(X^{m}Y^{n})
+\\
+& = &
+	\dfrac{1}{2}\cdot\left(\,X\cdot\dfrac{\partial}{\partial\,X} - Y\cdot\dfrac{\partial}{\partial\,Y}\right)
+	\left(\, Y \cdot m \cdot X^{m-1}\,Y^{n} \,\right)
+\\
+&&
+	-\,Y\cdot\dfrac{\partial}{\partial\,X}\left(\,
+		\dfrac{1}{2}\left(\,
+			X \cdot m \cdot X^{m-1}\,Y^{n} \,-\, Y \cdot X^{m} \cdot n \cdot Y^{n-1}
+			\,\right)
+		\,\right)
+\\
+& = &
+	\dfrac{1}{2}\cdot\left(\,X\cdot\dfrac{\partial}{\partial\,X} - Y\cdot\dfrac{\partial}{\partial\,Y}\right)
+	\left(\, m \cdot X^{m-1}\,Y^{n+1} \,\right)
+\\
+&&
+	-\,Y\cdot\dfrac{\partial}{\partial\,X}\left(\,
+		\dfrac{1}{2}\,(m-n)\,X^{m}\,Y^{n}
+		\,\right)
+\\
+& = &
+	\dfrac{1}{2}\left(\,
+		\overset{{\color{white}.}}{X} \cdot m \cdot (m-1) \cdot X^{m-2}\,Y^{n+1}
+		\,-\,
+		Y \cdot m \cdot X^{m-1} \cdot (n+1) \cdot Y^{n}
+		\,\right)
+\\
+&&
+	-\,Y\cdot\dfrac{1}{2}\,(m-n)\cdot m \cdot X^{m-1}\,Y^{n}
+\\
+& = &
+	\dfrac{1}{2}\left(\,
+		m\,(m-1)\cdot \overset{{\color{white}.}}{X^{m-1}}\,Y^{n+1}
+		\,-\,
+		m\,(n+1)\cdot X^{m-1}\,Y^{n+1}
+		\,\right)
+\\
+&&
+	-\,\dfrac{1}{2} \cdot m\,(m-n) \cdot X^{m-1}\,Y^{n+1}
+\\
+& = &
+	\dfrac{m}{2}\left(\,
+		m - \overset{{\color{white}.}}{1} - n - 1 - m + n
+		\,\right)
+	X^{m-1}\,Y^{n+1}
+\;\; = \;\;
+	\dfrac{m}{2}\left(\,-\,\overset{{\color{white}.}}{2}\,\right)X^{m-1}\,Y^{n+1}
+\\
+& = &
+	-\,m\,\overset{{\color{white}1}}{X^{m-1}}\,Y^{n+1}
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\pi_{d}(S_{+})\!\left(\,\overset{{\color{white}.}}{X^{m}Y^{n}}\,\right)
+& = &
+	-\,Y\cdot\dfrac{\partial}{\partial\,X}\!\left(\,\overset{{\color{white}.}}{X^{m}Y^{n}}\,\right)
+\;\; = \;\;
+	-\, Y \cdot m \cdot X^{m-1}\,Y^{n}
+\;\; = \;\;
+	-\, m \, X^{m-1}\,Y^{n+1}
+\\
+& = &
+	\left[\;
+		\overset{{\color{white}1}}{\pi_{d}}\!\left(\,S_{3}\,\right)
+		\, , \,
+		\pi_{d}\!\left(\,S_{+}\,\right)
+		\,\right]
+		(X^{m}Y^{n})
+\end{eqnarray*}
+This proves:
+\begin{equation*}
+\left[\;
+	\overset{{\color{white}1}}{\pi_{d}}\!\left(\,S_{3}\,\right)
+	\, , \,
+	\pi_{d}\!\left(\,S_{+}\,\right)
+	\,\right]
+\;\; = \;\;
+	\pi_{d}(S_{+})
+\end{equation*}
+Similar calculations will show:
+\begin{equation*}
+\left[\;
+	\overset{{\color{white}1}}{\pi_{d}}\!\left(\,S_{3}\,\right)
+	\, , \,
+	\pi_{d}\!\left(\,S_{-}\,\right)
+	\,\right]
+\;\; = \;\;
+	-\,\pi_{d}(S_{-})
+\end{equation*}
+This completes the proof that
+\,$\pi_{d} : \su(2) \otimes_{\Re} \C \longrightarrow \gl\!\left(\,\overset{{\color{white}.}}{\C}[X,Y]_{d}\,\right)$\,
+is indeed a complex representation of the complex Lie algebra
+\,$\su(2) \otimes_{\Re} \C$.\,
+It remains to show that \,$\pi_{d}$\, is irreducible.
+\qed
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
