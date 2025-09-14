@@ -541,11 +541,10 @@ w,\;\;\; \rho(S_{+})(\,w\,),\;\;\; \rho(S_{+})^{2}(\,w\,),\;\;\; \rho(S_{+})^{3}
 \end{equation*}
 If each vector in the above sequence were nonzero, then,
 by Corollary \ref{RaisingLoweringEigenvalues}, they would form an infinite sequence of eigenvectors of
-\,$\rho(S_{3})$\, corresponding to eigenvalues \,$\lambda,\;\lambda+1,\;\lambda+2,\;\lambda+3,\;\ldots$\,,
-respectively.
+\,$\rho(S_{3})$\, with respective eigenvalues \,$\lambda,\;\lambda+1,\;\lambda+2,\;\lambda+3,\;\ldots$\,.
 Since these eigenvalues are pairwise distinct, the aforementioned sequence of eigenvectors are linearly independent.
 This contradicts the finite-dimensionality of $V$.
-Hence, we see that there must exists $k \geq 0$ such that
+Hence, we see that there must exist $k \geq 0$ such that
 \,$\rho(S_{+})^{k}(\,w\,) \neq 0$\, and \,$\rho(S_{+})^{k+1}(\,w\,) = 0$.\,
 Now, set \,$v := \rho(S_{+})^{k}(\,w\,) \neq 0$.\,
 Then,
@@ -956,17 +955,377 @@ Then, the following statements are true:
 \mbox{}
 \vskip 0.1cm
 \noindent
-Every irreducible finite-dimensional complex representation \,$\rho$\, of the complex Lie algebra
+Every irreducible finite-dimensional complex representation
+\,$\rho : \su(2) \otimes_{\Re} \C \,\longrightarrow\, \gl\!\left(V\right)$\,
+of the complex Lie algebra
 \,$\su(2) \otimes_{\Re} \C$\,
-is equivalent to one of the representations explicitly constructed in Proposition \ref{IrrepsLittleSU2CXYd},
-i.e., \,$\rho$\, is equivalent to
+is isomorphic to one of the representations explicitly constructed in Proposition \ref{IrrepsLittleSU2CXYd},
+i.e., \,$\rho$\, is isomorphic to
 \begin{equation*}
 \pi_{d} : \su(2) \otimes_{\Re} \C \,\longrightarrow\, \gl\!\left(\,\overset{{\color{white}.}}{\C}[X,Y]_{d}\,\right)
 \end{equation*}
 for some \,$d \in \{\,0, 1, 2, \ldots \,\}$.
 \end{theorem}
 \proof
-
+By Corollary \ref{EigenvectorOfS3KilledBySplus}, there exists an eigenvector
+\,$0 \neq w \in V$\, of \,$\rho(S_{3})$\, such that \,$\rho(S_{+})(\,w\,) = 0$.\,
+Let \,$\lambda \in \C$\, denote the eigenvalue of \,$w \in V$;\,
+thus, \,$\rho(S_{3})(\,w\,) = \lambda \cdot w$.\,
+Consider the following sequence of vectors in \,$V$:\,
+\begin{equation*}
+w,\;\;\; \rho(S_{-})(\,w\,),\;\;\; \rho(S_{-})^{2}(\,w\,),\;\;\; \rho(S_{-})^{3}(\,w\,),\;\;\; \ldots
+\end{equation*}
+If each vector in the above sequence were nonzero, then,
+by Corollary \ref{RaisingLoweringEigenvalues}, they would form an infinite sequence of eigenvectors of
+\,$\rho(S_{3})$\, with respective eigenvalues \,$\lambda,\;\lambda-1,\;\lambda-2,\;\lambda-3,\;\ldots$\,.
+Since these eigenvalues are pairwise distinct, the aforementioned sequence of eigenvectors are linearly independent.
+This contradicts the finite-dimensionality of $V$.
+Hence, we see that there must exist $d \geq 0$ such that
+\,$\rho(S_{-})^{d}(\,w\,) \neq 0$\, and \,$\rho(S_{-})^{d+1}(\,w\,) = 0$.\,
+\vskip 0.5cm
+\noindent
+\textbf{Claim 1:}\quad
+$\left\{\;\overset{{\color{white}-}}{w},\; \rho(S_{-})(\,w\,),\; \rho(S_{-})^{2}(\,w\,),\; \ldots\,,\; \rho(S_{-})^{d}(\,w\,) \;\right\}$\,
+forms a basis for \,$V$.
+\vskip 0.1cm
+\noindent
+\proofof Claim 1:\quad
+First, note that the vectors are linearly independent since they are eigenvectors of
+\,$\rho(S_{3})$\,
+with pairwise distinct eigenvalues.
+Next, we will show that their linear span is a $\rho$-invariant subspace of $V$,
+from which Claim 1 follows immediately by the irreducibility of $\rho$.
+By construction,
+\,$\span_{\C}\!\left\{\;\rho(S_{-})^{k}(\,w\,)\,\right\}_{k=0}^{d}$\,
+is invariant under \,$\rho(S_{3})$\, and \,$\rho(S_{-})$.\,
+Hence, it remains only to show that the span is also invariant under \,$\rho(S_{+})$.\,
+To this end, we proceed by induction on \,$k = 0, 1, 2, \ldots\,$\, that
+\begin{equation*}
+\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{{\color{red}k}}(\,w\,)\,\right)
+\;\; \in \;\;
+	\span_{\C}\!\left\{\;
+		\left.
+		\overset{{\color{white}1}}{\rho}(S_{-})^{j}(w)
+		\;\right\vert\;
+		j = 0, 1, \ldots, {\color{red}k - 1}
+		\;\right\},
+\end{equation*}
+where we follow the standard convention that \,$\span_{\C}\{\,\varemptyset\,\} = \{\,0\,\}$.\,
+So, for \,$k = 0$,\, we indeed have:
+\begin{equation*}
+\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{{\color{red}0}}(\,w\,)\,\right)
+\; = \;
+	\rho(S_{+})\!\left(\,\overset{{\color{white}.}}{w}\,\right)
+\; = \;
+	0
+\; \in \;
+	\{\,0\,\}
+\; = \;
+	\span_{\C}\!\left\{\,\overset{{\color{white}.}}{\varemptyset}\,\right\}
+\; = \;
+	\span_{\C}\!\left\{\;
+		\left.
+		\overset{{\color{white}1}}{\rho}(S_{-})^{j}(w)
+		\;\right\vert\;
+		j = 0, 1, \ldots, {\color{red}-1}
+		\;\right\}
+\end{equation*}
+For the inductive step, we assume validity up to \,$k - 1$ (induction hypothesis),
+and we seek to establish validity for \,$k$.\,
+The precise statement of the induction hypothesis is:
+\begin{equation*}
+\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{{\color{red}k-1}}(\,w\,)\,\right)
+\;\; \in \;\;
+	\span_{\C}\!\left\{\;
+		\left.
+		\overset{{\color{white}1}}{\rho}(S_{-})^{j}(w)
+		\;\right\vert\;
+		j = 0, 1, \ldots, {\color{red}k - 2}
+		\;\right\},
+\end{equation*}
+which immediately implies:
+\begin{eqnarray*}
+\rho(S_{-})\,
+\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{{\color{red}k-1}}(\,w\,)\,\right)
+& \in &
+	\span_{\C}\!\left\{\;
+		\left.
+		\overset{{\color{white}1}}{\rho}(S_{-})^{j{\color{red}+1}}(w)
+		\;\right\vert\;
+		j = 0, 1, \ldots, {\color{red}k - 2}
+		\;\right\}
+\\
+& \subset &
+	\span_{\C}\!\left\{\;\;\;
+		\left.
+		\overset{{\color{white}1}}{\rho}(S_{-})^{j}(w)
+		\;\;\,\right\vert\;
+		j = 0, 1, \ldots, {\color{red}k - 1}
+		\;\right\}
+\end{eqnarray*}
+Consequently,
+\begin{eqnarray*}
+\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{{\color{red}k}}(\,w\,)\,\right)
+& = &
+	\rho(S_{+})\,,\,\rho(S_{-})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{{\color{red}k-1}}(\,w\,)\,\right)
+\\
+&&
+	\, - \,
+	\rho(S_{-})\,\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{k-1}(\,w\,)\,\right)
+	\, + \,
+	\rho(S_{-})\,\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{k-1}(\,w\,)\,\right)
+\\
+& = &
+	\left[\,\overset{{\color{white}1}}{\rho}(S_{+})\,,\,\rho(S_{-})\,\right]
+	\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{k-1}(\,w\,)\,\right)
+	\, + \,
+	\rho(S_{-})\,\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{k-1}(\,w\,)\,\right)
+\\
+& = &
+	2 \cdot \rho(S_{3})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{k-1}(\,w\,)\,\right)
+	\, + \,
+	\rho(S_{-})\,\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{-})^{k-1}(\,w\,)\,\right)
+\\
+& \in &
+	\span_{\C}\!\left\{\;
+		\left.
+		\overset{{\color{white}1}}{\rho}(S_{-})^{j}(w)
+		\;\right\vert\;
+		j = 0, 1, \ldots, {\color{red}k - 1}
+		\;\right\}
+\end{eqnarray*}
+This proves Claim 1.
+\vskip 0.5cm
+\noindent
+\textbf{Claim 2:}\quad $\lambda \,=\, \dfrac{d}{2}$
+\vskip 0.1cm
+\noindent
+\proofof Claim 2:\quad
+The matrix representative of \,$\rho(S_{3})$\, with respect to the basis\\
+\begin{equation*}
+\left\{\;
+	\overset{{\color{white}1}}{w},\; \rho(S_{-})(w),\; \rho(S_{-})^{2}(w),\; \ldots\,,\; \rho(S_{-})^{d}(w)
+	\;\right\}
+\end{equation*}
+for \,$V$\, is
+\,$\diag(\,\lambda,\,\lambda-1,\ldots,\lambda - d\,)$,\,
+whose trace is
+\begin{equation*}
+\overset{d}{\underset{k\,=\,0}{\sum}}\;(\lambda - k)
+\;\; = \;\;
+	\lambda\cdot(d+1) \;-\, \overset{d}{\underset{k\,=\,1}{\sum}}\;k
+\;\; = \;\;
+	\lambda\cdot(d+1) \;-\, \dfrac{d(d+1)}{2}
+\;\; = \;\;
+	\left(\,\lambda - \dfrac{d}{2}\,\right)\cdot(d+1)
+\end{equation*}
+On the other hand,
+\begin{eqnarray*}
+\trace\!\left(\,\overset{{\color{white}1}}{\rho}(S_{3})\,\right)
+& = &
+	\trace\!\left(\;\dfrac{1}{2}\cdot\!\left[\,\overset{{\color{white}1}}{\rho}(S_{+})\,,\,\rho(S_{-})\,\right]\,\right)
+\;\; = \;\;
+	\dfrac{1}{2}\cdot\trace\!\left(\,\left[\,\overset{{\color{white}1}}{\rho}(S_{+})\,,\,\rho(S_{-})\,\right]\,\right)
+\\
+& = &
+	\dfrac{1}{2}\cdot\trace\!\left(\,
+		\overset{{\color{white}1}}{\rho}(S_{+})\cdot\rho(S_{-})
+		\, - \,
+		\overset{{\color{white}1}}{\rho}(S_{-})\cdot\rho(S_{+})
+		\,\right)
+\;\; = \;\;
+	\cdots
+\\
+& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+	0
+\end{eqnarray*}
+Combining the last two equalities yields:
+\begin{equation*}
+\left(\,\lambda - \dfrac{d}{2}\,\right)\cdot(d+1)
+\;\; = \;\;
+	\trace\!\left(\,\overset{{\color{white}1}}{\rho}(S_{3})\,\right)
+\;\; = \;\;
+	0,
+\end{equation*}
+from which Claim 2 follows.
+\vskip 0.5cm
+\noindent
+\textbf{Claim 3:}\quad
+Define the complex linear map
+\,$\Psi : V \longrightarrow \C[X,Y]_{d}$\,
+by complex-linearly extending:
+\begin{equation*}
+\Psi(\,w\,) \;\; := \;\; Y^{d}
+\end{equation*}
+and
+\begin{equation*}
+\Psi\!\left(\,\rho(S_{-})^{k}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+\;\; := \;\;
+	\pi_{d}(S_{-})^{k}\!\left(\,Y^{d}\,\right)
+\;\; = \;\;
+	\pi_{d}(S_{-})^{k}\!\left(\,\Psi(\,\overset{{\color{white}1}}{w}\,)\,\right)
+\end{equation*}
+Then, \,$\Psi$\, is an intertwining map of the representations
+\,$\rho$\, and \,$\pi_{d}$,\, i.e.,
+\begin{equation*}
+\Psi \,\circ\, \rho(A)
+\;\; = \;\;
+	\pi_{d}(A) \,\circ\, \Psi\,,
+\quad
+\textnormal{for each \,$A \,\in\, \su(2) \otimes_{\Re} \C$}
+\end{equation*}
+In particular, the two representations are isomorphic to each other.
+\vskip 0.1cm
+\noindent
+\proofof Claim 3:\quad
+First, recall that
+\begin{equation*}
+w,\;\; \rho(S_{-})(\,w\,),\;\; \rho(S_{-})^{2}(\,w\,),\;\; \ldots\,,\;\; \rho(S_{-})^{d}(\,w\,)
+\end{equation*}
+form a basis for \,$V$\, consisting of $\rho(S_{3})$-eigenvectors with respective eigenvalues
+\begin{equation*}
+\lambda = \dfrac{d}{2}\,,
+\quad
+\lambda - 1 = \dfrac{d}{2} -1\,,
+\quad
+\lambda - 2 = \dfrac{d}{2} -2\,,
+\quad
+\ldots\,,
+\quad
+\lambda - d = -\,\dfrac{d}{2}
+\end{equation*}
+On the other hand,
+\begin{equation*}
+Y^{d},\;\; \pi_{d}(S_{-})(\,Y^{d}\,),\;\; \pi_{d}(S_{-})^{2}(\,Y^{d}\,),\;\; \ldots\,,\;\; \pi_{d}(S_{-})^{d}(\,Y^{d}\,)
+\end{equation*}
+form a basis for \,$\C[X,Y]_{d}$\, consisting of $\pi_{d}(S_{3})$-eigenvectors with respective eigenvalues
+\begin{equation*}
+\lambda = \dfrac{d}{2}\,,
+\quad
+\lambda - 1 = \dfrac{d}{2} -1\,,
+\quad
+\lambda - 2 = \dfrac{d}{2} -2\,,
+\quad
+\ldots\,,
+\quad
+\lambda - d = -\,\dfrac{d}{2}
+\end{equation*}
+Thus, \,$\Psi : V \longrightarrow \C[X,Y]_{d}$\, is a vector space isomorphism, and
+\,$\Psi$\, furthermore maps $\rho(S_{3})$-eigenvectors of $V$ to $\pi_{d}(S_{3})$-eigenvectors of $\C[X,Y]_{d}$,
+preserving eigenvalues, which implies
+\,$\Psi \,\circ\, \rho(S_{3}) \,=\, \pi_{d}(S_{3}) \,\circ \Psi$.\,
+By construction, we also have
+\,$\Psi \,\circ\, \rho(S_{-}) \,=\, \pi_{d}(S_{-}) \,\circ \Psi$.\,
+Thus, in order to show that \,$\Psi$\, is indeed an intertwining map between the two representations
+\,$\rho$\, and \,$\pi_{d}$,\,
+it remains only to establish that
+\begin{equation*}
+\Psi \,\circ\, \rho(S_{+})
+\;\; = \;\;
+	\pi_{d}(S_{+}) \,\circ \Psi
+\end{equation*}
+More precisely, it suffices to show:
+\begin{equation*}
+\Psi \,\circ\, \rho(S_{+})\!\left(\,\rho(S_{-})^{k}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+\;\; = \;\;
+	\pi_{d}(S_{+}) \,\circ \Psi \left(\,\rho(S_{-})^{k}(\,\overset{{\color{white}1}}{w}\,)\,\right),
+\quad
+\textnormal{for \,$k = 0, 1, 2, \ldots, d$}
+\end{equation*}
+We proceed by induction on $k$.
+Validity for \,$k = 0$\, is straightforward:
+\begin{eqnarray*}
+\pi_{d}(S_{+}) \,\circ \Psi \left(\,\rho(S_{-})^{{\color{red}0}}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+& = &
+	\pi_{d}(S_{+}) \,\circ \Psi \left(\,\overset{{\color{white}1}}{w}\,\right)
+\;\; = \;\;
+	\pi_{d}(S_{+})\!\left(\!\overset{{\color{white}.}}{{\color{white}i}}Y^{d}\,\right)
+\;\; = \;\;
+	-\,(d - {\color{red}d}) \cdot X^{d - {\color{red}d}-1} \cdot Y^{{\color{red}d}+1}
+\\
+& = &
+	0
+\;\; = \;\;
+	\Psi(\,0\,)
+\;\; = \;\;
+	\Psi \,\circ\, \rho(S_{+})\!\left(\,\overset{{\color{white}1}}{w}\,\right)
+\\
+& = &
+\Psi \,\circ\, \rho(S_{+})\!\left(\,\rho(S_{-})^{{\color{red}0}}(\,\overset{{\color{white}1}}{w}\,)\,\right),
+\end{eqnarray*}
+where the third equality follows from Claim 1 in the proof of Proposition \ref{IrrepsLittleSU2CXYd}(ii).
+We now assume validity up to \,$k-1$\, and show validity for \,$k$.\,
+\begin{eqnarray*}
+\Psi \,\circ\, \rho(S_{+})\!\left(\,\rho(S_{-})^{k}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+& = &
+	\Psi \,\circ\, \rho(S_{+}) \circ \rho(S_{-}) \left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+\\
+& = &
+	\Psi\!\left[\;
+		\rho(S_{-}) \circ \rho(S_{+}) \left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\, + \,
+		2\,\rho(S_{3}) \left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\,\right]
+\\
+& = &
+	\Psi \circ \rho(S_{-}) \left[\;
+		\rho(S_{+}) \left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\;\right]
+	\, + \,
+	2 \cdot\! \Psi \circ \rho(S_{3})
+		\left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+\\
+& = &
+	\pi_{d}(S_{-}) \circ {\color{red}\Psi} \left[\;
+		{\color{red}\rho(S_{+})} \left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\;\right]
+	\, + \,
+	2 \cdot\! \pi_{d}(S_{3}) \circ \Psi\!
+		\left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+\\
+& = &
+	\pi_{d}(S_{-}) \circ {\color{red}\pi_{d}(S_{+})} \left[\;
+		{\color{red}\Psi}\!\left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\;\right]
+	\, + \,
+	2 \cdot\! \pi_{d}(S_{3}) \circ \Psi\!
+		\left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+\\
+& = &
+	\left(\,
+		\pi_{d}(S_{-}) \circ \pi_{d}(S_{+})
+		\, \overset{{\color{white}1}}{+} \,
+		2 \cdot\! \pi_{d}(S_{3})
+		\,\right)
+	\left[\;
+		\Psi\!\left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\;\right]
+\\
+& = &
+	\pi_{d}(S_{+}) \circ \pi_{d}(S_{-})
+	\left[\;
+		\Psi\!\left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\;\right]
+\\
+& = &
+	\pi_{d}(S_{+}) \circ \Psi
+	\left[\;
+		\rho(S_{-})\!\left(\,\rho(S_{-})^{k-1}(\,\overset{{\color{white}1}}{w}\,)\,\right)
+		\;\right]
+\\
+& = &
+	\pi_{d}(S_{+}) \circ \Psi
+	\left[\;
+		\rho(S_{-})^{k}(\,\overset{{\color{white}1}}{w}\,)
+		\;\right],
+\end{eqnarray*}
+as required.
+Note that the 5th equality above follows from the induction hypothesis,
+whereas the 4th and the second last equalities follow from the already established facts that
+\,$\Psi \circ \rho(S_{-}) \,=\, \pi_{d}(S_{-}) \circ \Psi$\,
+and
+\,$\Psi \circ \rho(S_{3}) \,=\, \pi_{d}(S_{3}) \circ \Psi$.\, 
+This completes the proof of Claim 3, and hence that of the Theorem.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
