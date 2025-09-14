@@ -348,6 +348,7 @@ This completes the proof of the Proposition.
 
 \vskip 0.5cm
 \begin{proposition}[Some useful generators of \,$\mathfrak{su}(2)$]
+\label{propnUsefulGeneratorsLittleSU2}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -417,13 +418,13 @@ Then, the following statements are true:
 	\left[\,S_{+}\,,\,S_{-}\,\right] \, = \, 2\,S_{3}
 	\end{equation*}
 \item
-	Suppose
+	Suppose:
 	\begin{itemize}
 	\item
-		$V$\, is a complex vector space,
+		$V$\, is a (not necessarily finite-dimensional) complex vector space,
 	\item
-		$\rho : \mathfrak{su}(2) \otimes_{\Re} \C \longrightarrow \textnormal{End}(V)$\,
-		is a Lie algebra representation, and
+		$\rho : \mathfrak{su}(2) \otimes_{\Re} \C \longrightarrow \gl(V)$\,
+		is a complex Lie algebra representation, and
 	\item	
 		$v \in V$\, and \,$\lambda \in \C$\, together satisfy \,$\rho(S_{3})(v) = \lambda \cdot v$.
 	\end{itemize}	
@@ -449,6 +450,129 @@ The Proposition follows straightforwardly by direct computations.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \clearpage
+\vskip 0.5cm
+\begin{corollary}
+\label{RaisingLoweringEigenvalues}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$V$\, is a (not necessarily finite-dimensional) complex vector space,
+\item
+	$\rho : \mathfrak{su}(2) \otimes_{\Re} \C \longrightarrow \gl(V)$\,
+	is a complex Lie algebra representation, and
+\item	
+	$0 \neq v \in V$\, is an eigenvector of \,$\rho(S_{3})$\, with eigenvalue \,$\lambda \in \C$.\,
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	Either
+	\,$\rho(\overset{{\color{white}.}}{S}_{+})(v) = 0$\,
+	or 
+	\,$\rho(\overset{{\color{white}.}}{S}_{+})(v)$\,
+	is an eigenvector of
+	\,$\rho(S_{3})$\,
+	with eigenvalue
+	\,$\lambda + 1 \in \C$.\,
+\item
+	Either
+	\,$\rho(\overset{{\color{white}.}}{S}_{-})(v) = 0$\,
+	or 
+	\,$\rho(\overset{{\color{white}.}}{S}_{-})(v)$\,
+	is an eigenvector of
+	\,$\rho(S_{3})$\,
+	with eigenvalue
+	\,$\lambda - 1 \in \C$.\,
+\end{enumerate}
+\end{corollary}
+\proof 
+\begin{enumerate}
+\item
+	By Proposition \ref{propnUsefulGeneratorsLittleSU2},
+	we know that \,$\rho(S_{+})(v)$\, satisfies the following equality:
+	\begin{equation*}
+	\rho(S_{3})\!\left(\,\rho(\overset{{\color{white}.}}{S}_{+})(v)\,\right)
+	\; = \;
+		(\lambda+1) \cdot \rho(S_{+})(v),\,
+	\end{equation*}
+	from which the desired conclusion immediately follows.
+\item
+	Similarly, by Proposition \ref{propnUsefulGeneratorsLittleSU2},
+	we know that \,$\rho(S_{-})(v)$\, satisfies the following equality:
+	\begin{equation*}
+	\rho(S_{3})\!\left(\,\rho(\overset{{\color{white}.}}{S}_{-})(v)\,\right)
+	\; = \;
+		(\lambda-1) \cdot \rho(S_{-})(v),\,
+	\end{equation*}
+	from which the desired conclusion immediately follows.
+	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{corollary}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$V$\, is a {\color{red}finite-dimensional} complex vector space, and
+\item
+	$\rho : \mathfrak{su}(2) \otimes_{\Re} \C \longrightarrow \gl(V)$\,
+	is a complex Lie algebra representation.
+\end{itemize}
+Then, there exists an eigenvector \,$v \in V$\, of \,$\rho(S_{3})$\, such that
+\,$\rho(\overset{{\color{white}.}}{S}_{+})(v) = 0$.\,
+\end{corollary}
+\proof
+Since the field of scalars is \,$\C$,\, the $\C$-linear map
+\,$\rho(S_{3}) : V \longrightarrow V$\,
+admits at least one eigenvalue-eigenvector pair: \,$\lambda \in \C$\, and \,$0 \neq w \in V$,\,
+with \,$\rho(S_{3})(\,w\,) = \lambda \cdot w$.\,
+Consider the following sequence of vectors in $V$:
+\begin{equation*}
+w,\;\;\; \rho(S_{+})(\,w\,),\;\;\; \rho(S_{+})^{2}(\,w\,),\;\;\; \rho(S_{+})^{3}(\,w\,),\;\;\; \ldots
+\end{equation*}
+If each vector in the above sequence were nonzero, then,
+by Corollary \ref{RaisingLoweringEigenvalues}, they would form an infinite sequence of eigenvectors of
+\,$\rho(S_{3})$\, corresponding to eigenvalues \,$\lambda,\;\lambda+1,\;\lambda+2,\;\lambda+3,\;\ldots$\,,
+respectively.
+Since these eigenvalues are pairwise distinct, the aforementioned sequence of eigenvectors are linearly independent.
+This contradicts the finite-dimensionality of $V$.
+Hence, we see that there must exists $k \geq 0$ such that
+\,$\rho(S_{+})^{k}(\,w\,) \neq 0$\, and \,$\rho(S_{+})^{k+1}(\,w\,) = 0$.\,
+Now, set \,$v := \rho(S_{+})^{k}(\,w\,) \neq 0$.\,
+Then,
+\begin{equation*}
+\rho(S_{3})\!\left(\,\overset{{\color{white}.}}{v}\,\right)
+\;\; = \;\;
+	\rho(S_{3})\!\left(\,\rho(S_{+})^{k}(\overset{{\color{white}.}}{w})\,\right)
+\;\; = \;\;
+	(\lambda + k) \cdot \rho(S_{+})^{k}(\overset{{\color{white}.}}{w})
+\;\; = \;\;
+	(\lambda + k) \cdot v\,,
+\end{equation*}
+and
+\begin{equation*}
+\rho(S_{+})\!\left(\,\overset{{\color{white}.}}{v}\,\right)
+\;\; = \;\;
+	\rho(S_{+})\!\left(\,\overset{{\color{white}1}}{\rho}(S_{+})^{k}(w)\,\right)
+\;\; = \;\;
+	\rho(S_{+})^{k+1}(\,w\,)
+\;\; = \;\;
+	0\,,
+\end{equation*}
+which shows that \,$v \neq 0$\, is indeed an eigenvector of \,$\rho(S_{3})$\, that is annihilated by
+\,$\rho(S_{+})$,\, as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 0.5cm
 \begin{proposition}[The irreducible representations \,\textnormal{$\pi_{d} : \su(2) \otimes_{\Re} \C \longrightarrow \gl\!\left(\,\overset{{\color{white}.}}{\C}[X,Y]_{d}\,\right)$}]
 \mbox{}
