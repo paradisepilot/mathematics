@@ -15,7 +15,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.1cm
+\vskip 0.3cm
 \begin{definition}[$\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
 \mbox{}
 \vskip 0.1cm
@@ -46,6 +46,7 @@ The \textbf{special orthogonal group} is defined as follows:
 \end{equation*}
 \end{definition}
 
+\vskip 0.5cm
 \begin{proposition}[Set-theoretic characterizations of the Lie algebras of $\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
 \begin{eqnarray*}
 \mathfrak{o}(n)
@@ -72,136 +73,8 @@ The \textbf{special orthogonal group} is defined as follows:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\subsection{Generators of \;$\textnormal{SO}(3)$\, and \,$\mathfrak{so}(3)$}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.1cm
-\noindent
-Define:
-\begin{eqnarray*}
-R_{1}(\phi)
-& := &
-	\left(\,
-		\begin{array}{ccc}
-			{\color{white}--}1 & {\color{white}-.}0 & {\color{white}-}0 \\
-			{\color{white}--}0 & {\color{white}-.}\cos\phi & -\sin\phi \\
-			{\color{white}--}0 & {\color{white}-.}\sin\phi & {\color{white}-}\cos\phi \\
-			\end{array}
-		\,\right)
-\\
-R_{2}(\psi)
-& := &
-	\left(\,
-		\begin{array}{ccc}
-			{\color{white}-}\cos\psi & {\color{white}-.}0 & {\color{white}--}\sin\psi \\
-			{\color{white}-}0 & {\color{white}-.}1 & {\color{white}--}0 \\
-			{\color{red}-}\sin\psi & {\color{white}-.}0 & {\color{white}--}\cos\psi \\
-			\end{array}
-		\right)
-\\
-R_{3}(\theta)
-& := &
-	\left(\,
-		\begin{array}{ccc}
-			{\color{white}-}\cos\theta & -\sin\theta & {\color{white}--}0 \\
-			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}--}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}--}1 \\
-			\end{array}
-		\;\,\right)
-\end{eqnarray*}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
+\clearpage
 \vskip 0.5cm
-\begin{eqnarray*}
-X_{1}
-& := &
-	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
-\;\;\; = \;
-	\left.\left(\,
-		\begin{array}{ccc}
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
-			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
-			\end{array}
-		\,\right)\right\vert_{\phi = 0}
-\,\, = \;
-	\left(
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\\
-X_{2}
-& := &
-	\left.\dfrac{\d}{\d\,\psi}\right\vert_{\psi = 0} R_{2}(\psi)
-\;\; = \;
-	\left.\left(\!\!
-		\begin{array}{ccc}
-			{\color{black}-}\sin\psi & {\color{white}-}0 & {\color{black}-}\cos\psi \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{black}-}\sin\psi \\
-			\end{array}
-		\,\right)\right\vert_{\psi = 0}
-\;\; = \;
-	\left(
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{black}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\\
-X_{3}
-& := &
-	\,\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
-\;\;\;\, = \;
-	\left.\left(\!
-		\begin{array}{ccc}
-			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
-			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)\right\vert_{\psi = 0}
-\;\;\, = \;
-	\left(
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
-			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
-\end{eqnarray*}
-
-\vskip 0.5cm
-\begin{equation*}
-\left[\,X_{1}\,,\,X_{2}\,\right] \;=\; +\,X_{3}
-\quad
-\left[\,X_{3}\,,\,X_{1}\,\right] \;=\; +\,X_{2}
-\quad
-\left[\,X_{2}\,,\,X_{3}\,\right] \;=\; +\,X_{1}
-\end{equation*}
-
-\vskip 0.5cm
-\begin{equation*}
-\left[\,X_{a}\,,\,X_{b}\,\right] \;\;=\;\; \overset{3}{\underset{c\,=\,1}{\sum}}\;\varepsilon_{abc}\,X_{c}
-\end{equation*}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\subsection{Properties of the generators \,$J_{1}, J_{2}, J_{3} \,\in\, \mathfrak{so}(3) \otimes_{\Re} \C$}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\noindent
-\textbf{The generators \,$J_{n} \in \C^{3 \times 3}$\, of the Euler matrices}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
 \begin{proposition}[Some {\color{red}convenient generators} of \,$\so(3)$\, and \,$\so(3) \otimes_{\Re} \C$]
 \mbox{}
 \vskip 0.1cm
@@ -346,8 +219,11 @@ J_{3}
 			\end{array}
 		\,\right)
 \end{eqnarray*}
-Define the \textbf{raising} and \textbf{lowering operators}
-\,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3) \otimes_{\Re} \C$\,
+Define the \textbf{raising operator}
+\,$J_{+} \in \C^{3 \times 3}$\,
+and
+\textbf{lowering operator}
+\,$J_{-} \in \C^{3 \times 3}$\,
 as follows:
 \begin{equation*}
 J_{\pm} \;\; := \;\; J_{1} \, \pm \sqrt{-1}\,J_{2}
@@ -374,7 +250,6 @@ J_{-}
 		\end{array}
 	\,\right)
 \end{equation*}
-%{\color{white}.}\vskip -0.5cm{\color{white}.}
 Then, the following statements are true:
 \begin{enumerate}
 \item
@@ -391,6 +266,8 @@ Then, the following statements are true:
 	More succinctly,
 	\begin{equation*}
 	\left[\,X_{a}\,,\,X_{b}\,\right] \;\;=\;\; \overset{3}{\underset{c\,=\,1}{\sum}}\;\varepsilon_{abc}\,X_{c}\,,
+	\quad
+	\textnormal{for each \,$a, b \in \{\,1,2,3\,\}$}\,,
 	\end{equation*}
 	where \,$\varepsilon_{abc}$\, is the fully anti-symmetric tensor.
 \item
@@ -418,20 +295,6 @@ Then, the following statements are true:
 	\quad
 	\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}
 	\end{equation*}
-%	\begin{enumerate}
-%%	\item
-%%		$\left[\,J_{3}\,,\,J_{+}\,\right] \;=\; J_{+}$\,,
-%%		\quad
-%%		$\left[\,J_{3}\,,\,J_{-}\,\right] \;=\; -\,J_{-}$\,,
-%%		\quad
-%%		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
-%	\item
-%		$\left[\,J_{3}\,,\,J_{\pm}\,\right] \;=\; \pm\,J_{\pm}$\,,
-%		\quad
-%		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
-%	\item
-%		$(J_{\pm})^{\dagger} \; = \; J_{\mp}$
-%	\end{enumerate}
 \item
 	Suppose
 	\,$\rho : \mathfrak{so}(3) \otimes_{\Re} \C \longrightarrow \mathfrak{gl}(V)$\,
@@ -488,6 +351,7 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \begin{theorem}
 {\color{white}.}\vskip -0.1cm
 \noindent
