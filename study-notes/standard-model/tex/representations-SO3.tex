@@ -199,6 +199,116 @@ X_{3}
 
 \noindent
 \textbf{The generators \,$J_{n} \in \C^{3 \times 3}$\, of the Euler matrices}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}[Some {\color{red}convenient generators} of \,$\so(3)$\, and \,$\so(3) \otimes_{\Re} \C$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let
+\,$R_{1}(\phi),\, R_{2}(\psi),\, R_{3}(\theta)$\,
+be the one-parameter families of
+\textbf{rotation matrices} in $3$-dimensional Euclidean space
+around the $x$-, $y$, and $z$-axes, respectively, i.e.,
+\begin{eqnarray*}
+R_{1}(\phi)
+& := &
+	\left(\,
+		\begin{array}{ccc}
+			{\color{white}--}1 & {\color{white}-.}0 & {\color{white}-}0 \\
+			{\color{white}--}0 & {\color{white}-.}\cos\phi & -\sin\phi \\
+			{\color{white}--}0 & {\color{white}-.}\sin\phi & {\color{white}-}\cos\phi \\
+			\end{array}
+		\,\right)
+\\
+R_{2}(\psi)
+& := &
+	\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}\cos\psi & {\color{white}-.}0 & {\color{white}--}\sin\psi \\
+			{\color{white}-}0 & {\color{white}-.}1 & {\color{white}--}0 \\
+			{\color{red}-}\sin\psi & {\color{white}-.}0 & {\color{white}--}\cos\psi \\
+			\end{array}
+		\right)
+\\
+R_{3}(\theta)
+& := &
+	\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}\cos\theta & -\sin\theta & {\color{white}--}0 \\
+			{\color{white}-}\sin\theta & {\color{white}-}\cos\theta & {\color{white}--}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}--}1 \\
+			\end{array}
+		\;\,\right)
+\end{eqnarray*}
+Let
+\,$X_{1},\, X_{2},\, X_{3} \,\in\, \C^{3 \times 3}$\,
+be the \textbf{infinitesimal generators} of
+\,$R_{1}(\phi),\, R_{2}(\psi),\, R_{3}(\theta)$,\,
+respectively, i.e.,
+\begin{eqnarray*}
+X_{1}
+& := &
+	\left.\dfrac{\d}{\d\,\phi}\right\vert_{\phi = 0} R_{1}(\phi)
+\;\;\; = \;
+	\left.\left(\,
+		\begin{array}{ccc}
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{black}-}\sin\phi & {\color{black}-}\cos\phi \\
+			{\color{white}-}0 & {\color{white}-}\cos\phi & {\color{black}-}\sin\phi \\
+			\end{array}
+		\,\right)\right\vert_{\phi = 0}
+\,\, = \;
+	\left(
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+			{\color{white}-}0 & {\color{white}-}1 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\\
+X_{2}
+& := &
+	\left.\dfrac{\d}{\d\,\psi}\right\vert_{\psi = 0} R_{2}(\psi)
+\;\; = \;
+	\left.\left(\!\!
+		\begin{array}{ccc}
+			{\color{black}-}\sin\psi & {\color{white}-}0 & {\color{black}-}\cos\psi \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}\cos\psi & {\color{white}-}0 & {\color{black}-}\sin\psi \\
+			\end{array}
+		\,\right)\right\vert_{\psi = 0}
+\;\; = \;
+	\left(
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{black}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\\
+X_{3}
+& := &
+	\,\left.\dfrac{\d}{\d\,\theta}\right\vert_{\theta = 0} R_{3}(\theta)
+\;\;\;\, = \;
+	\left.\left(\!
+		\begin{array}{ccc}
+			{\color{black}-}\sin\theta & {\color{black}-}\cos\theta & {\color{white}-}0 \\
+			{\color{white}-}\cos\theta & {\color{black}-}\sin\theta & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)\right\vert_{\psi = 0}
+\;\;\, = \;
+	\left(
+		\begin{array}{ccc}
+			{\color{white}-}0 & {\color{black}-}1 & {\color{white}-}0 \\
+			{\color{white}-}1 & {\color{white}-}0 & {\color{white}-}0 \\
+			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+			\end{array}
+		\,\right)
+\end{eqnarray*}
+Let \,$J_{1}, J_{2}, J_{3} \,\in\, \C^{3 \times 3}$\, be the \textbf{Euler matrices}, i.e.,
 \begin{eqnarray*}
 J_{1}
 & := &
@@ -227,7 +337,7 @@ J_{2}
 J_{3}
 & := &
 	\i \cdot X_{3}
-\;\; = \;\;
+\;\; = \;\,
 	\left(\!
 		\begin{array}{ccc}
 			{\color{white}-}0 & {\color{black}-}\i & {\color{white}-}0 \\
@@ -236,14 +346,57 @@ J_{3}
 			\end{array}
 		\,\right)
 \end{eqnarray*}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\begin{proposition}
-{\color{white}.}\vskip -0.5cm{\color{white}.}
+Define the \textbf{raising} and \textbf{lowering operators}
+\,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3) \otimes_{\Re} \C$\,
+as follows:
+\begin{equation*}
+J_{\pm} \;\; := \;\; J_{1} \, \pm \sqrt{-1}\,J_{2}
+\end{equation*}
+Thus, explicitly,
+\begin{equation*}
+J_{+}
+\;\; := \;\;
+\left(\!
+	\begin{array}{ccc}
+		{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
+		{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+		{\color{white}-}1 & {\color{white}-}\i & {\color{white}-}0 \\
+		\end{array}
+	\,\right),
+\quad\quad
+J_{-}
+\;\; := \;\;
+\left(\!
+	\begin{array}{ccc}
+		{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
+		{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
+		{\color{black}-}1 & {\color{white}-}\i & {\color{white}-}0 \\
+		\end{array}
+	\,\right)
+\end{equation*}
+%{\color{white}.}\vskip -0.5cm{\color{white}.}
+Then, the following statements are true:
 \begin{enumerate}
 \item
-	\textbf{Commutation relations:}\;\;
+	$X_{1},\, X_{2},\, X_{3}$ are elements of \,$\SO(3)$,\,
+	they are furthermore generators of \,$\SO(3)$,\, and
+	they satisfy the following commutation relations:
+	\begin{equation*}
+	\left[\,X_{1}\,,\,X_{2}\,\right] \;=\; +\,X_{3}
+	\quad
+	\left[\,X_{3}\,,\,X_{1}\,\right] \;=\; +\,X_{2}
+	\quad
+	\left[\,X_{2}\,,\,X_{3}\,\right] \;=\; +\,X_{1}
+	\end{equation*}
+	More succinctly,
+	\begin{equation*}
+	\left[\,X_{a}\,,\,X_{b}\,\right] \;\;=\;\; \overset{3}{\underset{c\,=\,1}{\sum}}\;\varepsilon_{abc}\,X_{c}\,,
+	\end{equation*}
+	where \,$\varepsilon_{abc}$\, is the fully anti-symmetric tensor.
+\item
+	$J_{1},\, J_{2},\, J_{3}$\, are elements of \,$\SO(3) \otimes_{\Re} \C$,\,
+	they are furthermore generators of \,$\SO(3) \otimes_{\Re} \C$,\, and
+	they satisfy the following commutation relations:
 	\begin{equation*}
 	\left[\,J_{a}\,\overset{{\color{white}1}}{,}\,J_{b}\,\right]
 	\;\; = \;\;
@@ -253,48 +406,32 @@ J_{3}
 	\end{equation*}
 	where \,$\varepsilon_{abc}$\, is the fully anti-symmetric tensor.
 \item
-	\textbf{Raising and lowering operators:}\;\;
-	Define \,$J_{+}\,,\, J_{-} \in \mathfrak{so}(3) \otimes_{\Re} \C$\, as follows:
+	$J_{+},\, J_{-}$\, are elements of \,$\SO(3) \otimes_{\Re} \C$.\,
+	$J_{+},\, J_{-}$\, satisfy the following equality:
 	\begin{equation*}
-	J_{\pm} \;\; := \;\; J_{1} \, \pm \sqrt{-1}\,J_{2}.
+	(J_{\pm})^{\dagger} \;\; = \;\; J_{\mp}
 	\end{equation*}
-	So,
+	$J_{+},\, J_{-},\, J_{3}$\, are generators of \,$\SO(3) \otimes_{\Re} \C$,\, and
+	they satisfy the following commutation relations:
 	\begin{equation*}
-	J_{+}
-	\;\; := \;\;
-	\left(\!
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}1 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
-			{\color{white}-}1 & {\color{white}-}\i & {\color{white}-}0 \\
-			\end{array}
-		\,\right),
-	\quad\quad
-	J_{-}
-	\;\; := \;\;
-	\left(\!
-		\begin{array}{ccc}
-			{\color{white}-}0 & {\color{white}-}0 & {\color{white}-}1 \\
-			{\color{white}-}0 & {\color{white}-}0 & {\color{black}-}\i \\
-			{\color{black}-}1 & {\color{white}-}\i & {\color{white}-}0 \\
-			\end{array}
-		\,\right)
+	\left[\,J_{3}\,,\,J_{\pm}\,\right] \;=\; \pm\,J_{\pm}\,,
+	\quad
+	\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}
 	\end{equation*}
-	Then, the following equalities hold:
-	\begin{enumerate}
+%	\begin{enumerate}
+%%	\item
+%%		$\left[\,J_{3}\,,\,J_{+}\,\right] \;=\; J_{+}$\,,
+%%		\quad
+%%		$\left[\,J_{3}\,,\,J_{-}\,\right] \;=\; -\,J_{-}$\,,
+%%		\quad
+%%		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
 %	\item
-%		$\left[\,J_{3}\,,\,J_{+}\,\right] \;=\; J_{+}$\,,
-%		\quad
-%		$\left[\,J_{3}\,,\,J_{-}\,\right] \;=\; -\,J_{-}$\,,
+%		$\left[\,J_{3}\,,\,J_{\pm}\,\right] \;=\; \pm\,J_{\pm}$\,,
 %		\quad
 %		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
-	\item
-		$\left[\,J_{3}\,,\,J_{\pm}\,\right] \;=\; \pm\,J_{\pm}$\,,
-		\quad
-		$\left[\,J_{+}\,,\,J_{-}\,\right] \;=\; 2\,J_{3}$
-	\item
-		$(J_{\pm})^{\dagger} \; = \; J_{\mp}$
-	\end{enumerate}
+%	\item
+%		$(J_{\pm})^{\dagger} \; = \; J_{\mp}$
+%	\end{enumerate}
 \item
 	Suppose
 	\,$\rho : \mathfrak{so}(3) \otimes_{\Re} \C \longrightarrow \mathfrak{gl}(V)$\,
