@@ -52,16 +52,16 @@ The \textbf{special orthogonal group} is defined as follows:
 \mathfrak{o}(n)
 & = &
 	\left\{\;\,
-		X \overset{{\color{white}.}}{\in} \mathfrak{gl}(n,\Re)
+		X \overset{{\color{white}.}}{\in} \gl(n,\Re)
 		\;\left\vert\;\,
 			X^{T} = -X
 			\right.
 		\;\right\}
 \\
-\mathfrak{so}(n)
+\so(n)
 & = &
 	\left\{\;\,
-		X \overset{{\color{white}.}}{\in} \mathfrak{gl}(n,\Re)
+		X \overset{{\color{white}.}}{\in} \gl(n,\Re)
 		\;\left\vert\;\,
 			X^{T} = -X\,,
 			\;
@@ -253,8 +253,8 @@ J_{-}
 Then, the following statements are true:
 \begin{enumerate}
 \item
-	$X_{1},\, X_{2},\, X_{3}$ are elements of \,$\SO(3)$,\,
-	they are furthermore generators of \,$\SO(3)$,\, and
+	$X_{1},\, X_{2},\, X_{3}$ are elements of \,$\so(3)$,\,
+	they are furthermore generators of \,$\so(3)$,\, and
 	they satisfy the following commutation relations:
 	\begin{equation*}
 	\left[\,X_{1}\,,\,X_{2}\,\right] \;=\; +\,X_{3}
@@ -271,8 +271,8 @@ Then, the following statements are true:
 	\end{equation*}
 	where \,$\varepsilon_{abc}$\, is the fully anti-symmetric tensor.
 \item
-	$J_{1},\, J_{2},\, J_{3}$\, are elements of \,$\SO(3) \otimes_{\Re} \C$,\,
-	they are furthermore generators of \,$\SO(3) \otimes_{\Re} \C$,\, and
+	$J_{1},\, J_{2},\, J_{3}$\, are elements of \,$\so(3) \otimes_{\Re} \C$,\,
+	they are furthermore generators of \,$\so(3) \otimes_{\Re} \C$,\, and
 	they satisfy the following commutation relations:
 	\begin{equation*}
 	\left[\,J_{a}\,\overset{{\color{white}1}}{,}\,J_{b}\,\right]
@@ -283,12 +283,12 @@ Then, the following statements are true:
 	\end{equation*}
 	where \,$\varepsilon_{abc}$\, is the fully anti-symmetric tensor.
 \item
-	$J_{+},\, J_{-}$\, are elements of \,$\SO(3) \otimes_{\Re} \C$.\,
+	$J_{+},\, J_{-}$\, are elements of \,$\so(3) \otimes_{\Re} \C$.\,
 	$J_{+},\, J_{-}$\, satisfy the following equality:
 	\begin{equation*}
 	(J_{\pm})^{\dagger} \;\; = \;\; J_{\mp}
 	\end{equation*}
-	$J_{+},\, J_{-},\, J_{3}$\, are generators of \,$\SO(3) \otimes_{\Re} \C$,\, and
+	$J_{+},\, J_{-},\, J_{3}$\, are generators of \,$\so(3) \otimes_{\Re} \C$,\, and
 	they satisfy the following commutation relations:
 	\begin{equation*}
 	\left[\,J_{3}\,,\,J_{\pm}\,\right] \;=\; \pm\,J_{\pm}\,,
@@ -297,7 +297,7 @@ Then, the following statements are true:
 	\end{equation*}
 \item
 	Suppose
-	\,$\rho : \mathfrak{so}(3) \otimes_{\Re} \C \longrightarrow \mathfrak{gl}(V)$\,
+	\,$\rho : \so(3) \otimes_{\Re} \C \longrightarrow \gl(V)$\,
 	is an irreducible finite-dimensional complex representation, and
 	\,$v \in V \backslash\{0\}$\, is an eigenvector of \,$\rho(J_{3})$\,
 	corresponding to the eigenvalue \,$\lambda \in \Re$;\, thus, \,$\rho(J_{3})(v) \,=\, \lambda\,v$.
@@ -314,9 +314,9 @@ Then, the following statements are true:
 	\,$:=$\,
 	$(J_{1})^{2} + (J_{2})^{2} + (J_{3})^{2}$
 	\,$\in$\
-	 $\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$.\,
+	 $\mathcal{U}\!\left(\so(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$.\,
 	Then, the following equalities of elements of
-	\;$\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$
+	\;$\mathcal{U}\!\left(\so(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$
 	hold:
 	\begin{equation*}
 	J^{2}
@@ -334,16 +334,16 @@ Then, the following statements are true:
 	\textnormal{for each \,$a \in \{\,1,2,3\,\}$}\,.
 	\end{equation*}
 	Consequently (by Schur's Lemma, Corollary 4.30, \cite{Hall2015}), 
-	\,$J^{2} \in \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$\,
+	\,$J^{2} \in \mathcal{U}\!\left(\so(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$\,
 	acts as a scalar multiple of the identity in every irreducible
 	representation\footnote{Furthermore, this scalar $\lambda \in \C$ uniquely determines
 	the irreducible representation.
 	Look up the classification theory of irreducible finite-dimensional complex representations
 	of complex semisimple Lie algebras.
 	Key words: Casimir operator, universal enveloping algebra. See Chapters 9 and 10, \cite{Hall2015}.}
-	of \,$\mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$;\,
+	of \,$\mathcal{U}\!\left(\so(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right)$;\,
 	more precisely, for each irreducible finite-dimensional complex representation
-	\,$\rho : \mathcal{U}\!\left(\mathfrak{so}(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right) \longrightarrow \mathfrak{gl}(V)$,\,
+	\,$\rho : \mathcal{U}\!\left(\so(3) \overset{{\color{white}.}}{\otimes_{\Re}} \C\right) \longrightarrow \gl(V)$,\,
 	we have \,$\rho(J^{2}) = \lambda \cdot \textnormal{\textbf{1}}_{V}$,\,
 	for some \,$\lambda \in \C$.
 \end{enumerate}
@@ -357,7 +357,7 @@ Then, the following statements are true:
 \noindent
 \begin{enumerate}
 \item
-	The finite-dimensional irreducible representations of $\mathfrak{so}(3) \otimes_{\Re} \C$ is parametrized by the set
+	The finite-dimensional irreducible representations of $\so(3) \otimes_{\Re} \C$ is parametrized by the set
 	\begin{equation*}
 	\left\{\,\overset{{\color{white}.}}{0}\,\right\} \,\bigcup\, \dfrac{1}{2} \cdot \N
 	\;\; := \;\;
@@ -368,7 +368,7 @@ Then, the following statements are true:
 	$\in$ $\left\{\,\overset{{\color{white}.}}{0}\,\right\} \,\bigcup\, \dfrac{1}{2} \cdot \N$
 	$=$ $\left\{\; 0 \,,\, \frac{1}{2}\,,\, 1\,,\, \frac{3}{2}\,,\, 2\,,\, \frac{5}{2}\,,\, \ldots \;\right\}$,
 	there exists a unique (up to equivalence) complex representation
-	$\rho_{s} : \mathcal{U}(\mathfrak{so}(3)\otimes_{\Re}\C) \longrightarrow \textnormal{End}(V_{s})$
+	$\rho_{s} : \mathcal{U}(\so(3)\otimes_{\Re}\C) \longrightarrow \textnormal{End}(V_{s})$
 	such that
 	\begin{equation*}
 	\rho_{s}(J^{2}) \; = \; s(s+1)\cdot\textnormal{\textbf{1}}_{V_{s}}.
