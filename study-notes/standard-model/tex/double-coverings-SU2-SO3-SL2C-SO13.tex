@@ -1,0 +1,446 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Two double coverings: $\SU(2) \longrightarrow \SO(3)$ and $\SL(2,\C) \longrightarrow \SOup(1,3)$}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Lie groups  \,$\SL(n,\C)$,\, $\SO(n)$\, and \,$\SU(n)$}
+
+%\vskip 0.5cm
+%$\SU(2) \overset{\textnormal{\scriptsize 2\textnormal{$:$}1{\color{white}.}}}{\longrightarrow} \SOup(1,3)$
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.3cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{special linear group of degree $n$ over $\C$} is defined as follows:
+\begin{equation*}
+\SL(n,\C)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
+		\;\,\left\vert\;\;
+			\det(\,g\,) \overset{{\color{white}1}}{=} 1
+			\right.
+		\;\right\}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\begin{proposition}[Set-theoretic characterizations of \,$\mathfrak{sl}(n,\C)$]
+\label{SetTheoreticCharacterizationOfslTwoC}
+\mbox{}
+\vskip -0.1cm
+\begin{equation*}
+\mathfrak{sl}(n,\C)
+\; = \;
+	\left\{\;
+		X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+		\;\left\vert\;\,
+			\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
+			\right.
+		\,\right\}
+\end{equation*}
+\end{proposition}
+\proof
+We invoke the fact that \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)}$,
+for each \,$X \in \C^{n \times n}$.
+Thus,
+\begin{eqnarray*}
+&&
+	X \,\in\, \mathfrak{sl}(n,\C)
+	\quad\Longrightarrow\quad
+	e^{\,t\cdot\,X} \,\in\, \textnormal{SL}(n,\C)
+	\quad\Longrightarrow\quad
+	\det\!\left(\,e^{\,t\cdot\,X}\,\right) \,=\, 1
+\\
+& \Longrightarrow\quad &
+	\textnormal{trace}(X)
+	\; = \;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,\textnormal{trace}(X)}}\,\right)
+	\; = \;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{\det(e^{\,t\,\cdot\,X})}\,\right)
+	\; = \;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{1}\,\right)
+	\; = \;
+		0
+\end{eqnarray*}
+Conversely, suppose \,$\textnormal{trace}(X) = 0$.\,
+Then, \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)} \,=\, e^{\,t\,\cdot\,0} \,=\, 1$,\,
+which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{SL}(n,\C)$,\, hence \,$X \,\in\, \mathfrak{sl}(n,\C)$.
+This completes the proof of the equality (of sets) in question.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{orthogonal group of degree $n$} is defined as follows:
+\begin{equation*}
+\textnormal{O}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\Re)
+		\;\left\vert\;\,
+			g^{T} \cdot g = I_{n}
+			\right.
+		\;\right\}
+\end{equation*}
+The \textbf{special orthogonal group of degree $n$} is defined as follows:
+\begin{equation*}
+\textnormal{SO}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\Re)
+		\;\left\vert\;\,
+			g^{T} \cdot g = I_{n}\,,
+			\;
+			\textnormal{det}(g) = 1
+			\right.
+		\;\right\}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\begin{proposition}[Set-theoretic characterizations of the Lie algebras of $\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
+\begin{eqnarray*}
+\mathfrak{o}(n)
+& = &
+	\left\{\;\,
+		X \overset{{\color{white}.}}{\in} \gl(n,\Re)
+		\;\left\vert\;\,
+			X^{T} = -X
+			\right.
+		\;\right\}
+\\
+\so(n)
+& = &
+	\left\{\;\,
+		X \overset{{\color{white}.}}{\in} \gl(n,\Re)
+		\;\left\vert\;\,
+			X^{T} = -X\,,
+			\;
+			\textnormal{trace}(X) = 0
+			\right.
+		\;\right\}
+\end{eqnarray*}
+\end{proposition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{unitary group of degree $n$} is defined as follows:
+\begin{equation*}
+\textnormal{U}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
+		\;\;\left\vert\;\;
+			g^{\dagger} \cdot g \overset{{\color{white}1}}{=} I_{n}
+			\right.
+		\;\right\}
+\end{equation*}
+where \,$g^{\dagger}$\, is the conjugate transpose of
+\,$g \in \textnormal{GL}(n,\C)$\,
+and
+\,$I_{n} \in \textnormal{GL}(n,\C)$\,
+is the identity matrix.
+\vskip 0.1cm
+\noindent
+The \textbf{special unitary group of degree $n$} is defined as follows:
+\begin{equation*}
+\textnormal{SU}(n)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
+		\;\,\left\vert\;\;
+			g^{\dagger} \cdot g \overset{{\color{white}1}}{=} I_{n}\,,
+			\;
+			\textnormal{det}(g) = 1
+			\right.
+		\;\right\}
+\end{equation*}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Set-theoretic characterizations of \,$\mathfrak{u}(n)$, and $\mathfrak{su}(n)$]
+\mbox{}
+\vskip 0.1cm
+\begin{enumerate}
+\item
+	\begin{equation*}
+	\mathfrak{u}(n)
+	\; = \;
+		\left\{\;
+			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+			\;\left\vert\;\,
+				X + X^{\dagger} = \overset{{\color{white}1}}{0}
+				\right.
+			\,\right\}
+	\end{equation*}
+\item
+	\begin{equation*}
+	\mathfrak{su}(n)
+	\; = \;
+		\left\{\;
+			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+			\;\left\vert\;\,
+				\begin{array}{c}
+				X + X^{\dagger} = \overset{{\color{white}1}}{0}
+				\\
+				\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
+				\end{array}
+				\right.
+			\,\right\}
+	\end{equation*}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	\begin{eqnarray*}
+	&&
+		X \,\in\, \mathfrak{u}(n)
+		\quad\Longrightarrow\quad
+		e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)
+	\\
+	& \Longrightarrow\quad &
+		I_{n}
+			\,=\, \left(\,e^{\,t\,\cdot\,X}\,\right)^{\!\dagger} \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
+			\,=\, \left(\,e^{\,t\,\cdot\,X^{\dagger}}\,\right) \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
+			\,=\, e^{\,t\,\cdot\,(X^{\dagger}+X)}
+	\\
+	& \Longrightarrow\quad &
+		X \,+\, X^{\dagger}
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,(X+X^{\dagger})}}\,\right)
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{I_{n}}\,\right)
+		\; = \;
+			0
+	\end{eqnarray*}
+	Conversely, suppose \,$X + X^{\dagger} \,=\, 0$.\,
+	Then, \,$I_{n}$
+	\,$=$\, $e^{\,0_{n \times n}}$
+	\,$=$\, $e^{\,t\,\cdot(X^{\dagger}+X)}$
+	\,$=\, \cdots \,=$\, $\left(e^{\,t\,\cdot\,X}\right)^{\!\dagger}\cdot\left(e^{\,t\,\cdot\,X}\right)$,\,
+	which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)$,\, hence \,$X \,\in\, \mathfrak{u}(n)$.
+	This completes the proof of the equality (of sets) in question.
+\item
+	Immediate by (i) and Proposition \ref{SetTheoreticCharacterizationOfslTwoC}.
+	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Lie groups \,$\SO(3)$,\, $\SU(2)$,\, $\SOup(1,3)$,\, and $\SL(2,\C)$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Parametrization of \,$\textnormal{SU}(2)$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+$\textnormal{SU}(2)$ admits the following parametrization:
+\begin{equation*}
+\textnormal{SU}{(2)}
+\; := \;
+	\left\{\,
+		\left.
+		\left(\begin{array}{rr}
+		a & -\overline{b}
+		\\
+		\overset{{\color{white}-}}{b} & \overline{a}
+		\end{array}\right)
+		\overset{{\color{white}.}}{\in}
+		\C^{2 \times 2}
+		\;\;\right\vert\;\,
+			\vert\, a \,\vert^{2} \,+\, \vert\, b \,\vert^{2} \,=\, 1
+		\;\right\}
+\end{equation*}
+Hence, the (real) Lie group {\color{red}$\textnormal{SU}(2)$ is diffeomorphic to $S^{3}$}, the $3$-dimensional unit sphere
+(in $4$-dimensional Euclidean space).
+In particular, $\textnormal{SU}(2)$ is a {\color{red}simply connected} $3$-dimensional real manifold.
+\end{proposition}
+\proof
+Suppose:
+\begin{equation*}
+g
+\; = \;
+	\left(\begin{array}{cc}
+		a & c
+		\\
+		\overset{{\color{white}-}}{b} & d
+		\end{array}\right)
+\; \in \;
+\textnormal{SU}(2)
+\end{equation*}
+First note that the component form of the condition \,$g^{\dagger}\cdot g = I_{2}$\, is:
+\begin{equation*}
+\left(\begin{array}{cc}
+	1 & 0
+	\\
+	\overset{{\color{white}-}}{0} & 1
+	\end{array}\right)
+\; = \;
+	g^{\dagger} \cdot g
+\; = \;
+	\left(\begin{array}{cc}
+		\overline{a} & \overline{b}
+		\\
+		\overset{{\color{white}-}}{\overline{c}} & \overline{d}
+		\end{array}\right)
+	\cdot
+	\left(\begin{array}{cc}
+		a & c
+		\\
+		\overset{{\color{white}-}}{b} & d
+		\end{array}\right)
+\; = \;
+	\left(\begin{array}{cc}
+		a\overline{a} + b\overline{b} & \overline{a}c + \overline{b}d
+		\\
+		\overset{{\color{white}-}}{a\overline{c} + b\overline{d}} & c\overline{c} + d\overline{d}
+		\end{array}\right)
+\end{equation*}
+Thus, we see that
+\begin{equation*}
+g
+\; = \;
+	\left(\begin{array}{cc}
+		a & c
+		\\
+		\overset{{\color{white}-}}{b} & d
+		\end{array}\right)
+\;\in\;
+	\textnormal{SU}(2)
+\quad\Longleftrightarrow\quad
+\left\{
+	\begin{array}{ccc}
+		g^{\dagger} \cdot g &=& I_{2}
+		\\
+		\det(g) &=& \overset{{\color{white}1}}{1}
+		\end{array}
+		\right.
+\quad\Longleftrightarrow\quad
+\left\{
+	\begin{array}{ccc}
+	\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2} &=& 1
+	\\
+	\vert\,c\,\vert^{2} + \vert\,d\,\vert^{2} &\overset{{\color{white}1}}{=}& 1
+	\\
+	a\overline{c} \;\, + \,\; b\overline{d} &\overset{{\color{white}1}}{=}& 0
+	\\
+	ad \;\, - \,\; bc &\overset{{\color{white}1}}{=}& 1
+	\end{array}
+	\right.
+\end{equation*}
+Next, note that
+\begin{equation*}
+a\overline{c} + b\overline{d} = 0
+\quad\Longleftrightarrow\quad
+	\left\langle
+		\left(\begin{array}{c} a \\ b \end{array}\right)
+		\,,\,
+		\left(\begin{array}{c} c \\ d \end{array}\right)
+		\right\rangle_{\C^{2}}
+	\;=\;
+	0
+\end{equation*}
+Since
+\,$\dim_{\C}\left(\begin{array}{c} a \\ b \end{array}\right)^{\perp} =\, 1$,\,
+the above equality (i.e., orthogonality of the two columns of \,$g$) implies:
+\begin{equation*}
+\left(\begin{array}{c} c \\ d \end{array}\right)
+\; \in \;
+	\left(\begin{array}{c} a \\ b \end{array}\right)^{\perp}
+\; = \;
+	\textnormal{span}_{\C}\left\{
+		\left(\begin{array}{r} -\overline{b} \\ \overline{a} \end{array}\right)
+		\right\}
+\quad\Longleftrightarrow\quad
+\left(\begin{array}{c} c \\ d \end{array}\right)
+\; = \;
+	\lambda \left(\begin{array}{r} -\overline{b} \\ \overline{a} \end{array}\right),
+	\;\;
+	\textnormal{for some $\lambda \in \C$}
+\end{equation*}
+So, we now know that $g$ has the form:
+\begin{equation*}
+g
+\; = \;
+	\left(\begin{array}{rr}
+		a & -\lambda\,\overline{b}
+		\\
+		\overset{{\color{white}-}}{b} & \lambda\,\overline{a}
+		\end{array}\right)
+\end{equation*}
+Next,
+\begin{equation*}
+1
+\,=\, \det(g)
+\,=\, a\cdot(\lambda\,\overline{a}) - b \cdot (-\lambda\,\overline{b})
+\,=\, \lambda\cdot(\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2})
+\quad\Longrightarrow\quad
+	\lambda = 1
+\end{equation*}
+We may now conclude that
+\begin{equation*}
+g
+\; = \;
+	\left(\begin{array}{rr}
+		a & -\,\overline{b}
+		\\
+		\overset{{\color{white}-}}{b} & \overline{a}
+		\end{array}\right),\,
+\quad
+\textnormal{where \,$\vert\,a\,\vert^{2} + \vert\,b\,\vert^{2} = 1$}
+\end{equation*}
+This completes the proof of the Proposition.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+%\input{tex/irreducible-representations-of-complexifications-of-real-Lie-algebras}
+%\vskip 0.5cm
+%\input{tex/representations-SU2}
+%\vskip 0.5cm
+%\input{tex/representations-SO3}
+%\vskip 0.5cm
+%\input{tex/representations-Lorentz-group}
+%\vskip 0.5cm
+%\input{tex/irreducible-representations-Casimir-operators}
+%\vskip 0.5cm
+%\input{tex/induced-represntations-of-semidirect-products}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+%\section{Unitary irreducible representations of the Poincaré group}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
