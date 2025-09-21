@@ -27,71 +27,6 @@
 \mbox{}
 \vskip 0.1cm
 \noindent
-The \textbf{special linear group of degree $n$ over $\C$} is defined as follows:
-\begin{equation*}
-\SL(n,\C)
-\; := \;
-	\left\{\;\,
-		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
-		\;\,\left\vert\;\;
-			\det(\,g\,) \overset{{\color{white}1}}{=} 1
-			\right.
-		\;\right\}
-\end{equation*}
-\end{definition}
-
-\vskip 0.5cm
-\begin{proposition}[Set-theoretic characterizations of \,$\mathfrak{sl}(n,\C)$]
-\label{SetTheoreticCharacterizationOfslTwoC}
-\mbox{}
-\vskip -0.1cm
-\begin{equation*}
-\mathfrak{sl}(n,\C)
-\; = \;
-	\left\{\;
-		X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
-		\;\left\vert\;\,
-			\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
-			\right.
-		\,\right\}
-\end{equation*}
-\end{proposition}
-\proof
-We invoke the fact that \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)}$,
-for each \,$X \in \C^{n \times n}$.
-Thus,
-\begin{eqnarray*}
-&&
-	X \,\in\, \mathfrak{sl}(n,\C)
-	\quad\Longrightarrow\quad
-	e^{\,t\cdot\,X} \,\in\, \textnormal{SL}(n,\C)
-	\quad\Longrightarrow\quad
-	\det\!\left(\,e^{\,t\cdot\,X}\,\right) \,=\, 1
-\\
-& \Longrightarrow\quad &
-	\textnormal{trace}(X)
-	\; = \;
-		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,\textnormal{trace}(X)}}\,\right)
-	\; = \;
-		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{\det(e^{\,t\,\cdot\,X})}\,\right)
-	\; = \;
-		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{1}\,\right)
-	\; = \;
-		0
-\end{eqnarray*}
-Conversely, suppose \,$\textnormal{trace}(X) = 0$.\,
-Then, \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)} \,=\, e^{\,t\,\cdot\,0} \,=\, 1$,\,
-which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{SL}(n,\C)$,\, hence \,$X \,\in\, \mathfrak{sl}(n,\C)$.
-This completes the proof of the equality (of sets) in question.
-\qed
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 1.0cm
-\begin{definition}
-\mbox{}
-\vskip 0.1cm
-\noindent
 The \textbf{orthogonal group of degree $n$} is defined as follows:
 \begin{equation*}
 \textnormal{O}(n)
@@ -117,31 +52,6 @@ The \textbf{special orthogonal group of degree $n$} is defined as follows:
 		\;\right\}
 \end{equation*}
 \end{definition}
-
-\vskip 0.5cm
-\begin{proposition}[Set-theoretic characterizations of the Lie algebras of $\textnormal{O}(n)$ and $\textnormal{SO}(n)$]
-\begin{eqnarray*}
-\mathfrak{o}(n)
-& = &
-	\left\{\;\,
-		X \overset{{\color{white}.}}{\in} \gl(n,\Re)
-		\;\left\vert\;\,
-			X^{T} = -X
-			\right.
-		\;\right\}
-\\
-\so(n)
-& = &
-	\left\{\;\,
-		X \overset{{\color{white}.}}{\in} \gl(n,\Re)
-		\;\left\vert\;\,
-			X^{T} = -X\,,
-			\;
-			\textnormal{trace}(X) = 0
-			\right.
-		\;\right\}
-\end{eqnarray*}
-\end{proposition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -182,77 +92,6 @@ The \textbf{special unitary group of degree $n$} is defined as follows:
 		\;\right\}
 \end{equation*}
 \end{definition}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\begin{proposition}[Set-theoretic characterizations of \,$\mathfrak{u}(n)$, and $\mathfrak{su}(n)$]
-\mbox{}
-\vskip 0.1cm
-\begin{enumerate}
-\item
-	\begin{equation*}
-	\mathfrak{u}(n)
-	\; = \;
-		\left\{\;
-			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
-			\;\left\vert\;\,
-				X + X^{\dagger} = \overset{{\color{white}1}}{0}
-				\right.
-			\,\right\}
-	\end{equation*}
-\item
-	\begin{equation*}
-	\mathfrak{su}(n)
-	\; = \;
-		\left\{\;
-			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
-			\;\left\vert\;\,
-				\begin{array}{c}
-				X + X^{\dagger} = \overset{{\color{white}1}}{0}
-				\\
-				\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
-				\end{array}
-				\right.
-			\,\right\}
-	\end{equation*}
-\end{enumerate}
-\end{proposition}
-\proof
-\begin{enumerate}
-\item
-	\begin{eqnarray*}
-	&&
-		X \,\in\, \mathfrak{u}(n)
-		\quad\Longrightarrow\quad
-		e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)
-	\\
-	& \Longrightarrow\quad &
-		I_{n}
-			\,=\, \left(\,e^{\,t\,\cdot\,X}\,\right)^{\!\dagger} \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
-			\,=\, \left(\,e^{\,t\,\cdot\,X^{\dagger}}\,\right) \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
-			\,=\, e^{\,t\,\cdot\,(X^{\dagger}+X)}
-	\\
-	& \Longrightarrow\quad &
-		X \,+\, X^{\dagger}
-		\; = \;
-			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,(X+X^{\dagger})}}\,\right)
-		\; = \;
-			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{I_{n}}\,\right)
-		\; = \;
-			0
-	\end{eqnarray*}
-	Conversely, suppose \,$X + X^{\dagger} \,=\, 0$.\,
-	Then, \,$I_{n}$
-	\,$=$\, $e^{\,0_{n \times n}}$
-	\,$=$\, $e^{\,t\,\cdot(X^{\dagger}+X)}$
-	\,$=\, \cdots \,=$\, $\left(e^{\,t\,\cdot\,X}\right)^{\!\dagger}\cdot\left(e^{\,t\,\cdot\,X}\right)$,\,
-	which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)$,\, hence \,$X \,\in\, \mathfrak{u}(n)$.
-	This completes the proof of the equality (of sets) in question.
-\item
-	Immediate by (i) and Proposition \ref{SetTheoreticCharacterizationOfslTwoC}.
-	\qed
-\end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -426,11 +265,267 @@ This completes the proof of the Proposition.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\noindent
+We next establish the fact that \,$\SU(2)$\, is the universal covering space of \,$\SO(3)$.\,
+We begin by identifying a \,$3$-dimensional \,$\Re$-linear subspace of \,$\C^{2 \times 2}$\,
+and define an inner product on it such that the resulting inner product space over $\Re$
+is isomorphic (as a real inner product space) to the \,$3$-dimensional Euclidean space \,$\mathbb{E}^{3}$.
+
+\vskip 0.3cm
+\noindent
+Let \,$V \in \C^{2 \times 2}$\, be the set of all \,$2 \times 2$\, complex matrices
+which are {\color{red}self-adjoint} ($Z^{\dagger} = Z$) and have {\color{red}trace zero}.
+Recall that, for \,$Z \in \C^{2 \times 2}$,\,
+\begin{equation*}
+Z^{\dagger} \; = \; Z
+\quad\Longleftrightarrow\quad
+\left(\,\begin{array}{cc}
+	\overline{z_{11}} & \overline{z_{21}}
+	\\
+	\overline{z_{12}} & \overline{z_{22}}
+	\end{array}\,\right)
+\; = \;
+\left(\,\begin{array}{cc}
+	z_{11} & z_{12}
+	\\
+	z_{21} & z_{22}
+	\end{array}\,\right)
+\quad\Longleftrightarrow\quad
+\left\{\begin{array}{l}
+	z_{11} = \overline{z_{11}} \;\;\Longleftrightarrow\;\; z_{11} \in \Re
+	\\
+	z_{12} \overset{{\color{white}1}}{=} \overline{z_{21}}
+	\\
+	z_{22} \overset{{\color{white}1}}{=} \overline{z_{22}} \;\;\Longleftrightarrow\;\; z_{22} \in \Re
+	\end{array}\right.
+\end{equation*}
+Thus, that fact that \,$V$\, is the set of self-adjoint and trace-zero $2 \times 2$ complex matrices
+implies that \,$V$\, can set-theoretically parametrized as follows:
+\begin{equation*}
+V
+\;\; = \;\;
+	\left\{\;\left.
+		\left(\,\begin{array}{cc}
+			x_{1} & x_{2} + \i\,x_{3}
+			\\
+			x_{2} - \i\,x_{3} & -\,x_{1}
+			\end{array}\,\right)
+		\in \C^{2 \times 2}
+		\;\;\,\right\vert\;\,
+		x_{1}, x_{2}, x_{3} \in \Re
+		\;\right\}
+\end{equation*}
+Clearly, \,$V$\, is an $\Re$-linear subspace of \,$\C^{2 \times 2}$,\,
+and \,$V$\, is thus isomorphic to \,$\Re^{3}$ as a vector space over \,$\Re$.\,
+We next define the following inner product on \,$V$\,:
+\begin{eqnarray*}
+\left\langle\;
+	\overset{{\color{white}.}}{X}
+	\; , \;
+	Y
+	\;\right\rangle_{\!V}
+& := &
+	\dfrac{1}{2}\,
+	\trace\!\left(\,X \overset{{\color{white}1}}{\cdot} Y\,\right)
+\;\; = \;\;
+	\dfrac{1}{2}\cdot\trace\!\left(
+		\left(\,\begin{array}{cc}
+			x_{1} & x_{2} + \i\,x_{3}
+			\\
+			x_{2} - \i\,x_{3} & -\,x_{1}
+			\end{array}\,\right)
+		\cdot
+		\left(\,\begin{array}{cc}
+			y_{1} & y_{2} + \i\,y_{3}
+			\\
+			y_{2} - \i\,y_{3} & -\,y_{1}
+			\end{array}\,\right)
+		\right)
+\\
+& = &
+	\dfrac{1}{2}\cdot\trace\!\left(
+		\left(\,\begin{array}{cc}
+			x_{1}y_{1} + x_{2}y_{2} + x_{3}y_{3} + \i\,0 & (x_{1}y_{2} - x_{2}y_{1}) + \i\,(x_{1}y_{3}-x_{3}y_{1})
+			\\
+			(x_{2}y_{1}-x_{1}y_{2}) + \i\,(-x_{3}y_{1}+x_{1}y_{3}) & x_{2}y_{2} + x_{3}y_{3} + \i\,0 + x_{1}y_{1}
+			\end{array}\,\right)
+		\right)
+\\
+& = &
+	\overset{{\color{white}1}}{x_{1}\,y_{1} + x_{2}\,y_{2} + x_{3}\,y_{3}}
+\end{eqnarray*}
+Thus,
+\,$\left(\,\overset{{\color{white}.}}{V}\,,\,\langle\,\cdot\,,\,\cdot\,\rangle_{\,V}\,\right)$\,
+is indeed isomorphic (as a real inner product space) to the $3$-dimensional Euclidean space \,$\mathbb{E}^{3}$.\,
+In what follows, we thus view \,$V$\, as a copy of \,$\mathbb{E}^{3}$.\,
+
+\vskip 0.3cm
+\noindent
+\begin{proposition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Define the map
+\,$\Phi : \SU(2) \longrightarrow \End(V) \cong \End(\mathbb{E}^{3}) : U \longmapsto \Phi_{U}$\,
+by:
+\begin{equation*}
+\Phi_{U}(\,X\,)
+\;\; := \;\;
+	U \cdot X \cdot U^{-1}\,,
+\quad
+\textnormal{for each \,$X \in V \cong \mathbb{E}^{3}$}
+\end{equation*}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	Under the inner product space isomorphism
+	\,$V \cong \mathbb{E}^{3}$,\,
+	the image of the map
+	\begin{equation*}
+	\Phi : \SU(2) \longrightarrow \End(V) \cong \End(\mathbb{E}^{3})
+	\end{equation*}
+	is \,$\SO(3)$.\,
+\item
+	The map \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is a homomorphism.
+\item
+	The map \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is surjective.
+\item
+	$\ker(\Phi) \, = \, \{\,\pm \, I_{2}\,\}$
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	First, we note that, for each \,$U \in \SU(2)$\, and \,$X \in V$,\,
+	we indeed have that \,$\Phi_{U}(X) \in V$\,:
+	\begin{eqnarray*}
+	\left(\,\Phi_{U}(\overset{{\color{white}.}}{X})\,\right)^{\dagger}
+	& \!=\! &
+		\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{-1} \,\right)^{\dagger}
+	\;\, = \;\,
+		\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{\dagger} \,\right)^{\dagger}
+	\;\, = \;\,
+		U^{\dagger\dagger} \cdot X^{\dagger} \cdot U^{\dagger}
+	\;\, = \;\,
+		U \cdot X \cdot U^{-1}
+	\;\, = \;\,
+		\Phi_{U}(\,X\,)\,,
+	\\
+	\trace\!\left(\,\Phi_{U}(\overset{{\color{white}.}}{X})\,\right)
+	& \!=\! &
+		\trace\!\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{-1}\right)
+	\;\, = \;\,
+		\trace\!\left(\, \overset{{\color{white}.}}{X} \cdot U^{-1} \cdot U \,\right)
+	\;\, = \;\,
+		\trace\!\left(\, \overset{{\color{white}.}}{X} \,\right)
+	\;\, = \;\,
+		0
+	\end{eqnarray*}
+	which shows that \,$\Phi_{U}(X)$\, is self-adjoint and have trace-zero;
+	therefore, indeed, \,$\Phi_{U}(X) \in V$.\,
+	Next, we show that, for each \,$U \in \SU(2)$, the map
+	\,$\Phi_{U} : V \cong \mathbb{E}^{3}\longrightarrow V \cong \mathbb{E}^{3}$\,
+	preserves the inner product on \,$V$.\,
+	To this end, note:
+	\begin{eqnarray*}
+		\left\langle\;
+		\Phi_{U}(\overset{{\color{white}.}}{X})
+		\; , \;
+		\Phi_{U}(Y)
+		\;\right\rangle_{\!V}
+	& = &
+		\dfrac{1}{2}\,
+		\trace\!\left(\,
+				U \overset{{\color{white}1}}{\cdot} X \cdot U^{-1} \cdot U \cdot Y \cdot U^{-1}
+			\,\right)
+	\;\; = \;\;
+		\dfrac{1}{2}\,
+		\trace\!\left(\,
+			U \overset{{\color{white}1}}{\cdot} X \cdot Y \cdot U^{-1}
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,
+		\trace\!\left(\,
+			X \overset{{\color{white}1}}{\cdot} Y \cdot U^{-1} \cdot U
+			\,\right)
+	\;\; = \;\;
+		\dfrac{1}{2}\,
+		\trace\!\left(\,
+			X \overset{{\color{white}1}}{\cdot} Y
+			\,\right)
+	\\
+	& =: &
+		\left\langle\;
+			\overset{{\color{white}.}}{X}
+			\, , \,
+			Y
+			\;\right\rangle_{\!V}
+	\end{eqnarray*}
+	Thus, under the inner product space isomorphism
+	\,$V \cong \mathbb{E}^{3}$,\,
+	we have:
+	\,$\Phi_{U} \in \textnormal{O}(3)$,\,
+	which furthermore immediately implies
+	\,$\det\Phi_{U} \in \{\,\pm 1\,\}$.\,
+	On the other hand, connectedness of \,$\SU(2)$\, and continuity of
+	\,$\det$\, and \,$\Phi$\, together imply that the image of the map
+	\,$\det \,\circ\, \Phi : \SU(2) \longrightarrow \Re$\,
+	is a singleton subset of \,$\Re$.\,
+	We may now conclude that
+	 \,$\det\Phi_{U} = + 1$,\,
+	for each \,$U \in \SU(2)$.\,
+	This proves that the image of
+	\,$\Phi : \SU(2) \longrightarrow \End(V) \cong \End(\mathbb{E}^{3})$\,
+	is indeed \,$\SO(3)$.
+\item
+	Simply note:
+	\begin{equation*}
+	\Phi_{U_{1}U_{2}}(X)
+	\; = \;
+		(U_{1}U_{2}) \cdot X (U_{1}U_{2})^{-1}
+	\; = \;
+		U_{1} \cdot U_{2} \cdot X \cdot U_{2}^{-1} \cdot U_{1}^{-1}
+	\; = \;
+		\Phi_{U_{1}}\!\left(\,\Phi_{U_{2}}(\overset{{\color{white}.}}{X})\,\right)
+	\; = \;
+		\Phi_{U_{1}} \,\circ\, \Phi_{U_{2}}\left(\,\overset{{\color{white}.}}{X}\,\right),
+	\end{equation*}
+	which shows
+	\,$\Phi(\,U_{1} \cdot U_{2}\,) \, = \, \Phi(U_{1}) \,\circ\, \Phi(U_{2})$.\,
+	Thus, \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is indeed a homomorphism.
+\item
+\item
+\end{enumerate}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 1.0cm
 \section{The Lie groups \,$\SOup(1,3)$\, and \,$\SL(2,\C)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.3cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{special linear group of degree $n$ over $\C$} is defined as follows:
+\begin{equation*}
+\SL(n,\C)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
+		\;\,\left\vert\;\;
+			\det(\,g\,) \overset{{\color{white}1}}{=} 1
+			\right.
+		\;\right\}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
 \noindent
 Let \,$Q_{(1,n)} \,:=\, \diag(-1,1,\cdots,1) \in \Re^{(n+1) \times (n+1)}$.
 
