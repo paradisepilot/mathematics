@@ -274,11 +274,11 @@ is isomorphic (as a real inner product space) to the \,$3$-dimensional Euclidean
 
 \vskip 0.3cm
 \noindent
-Let \,$V \in \C^{2 \times 2}$\, be the set of all \,$2 \times 2$\, complex matrices
-which are {\color{red}self-adjoint} ($Z^{\dagger} = Z$) and have {\color{red}trace zero}.
+Recall that \,$\su(2) \subset \C^{2 \times 2}$\, consists of all \,$2 \times 2$\, complex matrices
+which are {\color{red}skew-Hermitian} ($Z^{\dagger} = -\,Z$) and have {\color{red}trace zero}.
 Recall that, for \,$Z \in \C^{2 \times 2}$,\,
 \begin{equation*}
-Z^{\dagger} \; = \; Z
+Z^{\dagger} \; = \; - \, Z
 \quad\Longleftrightarrow\quad
 \left(\,\begin{array}{cc}
 	\overline{z_{11}} & \overline{z_{21}}
@@ -286,79 +286,79 @@ Z^{\dagger} \; = \; Z
 	\overline{z_{12}} & \overline{z_{22}}
 	\end{array}\,\right)
 \; = \;
-\left(\,\begin{array}{cc}
+-\,\left(\,\begin{array}{cc}
 	z_{11} & z_{12}
 	\\
 	z_{21} & z_{22}
 	\end{array}\,\right)
 \quad\Longleftrightarrow\quad
 \left\{\begin{array}{l}
-	z_{11} = \overline{z_{11}} \;\;\Longleftrightarrow\;\; z_{11} \in \Re
+	\overline{z_{11}} = - \, z_{11} \;\;\Longleftrightarrow\;\; z_{11} \in \i\cdot\Re
 	\\
-	z_{12} \overset{{\color{white}1}}{=} \overline{z_{21}}
+	\overline{z_{21}} \overset{{\color{white}1}}{=} - \, z_{12}
 	\\
-	z_{22} \overset{{\color{white}1}}{=} \overline{z_{22}} \;\;\Longleftrightarrow\;\; z_{22} \in \Re
+	\overline{z_{22}} \overset{{\color{white}1}}{=} - \, z_{22} \;\;\Longleftrightarrow\;\; z_{22} \in \i\cdot\Re
 	\end{array}\right.
 \end{equation*}
-Thus, that fact that \,$V$\, is the set of self-adjoint and trace-zero $2 \times 2$ complex matrices
-implies that \,$V$\, can set-theoretically parametrized as follows:
+Thus, that fact that \,$\su(2)$\, is the set of skew-Hermitian and trace-zero $2 \times 2$ complex matrices
+implies that \,$\su(2)$\, can be set-theoretically parametrized as follows:
 \begin{equation*}
-V
+\su(2)
 \;\; = \;\;
 	\left\{\;\left.
 		\left(\,\begin{array}{cc}
-			x_{1} & x_{2} + \i\,x_{3}
+			\i\,x_{1} & x_{2} + \i\,x_{3}
 			\\
-			x_{2} - \i\,x_{3} & -\,x_{1}
+			- \, x_{2} + \i\,x_{3} & -\,\i\,x_{1}
 			\end{array}\,\right)
 		\in \C^{2 \times 2}
 		\;\;\,\right\vert\;\,
 		x_{1}, x_{2}, x_{3} \in \Re
 		\;\right\}
 \end{equation*}
-Clearly, \,$V$\, is an $\Re$-linear subspace of \,$\C^{2 \times 2}$,\,
-and \,$V$\, is thus isomorphic to \,$\Re^{3}$ as a vector space over \,$\Re$.\,
+Clearly, \,$\su(2)$\, is an $\Re$-linear subspace of \,$\C^{2 \times 2}$,\,
+and \,$\su(2)$\, is thus isomorphic to \,$\Re^{3}$ as a vector space over \,$\Re$.\,
 We next define the following inner product on \,$V$\,:
 \begin{eqnarray*}
-\left\langle\;
+\left\langle\,
 	\overset{{\color{white}.}}{X}
-	\; , \;
+	\, , \,
 	Y
-	\;\right\rangle_{\!V}
+	\,\right\rangle_{\!\su(2)}
 & := &
-	\dfrac{1}{2}\,
+	-\,\dfrac{1}{2}\,
 	\trace\!\left(\,X \overset{{\color{white}1}}{\cdot} Y\,\right)
 \;\; = \;\;
-	\dfrac{1}{2}\cdot\trace\!\left(
-		\left(\,\begin{array}{cc}
-			x_{1} & x_{2} + \i\,x_{3}
+	-\,\dfrac{1}{2}\cdot\trace\!\left(
+		\left(\begin{array}{cc}
+			\i\,x_{1} & x_{2} + \i\,x_{3}
 			\\
-			x_{2} - \i\,x_{3} & -\,x_{1}
-			\end{array}\,\right)
+			- \, x_{2} + \i\,x_{3} & -\,\i\,x_{1}
+			\end{array}\right)
 		\cdot
-		\left(\,\begin{array}{cc}
-			y_{1} & y_{2} + \i\,y_{3}
+		\left(\begin{array}{cc}
+			\i\,y_{1} & y_{2} + \i\,y_{3}
 			\\
-			y_{2} - \i\,y_{3} & -\,y_{1}
-			\end{array}\,\right)
+			- \, y_{2} + \i\,y_{3} & -\,\i\,y_{1}
+			\end{array}\right)
 		\right)
 \\
 & = &
-	\dfrac{1}{2}\cdot\trace\!\left(
-		\left(\,\begin{array}{cc}
-			x_{1}y_{1} + x_{2}y_{2} + x_{3}y_{3} + \i\,0 & (x_{1}y_{2} - x_{2}y_{1}) + \i\,(x_{1}y_{3}-x_{3}y_{1})
+	-\,\dfrac{1}{2}\cdot\trace\!\left(\!
+		\begin{array}{cc}
+			-\,(x_{1}y_{1} + x_{2}y_{2} + x_{3}y_{3}) + \i\,(x_{2}y_{3}-x_{3}y_{2}) & (-x_{1}y_{3}+x_{3}y_{1}) + \i\,(x_{1}y_{2} - x_{2}y_{1})
 			\\
-			(x_{2}y_{1}-x_{1}y_{2}) + \i\,(-x_{3}y_{1}+x_{1}y_{3}) & x_{2}y_{2} + x_{3}y_{3} + \i\,0 + x_{1}y_{1}
-			\end{array}\,\right)
-		\right)
+			(-x_{3}y_{1}+x_{1}y_{3}) + \i\,(-x_{2}y_{1}+x_{1}y_{2}) & -\,(x_{1}y_{1} + x_{2}y_{2} - x_{3}y_{3}) - \i\,(x_{2}y_{3}-x_{3}y_{2})
+			\end{array}
+		\!\right)
 \\
 & = &
 	\overset{{\color{white}1}}{x_{1}\,y_{1} + x_{2}\,y_{2} + x_{3}\,y_{3}}
 \end{eqnarray*}
 Thus,
-\,$\left(\,\overset{{\color{white}.}}{V}\,,\,\langle\,\cdot\,,\,\cdot\,\rangle_{\,V}\,\right)$\,
+\,$\left(\;\overset{{\color{white}.}}{\su(2)}\,,\,\langle\,\cdot\,,\,\cdot\,\rangle_{\,\su(2)}\,\right)$\,
 is indeed isomorphic (as a real inner product space) to the $3$-dimensional Euclidean space \,$\mathbb{E}^{3}$.\,
-In what follows, we thus view \,$V$\, as a copy of \,$\mathbb{E}^{3}$.\,
+In what follows, we thus view \,$\su(2)$\, as a copy of \,$\mathbb{E}^{3}$.\,
 
 \vskip 0.5cm
 \noindent
@@ -367,14 +367,14 @@ In what follows, we thus view \,$V$\, as a copy of \,$\mathbb{E}^{3}$.\,
 \vskip 0.05cm
 \noindent
 Define the map
-\,$\Phi : \SU(2) \longrightarrow \End(V) \cong \End(\mathbb{E}^{3}) : U \longmapsto \Phi_{U}$\,
+\,$\textnormal{Ad} : \SU(2) \longrightarrow \Isom(\su(2)) \cong \Isom(\mathbb{E}^{3}) = \textnormal{O}(3) : U \longmapsto \textnormal{Ad}_{U}$\,
 by:
 \begin{equation*}
-\Phi_{U}(\,X\,)
+\textnormal{Ad}_{U}(\,X\,)
 \;\; := \;\;
 	U \cdot X \cdot U^{-1}\,,
 \quad
-\textnormal{for each \,$X \in V \cong \mathbb{E}^{3}$}
+\textnormal{for each \,$X \in \su(2) \cong \mathbb{E}^{3}$}
 \end{equation*}
 Then, the following statements are true:
 \begin{enumerate}
@@ -383,24 +383,24 @@ Then, the following statements are true:
 	\,$V \cong \mathbb{E}^{3}$,\,
 	the image of the map
 	\begin{equation*}
-	\Phi : \SU(2) \longrightarrow \End(V) \cong \End(\mathbb{E}^{3})
+	\textnormal{Ad} : \SU(2) \longrightarrow \Isom(\su(2)) \cong \Isom(\mathbb{E}^{3}) = \textnormal{O}(3)
 	\end{equation*}
 	is \,$\SO(3)$.\,
 \item
-	The map \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is a homomorphism.
+	The map \,$\textnormal{Ad} : \SU(2) \longrightarrow \SO(3)$\, is a homomorphism.
 \item
-	$\ker(\Phi) \, = \, \{\,\pm \, I_{2}\,\}$
+	$\ker(\textnormal{Ad}) \, = \, \{\,\pm \, I_{2}\,\}$
 \item
-	The map \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is surjective.
+	The map \,$\textnormal{Ad} : \SU(2) \longrightarrow \SO(3)$\, is surjective.
 \end{enumerate}
 \end{proposition}
 \proof
 \begin{enumerate}
 \item
 	First, we note that, for each \,$U \in \SU(2)$\, and \,$X \in V$,\,
-	we indeed have that \,$\Phi_{U}(X) \in V$\,:
+	we indeed have that \,$\textnormal{Ad}_{U}(X) \in V$\,:
 	\begin{eqnarray*}
-	\left(\,\Phi_{U}(\overset{{\color{white}.}}{X})\,\right)^{\dagger}
+	\left(\,\textnormal{Ad}_{U}(\overset{{\color{white}.}}{X})\,\right)^{\dagger}
 	& \!=\! &
 		\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{-1} \,\right)^{\dagger}
 	\;\, = \;\,
@@ -408,11 +408,11 @@ Then, the following statements are true:
 	\;\, = \;\,
 		U^{\dagger\dagger} \cdot X^{\dagger} \cdot U^{\dagger}
 	\;\, = \;\,
-		U \cdot X \cdot U^{-1}
+		U \cdot (-X) \cdot U^{-1}
 	\;\, = \;\,
-		\Phi_{U}(\,X\,)\,,
+		- \, \textnormal{Ad}_{U}(\,X\,)\,,
 	\\
-	\trace\!\left(\,\Phi_{U}(\overset{{\color{white}.}}{X})\,\right)
+	\trace\!\left(\,\textnormal{Ad}_{U}(\overset{{\color{white}.}}{X})\,\right)
 	& \!=\! &
 		\trace\!\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{-1}\right)
 	\;\, = \;\,
@@ -422,36 +422,36 @@ Then, the following statements are true:
 	\;\, = \;\,
 		0
 	\end{eqnarray*}
-	which shows that \,$\Phi_{U}(X)$\, is self-adjoint and have trace-zero;
-	therefore, indeed, \,$\Phi_{U}(X) \in V$.\,
+	which shows that \,$\textnormal{Ad}_{U}(X)$\, is skew-Hermitian and have trace-zero;
+	therefore, indeed, \,$\textnormal{Ad}_{U}(X) \in \su(2)$.\,
 	Next, we show that, for each \,$U \in \SU(2)$, the map
-	\,$\Phi_{U} : V \cong \mathbb{E}^{3}\longrightarrow V \cong \mathbb{E}^{3}$\,
-	preserves the inner product on \,$V$.\,
+	\,$\textnormal{Ad}_{U} : \su(2) \cong \mathbb{E}^{3}\longrightarrow V \cong \mathbb{E}^{3}$\,
+	preserves the inner product on \,$\su(2)$.\,
 	To this end, note:
 	\begin{eqnarray*}
 		\left\langle\;
-		\Phi_{U}(\overset{{\color{white}.}}{X})
+		\textnormal{Ad}_{U}(\overset{{\color{white}.}}{X})
 		\; , \;
-		\Phi_{U}(Y)
-		\;\right\rangle_{\!V}
+		\textnormal{Ad}_{U}(Y)
+		\;\right\rangle_{\!\su(2)}
 	& = &
-		\dfrac{1}{2}\,
+		-\,\dfrac{1}{2}\,
 		\trace\!\left(\,
 				U \overset{{\color{white}1}}{\cdot} X \cdot U^{-1} \cdot U \cdot Y \cdot U^{-1}
 			\,\right)
 	\;\; = \;\;
-		\dfrac{1}{2}\,
+		-\,\dfrac{1}{2}\,
 		\trace\!\left(\,
 			U \overset{{\color{white}1}}{\cdot} X \cdot Y \cdot U^{-1}
 			\,\right)
 	\\
 	& = &
-		\dfrac{1}{2}\,
+		-\,\dfrac{1}{2}\,
 		\trace\!\left(\,
 			X \overset{{\color{white}1}}{\cdot} Y \cdot U^{-1} \cdot U
 			\,\right)
 	\;\; = \;\;
-		\dfrac{1}{2}\,
+		-\,\dfrac{1}{2}\,
 		\trace\!\left(\,
 			X \overset{{\color{white}1}}{\cdot} Y
 			\,\right)
@@ -461,101 +461,101 @@ Then, the following statements are true:
 			\overset{{\color{white}.}}{X}
 			\, , \,
 			Y
-			\;\right\rangle_{\!V}
+			\;\right\rangle_{\!\su(2)}
 	\end{eqnarray*}
 	Thus, under the inner product space isomorphism
-	\,$V \cong \mathbb{E}^{3}$,\,
+	\,$\su(2) \cong \mathbb{E}^{3}$,\,
 	we have:
-	\,$\Phi_{U} \in \textnormal{O}(3)$,\,
+	\,$\textnormal{Ad}_{U} \in \textnormal{O}(3)$,\,
 	which furthermore immediately implies
-	\,$\det\Phi_{U} \in \{\,\pm 1\,\}$.\,
+	\,$\det\textnormal{Ad}_{U} \in \{\,\pm 1\,\}$.\,
 	On the other hand, connectedness of \,$\SU(2)$\, and continuity of
-	\,$\det$\, and \,$\Phi$\, together imply that the image of the map
-	\,$\det \,\circ\, \Phi : \SU(2) \longrightarrow \Re$\,
+	\,$\det$\, and \,$\textnormal{Ad}$\, together imply that the image of the map
+	\,$\det \,\circ\, \textnormal{Ad} : \SU(2) \longrightarrow \Re$\,
 	is a singleton subset of \,$\Re$.\,
 	We may now conclude that
-	 \,$\det\Phi_{U} = + 1$,\,
+	 \,$\det\textnormal{Ad}_{U} = + 1$,\,
 	for each \,$U \in \SU(2)$.\,
 	This proves that the image of
-	\,$\Phi : \SU(2) \longrightarrow \End(V) \cong \End(\mathbb{E}^{3})$\,
+	\,$\textnormal{Ad} : \SU(2) \longrightarrow \Isom(\su(2)) \cong \Isom(\mathbb{E}^{3})$\,
 	is indeed \,$\SO(3)$.
 \item
 	Simply note:
 	\begin{equation*}
-	\Phi_{U_{1}U_{2}}(X)
+	\textnormal{Ad}_{U_{1}U_{2}}(X)
 	\; = \;
 		(U_{1}U_{2}) \cdot X (U_{1}U_{2})^{-1}
 	\; = \;
 		U_{1} \cdot U_{2} \cdot X \cdot U_{2}^{-1} \cdot U_{1}^{-1}
 	\; = \;
-		\Phi_{U_{1}}\!\left(\,\Phi_{U_{2}}(\overset{{\color{white}.}}{X})\,\right)
+		\textnormal{Ad}_{U_{1}}\!\left(\,\textnormal{Ad}_{U_{2}}(\overset{{\color{white}.}}{X})\,\right)
 	\; = \;
-		\Phi_{U_{1}} \,\circ\, \Phi_{U_{2}}\left(\,\overset{{\color{white}.}}{X}\,\right),
+		\textnormal{Ad}_{U_{1}} \,\circ\, \textnormal{Ad}_{U_{2}}\left(\,\overset{{\color{white}.}}{X}\,\right),
 	\end{equation*}
 	which shows
-	\,$\Phi(\,U_{1} \cdot U_{2}\,) \, = \, \Phi(U_{1}) \,\circ\, \Phi(U_{2})$.\,
-	Thus, \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is indeed a homomorphism.
+	\,$\textnormal{Ad}(\,U_{1} \cdot U_{2}\,) \, = \, \textnormal{Ad}(U_{1}) \,\circ\, \textnormal{Ad}(U_{2})$.\,
+	Thus, \,$\textnormal{Ad} : \SU(2) \longrightarrow \SO(3)$\, is indeed a homomorphism.
 \item
-	Obviously, \,$\{\,\pm\,I_{2}\,\} \subset \ker(\Phi)$.\,
+	Obviously, \,$\{\,\pm\,I_{2}\,\} \subset \ker(\textnormal{Ad})$.\,
 	For the reserve inclusion, let
-	\,$U \in \ker(\Phi) \subset \SU(2)$,\,
+	\,$U \in \ker(\textnormal{Ad}) \subset \SU(2)$,\,
 	i.e.,
-	\,$UXU^{-1} = X$,\, for each \,$X \in V \cong \mathbb{E}^{3}$;\,
-	equivalently, $UX = XU$, for each $X \in V \cong \mathbb{E}^{3}$.
+	\,$UXU^{-1} = X$,\, for each \,$X \in \su(2) \cong \mathbb{E}^{3}$;\,
+	equivalently, $UX = XU$, for each $X \in \su(2) \cong \mathbb{E}^{3}$.
 	Now,
 	\begin{eqnarray*}
 	U X
 	& \!=\!\! &
-		\left(\,\begin{array}{rr}
+		\left(\begin{array}{rr}
 			a & -\,\overline{b}
 			\\
 			b & \overline{a}
-			\end{array}\,\right)
+			\end{array}\right)
 		\cdot
-		\left(\,\begin{array}{cc}
-			x_{1} & x_{2} + \i\,x_{3}
+		\left(\begin{array}{cc}
+			\i\,x_{1} & x_{2} + \i\,x_{3}
 			\\
-			x_{2} - \i\,x_{3} & -\,x_{1}
-			\end{array}\,\right)
+			-\,x_{2} + \i\,x_{3} & -\,\i\,x_{1}
+			\end{array}\right)
 	\;\; = \;\;
-		\left(\,\begin{array}{cc}
-			ax_{1} - \overline{b}\,(x_{2}-\i\,x_{3}) & {\color{white}-}\,a\,(x_{2}+\i\,x_{3}) + \overline{b}x_{1}
+		\left(\begin{array}{cc}
+			\i\,ax_{1} - \overline{b}\,(-\,x_{2}+\i\,x_{3}) & {\color{white}-}\,a\,(x_{2}+\i\,x_{3}) + \i\,\overline{b}x_{1}
 			\\
-			bx_{1} + \overline{a}\,(x_{2}-\i\,x_{3}) & {\color{white}-}\,b\,(x_{2}+\i\,x_{3}) - \overline{a}x_{1}
-			\end{array}\,\right)
+			\i\,bx_{1} + \overline{a}\,(-\,x_{2}+\i\,x_{3}) & {\color{white}-}\,b\,(x_{2}+\i\,x_{3}) - \i\,\overline{a}x_{1}
+			\end{array}\!\right)
 	\\ \\
 	X U
 	& \!=\!\! &
-		\left(\,\begin{array}{cc}
-			x_{1} & x_{2} + \i\,x_{3}
+		\left(\begin{array}{cc}
+			\i\,x_{1} & x_{2} + \i\,x_{3}
 			\\
-			x_{2} - \i\,x_{3} & -\,x_{1}
-			\end{array}\,\right)
+			-\,x_{2} + \i\,x_{3} & -\,\i\,x_{1}
+			\end{array}\right)
 		\cdot
-		\left(\,\begin{array}{rr}
+		\left(\begin{array}{rr}
 			a & -\,\overline{b}
 			\\
 			b & \overline{a}
-			\end{array}\,\right)
+			\end{array}\right)
 	\;\; = \;\;
-		\left(\,\begin{array}{cc}
-			x_{1}a + (x_{2}+\i\,x_{3})\,b &  -\,x_{1}\overline{b} + (x_{2}+\i\,x_{3})\,\overline{a}
+		\left(\begin{array}{cc}
+			\i\,x_{1}a + (x_{2}+\i\,x_{3})\,b &  -\,\i\,x_{1}\overline{b} + (x_{2}+\i\,x_{3})\,\overline{a}
 			\\
-			(x_{2}-\i\,x_{3})\,a - \,x_{1}b & -\,(x_{2}-\i\,x_{3})\,\overline{b} - x_{1}\overline{a}
-			\end{array}\,\right)
+			(-\,x_{2}+\i\,x_{3})\,a - \i\,x_{1}b & -\,(-\,x_{2}+\i\,x_{3})\,\overline{b} - \i\,x_{1}\overline{a}
+			\end{array}\!\right)
 	\end{eqnarray*}
 	Thus,
 	\begin{equation}\label{UXeqXU}
 	UX = XU
 	\quad\Longrightarrow\quad
 	\left\{\begin{array}{ccc}
-		-\,\overline{b}\,(x_{2} - \i\,x_{3}) & = & b\,(x_{2} + \i\,x_{3})
+		-\,\overline{b}\,(-\,x_{2} + \i\,x_{3}) & = & b\,(x_{2} + \i\,x_{3})
 		\\
-		a\,(x_{2} + \i\,x_{3}) + \overline{b}x_{1} & \overset{{\color{white}1}}{=} & -\,x_{1}\overline{b} + (x_{2} + \i\,x_{3})\,\overline{a}
+		a\,(x_{2} + \i\,x_{3}) + \i\,\overline{b}x_{1} & \overset{{\color{white}1}}{=} & -\,\i\,x_{1}\overline{b} + (x_{2} + \i\,x_{3})\,\overline{a}
 		\end{array}\right.
 	\end{equation}
 
-	\vskip 0.3cm
+	\vskip 0.2cm
 	\noindent
 	\textbf{Claim 1:}\quad
 	The validity of the second equality in \eqref{UXeqXU} for arbitrary 
@@ -564,14 +564,14 @@ Then, the following statements are true:
 	$a \in \Re$, $b = 0$, as well as the validity of the first equality in \eqref{UXeqXU}.
 	\vskip 0.1cm
 	\noindent
-	Proof of Claim 1:\quad
+	Proof of Claim 1:\;\;
 	Note that
-	\,$a\,(x_{2} + \i\,x_{3}) + \overline{b}x_{1}  \, = \, -\,x_{1}\overline{b} + (x_{2} + \i\,x_{3})\,\overline{a}$\,
+	\,$a\,(x_{2} + \i\,x_{3}) + \i\,\overline{b}x_{1}  \, = \, -\,\i\,x_{1}\overline{b} + (x_{2} + \i\,x_{3})\,\overline{a}$\,
 	\;\;$\Longrightarrow$\;\;
-	\,$(a - \overline{a}) \, (x_{2} + \i\,x_{3}) \, = \, - \, 2 \, x_{1}\,\overline{b}$,\,
+	\,$(a - \overline{a}) \, (x_{2} + \i\,x_{3}) \, = \, - \, \i \, 2 \, x_{1}\,\overline{b}$,\,
 	which is equivalent to
 	\begin{equation*}
-	\i \cdot \textnormal{Im}(a) \cdot (x_{2} + \i\,x_{3}) \;\; = \;\; - \, x_{1} \cdot \overline{b} 
+	\i \cdot 2 \cdot (x_{2} + \i\,x_{3}) \cdot \textnormal{Im}(a) \;\; = \;\; - \, \i \, \cdot 2 \cdot x_{1} \cdot \overline{b} 
 	\end{equation*}
 	However, \,$x_{1},\, x_{2},\, x_{3} \,\in\, \Re$\, are arbitrary, i.e.,
 	the above equality must hold for each \,$x_{1},\, x_{2},\, x_{3} \,\in\, \Re$.\,
@@ -606,13 +606,46 @@ Then, the following statements are true:
 	Now, recall also that \,$U \in \SU(2)$;\, in particular, \,$1 \,=\, \det(U) \,=\, a^{2}$,\,
 	which implies \,$a = \pm\,1$.\,
 	We have thus shown that \,$U \in \{\,\pm\,I_{2}\,\}$,\,
-	for each \,$U \in \ker(\Phi)$.\,
-	Thus, \,$\ker(\Phi) \subset \{\,\pm\,I_{2}\,\}$,\,
-	and we may now conclude that \,$\ker(\Phi) = \{\,\pm\,I_{2}\,\}$,\,
+	for each \,$U \in \ker(\textnormal{Ad})$.\,
+	Thus, \,$\ker(\textnormal{Ad}) \subset \{\,\pm\,I_{2}\,\}$,\,
+	and we may now conclude that \,$\ker(\textnormal{Ad}) = \{\,\pm\,I_{2}\,\}$,\,
 	as required.
 \item
+	\noindent
+	\textbf{Claim 2:}\quad
+	$\textnormal{ad} \, := \, \d(\textnormal{Ad}) : \su(2) \longrightarrow \so(3)$\,
+	is a Lie algebra isomorphism.
+	\vskip -0.01cm
+	\noindent
+	Proof of Claim 2:\;\;
+	Since
+	\,$\textnormal{Ad} : \SU(2) \longrightarrow \SO(3)$\,
+	is a Lie group homomorphism, it follows that
+	\,$\textnormal{ad} \, := \, \d(\textnormal{Ad}) : \su(2) \longrightarrow \so(3)$\,
+	is a Lie algebra homomorphism.
+	Direct computations (omitted) show that \,$\textnormal{ad}$\, maps
+	any basis for \,$\su(2)$\, to a basis for \,$\so(3)$;\, thus
+	\,$\textnormal{ad} : \su(2) \longrightarrow \so(3)$\,
+	is also a vector space isomorphism.
+	Therefore,
+	\,$\textnormal{ad} : \su(2) \longrightarrow \so(3)$\,
+	is a Lie algebra homomorphism.
+	This proves Claim 2.
+	
+	\vskip 0.2cm
+	Since
+	\begin{itemize}
+	\item
+		both \,$\SU(2)$\, and \,$\SO(3)$\, are connected Lie groups (Lie subgroups of general linear groups),
+	\item
+		$\textnormal{ad} \, := \, \d(\textnormal{Ad}) : \su(2) \longrightarrow \so(3)$\,
+		is a Lie algebra isomorphism (by Claim 2),
+	\end{itemize}
+	it follows -- by Theorem 4.15, p.92, \cite{Sepanski2010} -- that
+	\,$\textnormal{Ad} : \SU(2) \longrightarrow \SO(3)$\,
+	is a covering map; in particular, it is surjective, as required.
+	\qed
 \end{enumerate}
-\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
