@@ -660,6 +660,107 @@ $\SO(3)$\, is homeomorphic to \,$\Re\mathbb{P}^{3}$.\,
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Consider
+\,$U \, = \, \left(\,\begin{array}{cc} e^{\i\,{\color{red}\theta/2}} & 0 \\ 0 & e^{-\,\i\,\theta/2} \end{array}\!\!\right) \,\in\, \SU(2)$.\,
+Then, it its image
+\,$\textnormal{Ad}_{U} \in \SO(3)$\,
+is counter-clockwise rotation (about the $x_{1}$-axis) of the $x_{2}x_{3}$-plane by the angle \,{\color{red}$\theta$}.\,
+\end{remark}
+\proof
+We compute:
+\begin{eqnarray*}
+\textnormal{Ad}_{U}(X)
+& = &
+	UXU^{-1}
+\;\; = \;\;
+	\left(\,\begin{array}{cc}
+		e^{\i\,{\color{red}\theta/2}} & 0
+		\\
+		0 & e^{-\,\i\,\theta/2}
+		\end{array}\!\!\right)
+	\cdot
+	\left(\,\begin{array}{cc}
+		\i\,x_{1} & x_{2} + \i\,x_{3}
+		\\
+		- \, x_{2} + \i\,x_{3} & -\,\i\,x_{1}
+		\end{array}\,\right)
+	\cdot
+	\left(\,\begin{array}{cc}
+		e^{-\,\i\,\theta/2} & 0
+		\\
+		0 & e^{\i\,\theta/2}
+		\end{array}\!\!\right)
+\\
+& = &
+	\left(\,\begin{array}{cc}
+		e^{\i\,\theta/2} \cdot \i x_{1} & e^{\i\,\theta/2} \cdot (x_{2} + \i\,x_{3})
+		\\
+		e^{-\,\i\,\theta/2} \cdot (-\,x_{2} + \i\,x_{3}) & -\,e^{-\,\i\,\theta/2} \cdot \i \cdot x_{1}
+		\end{array}\!\!\right)
+	\cdot
+	\left(\,\begin{array}{cc}
+		e^{-\,\i\,\theta/2} & 0
+		\\
+		0 & e^{\i\,\theta/2}
+		\end{array}\!\!\right)
+\\
+& = &
+	\left(\,\begin{array}{cc}
+		\i \, x_{1} & {\color{black}e^{\i\,\theta} \cdot (x_{2} + \i\,x_{3})}
+		\\
+		-\,e^{-\,\i\,\theta} \cdot (x_{2} - \i\,x_{3}) & -\, \i \, x_{1}
+		\end{array}\!\!\right)
+\\
+& = &
+	\left(\,\begin{array}{cc}
+		\i \, x_{1} & \quad{\color{red}e^{\i\,\theta} \cdot (x_{2} + \i\,x_{3})}
+		\\
+		\overset{{\color{white}1}}{-\;\overline{e^{\i\,\theta} \cdot (x_{2} + \i\,x_{3})}} & -\, \i \, x_{1}
+		\end{array}\!\!\right)
+\end{eqnarray*}
+So, the action of
+\,$U \, = \, \left(\,\begin{array}{cc} e^{\i\,{\color{black}\theta/2}} & 0 \\ 0 & e^{-\,\i\,\theta/2} \end{array}\!\!\right) \,\in\, \SU(2)$\,
+via \,$\textnormal{Ad}_{U}$\, on
+\,$X
+\, = \,
+\left(\,\begin{array}{cc}
+	\i\,x_{1} & x_{2} + \i\,x_{3}
+	\\
+	- \, x_{2} + \i\,x_{3} & -\,\i\,x_{1}
+	\end{array}\,\right)
+\in \su(2) \cong \mathbb{E}^{3}$\,
+is such that it performs the counter-clockwise rotation (about the $x_{1}$-axis)
+on the $x_{2}x_{3}$-plane by the angle \,{\color{black}$\theta$},\, leaving the $x_{1}$-axis invariant.
+Thus, we see that, for
+\,$U \, = \, \left(\,\begin{array}{cc} e^{\i\,{\color{black}\theta/2}} & 0 \\ 0 & e^{-\,\i\,\theta/2} \end{array}\!\!\right) \,\in\, \SU(2)$,\,
+its image
+\,$\textnormal{Ad}_{U} \in \SO(3)$\,
+under
+\,$\textnormal{Ad} : \SU(2) \longrightarrow \SO(3)$\,
+is indeed counter-clockwise rotation of the $x_{2}x_{3}$-plane by the angle \,{\color{black}$\theta$}.\,
+Note also:
+\begin{eqnarray*}
+e^{\i\theta} \cdot ({\color{white}-}\,x_{2}+\i\,x_{3})
+& \!\!=\!\! &
+	(\cos\theta + \i\sin\theta) \cdot ({\color{white}-}\,x_{2}+\i\,x_{3})
+\; = \;
+	({\color{white}-}\,x_{2}\cos\theta - x_{3}\sin\theta) \,+\, \i\,(x_{2}\sin\theta + x_{3}\cos\theta)
+\\
+e^{-\,\i\theta}\,(-\,x_{2}+\i\,x_{3})
+& \!\!=\!\! &
+	(\cos\theta - \i\sin\theta) \cdot ({\color{black}-}\,x_{2}+\i\,x_{3})
+\; = \;
+	(-\,x_{2}\cos\theta + x_{3}\sin\theta) \,+\, \i\,(x_{2}\sin\theta + x_{3}\cos\theta)
+\end{eqnarray*}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 1.0cm
 \section{The Lie groups \,$\SOup(1,3)$\, and \,$\SL(2,\C)$}
 
@@ -763,8 +864,6 @@ The \textbf{proper orthochronous Lorentz} group is defined to be:
 		\;\right\}
 \end{equation*}
 \end{definition}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
