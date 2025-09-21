@@ -360,7 +360,7 @@ Thus,
 is indeed isomorphic (as a real inner product space) to the $3$-dimensional Euclidean space \,$\mathbb{E}^{3}$.\,
 In what follows, we thus view \,$V$\, as a copy of \,$\mathbb{E}^{3}$.\,
 
-\vskip 0.3cm
+\vskip 0.5cm
 \noindent
 \begin{proposition}
 \mbox{}
@@ -389,9 +389,9 @@ Then, the following statements are true:
 \item
 	The map \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is a homomorphism.
 \item
-	The map \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is surjective.
-\item
 	$\ker(\Phi) \, = \, \{\,\pm \, I_{2}\,\}$
+\item
+	The map \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is surjective.
 \end{enumerate}
 \end{proposition}
 \proof
@@ -496,9 +496,134 @@ Then, the following statements are true:
 	\,$\Phi(\,U_{1} \cdot U_{2}\,) \, = \, \Phi(U_{1}) \,\circ\, \Phi(U_{2})$.\,
 	Thus, \,$\Phi : \SU(2) \longrightarrow \SO(3)$\, is indeed a homomorphism.
 \item
+	Obviously, \,$\{\,\pm\,I_{2}\,\} \subset \ker(\Phi)$.\,
+	For the reserve inclusion, let
+	\,$U \in \ker(\Phi) \subset \SU(2)$,\,
+	i.e.,
+	\,$UXU^{-1} = X$,\, for each \,$X \in V \cong \mathbb{E}^{3}$;\,
+	equivalently, $UX = XU$, for each $X \in V \cong \mathbb{E}^{3}$.
+	Now,
+	\begin{eqnarray*}
+	U X
+	& \!=\!\! &
+		\left(\,\begin{array}{rr}
+			a & -\,\overline{b}
+			\\
+			b & \overline{a}
+			\end{array}\,\right)
+		\cdot
+		\left(\,\begin{array}{cc}
+			x_{1} & x_{2} + \i\,x_{3}
+			\\
+			x_{2} - \i\,x_{3} & -\,x_{1}
+			\end{array}\,\right)
+	\;\; = \;\;
+		\left(\,\begin{array}{cc}
+			ax_{1} - \overline{b}\,(x_{2}-\i\,x_{3}) & {\color{white}-}\,a\,(x_{2}+\i\,x_{3}) + \overline{b}x_{1}
+			\\
+			bx_{1} + \overline{a}\,(x_{2}-\i\,x_{3}) & {\color{white}-}\,b\,(x_{2}+\i\,x_{3}) - \overline{a}x_{1}
+			\end{array}\,\right)
+	\\ \\
+	X U
+	& \!=\!\! &
+		\left(\,\begin{array}{cc}
+			x_{1} & x_{2} + \i\,x_{3}
+			\\
+			x_{2} - \i\,x_{3} & -\,x_{1}
+			\end{array}\,\right)
+		\cdot
+		\left(\,\begin{array}{rr}
+			a & -\,\overline{b}
+			\\
+			b & \overline{a}
+			\end{array}\,\right)
+	\;\; = \;\;
+		\left(\,\begin{array}{cc}
+			x_{1}a + (x_{2}+\i\,x_{3})\,b &  -\,x_{1}\overline{b} + (x_{2}+\i\,x_{3})\,\overline{a}
+			\\
+			(x_{2}-\i\,x_{3})\,a - \,x_{1}b & -\,(x_{2}-\i\,x_{3})\,\overline{b} - x_{1}\overline{a}
+			\end{array}\,\right)
+	\end{eqnarray*}
+	Thus,
+	\begin{equation}\label{UXeqXU}
+	UX = XU
+	\quad\Longrightarrow\quad
+	\left\{\begin{array}{ccc}
+		-\,\overline{b}\,(x_{2} - \i\,x_{3}) & = & b\,(x_{2} + \i\,x_{3})
+		\\
+		a\,(x_{2} + \i\,x_{3}) + \overline{b}x_{1} & \overset{{\color{white}1}}{=} & -\,x_{1}\overline{b} + (x_{2} + \i\,x_{3})\,\overline{a}
+		\end{array}\right.
+	\end{equation}
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	The validity of the second equality in \eqref{UXeqXU} for arbitrary 
+	\,$x_{1},\, x_{2},\, x_{3} \,\in\, \Re$\,
+	 implies that
+	$a \in \Re$, $b = 0$, as well as the validity of the first equality in \eqref{UXeqXU}.
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\quad
+	Note that
+	\,$a\,(x_{2} + \i\,x_{3}) + \overline{b}x_{1}  \, = \, -\,x_{1}\overline{b} + (x_{2} + \i\,x_{3})\,\overline{a}$\,
+	\;\;$\Longrightarrow$\;\;
+	\,$(a - \overline{a}) \, (x_{2} + \i\,x_{3}) \, = \, - \, 2 \, x_{1}\,\overline{b}$,\,
+	which is equivalent to
+	\begin{equation*}
+	\i \cdot \textnormal{Im}(a) \cdot (x_{2} + \i\,x_{3}) \;\; = \;\; - \, x_{1} \cdot \overline{b} 
+	\end{equation*}
+	However, \,$x_{1},\, x_{2},\, x_{3} \,\in\, \Re$\, are arbitrary, i.e.,
+	the above equality must hold for each \,$x_{1},\, x_{2},\, x_{3} \,\in\, \Re$.\,
+	Choosing \,$x_{2} = 1$\, and \,$x_{1} = x_{3} = 0$\, yields:
+	\,$\textnormal{Im}(a) = 0$,\, i.e., \,$a \in \Re$.\,
+	On the other hand, choosing \,$x_{1} = 1$\, and \,$x_{2} = x_{3} = 0$\,
+	yields
+	\,$\overline{b} = 0$,\, i.e., \,$b = 0$.\,
+	Lastly, \,$b = 0$\, also immediately implies the validity of the first equality in \eqref{UXeqXU}.
+	This completes the proof of Claim 1.
+	
+	\vskip 0.3cm
+	\noindent
+	By Claim 1, we have:
+	\begin{equation*}
+	U
+	\;\; = \;\;
+		\left(\,\begin{array}{rr}
+			a & -\,\overline{b}
+			\\
+			b & \overline{a}
+			\end{array}\,\right)
+	\;\; = \;\;
+		a \cdot
+		\left(\,\begin{array}{rr}
+			1 & 0
+			\\
+			0 & 1
+			\end{array}\,\right),
+	\end{equation*}
+	where \,$a \in \Re$.\,
+	Now, recall also that \,$U \in \SU(2)$;\, in particular, \,$1 \,=\, \det(U) \,=\, a^{2}$,\,
+	which implies \,$a = \pm\,1$.\,
+	We have thus shown that \,$U \in \{\,\pm\,I_{2}\,\}$,\,
+	for each \,$U \in \ker(\Phi)$.\,
+	Thus, \,$\ker(\Phi) \subset \{\,\pm\,I_{2}\,\}$,\,
+	and we may now conclude that \,$\ker(\Phi) = \{\,\pm\,I_{2}\,\}$,\,
+	as required.
 \item
 \end{enumerate}
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\begin{corollary}
+\mbox{}
+\vskip 0.05cm
+\noindent
+$\SO(3)$\, is homeomorphic to \,$\Re\mathbb{P}^{3}$.\,
+\end{corollary}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
