@@ -542,18 +542,20 @@ Then, the following statements are true:
 	\,$\textnormal{Ad} : \SU(2) \longrightarrow \Isom(\su(2)) \cong \Isom(\mathbb{E}^{3})$\,
 	is indeed \,$\SO(3)$.
 \item
-	Simply note:
-	\begin{equation*}
-	\textnormal{Ad}_{U_{1}U_{2}}(X)
-	\; = \;
+	There is really nothing to prove here, since representations are homomorphisms.
+	But, explicitly:
+	\begin{eqnarray*}
+	\textnormal{Ad}_{\,U_{1}U_{2}}(X)
+	& = &
 		(U_{1}U_{2}) \cdot X (U_{1}U_{2})^{-1}
-	\; = \;
+	\;\; = \;\;
 		U_{1} \cdot U_{2} \cdot X \cdot U_{2}^{-1} \cdot U_{1}^{-1}
-	\; = \;
+	\;\; = \;\;
 		\textnormal{Ad}_{U_{1}}\!\left(\,\textnormal{Ad}_{U_{2}}(\overset{{\color{white}.}}{X})\,\right)
-	\; = \;
+	\\
+	& = &
 		\textnormal{Ad}_{U_{1}} \,\circ\, \textnormal{Ad}_{U_{2}}\left(\,\overset{{\color{white}.}}{X}\,\right),
-	\end{equation*}
+	\end{eqnarray*}
 	which shows
 	\,$\textnormal{Ad}(\,U_{1} \cdot U_{2}\,) \, = \, \textnormal{Ad}(U_{1}) \,\circ\, \textnormal{Ad}(U_{2})$.\,
 	Thus, \,$\textnormal{Ad} : \SU(2) \longrightarrow \SO(3)$\, is indeed a homomorphism.
