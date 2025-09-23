@@ -435,20 +435,49 @@ Then, the following statements are true:
 	\iota_{U}(A) \;\; := \;\; U \cdot A \cdot U^{-1}
 	\end{equation*}
 	So, for each
-	\,$U \in \SU(2)$\, and \,$X \in \su(2)$,\,
+	\,$U \in \SU(2)$,\, $X \in \su(2)$,\, and \,$f \in C^{\infty}(\SU(2))$, we have:
+	\begin{eqnarray*}
+	\textnormal{Ad}_{U}(X)[\,f\,]
+	& = &
+		\gamma^{\prime}(0)[\,f\,]
+	\;\; = \;\;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t = 0}\;
+		f\!\left(\,\gamma(t)\,\right),
+		\quad
+		\textnormal{where \,$\gamma(t) \,:=\, \exp\!\left(\,t\overset{{\color{white}1}}{\cdot}\textnormal{Ad}_{U}X\,\right)$}
+%	\\
+%	& = &
+%		\left.\dfrac{\d}{\d\,t}\right\vert_{t = 0}\;
+%		U \cdot e^{tX} \cdot U^{-1}
+%	\;\; = \;\;
+%		U \cdot \left(\,\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\;e^{tX}\,\right) \cdot U^{-1}
+%	\\
+%	& = &
+%		\overset{{\color{white}\textnormal{\normalsize$1$}}}{U} \cdot X \cdot U^{-1},
+	\end{eqnarray*}
+	But,
+	\begin{equation*}
+	\gamma(t)
+	\;\; := \;\;
+		\exp\!\left(\,t\overset{{\color{white}1}}{\cdot}\textnormal{Ad}_{U}X\,\right)
+	\;\; = \;\;
+		\exp\!\left(\,t\overset{{\color{white}1}}{\cdot}\d(\iota_{U})X\,\right)
+	\;\; = \;\;
+		\exp\!\left(\,\d(\overset{{\color{white}1}}{\iota}_{U})(tX)\,\right)
+	\;\; = \;\;
+		\iota_{U}\!\left(\,\overset{{\color{white}1}}{\exp}(tX)\,\right),
+	\end{equation*}
+	where the last equality follows from Theorem 1.7.16, p.59, \cite{Hamilton2017}.
+	Hence, we see that
+	%\,$\textnormal{Ad}_{U}(X) \,=\, \gamma^{\prime}(0)$\,
 	\begin{eqnarray*}
 	\textnormal{Ad}_{U}(X)
 	& = &
-		\left(\,\d_{e}\,\iota_{U}\,\right)\!\left(\,\overset{{\color{white}.}}{X}\,\right)
-	\;\; = \;\;
-		\left(\,\d_{e}\,\iota_{U}\,\right)\!\left(\,
-			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\;e^{tX}
-			\,\right)
+		\gamma^{\prime}(0)
 	\;\; = \;\;
 		\left.\dfrac{\d}{\d\,t}\right\vert_{t = 0}\;
 		\iota_{U}\!\left(\,e^{tX}\,\right)
-	\\
-	& = &
+	\;\; = \;\;
 		\left.\dfrac{\d}{\d\,t}\right\vert_{t = 0}\;
 		U \cdot e^{tX} \cdot U^{-1}
 	\;\; = \;\;
@@ -459,29 +488,30 @@ Then, the following statements are true:
 	\end{eqnarray*}
 	as required.
 \item
-	First, we note that, for each \,$U \in \SU(2)$\, and \,$X \in V$,\,
-	we indeed have that \,$\textnormal{Ad}_{U}(X) \in V$\,:
+	First, we note that, for each \,$U \in \SU(2)$,\, $X \in \su(2)$,\,
+	we indeed have that \,$\textnormal{Ad}_{U}(X) \in \su(2)$\,:
 	\begin{eqnarray*}
 	\left(\,\textnormal{Ad}_{U}(\overset{{\color{white}.}}{X})\,\right)^{\dagger}
-	& \!=\! &
+	& = &
 		\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{-1} \,\right)^{\dagger}
-	\;\, = \;\,
+	\;\, = \;\;
 		\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{\dagger} \,\right)^{\dagger}
-	\;\, = \;\,
+	\;\, = \;\;
 		U^{\dagger\dagger} \cdot X^{\dagger} \cdot U^{\dagger}
-	\;\, = \;\,
+	\;\, = \;\;
 		U \cdot (-X) \cdot U^{-1}
-	\;\, = \;\,
+	\\
+	& = &
 		- \, \textnormal{Ad}_{U}(\,X\,)\,,
 	\\
 	\trace\!\left(\,\textnormal{Ad}_{U}(\overset{{\color{white}.}}{X})\,\right)
-	& \!=\! &
+	& = &
 		\trace\!\left(\, U \cdot \overset{{\color{white}.}}{X} \cdot U^{-1}\right)
-	\;\, = \;\,
+	\;\, = \;\;
 		\trace\!\left(\, \overset{{\color{white}.}}{X} \cdot U^{-1} \cdot U \,\right)
-	\;\, = \;\,
+	\;\, = \;\;
 		\trace\!\left(\, \overset{{\color{white}.}}{X} \,\right)
-	\;\, = \;\,
+	\;\, = \;\;
 		0
 	\end{eqnarray*}
 	which shows that \,$\textnormal{Ad}_{U}(X)$\, is skew-Hermitian and have trace-zero;
