@@ -17,12 +17,27 @@
 
 \section{The Lie groups  \,$\SL(n,\C)$,\, $\SO(n)$\, and \,$\SU(n)$}
 
-%\vskip 0.5cm
-%$\SU(2) \overset{\textnormal{\scriptsize 2\textnormal{$:$}1{\color{white}.}}}{\longrightarrow} \SOup(1,3)$
-
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.3cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{special linear group of degree $n$ over $\C$} is defined as follows:
+\begin{equation*}
+\SL(n,\C)
+\; := \;
+	\left\{\;\,
+		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
+		\;\,\left\vert\;\;
+			\det(\,g\,) \overset{{\color{white}1}}{=} 1
+			\right.
+		\;\right\}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
 \begin{definition}
 \mbox{}
 \vskip 0.1cm
@@ -96,11 +111,132 @@ The \textbf{special unitary group of degree $n$} is defined as follows:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 1.0cm
+\section{The Lie algebras  \,$\sl(n,\C)$\, and \,$\su(n)$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.2cm
+\begin{proposition}[Set-theoretic characterizations of \,$\mathfrak{sl}(n,\C)$]
+\label{SetTheoreticCharacterizationOfslTwoC}
+\mbox{}
+\vskip -0.1cm
+\begin{equation*}
+\mathfrak{sl}(n,\C)
+\; = \;
+	\left\{\;
+		X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+		\;\left\vert\;\,
+			\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
+			\right.
+		\,\right\}
+\end{equation*}
+\end{proposition}
+\proof
+We invoke the fact that \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)}$,
+for each \,$X \in \C^{n \times n}$.
+Thus,
+\begin{eqnarray*}
+&&
+	X \,\in\, \mathfrak{sl}(n,\C)
+	\quad\Longrightarrow\quad
+	e^{\,t\cdot\,X} \,\in\, \textnormal{SL}(n,\C)
+	\quad\Longrightarrow\quad
+	\det\!\left(\,e^{\,t\cdot\,X}\,\right) \,=\, 1
+\\
+& \Longrightarrow\quad &
+	\textnormal{trace}(X)
+	\; = \;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,\textnormal{trace}(X)}}\,\right)
+	\; = \;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{\det(e^{\,t\,\cdot\,X})}\,\right)
+	\; = \;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{1}\,\right)
+	\; = \;
+		0
+\end{eqnarray*}
+Conversely, suppose \,$\textnormal{trace}(X) = 0$.\,
+Then, \,$\det(e^{\,t\,\cdot\,X}) \,=\, e^{\,t\,\cdot\,\textnormal{trace}(X)} \,=\, e^{\,t\,\cdot\,0} \,=\, 1$,\,
+which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{SL}(n,\C)$,\, hence \,$X \,\in\, \mathfrak{sl}(n,\C)$.
+This completes the proof of the equality (of sets) in question.
+\qed
+
+\vskip 0.5cm
+\begin{proposition}[Set-theoretic characterizations of \,$\mathfrak{u}(n)$, and $\mathfrak{su}(n)$]
+\mbox{}
+\vskip 0.1cm
+\begin{enumerate}
+\item
+	\begin{equation*}
+	\mathfrak{u}(n)
+	\; = \;
+		\left\{\;
+			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+			\;\left\vert\;\,
+				X + X^{\dagger} = \overset{{\color{white}1}}{0}
+				\right.
+			\,\right\}
+	\end{equation*}
+\item
+	\begin{equation*}
+	\mathfrak{su}(n)
+	\; = \;
+		\left\{\;
+			X \,\in\, \mathfrak{gl}(n,\C) \,=\, \C^{n \times n}
+			\;\left\vert\;\,
+				\begin{array}{c}
+				X + X^{\dagger} = \overset{{\color{white}1}}{0}
+				\\
+				\textnormal{trace}(X) = \overset{{\color{white}1}}{0}
+				\end{array}
+				\right.
+			\,\right\}
+	\end{equation*}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	\begin{eqnarray*}
+	&&
+		X \,\in\, \mathfrak{u}(n)
+		\quad\Longrightarrow\quad
+		e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)
+	\\
+	& \Longrightarrow\quad &
+		I_{n}
+			\,=\, \left(\,e^{\,t\,\cdot\,X}\,\right)^{\!\dagger} \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
+			\,=\, \left(\,e^{\,t\,\cdot\,X^{\dagger}}\,\right) \cdot \left(\,e^{\,t\,\cdot\,X}\,\right)
+			\,=\, e^{\,t\,\cdot\,(X^{\dagger}+X)}
+	\\
+	& \Longrightarrow\quad &
+		X \,+\, X^{\dagger}
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{e^{\,t\,\cdot\,(X+X^{\dagger})}}\,\right)
+		\; = \;
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\left(\,\overset{{\color{white}1}}{I_{n}}\,\right)
+		\; = \;
+			0
+	\end{eqnarray*}
+	Conversely, suppose \,$X + X^{\dagger} \,=\, 0$.\,
+	Then, \,$I_{n}$
+	\,$=$\, $e^{\,0_{n \times n}}$
+	\,$=$\, $e^{\,t\,\cdot(X^{\dagger}+X)}$
+	\,$=\, \cdots \,=$\, $\left(e^{\,t\,\cdot\,X}\right)^{\!\dagger}\cdot\left(e^{\,t\,\cdot\,X}\right)$,\,
+	which implies that \,$e^{\,t\,\cdot\,X} \,\in\, \textnormal{U}(n)$,\, hence \,$X \,\in\, \mathfrak{u}(n)$.
+	This completes the proof of the equality (of sets) in question.
+\item
+	Immediate by (i) and Proposition \ref{SetTheoreticCharacterizationOfslTwoC}.
+	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
 \section{The Lie groups \,$\SO(3)$\, and \,$\SU(2)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.3cm
+\vskip 0.2cm
 \begin{proposition}[Parametrization of \,$\textnormal{SU}(2)$]
 \mbox{}
 \vskip 0.1cm
@@ -865,24 +1001,6 @@ e^{-\,\i\theta}\,(-\,x_{2}+\i\,x_{3})
 \section{The Lie groups \,$\SOup(1,3)$\, and \,$\SL(2,\C)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.3cm
-\begin{definition}
-\mbox{}
-\vskip 0.1cm
-\noindent
-The \textbf{special linear group of degree $n$ over $\C$} is defined as follows:
-\begin{equation*}
-\SL(n,\C)
-\; := \;
-	\left\{\;\,
-		g \overset{{\color{white}.}}{\in} \textnormal{GL}(n,\C)
-		\;\,\left\vert\;\;
-			\det(\,g\,) \overset{{\color{white}1}}{=} 1
-			\right.
-		\;\right\}
-\end{equation*}
-\end{definition}
 
 \vskip 0.5cm
 \noindent
