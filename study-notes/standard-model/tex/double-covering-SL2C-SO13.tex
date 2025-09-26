@@ -104,42 +104,48 @@ For each \,$A \in \textnormal{O}(1,n)$, we have:
 	Note
 	\begin{equation*}
 	A^{T} \cdot Q_{(1,n)} \cdot A \,=\, Q_{(1,n)}
-	\quad\Longleftrightarrow\quad
+	\;\;\;\Longleftrightarrow\;\;\;
 	\overset{3}{\underset{\rho\,=\,0}{\sum}}\;
 		\overset{3}{\underset{\mu\,=\,0}{\sum}}\;
-		A_{\mu\rho}\,\eta_{\rho\sigma}\,A_{\sigma\nu}
-		\; = \;
+		A^{T}_{{\color{red}\mu\rho}}\,\eta_{\rho\sigma}\,A_{\sigma\nu}
+		\, = \,
+		\eta_{\mu\nu}
+	\;\;\;\Longleftrightarrow\;\;\;
+	\overset{3}{\underset{\rho\,=\,0}{\sum}}\;
+		\overset{3}{\underset{\mu\,=\,0}{\sum}}\;
+		A_{{\color{red}\rho\mu}}\,\eta_{\rho\sigma}\,A_{\sigma\nu}
+		\, = \,
 		\eta_{\mu\nu}\,,
 	\end{equation*}
 	which -- upon setting $\mu = \nu = 0$ -- implies:
 	\begin{eqnarray*}
 	&&
-		A_{{\color{red}0}0} \cdot \eta_{00} \cdot A_{0{\color{red}0}}
+		A_{0{\color{red}0}} \cdot \eta_{00} \cdot A_{0{\color{red}0}}
 		\,+\,
-		A_{{\color{red}0}1} \cdot \eta_{11} \cdot A_{1{\color{red}0}}
+		A_{1{\color{red}0}} \cdot \eta_{11} \cdot A_{1{\color{red}0}}
 		\,+\,
-		A_{{\color{red}0}2} \cdot \eta_{22} \cdot A_{2{\color{red}0}}
+		A_{2{\color{red}0}} \cdot \eta_{22} \cdot A_{2{\color{red}0}}
 		\,+\,
-		A_{{\color{red}0}3} \cdot \eta_{33} \cdot A_{3{\color{red}0}}
+		A_{3{\color{red}0}} \cdot \eta_{33} \cdot A_{3{\color{red}0}}
 		\; = \;
 		\eta_{{\color{red}00}}
 	\\
 	& \Longrightarrow &
-		A_{{\color{red}0}0}\,(-1)\,A_{0{\color{red}0}}
+		A_{0{\color{red}0}}\,(-1)\,A_{0{\color{red}0}}
 		\,+\,
-		A_{{\color{red}0}1}\,(+1)\,A_{1{\color{red}0}}
+		A_{1{\color{red}0}}\,(+1)\,A_{1{\color{red}0}}
 		\,+\,
-		A_{{\color{red}0}2}\,(+1)\,A_{2{\color{red}0}}
+		A_{2{\color{red}0}}\,(+1)\,A_{2{\color{red}0}}
 		\,+\,
-		A_{{\color{red}0}3}\,(+1)\,A_{3{\color{red}0}}
+		A_{3{\color{red}0}}\,(+1)\,A_{3{\color{red}0}}
 		\; = \;
 		-\,1
 	\\
 	& \Longrightarrow &
-		- \, A_{{\color{red}0}0}^{2}
+		- \, A_{0{\color{red}0}}^{2}
 		\; + \,
 		\overset{3}{\underset{k\,=\,0}{\sum}}\;
-		A_{{\color{red}0}\rho}^{2}
+		A_{k{\color{red}0}}^{2}
 		\;\; = \;\,
 			-\,1
 	\;\;\; \Longrightarrow \;\;\;\,
@@ -148,7 +154,7 @@ For each \,$A \in \textnormal{O}(1,n)$, we have:
 			1
 			\; + \,
 			\overset{3}{\underset{k\,=\,0}{\sum}}\;
-			A_{{\color{red}0}\rho}^{2}
+			A_{k{\color{red}0}}^{2}
 		\;\; \geq \;\,
 			1\,,
 	\end{eqnarray*}
@@ -222,7 +228,7 @@ The \textbf{Lorentz group of \,$\textnormal{O}(1,n)$}\, is the disjoint union of
 \mbox{}
 \vskip 0.1cm
 \noindent
-The \textbf{special Lorentz} group is defined to be:
+The \textbf{special Lorentz group} is defined to be:
 \begin{eqnarray*}
 \SO(1,n)
 & := &
@@ -260,7 +266,7 @@ The \textbf{special Lorentz} group is defined to be:
 			\right.
 		\!\right\}
 \end{eqnarray*}
-The \textbf{orthochronous special Lorentz} group is defined to be:
+The \textbf{orthochronous special Lorentz group} is defined to be:
 \begin{equation*}
 \SO^{\uparrow}(1,n)
 \; := \;
@@ -443,6 +449,154 @@ Then, the following statements are true:
 	is indeed isometric to the $4$-dimensional\\ Minkowski spacetime \,$\Re^{1,4}$.\,
 	\qed
 \end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let
+\,$\GL_{\Re}(\C^{2 \times 2})$\,
+denote the set of all invertible $\Re$-linear maps
+from \,$\C^{2 \times 2}$\, onto itself.\\
+Define the map
+\,$\Phi : \SL(2,\C) \longrightarrow \GL_{\Re}(\C^{2 \times 2})$\,
+by:
+\begin{equation*}
+\Phi_{A}(\,X\,)
+\;\; := \;\;
+	A \cdot X \cdot A^{\dagger}\,,
+\quad
+\textnormal{for each \,$A \in \SL(2,\C)$,\,  $X \in \textnormal{SkHerm}(2,\C) \cong \Re^{1,3}$}\,,
+\end{equation*}
+where \,$A^{\dagger}$\, denotes the conjugate transpose of
+\,$A \in \SL(2,\C)$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	Under the inner product space isomorphism
+	\,$\textnormal{SkHerm}(2,\C) \cong \Re^{1,3}$,\,
+	the image of the map
+	\,$\Phi : \SL(2,\C) \longrightarrow \GL_{\Re}(\C^{2 \times 2})$\,
+	can be regarded as a subset of
+	\,$\SOup(1,3) \subset \textnormal{O}(1,3) = \Isom(\Re^{1,3}) \cong  \Isom(\textnormal{SkHerm}(2,\C)) \subset \GL_{\Re}(\C^{2 \times 2})$.\,
+	Consequently, we may regard the codomain of \,$\Phi$\, to be \,$\SOup(1,3)$;\,
+	in other words,
+	\begin{equation*}
+	\Phi : \SL(2,\C) \,\longrightarrow\, \SOup(\textnormal{SkHerm}(2,\C)) \cong \SOup(1,3)
+	\end{equation*}
+	given by:
+	\begin{equation*}
+	\Phi_{A}(\,X\,)
+	\;\; := \;\;
+		A \cdot X \cdot A^{\dagger}\,,
+	\quad
+	\textnormal{for each \,$A \in \SL(2,\C)$,\,  $X \in \textnormal{SkHerm}(2,\C) \cong \Re^{1,3}$}
+	\end{equation*}
+\item
+	The map \,$\Phi : \SL(2,\C) \longrightarrow \SOup(1,3)$\, is a homomorphism.
+\item
+	$\ker(\Phi) \, = \, \{\,\pm \, I_{2}\,\}$
+\item
+	The map \,$\Phi : \SL(2,\C) \longrightarrow \SOup(1,3)$\, is surjective.
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	First, we note that, for each \,$A \in \SL(2,\C)$,\, $X \in \textnormal{SkHerm}(2,\C)$,\,
+	we indeed have that \,$\Phi_{A}(X) \in \textnormal{SkHerm}(2,\C)$\,:
+	\begin{eqnarray*}
+	\left(\,\Phi_{A}(\overset{{\color{white}.}}{X})\,\right)^{\dagger}
+	\;\, = \;\;
+		\left(\, A \cdot \overset{{\color{white}.}}{X} \cdot A^{\dagger} \,\right)^{\dagger}
+	\;\, = \;\;
+		A^{\dagger\dagger} \cdot X^{\dagger} \cdot A^{\dagger}
+	\;\, = \;\;
+		A \cdot (-X) \cdot A^{\dagger}
+	\;\, = \;\;
+		- \, \Phi_{A}(X)
+	\end{eqnarray*}
+	which shows that \,$\Phi_{A}(X)$\, is indeed skew-Hermitian, i.e.,
+	\,$\Phi_{A}(X) \in \textnormal{SkHerm}(2,\C)$.\,
+	Next, we show that, for each \,$A \in \SL(2,\C)$, the map
+	\,$\Phi_{A} : \textnormal{SkHerm}(2,\C) \cong \Re^{1,3} \longrightarrow \textnormal{SkHerm}(2,\C) \cong \Re^{1,3}$\,
+	preserves the inner product on \,$\textnormal{SkHerm}(2,\C)$.\,
+	To this end, note:
+	\begin{eqnarray*}
+	\left\langle\;
+		\Phi_{A}(\overset{{\color{white}.}}{X})
+		\; , \;
+		\Phi_{A}(Y)
+		\;\right\rangle_{\!\textnormal{SkHerm}(2,\C)}
+	& = &
+		\dfrac{1}{4}\cdot\left(\,
+			\det(AXA^{\dagger} + AYA^{\dagger})
+			\, \overset{{\color{white}1}}{-} \,
+			\det(AXA^{\dagger} - AYA^{\dagger})
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{4}\cdot\left(\,
+			\det(A(X + Y)A^{\dagger})
+			\, \overset{{\color{white}1}}{-} \,
+			\det(A(X - Y)A^{\dagger})
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{4}\cdot\left(\,
+			(\det A)\,\det(X + Y)\det(A^{\dagger})
+			\, \overset{{\color{white}1}}{-} \,
+			(\det A)\,\det(X - Y)\det(A^{\dagger})
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{4}\cdot\left(\,
+			\det(X + Y)
+			\, \overset{{\color{white}1}}{-} \,
+			\det(X - Y)
+			\,\right),
+		\;\;
+		\textnormal{since \,$\det A = \det A^{\dagger} = 1$}
+	\\
+	& =: &
+		\left\langle\;
+			\overset{{\color{white}.}}{X}
+			\, , \,
+			Y
+			\;\right\rangle_{\!\textnormal{SkHerm}(2,\C)}
+	\end{eqnarray*}
+	Thus, under the inner product space isomorphism
+	\,$\textnormal{SkHerm}(2,\C) \cong \Re^{1,3}$,\,
+	we have:
+	\,$\Phi_{A} \in \textnormal{O}(1,3)$,\,
+	which furthermore immediately implies
+	\,$\det\Phi_{A} \in \{\,\pm 1\,\}$.\,
+	On the other hand, connectedness of \,$\SL(2,\C)$\, and continuity of
+	\,$\det$\, and \,$\Phi$\, together imply that the image of the map
+	\,$\det \,\circ\, \Phi : \SL(2,\C) \longrightarrow \Re$\,
+	is a singleton subset of \,$\Re$.\,
+	We may now conclude that
+	 \,$\det\Phi_{A} = + 1$,\,
+	for each \,$A \in \SL(2,\C)$.\,
+	Thus,
+	 \,$\Phi_{A} \in \SO(1,3)$,\,
+	for each \,$A \in \SL(2,\C)$.\,
+	On the hand hand,
+	\begin{equation*}
+	\left(\Phi_{A}\right)_{00}^{2} \;\; \geq \;\; 1
+	\end{equation*}
+	This proves that the image of
+	\,$\Phi : \SL(2,\C) \longrightarrow \Isom(\textnormal{SkHerm}(2,\C)) \cong \Isom(\Re^{1,3}) = \textnormal{O}(1,3)$\,
+	is indeed a subset of \,$\SOup(1,3)$.
+\item
+\item
+\item
+\end{enumerate}
+\qed
 
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
