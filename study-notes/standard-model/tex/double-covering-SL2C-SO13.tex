@@ -660,7 +660,311 @@ Then, the following statements are true:
 	\,$\Phi : \SL(2,\C) \longrightarrow \Isom(\textnormal{SkHerm}(2,\C)) \cong \Isom(\Re^{1,3}) = \textnormal{O}(1,3)$\,
 	is indeed a subset of \,$\SOup(1,3)$.
 \item
+	Simply observe:
+	\begin{eqnarray*}
+	\Phi_{A_{1}A_{2}}(X)
+	& = &
+		(A_{1}A_{2}) \cdot X (A_{1}A_{2})^{\dagger}
+	\;\; = \;\;
+		A_{1} \cdot A_{2} \cdot X \cdot A_{2}^{\dagger} \cdot A_{1}^{\dagger}
+	\;\; = \;\;
+		\Phi_{A_{1}}\!\left(\,\Phi_{A_{2}}(\overset{{\color{white}.}}{X})\,\right)
+	\\
+	& = &
+		\Phi_{A_{1}} \,\circ\, \Phi_{A_{2}}\left(\,\overset{{\color{white}.}}{X}\,\right),
+	\end{eqnarray*}
+	which shows
+	\,$\Phi(\,A_{1} \cdot A_{2}\,) \, = \, \Phi(A_{1}) \,\circ\, \Phi(A_{2})$.\,
+	Thus, \,$\Phi : \SL(2,\C) \longrightarrow \SOup(1,3)$\, is indeed a homomorphism.
 \item
+	Obviously, \,$\{\,\pm\,I_{2}\,\} \subset \ker(\Phi)$.\,
+	For the reserve inclusion, let
+	\,$A \in \ker(\Phi) \subset \SL(2,\C)$,\,
+	i.e.,
+	\,$AXA^{\dagger} = X$,\, for each \,$X \in \textnormal{SkHerm}(2,\C) \cong \Re^{1,3}$.\,
+	For
+	\begin{equation*}
+	X_{(1,0,0,0)}
+	\;\; := \;\;
+		\left(\begin{array}{cc} \i & 0 \\ 0 & \i \end{array}\right)
+	\;\; = \;\;
+		\left(\begin{array}{cc} \i\,(1 + 0) & 0+\i\,0 \\ -\,0+\i\,0 & \i\,(1-0) \end{array}\right)
+	\;\; \in \;\;
+		\textnormal{SkHerm}(2,\C)
+	\end{equation*}
+	we have:
+	\begin{eqnarray*}
+	\i \cdot I_{2}
+	& = &
+		\left(\begin{array}{cc} \i & 0 \\ 0 & \i \end{array}\right)
+	\;\; = \;\;
+		X_{(1,0,0,0)}
+	\;\; = \;\;
+		A \cdot X_{(1,0,0,0)} \cdot A^{\dagger}
+	\;\; = \;\;
+		A
+		\cdot
+		\left(\begin{array}{cc}
+			\i & 0
+			\\
+			0 & \i
+			\end{array}\right)
+		\cdot
+		A^{\dagger}
+	\;\; = \;\;
+		\i \cdot A \cdot A^{\dagger}
+	\end{eqnarray*}
+	which implies
+	\,$A \cdot A^{\dagger} \,=\, I_{2}$,\,
+	i.e.,
+	\,$A \in \SU(2)$.\,
+	In particular, \,$A$\, is a normal matrix (i.e., $A$ satisfies $A^{\dagger}A = AA^{\dagger}$).
+	
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	There exist
+	\,$\theta \in \Re$\,
+	and
+	\,$U \in \SU(2)$\,
+	such that
+	\begin{equation*}
+	U \cdot A \cdot U^{-1}
+	\; = \;
+		U \cdot A \cdot U^{\dagger}
+	\; = \;
+		\diag(e^{\i\theta/2},e^{-\i\theta/2})
+	\; \in \;
+		\SU(2)
+	\end{equation*}
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\;\;
+	By the {\color{red}Complex Spectral Theorem}\footnote{Complex Spectral Theorem:
+	\,$M \in \C^{n \times n}$\,
+	is normal (i.e., $MM^{\dagger} = M^{\dagger}M$)
+	if and only if $M$ is unitarily diagonalizable.
+	See, e.g., Theorem 7.31, p.246, \cite{Axler2024}.},
+	there exist \,$W \in \textnormal{U}(2)$\, and diagonal
+	\,$D = \diag(a,b) \in \C^{2 \times 2}$\,
+	such that
+	\,$W \cdot A \cdot W^{\dagger} = W \cdot A \cdot W^{-1} = D = \diag(a,b)$.\,
+	First, observe that 
+	\,$\det D = \det(WAW^{-1}) = (\det W)(\det A)(\det W)^{-1} = \det A = 1$;\,
+	hence,
+	\,$b = a^{-1}$\,
+	and,
+	\,$D = \diag(a,a^{-1})$.\,
+	Secondly, note that
+	\,$D$\, is unitary; indeed, the unitarity of \,$A$\, and \,$W$\, imply:
+	\begin{equation*}
+	D^{\dagger} \cdot D
+	\;\; = \;\;
+		(W A W^{\dagger})^{\dagger} \cdot (W A W^{\dagger})
+	\;\; = \;\;
+		(W^{\dagger\dagger} A^{\dagger} W^{\dagger}) \cdot (W A W^{\dagger})
+	\;\; = \;\;
+		W A^{\dagger} W^{\dagger} W A W^{\dagger}
+	\;\; = \;\;
+		I_{2}\,,
+	\end{equation*}
+	which implies
+	\,$a\,\overline{a} = \vert\,a\,\vert^{2} = 1$.\,
+	So, we may write
+	\,$a = e^{\i\theta/2}$,\,
+	for some
+	\,$\theta \in \Re$,\,
+	and
+	\,$D = \diag(e^{\i\theta/2},e^{-\i\theta/2}) \in \SU(2)$.\,
+	Lastly, we choose \,$U \in \SU(2)$,\, as follows:
+	Since \,$W \in \textnormal{U}(2)$ (i.e., $W^{\dagger}W = I_{2}$),\,
+	it follows that
+	\begin{eqnarray*}
+	1
+	& = &
+		\det(I_{2})
+	\\
+	& = &
+		\det(W^{\dagger}W)
+	\;\; = \;\;
+		\det(W^{\dagger})\cdot\det(W)
+	\;\; = \;\;
+		\det(\,\overline{W}^{T}\,)\cdot\det(W)
+	\;\; = \;\;
+		\overline{\det(W)}\cdot\det(W)
+	\\
+	& = &
+		= \vert\,\det(W)\,\vert^{2}
+	\end{eqnarray*}
+	Hence,
+	\,$\vert\,\det(W)\,\vert = 1$\,
+	and we may write
+	\,$\det(W)  = e^{\i\phi}$.\,
+	Let \,$U := e^{-\i\phi/2} \cdot W$.\,
+	Note
+	\begin{eqnarray*}
+	\det(U)
+	& = &
+		\det(\,e^{-\i\phi/2} \cdot W\,)
+	\;\; = \;\;
+		(e^{-\i\phi/2})^{2} \cdot \det(W)
+	\;\; = \;\;
+		e^{-\i\phi} \cdot e^{+\i\phi}
+	\;\; = \;\;
+		1,
+	\quad\textnormal{and}\quad
+	\\
+	U^{\dagger}U{\color{white}2}
+	& = &
+		(e^{-\i\phi/2} \cdot W)^{\dagger} \cdot (e^{-\i\phi/2} \cdot W)
+	\; = \;
+		e^{+\i\phi/2} \cdot e^{-\i\phi/2} \cdot W^{\dagger} \cdot W
+	\; = \;
+		I_{2}
+	\end{eqnarray*}
+	Thus, \,$U \in \SU(2)$.\,
+	And,
+	\begin{eqnarray*}
+	U \cdot A \cdot U^{-1}
+	& = &
+		(e^{-\i\phi/2}\,W) \cdot A \cdot (e^{-\i\phi/2}\,W)^{-1}
+	\;\; = \;\;
+		e^{-\i\phi/2} \cdot W \cdot A \cdot W^{-1} \cdot e^{+\i\phi/2}
+	\;\; = \;\;
+		W \cdot A \cdot W^{-1}
+	\\
+	& = &
+		D
+	\;\; = \;\;
+		\diag(e^{\i\theta/2},e^{-\i\theta/2}) 
+	\;\; \in \;\;
+		\SU(2)
+	\end{eqnarray*}
+	This completes the proof of Claim 1.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\quad
+	For diagonal
+	\,$D = \diag(e^{\i\theta/2},e^{-\i\theta/2}) \in \SL(2,\C)$,\,
+	we have:
+	\begin{equation*}
+	\Phi_{D}
+	\; = \;
+		R_{23}(\theta)
+	\; \in \;
+		\SOup(\textnormal{SkHerm}(2,\C))
+	\; \cong \;
+		\SOup(1,3)\,,
+	\end{equation*}
+	where
+	\,$R_{23}(\theta)$\,
+	is the counterclockwise rotation of the
+	$x_{2}x_{3}$-plane.
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 2:\;\;
+	\begin{eqnarray*}
+	\Phi_{D}(X)
+	& = &
+		DXD^{-1}
+	\;\; = \;\;
+		\left(\,\begin{array}{cc}
+			e^{\i\,{\color{red}\theta/2}} & 0
+			\\
+			0 & e^{-\,\i\,\theta/2}
+			\end{array}\!\!\right)
+		\cdot
+		\left(\,\begin{array}{cc}
+			\i\,(x_{0}+x_{1}) & x_{2} + \i\,x_{3}
+			\\
+			- \, x_{2} + \i\,x_{3} & \i\,(x_{0}-x_{1})
+			\end{array}\,\right)
+		\cdot
+		\left(\begin{array}{cc}
+			e^{-\,\i\,\theta/2} & 0
+			\\
+			0 & e^{\i\,\theta/2}
+			\end{array}\!\right)
+	\\
+	& = &
+		\left(\,\begin{array}{cc}
+			e^{\i\,\theta/2} \cdot \i\,(x_{0}+x_{1}) & e^{\i\,\theta/2} \cdot (x_{2} + \i\,x_{3})
+			\\
+			e^{-\,\i\,\theta/2} \cdot (-\,x_{2} + \i\,x_{3}) & \;\; e^{-\,\i\,\theta/2} \cdot \i\,(x_{0}-x_{1})
+			\end{array}\!\right)
+		\cdot
+		\left(\begin{array}{cc}
+			e^{-\,\i\,\theta/2} & 0
+			\\
+			0 & e^{\i\,\theta/2}
+			\end{array}\!\right)
+	\\
+	& = &
+		\left(\,\begin{array}{cc}
+			\i\,(x_{0}+x_{1}) & \quad{\color{black}e^{\i\,\theta} \cdot (x_{2} + \i\,x_{3})}
+			\\
+			-\,e^{-\,\i\,\theta} \cdot (x_{2} - \i\,x_{3}) & \i\,(x_{0}-x_{1})
+			\end{array}\!\!\right)
+	\\
+	& = &
+		\left(\,\begin{array}{cc}
+			\i\,(x_{0}+x_{1}) & \quad{\color{red}e^{\i\,\theta} \cdot (x_{2} + \i\,x_{3})}
+			\\
+			\overset{{\color{white}1}}{-\;\overline{e^{\i\,\theta} \cdot (x_{2} + \i\,x_{3})}} & \i\,(x_{0}-x_{1})
+			\end{array}\!\!\right)
+	\end{eqnarray*}
+
+	This completes the proof of Claim 2.
+
+	\vskip 0.3cm
+	\noindent
+	Now, by Claim 1, we have
+	\,$A = U^{-1} \cdot D \cdot U$,\,
+	where
+	\,$U \in \SU(2)$\,
+	and
+	\,$D  = \diag(e^{\i\theta/2},e^{-\i\theta/2}) \in \SU(2)$.\,
+	And, by Claim 2, we have
+	\,$\Phi_{D} = R_{23}(\theta)$.\,
+	Hence,
+	\begin{eqnarray*}
+	&&
+		A \in \ker(\Phi)
+	\\
+	& \Longrightarrow &
+		\mathbf{1}_{\textnormal{SkHerm}(2,\C)}
+		\, = \,
+			\Phi(A)
+		\, = \,
+			\Phi(U^{-1} \cdot D \cdot U)
+		\, = \,
+			\Phi(U)^{-1} \circ \Phi_{D} \circ \Phi(U)
+	\\
+	& \Longrightarrow &
+		R_{23}(\theta)
+		\, = \,
+			\Phi_{D}
+		\, = \,
+			\Phi(U) \circ \mathbf{1}_{\textnormal{SkHerm}(2,\C)} \circ \Phi(U)^{-1}
+		\, = \,
+			\Phi(U) \circ \Phi(U)^{-1}
+		\, = \,
+			\mathbf{1}_{\textnormal{SkHerm}(2,\C)}
+	\\
+	& \Longrightarrow &
+		\theta
+		\, \in \,
+			2\,\pi\cdot\N
+	\\
+	& \Longrightarrow &
+		D \, = \, \pm\,I_{2}
+	\\
+	& \Longrightarrow &
+		A \, = \, U^{-1} \cdot (\pm\,I_{2}) \cdot U \, = \, \pm \, U^{-1} \cdot U \, = \, \pm\,I_{2}
+	\end{eqnarray*}
+	This establishes that the required reverse inclusion: \,$\ker(\Phi) \subset \{\,\pm\,I_{2}\,\}$.\,
+	We may now conclude that \,$\ker(\Phi) = \{\,\pm\,I_{2}\,\}$,\, as required.
 \item
 \end{enumerate}
 \qed
