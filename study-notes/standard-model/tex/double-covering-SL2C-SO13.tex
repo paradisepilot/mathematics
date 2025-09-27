@@ -860,7 +860,7 @@ Then, the following statements are true:
 	where
 	\,$R_{23}(\theta)$\,
 	is the counterclockwise rotation of the
-	$x_{2}x_{3}$-plane.
+	$x_{2}x_{3}$-plane in \,$\Re^{1,3}$.
 	\vskip 0.1cm
 	\noindent
 	Proof of Claim 2:\;\;
@@ -914,7 +914,6 @@ Then, the following statements are true:
 			\overset{{\color{white}1}}{-\;\overline{e^{\i\,\theta} \cdot (x_{2} + \i\,x_{3})}} & \i\,(x_{0}-x_{1})
 			\end{array}\!\!\right)
 	\end{eqnarray*}
-
 	This completes the proof of Claim 2.
 
 	\vskip 0.3cm
@@ -926,7 +925,9 @@ Then, the following statements are true:
 	and
 	\,$D  = \diag(e^{\i\theta/2},e^{-\i\theta/2}) \in \SU(2)$.\,
 	And, by Claim 2, we have
-	\,$\Phi_{D} = R_{23}(\theta)$.\,
+	\,$\Phi_{D} = R_{23}(\theta)$,\,
+	the counterclockwise rotation of the
+	$x_{2}x_{3}$-plane in \,$\Re^{1,3}$.\,
 	Hence,
 	\begin{eqnarray*}
 	&&
@@ -934,34 +935,51 @@ Then, the following statements are true:
 	\\
 	& \Longrightarrow &
 		\mathbf{1}_{\textnormal{SkHerm}(2,\C)}
-		\, = \,
+		\; = \;
 			\Phi(A)
-		\, = \,
+		\; = \;
 			\Phi(U^{-1} \cdot D \cdot U)
-		\, = \,
+		\; = \;
 			\Phi(U)^{-1} \circ \Phi_{D} \circ \Phi(U)
 	\\
 	& \Longrightarrow &
 		R_{23}(\theta)
-		\, = \,
+		\; = \;
 			\Phi_{D}
-		\, = \,
+		\; = \;
 			\Phi(U) \circ \mathbf{1}_{\textnormal{SkHerm}(2,\C)} \circ \Phi(U)^{-1}
-		\, = \,
+		\; = \;
 			\Phi(U) \circ \Phi(U)^{-1}
-		\, = \,
+		\; = \;
 			\mathbf{1}_{\textnormal{SkHerm}(2,\C)}
 	\\
 	& \Longrightarrow &
 		\theta
-		\, \in \,
-			2\,\pi\cdot\N
+		\; = \;
+			2\,\pi\,k\,,
+		\;\;\textnormal{for some \,$k \in \N$}
 	\\
 	& \Longrightarrow &
-		D \, = \, \pm\,I_{2}
+		D
+		\; = \;
+			\diag(e^{\i\,k\pi},e^{-\i\,k\pi})
+		\; = \;
+			\left\{\begin{array}{cl}
+				+\,I_{2}, & \textnormal{for even \,$k \in \N$}
+				\\
+				-\,I_{2}, & \textnormal{for \,odd\, \,$k \in \N$}
+				\end{array}\right.
 	\\
 	& \Longrightarrow &
-		A \, = \, U^{-1} \cdot (\pm\,I_{2}) \cdot U \, = \, \pm \, U^{-1} \cdot U \, = \, \pm\,I_{2}
+		A
+		\; = \;
+			U^{-1} \cdot D \cdot U
+		\; = \;
+			U^{-1} \cdot (\pm\,I_{2}) \cdot U
+		\; = \;
+			\pm \, U^{-1} \cdot U
+		\; = \;
+			\pm\,I_{2}
 	\end{eqnarray*}
 	This establishes that the required reverse inclusion: \,$\ker(\Phi) \subset \{\,\pm\,I_{2}\,\}$.\,
 	We may now conclude that \,$\ker(\Phi) = \{\,\pm\,I_{2}\,\}$,\, as required.
