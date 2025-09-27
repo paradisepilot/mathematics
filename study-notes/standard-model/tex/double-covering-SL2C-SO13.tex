@@ -59,15 +59,23 @@ The \textbf{Lorentz group of \,$\textnormal{O}(1,n)$}\, is defined to be:
 
 \vskip 0.5cm
 \begin{proposition}
+\label{WellDefnSOSOup}
 \mbox{}
 \vskip 0.1cm
 \noindent
-For each \,$A \in \textnormal{O}(1,n)$, we have:
+The following statements are true:
 \begin{enumerate}
 \item
-	$\det(A) = \pm 1$,\, and
+	$\det(A) = \pm 1$,\, for each \,$A \in \textnormal{O}(1,n)$.
 \item
-	$\vert\,A^{0}_{0}\,\vert^{2} \;\geq\; 1$;\, equivalently, either \,$A^{0}_{0} \,\geq\, 1$\, or \,$A^{0}_{0} \,\leq\, -1$
+	For each \,$A \in \textnormal{O}(1,n)$,\,
+	\,$\vert\,A_{00}\,\vert^{2} \;\geq\; 1$;\,
+	equivalently, either
+	\,$A_{00} \,\geq\, 1$\, or \,$A_{00} \,\leq\, -1$.\,
+\item
+	The map
+	\,$\textnormal{O}(1,3) \longrightarrow \{\,\pm\,1\,\} : A \longmapsto \textnormal{sign}(A_{00})$\,
+	is a homomorphism.
 \end{enumerate}
 \end{proposition}
 \proof
@@ -159,6 +167,131 @@ For each \,$A \in \textnormal{O}(1,n)$, we have:
 			1\,,
 	\end{eqnarray*}
 	as required.
+\item
+	We need to show that, for each
+	\,$A, B \in \textnormal{O}(1,3)$,\,
+	we have
+	\begin{equation*}
+	\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{(AB)_{00}}\,\right)
+	\;\; = \;\;
+		\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{A_{00}}\,\right)
+		\cdot
+		\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{B_{00}}\,\right)
+	\;\; = \;\;
+		\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{A_{00}}\,B_{00}\,\right),
+	\end{equation*}
+	where the second equality is trivial
+	(since $\textnormal{sign} : \Re \longrightarrow \{\,0,\pm\,1\,\}$ is a homomorphism).
+	Now,
+	\begin{eqnarray*}
+	(AB)_{00}
+	& = &
+		\overset{3}{\underset{\mu\,=\,0}{\sum}}\;
+		A_{0\mu}B_{\mu0}
+	\;\; = \;\;
+		A_{00}B_{00}
+		\; + \;
+		\overset{3}{\underset{k\,=\,1}{\sum}}\;
+		A_{0k}B_{k0}
+	\end{eqnarray*}
+	Hence,
+	\begin{equation*}
+	\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{(AB)_{00}}\,\right)
+	\; = \;
+		\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{A_{00}}\,B_{00}\,\right)
+	\quad\Longleftrightarrow\quad
+	\left\vert\;
+		\overset{{\color{white}.}}{A_{00}B_{00}}
+		\;\right\vert
+	\;\, > \;\,
+		\left\vert\;
+			\overset{3}{\underset{k\,=\,1}{\sum}}\;A_{0k}B_{k0}
+			\;\right\vert
+	\end{equation*}
+	Hence, the proof is complete once we establish the following:
+	
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	$\left\vert\;
+		\overset{{\color{white}.}}{A_{00}B_{00}}
+		\;\right\vert
+	\;\, > \;\,
+		\left\vert\;
+			\overset{3}{\underset{k\,=\,1}{\sum}}\;A_{0k}B_{k0}
+			\;\right\vert$
+
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\;\;
+	By proof of (ii), we have:
+	\begin{equation*}
+	A_{{\color{black}0}0}^{2}
+	\; = \;
+		1
+		\; + \,
+		\overset{3}{\underset{k\,=\,0}{\sum}}\;
+		A_{k{\color{red}0}}^{2}
+	\quad\quad\textnormal{and}\quad\quad
+	B_{{\color{black}0}0}^{2}
+	\; = \;
+		1
+		\; + \,
+		\overset{3}{\underset{k\,=\,0}{\sum}}\;
+		B_{k{\color{red}0}}^{2}
+	\end{equation*}
+	Since
+	\,$A \in \textnormal{O}(1,3) \,\Longrightarrow\, A^{T} \in \textnormal{O}(1,3)$\,
+	and
+	\,$B \in \textnormal{O}(1,3) \,\Longrightarrow\, B^{T} \in \textnormal{O}(1,3)$,\,
+	it follows that we also have:
+	\begin{equation*}
+	A_{{\color{black}0}0}^{2}
+	\; = \;
+		1
+		\; + \,
+		\overset{3}{\underset{k\,=\,0}{\sum}}\;
+		A_{{\color{red}0}k}^{2}
+	\quad\quad\textnormal{and}\quad\quad
+	B_{{\color{black}0}0}^{2}
+	\; = \;
+		1
+		\; + \,
+		\overset{3}{\underset{k\,=\,0}{\sum}}\;
+		B_{{\color{red}0}k}^{2}
+	\end{equation*}
+	Now, by Cauchy-Schwarz inequality\footnote{Cauchy-Schwartz inequality:
+	$\left\vert\,\langle \overset{{\color{white}.}}{\mathbf{u},\mathbf{v}} \rangle\,\right\vert^{2}
+	\leq
+	\Vert\,\mathbf{u}\,\Vert^{2} \cdot \Vert\,\mathbf{v}\,\Vert^{2}$},
+	we therefore have:
+	\begin{eqnarray*}
+	\left\vert\;
+		\overset{3}{\underset{k\,=\,1}{\sum}}\;A_{0k}B_{k0}
+		\;\right\vert^{2}
+	& \leq &
+		\left(\;
+			\overset{3}{\underset{k\,=\,1}{\sum}}\;A_{0k}^{2}
+			\;\right)
+		\cdot
+		\left(\;
+			\overset{3}{\underset{k\,=\,1}{\sum}}\;B_{k0}^{2}
+			\;\right)
+	\;\; = \;\;
+		\left(\;
+			\overset{{\color{white}.}}{A_{00}^{2}-1}
+			\;\right)
+		\cdot
+		\left(\;
+			\overset{{\color{white}.}}{B_{00}^{2}-1}
+			\;\right)
+	\\
+	& \leq &
+		A_{00}^{2} \cdot B_{00}^{2}
+	\;\; = \;\;
+		\left\vert\, \overset{{\color{white}.}}{A_{00}\,B_{00}} \,\right\vert^{2}\,,
+	\end{eqnarray*}
+	which proves Claim 1, as required.
 	\qed
 \end{enumerate}
 
@@ -298,8 +431,22 @@ The \textbf{orthochronous special Lorentz group} is defined to be:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+By Proposition \ref{WellDefnSOSOup},
+\,$\SO(1,n)$\, and \,$\SOup(1,n)$\,
+are indeed subgroups of
+\,$\textnormal{O}(1,n)$,\,
+being kernels of homomorphisms of groups.
+\end{remark}
 
-\vskip 1.0cm
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \noindent
 \textbf{\large The \,$\SL(2,\C)$\, action on Minkowski space \,$\Re^{1,3}$}
 \vskip 0.3cm
