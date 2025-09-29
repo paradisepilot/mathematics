@@ -443,13 +443,20 @@ is unitarily equivalent to an induced representation.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-Let
-\,$\mathcal{H}_{m}^{\uparrow},\, \mathcal{H}_{m}^{\downarrow} \,\subset\, \Re^{1,3}$\,
-be the orbits of
-\,$\SL(2,\C) \curvearrowright \Re^{1,3}$\,
-defined by:
+We follow Chapter 9, p.209, \cite{Talagrand2022}.
+
+\vskip 0.5cm
+\noindent
+Let \,$m > 0$\, and
+%\,$X_{m}^{\uparrow},\, X_{m}^{\downarrow} \,\subset\, \Re^{1,3}$\,
+\,$X_{m} \,\subset\, \Re^{1,3}$\,
+be the orbit of
+\,$p^{*} = (m,0,0,0)^{T} \in \Re^{1,3}$\,
+under the action of
+\,$\SL(2,\C) \curvearrowright \Re^{1,3}$,\,
+i.e.,
 \begin{eqnarray*}
-\mathcal{H}_{m}^{\uparrow}
+X_{m}
 & := &
 	\left\{\;\,
 		\left.
@@ -462,48 +469,78 @@ defined by:
 			\\
 			-m^{2} \, \overset{{\color{white}1}}{=} \, -\,(p_{0})^{2} + (p_{1})^{2} + (p_{2})^{2} + (p_{3})^{2}
 			\end{array}
-		\right\},
-\\ \\
-\mathcal{H}_{m}^{\downarrow}
-& := &
-	\left\{\;\,
-		\left.
-		p = (\,p_{0},p_{1},p_{2},p_{3}\,)
-		\overset{{\color{white}1}}{\in}
-		\Re^{1,3}
-		\;\;\;\right\vert
-		\begin{array}{c}
-			p_{0} \;{\color{red}<}\; 0\,,
-			\\
-			-m^{2} \, \overset{{\color{white}1}}{=} \, -\,(p_{0})^{2} + (p_{1})^{2} + (p_{2})^{2} + (p_{3})^{2}
-			\end{array}
 		\right\}
+%\\ \\
+%X_{m}^{\downarrow}
+%& := &
+%	\left\{\;\,
+%		\left.
+%		p = (\,p_{0},p_{1},p_{2},p_{3}\,)
+%		\overset{{\color{white}1}}{\in}
+%		\Re^{1,3}
+%		\;\;\;\right\vert
+%		\begin{array}{c}
+%			p_{0} \;{\color{red}<}\; 0\,,
+%			\\
+%			-m^{2} \, \overset{{\color{white}1}}{=} \, -\,(p_{0})^{2} + (p_{1})^{2} + (p_{2})^{2} + (p_{3})^{2}
+%			\end{array}
+%		\right\}
 \end{eqnarray*}
-where
-\,$m \in [\,0,\infty) \sqcup \i\,(\,0,\infty)$\, (hence, \,$m^{2}$\, varies over all of \,$\Re$).\,
+%where
+%\,$m \,\in\, \{\,0\,\} \sqcup (\,0,\infty\,) \sqcup \i\,(\,0,\infty\,)$\, (hence, \,$m^{2}$\, varies over all of \,$\Re$).\,
+
 
 \vskip 0.5cm
 \noindent
-Consider \,$m > 0$.\,
+Then,
 \begin{itemize}
 \item
-	$\textnormal{Stab}_{\SL(2,\C)}\!\left(\,(m,0,0,0)^{T}\,\right) \;\cong\; \SU(2)$
+	$\textnormal{Stab}_{\SL(2,\C)}\!\left(\;(m,0,0,0)^{T}\,\right) \;\cong\; \SU(2)$
 \item
+	Here, we follow \S9.4, p.215, \cite{Talagrand2022}.
 	Let
 	\,$\pi_{s} : \SU(2) \longrightarrow \GL(V_{s})$\,
 	be the irreducible finite-dimensional complex representation of \,$\SU(2)$\,
 	determined by
-	\,$s \;\in\; \{\,0\,\} \,\bigsqcup\, \dfrac{1}{2}\cdot\N$\,
-	(i.e., $\dim_{\C}(V_{s}) = 2s + 1$.)
-\item
-	$E_{m,s} \longrightarrow \mathcal{H}_{m}^{\uparrow}$\,
-	is the vector bundle determined by \,$\pi_{s}$\, (how exactly?)
-\item
-	$\SL(2,\C) \ltimes \Re^{1,3}$\,
-	has an induced action on the space
-	\,$\Gamma(\,E_{m,s}\,)$\,
-	of smooth sections of
-	\,$E_{m,s}$.\,
+	\,$s \,\in\, \{\,0\,\} \,\bigsqcup\, \dfrac{1}{2}\cdot\N$\,
+	(i.e., $\dim_{\C}(V_{s}) = 2s + 1$).
+	Let
+	\begin{equation*}
+	\mathcal{H}_{m,s}
+	\; := \;
+		L^{2}\!\left(\,X_{m},V_{s},\d\lambda_{m}\,\right)
+	\end{equation*}
+	denote the (complex) Hilbert space of $\lambda_{m}$-square-integrable
+	$V_{s}$-valued functions.
+	For each
+	\,$(A,b) \in \SL(2,\C) \ltimes \Re^{1,3}$,\,
+	define a map
+	\,$\Pi_{m,s}\!\left(A,b\right) : \mathcal{H}_{m,s} \longrightarrow \mathcal{H}_{m,s}$\,
+	as follows:
+	\begin{equation}\label{PiMSUp}
+	\Pi_{m,s}\!\left(A,b\right)[\,\varphi\,](p)
+	\;\; := \;\;
+		\exp\!\left(\,\overset{{\color{white}.}}{\i}\,\langle\,b,p\,\rangle\right)
+		\cdot\,
+		\pi_{s}(D^{-1}_{Ap}\,A\,D_{A^{-1}\,p})\!\left[\;
+			\overset{{\color{white}.}}{\varphi(A^{-1}p)}
+			\;\right],
+	\end{equation}
+	where
+	\,$D_{p} \in \SL(2,\C)$\, is such that \,$D_{p}\!\left(\,(m,0,0,0)^{T}\,\right) \,=\, p$.\,
+	Note that, for each \,$p \in X_{m}$,\, $D_{p} \in \SL(2,\C)$\, is NOT unique,
+	but that \,$\Pi_{m,s}$\, is well-defined
+	(i.e., the right-hand side of \eqref{PiMSUp} does not depend on the particular choice of \,$D_{p}$).\,
+	\vskip 0.1cm
+	\textbf{Claim:}\;
+	$\Pi_{m,s} : \SL(2,\C) \ltimes \Re^{1,3} \longrightarrow \Aut\!\left(\mathcal{H}_{m,s}\right)$\,
+	is a (complex-linear infinite-dimensional) irreducible unitary representation.
+	\vskip 0.1cm
+	$\Pi_{m,s}$\, is called the \textbf{induced representation of \,$\SL(2,\C) \times \Re^{1,3}$}\,
+	by the (irreducible) representation
+	\,$\pi_{s} : \SU(2) \longrightarrow \GL(V_{s})$\,
+	of
+	\,$\SU(2) \cong \textnormal{Stab}_{\SL(2,\C)}\!\left(\;(m,0,0,0)^{T}\,\right)$.\,
 \end{itemize}
 
 
