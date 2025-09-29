@@ -1,7 +1,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Induced representations of semidirect products \,$G \ltimes\! H$\, with \,$H$\, abelian}
+\chapter{Irreducible representations of semidirect products \,$G \ltimes\! H$\, with \,$H$\, Abelian}
 \setcounter{theorem}{0}
 \setcounter{equation}{0}
 
@@ -15,9 +15,114 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\subsection{Semidirect products}
+\section{Representation-theoretic prerequisites}
 
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Every irreducible finite-dimensional {\color{red}complex}-linear representation
+of an {\color{red}Abelian} group is one-dimensional.
+More precsely, suppose
+\,$G$\, is an Abelian group,
+\,$\rho : G \longrightarrow \GL(V)$\,
+is a complex-linear representation, where
+\,$V$\, is a complex vector space with \,$\dim_{\C}(V) < \infty$.\,
+Then,
+\,$\dim_{\C}(V) \,=\, 1$.\,
+\end{proposition}
+\proof
+
+\qed
+
+\vskip 0.5cm
 \begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$\rho : G \longrightarrow \GL(V)$\,
+is a finite-dimensional representation of
+the group \,$G$\,
+on the (finite-dimensional) vector space \,$V$\,
+over a field \,$\F$.\,
+Then, the \textbf{character} of the representation
+\,$\rho$\,
+is the $\F$-valued function
+\,$\chi_{\rho} : G \longrightarrow \F$\,
+defined on \,$G$\, given by:
+\begin{equation*}
+\chi_{\rho}(\,g\,)
+\; := \;
+	\trace\!\left(\,\overset{{\color{white}.}}{\rho(g)}\,\right),
+\quad
+\textnormal{for each \,$g \in G$}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$\rho : G \longrightarrow \GL(V)$\,
+and
+\,$\rho^{\prime} : G \longrightarrow \GL(V^{\prime})$\,
+are finite-dimensional representations of
+the group \,$G$\, on the (finite-dimensional) vector spaces
+\,$V$\, and \,$V^{\prime}$,\,
+respectively, where
+\,$V$\, and \,$V^{\prime}$\,
+share a common base scalar field \,$\F$.\,
+Let
+\,$\chi_{\rho} : G \longrightarrow \F$\,
+and
+\,$\chi_{\rho^{\prime}} : G \longrightarrow \F$\,
+be the characters of
+\,$\rho$\, and \,$\rho^{\prime}$,\,
+respectively.
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	$\chi_{\rho} : G \longrightarrow \F$\,
+	is constant on each conjugacy class of \,$G$.\,
+\item
+	$\chi_{\rho\,\oplus\,\rho^{\prime}} \; = \; \chi_{\rho} \,+\, \chi_{\rho^{\prime}}$\,
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	Simply observe that, for arbitrary
+	\,$g, h \in G$,\,
+	we have:
+	\begin{eqnarray*}
+	\chi_{\rho}\!\left(\,h \cdot \overset{{\color{white}1}}{g} \cdot h^{-1}\,\right)
+	& = &
+		\trace\!\left(\,\rho(h \cdot \overset{{\color{white}1}}{g} \cdot h^{-1})\,\right)
+	\;\; = \;\;
+		\trace\!\left(\,\rho(h) \cdot \rho(\overset{{\color{white}1}}{g}) \cdot \rho(h)^{-1}\,\right)
+	\\
+	& = &
+		\trace\!\left(\, \rho(h)^{-1} \cdot \rho(h) \cdot \rho(\overset{{\color{white}1}}{g}) \,\right)
+	\;\; = \;\;
+		\trace\!\left(\, \rho(\overset{{\color{white}1}}{g}) \,\right)
+	\\
+	& = &
+		\chi_{\rho}\!\left(\, \overset{{\color{white}.}}{g} \,\right)
+	\end{eqnarray*}
+\item
+	Trivial.
+\end{enumerate}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 1.0cm
+\section{Semidirect products}
+
+\begin{definition}[Semidirect product]
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -26,7 +131,7 @@ Suppose:
 \item
 	$G$\, and \,$H$\, are two groups, and
 \item
-	$\rho : G \longrightarrow \textnormal{Aut}(H)$\,
+	$\rho : G \longrightarrow \Aut(H)$\,
 	is a left action of \,$G$\, on \,$H$.\,
 \end{itemize}
 Then, the \textbf{semidirect product} \,$G \ltimes_{\rho}\! H$\,
@@ -38,10 +143,11 @@ the multiplication law:
 \begin{equation*}
 (\,g_{1},h_{1}\,) \cdot (\,g_{2},h_{2}\,)
 \;\; = \;\;
-	\left(\,
+	\left(\;
 		\overset{{\color{white}1}}{g_{1}} \cdot g_{2}
-		\,\overset{{\color{white}1}}{,}\,
-		h_{1} \cdot \rho(g_{1}) \cdot h_{2}
+		\;\overset{{\color{white}1}}{,}\;
+		%h_{1} \cdot \rho(g_{1})\!\left[\,\overset{{\color{white}.}}{h_{2}}\,\right]
+		h_{1} \cdot \rho(g_{1})\!\left[\,h_{2}\,\right]
 		\,\right)
 \end{equation*}
 The identity element of \,$G \ltimes_{\rho}\! H$\, is then
@@ -61,16 +167,17 @@ and the inverse of \,$(\,g,h\,) \in G \ltimes_{\rho}\! H$\, is given by:
 	\left(\;
 		g^{-1}
 		\;\overset{{\color{white}1}}{,}\;
-		\overset{{\color{white}1}}{\rho}(g^{-1}) \cdot h^{-1}
+		\overset{{\color{white}1}}{\rho}(g^{-1})\!\left[\, h^{-1} \,\right]
 		\;\right)
 \end{equation*}
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
-\subsection{A representation of a semidirect product is determined by the restrictions to its factors}
+%\vskip 0.5cm
+%\subsection{A representation of a semidirect product is determined by the restrictions to its factors}
 
+\vskip 0.5cm
 \begin{proposition}[Proposition 7.3, p.150, \cite{Berndt2007}]
 \mbox{}
 \vskip 0.1cm
@@ -78,9 +185,9 @@ and the inverse of \,$(\,g,h\,) \in G \ltimes_{\rho}\! H$\, is given by:
 Suppose:
 \begin{itemize}
 \item
-	$G$\, is a group, \,$H$\, an {\color{red}abelian} group,
+	$G$\, is a group, \,$H$\, an {\color{red}Abelian} group,
 \item
-	$\rho : G \longrightarrow \textnormal{Aut}(H)$\,
+	$\rho : G \longrightarrow \Aut(H)$\,
 	is a left action of \,$G$\, on \,$H$,\,
 \item
 	$\pi : G \ltimes_{\rho}\! H \longrightarrow \GL(V)$\,
@@ -92,7 +199,7 @@ Suppose:
 	\,$\pi_{G}$\, and \,$\pi_{H}$\,
 	are given by:
 	\begin{equation*}
-	\pi_{G}(\,g\,) \; := \; \pi\!\left(\,(\,\overset{{\color{white}1}}{g}\,,0\,)\,\right),
+	\pi_{G}(\,g\,) \; := \; \pi\!\left(\,(\,\overset{{\color{white}1}}{g}\,,0_{H}\,)\,\right),
 	\quad\quad
 	\textnormal{and}
 	\quad\quad
@@ -102,11 +209,19 @@ Suppose:
 Then, the following statements are true:
 \begin{enumerate}
 \item
-	$\pi$\, is completely determined by its restrictions \,$\pi_{G}$\, and \,$\pi_{H}$,\, and
+	$\pi$\, is completely determined by its restrictions \,$\pi_{G}$\, and \,$\pi_{H}$,\,
+	in the sense that
+	\begin{equation*}
+	\pi\!\left(\;(\,\overset{{\color{white}1}}{g}\,,h\,)\;\right)
+	\; = \;
+		\pi_{H}(\,h\,) \cdot \pi_{G}(\,g\,),
+	\quad
+	\textnormal{for each \,$g \in G,\; h \in H$}
+	\end{equation*}
 \item
 	\,$\pi_{G}$\, and \,$\pi_{H}$\, satisfy the following equality:
 	\begin{equation*}
-	\pi_{H}\!\left(\,\rho(g) \cdot \overset{{\color{white}.}}{h}\,\right)
+	\pi_{H}\!\left(\,\rho(g)\,[\,\overset{{\color{white}.}}{h}\,]\,\right)
 	\;\; = \;\;
 		\pi_{G}\!\left(\; \overset{{\color{white}.}}{g} \,\right)
 		\cdot
@@ -120,7 +235,12 @@ Then, the following statements are true:
 \begin{enumerate}
 \item
 	Note that
-	\,$(\,g\,,h\,) \;=\; \left(\;1_{G} \cdot g\,,\, h + \rho(g)\cdot \overset{{\color{white}.}}{0}\,\right) \;=\; (\,1_{G}\,,h\,)\cdot (\,g\,,0\,)$.\,
+	\,$(\,g\,,h\,)
+	\;=\;
+		\left(\;1_{G} \cdot g\,,\, h + \rho(g)\,[\;\overset{{\color{white}.}}{0_{H}}\,]\,\right)
+	\;=\;
+		(\,1_{G}\,,h\,)\cdot (\,g\,,0_{H}\,)
+	$.\,
 	Hence,
 	\begin{equation*}
 	\pi\!\left(\;(\,\overset{{\color{white}1}}{g}\,,h\,)\;\right)
@@ -128,7 +248,7 @@ Then, the following statements are true:
 		\pi\!\left(\;
 			(\,1_{G}\,,h\,)
 			\cdot
-			(\,\overset{{\color{white}1}}{g}\,,0\,)
+			(\,\overset{{\color{white}1}}{g}\,,0_{H})
 			\;\right)
 	\;\; = \;\;
 		\pi\!\left(\;
@@ -136,7 +256,7 @@ Then, the following statements are true:
 			\;\right)
 		\cdot
 		\pi\!\left(\;
-			(\,\overset{{\color{white}.}}{g}\,,\overset{{\color{white}.}}{0}\,)
+			(\,\overset{{\color{white}.}}{g}\,,\overset{{\color{white}.}}{0_{H}})
 			\;\right)
 	\;\; = \;\;
 		\pi_{H}(\,h\,) \cdot \pi_{G}(\,g\,),
@@ -151,10 +271,10 @@ Then, the following statements are true:
 		\left(\;
 			\overset{{\color{white}1}}{g_{1}} \cdot g_{2}
 			\;\overset{{\color{white}1}}{,}\;
-			h_{1} + \rho(g_{1}) \cdot h_{2}
+			h_{1} + \rho(g_{1})\,[\,h_{2}\,]
 			\;\right)
 	\end{equation*}
-	Hence,
+	Hence, repeated application of (i) yields:
 	\begin{eqnarray*}
 	\pi_{H}(\,h_{1}\,) \cdot \pi_{G}(\,g_{1}\,)
 	\cdot
@@ -178,20 +298,20 @@ Then, the following statements are true:
 			\left(\;
 				\overset{{\color{white}1}}{g_{1}} \cdot g_{2}
 				\;\overset{{\color{white}1}}{,}\;
-				h_{1} + \rho(g_{1}) \cdot h_{2}
+				h_{1} + \rho(g_{1})\,[\,h_{2}\,]
 				\;\right)
 			\;\right)
 	\\
 	& = &
-		\pi_{H}\!\left(\;h_{1} + \rho(g_{1}) \overset{{\color{white}1}}{\cdot} h_{2}\;\right)
-		\cdot
+		\pi_{H}\!\left(\;h_{1} \overset{{\color{white}1}}{+} \rho(g_{1})\,[\,h_{2}\,]\,\right)
+		\cdot\,
 		\pi_{G}(\;g_{1}\cdot g_{2}\,)
 	\\
 	& = &
 		\pi_{H}\!\left(\;\overset{{\color{white}.}}{h_{1}}\;\right)
-		\cdot
-		\pi_{H}\!\left(\;\rho(g_{1}) \overset{{\color{white}1}}{\cdot} h_{2}\;\right)
-		\cdot
+		\cdot\,
+		\pi_{H}\!\left(\;\overset{{\color{white}1}}{\rho(g_{1})}\,[\,h_{2}\,]\,\right)
+		\cdot\,
 		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g_{1}}\;\right)
 		\cdot
 		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g_{2}}\;\right)
@@ -200,7 +320,7 @@ Then, the following statements are true:
 	\begin{equation*}
 		\pi_{H}\!\left(\;\overset{{\color{white}.}}{h_{1}}\;\right)
 		\cdot
-		\pi_{H}\!\left(\;\rho(g_{1}) \overset{{\color{white}1}}{\cdot} h_{2}\;\right)
+		\pi_{H}\!\left(\,\overset{{\color{white}1}}{\rho(g_{1})}\,[\,h_{2}\,]\,\right)
 		\cdot
 		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g_{1}}\;\right)
 		\cdot
@@ -211,10 +331,10 @@ Then, the following statements are true:
 		\pi_{H}(\,h_{2}\,) \cdot \pi_{G}(\,g_{2}\,)
 	\end{equation*}
 	Setting, in the above equality,
-	\,$g_{1} = g$,\,  $h_{1} = 0$,\, $g_{2} = 1_{G}$\, and \,$h_{2} = h$\,
+	\,$g_{1} = g$,\,  $h_{1} = 0_{H}$,\, $g_{2} = 1_{G}$\, and \,$h_{2} = h$\,
 	yields
 	\begin{equation*}
-		\pi_{H}\!\left(\;\overset{{\color{white}.}}{0}\;\right)
+		\pi_{H}\!\left(\;\overset{{\color{white}.}}{0_{H}}\;\right)
 		\cdot
 		\pi_{H}\!\left(\;\rho(g) \overset{{\color{white}1}}{\cdot} h\;\right)
 		\cdot
@@ -222,13 +342,13 @@ Then, the following statements are true:
 		\cdot
 		\pi_{G}\!\left(\;\overset{{\color{white}.}}{1_{G}}\;\right)
 	\;\; = \;\;
-		\pi_{H}(\,0\,) \cdot \pi_{G}(\,g\,)
+		\pi_{H}(\,0_{H}\,) \cdot \pi_{G}(\,g\,)
 		\cdot
 		\pi_{H}(\,h\,) \cdot \pi_{G}(\,1_{G}\,)\,,
 	\end{equation*}
 	which simplifies to
 	\begin{equation*}
-		\pi_{H}\!\left(\;\rho(g) \overset{{\color{white}1}}{\cdot} h\;\right)
+		\pi_{H}\!\left(\;\overset{{\color{white}1}}{\rho(g)}\,[\,h\,]\,\right)
 		\cdot
 		\pi_{G}\!\left(\;\overset{{\color{white}.}}{g}\;\right)
 	\;\; = \;\;
@@ -238,7 +358,7 @@ Then, the following statements are true:
 	\end{equation*}
 	which can further be rewritten as
 	\begin{equation*}
-		\pi_{H}\!\left(\;\rho(g) \overset{{\color{white}-}}{\cdot} h\;\right)
+		\pi_{H}\!\left(\;\overset{{\color{white}-}}{\rho(g)}\,[\,h\,]\,\right)
 	\;\; = \;\;
 		\pi_{G}(\,g\,)
 		\cdot
@@ -251,8 +371,34 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
-\subsection{Irreducible unitary representations of regular semidirect products}
+\vskip 1.0cm
+\section{Irreducible representations of semidirect products as induced representations}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$G \ltimes_{\rho}\! H$\, is the semidirect product of the groups \,$G$\, and \,$H$\,
+	with respect to the left action
+	\,$\rho : G \longrightarrow \Aut(H)$,\,
+	where the group \,$H$\, is Abelian.
+\end{itemize}
+Let
+\begin{equation*}
+\pi : G \ltimes_{\rho}\! H \longrightarrow \GL(V)
+\end{equation*}
+be an irreducible finite-dimensional representation.
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+%\vskip 0.5cm
+%\subsection{Irreducible unitary representations of regular semidirect products}
 
 \vskip 0.5cm
 \begin{definition}[Definition 7.1, p.150, \cite{Berndt2007}]
@@ -260,10 +406,11 @@ Then, the following statements are true:
 \vskip 0.1cm
 \noindent
 A semidirect
-\,$G \ltimes_{\rho}\! H$\, of \,$G$\, amd \,$H$\,
-is said to be \textbf{regular} if
-
+\,$G \ltimes_{\rho}\! H$\, of \,$G$\, and \,$H$\,
+is said to be \textbf{regular} if \,... ...
 \end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
 \begin{theorem}[Theorem 7.7, p.151, \cite{Berndt2007}]
