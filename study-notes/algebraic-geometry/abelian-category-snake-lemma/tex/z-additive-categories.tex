@@ -24,16 +24,16 @@ $\{\,A_{i}\,\}_{i \in I}$ a family of objects of $\mathfrak{C}$ indexed by a set
 \begin{itemize}
 \item
 	A \textbf{product} is an ordered pair
-	\,$\left(\,C\,,\,\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}\,\right)$\,
-	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
-	$\{p_{i} : C \longrightarrow A_{i}\}_{i \in I}$ of morphisms in $\mathfrak{C}$
+	\,$\left(\,P\,,\,\{\,\pi_{i} : P \overset{{\color{white}1}}{\longrightarrow} A_{i}\,\}_{i \in I}\,\right)$\,
+	consisting of an object $P \in \Obj(\mathfrak{C})$ and a family 
+	$\{\,\pi_{i} : P \longrightarrow A_{i}\,\}_{i \in I}$ of morphisms in $\mathfrak{C}$
 	such that,
 	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $f_{i} \in \Mor_{\mathfrak{C}}(X,A_{i})$,
-	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(X,C)$ such that,
+	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(X,P)$ such that,
 	for each $i \in I$, the following diagram commutes:
 	\begin{center}
 	\begin{tikzcd}
-	& {\color{red}C} \arrow[d, "p_{i}", red] \\
+	& {\color{red}P} \arrow[d, "\pi_{i}", red] \\
 	X \arrow[ru, dashed,"\exists\,!\;\theta"] \arrow[r, swap, "f_{i}"] & {\color{red}A_{i}}
 	\end{tikzcd}
 	\end{center}
@@ -41,16 +41,16 @@ $\{\,A_{i}\,\}_{i \in I}$ a family of objects of $\mathfrak{C}$ indexed by a set
 	It is unique up to isomorphism.
 \item
 	A \textbf{coproduct} is an ordered pair
-	\,$\left(\,C\,,\,\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}\,\right)$\,
-	consisting of an object $C \in \Obj(\mathfrak{C})$ and a family 
-	$\{\alpha_{i} : A_{i} \longrightarrow C\}_{i \in I}$ of morphisms in $\mathfrak{C}$
+	\,$\left(\,Q\,,\,\{\,\alpha_{i} : A_{i} \overset{{\color{white}1}}{\longrightarrow} Q\,\}_{i \in I}\,\right)$\,
+	consisting of an object $Q \in \Obj(\mathfrak{C})$ and a family 
+	$\{\,\alpha_{i} : A_{i} \longrightarrow Q\,\}_{i \in I}$ of morphisms in $\mathfrak{C}$
 	such that,
 	for every object $X \in \Obj(\mathfrak{C})$ and morphisms $g_{i} \in \Mor_{\mathfrak{C}}(A_{i},X)$,
-	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(C,X)$ such that,
+	there exists a unique morphism $\theta \in \Mor_{\mathfrak{C}}(Q,X)$ such that,
 	for each $i \in I$, the following diagram commutes:
 	\begin{center}
 	\begin{tikzcd}
-	& {\color{red}C} \arrow[ld, dashed, swap, "\exists\,!\;\theta"] \\
+	& {\color{red}Q} \arrow[ld, dashed, swap, "\exists\,!\;\theta"] \\
 	X & {\color{red}A_{i}} \arrow[l, "g_{i}"] \arrow[u, swap, "\alpha_{i}", red]
 	\end{tikzcd}
 	\end{center}
@@ -88,5 +88,133 @@ A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 	finite products and finite coproducts exist in $\mathfrak{C}$.
 \end{itemize}
 \end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Finite products are also finite coproducts and vice versa in an additive category]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be an additive category, and \,$A_{1}, A_{2} \in \Obj(\mathfrak{C})$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	Suppose the ordered triple \,$(P,\pi_{1},\pi_{2})$\, is a product of \,$A_{1}$\, and \,$A_{2}$,\,
+	where \,$P \in \Obj(\mathfrak{C})$, \,$\pi_{1} \in \Mor_{\mathfrak{C}}(P,A_{1})$, \,$\pi_{2} \in \Mor_{\mathfrak{C}}(P,A_{2})$.\,
+	Then, the following statements are true:
+	\begin{itemize}
+	\item
+		there exists a unique
+		\,$\alpha_{1} \in \Mor_{\mathfrak{C}}(A_{1},P)$\,
+		such that
+		\;$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$\, and \;$\pi_{2} \circ \alpha_{1} \,=\, 0_{A_{1},A_{2}}$,\, and
+	\item
+		there exists a unique
+		\,$\alpha_{2} \in \Mor_{\mathfrak{C}}(A_{2},P)$\,
+		such that
+		\;$\pi_{2} \circ \alpha_{2} \,=\, 1_{A_{2}}$\, and \;$\pi_{1} \circ \alpha_{2} \,=\, 0_{A_{2},A_{1}}$.\,
+	\end{itemize}
+	Furthermore, the following statements also hold:
+	\begin{itemize}
+	\item
+		$\pi_{1}$, \,$\pi_{2}$, \,$\alpha_{1}$, \,$\alpha_{2}$\, satisfy:
+		\;$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{P}$,\, and
+	\item
+		$(P,\alpha_{1},\alpha_{2})$\, is a coproduct of \,$A_{1}$\, and \,$A_{2}$.\,
+	\end{itemize}
+\item
+	Suppose the ordered triple \,$(Q,\alpha_{1},\alpha_{2})$\, is a coproduct of \,$A_{1}$\, and \,$A_{2}$,\,
+	where
+	\,$Q \in \Obj(\mathfrak{C})$,
+	\,$\alpha_{1} \in \Mor_{\mathfrak{C}}(A_{1},Q)$,
+	\,$\alpha_{2} \in \Mor_{\mathfrak{C}}(A_{2},Q)$.\,
+	Then, there {\color{red}exist unique} morphisms
+	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(Q,A_{1})$\, and \,$\pi_{2} \in \Mor_{\mathfrak{C}}(Q,A_{2})$\,
+	such that the following statements hold:
+	\begin{itemize}
+	\item
+		$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{1} \,=\, 0_{A_{1},A_{2}}$,\,
+	\item
+		$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{2} \,=\, 1_{A_{2}}$,\,
+	\item
+		$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{P}$.\,
+	\end{itemize}
+	Furthermore, \,$(Q,\pi_{1},\pi_{2})$\, is a product of \,$A_{1}$\, and \,$A_{2}$.\,
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	First, consider the following pair of diagrams:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}P} \arrow[d, "\pi_{1}", red] \\
+	A_{1} \arrow[ru, dashed,"\exists\,!\;\alpha_{1}"] \arrow[r, swap, "1_{A_{1}}"] & {\color{red}A_{1}}
+	\end{tikzcd}
+	\quad\quad\quad\quad
+	\begin{tikzcd}
+	& {\color{red}P} \arrow[d, "\pi_{2}", red] \\
+	A_{1} \arrow[ru, dashed,"\exists\,!\;\alpha_{1}"] \arrow[r, swap, "0_{A_{1},A_{2}}"] & {\color{red}A_{2}}
+	\end{tikzcd}
+	\end{center}
+	Since \,$(P,\pi_{1},\pi_{2})$\, is a product of $A_{1}$ and $A_{2}$,
+	there exist unique $\alpha_{1} \in \Mor_{\mathfrak{C}}(A_{1},P)$ such that the above two diagrams commute.
+	\vskip 0.1cm
+	\noindent
+	Next, consider the following pair of diagrams:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}P} \arrow[d, "\pi_{1}", red] \\
+	A_{2} \arrow[ru, dashed,"\exists\,!\;\alpha_{2}"] \arrow[r, swap, "0_{A_{2},A_{1}}"] & {\color{red}A_{1}}
+	\end{tikzcd}
+	\quad\quad\quad\quad
+	\begin{tikzcd}
+	& {\color{red}P} \arrow[d, "\pi_{2}", red] \\
+	A_{2} \arrow[ru, dashed,"\exists\,!\;\alpha_{2}"] \arrow[r, swap, "1_{A_{2}}"] & {\color{red}A_{2}}
+	\end{tikzcd}
+	\end{center}
+	Since \,$(P,\pi_{1},\pi_{2})$\, is a product of $A_{1}$ and $A_{2}$,
+	there exist unique $\alpha_{2} \in \Mor_{\mathfrak{C}}(A_{2},P)$ such that the above two diagrams commute.
+	\vskip 0.1cm
+	\noindent
+	Next, we prove that \,$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{P}$.\,
+	To this end, consider the following diagrams:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}P} \arrow[d, "\pi_{1}", red] \\
+	P \arrow[ru, dashed,"\exists\,!\;\theta"] \arrow[r, swap, "\pi_{1}"] & {\color{red}A_{1}}
+	\end{tikzcd}
+	\quad\quad\quad\quad
+	\begin{tikzcd}
+	& {\color{red}P} \arrow[d, "\pi_{2}", red] \\
+	P \arrow[ru, dashed,"\exists\,!\;\theta"] \arrow[r, swap, "\pi_{2}"] & {\color{red}A_{2}}
+	\end{tikzcd}
+	\end{center}
+	Clearly, the choice \,$\theta = 1_{P}$\, satisfies the commutativity of the above diagrams;
+	however, so does \,$\theta = \alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2}$:\,
+	\begin{eqnarray*}
+	\pi_{1} \,\circ \left(\,\alpha_{1} \circ \pi_{1} \,\overset{{\color{white}.}}{+}\, \alpha_{2} \circ \pi_{2}\,\right)
+	& = &
+		\pi_{1} \circ \alpha_{1} \circ \pi_{1} \,+\, \pi_{1} \circ \alpha_{2} \circ \pi_{2}
+	\;\; = \;\;
+		1_{A_{1}} \circ \pi_{1} \,+\, 0_{A_{2},A_{1}} \circ \pi_{2}
+	\;\; = \;\;
+		\pi_{1}
+	\\
+	\pi_{2} \,\circ \left(\,\alpha_{1} \circ \pi_{1} \,\overset{{\color{white}.}}{+}\, \alpha_{2} \circ \pi_{2}\,\right)
+	& = &
+		\pi_{2} \circ \alpha_{1} \circ \pi_{1} \,+\, \pi_{2} \circ \alpha_{2} \circ \pi_{2}
+	\;\; = \;\;
+		0_{A_{1}A_{2}} \circ \pi_{1} \,+\, \,1_{A_{2}} \circ \pi_{2}
+	\;\; = \;\;
+		\pi_{2}
+	\end{eqnarray*}
+	The universal property of the product now implies that
+	\,$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \,=\, 1_{P}$.\,
+
+\item
+\end{enumerate}
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
