@@ -137,10 +137,18 @@ Then, the following statements are true:
 		$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{1} \,=\, 0_{A_{1},A_{2}}$,\,
 	\item
 		$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{2} \,=\, 1_{A_{2}}$,\,
-	\item
-		$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{P}$.\,
+	%\item
+	%	$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{P}$.\,
 	\end{itemize}
-	Furthermore, \,$(Q,\pi_{1},\pi_{2})$\, is a product of \,$A_{1}$\, and \,$A_{2}$.\,
+	% Furthermore, \,$(Q,\pi_{1},\pi_{2})$\, is a product of \,$A_{1}$\, and \,$A_{2}$.\,
+	Furthermore, the following statements also hold:
+	\begin{itemize}
+	\item
+		$\pi_{1}$, \,$\pi_{2}$, \,$\alpha_{1}$, \,$\alpha_{2}$\, satisfy:
+		\;$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{Q}$,\, and
+	\item
+		$(Q,\pi_{1},\pi_{2})$\, is a product of \,$A_{1}$\, and \,$A_{2}$.\,
+	\end{itemize}
 \end{enumerate}
 \end{proposition}
 \proof
@@ -212,9 +220,196 @@ Then, the following statements are true:
 	\end{eqnarray*}
 	The universal property of the product now implies that
 	\,$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \,=\, 1_{P}$.\,
-
+	\vskip 0.1cm
+	\noindent
+	Now, we show that the triple \,$(P,\alpha_{1},\alpha_{2})$\, is a coproduct of $A_{1}$ and $A_{2}$.
+	Let $g_{1} : A_{1} \longrightarrow X$ and $g_{2} : A_{2} \longrightarrow X$ be arbitrary morphisms.
+	Then,
+	\,$\theta \, := \, g_{1} \circ \pi_{1} + g_{2} \circ \pi_{2} \, \in \, \Mor_{\mathfrak{C}}(P,X)$\,
+	satisfies
+	\begin{eqnarray*}
+	\theta \,\circ \alpha_{1}
+	& \!=\! &
+		(\,g_{1} \circ \pi_{1} + g_{2} \circ \pi_{2}\,) \circ \alpha_{1}
+	\;\; = \;\;
+		g_{1} \circ \pi_{1} \circ \alpha_{1} + g_{2} \circ \pi_{2} \circ \alpha_{1}
+	\;\; = \;\;
+		g_{1} \circ 1_{A_{1}} + g_{2} \circ 0_{A_{1},A_{2}}
+	\;\; = \;\;
+		g_{1}\,,
+	\quad\textnormal{and}
+	\\
+	\theta \,\circ \alpha_{2}
+	& \!=\! &
+		(\,g_{1} \circ \pi_{1} + g_{2} \circ \pi_{2}\,) \circ \alpha_{2}
+	\;\; = \;\;
+		g_{1} \circ \pi_{1} \circ \alpha_{2} + g_{2} \circ \pi_{2} \circ \alpha_{2}
+	\;\; = \;\;
+		g_{1} \circ 0_{A_{2},A_{1}} + g_{2} \circ 1_{A_{2}}
+	\;\; = \;\;
+		g_{2}.
+	\end{eqnarray*}
+	It remains to establish the uniqueness of \,$\theta$.\,
+	To this end, let \,$\theta^{\prime} \,\in\, \Mor_{\mathfrak{C}}(P,X)$\, be such that
+	\begin{equation*}
+	\theta^{\prime} \,\circ \alpha_{1} \,=\, g_{1}
+	\quad\quad\textnormal{and}\quad\quad
+	\theta^{\prime} \,\circ \alpha_{2} \,=\, g_{2}
+	\end{equation*}
+	Then,
+	\begin{eqnarray*}
+	\theta^{\prime}
+	& = &
+		\theta^{\prime} \,\circ 1_{P}
+	\;\; = \;\;
+		\theta^{\prime} \,\circ (\,\alpha_{1} \circ \pi_{1} + \alpha_{2} \circ \pi_{2}\,)
+	\;\; = \;\;
+		\theta^{\prime} \circ \alpha_{1} \circ \pi_{1} + \theta^{\prime} \circ \alpha_{2} \circ \pi_{2}
+	\\
+	& = &
+		g_{1} \circ \pi_{1} + g_{2} \circ \pi_{2}
+	\\
+	& =: &
+		\theta
+	\end{eqnarray*}
+	Thus,
+	\,$\theta \, := \, g_{1} \circ \pi_{1} + g_{2} \circ \pi_{2}$\,
+	is indeed the unique morphism from $P$ to $X$ such that
+	\begin{equation*}
+	\theta \,\circ \alpha_{1} \; = \; g_{1}
+	\quad\quad\textnormal{and}\quad\quad
+	\theta \,\circ \alpha_{2} \; = \; g_{2}
+	\end{equation*}
+	This shows that the triple \,$(P,\alpha_{1},\alpha_{2})$\, indeed is a coproduct of $A_{1}$ and $A_{2}$.
 \item
+	First, consider the following pair of diagrams:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}Q} \arrow[ld, dashed, swap, "\exists\,!\;\pi_{1}"] \\
+	A_{1} & {\color{red}A_{1}} \arrow[l, "\;\;1_{A_{1}}"] \arrow[u, swap, "\alpha_{1}", red]
+	\end{tikzcd}
+	\quad\quad\quad\quad
+	\begin{tikzcd}
+	& {\color{red}Q} \arrow[ld, dashed, swap, "\exists\,!\;\pi_{1}"] \\
+	A_{1} & {\color{red}A_{2}} \arrow[l, "\;\;\;\;0_{A_{2},A_{1}}"] \arrow[u, swap, "\alpha_{2}", red]
+	\end{tikzcd}
+	\end{center}
+	Since \,$(Q,\alpha_{1},\alpha_{2})$\, is a coproduct of $A_{1}$ and $A_{2}$,
+	there exist unique $\pi_{1} \in \Mor_{\mathfrak{C}}(Q,A_{1})$ such that the above two diagrams commute.
+	\vskip 0.1cm
+	\noindent
+	Next, consider the following pair of diagrams:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}Q} \arrow[ld, dashed, swap, "\exists\,!\;\pi_{2}"] \\
+	A_{2} & {\color{red}A_{1}} \arrow[l, "\;\;\;\;0_{A_{1},A_{2}}"] \arrow[u, swap, "\alpha_{1}", red]
+	\end{tikzcd}
+	\quad\quad\quad\quad
+	\begin{tikzcd}
+	& {\color{red}Q} \arrow[ld, dashed, swap, "\exists\,!\;\pi_{2}"] \\
+	A_{2} & {\color{red}A_{2}} \arrow[l, "\;\;1_{A_{2}}"] \arrow[u, swap, "\alpha_{2}", red]
+	\end{tikzcd}
+	\end{center}
+	Since \,$(Q,\alpha_{1},\alpha_{2})$\, is a coproduct of $A_{1}$ and $A_{2}$,
+	there exist unique $\pi_{2} \in \Mor_{\mathfrak{C}}(Q,A_{2})$ such that the above two diagrams commute.
+	\vskip 0.1cm
+	\noindent
+	Next, we prove that \,$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{Q}$.\,
+	To this end, consider the following diagrams:
+	\begin{center}
+	\begin{tikzcd}
+	& {\color{red}Q} \arrow[ld, dashed, swap, "\exists\,!\;\theta"] \\
+	Q & {\color{red}A_{1}} \arrow[l, "\;\;\alpha_{1}"] \arrow[u, swap, "\alpha_{1}", red]
+	\end{tikzcd}
+	\quad\quad\quad\quad
+	\begin{tikzcd}
+	& {\color{red}Q} \arrow[ld, dashed, swap, "\exists\,!\;\theta"] \\
+	Q & {\color{red}A_{2}} \arrow[l, "\;\;\alpha_{2}"] \arrow[u, swap, "\alpha_{2}", red]
+	\end{tikzcd}
+	\end{center}
+	Clearly, the choice \,$\theta = 1_{Q}$\, satisfies the commutativity of the above diagrams;
+	however, so does \,$\theta = \alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2}$:\,
+	\begin{eqnarray*}
+	\left(\,\alpha_{1} \circ \pi_{1} \,\overset{{\color{white}.}}{+}\, \alpha_{2} \circ \pi_{2}\,\right) \circ\, \alpha_{1}
+	& = &
+		\alpha_{1} \circ \pi_{1} \circ \alpha_{1} \,+\, \alpha_{2} \circ \pi_{2} \circ \alpha_{1}
+	\;\; = \;\;
+		\alpha_{1} \circ 1_{A_{1}} \,+\, \alpha_{2} \circ 0_{A_{1},A_{2}}
+	\;\; = \;\;
+		\alpha_{1}
+	\\
+	\left(\,\alpha_{1} \circ \pi_{1} \,\overset{{\color{white}.}}{+}\, \alpha_{2} \circ \pi_{2}\,\right) \circ\, \alpha_{2}
+	& = &
+		\alpha_{1} \circ \pi_{1} \circ \alpha_{2} \,+\, \alpha_{2} \circ \pi_{2} \circ \alpha_{2}
+	\;\; = \;\;
+		\alpha_{1} \circ 0_{A_{2}A_{1}} \,+\, \,\alpha_{2} \circ 1_{A_{2}}
+	\;\; = \;\;
+		\alpha_{2}
+	\end{eqnarray*}
+	The universal property of the coproduct now implies that
+	\,$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \,=\, 1_{Q}$.\,
+	\vskip 0.1cm
+	\noindent
+	Now, we show that the triple \,$(Q,\pi_{1},\pi_{2})$\, is a product of $A_{1}$ and $A_{2}$.
+	Let $f_{1} : X \longrightarrow A_{1}$ and $f_{2} : X \longrightarrow A_{2}$ be arbitrary morphisms.
+	Then,
+	\,$\theta \, := \, \alpha_{1} \circ f_{1} + \alpha_{2} \circ f_{2} \;\in\; \Mor_{\mathfrak{C}}(X,Q)$\,
+	satisfies
+	\begin{eqnarray*}
+	\pi_{1} \circ \theta
+	& \!=\! &
+		\pi_{1} \circ (\,\alpha_{1} \circ f_{1} + \alpha_{2} \circ f_{2}\,)
+	\;\; = \;\;
+		\pi_{1} \circ \alpha_{1} \circ f_{1} + \pi_{1} \circ \alpha_{2} \circ f_{2}
+	\;\; = \;\;
+		1_{A_{1}} \circ f_{1} + 0_{A_{2},A_{1}} \circ f_{2} 
+	\;\; = \;\;
+		f_{1}\,,
+	\quad\textnormal{and}
+	\\
+	\pi_{2} \circ \theta
+	& \!=\! &
+		\pi_{2} \circ (\,\alpha_{1} \circ f_{1} + \alpha_{2} \circ f_{2}\,)
+	\;\; = \;\;
+		\pi_{2} \circ \alpha_{1} \circ f_{1} + \pi_{2} \circ \alpha_{2} \circ f_{2}
+	\;\; = \;\;
+		0_{A_{1},A_{2}} \circ f_{1}  + 1_{A_{2}} \circ f_{2}
+	\;\; = \;\;
+		f_{2}
+	\end{eqnarray*}
+	It remains to establish the uniqueness of \,$\theta$.\,
+	To this end, let \,$\theta^{\prime} \,\in\, \Mor_{\mathfrak{C}}(Q,X)$\, be such that
+	\begin{equation*}
+	\pi_{1} \circ \theta^{\prime} \,=\, f_{1}
+	\quad\quad\textnormal{and}\quad\quad
+	\pi_{1} \circ \theta^{\prime} \,=\, f_{2}
+	\end{equation*}
+	Then,
+	\begin{eqnarray*}
+	\theta^{\prime}
+	& = &
+		1_{Q} \,\circ \theta^{\prime} 
+	\;\; = \;\;
+		(\,\alpha_{1} \circ \pi_{1} + \alpha_{2} \circ \pi_{2}\,) \circ \theta^{\prime}
+	\;\; = \;\;
+		\alpha_{1} \circ \pi_{1} \circ \theta^{\prime} + \alpha_{2} \circ \pi_{2} \circ \theta^{\prime}
+	\\
+	& = &
+		\alpha_{1} \circ f_{1} + \alpha_{2} \circ f_{2}
+	\\
+	& =: &
+		\theta
+	\end{eqnarray*}
+	Thus,
+	\,$\theta \, := \, \alpha_{1} \circ f_{1} + \alpha_{2} \circ f_{2} \;\in\; \Mor_{\mathfrak{C}}(X,Q)$\,
+	is indeed the unique morphism from $X$ to $Q$ such that
+	\begin{equation*}
+	\pi_{1} \circ \theta \,=\, f_{1}
+	\quad\quad\textnormal{and}\quad\quad
+	\pi_{1} \circ \theta \,=\, f_{2}
+	\end{equation*}
+	This shows that the triple \,$(Q,\pi_{1},\pi_{2})$\, indeed is a product of $A_{1}$ and $A_{2}$.
+	\qed
 \end{enumerate}
-\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
