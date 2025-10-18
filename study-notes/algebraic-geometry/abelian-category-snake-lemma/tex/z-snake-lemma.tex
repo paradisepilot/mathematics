@@ -19,18 +19,62 @@
 \mbox{}
 \vskip 0.1cm
 \noindent
-Let \,$\mathfrak{A}$\, be abelian category.
+Let \,$\mathfrak{C}$\, be category.
 \begin{itemize}
 \item
-	$\mathfrak{A}$\, is said to \textbf{have enough projectives},
+	An object
+	\,$P \in \Obj(\mathfrak{C})$\,
+	is said to be \textbf{projective} if,
+	given any epimorphism
+	\,$\varepsilon \in \Mor_{\mathfrak{C}}(A,B)$\,
+	and any morphism
+	\,$f \in \Mor_{\mathfrak{C}}(P,B)$,\,
+	there exists a (not necessarily unique) morphism
+	\,$\widetilde{f} \in \Mor_{\mathfrak{C}}(P,A)$\,
+	such that
+	\,$f \, = \, \varepsilon \, \circ \, \widetilde{f}$,\,
+	i.e., the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	& A \arrow[d, two heads, "\varepsilon"] \\
+	P \arrow[ru, dashed,"\exists\;\widetilde{f}"] \arrow[r, swap, "f"] & B
+	\end{tikzcd}
+	\end{center}
+	(Note: Intuitively, \,$\widetilde{f}$\, here could be regarded as a ``{\color{red}codomain extension}'' of \,$f$.
+	So, roughly speaking, \,$P \in \Obj(\mathfrak{C})$\, is projective if every morphism in \,$\mathfrak{C}$\,
+	with domain \,$P$\, can be codomain-extended.)
+\item
+	An object
+	\,$I \in \Obj(\mathfrak{C})$\,
+	is said to be \textbf{injective} if,
+	given any monomorphism
+	\,$\iota \in \Mor_{\mathfrak{C}}(A,B)$\,
+	and any morphism
+	\,$f \in \Mor_{\mathfrak{C}}(A,I)$,\,
+	there exists a (not necessarily unique) morphism
+	\,$\widetilde{f} \in \Mor_{\mathfrak{C}}(B,I)$\,
+	such that
+	\,$f \, = \, \widetilde{f} \circ \iota$,\,
+	i.e., the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	& B \arrow[ld, dashed, swap,"\exists\;\widetilde{f}"] \\
+	I & A  \arrow[l, "\;\;f"] \arrow[u, hook, swap, "\iota"]
+	\end{tikzcd}
+	\end{center}
+	(Note: Intuitively, \,$\widetilde{f}$\, here could be regarded as a ``{\color{red}domain extension}'' of \,$f$.
+	So, roughly speaking, \,$I \in \Obj(\mathfrak{C})$\, is injective if every morphism in \,$\mathfrak{C}$\,
+	with codomain \,$I$\, can be domain-extended.)
+\item
+	The category \,$\mathfrak{C}$\, is said to \textbf{have enough projectives},
 	if for every object \,$B \in \Obj(\mathfrak{A})$,\,
-	there is a projective object \,$P \in \Obj(\mathfrak{A})$,\,
-	together with an epimorphism \,$\varepsilon \in \Mor_{\mathfrak{A}}(P,B)$.
+	there is a projective object \,$P \in \Obj(\mathfrak{C})$,\,
+	together with an epimorphism \,$\varepsilon \in \Mor_{\mathfrak{C}}(P,B)$.
 \item	
-	Dually, \,$\mathfrak{A}$\, is said to \textbf{have enough injectives},
-	if for every object \,$A \in \Obj(\mathfrak{A})$,\,
-	there is an injective object \,$I \in \Obj(\mathfrak{A})$\,
-	together with a monomorphism \,$\mu \in \Mor_{\mathfrak{A}}(A,I)$.
+	Dually, the category \,$\mathfrak{C}$\, is said to \textbf{have enough injectives},
+	if for every object \,$A \in \Obj(\mathfrak{C})$,\,
+	there is an injective object \,$I \in \Obj(\mathfrak{C})$\,
+	together with a monomorphism \,$\mu \in \Mor_{\mathfrak{C}}(A,I)$.
 \end{itemize}
 \end{definition}
 
