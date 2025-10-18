@@ -71,7 +71,7 @@ A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 \item
 	the category $\mathfrak{C}$ has a zero object,
 \item
-	$\Mor_{\mathfrak{C}}(A,B)$ is an abelian group, for each \,$A, B \in \Obj(\mathfrak{C})$,
+	$\Mor_{\mathfrak{C}}(A,B)$ is an abelian group, for each \,$A, B \in \Obj(\mathfrak{C})$,\, and
 \item
 	the distributive law holds for the morphism composition map, i.e.
 	\begin{equation*}
@@ -83,9 +83,9 @@ A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 	$f, g \in \Mor_{\mathfrak{C}}(A,B)$,
 	$h \in \Mor_{\mathfrak{C}}(B,Y)$,
 	$k \in \Mor_{\mathfrak{C}}(X,A)$,
-	$A, B, X, Y \in \Obj(\mathfrak{C})$, and
-\item
-	finite products and finite coproducts exist in $\mathfrak{C}$.
+	$A, B, X, Y \in \Obj(\mathfrak{C})$
+%\item
+%	finite products and finite coproducts exist in $\mathfrak{C}$.
 \end{itemize}
 \end{definition}
 
@@ -93,8 +93,9 @@ A category \,$\mathfrak{C}$\, is said to be \textbf{additive} if
 
 \vskip 0.5cm
 \begin{proposition}[Finite products are also finite coproducts and vice versa in an additive category]
+\label{InAdditiveCategoryProductsCoproductsAreSame}
 \mbox{}
-\vskip 0.15cm
+\vskip 0.10cm
 \noindent
 Let \,$\mathfrak{C}$\, be an additive category, and \,$A_{1}, A_{2} \in \Obj(\mathfrak{C})$.\,
 Then, the following statements are true:
@@ -151,7 +152,21 @@ Then, the following statements are true:
 	\end{itemize}
 \end{enumerate}
 \end{proposition}
-\proof
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.25cm
+\begin{corollary}
+\mbox{}
+\vskip 0.10cm
+\noindent
+In every additive category, finite products exist if and only if finite coproducts exist.
+\end{corollary}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.25cm
+\proofof Proposition \ref{InAdditiveCategoryProductsCoproductsAreSame}
 \begin{enumerate}
 \item
 	First, consider the following pair of diagrams:
