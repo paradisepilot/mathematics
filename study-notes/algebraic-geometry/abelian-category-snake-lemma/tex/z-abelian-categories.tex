@@ -35,21 +35,171 @@ if it furthermore satisfies each of the following conditions:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+% \vskip 0.5cm
+% \begin{lemma}[Lemma 5.4, p.203, \cite{Grillet2007}]
+% \label{KernelCokernelDuality}
+% \mbox{}
+% \vskip 0.1cm
+% \noindent
+
+% \end{lemma}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+% [Proposition 1.2.9, p.24, \cite{Lal2021Algebra3}; Theorem 2.12, p.37, \cite{freyd1964abelian}]
 \vskip 0.5cm
-\begin{proposition}[Proposition 1.2.9, p.24, \cite{Lal2021Algebra3}; Theorem 2.12, p.37, \cite{freyd1964abelian}]
+\begin{proposition}[Proposition 5.5, p.203, \cite{Grillet2007}]
 \label{AbelianImpliesIsomorphismIFFMonoEpi}
 \mbox{}
 \vskip 0.1cm
 \noindent
-In an abelian category, a morphism is an isomorphism if and only if
+In each abelian category, a morphism is an isomorphism if and only if
 it is both a monomorphism and an epimorphism.
 \end{proposition}
 \proof
+\vskip 0.1cm
+\noindent
+\underline{($\Longrightarrow$)}
+\vskip 0.2cm
+\noindent
+Suppose \,$f \in \Mor_{\mathfrak{A}}(A,B)$\, is an isomorphism; thus, there exists some
+\,$f^{-1} \in \Mor_{\mathfrak{A}}(B,A)$\,
+such that
+\,$f \circ f^{-1} = 1_{B}$\, and \,$f^{-1} \circ f = 1_{A}$.\,
+First, we prove that \,$f$\, is a monomorphism.
+So, we suppose
+\,$g, h \in \Mor_{\mathfrak{C}}(C,A)$\,
+are such that
+\,$f \circ g = f \circ h \in \Mor_{\mathfrak{A}}(C,B)$,\,
+and we need to prove that \,$g = h \in \Mor_{\mathfrak{A}}(C,A)$.\,
+To this end, simply observe:
+\begin{equation*}
+g
+\; = \;
+	1_{A} \circ g
+\; = \;
+	(f^{-1} \circ f) \circ g
+\; = \;
+	f^{-1} \circ (f \circ g)
+\; = \;
+	f^{-1} \circ (f \circ h)
+\; = \;
+	(f^{-1} \circ f) \circ h
+\; = \;
+	1_{A} \circ h
+\; = \;
+	h
+\end{equation*}
+This proves that \,$f$\, is indeed a monomorphism.
+Next, we establish that \,$f$\, is an epimorphism.
+So, we suppose
+\,$g, h \in \Mor_{\mathfrak{A}}(B,C)$\,
+are such that
+\,$g \circ f = h \circ f \in \Mor_{\mathfrak{A}}(A,C)$,\,
+and we need to prove
+\,$g = h$.\,
+To this end, simply observe:
+\begin{equation*}
+g
+\; = \;
+	g \circ 1_{B}
+\; = \;
+	g \circ (f \circ f^{-1})
+\; = \;
+	(g \circ f) \circ f^{-1}
+\; = \;
+	(h \circ f) \circ f^{-1}
+\; = \;
+	h \circ (f \circ f^{-1})
+\; = \;
+	h \circ 1_{B}
+\; = \;
+	h
+\end{equation*}
+This completes the proof that \,$f$\, is indeed both a monomorphism and an epimorphism.
 
+\vskip 0.3cm
+\noindent
+\underline{($\Longleftarrow$)}
+\vskip 0.2cm
+\noindent
+Conversely, suppose \,$f \in \Mor_{\mathfrak{A}}(A,B)$\, is both a monomorphism and an epimorphism.
+Since \,$\mathfrak{A}$\, is an abelian category, the morphism \,$f$\, admits a cokernel
+\,$\pi \in \Mor_{\mathfrak{A}}(B,Q)$.\,
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\quad $\pi \,=\, 0_{B,Q}$
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;\;
+$\pi$\, being a cokernel of \,$f$\, implies
+\,$\pi \circ f = 0_{A,Q} = 0_{B,Q} \circ f$.\,
+Since \,$f$\, is an epimorphism (i.e., ``right-cancellable''), it follows that
+\,$\pi = 0_{B,Q}$.\,
+This proves Claim 1.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\quad
+There exists \,$\theta \,\in\, \Mor_{\mathfrak{A}}(B,A)$\, such that \,$f \circ \theta \,=\, 1_{B}$
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;\;
+Since \,$\mathfrak{A}$\, is an abelian category,
+the monomorphism \,$f$\, is a kernel of some morphism.
+Hence, by Lemma \ref{AKernelsTheKernelOfItsOwnCokernel} (see also Lemma 5.4, p.203, \cite{Grillet2007}),
+the monomorphism \,$f$\, is a kernel of its own cokernel \,$\pi$.\,
+Now, by Claim 1, we have:
+\,$\pi \,\circ\, 1_{B} \,=\, 0_{B,Q} \,\circ\, 1_{B} \,=\, 0_{B,Q}$,\,
+which in turn implies
+-- by the universal property of $f$ as kernel of $\pi$ --
+that there exists a unique 
+\,$\theta \in \Mor_{\mathfrak{A}}(B,A)$\,
+such that
+\,$1_{B} \,=\, f \circ \theta$.\,
+See the following diagram for the universality of \,$f$\, as a kernel of \,$\pi$:
+% Then αβα = α = α 1A and βα = 1A.
+\begin{center}
+\begin{tikzcd}
+{\color{blue}B}
+	\arrow[dd, thick, dashed, swap, "\exists !\,\theta{\color{white}.}", blue]
+	\arrow[dr, thick, swap, "1_{B}\!\!", blue]
+	\arrow[drrr, bend left = 15, "0", blue] & & &
+\\
+& {\color{red}B}
+	\arrow[rr, swap, "\pi\,=\,0_{B,Q}{\color{white}...}"] & & Q
+\\
+{\color{red}A}
+	\arrow[ur, swap, "f", red]
+	\arrow[urrr, bend right = 15, swap, "0", gray]
+\end{tikzcd}
+\end{center}
+This proves Claim 2.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\quad
+$\theta \circ f \,=\, 1_{A}$
+\vskip 0.1cm
+\noindent
+Proof of Claim 3:\;\;
+Note that
+\,$f \,\circ\, (\theta \,\circ\, f) \,=\, (f \,\circ\, \theta) \,\circ\, f \,=\, 1_{B} \,\circ\, f \,=\, f \,=\, f \,\circ\, 1_A$,\,
+which implies
+\,$\theta \circ f \,=\, 1_{A}$,\,
+since
+\,$f$\, is a monomorphism (i.e., ``left-cancellable'').
+This proves Claim 3.
+
+\vskip 0.3cm
+\noindent
+The Proposition now follows from Claim 2 and Claim 3.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \begin{proposition}\label{MonomorphicFirstFactorInExactSequenceIsKernelOfSecondFactor}
 \mbox{}
 \vskip 0.1cm
