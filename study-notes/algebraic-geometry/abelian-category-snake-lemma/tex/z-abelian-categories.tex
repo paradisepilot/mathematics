@@ -222,33 +222,33 @@ Then, \,$f$\, is a kernel of \,$g$.
 The exactness of
 \,$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
 means that the unique morphism \,$\theta$\, in the following diagram is an isomorphism:
-	\begin{center}
-	\begin{tikzcd}
-	&& && Q_{f}
-		\arrow[dd, dashed, "\psi"]
-	\\ \\
-	A
-		\arrow[rr, "f"]
-		\arrow[dd, dashed, two heads, swap, "\varepsilon_{f}"]
-		\arrow[rrrr, bend left = 30, "0", gray]
-	&&
-	B
-		\arrow[rr, "g"]
-		\arrow[uurr, two heads, "\pi_{f}"]
-	&&
-	C
-	\\ \\
-	I_{f}
-		\arrow[uurr, hook, "\kappa(\pi_{f})"]
-		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
-	&&
-	K_{g}
-		\arrow[uu, hook, swap, "\kappa_{g}"]
-		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
-	&&
-	%Q_{\theta}
-	\end{tikzcd}
-	\end{center}
+\begin{center}
+\begin{tikzcd}
+&& && Q_{f}
+	\arrow[dd, dashed, "\psi"]
+\\ \\
+A
+	\arrow[rr, "f"]
+	\arrow[dd, dashed, two heads, swap, "\varepsilon_{f}"]
+	\arrow[rrrr, bend left = 30, "0", gray]
+&&
+B
+	\arrow[rr, "g"]
+	\arrow[uurr, two heads, "\pi_{f}"]
+&&
+C
+\\ \\
+I_{f}
+	\arrow[uurr, hook, "\kappa(\pi_{f})"]
+	\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+&&
+K_{g}
+	\arrow[uu, hook, swap, "\kappa_{g}"]
+	%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+&&
+%Q_{\theta}
+\end{tikzcd}
+\end{center}
 Since \,$\mathfrak{A}$\, is an abelian category, it in particular has cokernels and is normal.
 By Proposition \ref{FactorizationIntoImageCoimage}, we see that
 \,$\kappa(\pi_{f})$\, is an image of \,$f$.\,
@@ -271,5 +271,116 @@ Since \,$\kappa_{g}$\, is a kernel of \,$g$,\,
 we may now conclude that \,$f$\, is also a kernel of \,$g$.\, 
 This completes the proof of the Proposition.
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Fiber products \& fiber coproducts, p.46, \cite{kashiwara2005categories}]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{C}$\, be a category.
+\begin{enumerate}
+\item
+	Let
+	\,$f_{1} \in \Mor_{\mathfrak{C}}(X_{1},S)$\,
+	and
+	\,$f_{2} \in \Mor_{\mathfrak{C}}(X_{2},S)$,\,
+	where
+	\,$S,\, X_{1},\, X_{2} \in \Obj(\mathfrak{C})$.
+	The \textbf{fiber product} of \,$f_{1},\, f_{2}$\,
+		is a triple
+	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{S}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$,\,
+	where
+	\,$X_{1}\sqcap_{S}\!X_{2} \in \Obj(\mathfrak{C})$,\,
+	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(X_{1}\sqcap_{S}\!X_{2},\,X_{1})$,\,
+	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(X_{1}\sqcap_{S}\!X_{2},\,X_{2})$,\,
+	such that, for any
+	\,$h_{1} \in \Mor_{\mathfrak{C}}(Y,X_{1})$\,
+	and
+	\,$h_{2} \in \Mor_{\mathfrak{C}}(Y,X_{2})$\,
+	satisfying
+	\,$f_{1} \circ h_{1} \,=\, f_{2} \circ h_{2}$,\,
+	there exists a unique
+	\,$\theta \in \Mor_{\mathfrak{C}}(Y\,,\,X_{1}\sqcap_{S}\!X_{2})$\,
+	such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	&&&& {\color{blue}X_{1}}
+		\arrow[ddrr, "f_{1}", blue]
+	\\ \\
+	Y
+		\arrow[rr, dashed, "\;\;\;\exists\,!\,\theta"]
+		\arrow[uurrrr, bend left =  20, "h_{1}"]
+		\arrow[ddrrrr, bend left = -20, "h_{2}", swap]
+	&&
+	{\color{red}X_{1} \sqcap_{S}\! X_{2}}
+		\arrow[uurr, "{\color{red}\pi_{1}}", red]
+		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
+	&&&&
+	{\color{blue}S}
+	\\ \\
+	&&&& {\color{blue}X_{2}}
+		\arrow[uurr, "f_{2}", swap, blue]
+	\end{tikzcd}
+	\end{center}
+\item
+	Dually, let
+	\,$f_{1} \in \Mor_{\mathfrak{C}}(S,X_{1})$\,
+	and
+	\,$f_{2} \in \Mor_{\mathfrak{C}}(S,X_{2})$,\,
+	where
+	\,$S,\, X_{1},\, X_{2} \in \Obj(\mathfrak{C})$.
+	The \textbf{fiber coproduct} of \,$f_{1},\, f_{2}$\,
+		is a triple
+	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{S}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$,\,
+	where
+	\,$X_{1}\sqcap_{S}\!X_{2} \in \Obj(\mathfrak{C})$,\,
+	\,$\iota_{1} \in \Mor_{\mathfrak{C}}(X_{1}\,,X_{1}\sqcup_{S}\!X_{2})$,\,
+	\,$\iota_{2} \in \Mor_{\mathfrak{C}}(X_{2}\,,X_{1}\sqcup_{S}\!X_{2})$,\,
+	such that, for any
+	\,$h_{1} \in \Mor_{\mathfrak{C}}(X_{1},Y)$\,
+	and
+	\,$h_{2} \in \Mor_{\mathfrak{C}}(X_{2},Y)$\,
+	satisfying
+	\,$h_{1} \circ f_{1} \,=\, h_{2} \circ f_{2}$,\,
+	there exists a unique
+	\,$\theta \in \Mor_{\mathfrak{C}}(X_{1}\sqcup_{S}\!X_{2}\,,\,Y)$\,
+	such that the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	&&&& {\color{blue}X_{1}}
+		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
+		\arrow[ddllll, bend left = -20, "h_{1}", swap]
+	\\ \\
+	Y
+	&&
+	{\color{red}X_{1} \sqcup_{S}\! X_{2}}
+		\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
+	&&&&
+	{\color{blue}S}
+		\arrow[ddll, "f_{1}", blue]
+		\arrow[uull, "f_{2}", blue, swap]
+	\\ \\
+	&&&& {\color{blue}X_{2}}
+		\arrow[uull, "{\color{red}\iota_{2}}", red]
+		\arrow[uullll, bend left = 20, "h_{2}"]
+	\end{tikzcd}
+	\end{center}
+\end{enumerate}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[p.176, \cite{kashiwara2005categories}]
+\label{FiberProductFiberCoproductExistInAbelianCategories}
+\mbox{}
+\vskip 0.1cm
+\noindent
+In each abelian category,
+fiber products and fiber coproducts always exist.
+\end{proposition}
+\proof
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
