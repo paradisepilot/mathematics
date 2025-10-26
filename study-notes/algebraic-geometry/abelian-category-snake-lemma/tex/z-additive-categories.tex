@@ -130,18 +130,35 @@ Then, the following statements are true:
 	\,$Q \in \Obj(\mathfrak{C})$,
 	\,$\alpha_{1} \in \Mor_{\mathfrak{C}}(A_{1},Q)$,
 	\,$\alpha_{2} \in \Mor_{\mathfrak{C}}(A_{2},Q)$.\,
-	Then, there {\color{red}exist unique} morphisms
-	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(Q,A_{1})$\, and \,$\pi_{2} \in \Mor_{\mathfrak{C}}(Q,A_{2})$\,
-	such that the following statements hold:
+	Then, the following statements are true:
 	\begin{itemize}
 	\item
-		$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{1} \,=\, 0_{A_{1},A_{2}}$,\,
+		there exists a unique
+		\,$\pi_{1} \in \Mor_{\mathfrak{C}}(Q,A_{1})$\,
+		such that
+		\;$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$\,
+		and
+		\;$\pi_{1} \circ \alpha_{2} \,=\, 0_{A_{2},A_{1}}$,\, and
 	\item
-		$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{2} \,=\, 1_{A_{2}}$,\,
-	%\item
-	%	$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{P}$.\,
+		there exists a unique
+		\,$\pi_{2} \in \Mor_{\mathfrak{C}}(Q,A_{2})$\,
+		such that
+		\;$\pi_{2} \circ \alpha_{2} \,=\, 1_{A_{2}}$\,
+		and
+		\;$\pi_{2} \circ \alpha_{1} \,=\, 0_{A_{1},A_{2}}$.\,
 	\end{itemize}
-	% Furthermore, \,$(Q,\pi_{1},\pi_{2})$\, is a product of \,$A_{1}$\, and \,$A_{2}$.\,
+	% Then, there {\color{red}exist unique} morphisms
+	% \,$\pi_{1} \in \Mor_{\mathfrak{C}}(Q,A_{1})$\, and \,$\pi_{2} \in \Mor_{\mathfrak{C}}(Q,A_{2})$\,
+	% such that the following statements hold:
+	% \begin{itemize}
+	% \item
+	% 	$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{1} \,=\, 0_{A_{1},A_{2}}$,\,
+	% \item
+	% 	$\pi_{1} \circ \alpha_{1} \,=\, 1_{A_{1}}$,\; and \,\;$\pi_{2} \circ \alpha_{2} \,=\, 1_{A_{2}}$,\,
+	% %\item
+	% %	$\alpha_{1} \circ \pi_{1} \,+\, \alpha_{2} \circ \pi_{2} \; = \; 1_{P}$.\,
+	% \end{itemize}
+	% % Furthermore, \,$(Q,\pi_{1},\pi_{2})$\, is a product of \,$A_{1}$\, and \,$A_{2}$.\,
 	Furthermore, the following statements also hold:
 	\begin{itemize}
 	\item
@@ -155,7 +172,7 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.25cm
+\vskip 0.5cm
 \begin{corollary}
 \mbox{}
 \vskip 0.10cm
@@ -165,7 +182,7 @@ In every additive category, finite products exist if and only if finite coproduc
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.25cm
+\vskip 0.5cm
 \proofof Proposition \ref{InAdditiveCategoryProductsCoproductsAreSame}
 \begin{enumerate}
 \item
