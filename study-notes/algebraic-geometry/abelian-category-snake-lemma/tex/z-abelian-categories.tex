@@ -283,90 +283,100 @@ Let \,$\mathfrak{C}$\, be a category.
 \begin{enumerate}
 \item
 	Let
-	\,$f_{1} \in \Mor_{\mathfrak{C}}(X_{1},S)$\,
+	\,$f_{1} \in \Mor_{\mathfrak{C}}(X_{1},Y)$\,
 	and
-	\,$f_{2} \in \Mor_{\mathfrak{C}}(X_{2},S)$,\,
+	\,$f_{2} \in \Mor_{\mathfrak{C}}(X_{2},Y)$,\,
 	where
 	\,$S,\, X_{1},\, X_{2} \in \Obj(\mathfrak{C})$.
-	The \textbf{fiber product} of \,$f_{1},\, f_{2}$\,
-		is a triple
+	The \textbf{fiber product} of \,$f_{1},\, f_{2}$\, is a triple
 	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{S}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$,\,
 	where
-	\,$X_{1}\sqcap_{S}\!X_{2} \in \Obj(\mathfrak{C})$,\,
-	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(X_{1}\sqcap_{S}\!X_{2},\,X_{1})$,\,
-	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(X_{1}\sqcap_{S}\!X_{2},\,X_{2})$,\,
-	such that, for any
-	\,$h_{1} \in \Mor_{\mathfrak{C}}(Y,X_{1})$\,
-	and
-	\,$h_{2} \in \Mor_{\mathfrak{C}}(Y,X_{2})$\,
-	satisfying
-	\,$f_{1} \circ h_{1} \,=\, f_{2} \circ h_{2}$,\,
-	there exists a unique
-	\,$\theta \in \Mor_{\mathfrak{C}}(Y\,,\,X_{1}\sqcap_{S}\!X_{2})$\,
-	such that the following diagram commutes:
-	\begin{center}
-	\begin{tikzcd}
-	&&&& {\color{blue}X_{1}}
-		\arrow[ddrr, "f_{1}", blue]
-	\\ \\
-	Y
-		\arrow[rr, dashed, "\;\;\;\exists\,!\,\theta"]
-		\arrow[uurrrr, bend left =  20, "h_{1}"]
-		\arrow[ddrrrr, bend left = -20, "h_{2}", swap]
-	&&
-	{\color{red}X_{1} \sqcap_{S}\! X_{2}}
-		\arrow[uurr, "{\color{red}\pi_{1}}", red]
-		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
-	&&&&
-	{\color{blue}S}
-	\\ \\
-	&&&& {\color{blue}X_{2}}
-		\arrow[uurr, "f_{2}", swap, blue]
-	\end{tikzcd}
-	\end{center}
+	\,$X_{1}\sqcap_{Y}\!X_{2} \in \Obj(\mathfrak{C})$,\,
+	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{S}\!X_{2}\,,\,X_{1}\,)$,\,
+	\,$\pi_{2} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{S}\!X_{2}\,,\,X_{2}\,)$,\,
+	such that
+	\begin{itemize}
+	\item
+		$f_{1} \circ \pi_{1} \,=\, f_{2} \circ \pi_{2}$,\, and
+	\item
+		for any
+		\,$h_{1} \in \Mor_{\mathfrak{C}}(A,X_{1})$\,
+		and
+		\,$h_{2} \in \Mor_{\mathfrak{C}}(A,X_{2})$\,
+		satisfying
+		\,$f_{1} \circ h_{1} \,=\, f_{2} \circ h_{2}$,\,
+		there exists a unique
+		\,$\theta \in \Mor_{\mathfrak{C}}(\,A\,,\,X_{1}\sqcap_{Y}\!X_{2}\,)$\,
+		such that the following diagram commutes:
+		\begin{center}
+		\begin{tikzcd}
+		&&&& {\color{blue}X_{1}}
+			\arrow[ddrr, "f_{1}", blue]
+		\\ \\
+		A
+			\arrow[rr, dashed, "\;\;\;\exists\,!\,\theta"]
+			\arrow[uurrrr, bend left =  20, "h_{1}"]
+			\arrow[ddrrrr, bend left = -20, "h_{2}", swap]
+		&&
+		{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
+			\arrow[uurr, "{\color{red}\pi_{1}}", red]
+			\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
+		&&&&
+		{\color{blue}Y}
+		\\ \\
+		&&&& {\color{blue}X_{2}}
+			\arrow[uurr, "f_{2}", swap, blue]
+		\end{tikzcd}
+		\end{center}
+	\end{itemize}
 \item
 	Dually, let
-	\,$f_{1} \in \Mor_{\mathfrak{C}}(S,X_{1})$\,
+	\,$f_{1} \in \Mor_{\mathfrak{C}}(Y,X_{1})$\,
 	and
-	\,$f_{2} \in \Mor_{\mathfrak{C}}(S,X_{2})$,\,
+	\,$f_{2} \in \Mor_{\mathfrak{C}}(Y,X_{2})$,\,
 	where
 	\,$S,\, X_{1},\, X_{2} \in \Obj(\mathfrak{C})$.
-	The \textbf{fiber coproduct} of \,$f_{1},\, f_{2}$\,
-		is a triple
-	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{S}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$,\,
+	The \textbf{fiber coproduct} of \,$f_{1},\, f_{2}$\, is a triple
+	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$,\,
 	where
-	\,$X_{1}\sqcap_{S}\!X_{2} \in \Obj(\mathfrak{C})$,\,
-	\,$\iota_{1} \in \Mor_{\mathfrak{C}}(X_{1}\,,X_{1}\sqcup_{S}\!X_{2})$,\,
-	\,$\iota_{2} \in \Mor_{\mathfrak{C}}(X_{2}\,,X_{1}\sqcup_{S}\!X_{2})$,\,
-	such that, for any
-	\,$h_{1} \in \Mor_{\mathfrak{C}}(X_{1},Y)$\,
-	and
-	\,$h_{2} \in \Mor_{\mathfrak{C}}(X_{2},Y)$\,
-	satisfying
-	\,$h_{1} \circ f_{1} \,=\, h_{2} \circ f_{2}$,\,
-	there exists a unique
-	\,$\theta \in \Mor_{\mathfrak{C}}(X_{1}\sqcup_{S}\!X_{2}\,,\,Y)$\,
-	such that the following diagram commutes:
-	\begin{center}
-	\begin{tikzcd}
-	&&&& {\color{blue}X_{1}}
-		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
-		\arrow[ddllll, bend left = -20, "h_{1}", swap]
-	\\ \\
-	Y
-	&&
-	{\color{red}X_{1} \sqcup_{S}\! X_{2}}
-		\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
-	&&&&
-	{\color{blue}S}
-		\arrow[ddll, "f_{1}", blue]
-		\arrow[uull, "f_{2}", blue, swap]
-	\\ \\
-	&&&& {\color{blue}X_{2}}
-		\arrow[uull, "{\color{red}\iota_{2}}", red]
-		\arrow[uullll, bend left = 20, "h_{2}"]
-	\end{tikzcd}
-	\end{center}
+	\,$X_{1}\sqcup_{Y}\!X_{2} \in \Obj(\mathfrak{C})$,\,
+	\,$\iota_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\,,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
+	\,$\iota_{2} \in \Mor_{\mathfrak{C}}(\,X_{2}\,,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
+	such that,
+	\begin{itemize}
+	\item
+		$\iota_{1} \circ f_{1} \,=\, \iota_{2} \circ f_{2}$,\, and
+	\item
+		for any
+		\,$h_{1} \in \Mor_{\mathfrak{C}}(X_{1},A)$\,
+		and
+		\,$h_{2} \in \Mor_{\mathfrak{C}}(X_{2},A)$\,
+		satisfying
+		\,$h_{1} \circ f_{1} \,=\, h_{2} \circ f_{2}$,\,
+		there exists a unique
+		\,$\theta \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcup_{S}\!X_{2}\,,\,A\,)$\,
+		such that the following diagram commutes:
+		\begin{center}
+		\begin{tikzcd}
+		&&&& {\color{blue}X_{1}}
+			\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
+			\arrow[ddllll, bend left = -20, "h_{1}", swap]
+		\\ \\
+		A
+		&&
+		{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
+			\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
+		&&&&
+		{\color{blue}Y}
+			\arrow[uull, "f_{1}", blue, swap]
+			\arrow[ddll, "f_{2}", blue]
+		\\ \\
+		&&&& {\color{blue}X_{2}}
+			\arrow[uull, "{\color{red}\iota_{2}}", red]
+			\arrow[uullll, bend left = 20, "h_{2}"]
+		\end{tikzcd}
+		\end{center}
+	\end{itemize}
 \end{enumerate}
 \end{definition}
 
@@ -382,5 +392,430 @@ In each abelian category,
 fiber products and fiber coproducts always exist.
 \end{proposition}
 \proof
+\begin{enumerate}
+\item
+	We first prove the existence of fiber products in an arbitrary abelian category.
+	Suppose \,$\mathfrak{A}$\, is an abelian category,
+	\,$f_{1} \in \Mor_{\mathfrak{A}}(X_{1},Y)$\,
+	and
+	\,$f_{2} \in \Mor_{\mathfrak{A}}(X_{1},Y)$.\,
+	Since \,$\mathfrak{A}$\, is an abelian category, the finite {\color{red}biproduct}
+	\begin{equation*}
+	\left(\,
+		X_{1} \overset{{\color{white}.}}{\oplus} X_{2}
+		\,,\,
+		p_{1}
+		\,,\,
+		p_{2}
+		\,,\,
+		\iota_{1}
+		\,,\,
+		\iota_{2}
+		\,\right)
+	\end{equation*}
+	of \,$X_{1},\, X_{2}$\, exists, where
+	\,$p_{1} : X_{1} \oplus X_{2} \longrightarrow X_{1}$,\,
+	\,$p_{2} : X_{1} \oplus X_{2} \longrightarrow X_{2}$,\,
+	\,$\iota_{1} : X_{1} \longrightarrow X_{1} \oplus X_{2}$,\,
+	\,$\iota_{2} : X_{2} \longrightarrow X_{1} \oplus X_{2}$\,
+	satisfy:
+	\begin{equation*}
+	p_{1} \circ \iota_{1} = 1_{X_{1}}\,,
+	\quad
+	p_{2} \circ \iota_{2} = 1_{X_{2}}\,,
+	\quad
+	p_{1} \circ \iota_{2} = 0_{X_{2},X_{1}}\,,
+	\quad
+	p_{2} \circ \iota_{1} = 0_{X_{1},X_{2}}
+	\end{equation*}
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	Let \,$\kappa \,\in\, \Mor_{\mathfrak{A}}(K, X_{1}\oplus X_{2})$\,
+	be any {\color{red}kernel of
+	\,$\varphi\,:=\,f_{1}\,\circ\,p_{1}\,-\,f_{2}\,\circ\,p_{2}\,\in\,\Mor_{\mathfrak{A}}(X_{1} \oplus X_{2},Y)$}.\,
+	Define
+	\,$\pi_{1} := p_{1} \circ \kappa \in \Mor_{\mathfrak{A}}(K,X_{1})$\,
+	and
+	\,$\pi_{2} := p_{2} \circ \kappa \in \Mor_{\mathfrak{A}}(K,X_{2})$.\,
+	Then,
+	\,$\left(\,K\,,\,\pi_{1}\,,\,\pi_{2}\,\right)$\,
+	is a fiber product of
+	\,$f_{1}$\,
+	and
+	\,$f_{2}$.\,
+	\vskip 0.2cm
+	\noindent
+	Proof of Claim 1:\;\;
+	First, observe that:
+	\begin{eqnarray*}
+	f_{1} \circ \pi_{1} - f_{2} \circ \pi_{2}
+	& = &
+		f_{1} \circ (\,p_{1} \circ \kappa\,) - f_{2} \circ (\,p_{2} \circ \kappa\,)
+	\;\; = \;\;
+		(\,f_{1} \circ p_{1}\,) \circ \kappa - (\,f_{2} \circ p_{2}\,) \circ \kappa
+	\\
+	& = &
+		(\,f_{1} \circ p_{1} - f_{2} \circ p_{2}\,) \circ \kappa
+	\;\; = \;\;
+		\varphi \circ \kappa
+	\\
+	& = &
+		0
+	\end{eqnarray*}
+	Next, let
+	\,$h_{1} \in \Mor_{\mathfrak{A}}(A,X_{1})$\,
+	and
+	\,$h_{2} \in \Mor_{\mathfrak{A}}(A,X_{2})$\,
+	be such that
+	\,$f_{1} \circ h_{1} \,=\, f_{2} \circ h_{2}$.\,
+	Define
+	\,$\psi\,:=\,\iota_{1}\circ h_{1}\,+\,\iota_{2}\circ h_{2}\,\in\,\Mor_{\mathfrak{A}}(A,X_{1}\oplus X_{2})$.\,
+	Observe:
+	\begin{eqnarray*}
+	\varphi \circ \psi
+	& = &
+		\left(\,f_{1} \circ\, p_{1} \,\overset{{\color{white}.}}{-}\, f_{2} \circ\, p_{2}\,\right)
+		\,\circ\,
+		\left(\,\iota_{1} \circ h_{1} \,\overset{{\color{white}.}}{+}\, \iota_{2} \circ h_{2}\,\right)
+	\\
+	& = &
+		f_{1} \,\circ\, p_{1} \,\circ\, \iota_{1} \,\circ\, h_{1}
+		\; + \;
+		f_{1} \,\circ\, p_{1} \,\circ\, \iota_{2} \,\circ\, h_{2}
+		\; - \;
+		f_{2} \,\circ\, p_{2} \,\circ\, \iota_{1} \,\circ\, h_{1}
+		\; - \;
+		f_{2} \,\circ\, p_{2} \,\circ\, \iota_{2} \,\circ\, h_{2}
+	\\
+	& \overset{{\color{white}1}}{=} &
+		f_{1} \,\circ\, 1_{X_{1}} \,\circ\, h_{1}
+		\; + \;
+		f_{1} \circ\, 0_{X_{2},X_{1}} \,\circ\, h_{2}
+		\; - \;
+		f_{2} \circ\, 0_{X_{1},X_{2}} \,\circ\, h_{1}
+		\; - \;
+		f_{2} \,\circ\, 1_{X_{2}} \,\circ\, h_{2}
+	\\
+	& \overset{{\color{white}1}}{=} &
+		f_{1} \,\circ\, h_{1}
+		\; - \;
+		f_{2} \,\circ\, h_{2}
+	\;\; = \;\;
+		0
+	\end{eqnarray*}
+	Thus, by the universal property of
+	\,$\kappa \,\in\, \Mor_{\mathfrak{A}}(K,X_{1} \oplus X_{2})$\,
+	as kernel of
+	\,$\varphi\,:=\,f_{1}\,\circ\,p_{1}\,-\,f_{2}\,\circ\,p_{2}\,\in\,\Mor_{\mathfrak{A}}(X_{1} \oplus X_{2},Y)$,\,
+	there exists a unique
+	\,$\theta \in \Mor_{\mathfrak{A}}(A,K)$\,
+	such that
+	\,$\psi = \kappa \circ \theta$.\,
+	Furthermore, \,$\theta$\, satisfies the following two equalities:
+	%\vskip 0.1cm
+	\begin{eqnarray*}
+	\pi_{1} \circ \theta
+	& = &
+		(\,p_{1} \circ \kappa\,) \circ \theta
+	\;\; = \;\;
+		p_{1} \circ (\,\kappa \circ \theta\,)
+	\;\; = \;\;
+		p_{1} \circ \psi
+	\;\; = \;\;
+		p_{1} \circ (\,\iota_{1}\circ h_{1}\,+\,\iota_{2}\circ h_{2}\,)
+	\\
+	& = &
+		(\,p_{1} \circ \iota_{1}\,) \circ h_{1}
+		\,+\
+		(\,p_{1} \circ \iota_{2}\,) \circ h_{2}
+	\;\; = \;\;
+		1_{X_{1}} \circ h_{1}
+		\,+\
+		0_{X_{2},X_{1}} \circ h_{2}
+	\\
+	& = &
+		h_{1}
+	\\ \\
+	\pi_{2} \circ \theta
+	& = &
+		(\,p_{2} \circ \kappa\,) \circ \theta
+	\;\; = \;\;
+		p_{2} \circ (\,\kappa \circ \theta\,)
+	\;\; = \;\;
+		p_{2} \circ \psi
+	\;\; = \;\;
+		p_{2} \circ (\,\iota_{1}\circ h_{1}\,+\,\iota_{2}\circ h_{2}\,)
+	\\
+	& = &
+		(\,p_{2} \circ \iota_{1}\,) \circ h_{1}
+		\,+\
+		(\,p_{2} \circ \iota_{2}\,) \circ h_{2}
+	\;\; = \;\;
+		0_{X_{1},X_{2}} \circ h_{1}
+		\,+\,
+		1_{X_{2}} \circ h_{2}
+	\\
+	& = &
+		h_{2}
+	\end{eqnarray*}
+	% It remains to establish the uniqueness of \,$\theta$.\,
+	% To this end, suppose
+	% \,$\theta^{\prime} \in \Mor_{\mathfrak{A}}(A,K)$\,
+	% is any morphism that satisfies
+	% \begin{equation*}
+	% \psi \,=\, \kappa \circ \theta^{\prime}\,,
+	% \quad
+	% \pi_{1} \circ \theta^{\prime} \,=\, h_{1}\,,
+	% \quad
+	% \pi_{2} \circ \theta^{\prime} \,=\, h_{2}\,,
+	% \end{equation*}
+	The above arguments are summarized in the following commutative diagram:
+	\begin{center}
+	\begin{tikzcd}
+	&&&& {\color{blue}X_{1}}
+		\arrow[ddrr, "f_{1}", blue]
+		\arrow[ddl, bend left = 10, "\iota_{1}", hook, gray]
+	\\ \\
+	A
+		\arrow[rr, dashed, "\;\;\;\exists\,!\,\theta"]
+		\arrow[uurrrr, bend left =  20, "h_{1}"]
+		\arrow[ddrrrr, bend left = -20, "h_{2}", swap]
+		%\arrow[rrr, bend left = -20, "\psi\,:=\,\iota_{1}\circ h_{1} + \iota_{2}\circ h_{2}", swap]
+		\arrow[rrr, bend left = -20, "\psi", swap]
+	&&
+	%{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
+	{\color{red}K}
+		\arrow[r, "\kappa", hook, gray]
+		\arrow[uurr, "{\color{red}\pi_{1}}", bend left =  10, red]
+		\arrow[ddrr, "{\color{red}\pi_{2}}", bend left = -10, red, swap]
+	&
+	{\color{gray}X_{1} \oplus X_{2}}
+		\arrow[rrr, "\varphi\,:=\,f_{1} \circ\, p_{1} \,-\, f_{2} \circ\, p_{2}", gray]
+		\arrow[uur, "p_{1}", bend left =  10, gray]
+		\arrow[ddr, "p_{2}", bend left = -10, gray, swap]
+	&&&
+	{\color{blue}Y}
+	\\ \\
+	&&&& {\color{blue}X_{2}}
+		\arrow[uurr, "f_{2}", swap, blue]
+		\arrow[uul, bend left = -10, "\iota_{2}", hook, gray, swap]
+	\end{tikzcd}
+	\end{center}
+	This completes the proof of Claim 1,
+	as well as that of the existence of fiber products in an arbitrary abelian category.
+\item
+	We now prove the existence of fiber coproducts in an arbitrary abelian category.
+	Suppose \,$\mathfrak{A}$\, is an abelian category,
+	\,$f_{1} \in \Mor_{\mathfrak{A}}(Y,X_{1})$\,
+	and
+	\,$f_{2} \in \Mor_{\mathfrak{A}}(Y,X_{1})$.\,
+	Since \,$\mathfrak{A}$\, is an abelian category, the finite {\color{red}biproduct}
+	\begin{equation*}
+	\left(\,
+		X_{1} \overset{{\color{white}.}}{\oplus} X_{2}
+		\,,\,
+		p_{1}
+		\,,\,
+		p_{2}
+		\,,\,
+		\iota_{1}
+		\,,\,
+		\iota_{2}
+		\,\right)
+	\end{equation*}
+	of \,$X_{1},\, X_{2}$\, exists, where
+	\,$p_{1} : X_{1} \oplus X_{2} \longrightarrow X_{1}$,\,
+	\,$p_{2} : X_{1} \oplus X_{2} \longrightarrow X_{2}$,\,
+	\,$\iota_{1} : X_{1} \longrightarrow X_{1} \oplus X_{2}$,\,
+	\,$\iota_{2} : X_{2} \longrightarrow X_{1} \oplus X_{2}$\,
+	satisfy:
+	\begin{equation*}
+	p_{1} \circ \iota_{1} = 1_{X_{1}}\,,
+	\quad
+	p_{2} \circ \iota_{2} = 1_{X_{2}}\,,
+	\quad
+	p_{1} \circ \iota_{2} = 0_{X_{2},X_{1}}\,,
+	\quad
+	p_{2} \circ \iota_{1} = 0_{X_{1},X_{2}}
+	\end{equation*}
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\quad
+	Let \,$\pi \,\in\, \Mor_{\mathfrak{A}}(\,X_{1}\oplus X_{2}\,,\,Q\,)$\,
+	be any {\color{red}cokernel of
+	\,$\varphi\,:=\,\iota_{1}\,\circ\,f_{1}\,-\,\iota_{2}\,\circ\,f_{2}\,\in\,\Mor_{\mathfrak{A}}(\,Y\,,\,X_{1} \oplus X_{2}\,)$}.\,
+	Define
+	\,$\alpha_{1} := \pi \circ \iota_{1} \in \Mor_{\mathfrak{A}}(X_{1},Q)$\,
+	and
+	\,$\alpha_{2} := \pi \circ \iota_{2} \in \Mor_{\mathfrak{A}}(X_{2},Q)$.\,
+	Then,
+	\,$\left(\,Q\,,\,\alpha_{1}\,,\,\alpha_{2}\,\right)$\,
+	is a fiber coproduct of
+	\,$f_{1}$\,
+	and
+	\,$f_{2}$.\,
+	\vskip 0.2cm
+	\noindent
+	Proof of Claim 2:\;\;
+	First, observe that:
+	\begin{eqnarray*}
+	\alpha_{1} \circ f_{1} - \alpha_{2} \circ f_{2}
+	& = &
+		(\,\pi \circ \iota_{1}\,) \circ f_{1} - (\,\pi \circ \iota_{2}\,) \circ f_{2}
+	\;\; = \;\;
+		\pi \circ (\,\iota_{1} \circ f_{1}\,) - \pi \circ (\,\iota_{2} \circ f_{2}\,)
+	\\
+	& = &
+		\pi \circ (\,\iota_{1} \circ f_{1} - \iota_{2} \circ f_{2}\,) 
+	\;\; = \;\;
+		\pi \circ \varphi
+	\\
+	& = &
+		0
+	\end{eqnarray*}
+	Next, let
+	\,$h_{1} \in \Mor_{\mathfrak{A}}(X_{1},A)$\,
+	and
+	\,$h_{2} \in \Mor_{\mathfrak{A}}(X_{2},A)$\,
+	be such that
+	\,$h_{1}\,\circ\,f_{1} \,=\, h_{2}\,\circ\,f_{2}$.\,
+	Define
+	\,$\psi\,:=\,h_{1}\,\circ\,p_{1}\,+\,h_{2}\,\circ \,p_{2}\,\in\,\Mor_{\mathfrak{A}}(\,X_{1}\oplus X_{2}\,,A\,)$.\,
+	Observe:
+	\begin{eqnarray*}
+	\psi \circ \varphi
+	& = &
+		\left(\,h_{1} \circ\, p_{1} \,\overset{{\color{white}.}}{+}\, h_{2} \circ\, p_{2}\,\right)
+		\,\circ\,
+		\left(\,\iota_{1} \circ f_{1} \,\overset{{\color{white}.}}{-}\, \iota_{2} \circ f_{2}\,\right)
+	\\
+	& = &
+		h_{1} \,\circ\, p_{1} \,\circ\, \iota_{1} \,\circ\, f_{1}
+		\; + \;
+		h_{1} \,\circ\, p_{1} \,\circ\, \iota_{2} \,\circ\, f_{2}
+		\; - \;
+		h_{2} \,\circ\, p_{2} \,\circ\, \iota_{1} \,\circ\, f_{1}
+		\; - \;
+		h_{2} \,\circ\, p_{2} \,\circ\, \iota_{2} \,\circ\, f_{2}
+	\\
+	& \overset{{\color{white}1}}{=} &
+		h_{1} \,\circ\, 1_{X_{1}} \,\circ\, f_{1}
+		\; + \;
+		h_{1} \circ\, 0_{X_{2},X_{1}} \,\circ\, f_{2}
+		\; - \;
+		h_{2} \circ\, 0_{X_{1},X_{2}} \,\circ\, f_{1}
+		\; - \;
+		h_{2} \,\circ\, 1_{X_{2}} \,\circ\, f_{2}
+	\\
+	& \overset{{\color{white}1}}{=} &
+		h_{1} \,\circ\, f_{1}
+		\; - \;
+		h_{2} \,\circ\, f_{2}
+	\;\; = \;\;
+		0
+	\end{eqnarray*}
+	Thus, by the universal property of
+	\,$\pi \,\in\, \Mor_{\mathfrak{A}}(\,X_{1} \oplus X_{2}\,,\,Q\,)$\,
+	as cokernel of
+	\,$\varphi\,:=\,\iota_{1}\,\circ\,f_{1}\,-\,\iota_{2}\,\circ\,f_{2}\,\in\,\Mor_{\mathfrak{A}}(\,Y\,,\,X_{1} \oplus X_{2}\,)$,\,
+	there exists a unique
+	\,$\theta \in \Mor_{\mathfrak{A}}(Q,A)$\,
+	such that
+	\,$\psi = \theta \circ \pi$.\,
+	Furthermore, \,$\theta$\, satisfies the following two equalities:
+	%\vskip 0.1cm
+	\begin{eqnarray*}
+	\theta \circ \alpha_{1}
+	& = &
+		\theta \circ (\,\pi \circ \iota_{1}\,)
+	\;\; = \;\;
+		(\,\theta \circ \pi\,) \circ \iota_{1}
+	\;\; = \;\;
+		\psi \circ \iota_{1} 
+	\;\; = \;\;
+		(\,h_{1} \circ p_{1} \,+\, h_{2} \circ p_{2} \,) \circ \iota_{1}
+	\\
+	& = &
+		h_{1} \circ (\,p_{1} \circ \iota_{1}\,)
+		\,+\
+		h_{2} \circ (\,p_{2} \circ \iota_{1}\,)
+	\;\; = \;\;
+		h_{1} \circ 1_{X_{1}}
+		\,+\
+		h_{2} \circ 0_{X_{1},X_{2}}
+	\\
+	& = &
+		h_{1}
+	\\ \\
+	\theta \circ \alpha_{2}
+	& = &
+		\theta \circ (\,\pi \circ \iota_{2}\,)
+	\;\; = \;\;
+		(\,\theta \circ \pi\,) \circ \iota_{2}
+	\;\; = \;\;
+		\psi \circ \iota_{2}
+	\;\; = \;\;
+		(\,h_{1} \circ p_{1} \,+\, h_{2} \circ p_{2} \,) \circ \iota_{2}
+	\\
+	& = &
+		h_{1} \circ (\,p_{1} \circ \iota_{2}\,)
+		\,+\
+		h_{2} \circ (\,p_{2} \circ \iota_{2}\,)
+	\;\; = \;\;
+		h_{1} \circ 0_{X_{2},X_{1}}
+		\,+\
+		h_{2} \circ 1_{X_{2}}
+	\\
+	& = &
+		h_{2}
+	\end{eqnarray*}
+	% It remains to establish the uniqueness of \,$\theta$.\,
+	% To this end, suppose
+	% \,$\theta^{\prime} \in \Mor_{\mathfrak{A}}(A,K)$\,
+	% is any morphism that satisfies
+	% \begin{equation*}
+	% \psi \,=\, \kappa \circ \theta^{\prime}\,,
+	% \quad
+	% \pi_{1} \circ \theta^{\prime} \,=\, h_{1}\,,
+	% \quad
+	% \pi_{2} \circ \theta^{\prime} \,=\, h_{2}\,,
+	% \end{equation*}
+	The above arguments are summarized in the following commutative diagram:
+	\begin{center}
+	\begin{tikzcd}
+	&&&& {\color{blue}X_{1}}
+		\arrow[ddl, bend left = 10, "\iota_{1}", hook, gray]
+		\arrow[ddllll, bend left = -20, "h_{1}", swap]
+		\arrow[ddll, "{\color{red}\alpha_{1}}", bend left = -10, red, swap]
+	\\ \\
+	A
+	&&
+	%{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
+	{\color{red}Q}
+		%\arrow[r, "\kappa", hook, gray]
+		\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
+	&
+	{\color{gray}X_{1} \oplus X_{2}}
+		\arrow[l, "\quad\pi", gray, swap]
+		\arrow[uur, "p_{1}", bend left =  10, gray]
+		\arrow[ddr, "p_{2}", bend left = -10, gray, swap]
+		\arrow[lll, bend left = 20, "\psi"]
+	&&&
+	{\color{blue}Y}
+		\arrow[uull, "f_{1}", blue, swap]
+		\arrow[ddll, "f_{2}", blue]
+		\arrow[lll, "\varphi\,:=\, \iota_{1} \circ\, f_{1} \,-\, \iota_{2} \circ\, f_{2}", gray, swap]
+	\\ \\
+	&&&& {\color{blue}X_{2}}
+		\arrow[uull, "{\color{red}\alpha_{2}}", bend left = 10, red]
+		\arrow[uullll, bend left = 20, "h_{2}"]
+		\arrow[uul, bend left = -10, "\iota_{2}", hook, gray, swap]
+	\end{tikzcd}
+	\end{center}
+	This completes the proof of Claim 2,
+	as well as that of the existence of fiber coproducts in an arbitrary abelian category.
+	\qed
+\end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
