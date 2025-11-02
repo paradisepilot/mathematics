@@ -743,8 +743,48 @@ fiber products and fiber coproducts always exist.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{lemma}\label{AlternativeCharacterizationOfEpimorphismsInAbelianCategories}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category, and
+\,$f \in \Mor_{\mathfrak{A}}(\,A,B\,)$,\, where
+\,$A, B \in \Obj(\mathfrak{A})$.\,
+Suppose \,$f$\, satisfies the following property:
+\begin{equation*}
+g \circ f = 0
+\;\;\Longrightarrow\;\;
+g = 0,
+\quad
+\textnormal{for each \,$g \in \Mor_{\mathfrak{A}}(B,C)$\, and for each\,$C \in \Obj(\mathfrak{A})$}.
+\end{equation*}
+Then, \,$f$\, is an epimorphism.
+\end{lemma}
+\proof
+Let \,$C \in \Obj(\mathfrak{A})$\, be an arbibrary object in \,$\mathfrak{A}$\,
+and \,$g_{1},\, g_{2} \in \Mor_{\mathfrak{A}}(B,C)$\, arbitrary morphisms satisfying
+\,$g_{1} \circ f = g_{2} \circ f$.\, We need show \,$g_{1} = g_{2}$.\,
+To this end, simply observe:
+\begin{eqnarray*}
+g_{1} \circ f \;=\; g_{2} \circ f
+& \Longrightarrow &
+	(\,g_{1} - g_{2}\,) \circ f \;=\; 0
+\\
+& \Longrightarrow &
+	g_{1} - g_{2} \;=\; 0,
+	\quad
+	\textnormal{by hypothesis on \,$f$}
+\\
+& \Longrightarrow &
+	g_{1} \;=\; g_{2}\,,
+\end{eqnarray*}
+as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 0.5cm
-\begin{proposition}[Fiber products preserve epimorphisms in abelian categories; Propn. I.20.2, p.34, \cite{Mitchell1965}]
+\begin{proposition}[Fiber products preserve epimorphisms in {\color{red}abelian} categories; Lemma 2.4.3, p.45, \cite{Yekutieli2020}]
 \mbox{}
 \vskip -0.3cm
 \noindent
@@ -822,7 +862,15 @@ Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
 \proof
 \begin{enumerate}
 \item
-	Consider
+	We prove only the first implication, i.e.,
+	that \,$f_{2}$\, is an epimorphism implies that \,$\pi_{1}$\, is an epimorphism.
+	The other implication follows by symmetry:
+	\,$(\,f_{2},\pi_{1}\,) \,\longleftrightarrow\, (\,f_{1},\pi_{2}\,)$.\,
+
+	\vskip 0.3cm
+	\noindent
+	So, we now assume that \,$f_{2}$\, is an epimorphism.
+	Consider the defining diagram of \,$X_{1} \sqcap_{Y}\! X_{2}$\,:
 	\begin{center}
 	\begin{tikzcd}
 	&&&& {\color{blue}X_{1}}
@@ -854,8 +902,168 @@ Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
 		\arrow[uul, bend left = -10, "\iota_{2}", hook, gray, swap]
 	\end{tikzcd}
 	\end{center}
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	For any morphism
+	\,$\psi \in \Mor_{\mathfrak{A}}(Y,Z)$,\,
+	we have:
+	\begin{equation*}
+	\psi \circ (\,f_{1} \circ p_{1} - f_{2} \circ p_{2}\,) \,=\, 0
+	\quad\Longrightarrow\quad
+	\psi \,=\, 0
+	\end{equation*}
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 1:\;\;
+	\begin{eqnarray*}
+	\psi \circ (\,f_{1} \circ p_{1} - f_{2} \circ p_{2}\,) \,=\, 0
+	& \Longrightarrow &
+		\psi \circ (\,f_{1} \circ p_{1} - f_{2} \circ p_{2}\,)\; {\color{red}\circ\;\iota_{2}} \,=\, 0
+	\\
+	& \Longrightarrow &
+		(\,\psi \circ f_{1}\,) \circ (\,p_{1} \circ \iota_{2}\,)
+		-
+		(\,\psi \circ f_{2}\,) \circ (\,p_{2} \circ \iota_{2}\,)
+		\,=\, 0
+	\\
+	& \Longrightarrow &
+		(\,\psi \circ f_{1}\,) \circ (\,0_{X_{2},X_{1}}\,)
+		-
+		(\,\psi \circ f_{2}\,) \circ (\,1_{X_{2}}\,)
+		\,=\, 0
+	\\
+	& \Longrightarrow &
+		\psi \circ f_{2} \,=\, 0
+	\end{eqnarray*}
+	The epimorphicity (``cancellable on the right'') hypothesis on \,$f_{2}$\,
+	now implies that \,$\psi = 0$.\,
+	This completes the proof of Claim 1.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\quad
+	\,$\varphi \,:=\, f_{1} \circ p_{1} - f_{2} \circ p_{2}$\,
+	is a cokernel of \,$\kappa$.\,
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 2:\;\;
+	By construction/definition, \,$\kappa$\, is a kernel of 
+	\,$\varphi \,:=\, f_{1} \circ p_{1} - f_{2} \circ p_{2}$.\,
+	Next, note that Claim 1 and Lemma \ref{AlternativeCharacterizationOfEpimorphismsInAbelianCategories}
+	together imply the epimorphicity of
+	\,$\varphi \,:=\, f_{1} \circ p_{1} - f_{2} \circ p_{2}$.\,
+	Hence, \,$\varphi$\, is a cokernel, by definition of abelian categories.
+	Lastly, by Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}(ii),
+	\,$\varphi \,:=\, f_{1} \circ p_{1} - f_{2} \circ p_{2}$\,
+	is a cokernel of its kernel \,$\kappa$.\,
+	This completes the proof of Claim 2.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 3:}\quad
+	For any morphism
+	\,$\sigma \in \Mor_{\mathfrak{A}}(X_{1},Z)$,\,
+	we have:
+	\begin{equation*}
+	\sigma \,\circ\, \pi_{1} \,=\, 0
+	\quad\Longrightarrow\quad
+	\sigma \,=\, 0
+	\end{equation*}
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 3:\;\;
+	Suppose \,$\sigma \,\circ\, \pi_{1} \,=\, 0$.\,
+	Since \,$\pi_{1} = p_{1} \circ \kappa$,\,
+	it follow that
+	\,$(\,\sigma \,\circ\, p_{1}\,) \,\circ\, \kappa
+	\,=\, \sigma \,\circ\, (\,p_{1} \,\circ\, \kappa\,)
+	\,=\, \sigma \,\circ\, \pi_{1}
+	\,=\, 0$.\,
+	Thus, by the universal property of
+	\,$\varphi := f_{1} \circ p_{1} - f_{2} \circ p_{2}$\,
+	as a cokernel of \,$\kappa$ (see Claim 2),\,
+	there exists a unique
+	\,$\sigma^{\prime} \in \Mor_{\mathfrak{A}}(\,Y,Z\,)$\,
+	such that
+	\,$\sigma \circ p_{1} = \sigma^{\prime} \circ \varphi$\,;\,
+	see the following diagram:
+	\begin{center}
+	\begin{tikzcd}
+	& & & {\color{red}Y}
+		\arrow[dd, thick, dashed, "\;\exists !\,\sigma^{\prime}", blue]
+	\\
+	X_{1} \sqcap_{Y}\! X_{2} 
+		\arrow[rr, "{\color{white}.}\kappa"]
+		\arrow[rrru, bend left = 15, "0", gray]
+		\arrow[rrrd, bend right = 15, swap, "0", blue]
+		& &
+		{\color{red}X_{1} \oplus X_{2}}
+		\arrow[rd, blue, thick, "\sigma\,\circ\,p_{1}", swap]
+		\arrow[ur, "\varphi", red]
+		&
+	\\
+	& & & {\color{blue}Z}
+	\end{tikzcd}
+	\end{center}
+	Now, recall \,$p_{1} \circ \iota_{2} = 0$,\, hence:
+	\begin{eqnarray*}
+	0
+	& = &
+		\sigma \circ (\,p_{1} \circ \iota_{2}\,)
+	\;\; = \;\;
+		(\,\sigma \circ p_{1}\,) \circ \iota_{2}
+	\;\; = \;\;
+		(\,\sigma^{\prime} \circ \varphi\,) \circ \iota_{2}
+	\;\; = \;\;
+		\sigma^{\prime} \circ (\,f_{1} \circ p_{1} - f_{2} \circ p_{2}\,) \circ \iota_{2}
+	\\
+	& = &
+		\sigma^{\prime} \circ (\,f_{1} \circ p_{1} \circ \iota_{2} - f_{2} \circ p_{2} \circ \iota_{2}\,) 
+	\;\; = \;\;
+		 \sigma^{\prime} \circ f_{1} \circ 0_{X_{2},X_{1}}
+		 \, - \,
+		 \sigma^{\prime} \circ f_{2} \circ 1_{X_{2}}
+	\\
+	& = &
+		-\, \sigma^{\prime} \circ f_{2}\,,
+	\end{eqnarray*}
+	which is equivalent to
+	\,$\sigma^{\prime} \circ f_{2} \,=\, 0$.\,
+	Epimorphicity of \,$f_{2}$\, now implies \,$\sigma^{\prime} = 0$.\,
+	Now, observe:
+	\begin{eqnarray*}
+	\sigma
+	& = &
+		\sigma \circ 1_{X_{1}}
+	\;\; = \;\;
+		\sigma \circ (\,p_{1} \circ \iota_{1}\,)
+	\;\; = \;\;
+		(\,\sigma \circ p_{1}\,) \circ \iota_{1}
+	\;\; = \;\;
+		(\,\sigma^{\prime} \circ \varphi\,) \circ \iota_{1}
+	\;\; = \;\;
+		\sigma^{\prime} \circ (\,\varphi \circ \iota_{1}\,)
+	\\
+	& = &
+		0 \circ (\,\varphi \circ \iota_{1}\,)\,,
+		\quad
+		\textnormal{since we have established that \,$\sigma^{\prime} = 0$}
+	\\
+	& = &
+		0
+	\end{eqnarray*}
+	This completes the proof of Claim 3.
+
+	\vskip 0.3cm
+	\noindent
+	Lastly, note that Claim 3 and Lemma \ref{AlternativeCharacterizationOfEpimorphismsInAbelianCategories}
+	together immediately imply the epimorphicity of \,$\pi_{1}$,\, as required.
+
 \item
-\qed
+	This follows by dualizing the arguments given above for (i).
+	\qed
 \end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
