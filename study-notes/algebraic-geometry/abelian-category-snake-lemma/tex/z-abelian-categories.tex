@@ -300,512 +300,427 @@ This completes the proof of the Proposition.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
-\begin{definition}[Fiber products \& fiber coproducts, p.46, \cite{kashiwara2005categories}]
-\mbox{}
-\vskip 0.15cm
-\noindent
-Let \,$\mathfrak{C}$\, be a category.
-\begin{enumerate}
-\item
-	Let
-	\,$f_{1} \in \Mor_{\mathfrak{C}}(X_{1},Y)$\,
-	and
-	\,$f_{2} \in \Mor_{\mathfrak{C}}(X_{2},Y)$,\,
-	where
-	\,$X_{1},\, X_{2},\, Y \in \Obj(\mathfrak{C})$.
-	The \textbf{fiber product} of \,$f_{1},\, f_{2}$\, is a triple
-	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$,\,
-	where
-	\,$X_{1}\sqcap_{Y}\!X_{2} \in \Obj(\mathfrak{C})$,\,
-	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{1}\,)$,\,
-	\,$\pi_{2} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{2}\,)$,\,
-	such that
-	\begin{itemize}
-	\item
-		$f_{1} \circ \pi_{1} \,=\, f_{2} \circ \pi_{2}$,\, and
-	\item
-		for any
-		\,$h_{1} \in \Mor_{\mathfrak{C}}(A,X_{1})$\,
-		and
-		\,$h_{2} \in \Mor_{\mathfrak{C}}(A,X_{2})$\,
-		satisfying
-		\,$f_{1} \circ h_{1} \,=\, f_{2} \circ h_{2}$,\,
-		there exists a unique
-		\,$\theta \in \Mor_{\mathfrak{C}}(\,A\,,\,X_{1}\sqcap_{Y}\!X_{2}\,)$\,
-		such that the following diagram commutes:
-		\begin{center}
-		\begin{tikzcd}
-		&&&& {\color{blue}X_{1}}
-			\arrow[ddrr, "f_{1}", blue]
-		\\ \\
-		A
-			\arrow[rr, dashed, "\;\;\;\exists\,!\,\theta"]
-			\arrow[uurrrr, bend left =  20, "h_{1}"]
-			\arrow[ddrrrr, bend left = -20, "h_{2}", swap]
-		&&
-		{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
-			\arrow[uurr, "{\color{red}\pi_{1}}", red]
-			\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
-		&&&&
-		{\color{blue}Y}
-		\\ \\
-		&&&& {\color{blue}X_{2}}
-			\arrow[uurr, "f_{2}", swap, blue]
-		\end{tikzcd}
-		\end{center}
-	\end{itemize}
-\item
-	Dually, let
-	\,$f_{1} \in \Mor_{\mathfrak{C}}(Y,X_{1})$\,
-	and
-	\,$f_{2} \in \Mor_{\mathfrak{C}}(Y,X_{2})$,\,
-	where
-	\,$S,\, X_{1},\, X_{2} \in \Obj(\mathfrak{C})$.
-	The \textbf{fiber coproduct} of \,$f_{1},\, f_{2}$\, is a triple
-	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$,\,
-	where
-	\,$X_{1}\sqcup_{Y}\!X_{2} \in \Obj(\mathfrak{C})$,\,
-	\,$\iota_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\,,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
-	\,$\iota_{2} \in \Mor_{\mathfrak{C}}(\,X_{2}\,,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
-	such that,
-	\begin{itemize}
-	\item
-		$\iota_{1} \circ f_{1} \,=\, \iota_{2} \circ f_{2}$,\, and
-	\item
-		for any
-		\,$h_{1} \in \Mor_{\mathfrak{C}}(X_{1},A)$\,
-		and
-		\,$h_{2} \in \Mor_{\mathfrak{C}}(X_{2},A)$\,
-		satisfying
-		\,$h_{1} \circ f_{1} \,=\, h_{2} \circ f_{2}$,\,
-		there exists a unique
-		\,$\theta \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcup_{S}\!X_{2}\,,\,A\,)$\,
-		such that the following diagram commutes:
-		\begin{center}
-		\begin{tikzcd}
-		&&&& {\color{blue}X_{1}}
-			\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
-			\arrow[ddllll, bend left = -20, "h_{1}", swap]
-		\\ \\
-		A
-		&&
-		{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
-			\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
-		&&&&
-		{\color{blue}Y}
-			\arrow[uull, "f_{1}", blue, swap]
-			\arrow[ddll, "f_{2}", blue]
-		\\ \\
-		&&&& {\color{blue}X_{2}}
-			\arrow[uull, "{\color{red}\iota_{2}}", red]
-			\arrow[uullll, bend left = 20, "h_{2}"]
-		\end{tikzcd}
-		\end{center}
-	\end{itemize}
-\end{enumerate}
-\end{definition}
+% \vskip 0.5cm
+% \begin{definition}[Fiber products \& fiber coproducts, p.46, \cite{kashiwara2005categories}]
+% \mbox{}
+% \vskip 0.15cm
+% \noindent
+% Let \,$\mathfrak{C}$\, be a category.
+% \begin{enumerate}
+% \item
+% 	Let
+% 	\,$f_{1} \in \Mor_{\mathfrak{C}}(X_{1},Y)$\,
+% 	and
+% 	\,$f_{2} \in \Mor_{\mathfrak{C}}(X_{2},Y)$,\,
+% 	where
+% 	\,$X_{1},\, X_{2},\, Y \in \Obj(\mathfrak{C})$.
+% 	The \textbf{fiber product} of \,$f_{1},\, f_{2}$\, is a triple
+% 	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$,\,
+% 	where
+% 	\,$X_{1}\sqcap_{Y}\!X_{2} \in \Obj(\mathfrak{C})$,\,
+% 	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{1}\,)$,\,
+% 	\,$\pi_{2} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{2}\,)$,\,
+% 	such that
+% 	\begin{itemize}
+% 	\item
+% 		$f_{1} \circ \pi_{1} \,=\, f_{2} \circ \pi_{2}$,\, and
+% 	\item
+% 		for any
+% 		\,$h_{1} \in \Mor_{\mathfrak{C}}(A,X_{1})$\,
+% 		and
+% 		\,$h_{2} \in \Mor_{\mathfrak{C}}(A,X_{2})$\,
+% 		satisfying
+% 		\,$f_{1} \circ h_{1} \,=\, f_{2} \circ h_{2}$,\,
+% 		there exists a unique
+% 		\,$\theta \in \Mor_{\mathfrak{C}}(\,A\,,\,X_{1}\sqcap_{Y}\!X_{2}\,)$\,
+% 		such that the following diagram commutes:
+% 		\begin{center}
+% 		\begin{tikzcd}
+% 		&&&& {\color{blue}X_{1}}
+% 			\arrow[ddrr, "f_{1}", blue]
+% 		\\ \\
+% 		A
+% 			\arrow[rr, dashed, "\;\;\;\exists\,!\,\theta"]
+% 			\arrow[uurrrr, bend left =  20, "h_{1}"]
+% 			\arrow[ddrrrr, bend left = -20, "h_{2}", swap]
+% 		&&
+% 		{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
+% 			\arrow[uurr, "{\color{red}\pi_{1}}", red]
+% 			\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
+% 		&&&&
+% 		{\color{blue}Y}
+% 		\\ \\
+% 		&&&& {\color{blue}X_{2}}
+% 			\arrow[uurr, "f_{2}", swap, blue]
+% 		\end{tikzcd}
+% 		\end{center}
+% 	\end{itemize}
+% \item
+% 	Dually, let
+% 	\,$f_{1} \in \Mor_{\mathfrak{C}}(Y,X_{1})$\,
+% 	and
+% 	\,$f_{2} \in \Mor_{\mathfrak{C}}(Y,X_{2})$,\,
+% 	where
+% 	\,$S,\, X_{1},\, X_{2} \in \Obj(\mathfrak{C})$.
+% 	The \textbf{fiber coproduct} of \,$f_{1},\, f_{2}$\, is a triple
+% 	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$,\,
+% 	where
+% 	\,$X_{1}\sqcup_{Y}\!X_{2} \in \Obj(\mathfrak{C})$,\,
+% 	\,$\iota_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\,,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
+% 	\,$\iota_{2} \in \Mor_{\mathfrak{C}}(\,X_{2}\,,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
+% 	such that,
+% 	\begin{itemize}
+% 	\item
+% 		$\iota_{1} \circ f_{1} \,=\, \iota_{2} \circ f_{2}$,\, and
+% 	\item
+% 		for any
+% 		\,$h_{1} \in \Mor_{\mathfrak{C}}(X_{1},A)$\,
+% 		and
+% 		\,$h_{2} \in \Mor_{\mathfrak{C}}(X_{2},A)$\,
+% 		satisfying
+% 		\,$h_{1} \circ f_{1} \,=\, h_{2} \circ f_{2}$,\,
+% 		there exists a unique
+% 		\,$\theta \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcup_{S}\!X_{2}\,,\,A\,)$\,
+% 		such that the following diagram commutes:
+% 		\begin{center}
+% 		\begin{tikzcd}
+% 		&&&& {\color{blue}X_{1}}
+% 			\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
+% 			\arrow[ddllll, bend left = -20, "h_{1}", swap]
+% 		\\ \\
+% 		A
+% 		&&
+% 		{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
+% 			\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
+% 		&&&&
+% 		{\color{blue}Y}
+% 			\arrow[uull, "f_{1}", blue, swap]
+% 			\arrow[ddll, "f_{2}", blue]
+% 		\\ \\
+% 		&&&& {\color{blue}X_{2}}
+% 			\arrow[uull, "{\color{red}\iota_{2}}", red]
+% 			\arrow[uullll, bend left = 20, "h_{2}"]
+% 		\end{tikzcd}
+% 		\end{center}
+% 	\end{itemize}
+% \end{enumerate}
+% \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
-\begin{proposition}[Fiber products preserve monomormphisms; Proposition I.7.1, p.9, \cite{Mitchell1965}]
-\mbox{}
-\vskip 0.1cm
-\noindent
-Let \,$\mathfrak{C}$\, be a category.
-\begin{enumerate}
-\item
-	\vskip -0.1cm
-	Suppose that the fiber product
-	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$\,
-	exists for two morphisms
-	\,$f_{1} \in \Mor_{\mathfrak{C}}(X_{1},Y)$\,
-	and
-	\,$f_{2} \in \Mor_{\mathfrak{C}}(X_{2},Y)$,\,
-	where
-	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcap_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
-	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{1}\,)$,\,
-	\,$\pi_{2} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{2}\,)$.\,
-	\begin{center}
-	\begin{tikzcd}
-	&& {\color{blue}X_{1}}
-		\arrow[ddrr, "f_{1}", blue]
-	\\ \\
-	{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
-		\arrow[uurr, "{\color{red}\pi_{1}}", red]
-		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
-	&&&&
-	{\color{blue}Y}
-	\\ \\
-	&& {\color{blue}X_{2}}
-		\arrow[uurr, "f_{2}", swap, blue]
-	\end{tikzcd}
-	\end{center}
-	Then, the following statements are true:
-	\begin{itemize}
-	\item
-		If \,$f_{2}$\, is a monomorphism, then \,$\pi_{1}$\, is a monomorphism.
-	\item
-	If \,$f_{1}$\, is a monomorphism, then \,$\pi_{2}$\, is a monomorphism.
-	\end{itemize}
-\item
-	Dually, suppose that the fiber coproduct
-	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$\,
-	exists for two morphisms
-	\,$f_{1} \in \Mor_{\mathfrak{C}}(Y,X_{1})$\,
-	and
-	\,$f_{2} \in \Mor_{\mathfrak{C}}(Y,X_{2})$,\,
-	where
-	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcup_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
-	\,$\iota_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
-	\,$\iota_{2} \in \Mor_{\mathfrak{C}}(\,X_{2}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$.\,
-	\begin{center}
-	\begin{tikzcd}
-	&& {\color{blue}X_{1}}
-		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
-	\\ \\
-	{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
-	&&&&
-	{\color{blue}Y}
-		\arrow[uull, "f_{1}", blue, swap]
-		\arrow[ddll, "f_{2}", blue]
-	\\ \\
-	&& {\color{blue}X_{2}}
-		\arrow[uull, "{\color{red}\iota_{2}}", red]
-	\end{tikzcd}
-	\end{center}
-	Then, the following statements are true:
-	\begin{itemize}
-	\item
-		If \,$f_{2}$\, is an epimorphism, then \,$\iota_{1}$\, is an epimorphism.
-	\item
-		If \,$f_{1}$\, is an epimorphism, then \,$\iota_{2}$\, is an epimorphism.
-	\end{itemize}
-\end{enumerate}
-\end{proposition}
-\proof
-\begin{enumerate}
-\item
-	We prove only the first implication, i.e.,
-	if \,$f_{2}$\, is a monomorphism, then \,$\pi_{1}$\, is a monomorphism.
-	The proof of the other implication follows by symmetry:
-	$(\,f_{2}\,,\,\pi_{1}\,) \,\longleftrightarrow\, (\,f_{1}\,,\,\pi_{2}\,)$.
+% \vskip 0.5cm
+% \begin{proposition}[Fiber products preserve monomormphisms; Proposition I.7.1, p.9, \cite{Mitchell1965}]
+% \mbox{}
+% \vskip 0.1cm
+% \noindent
+% Let \,$\mathfrak{C}$\, be a category.
+% \begin{enumerate}
+% \item
+% 	\vskip -0.1cm
+% 	Suppose that the fiber product
+% 	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$\,
+% 	exists for two morphisms
+% 	\,$f_{1} \in \Mor_{\mathfrak{C}}(X_{1},Y)$\,
+% 	and
+% 	\,$f_{2} \in \Mor_{\mathfrak{C}}(X_{2},Y)$,\,
+% 	where
+% 	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcap_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
+% 	\,$\pi_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{1}\,)$,\,
+% 	\,$\pi_{2} \in \Mor_{\mathfrak{C}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{2}\,)$.\,
+% 	\begin{center}
+% 	\begin{tikzcd}
+% 	&& {\color{blue}X_{1}}
+% 		\arrow[ddrr, "f_{1}", blue]
+% 	\\ \\
+% 	{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
+% 		\arrow[uurr, "{\color{red}\pi_{1}}", red]
+% 		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
+% 	&&&&
+% 	{\color{blue}Y}
+% 	\\ \\
+% 	&& {\color{blue}X_{2}}
+% 		\arrow[uurr, "f_{2}", swap, blue]
+% 	\end{tikzcd}
+% 	\end{center}
+% 	Then, the following statements are true:
+% 	\begin{itemize}
+% 	\item
+% 		If \,$f_{2}$\, is a monomorphism, then \,$\pi_{1}$\, is a monomorphism.
+% 	\item
+% 	If \,$f_{1}$\, is a monomorphism, then \,$\pi_{2}$\, is a monomorphism.
+% 	\end{itemize}
+% \item
+% 	Dually, suppose that the fiber coproduct
+% 	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$\,
+% 	exists for two morphisms
+% 	\,$f_{1} \in \Mor_{\mathfrak{C}}(Y,X_{1})$\,
+% 	and
+% 	\,$f_{2} \in \Mor_{\mathfrak{C}}(Y,X_{2})$,\,
+% 	where
+% 	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcup_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
+% 	\,$\iota_{1} \in \Mor_{\mathfrak{C}}(\,X_{1}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
+% 	\,$\iota_{2} \in \Mor_{\mathfrak{C}}(\,X_{2}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$.\,
+% 	\begin{center}
+% 	\begin{tikzcd}
+% 	&& {\color{blue}X_{1}}
+% 		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
+% 	\\ \\
+% 	{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
+% 	&&&&
+% 	{\color{blue}Y}
+% 		\arrow[uull, "f_{1}", blue, swap]
+% 		\arrow[ddll, "f_{2}", blue]
+% 	\\ \\
+% 	&& {\color{blue}X_{2}}
+% 		\arrow[uull, "{\color{red}\iota_{2}}", red]
+% 	\end{tikzcd}
+% 	\end{center}
+% 	Then, the following statements are true:
+% 	\begin{itemize}
+% 	\item
+% 		If \,$f_{2}$\, is an epimorphism, then \,$\iota_{1}$\, is an epimorphism.
+% 	\item
+% 		If \,$f_{1}$\, is an epimorphism, then \,$\iota_{2}$\, is an epimorphism.
+% 	\end{itemize}
+% \end{enumerate}
+% \end{proposition}
+% \proof
+% \begin{enumerate}
+% \item
+% 	We prove only the first implication, i.e.,
+% 	if \,$f_{2}$\, is a monomorphism, then \,$\pi_{1}$\, is a monomorphism.
+% 	The proof of the other implication follows by symmetry:
+% 	$(\,f_{2}\,,\,\pi_{1}\,) \,\longleftrightarrow\, (\,f_{1}\,,\,\pi_{2}\,)$.
 
-	So, suppose that \,$f_{2}$\, is a monomorphism.
-	we need to establish that \,$\pi_{1}$\, is a monomorphism; in other words,
-	\,$\pi_{1}$\, can be ``cancelled on the left,'' i.e., for arbitrary
-	\,$\varphi,\, \psi \,\in\, \Mor_{\mathfrak{C}}(\,A\,,\,X_{1}\sqcap_{Y}\! X_{2}\,)$,\,
-	we have:
-	\,$\pi_{1} \,\circ\, \varphi \,=\, \pi_{1} \,\circ\, \psi$\,
-	\,$\Longrightarrow$\,
-	\,$\varphi \,=\, \psi$.\,
+% 	So, suppose that \,$f_{2}$\, is a monomorphism.
+% 	we need to establish that \,$\pi_{1}$\, is a monomorphism; in other words,
+% 	\,$\pi_{1}$\, can be ``cancelled on the left,'' i.e., for arbitrary
+% 	\,$\varphi,\, \psi \,\in\, \Mor_{\mathfrak{C}}(\,A\,,\,X_{1}\sqcap_{Y}\! X_{2}\,)$,\,
+% 	we have:
+% 	\,$\pi_{1} \,\circ\, \varphi \,=\, \pi_{1} \,\circ\, \psi$\,
+% 	\,$\Longrightarrow$\,
+% 	\,$\varphi \,=\, \psi$.\,
 
-	\vskip 0.1cm
-	\noindent
-	So, we now furthermore assume
-	\,$\pi_{1} \,\circ\, \varphi \,=\, \pi_{1} \,\circ\, \psi$,\,
-	which allows us to define:
-	\,$h_{1} \, := \, \pi_{1} \,\circ\, \varphi \,=\, \pi_{1} \,\circ\, \psi$.\,
+% 	\vskip 0.1cm
+% 	\noindent
+% 	So, we now furthermore assume
+% 	\,$\pi_{1} \,\circ\, \varphi \,=\, \pi_{1} \,\circ\, \psi$,\,
+% 	which allows us to define:
+% 	\,$h_{1} \, := \, \pi_{1} \,\circ\, \varphi \,=\, \pi_{1} \,\circ\, \psi$.\,
 
-	\vskip 0.3cm
-	\noindent
-	\textbf{Claim 1:}\quad $\pi_{2} \,\circ\, \varphi \,=\, \pi_{2} \,\circ\, \psi$
-	\vskip 0.01cm
-	Proof of Claim 1:\;\;Observe:
-	\begin{eqnarray*}
-	f_{2} \circ (\,\pi_{2} \circ \varphi\,)
-	& = &
-		(\,f_{2} \circ \pi_{2}\,) \circ \varphi
-	\; = \;
-		(\,f_{1} \circ \pi_{1}\,) \circ \varphi
-	\; = \;
-		f_{1} \circ (\,\pi_{1} \circ \varphi\,)
-	\\
-	& = &
-		f_{1} \circ (\,\pi_{1} \circ \psi\,),
-		\quad
-		\textnormal{since \,$\pi_{1} \circ \varphi = \pi_{1} \circ \psi$}
-	\\
-	& = &
-		(\,f_{1} \circ \pi_{1}\,) \circ \psi
-	\; = \;
-		(\,f_{2} \circ \pi_{2}\,) \circ \psi
-	\\
-	& = &
-		f_{2} \circ (\,\pi_{2} \circ \psi\,)
-	\end{eqnarray*}
-	That \,$f_{2}$\, is a monomorphism now implies that
-	\,$\pi_{2} \circ \varphi \,=\,\pi_{2} \circ \psi$,\,
-	which completes the proof of Claim 1.
+% 	\vskip 0.3cm
+% 	\noindent
+% 	\textbf{Claim 1:}\quad $\pi_{2} \,\circ\, \varphi \,=\, \pi_{2} \,\circ\, \psi$
+% 	\vskip 0.01cm
+% 	Proof of Claim 1:\;\;Observe:
+% 	\begin{eqnarray*}
+% 	f_{2} \circ (\,\pi_{2} \circ \varphi\,)
+% 	& = &
+% 		(\,f_{2} \circ \pi_{2}\,) \circ \varphi
+% 	\; = \;
+% 		(\,f_{1} \circ \pi_{1}\,) \circ \varphi
+% 	\; = \;
+% 		f_{1} \circ (\,\pi_{1} \circ \varphi\,)
+% 	\\
+% 	& = &
+% 		f_{1} \circ (\,\pi_{1} \circ \psi\,),
+% 		\quad
+% 		\textnormal{since \,$\pi_{1} \circ \varphi = \pi_{1} \circ \psi$}
+% 	\\
+% 	& = &
+% 		(\,f_{1} \circ \pi_{1}\,) \circ \psi
+% 	\; = \;
+% 		(\,f_{2} \circ \pi_{2}\,) \circ \psi
+% 	\\
+% 	& = &
+% 		f_{2} \circ (\,\pi_{2} \circ \psi\,)
+% 	\end{eqnarray*}
+% 	That \,$f_{2}$\, is a monomorphism now implies that
+% 	\,$\pi_{2} \circ \varphi \,=\,\pi_{2} \circ \psi$,\,
+% 	which completes the proof of Claim 1.
 
-	\vskip 0.3cm
-	\noindent
-	\textbf{Claim 2:}\quad $\varphi \,=\, \psi$
-	\vskip 0.01cm
-	Proof of Claim 2:\;\; By Claim 1, we may define:
-	\,$h_{2} \, := \, \pi_{2} \,\circ\, \varphi \,=\, \pi_{2} \,\circ\, \psi$.\,
-	Now, observe:
-	\begin{equation*}
-	f_{1} \circ h_{1}
-	\; = \;
-		f_{1} \circ (\,\pi_{1} \circ \varphi\,)
-	\; = \;
-		(\,f_{1} \circ \pi_{1}\,) \circ \varphi
-	\; = \;
-		(\,f_{2} \circ \pi_{2}\,) \circ \varphi
-	\; = \;
-		f_{2} \circ (\,\pi_{2} \circ \varphi\,)
-	\; = \;
-		f_{2} \circ h_{2}\,,
-	\end{equation*}
-	which implies -- by the universal property of the fiber product --
-	the existence of a unique
-	\,$\theta \in \Mor_{\mathfrak{C}}(\,A\,,\,X_{1}\sqcap_{Y}\!X_{2}\,)$\,
-	such that
-	\,$\pi_{1} \circ \theta \,=\, h_{1}$\,
-	and
-	\,$\pi_{2} \circ \theta \,=\, h_{2}$.\,
-	But now the uniqueness of \,$\theta$\, implies
-	\,$\varphi = \theta = \psi$.\,
-	This proves Claim 2.
+% 	\vskip 0.3cm
+% 	\noindent
+% 	\textbf{Claim 2:}\quad $\varphi \,=\, \psi$
+% 	\vskip 0.01cm
+% 	Proof of Claim 2:\;\; By Claim 1, we may define:
+% 	\,$h_{2} \, := \, \pi_{2} \,\circ\, \varphi \,=\, \pi_{2} \,\circ\, \psi$.\,
+% 	Now, observe:
+% 	\begin{equation*}
+% 	f_{1} \circ h_{1}
+% 	\; = \;
+% 		f_{1} \circ (\,\pi_{1} \circ \varphi\,)
+% 	\; = \;
+% 		(\,f_{1} \circ \pi_{1}\,) \circ \varphi
+% 	\; = \;
+% 		(\,f_{2} \circ \pi_{2}\,) \circ \varphi
+% 	\; = \;
+% 		f_{2} \circ (\,\pi_{2} \circ \varphi\,)
+% 	\; = \;
+% 		f_{2} \circ h_{2}\,,
+% 	\end{equation*}
+% 	which implies -- by the universal property of the fiber product --
+% 	the existence of a unique
+% 	\,$\theta \in \Mor_{\mathfrak{C}}(\,A\,,\,X_{1}\sqcap_{Y}\!X_{2}\,)$\,
+% 	such that
+% 	\,$\pi_{1} \circ \theta \,=\, h_{1}$\,
+% 	and
+% 	\,$\pi_{2} \circ \theta \,=\, h_{2}$.\,
+% 	But now the uniqueness of \,$\theta$\, implies
+% 	\,$\varphi = \theta = \psi$.\,
+% 	This proves Claim 2.
 
-	\vskip 0.3cm
-	\noindent
-	This completes the proof that \,$\pi_{1}$\, is a monomorphism, as required.
+% 	\vskip 0.3cm
+% 	\noindent
+% 	This completes the proof that \,$\pi_{1}$\, is a monomorphism, as required.
 
-	\vskip 0.3cm
-	\noindent
-	The situation is depicted in the following diagram:
-	\begin{center}
-	\begin{tikzcd}
-	&&&& {\color{blue}X_{1}}
-		\arrow[ddrr, "f_{1}", blue]
-	\\ \\
-	A
-		\arrow[rr, dashed, "\exists ! \theta"]
-		\arrow[rr, bend left =  27, "\varphi"]
-		\arrow[rr, bend left = -27, "\psi", swap]
-		\arrow[uurrrr, bend left =  30, "h_{1}"]
-		\arrow[ddrrrr, bend left = -30, "h_{2}", swap]
-	&&
-	{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
-		\arrow[uurr, "{\color{red}\pi_{1}}", red]
-		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
-	&&&&
-	{\color{blue}Y}
-	\\ \\
-	&&&& {\color{blue}X_{2}}
-		\arrow[uurr, "f_{2}", swap, blue]
-	\end{tikzcd}
-	\end{center}
+% 	\vskip 0.3cm
+% 	\noindent
+% 	The situation is depicted in the following diagram:
+% 	\begin{center}
+% 	\begin{tikzcd}
+% 	&&&& {\color{blue}X_{1}}
+% 		\arrow[ddrr, "f_{1}", blue]
+% 	\\ \\
+% 	A
+% 		\arrow[rr, dashed, "\exists ! \theta"]
+% 		\arrow[rr, bend left =  27, "\varphi"]
+% 		\arrow[rr, bend left = -27, "\psi", swap]
+% 		\arrow[uurrrr, bend left =  30, "h_{1}"]
+% 		\arrow[ddrrrr, bend left = -30, "h_{2}", swap]
+% 	&&
+% 	{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
+% 		\arrow[uurr, "{\color{red}\pi_{1}}", red]
+% 		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
+% 	&&&&
+% 	{\color{blue}Y}
+% 	\\ \\
+% 	&&&& {\color{blue}X_{2}}
+% 		\arrow[uurr, "f_{2}", swap, blue]
+% 	\end{tikzcd}
+% 	\end{center}
 
-\item
-	We prove only the first implication, i.e.,
-	if \,$f_{2}$\, is an epimorphism, then \,$\iota_{1}$\, is an epimorphism.
-	The proof of the other implication follows by symmetry:
-	$(\,f_{2}\,,\,\pi_{1}\,) \,\longleftrightarrow\, (\,f_{1}\,,\,\pi_{2}\,)$.
+% \item
+% 	We prove only the first implication, i.e.,
+% 	if \,$f_{2}$\, is an epimorphism, then \,$\iota_{1}$\, is an epimorphism.
+% 	The proof of the other implication follows by symmetry:
+% 	$(\,f_{2}\,,\,\pi_{1}\,) \,\longleftrightarrow\, (\,f_{1}\,,\,\pi_{2}\,)$.
 
-	So, suppose that \,$f_{2}$\, is an epimorphism.
-	we need to establish that \,$\iota_{1}$\, is an epimorphism; in other words,
-	\,$\iota_{1}$\, can be ``cancelled on the right,'' i.e., for arbitrary
-	\,$\varphi,\, \psi \,\in\, \Mor_{\mathfrak{C}}(\,X_{1}\sqcup_{Y}\! X_{2}\,,\,A\,)$,\,
-	we have:
-	\,$\varphi \,\circ\, \iota_{1} \,=\, \psi \,\circ\, \iota_{1}$\,
-	\,$\Longrightarrow$\,
-	\,$\varphi \,=\, \psi$.\,
+% 	So, suppose that \,$f_{2}$\, is an epimorphism.
+% 	we need to establish that \,$\iota_{1}$\, is an epimorphism; in other words,
+% 	\,$\iota_{1}$\, can be ``cancelled on the right,'' i.e., for arbitrary
+% 	\,$\varphi,\, \psi \,\in\, \Mor_{\mathfrak{C}}(\,X_{1}\sqcup_{Y}\! X_{2}\,,\,A\,)$,\,
+% 	we have:
+% 	\,$\varphi \,\circ\, \iota_{1} \,=\, \psi \,\circ\, \iota_{1}$\,
+% 	\,$\Longrightarrow$\,
+% 	\,$\varphi \,=\, \psi$.\,
 
-	\vskip 0.1cm
-	\noindent
-	So, we now furthermore assume
-	\,$\varphi \,\circ\, \iota_{1} \,=\, \psi \,\circ\, \iota_{1}$,\,
-	which allows us to define:
-	\,$h_{1} \, := \, \varphi \,\circ\, \iota_{1} \,=\, \psi \,\circ\, \iota_{1}$.\,
+% 	\vskip 0.1cm
+% 	\noindent
+% 	So, we now furthermore assume
+% 	\,$\varphi \,\circ\, \iota_{1} \,=\, \psi \,\circ\, \iota_{1}$,\,
+% 	which allows us to define:
+% 	\,$h_{1} \, := \, \varphi \,\circ\, \iota_{1} \,=\, \psi \,\circ\, \iota_{1}$.\,
 
-	\vskip 0.3cm
-	\noindent
-	\textbf{Claim 1:}\quad $\varphi \,\circ\, \iota_{2} \,=\, \psi \,\circ\, \iota_{2}$
-	\vskip 0.01cm
-	Proof of Claim 1:\;\;Observe:
-	\begin{eqnarray*}
-	(\,\varphi \circ \iota_{2}\,) \circ f_{2}
-	& = &
-		\varphi \circ (\,\iota_{2} \circ f_{2}\,)
-	\; = \;
-		\varphi \circ (\,\iota_{1} \circ f_{1}\,)
-	\; = \;
-		(\,\varphi \circ \iota_{1}\,) \circ f_{1}
-	\\
-	& = &
-		(\,\psi \circ \iota_{1}\,) \circ f_{1},
-		\quad
-		\textnormal{since \,$\varphi \circ \iota_{1} = \psi \circ \iota_{1}$}
-	\\
-	& = &
-		\psi \circ (\,\iota_{1} \circ f_{1}\,)
-	\; = \;
-		\psi \circ (\,\iota_{2} \circ f_{2}\,)
-	\\
-	& = &
-		(\,\psi \circ \iota_{2}\,) \circ f_{2}
-	\end{eqnarray*}
-	That \,$f_{2}$\, is an epimorphism (``cancellable from the right'') now implies that
-	\,$\varphi \circ \iota_{2} \,=\, \psi \circ \iota_{2}$,\,
-	which completes the proof of Claim 1.
+% 	\vskip 0.3cm
+% 	\noindent
+% 	\textbf{Claim 1:}\quad $\varphi \,\circ\, \iota_{2} \,=\, \psi \,\circ\, \iota_{2}$
+% 	\vskip 0.01cm
+% 	Proof of Claim 1:\;\;Observe:
+% 	\begin{eqnarray*}
+% 	(\,\varphi \circ \iota_{2}\,) \circ f_{2}
+% 	& = &
+% 		\varphi \circ (\,\iota_{2} \circ f_{2}\,)
+% 	\; = \;
+% 		\varphi \circ (\,\iota_{1} \circ f_{1}\,)
+% 	\; = \;
+% 		(\,\varphi \circ \iota_{1}\,) \circ f_{1}
+% 	\\
+% 	& = &
+% 		(\,\psi \circ \iota_{1}\,) \circ f_{1},
+% 		\quad
+% 		\textnormal{since \,$\varphi \circ \iota_{1} = \psi \circ \iota_{1}$}
+% 	\\
+% 	& = &
+% 		\psi \circ (\,\iota_{1} \circ f_{1}\,)
+% 	\; = \;
+% 		\psi \circ (\,\iota_{2} \circ f_{2}\,)
+% 	\\
+% 	& = &
+% 		(\,\psi \circ \iota_{2}\,) \circ f_{2}
+% 	\end{eqnarray*}
+% 	That \,$f_{2}$\, is an epimorphism (``cancellable from the right'') now implies that
+% 	\,$\varphi \circ \iota_{2} \,=\, \psi \circ \iota_{2}$,\,
+% 	which completes the proof of Claim 1.
 
-	\vskip 0.3cm
-	\noindent
-	\textbf{Claim 2:}\quad $\varphi \,=\, \psi$
-	\vskip 0.01cm
-	Proof of Claim 2:\;\; By Claim 1, we may define:
-	\,$h_{2} \, := \, \varphi \,\circ\, \iota_{2} \,=\, \psi \,\circ\, \iota_{2}$.\,
-	Now, observe:
-	\begin{equation*}
-	h_{1} \circ f_{1}
-	\; = \;
-		(\,\varphi \circ \iota_{1}\,) \circ f_{1}
-	\; = \;
-		\varphi \circ (\,\iota_{1} \circ f_{1}\,)
-	\; = \;
-		\varphi \circ (\,\iota_{2} \circ f_{2}\,)
-	\; = \;
-		(\,\varphi \circ \iota_{2}\,) \circ f_{2}
-	\; = \;
-		h_{2} \circ f_{2}\,,
-	\end{equation*}
-	which implies -- by the universal property of the fiber coproduct --
-	the existence of a unique
-	\begin{equation*}
-	\theta \;\in\; \Mor_{\mathfrak{C}}\!\left(\,
-		X_{1}\sqcup_{Y}\!X_{2}
-		\,\overset{{\color{white}\textnormal{\large1}}}{,}\,
-		A
-		\,\right)
-	\end{equation*}
-	such that
-	\,$\theta \circ \iota_{1} \,=\, h_{1}$\,
-	and
-	\,$\theta \circ \iota_{2} \,=\, h_{2}$.\,
-	But now the uniqueness of \,$\theta$\, implies
-	\,$\varphi = \theta = \psi$.\,
-	This proves Claim 2.
+% 	\vskip 0.3cm
+% 	\noindent
+% 	\textbf{Claim 2:}\quad $\varphi \,=\, \psi$
+% 	\vskip 0.01cm
+% 	Proof of Claim 2:\;\; By Claim 1, we may define:
+% 	\,$h_{2} \, := \, \varphi \,\circ\, \iota_{2} \,=\, \psi \,\circ\, \iota_{2}$.\,
+% 	Now, observe:
+% 	\begin{equation*}
+% 	h_{1} \circ f_{1}
+% 	\; = \;
+% 		(\,\varphi \circ \iota_{1}\,) \circ f_{1}
+% 	\; = \;
+% 		\varphi \circ (\,\iota_{1} \circ f_{1}\,)
+% 	\; = \;
+% 		\varphi \circ (\,\iota_{2} \circ f_{2}\,)
+% 	\; = \;
+% 		(\,\varphi \circ \iota_{2}\,) \circ f_{2}
+% 	\; = \;
+% 		h_{2} \circ f_{2}\,,
+% 	\end{equation*}
+% 	which implies -- by the universal property of the fiber coproduct --
+% 	the existence of a unique
+% 	\begin{equation*}
+% 	\theta \;\in\; \Mor_{\mathfrak{C}}\!\left(\,
+% 		X_{1}\sqcup_{Y}\!X_{2}
+% 		\,\overset{{\color{white}\textnormal{\large1}}}{,}\,
+% 		A
+% 		\,\right)
+% 	\end{equation*}
+% 	such that
+% 	\,$\theta \circ \iota_{1} \,=\, h_{1}$\,
+% 	and
+% 	\,$\theta \circ \iota_{2} \,=\, h_{2}$.\,
+% 	But now the uniqueness of \,$\theta$\, implies
+% 	\,$\varphi = \theta = \psi$.\,
+% 	This proves Claim 2.
 
-	\vskip 0.3cm
-	\noindent
-	This completes the proof that \,$\pi_{1}$\, is an epimorphism, as required.
+% 	\vskip 0.3cm
+% 	\noindent
+% 	This completes the proof that \,$\pi_{1}$\, is an epimorphism, as required.
 
-	\vskip 0.3cm
-	\noindent
-	The situation is depicted in the following diagram:
-	\begin{center}
-	\begin{tikzcd}
-	&&&& {\color{blue}X_{1}}
-		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
-		\arrow[ddllll, bend left = -30, "h_{1}", swap]
-	\\ \\
-	A
-	&&
-	{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
-		\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
-		\arrow[ll, bend left =  27, "\psi"]
-		\arrow[ll, bend left = -27, "\varphi", swap]
-	&&&&
-	{\color{blue}Y}
-		\arrow[uull, "f_{1}", blue, swap]
-		\arrow[ddll, "f_{2}", blue]
-	\\ \\
-	&&&& {\color{blue}X_{2}}
-		\arrow[uull, "{\color{red}\iota_{2}}", red]
-		\arrow[uullll, bend left = 30, "h_{2}"]
-	\end{tikzcd}
-	\end{center}
-	\qed
-\end{enumerate}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
-\begin{proposition}[Fiber products preserve epimorphisms in abelian categories; Propn. I.20.2, p.34, \cite{Mitchell1965}]
-\mbox{}
-\vskip -0.3cm
-\noindent
-Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
-\begin{enumerate}
-\item
-	\vskip -0.1cm
-	Suppose that the fiber product
-	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$\,
-	exists for two morphisms
-	\,$f_{1} \in \Mor_{\mathfrak{A}}(X_{1},Y)$\,
-	and
-	\,$f_{2} \in \Mor_{\mathfrak{A}}(X_{2},Y)$,\,
-	where
-	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcap_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
-	\,$\pi_{1} \in \Mor_{\mathfrak{A}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{1}\,)$,\,
-	\,$\pi_{2} \in \Mor_{\mathfrak{A}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{2}\,)$.\,
-	\begin{center}
-	\begin{tikzcd}
-	&& {\color{blue}X_{1}}
-		\arrow[ddrr, "f_{1}", blue]
-	\\ \\
-	{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
-		\arrow[uurr, "{\color{red}\pi_{1}}", red]
-		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
-	&&&&
-	{\color{blue}Y}
-	\\ \\
-	&& {\color{blue}X_{2}}
-		\arrow[uurr, "f_{2}", swap, blue]
-	\end{tikzcd}
-	\end{center}
-	Then, the following statements are true:
-	\begin{itemize}
-	\item
-		If \,$f_{2}$\, is an {\color{red}epi}morphism, then \,$\pi_{1}$\, is an {\color{red}epi}morphism.
-	\item
-	If \,$f_{1}$\, is an {\color{red}epi}morphism, then \,$\pi_{2}$\, is an {\color{red}epi}morphism.
-	\end{itemize}
-\item
-	Dually, suppose that the fiber coproduct
-	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$\,
-	exists for two morphisms
-	\,$f_{1} \in \Mor_{\mathfrak{A}}(Y,X_{1})$\,
-	and
-	\,$f_{2} \in \Mor_{\mathfrak{A}}(Y,X_{2})$,\,
-	where
-	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcup_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
-	\,$\iota_{1} \in \Mor_{\mathfrak{A}}(\,X_{1}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
-	\,$\iota_{2} \in \Mor_{\mathfrak{A}}(\,X_{2}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$.\,
-	\begin{center}
-	\begin{tikzcd}
-	&& {\color{blue}X_{1}}
-		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
-	\\ \\
-	{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
-	&&&&
-	{\color{blue}Y}
-		\arrow[uull, "f_{1}", blue, swap]
-		\arrow[ddll, "f_{2}", blue]
-	\\ \\
-	&& {\color{blue}X_{2}}
-		\arrow[uull, "{\color{red}\iota_{2}}", red]
-	\end{tikzcd}
-	\end{center}
-	Then, the following statements are true:
-	\begin{itemize}
-	\item
-		If \,$f_{2}$\, is a {\color{red}mono}morphism, then \,$\iota_{1}$\, is a {\color{red}mono}morphism.
-	\item
-		If \,$f_{1}$\, is a {\color{red}mono}morphism, then \,$\iota_{2}$\, is a {\color{red}mono}morphism.
-	\end{itemize}
-\end{enumerate}
-\end{proposition}
-\proof
-\begin{enumerate}
-\item
-\item
-\qed
-\end{enumerate}
+% 	\vskip 0.3cm
+% 	\noindent
+% 	The situation is depicted in the following diagram:
+% 	\begin{center}
+% 	\begin{tikzcd}
+% 	&&&& {\color{blue}X_{1}}
+% 		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
+% 		\arrow[ddllll, bend left = -30, "h_{1}", swap]
+% 	\\ \\
+% 	A
+% 	&&
+% 	{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
+% 		\arrow[ll, dashed, "\;\;\;\exists\,!\,\theta", swap]
+% 		\arrow[ll, bend left =  27, "\psi"]
+% 		\arrow[ll, bend left = -27, "\varphi", swap]
+% 	&&&&
+% 	{\color{blue}Y}
+% 		\arrow[uull, "f_{1}", blue, swap]
+% 		\arrow[ddll, "f_{2}", blue]
+% 	\\ \\
+% 	&&&& {\color{blue}X_{2}}
+% 		\arrow[uull, "{\color{red}\iota_{2}}", red]
+% 		\arrow[uullll, bend left = 30, "h_{2}"]
+% 	\end{tikzcd}
+% 	\end{center}
+% 	\qed
+% \end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -1259,6 +1174,91 @@ fiber products and fiber coproducts always exist.
 	This completes the proof of Claim 2,
 	as well as that of the existence of fiber coproducts in an arbitrary abelian category.
 	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Fiber products preserve epimorphisms in abelian categories; Propn. I.20.2, p.34, \cite{Mitchell1965}]
+\mbox{}
+\vskip -0.3cm
+\noindent
+Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
+\begin{enumerate}
+\item
+	\vskip -0.1cm
+	Suppose that the fiber product
+	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$\,
+	exists for two morphisms
+	\,$f_{1} \in \Mor_{\mathfrak{A}}(X_{1},Y)$\,
+	and
+	\,$f_{2} \in \Mor_{\mathfrak{A}}(X_{2},Y)$,\,
+	where
+	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcap_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
+	\,$\pi_{1} \in \Mor_{\mathfrak{A}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{1}\,)$,\,
+	\,$\pi_{2} \in \Mor_{\mathfrak{A}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{2}\,)$.\,
+	\begin{center}
+	\begin{tikzcd}
+	&& {\color{blue}X_{1}}
+		\arrow[ddrr, "f_{1}", blue]
+	\\ \\
+	{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
+		\arrow[uurr, "{\color{red}\pi_{1}}", red]
+		\arrow[ddrr, "{\color{red}\pi_{2}}", red, swap]
+	&&&&
+	{\color{blue}Y}
+	\\ \\
+	&& {\color{blue}X_{2}}
+		\arrow[uurr, "f_{2}", swap, blue]
+	\end{tikzcd}
+	\end{center}
+	Then, the following statements are true:
+	\begin{itemize}
+	\item
+		If \,$f_{2}$\, is an {\color{red}epi}morphism, then \,$\pi_{1}$\, is an {\color{red}epi}morphism.
+	\item
+	If \,$f_{1}$\, is an {\color{red}epi}morphism, then \,$\pi_{2}$\, is an {\color{red}epi}morphism.
+	\end{itemize}
+\item
+	Dually, suppose that the fiber coproduct
+	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$\,
+	exists for two morphisms
+	\,$f_{1} \in \Mor_{\mathfrak{A}}(Y,X_{1})$\,
+	and
+	\,$f_{2} \in \Mor_{\mathfrak{A}}(Y,X_{2})$,\,
+	where
+	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcup_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
+	\,$\iota_{1} \in \Mor_{\mathfrak{A}}(\,X_{1}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$,\,
+	\,$\iota_{2} \in \Mor_{\mathfrak{A}}(\,X_{2}\,,\,X_{1}\sqcup_{Y}\!X_{2}\,)$.\,
+	\begin{center}
+	\begin{tikzcd}
+	&& {\color{blue}X_{1}}
+		\arrow[ddll, "{\color{red}\iota_{1}}", red, swap]
+	\\ \\
+	{\color{red}X_{1} \sqcup_{Y}\! X_{2}}
+	&&&&
+	{\color{blue}Y}
+		\arrow[uull, "f_{1}", blue, swap]
+		\arrow[ddll, "f_{2}", blue]
+	\\ \\
+	&& {\color{blue}X_{2}}
+		\arrow[uull, "{\color{red}\iota_{2}}", red]
+	\end{tikzcd}
+	\end{center}
+	Then, the following statements are true:
+	\begin{itemize}
+	\item
+		If \,$f_{2}$\, is a {\color{red}mono}morphism, then \,$\iota_{1}$\, is a {\color{red}mono}morphism.
+	\item
+		If \,$f_{1}$\, is a {\color{red}mono}morphism, then \,$\iota_{2}$\, is a {\color{red}mono}morphism.
+	\end{itemize}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+\item
+\qed
 \end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
