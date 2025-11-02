@@ -822,6 +822,38 @@ Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
 \proof
 \begin{enumerate}
 \item
+	Consider
+	\begin{center}
+	\begin{tikzcd}
+	&&&& {\color{blue}X_{1}}
+		\arrow[ddrr, "f_{1}", blue]
+		\arrow[ddl, bend left = 10, "\iota_{1}", hook, gray]
+	\\ \\
+	0
+		\arrow[rr]
+		% \arrow[uurrrr, bend left =  20, "h_{1}"]
+		% \arrow[ddrrrr, bend left = -20, "h_{2}", swap]
+		% \arrow[rrr, bend left = -20, "\psi\,:=\,\iota_{1}\circ h_{1} + \iota_{2}\circ h_{2}", swap]
+		% \arrow[rrr, bend left = -20, "\psi", swap]
+	&&
+	%{\color{red}K}
+	{\color{red}X_{1} \sqcap_{Y}\! X_{2}}
+		\arrow[r, "\kappa", hook, gray]
+		\arrow[uurr, "{\color{red}\pi_{1}}", bend left =  10, red]
+		\arrow[ddrr, "{\color{red}\pi_{2}}", bend left = -10, red, swap]
+	&
+	{\color{gray}X_{1} \oplus X_{2}}
+		\arrow[rrr, "\varphi\,:=\,f_{1} \circ\, p_{1} \,-\, f_{2} \circ\, p_{2}", gray]
+		\arrow[uur, "p_{1}", bend left =  10, gray]
+		\arrow[ddr, "p_{2}", bend left = -10, gray, swap]
+	&&&
+	{\color{blue}Y}
+	\\ \\
+	&&&& {\color{blue}X_{2}}
+		\arrow[uurr, "f_{2}", swap, blue]
+		\arrow[uul, bend left = -10, "\iota_{2}", hook, gray, swap]
+	\end{tikzcd}
+	\end{center}
 \item
 \qed
 \end{enumerate}
