@@ -1,0 +1,847 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The Snake Lemma for an arbitrary abelian category}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{theorem}[Snake Lemma for an arbitrary abelian category, Lemma 12.1.1, p.297, \cite{kashiwara2005categories}]
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let \,$\mathfrak{A}$\, be an abelian category, and
+the following be a commutative diagram with exact rows of morphisms in \,$\mathfrak{A}$:
+\begin{center}
+\begin{tikzcd}
+A^{\prime}
+	\arrow[dd, swap, "f^{\prime}"]
+	\arrow[rr, "\mu_{A}"]
+&&
+A
+	\arrow[dd, "f"]
+	\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+&&
+A^{\prime\prime}
+	\arrow[dd, "f^{\prime\prime}"]
+\\ \\
+B^{\prime}
+	\arrow[rr, thick, hook, swap, "\mu_{B}"]
+&&
+B
+	\arrow[rr, swap, "\varepsilon_{B}"]
+&&
+B^{\prime\prime}
+\end{tikzcd}
+\end{center}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	Let
+	\,$\kappa^{\prime}$,\, $\kappa$,\, $\kappa^{\prime\prime}$\, 
+	denote respectively kernels of
+	\,$f^{\prime}$,\, $f$,\, $f^{\prime\prime}$,\,
+	and let
+	\,$\pi^{\prime}$,\, $\pi$,\, $\pi^{\prime\prime}$\, 
+	denote  respectively cokernels of 
+	\,$f^{\prime}$,\, $f$,\, $f^{\prime\prime}$.
+	Then, there exist morphisms
+	\,$\mu_{K} : K^{\prime} \longrightarrow K$,\,
+	\,$\varepsilon_{K} : K \longrightarrow K^{\prime\prime}$,\,
+	\,$\mu_{Q} : Q^{\prime} \longrightarrow Q$,\,
+	and
+	\,$\varepsilon_{Q} : Q \longrightarrow Q^{\prime\prime}$\,
+	such that the diagram above extends to the following commutative diagram:
+	\begin{center}
+	\begin{tikzcd}
+	K^{\prime}
+		\arrow[dd,swap, "\kappa^{\prime}"]
+		\arrow[rr, thick, dashed, "\mu_{K}", red]
+	&&
+	K
+		\arrow[dd, "\kappa"]
+		\arrow[rr, thick, dashed, "\varepsilon_{K}", red]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, "\kappa^{\prime\prime}"]
+	\\ \\
+	A^{\prime}
+		\arrow[dd, swap, "f^{\prime}"]
+		\arrow[rr, "\mu_{A}"]
+	&&
+	A
+		\arrow[dd, "f"]
+		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, "f^{\prime\prime}"]
+	\\ \\
+	B^{\prime}
+		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+		\arrow[dd, swap, "\pi^{\prime}"]
+	&&
+	B
+		\arrow[rr, swap, "\varepsilon_{B}"]
+		\arrow[dd, "\pi"]
+	&&
+	B^{\prime\prime}
+		\arrow[dd, "\pi^{\prime\prime}"]
+	\\ \\
+	Q^{\prime}
+		\arrow[rr, thick, dashed, swap, "\mu_{Q}", red]
+	&&
+	Q
+		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}", red]
+	&&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+\item
+	There exists a morphism \,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\, such that
+	\begin{center}
+	\begin{tikzcd}
+	K^{\prime}
+		\arrow[rr, "\mu_{K}"]
+	&&
+	K
+		\arrow[rr, "\varepsilon_{K}"]
+	&&
+	K^{\prime\prime}
+		\arrow[rr, "\delta"]
+	&&
+	Q^{\prime}
+		\arrow[rr, "\mu_{Q}"]
+	&&
+	Q
+		\arrow[rr, "\varepsilon_{Q}"]
+	&&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+	is a six-term exact sequence.
+	\begin{center}
+	\begin{tikzcd}
+	K^{\prime}
+		\arrow[dd,swap, "\kappa^{\prime}"]
+		\arrow[rr, dashed, "\mu_{K}"]
+	&&
+	K
+		\arrow[dd, "\kappa"]
+		\arrow[rr, dashed, "\varepsilon_{K}"]
+		\arrow[dddddd, phantom, ""{coordinate, name=X}]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, "\kappa^{\prime\prime}"]
+		%\arrow[ddddddllll, thick, "\delta", red,
+		%	crossing over, rounded corners,
+		%	to path = { -- ([xshift=10ex]\tikztostart.east)
+		%		|- (X) [near start]\tikztonodes
+		%		-| ([xshift=-10ex]\tikztotarget.west)
+		%		 -- (\tikztotarget)}
+		%	 ]
+	\\ \\
+	A^{\prime}
+		\arrow[dd, swap, near start, "f^{\prime}"]
+		\arrow[rr, "\mu_{A}"]
+	&&
+	A
+		\arrow[dd, near start, "f"]
+		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, near start, "f^{\prime\prime}"]
+	\\ \\
+	B^{\prime}
+		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+		\arrow[dd, swap, "\pi^{\prime}"]
+	&&
+	B
+		%\arrow[from=uu, near start, "f"]
+		\arrow[rr, swap, "\varepsilon_{B}"]
+		\arrow[dd, "\pi"]
+	&&
+	B^{\prime\prime}
+		\arrow[dd, "\pi^{\prime\prime}"]
+	\\ \\
+	Q^{\prime}
+		\arrow[rr, dashed, swap, "\mu_{Q}"]
+		\arrow[from=uuuuuurrrr, thick, "\textnormal{\LARGE$\delta$}", red,
+			crossing over, rounded corners,
+			to path = { -- ([xshift=10ex]\tikztostart.east)
+				|- (X) [near start]\tikztonodes
+				-| ([xshift=-10ex]\tikztotarget.west)
+				 -- (\tikztotarget)}
+			 ]
+	&&
+	Q
+		\arrow[rr, dashed, swap, "\varepsilon_{Q}"]
+	&&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+\end{enumerate}
+\end{theorem}
+\proof
+\begin{enumerate}
+\item
+	\underline{Existence of $\mu_{K} \in \Mor_{\mathfrak{A}}(K^{\prime},K)$}
+	\vskip -0.01cm
+	First, note that
+	\,$f \circ (\,\mu_{A} \circ \kappa^{\prime}\,)$
+	\;$=$\; $(\,f \circ \mu_{A}\,)\circ \kappa^{\prime}$
+	\;$=$\; $(\,\mu_{B}\circ f^{\prime}\,) \circ \kappa^{\prime}$
+	\;$=$\; $\mu_{B} \circ (\,f^{\prime} \circ \kappa^{\prime}\,)$
+	\;$=$\; $\mu_{B} \circ 0$
+	\;$=$\; $0$.\,
+	The universal property of
+	\,$\kappa : K \longrightarrow A$\,
+	as a kernel of
+	\,$f : A \longrightarrow B$\,
+	now implies the existence (and uniqueness) of $\mu_{K} : K^{\prime} \longrightarrow K$.
+	\vskip 0.3cm
+
+	\underline{Existence of $\varepsilon_{K} \in \Mor_{\mathfrak{A}}(K,K^{\prime\prime})$}
+	\vskip -0.01cm
+	This proof is completely analogous as the preceding one.
+	More precisely, note that
+	\,$f^{\prime\prime} \circ (\,\varepsilon_{A} \circ \kappa\,)$
+	\;$=$\; $(\,f^{\prime\prime} \circ \varepsilon_{A}\,)\circ \kappa$
+	\;$=$\; $(\,\varepsilon_{B} \circ f\,) \circ \kappa$
+	\;$=$\; $\varepsilon_{B} \circ (\,f \circ \kappa\,)$
+	\;$=$\; $\varepsilon_{B} \circ 0$
+	\;$=$\; $0$.\,
+	The universal property of
+	\,$\kappa^{\prime\prime} : K^{\prime\prime} \longrightarrow A^{\prime\prime}$\,
+	as a kernel of
+	\,$f^{\prime\prime} : A^{\prime\prime} \longrightarrow B^{\prime\prime}$\,
+	now implies the existence (and uniqueness) of
+	\,$\varepsilon_{K} : K \longrightarrow K^{\prime\prime}$.
+	\vskip 0.3cm
+
+	\underline{Existence of $\mu_{Q} \in \Mor_{\mathfrak{A}}(Q^{\prime},Q)$}
+	\vskip -0.01cm
+	Note that
+	\,$(\,\pi \circ \mu_{B}\,) \circ f^{\prime}$
+	\;$=$\; $\pi \circ (\,\mu_{B} \circ f^{\prime}\,)$
+	\;$=$\; $\pi \circ (\,f \circ \mu_{A}\,)$
+	\;$=$\; $(\,\pi \circ f\,) \circ \mu_{A}$
+	\;$=$\; $0 \,\circ\, \mu_{A}$
+	\;$=$\; $0$.\,
+	The universal property of
+	\,$\pi^{\prime} : B^{\prime} \longrightarrow Q^{\prime}$\,
+	as a cokernel of
+	\,$f^{\prime} : A^{\prime} \longrightarrow B^{\prime}$\,
+	now implies the existence (and uniqueness) of
+	\,$\mu_{Q} : Q^{\prime} \longrightarrow Q$.
+	\vskip 0.3cm
+
+	\underline{Existence of $\varepsilon_{Q} \in \Mor_{\mathfrak{A}}(Q,Q^{\prime\prime})$}
+	\vskip -0.01cm
+	Note that
+	\,$(\,\pi^{\prime\prime} \circ \varepsilon_{B}\,) \circ f$
+	\;$=$\; $\pi^{\prime\prime} \circ (\,\varepsilon_{B} \circ f\,)$
+	\;$=$\; $\pi^{\prime\prime} \circ (\,f^{\prime\prime} \circ \varepsilon_{A}\,)$
+	\;$=$\; $(\,\pi^{\prime\prime} \circ f^{\prime\prime}\,) \circ \varepsilon_{A}$
+	\;$=$\; $0 \,\circ\, \varepsilon_{A}$
+	\;$=$\; $0$.\,
+	The universal property of
+	\,$\pi : B \longrightarrow Q$\,
+	as a cokernel of
+	\,$f : A \longrightarrow B$\,
+	now implies the existence (and uniqueness) of
+	\,$\varepsilon_{Q} : Q \longrightarrow Q^{\prime\prime}$.
+	\vskip 0.5cm
+
+\item
+	We now give the definition of
+	\,$\delta \,\in\, \Mor_{\mathfrak{A}}(K^{\prime\prime},Q^{\prime})$.\,
+	\begin{center}
+	\begin{tikzcd}
+	{\color{blue}K(\pi_{K^{\prime\prime}})}
+		\arrow[dd, "\kappa^{\prime}", swap]
+		\arrow[rr, thick, hook, "\kappa(\pi_{K^{\prime\prime}})", blue]
+	&&
+	{\color{red}A \,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
+		\arrow[dd, "\,\pi_{A}", swap, thick, red]
+		\arrow[rr, "\pi_{K^{\prime\prime}}", thick, red]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, "\kappa^{\prime\prime}"]
+	\\ \\
+	A^{\prime}
+		\arrow[dd, swap, "f^{\prime}"]
+		\arrow[rr, "\mu_{A}"]
+	&&
+	A
+		\arrow[dd, "f"]
+		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, "f^{\prime\prime}"]
+	\\ \\
+	B^{\prime}
+		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+		\arrow[dd, swap, "\pi^{\prime}"]
+	&&
+	B
+		\arrow[rr, "\varepsilon_{B}", swap]
+		\arrow[dd, red, thick, "\iota_{B}"]
+	&&
+	B^{\prime\prime}
+		\arrow[dd, "\pi^{\prime\prime}"]
+	\\ \\
+	Q^{\prime}
+		\arrow[rr, red, thick, "\iota_{Q^{\prime}}", swap]
+	&&
+	{\color{red}Q^{\prime} \sqcup_{B^{\prime}}\! B}
+		\arrow[rr, red, thick, "\varepsilon_{Q}", swap]
+	&&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+
+\vskip 0.5cm
+\item
+	First, we construct the morphism \,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$,\, as follows:
+	\begin{itemize}
+	\item
+		Since \,$\mathfrak{A}$\, is an (abelian) category with enough projectives,
+		there exists an epimorphism
+		\,$\varepsilon_{P} : P \longrightarrow K^{\prime\prime}$,\,
+		with \,$P \in \Obj(\mathfrak{A})$\, being a projective object.
+	\item
+		Since \,$P$\, is a projective object and 
+		\,$\varepsilon_{A} : A \longrightarrow A^{\prime\prime}$\,
+		is an epimorphism, there exists
+		\,$f_{1} : P \longrightarrow A$\,
+		such that
+		\,$\kappa^{\prime\prime} \circ \varepsilon_{P} \,=\, \varepsilon_{A} \circ f_{1}$\,
+	\item
+		Since \,$\mu_{B}$\, is a monomorphism
+		and the composition
+		\,$B^{\prime} \overset{\mu_{B}}{\longrightarrow} B \overset{\varepsilon_{B}}{\longrightarrow} B^{\prime\prime}$\,
+		is exact, it follows
+		by Proposition \ref{MonomorphicFirstFactorInExactSequenceIsKernelOfSecondFactor}
+		that
+		\,$\mu_{B}$\, is a kernel of \,$\varepsilon_{B}$.\,
+		On the other hand, observe that
+		\,$\varepsilon_{B} \circ (\,f \circ f_{1}\,)$
+		\,$=$\, $(\,\varepsilon_{B} \circ f\,) \circ f_{1}$
+		\,$=$\, $(\,f^{\prime\prime} \circ \varepsilon_{A}\,) \circ f_{1}$
+		\,$=$\, $f^{\prime\prime} \circ (\,\varepsilon_{A} \circ f_{1}\,)$
+		\,$=$\, $f^{\prime\prime} \circ (\,\kappa^{\prime\prime} \circ \varepsilon_{P}\,)$
+		\,$=$\, $(\,f^{\prime\prime} \circ \kappa^{\prime\prime}\,) \circ \varepsilon_{P}$
+		\,$=$\, $0 \circ \varepsilon_{P}$
+		\,$=$\, $0$.\,
+		Hence, by the universal property of
+		\,$\mu_{B}$\, as a kernel of \,$\varepsilon_{B}$,\,
+		we see that there exists a unique
+		\,$f_{2} : P \longrightarrow B^{\prime}$\,
+		such that
+		\,$f \circ f_{1} = \mu_{B} \circ f_{2}$.\,
+	\item
+		Next, we simply define
+		\,$f_{3} \,:=\, \pi^{\prime} \circ f_{2}$.\,
+	\end{itemize}
+%	\begin{center}
+%	\begin{tikzcd}
+%	K^{\prime}
+%		\arrow[dd,swap, "\kappa^{\prime}"]
+%		\arrow[rr, thick, dashed, "\mu_{K}", red]
+%	&&
+%	K
+%		\arrow[dd, "\kappa"]
+%		\arrow[rr, thick, dashed, "\varepsilon_{K}", red]
+%	&&
+%	K^{\prime\prime}
+%		\arrow[dd, "\kappa^{\prime\prime}"]
+%	\\ \\
+%	A^{\prime}
+%		\arrow[dd, swap, "f^{\prime}"]
+%		\arrow[rr, "\mu_{A}"]
+%	&&
+%	A
+%		\arrow[dd, "f"]
+%		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+%	&&
+%	A^{\prime\prime}
+%		\arrow[dd, "f^{\prime\prime}"]
+%	\\ \\
+%	B^{\prime}
+%		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+%		\arrow[dd, swap, "\pi^{\prime}"]
+%	&&
+%	B
+%		\arrow[rr, swap, "\varepsilon_{B}"]
+%		\arrow[dd, "\pi"]
+%	&&
+%	B^{\prime\prime}
+%		\arrow[dd, "\pi^{\prime\prime}"]
+%	\\ \\
+%	Q^{\prime}
+%		\arrow[rr, thick, dashed, swap, "\mu_{Q}", red]
+%	&&
+%	Q
+%		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}", red]
+%	&&
+%	Q^{\prime\prime}
+%	\end{tikzcd}
+%	\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\begin{center}
+%	\vskip -2.5cm
+%	\begin{tikzcd}
+%	&&
+%	&&&
+%	{K_{P}}
+%		\arrow[d, "\kappa_{P}"]
+%	&
+%	\\
+%	&&
+%	&
+%	{\color{white}K_{P}}
+%	&
+%	&
+%	{\color{blue}P}
+%		\arrow[dr, two heads, "\varepsilon_{P}", blue]
+%		\arrow[dddl, "f_{1}", red]
+%		\arrow[dddddlll, swap, "f_{2}", red]
+%		\arrow[dddddddlll, bend right = 110, "f_{3}", red]
+%	&
+%	\\
+%	&&
+%	K^{\prime}
+%		\arrow[dd, swap, "\kappa^{\prime}"]
+%		\arrow[rr, thick, dashed, "\mu_{K}"]
+%	&&
+%	K
+%		\arrow[dd, "\kappa"]
+%		\arrow[rr, thick, dashed, "\varepsilon_{K}"]
+%	&&
+%	K^{\prime\prime}
+%		\arrow[dd, "\kappa^{\prime\prime}"]
+%		\arrow[ddddddllll, thick, dashed, bend left = 29, "\textnormal{\Large$\delta$}", red]
+%	\\ \\
+%	&&
+%	A^{\prime}
+%		\arrow[dd, swap, "f^{\prime}"]
+%		\arrow[rr, "\mu_{A}"]
+%	&&
+%	A
+%		\arrow[dd, "f"]
+%		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+%	&&
+%	A^{\prime\prime}
+%		\arrow[dd, "f^{\prime\prime}"]
+%	\\ \\
+%	&&
+%	B^{\prime}
+%		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+%		\arrow[dd, swap, "\pi^{\prime}"]
+%	&&
+%	B
+%		\arrow[rr, swap, "\varepsilon_{B}"]
+%		\arrow[dd, "\pi"]
+%	&&
+%	B^{\prime\prime}
+%		\arrow[dd, "\pi^{\prime\prime}"]
+%	\\ \\
+%	&&
+%	Q^{\prime}
+%		\arrow[rr, thick, dashed, swap, "\mu_{Q}"]
+%	&&
+%	Q
+%		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}"]
+%	&&
+%	Q^{\prime\prime}
+%	\end{tikzcd}
+%	{\color{white}?????????????????????}
+%	\end{center}
+	Consider the following diagram:
+	\begin{center}
+	\vskip -1.5cm
+	\begin{tikzcd}
+	&&
+	&&&
+	K_{P}
+		\arrow[d, "\kappa_{P}"]
+		\arrow[dddddll, dashed, bend right = 30, swap, pos=0.30, "f_{1}^{\prime}", red]		
+	&
+	\\
+	&&
+	&
+	{\color{white}K_{P}}
+	&
+	&
+	P
+		\arrow[dr, two heads, "\varepsilon_{P}"]
+		\arrow[dddl, pos=0.60, "f_{1}", blue]
+		\arrow[dddddlll, bend right = 35, swap, pos=0.55, "f_{2}", blue]
+		\arrow[dddddddlll, bend right = 110, swap, pos=0.75, "f_{3}\,", blue]
+	&
+	\\
+	&&
+	K^{\prime}
+		\arrow[dd, swap, "\kappa^{\prime}"]
+		\arrow[rr, thick, dashed, "\mu_{K}"]
+	&&
+	K
+		\arrow[dd, "\kappa"]
+		\arrow[rr, thick, dashed, "\varepsilon_{K}"]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, "\kappa^{\prime\prime}"]
+		\arrow[ddddddllll, thick, dashed, bend left = 29, pos=0.35, "\textnormal{\Large$\delta$}", blue]
+	\\ \\
+	{\color{red}K_{0}}
+		\arrow[rr, "\kappa(\,\widetilde{\mu_{A}}\,)", red]
+	&&
+	A^{\prime}
+		\arrow[dd, swap, "f^{\prime}"]
+		\arrow[rr, "\mu_{A}"]
+		\arrow[dr, two heads, pos=0.6, "\widetilde{\mu_{A}}", red]
+	&&
+	A
+		\arrow[dd, "f"]
+		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, "f^{\prime\prime}"]
+	\\
+	&&
+	&
+	{\color{red}I_{\mu_{A}}}
+		\arrow[ur, hook, swap, pos=0.35, "\!\!\iota(\mu_{A}){\color{white}}", red]		
+		\arrow[dl, dashed, pos=0.35, "f_{2}^{\prime}", red]		
+	&&&
+	\\
+	&&
+	B^{\prime}
+		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+		\arrow[dd, swap, "\pi^{\prime}"]
+	&&
+	B
+		\arrow[rr, swap, "\varepsilon_{B}"]
+		\arrow[dd, "\pi"]
+	&&
+	B^{\prime\prime}
+		\arrow[dd, "\pi^{\prime\prime}"]
+	\\ \\
+	&&
+	Q^{\prime}
+		\arrow[rr, thick, dashed, swap, "\mu_{Q}"]
+	&&
+	Q
+		\arrow[rr, thick, dashed, swap, "\varepsilon_{Q}"]
+	&&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	{\color{white}?????????????????????}
+	\end{center}
+	Here,
+	\,$K_{P} \overset{\kappa_{P}}{\longrightarrow}$ P\,
+	is a kernel of
+	\,$P \overset{\varepsilon_{P}}{\longrightarrow} K^{\prime\prime}$.\,
+	Also, by definition, the monomorphism
+	\,$\iota(\mu_{A}) : I_{\mu_{A}} \longrightarrow A$\,
+	is an image of
+	\,$\mu_{A}$.\,
+	By Proposition \ref{FactorizationIntoImageCoimage}(ii),
+	we may take \,$\iota(\mu_{A})$\, to be any kernel of any cokernel of \,$\mu_{A}$.\,
+	By Lemma \ref{fTildeIsEpimorphism}, the accompanying morphism
+	\,$\widetilde{\mu_{A}} : A^{\prime} \longrightarrow I_{\mu_{A}}$\,
+	is an epimorphism.
+
+
+	\vskip 0.3cm
+	\textbf{Claim 1:}\;
+	\,$\varepsilon_{A} \,\circ\, \iota(\mu_{A}) \,=\, 0$.\,
+	\vskip 0.01cm
+	Proof of Claim 1:\; Simply note that
+	\,$0 \,=\, \varepsilon_{A} \,\circ\, \mu_{A} \,=\,\varepsilon_{A} \,\circ\, \iota(\mu_{A}) \,\circ\, \widetilde{\mu_{A}}$,\,
+	which implies
+	\,$\varepsilon_{A} \,\circ\, \iota(\mu_{A}) = 0$,\,
+	since \,$\widetilde{\mu_{A}}$\, is an epimorphism and can be cancelled on the right.
+	This completes the proof of Claim 1.	
+
+
+	\vskip 0.3cm
+	\textbf{Claim 2:}\;
+	The composition
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	is exact.
+	%\;\,$f_{3} \circ \kappa_{P} \,=\, 0$.\,
+	\vskip 0.01cm
+	Proof of Claim 2:\;
+	This will follow from the exactness of
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$.\,
+	Recall from Definition \ref{defnExactness} that, in general, the exactness of the composition
+	\,$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
+	means that the unique morphism \,$\theta$\, in the diagram below is an isomorphism:
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{f}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	A
+		\arrow[rr, "f"]
+		\arrow[dd, dashed, two heads, swap, "\varepsilon_{f}"]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	B
+		\arrow[rr, "g"]
+		\arrow[uurr, two heads, "\pi_{f}"]
+	&&
+	C
+	\\ \\
+	I_{f}
+		\arrow[uurr, hook, "\kappa(\pi_{f})"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	&&
+	K_{g}
+		\arrow[uu, hook, swap, "\kappa_{g}"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	Since \,$\mathfrak{A}$\, is an abelian category,
+	the morphism \,$\kappa(\pi_{f})$\, -- kernel of cokernel of \,$f$ --
+	is an image of \,$f$,\,
+	while the morphism \,$\varepsilon_{f}$\, is a coimage of \,$f$.\,
+	In other words, since \,$\mathfrak{A}$\, is an abelian category,
+	the defining diagram of exactness of
+	\,$A \overset{f}{\longrightarrow} B \overset{g}{\longrightarrow} C$\,
+	is equivalent to:
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{f}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	A
+		\arrow[rr, "f"]
+		\arrow[dd, dashed, two heads, swap, "\widetilde{f}\;"]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	B
+		\arrow[rr, "g"]
+		\arrow[uurr, two heads, "\pi_{f}"]
+	&&
+	C
+	\\ \\
+	I_{f}
+		\arrow[uurr, hook, "\iota(f)"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	&&
+	K_{g}
+		\arrow[uu, hook, swap, "\kappa_{g}"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	Applying this alternative but equivalent exactness-defining diagram to 
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	gives:	
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{\mu_{A}}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	A^{\prime}
+		\arrow[rr, "\mu_{A}"]
+		\arrow[dd, dashed, two heads, swap, "\widetilde{\mu_{A}}{\color{white}..}", blue]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	A
+		\arrow[rr, "\varepsilon_{A}"]
+		\arrow[uurr, two heads, "\pi(\mu_{A})\!\!\!"]
+	&&
+	A^{\prime\prime}
+	\\ \\
+	I_{\mu_{A}}
+		\arrow[uurr, hook, "\iota(\mu_{A})\!\!"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta_{0}", red]
+	&&
+	K_{\varepsilon_{A}}
+		\arrow[uu, hook, swap, "\;\kappa(\varepsilon_{A})"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	The exactness of
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	means that the unique morphism \,$\theta_{0}$\, in the above diagram is an isomorphism.
+	Next, we consider the composition
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$.\,
+	Noting that \,$\iota(\mu_{A})$\, is a monomorphism, and hence it is an image of itself,
+	and the identity morphism \,$\textnormal{id}_{I_{\mu_{A}}}$\, is an (accompanying) coimage of \,$\iota(\mu_{A})$,\,
+	we see that the exactness of
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	is precisely the property that the unique morphism \,$\theta_{1}$\, in the following diagram is an isomorphism:
+	\begin{center}
+	\begin{tikzcd}
+	&& && Q_{\mu_{A}}
+		\arrow[dd, dashed, "\psi"]
+	\\ \\
+	I_{\mu_{A}} %A^{\prime}
+		\arrow[rr, hook, "\iota(\mu_{A})"]
+		%\arrow[dd, dashed, two heads, swap, "\widetilde{\mu_{A}}{\color{white}..}"]
+		%\arrow[dd, dashed, two heads, swap, "\varepsilon_{\mu_{A}}{\color{white}..}", blue]
+		\arrow[dd, equal, swap, "\textnormal{id}\;"]
+		\arrow[rrrr, bend left = 30, "0", gray]
+	&&
+	A
+		\arrow[rr, "\varepsilon_{A}"]
+		\arrow[uurr, two heads, "\pi(\mu_{A})\!\!\!"]
+	&&
+	A^{\prime\prime}
+	\\ \\
+	I_{\mu_{A}}
+		\arrow[uurr, hook, "\iota(\mu_{A})\!\!"]
+		\arrow[rr, thick, dashed, swap, "\exists !\,\theta_{1}", red]
+	&&
+	K_{\mu_{A}}
+		\arrow[uu, hook, swap, "\;\kappa(\varepsilon_{A})"]
+		%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+	&&
+	%Q_{\theta}
+	\end{tikzcd}
+	\end{center}
+	Lastly, the fact that \,$\theta_{1}$\, must be an isomorphism follows from the uniqueness of
+	\,$\theta_{0}$\, and \,$\theta_{1}$\, in their respective diagrams.
+	Indeed, comparing the two immediately preceding diagrams, and noting the uniqueness of
+	\,$\theta_{0}$\, and \,$\theta_{1}$\, in their respective diagrams,
+	we see that we in fact must have \,$\theta_{0} = \theta_{1}$;\,
+	in particular, we therefore have that \,$\theta_{1} \,=\, \theta_{0}$\, is an isomorphism
+	(since \,$\theta_{0}$\, is an isomorphism, by the exactness hypothesis on
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$).
+	Thus, the exactness of
+	\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$\,
+	indeed implies the exactness of
+	\,$I_{\mu_{A}} \overset{\iota(\mu_{A})}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$.\,
+	This completes the proof of Claim 2.	
+
+
+	\vskip 0.3cm
+	\textbf{Claim 3:}\;
+	The image monomorphism \,$\iota(\mu_{A})$\, of \,$\mu_{A}$\, is a kernel of \,$\varepsilon_{A}$.\,
+	\vskip 0.01cm
+	Proof of Claim 3:\;
+	Immediate by Claim 1, Claim 2 and
+	Proposition \ref{MonomorphicFirstFactorInExactSequenceIsKernelOfSecondFactor}.
+	This completes the proof of Claim 3.
+
+	\vskip 0.3cm
+	\textbf{Claim 4:}\;
+	There exists a morphism
+	\,$f_{1}^{\prime} : K_{P} \longrightarrow I_{\mu_{A}}$\,
+	such that
+	\,$(\,f_{1} \,\circ\, \kappa_{P}\,) \,=\, \iota(\mu_{A}) \,\circ\, f_{1}^{\prime}$.\,
+	\vskip 0.01cm
+	Proof of Claim 4:\;
+	By Claim 3, \,$\iota(\mu_{A})$\, is a kernel of \,$\varepsilon_{A}$.\,
+	In order to proof Claim 4, by the universal property of
+	\,$\iota(\mu_{A})$\, as kernel of \,$\varepsilon_{A}$,\,
+	it suffices to establish that
+	\,$\varepsilon_{A} \,\circ\, (\,f_{1} \,\circ\, \kappa_{P}\,) \,=\, 0$.\,
+	To this end, simply note that
+	\,$\varepsilon_{A} \,\circ\, (\,f_{1} \,\circ\, \kappa_{P}\,)$
+	\,$=$\, (\,$\varepsilon_{A} \,\circ\, f_{1}\,) \,\circ\, \kappa_{P}$
+	\,$=$\, (\,$\kappa^{\prime\prime} \,\circ\, \varepsilon_{P}\,) \,\circ\, \kappa_{P}$
+	\,$=$\, $\kappa^{\prime\prime} \,\circ\, (\,\varepsilon_{P} \,\circ\, \kappa_{P}\,)$
+	\,$=$\, $0$.\,
+	This completes the proof of Claim 4.
+
+
+	\vskip 0.3cm
+	\textbf{Claim 5:}\;
+	There exists a morphism
+	\,$f_{2}^{\prime} : I_{\mu_{A}} \longrightarrow B^{\prime}$\,
+	such that
+	\,$f^{\prime} \,=\, f_{2}^{\prime} \,\circ\, \widetilde{\mu_{A}}$.\,
+	\vskip 0.01cm
+	Proof of Claim 5:\;
+	%Next, we establish the existence of a morphism
+	%\,$f_{2}^{\prime} : I_{\mu_{A}} \longrightarrow B^{\prime}$\,
+	%which makes the above diagram commute.
+	Recall that, since \,$\mathfrak{A}$\, is an abelian category,
+	the epimorphism \,$\widetilde{\mu_{A}}$\, is a cokernel (of some morphism),
+	and thus, by Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}(ii),
+	\,$\widetilde{\mu_{A}}$\, is a cokernel of its own kernel
+	\,$\kappa(\widetilde{\mu_{A}})$.
+
+	Next, note that
+	\,$\mu_{B} \,\circ\, f^{\prime} \,\circ\, \kappa(\widetilde{\mu_{A}})$
+	\,$=$\, $f \,\circ\, \iota(\mu_{A}) \,\circ\, \widetilde{\mu_{A}} \,\circ\, \kappa(\widetilde{\mu_{A}})$
+	\,$=$\, $f \,\circ\, \iota(\mu_{A}) \,\circ\, 0$
+	\,$=$\, $0$.\,
+	Since \,$\mu_{B}$\, is a monomorphism, it can be cancelled on the left,
+	which yields
+	\,$ f^{\prime} \circ \kappa(\widetilde{\mu_{A}}) \,=\, 0$.\,
+	Since \,$\widetilde{\mu_{A}}$\, is a cokernel of \,$\kappa(\widetilde{\mu_{A}})$\, (established in preceding paragraph),
+	we see that there exists a (unique) morphism
+	\,$f_{2}^{\prime} : I_{\mu_{A}} \longrightarrow B^{\prime}$\,
+	such that
+	\,$f^{\prime} \,=\, f_{2}^{\prime} \,\circ\, \widetilde{\mu_{A}}$.\,
+	This completes the proof of Claim 5.
+	
+
+	\vskip 0.3cm
+	\textbf{Claim 6:} \;$f_{3} \,\circ\, \kappa_{P} \,=\, 0$.
+		\vskip 0.01cm
+	Proof of Claim 6:\;
+	Note that we now have
+	\,$f_{3} \,\circ\, \kappa_{P}$
+	\,$=$\, $\pi^{\prime} \,\circ\, f_{2}^{\prime} \,\circ\, f_{1}^{\prime}$.\,
+	On the other hand,
+	\,$\pi^{\prime} \,\circ\, f_{2}^{\prime} \,\circ\, \widetilde{\mu_{A}} \,=\, \pi^{\prime} \,\circ\, f^{\prime} \,=\, 0$.\,
+	Since \,$\widetilde{\mu_{A}}$\, is an epimorphism and can be cancelled on the right,
+	we have
+	\,$\pi^{\prime} \,\circ\, f_{2}^{\prime} \,=\, 0$.\,
+	This therefore implies
+	\,$f_{3} \,\circ\, \kappa_{P}$
+	\,$=$\, $\pi^{\prime} \,\circ\, f_{2}^{\prime} \,\circ\, f_{1}^{\prime}$
+	\,$=$\, $0 \,\circ\, f_{1}^{\prime}$
+	\,$=$\, $0$.\,
+	This completes the proof of Claim 6.
+
+
+	\vskip 0.3cm
+	\textbf{Claim 7:} \;$f_{3}$\, factors through \,$\varepsilon_{P}$;\,
+	more precisely, there exists
+	\,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\,
+	such that
+	\,$f_{3} \,=\, \delta \,\circ\, \varepsilon_{P}$.
+	\vskip 0.01cm
+	Proof of Claim 7:\;
+	Since \,$\mathfrak{A}$\, is an abelian category, it is in particular conormal, i.e.,
+	every epimorphism in \,$\mathfrak{A}$\, is a cokernel.
+	By Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}(ii),
+	the epimorphism \,$\varepsilon_{P}$\, is thus a cokernel of of its own kernel \,$\kappa_{P}$.\,
+	By Claim 6, we have \,$f_{3} \,\circ\, \kappa_{P} \,=\, 0$.\,
+	Thus, the existence and uniqueness of the morphism
+	\,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\,
+	now follows by the universal property of
+	\,$\varepsilon_{P}$\, as a cokernel of \,$\kappa_{P}$.\,
+	This completes the proof of Claim 7.
+
+
+	\vskip 0.3cm
+	This construction of the (snake or connection) morphism \,$\delta$\, is now complete.
+\end{enumerate}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
