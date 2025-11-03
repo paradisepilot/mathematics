@@ -262,20 +262,22 @@ Then, the following statements are true:
 	\vskip 0.5cm
 
 \item
-	We now give the definition of
+	We first give the definition of
 	\,$\delta \,\in\, \Mor_{\mathfrak{A}}(K^{\prime\prime},Q^{\prime})$.\,
+	Consider the following extended diagram:
 	\begin{center}
 	\begin{tikzcd}
 	{\color{blue}K(\pi_{K^{\prime\prime}})}
-		\arrow[dd, "\kappa^{\prime}", swap]
+		% \arrow[dd, "\kappa^{\prime}", swap]
 		\arrow[rr, thick, hook, "\kappa(\pi_{K^{\prime\prime}})", blue]
 	&&
 	{\color{red}A \,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
-		\arrow[dd, "\,\pi_{A}", swap, thick, red]
+		\arrow[dd, red, thick, hook, "\,\pi_{A}", swap]
 		\arrow[rr, red, thick, two heads, "\pi_{K^{\prime\prime}}"]
+		\arrow[ddddll, thick, dashed, red, bend right = 20, "\theta", swap]
 	&&
 	K^{\prime\prime}
-		\arrow[dd, "\kappa^{\prime\prime}"]
+		\arrow[dd, hook, "\kappa^{\prime\prime}"]
 	\\ \\
 	A^{\prime}
 		\arrow[dd, swap, "f^{\prime}"]
@@ -290,22 +292,116 @@ Then, the following statements are true:
 	\\ \\
 	B^{\prime}
 		\arrow[rr, thick, hook, swap, "\mu_{B}"]
-		\arrow[dd, swap, "\pi^{\prime}"]
+		\arrow[dd, two heads, "\pi^{\prime}", swap]
 	&&
 	B
 		\arrow[rr, "\varepsilon_{B}", swap]
-		\arrow[dd, red, thick, "\iota_{B}"]
+		\arrow[dd, red, thick, two heads, "\iota_{B}"]
 	&&
 	B^{\prime\prime}
-		\arrow[dd, "\pi^{\prime\prime}"]
+		% \arrow[dd, "\pi^{\prime\prime}"]
 	\\ \\
 	Q^{\prime}
 		\arrow[rr, red, thick, hook, "\iota_{Q^{\prime}}", swap]
 	&&
 	{\color{red}Q^{\prime} \sqcup_{B^{\prime}}\! B}
-		\arrow[rr, red, thick, "\varepsilon_{Q}", swap]
+		\arrow[rr, red, thick, two heads, "\pi(\iota_{Q^{\prime}}){\color{white}..}", swap]
 	&&
-	Q^{\prime\prime}
+	Q(\iota_{Q^{\prime}})
+	\end{tikzcd}
+	\end{center}
+	First, note:
+	\begin{itemize}
+	\item
+		By hypothesis, \,$\varepsilon_{A}$\, is an epimorphism; hence,
+		\,$\pi_{K^{\prime\prime}}$\, is an epimorphism
+		by Proposition \ref{FiberProductsPreserveEpimorphismsInAbelianCategories}(i).
+	\item
+		By hypothesis,
+		\,$\iota_{Q^{\prime}}$\, is a monomorphism; hence
+		\,$\mu_{B}$\, is a monomorphism
+		by Proposition \ref{FiberProductsPreserveEpimorphismsInAbelianCategories}(ii).
+	\item
+		Being a kernel,
+		\,$\kappa^{\prime\prime}$\, is a monomorphism; hence
+		\,$\pi_{A}$\, is a monomorphism
+		by Proposition \ref{FiberProductsPreserveMonomorphisms}(i).
+	\item
+		Being a cokernel,
+		\,$\pi^{\prime}$\, is an epimorphism; hence
+		\,$\iota_{B}$\, is an epimorphism
+		by Proposition \ref{FiberProductsPreserveMonomorphisms}(ii).
+	\end{itemize}
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	There exists a unique
+	\,$\theta \in \Mor_{\mathfrak{A}}(\,A\,\sqcap_{A^{\prime\prime}} K^{\prime\prime}\,,\,B^{\prime}\,)$\,
+	such that
+	\,$f \,\circ\, \pi_{A} \,=\, \mu_{B} \,\circ\, \theta$.\,
+	% \,$\delta \in \Mor_{\mathfrak{A}}(\,K^{\prime\prime}\,,\,Q^{\prime}\,)$\,
+	% such that
+	% \,$\iota_{B} \,\circ\, f \,\circ\, \pi_{A} \,=\, \iota_{Q^{\prime}} \,\circ\, \delta \,\circ\, \pi_{K^{\prime\prime}}$\,
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 1:\;\;
+	The monomorphicity hypothesis on \,$\mu_{B}$\, and the exactness hypothesis at \,$B$\,
+	together imply that
+	\,$\mu_{B}$\, is a kernel of \,$\varepsilon_{B}$,\,
+	by Proposition \ref{MonomorphicFirstFactorInExactSequenceIsKernelOfSecondFactor}.
+	On the other hand, observe that
+	\begin{eqnarray*}
+	\varepsilon_{B} \,\circ\, (\,f \,\circ\, \pi_{A}\,)
+	& = &
+		f^{\prime\prime} \,\circ\, \varepsilon_{A} \,\circ\, \pi_{A}
+	\;\; = \;\;
+		f^{\prime\prime} \,\circ\, \kappa^{\prime\prime} \,\circ\, \pi_{\kappa^{\prime\prime}}
+	\;\; = \;\;
+		0 \,\circ\, \pi_{\kappa^{\prime\prime}}
+	\;\; = \;\;
+		0
+	\end{eqnarray*}
+	Hence, the universal property of \,$\mu_{B}$\, as a kernel of \,$\varepsilon_{B}$\,
+	implies the existence of a unique
+	\,$\theta \in \Mor_{\mathfrak{A}}(\,A\,\sqcap_{A^{\prime\prime}} K^{\prime\prime}\,,\,B^{\prime}\,)$\,
+	such that
+	\,$f \,\circ\, \pi_{A} \,=\, \mu_{B} \,\circ\, \theta$.\,
+	This proves Claim 1.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\quad
+	$(\,\pi^{\prime} \,\circ\, \theta\,) \,\circ\, \kappa(\pi_{K^{\prime\prime}}) \; = \; 0$
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 2:\;\;
+	This completes the proof of Claim 2.
+
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 3:}\quad
+	$(\,\pi^{\prime} \,\circ\, \theta\,) \,\circ\, \kappa(\pi_{K^{\prime\prime}}) \; = \; 0$
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 3:\;\;
+	\begin{center}
+	\begin{tikzcd}
+	& & & {\color{red}K^{\prime\prime}}
+		\arrow[dd, thick, dashed, "\;\exists !\,\delta", blue]
+	\\
+	K(\pi_{K^{\prime\prime}}) 
+		\arrow[rr, hook, "{\color{white}.}\kappa(\pi_{K^{\prime\prime}})"]
+		\arrow[rrru, gray, bend  left = 15, "0"]
+		\arrow[rrrd, blue, bend right = 15, "0", swap]
+		& &
+		{\color{red}A\,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
+		\arrow[rd, blue, thick, "\pi^{\prime}\,\circ\,\theta", swap]
+		\arrow[ur, red, "\pi_{K^{\prime\prime}}"]
+		&
+	\\
+	& & & {\color{blue}Q^{\prime}}
 	\end{tikzcd}
 	\end{center}
 
