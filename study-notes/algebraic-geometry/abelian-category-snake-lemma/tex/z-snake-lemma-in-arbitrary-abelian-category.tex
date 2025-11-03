@@ -378,7 +378,6 @@ Then, the following statements are true:
 	Proof of Claim 2:\;\;
 	This completes the proof of Claim 2.
 
-
 	\vskip 0.3cm
 	\noindent
 	\textbf{Claim 3:}\quad
@@ -389,8 +388,21 @@ Then, the following statements are true:
 	\vskip 0.01cm
 	\noindent
 	Proof of Claim 3:\;\;
-	Recall that \,$\pi_{K^{\prime\prime}}$\, is a cokernel of its kernel
-	\,$\kappa(\pi_{K^{\prime\prime}})$ [proof?].\,
+	Since \,$\mathfrak{A}$\, is an abelian category, every epimorphism in \,$\mathfrak{A}$\,
+	is a cokernel.
+	Since \,$\pi_{K^{\prime\prime}}$\, is an epimorphism (established above), it is a cokernel.
+	Thus, by Lemma \ref{AKernelsTheKernelOfItsOwnCokernel}(ii),
+	\,$\pi_{K^{\prime\prime}}$\, is a cokernel of its kernel
+	\,$\kappa(\pi_{K^{\prime\prime}})$.\,
+	Therefore, Claim 2 and the universal property of \,$\pi_{K^{\prime\prime}}$\, as a cokernel of
+	\,$\kappa(\pi_{K^{\prime\prime}})$\,
+	together imply that there exists a unique
+	\,$\delta \in \Mor_{\mathfrak{A}}(\,K^{\prime\prime}\,,\,Q^{\prime}\,)$\,
+	such that
+	\,$\pi^{\prime} \,\circ\, \theta \;=\; \delta \,\circ\, \pi_{K^{\prime\prime}}$.\,
+	This completes the proof of Claim 3.
+
+	\vskip 0.3cm
 	\begin{center}
 	\begin{tikzcd}
 	& & & {\color{red}K^{\prime\prime}}
