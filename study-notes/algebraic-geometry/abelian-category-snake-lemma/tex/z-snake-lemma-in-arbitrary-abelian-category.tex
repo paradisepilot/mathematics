@@ -267,21 +267,27 @@ Then, the following statements are true:
 	Consider the following extended diagram:
 	\begin{center}
 	\begin{tikzcd}
-	{\color{blue}K(\pi_{K^{\prime\prime}})}
-		% \arrow[dd, "\kappa^{\prime}", swap]
+	&&{\color{blue}K(\pi_{K^{\prime\prime}})}
 		\arrow[rr, thick, hook, "\kappa(\pi_{K^{\prime\prime}})", blue]
+		% \arrow[dd, "\kappa^{\prime}", swap]
 	&&
-	{\color{red}A \,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
-		\arrow[dd, red, thick, hook, "\,\pi_{A}", swap]
-		\arrow[rr, red, thick, two heads, "\pi_{K^{\prime\prime}}"]
-		\arrow[ddddll, thick, dashed, red, bend right = 20, "\theta", swap]
+	{\color{blue}A \,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
+		\arrow[dd, blue, thick, hook, "\,\pi_{A}", swap]
+		\arrow[rr, blue, thick, two heads, "\pi_{K^{\prime\prime}}"]
+		\arrow[ddddll, blue, thick, dashed, bend right = 5, "\theta_{1}", swap]
 	&&
 	K^{\prime\prime}
 		\arrow[dd, hook, "\kappa^{\prime\prime}"]
+		\arrow[ddddddllll, red, thick, dashed, bend left = 30, "\textnormal{\LARGE$\delta$}"]
 	\\ \\
 	A^{\prime}
-		\arrow[dd, swap, "f^{\prime}"]
-		\arrow[rr, "\mu_{A}"]
+		\arrow[ddrr, "f^{\prime}", swap]
+		\arrow[rr, two heads, "{\color{white}...}\overset{{\color{white}.}}{\widetilde{\mu_{A}}}", swap]
+		\arrow[rrrr, bend left = 20, "\mu_{A}"]
+	&&
+	I(\mu_{A})\,\cong\,K(\varepsilon_{A})
+		\arrow[rr, hook, "\kappa(\varepsilon_{A})", swap]
+		\arrow[dd, blue, thick, dashed, "\theta_{2}", swap]
 	&&
 	A
 		\arrow[dd, "f"]
@@ -290,21 +296,21 @@ Then, the following statements are true:
 	A^{\prime\prime}
 		\arrow[dd, "f^{\prime\prime}"]
 	\\ \\
-	B^{\prime}
+	&&B^{\prime}
 		\arrow[rr, thick, hook, swap, "\mu_{B}"]
 		\arrow[dd, two heads, "\pi^{\prime}", swap]
 	&&
 	B
 		\arrow[rr, "\varepsilon_{B}", swap]
-		\arrow[dd, red, thick, two heads, "\iota_{B}"]
+		\arrow[dd, blue, thick, two heads, "\iota_{B}"]
 	&&
 	B^{\prime\prime}
 		% \arrow[dd, "\pi^{\prime\prime}"]
 	\\ \\
-	Q^{\prime}
-		\arrow[rr, red, thick, hook, "\iota_{Q^{\prime}}", swap]
+	&&Q^{\prime}
+		\arrow[rr, blue, thick, hook, "\iota_{Q^{\prime}}", swap]
 	&&
-	{\color{red}Q^{\prime} \sqcup_{B^{\prime}}\! B}
+	{\color{blue}Q^{\prime} \sqcup_{B^{\prime}}\! B}
 		\arrow[rr, blue, thick, two heads, "\pi(\iota_{Q^{\prime}}){\color{white}..}", swap]
 	&&
 	{\color{blue}Q(\iota_{Q^{\prime}})}
@@ -337,9 +343,9 @@ Then, the following statements are true:
 	\noindent
 	\textbf{Claim 1:}\quad
 	There exists a unique
-	\,$\theta \in \Mor_{\mathfrak{A}}(\,A\,\sqcap_{A^{\prime\prime}} K^{\prime\prime}\,,\,B^{\prime}\,)$\,
+	\,$\theta_{1} \in \Mor_{\mathfrak{A}}(\,A\,\sqcap_{A^{\prime\prime}} K^{\prime\prime}\,,\,B^{\prime}\,)$\,
 	such that
-	\,$f \,\circ\, \pi_{A} \,=\, \mu_{B} \,\circ\, \theta$.\,
+	\,$f \,\circ\, \pi_{A} \,=\, \mu_{B} \,\circ\, \theta_{1}$.\,
 	% \,$\delta \in \Mor_{\mathfrak{A}}(\,K^{\prime\prime}\,,\,Q^{\prime}\,)$\,
 	% such that
 	% \,$\iota_{B} \,\circ\, f \,\circ\, \pi_{A} \,=\, \iota_{Q^{\prime}} \,\circ\, \delta \,\circ\, \pi_{K^{\prime\prime}}$\,
@@ -366,18 +372,55 @@ Then, the following statements are true:
 	\end{eqnarray*}
 	Hence, the universal property of \,$\mu_{B}$\, as a kernel of \,$\varepsilon_{B}$\,
 	implies the existence of a unique
-	\,$\theta \in \Mor_{\mathfrak{A}}(\,A\,\sqcap_{A^{\prime\prime}} K^{\prime\prime}\,,\,B^{\prime}\,)$\,
+	\,$\theta_{1} \in \Mor_{\mathfrak{A}}(\,A\,\sqcap_{A^{\prime\prime}} K^{\prime\prime}\,,\,B^{\prime}\,)$\,
 	such that
-	\,$f \,\circ\, \pi_{A} \,=\, \mu_{B} \,\circ\, \theta$.\,
+	\,$f \,\circ\, \pi_{A} \,=\, \mu_{B} \,\circ\, \theta_{1}$.\,
 	This proves Claim 1.
 
 	\vskip 0.3cm
 	\noindent
 	\textbf{Claim 2:}\quad
-	$(\,\pi^{\prime} \,\circ\, \theta\,) \,\circ\, \kappa(\pi_{K^{\prime\prime}}) \; = \; 0$
+	$(\,\pi^{\prime} \,\circ\, \theta_{1}\,) \,\circ\, \kappa(\pi_{K^{\prime\prime}}) \; = \; 0$
 	\vskip 0.01cm
 	\noindent
 	Proof of Claim 2:\;\;
+	First, recall from the proof of Claim 1 that
+	\,$\mu_{B}$\, is a kernel of \,$\varepsilon_{B}$.\,
+	Now, observe that:
+	\begin{eqnarray*}
+	\varepsilon_{B} \circ \left(\,f \overset{{\color{white}1}}{\circ} \kappa(\varepsilon_{A})\,\right)
+	& = &
+		\left(\,\varepsilon_{B} \overset{{\color{white}1}}{\circ} f \,\right) \circ\, \kappa(\varepsilon_{A})
+	\;\; = \;\;
+		\left(\,f^{\prime\prime}\overset{{\color{white}1}}{\circ}\varepsilon_{A}\,\right) \circ\, \kappa(\varepsilon_{A})
+	\;\; = \;\;
+		f^{\prime\prime}\,\circ\left(\,\varepsilon_{A}\overset{{\color{white}1}}{\circ}\kappa(\varepsilon_{A})\,\right)
+	\;\; = \;\;
+		f^{\prime\prime}\,\circ\,0 %\left(\,\overset{{\color{white}.}}{0}\,\right)
+	\\
+	& = &
+		0
+	\end{eqnarray*}
+	Hence, the universal property of \,$\mu_{B}$\, as a kernel of \,$\varepsilon_{B}$\,
+	implies the existence of a unique
+	\,$\theta_{2} \in \Mor_{\mathfrak{A}}(\,K(\varepsilon_{A})\,,\,B^{\prime}\,)$\,
+	such that
+	\,$f \,\circ\, \kappa(\varepsilon_{A}) \,=\, \mu_{B} \,\circ\, \theta_{2}$.\,
+	Now, note that we furthermore have:
+	\,$f^{\prime} \,=\, \theta_{2} \,\circ\, \widetilde{\mu_{A}}$\,;\,
+	indeed, simply note:
+	\begin{eqnarray*}
+	\mu_{B} \,\circ\, f^{\prime}
+	& = &
+		f \,\circ\, \mu_{A}
+	\;\; = \;\;
+		f \,\circ\, \kappa(\varepsilon_{A}) \,\circ\, \widetilde{\mu_{A}}
+	\;\; = \;\;
+		\mu_{B} \,\circ\, \theta_{2} \,\circ\, \widetilde{\mu_{A}},
+	\end{eqnarray*}
+	which then implies
+	\,$f^{\prime} \,=\, \theta_{2} \,\circ\, \widetilde{\mu_{A}}$,\,
+	by the monomorphicity of \,$\mu_{B}$.\,
 	This completes the proof of Claim 2.
 
 	\vskip 0.3cm
@@ -386,7 +429,7 @@ Then, the following statements are true:
 	There exists a unique
 	\,$\delta \in \Mor_{\mathfrak{A}}(\,K^{\prime\prime}\,,\,Q^{\prime}\,)$\,
 	such that
-	\,$\pi^{\prime} \,\circ\, \theta \;=\; \delta \,\circ\, \pi_{K^{\prime\prime}}$\,
+	\,$\pi^{\prime} \,\circ\, \theta_{1} \;=\; \delta \,\circ\, \pi_{K^{\prime\prime}}$\,
 	\vskip 0.01cm
 	\noindent
 	Proof of Claim 3:\;\;
@@ -401,7 +444,7 @@ Then, the following statements are true:
 	together imply that there exists a unique
 	\,$\delta \in \Mor_{\mathfrak{A}}(\,K^{\prime\prime}\,,\,Q^{\prime}\,)$\,
 	such that
-	\,$\pi^{\prime} \,\circ\, \theta \;=\; \delta \,\circ\, \pi_{K^{\prime\prime}}$.\,
+	\,$\pi^{\prime} \,\circ\, \theta_{1} \;=\; \delta \,\circ\, \pi_{K^{\prime\prime}}$.\,
 	This completes the proof of Claim 3.
 
 	\vskip 0.3cm
