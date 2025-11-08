@@ -1726,61 +1726,86 @@ Let
 \item
 	$\kappa_{g}$\, a kernel of \,$g$.
 \end{itemize}
-Then,
+Then, the following statements are true:
 \begin{enumerate}
 \item
-	there exists a unique morphism \,$\varepsilon_{f} \in \Mor_{\mathfrak{C}}(A,I_{f})$\,
-	such that \,$f \,=\, \kappa(\pi_{f}) \circ \varepsilon_{f}$,\, and
+	There exists a unique morphism \,$\varepsilon_{f} \in \Mor_{\mathfrak{C}}(A,I_{f})$\,
+	such that \,$f \,=\, \kappa(\pi_{f}) \circ \varepsilon_{f}$.
 \item
-	the morphism \,$\varepsilon_{f}$\, is a coimage of \,$f$,\, and
-	it is a cokernel of a kernel of \,$f$,\, and
+	The morphism \,$\varepsilon_{f}$\, is a coimage of \,$f$,\, and
+	it is a cokernel of a kernel of \,$f$.
 \item
-	there exists a unique morphism \,$\theta \in \Mor_{\mathfrak{C}}(I_{f},K_{g})$\,
-	such that \,$\kappa(\pi_{f}) \,=\, \kappa_{g} \circ \theta$.
+	There exists a unique morphism \,$\theta \in \Mor_{\mathfrak{C}}(I_{f},K_{g})$\,
+	such that \,$\kappa(\pi_{f}) \,=\, \kappa_{g} \circ \theta$.\,
+	Furthermore, this morphism \,$\theta$\, is a monomorphism.
 \end{enumerate}
 \begin{center}
 \begin{tikzcd}
-&& && Q_{f}
-	\arrow[dd, dashed, "\psi"]
+&& && {\color{blue}Q_{f}}
+	\arrow[dd, blue, thick, dashed, "\,\exists !\,\psi_{g}"]
 \\ \\
 A
-	\arrow[rr, "f"]
-	\arrow[dd, thick, dashed, two heads, swap, "\varepsilon_{f}", blue]
+	\arrow[rr, thick, "f"]
+	\arrow[dd, red, thick, dashed, two heads, "\varepsilon_{f}", swap]
 	\arrow[rrrr, bend left = 30, "0", gray]
 &&
 B
-	\arrow[rr, "g"]
-	\arrow[uurr, two heads, "\pi_{f}"]
+	\arrow[rr, thick, "g"]
+	\arrow[uurr, blue, thick, two heads, "\pi_{f}"]
 &&
 C
 \\ \\
 I_{f}
-	\arrow[uurr, hook, "\kappa(\pi_{f})"]
-	\arrow[rr, thick, dashed, swap, "\exists !\,\theta", red]
+	\arrow[uurr, blue, thick, hook, "\kappa(\pi_{f})"]
+	\arrow[rr, red, thick, hook, dashed, "\exists !\,\theta", swap]
 &&
-K_{g}
-	\arrow[uu, hook, swap, "\kappa_{g}"]
+{\color{blue}K_{g}}
+	\arrow[uu, blue, thick, hook, "\kappa_{g}", swap]
 \end{tikzcd}
 \end{center}
 \end{proposition}
 \proof
 Note that \,(i)\, and \,(ii)\, are immediate consequences of Proposition \ref{FactorizationIntoImageCoimage}.
 Thus, we need only prove \,(iii).\,
-To this end, note that, by the universal property of \,$\kappa_{g}$\, as a kernel of \,$g$,\,
+To this end, first note that, since
+\,$g \,\circ\, f \,=\, 0$,\,
+there exists a unique morphism
+\,$\psi_{g} \in \Mor_{\mathfrak{C}}(Q_{f},C)$\,
+such that
+\,$g \,=\, \psi_{g} \,\circ\, \pi_{f}$,\,
+by the universal property of \,$\pi_{f}$\, as a cokernel of \,$f$.\,
+Next, note that, by the universal property of \,$\kappa_{g}$\, as a kernel of \,$g$,\,
 the desired unique morphism \,$\theta$\, will exist provided that \,$g \circ \kappa(\pi_{f}) = 0$,\,
 which in turn easily follows from:
 \begin{equation*}
 g \circ \kappa(\pi_{f})
 \;\; = \;\;
-	\left(\,\psi \overset{{\color{white}!}}{\circ} \pi_{f}\,\right) \circ \kappa(\pi_{f})
+	\left(\,\psi_{g} \overset{{\color{white}!}}{\circ} \pi_{f}\,\right) \circ \kappa(\pi_{f})
 \;\; = \;\;
-	\psi \circ \left(\,\pi_{f} \overset{{\color{white}!}}{\circ} \kappa(\pi_{f})\,\right)
+	\psi_{g} \,\circ \left(\,\pi_{f} \overset{{\color{white}!}}{\circ} \kappa(\pi_{f})\,\right)
 \;\; = \;\;
-	\psi \circ 0
+	\psi_{g} \,\circ\, 0
 \;\; = \;\;
 	0
 \end{equation*}
-This completes the proof of the Proposition.
+It remains only to show that \,$\theta$\, is a monomorphism.
+To this end, simply observe:
+\begin{eqnarray*}
+\theta \circ h_{1} \,=\, \theta \circ h_{2}
+& \Longrightarrow &
+	\kappa_{g} \circ \theta \circ h_{1} \,=\, \kappa_{g} \circ \theta \circ h_{2}
+\\
+& \Longrightarrow &
+	\kappa(\pi_{f}) \circ h_{1} \,=\, \kappa(\pi_{f}) \circ h_{2}\,,
+	\quad
+	\textnormal{since \,$\kappa(\pi_{f}) \,=\, \kappa_{g} \circ \theta$,\, by construction of $\theta$}
+\\
+& \Longrightarrow &
+	h_{1} \,=\, h_{2}\,,
+	\quad
+	\textnormal{since kernels are monomorphisms, by Proposition \ref{KernelsAreMonoCokernelsAreEpi}}
+\end{eqnarray*}
+This proves that \,$\theta$\, is indeed a monomorphism and completes the proof of the Proposition.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
