@@ -107,6 +107,27 @@ Then, the following statements are true:
 	Q^{\prime\prime}
 	\end{tikzcd}
 	\end{center}
+	Furthermore, the two compositions
+	\begin{tikzcd}
+	K^{\prime}
+		\arrow[r, "\mu_{K}"]
+	&
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+	\end{tikzcd}
+	and
+	\begin{tikzcd}
+	Q^{\prime}
+		\arrow[r, "\mu_{Q}"]
+	&
+	Q
+		\arrow[r, "\varepsilon_{Q}"]
+	&
+	Q^{\prime\prime}
+	\end{tikzcd}
+	are exact.
 \item
 	There exists a morphism \,$\delta : K^{\prime\prime} \longrightarrow Q^{\prime}$\, such that
 	\begin{center}
@@ -195,7 +216,7 @@ Then, the following statements are true:
 \proof
 \begin{enumerate}
 \item
-	\underline{Existence of $\mu_{K} \in \Mor_{\mathfrak{A}}(K^{\prime},K)$}
+	\underline{Existence of \,$\mu_{K} \in \Mor_{\mathfrak{A}}(K^{\prime},K)$}
 	\vskip -0.01cm
 	First, note that
 	\,$f \circ (\,\mu_{A} \circ \kappa^{\prime}\,)$
@@ -209,9 +230,9 @@ Then, the following statements are true:
 	as a kernel of
 	\,$f : A \longrightarrow B$\,
 	now implies the existence (and uniqueness) of $\mu_{K} : K^{\prime} \longrightarrow K$.
-	\vskip 0.3cm
 
-	\underline{Existence of $\varepsilon_{K} \in \Mor_{\mathfrak{A}}(K,K^{\prime\prime})$}
+	\vskip 0.3cm
+	\underline{Existence of \,$\varepsilon_{K} \in \Mor_{\mathfrak{A}}(K,K^{\prime\prime})$}
 	\vskip -0.01cm
 	This proof is completely analogous as the preceding one.
 	More precisely, note that
@@ -227,9 +248,9 @@ Then, the following statements are true:
 	\,$f^{\prime\prime} : A^{\prime\prime} \longrightarrow B^{\prime\prime}$\,
 	now implies the existence (and uniqueness) of
 	\,$\varepsilon_{K} : K \longrightarrow K^{\prime\prime}$.
-	\vskip 0.3cm
 
-	\underline{Existence of $\mu_{Q} \in \Mor_{\mathfrak{A}}(Q^{\prime},Q)$}
+	\vskip 0.3cm
+	\underline{Existence of \,$\mu_{Q} \in \Mor_{\mathfrak{A}}(Q^{\prime},Q)$}
 	\vskip -0.01cm
 	Note that
 	\,$(\,\pi \circ \mu_{B}\,) \circ f^{\prime}$
@@ -244,9 +265,9 @@ Then, the following statements are true:
 	\,$f^{\prime} : A^{\prime} \longrightarrow B^{\prime}$\,
 	now implies the existence (and uniqueness) of
 	\,$\mu_{Q} : Q^{\prime} \longrightarrow Q$.
-	\vskip 0.3cm
 
-	\underline{Existence of $\varepsilon_{Q} \in \Mor_{\mathfrak{A}}(Q,Q^{\prime\prime})$}
+	\vskip 0.3cm
+	\underline{Existence of \,$\varepsilon_{Q} \in \Mor_{\mathfrak{A}}(Q,Q^{\prime\prime})$}
 	\vskip -0.01cm
 	Note that
 	\,$(\,\pi^{\prime\prime} \circ \varepsilon_{B}\,) \circ f$
@@ -261,6 +282,11 @@ Then, the following statements are true:
 	\,$f : A \longrightarrow B$\,
 	now implies the existence (and uniqueness) of
 	\,$\varepsilon_{Q} : Q \longrightarrow Q^{\prime\prime}$.
+
+	\vskip 0.3cm
+	\underline{Exactness of{\color{white}.q}$K^{\prime}\longrightarrow\, K \,\longrightarrow\, K^{\prime\prime}$}
+	\vskip -0.01cm
+	Note that ...
 	\vskip 0.5cm
 
 \item
@@ -271,7 +297,7 @@ Then, the following statements are true:
 	\begin{tikzcd}
 	&&{\color{blue}K(\pi_{K^{\prime\prime}})}
 		\arrow[rr, thick, hook, "\kappa(\pi_{K^{\prime\prime}})", blue]
-		\arrow[dd, blue, thick, double, "\alpha", swap]
+		\arrow[dd, blue, thick, hook, "\alpha", swap]
 	&&
 	{\color{blue}A \,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
 		\arrow[dd, blue, thick, hook, "\,\pi_{A}", swap]
@@ -339,6 +365,75 @@ Then, the following statements are true:
 		\,$\pi^{\prime}$\, is an epimorphism; hence
 		\,$\iota_{B}$\, is an epimorphism
 		by Proposition \ref{FiberProductsPreserveMonomorphisms}(ii).
+	\item
+		By Lemma \ref{FiberProductKernalMonomorphism},
+		there exists a unique
+		\,$\alpha \,\in\, \Mor_{\mathfrak{A}}\!\left(\,
+			K(\pi_{K^{\prime\prime}})
+			\, \overset{{\color{white}\textnormal{\large1}}}{,} \,
+			K(\varepsilon_{A})
+			\,\right)$\,
+		such that
+		\,$\kappa(\varepsilon_{A}) \,\circ\, \alpha \;=\; \pi_{A} \,\circ\, \kappa(\pi_{K^{\prime\prime}})$.
+		Since \,$\kappa^{\prime\prime}$\, is a monomorphism,
+		it follows by Lemma \ref{FiberProductKernalMonomorphism} again that
+		\,$\alpha$\, is furthermore a monomorphism.
+	\item
+		By Proposition \ref{propositionHomology}, the fact that
+		\,$\varepsilon_{A} \,\circ\, \mu_{A} \,=\, 0$\,
+		(this is part of the exactness hypothesis on\\
+		\begin{tikzcd}
+		A^{\prime}
+			\arrow[r, "\mu_{A}"]
+		&
+		A
+			\arrow[r, "\varepsilon_{A}"]
+		&
+		A^{\prime\prime}
+		\end{tikzcd}\!)
+		implies that there exist unique morphisms
+		\,$\widetilde{\mu_{A}}$\,
+		and
+		\,$\theta$\,
+		such that the following diagram commutes:
+		\begin{center}
+		\begin{tikzcd}
+		&& && Q(\mu_{A})
+			\arrow[dd, thick, dashed]
+		\\ \\
+		A^{\prime}
+			\arrow[rr, thick, "\mu_{A}"]
+			\arrow[dd, red, thick, dashed, two heads, swap, "\widetilde{\mu_{A}}"]
+			\arrow[rrrr, thick, bend left = 20, "0", gray]
+		&&
+		A
+			\arrow[rr, thick, "\varepsilon_{A}"]
+			\arrow[uurr, two heads, "\pi(\mu_{A})"]
+		&&
+		A^{\prime\prime}
+		\\ \\
+		I(\mu_{A})
+			\arrow[uurr, hook, "\kappa(\pi(\mu_{A}))"]
+			\arrow[rr, red, thick, dashed, "\exists !\,\theta", swap]
+		&&
+		K(\varepsilon_{A})
+			\arrow[uu, thick, hook, "\kappa(\varepsilon_{A})", swap]
+			\arrow[rr, thick, two heads, "\pi_{\theta}", swap]
+		&&
+		Q_{\theta}
+		\end{tikzcd}
+		\end{center}
+		Lastly, the exactness hypothesis on
+		\begin{tikzcd}
+		A^{\prime}
+			\arrow[r, "\mu_{A}"]
+		&
+		A
+			\arrow[r, "\varepsilon_{A}"]
+		&
+		A^{\prime\prime}
+		\end{tikzcd}
+		is equivalent to the assumption that \,$\theta$\, is in addition an isomorphism.
 	\end{itemize}
 
 	\vskip 0.3cm
@@ -438,7 +533,10 @@ Then, the following statements are true:
 		\\
 		& = &
 			f \,\circ\, \kappa(\varepsilon_{A}) \,\circ\, \alpha\,,
-			\quad\textnormal{by Lemma 8.3.11(a)(i), p.180, \cite{kashiwara2005categories}}
+			\quad\textnormal{by
+				Lemma \ref{FiberProductKernalMonomorphism};
+				see also Lemma 8.3.11(a)(i), p.180, \cite{kashiwara2005categories}
+				}
 		\\
 		& = &
 			\mu_{B} \,\circ\, \theta_{2} \,\circ\, \alpha\,,
