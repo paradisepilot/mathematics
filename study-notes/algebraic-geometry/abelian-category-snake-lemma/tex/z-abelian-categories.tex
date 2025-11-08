@@ -785,17 +785,17 @@ as required.
 
 \vskip 0.5cm
 \begin{proposition}[Fiber products preserve epimorphisms in {\color{red}abelian} categories; Lemma 2.4.3, p.45, \cite{Yekutieli2020}]
-\mbox{}
 \label{FiberProductsPreserveEpimorphismsInAbelianCategories}
+\mbox{}
 \vskip -0.3cm
 \noindent
 Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
 \begin{enumerate}
 \item
 	\vskip -0.1cm
-	Suppose that the fiber product
+	Let
 	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$\,
-	exists for two morphisms
+	be a fiber product of two morphisms
 	\,$f_{1} \in \Mor_{\mathfrak{A}}(X_{1},Y)$\,
 	and
 	\,$f_{2} \in \Mor_{\mathfrak{A}}(X_{2},Y)$,\,
@@ -826,9 +826,9 @@ Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
 	If \,$f_{1}$\, is an {\color{red}epi}morphism, then \,$\pi_{2}$\, is an {\color{red}epi}morphism.
 	\end{itemize}
 \item
-	Dually, suppose that the fiber coproduct
+	Dually, let
 	\,$\left(\,X_{1}\overset{{\color{white}.}}{\sqcup_{Y}}\!X_{2} \,,\, \iota_{1} \,,\, \iota_{2}\,\right)$\,
-	exists for two morphisms
+	be a fiber coproduct of two morphisms
 	\,$f_{1} \in \Mor_{\mathfrak{A}}(Y,X_{1})$\,
 	and
 	\,$f_{2} \in \Mor_{\mathfrak{A}}(Y,X_{2})$,\,
@@ -1064,6 +1064,165 @@ Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
 
 \item
 	This follows by dualizing the arguments given above for (i).
+	\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{lemma}[Lemma 8.3.11(a)(i), p.180, \cite{kashiwara2005categories}]
+\label{FiberProductKernalMonomorphism}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$\mathfrak{A}$\, be an {\color{red}abelian} category,
+\item
+	$\left(\,X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2} \,,\, \pi_{1} \,,\, \pi_{2}\,\right)$\,
+	is a fiber product of two morphisms
+	\,$f_{1} \in \Mor_{\mathfrak{A}}(X_{1},Y)$\,
+	and
+	\,$f_{2} \in \Mor_{\mathfrak{A}}(X_{2},Y)$,\,
+	where
+	\,$X_{1},\, X_{2},\, Y,\, X_{1}\sqcap_{Y}\!X_{2} \,\in\, \Obj(\mathfrak{C})$,\,
+	\,$\pi_{1} \in \Mor_{\mathfrak{A}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{1}\,)$,\,
+	\,$\pi_{2} \in \Mor_{\mathfrak{A}}(\,X_{1}\sqcap_{Y}\!X_{2}\,,\,X_{2}\,)$,\,
+\item
+	$
+	\kappa(\pi_{1})
+	\,\in\,
+	\Mor_{\mathfrak{A}}\!\left(\,
+		K(\pi_{1})
+		\,,\,
+		X_{1}\overset{{\color{white}.}}{\sqcap_{Y}}\!X_{2}
+		\,\right)
+	$\,
+	is a kernel of \,$\pi_{1}$,\, and
+\item
+	$
+	\kappa(f_{2})
+	\,\in\,
+	\Mor_{\mathfrak{A}}\!\left(\,
+		\overset{{\color{white}.}}{K(f_{2})}
+		\,,\,
+		X_{2}
+		\,\right)
+	$\,
+	be a kernel of \,$f_{2}$.\,
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	There exists a unique
+	\;$\alpha \,\in\, \Mor_{\mathfrak{A}}\!\left(\,\overset{{\color{white}.}}{K(\pi_{1})}\,,\,K(f_{2})\,\right)$\;
+	such that
+	\;$\kappa(f_{2}) \,\circ\, \alpha \,=\, \pi_{2} \,\circ\, \kappa(\pi_{1})$.\;
+	\begin{center}
+	\begin{tikzcd}
+	K(\pi_{1})
+		\arrow[rr, thick, hook, "\kappa(\pi_{1})"]
+		\arrow[dd, red, thick, dashed, "\alpha", swap]
+	&&
+	{\color{black}X_{1} \sqcap_{Y}\! X_{2}}
+		\arrow[rr, thick, "\pi_{1}"]
+		\arrow[dd, thick, "\pi_{2}", swap]
+	&&
+	X_{1}
+		\arrow[dd, thick, "f_{1}"]
+	\\ \\
+	K(f_{2})
+		\arrow[rr, thick, hook, "\kappa(f_{2})", swap]
+	&&
+	X_{2}
+		\arrow[rr, thick, "f_{2}", swap]
+	&&
+	Y
+	\end{tikzcd}
+	\end{center}
+\item
+	If \,$f_{1}$\, is furthermore a monomorphism,
+	then \,$\alpha$\, is also a monomorphism.
+	\begin{center}
+	\begin{tikzcd}
+	K(\pi_{1})
+		\arrow[rr, thick, hook, "\kappa(\pi_{1})"]
+		\arrow[dd, red, thick, hook, dashed, "\alpha", swap]
+	&&
+	{\color{black}X_{1} \sqcap_{Y}\! X_{2}}
+		\arrow[rr, thick, "\pi_{1}"]
+		\arrow[dd, thick, "\pi_{2}", swap]
+	&&
+	X_{1}
+		\arrow[dd, blue, hook, thick, "f_{1}"]
+	\\ \\
+	K(f_{2})
+		\arrow[rr, thick, hook, "\kappa(f_{2})", swap]
+	&&
+	X_{2}
+		\arrow[rr, thick, "f_{2}", swap]
+	&&
+	Y
+	\end{tikzcd}
+	\end{center}
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+	Observe that
+	\begin{eqnarray*}
+	f_{2} \,\circ \left(\,\pi_{2} \overset{{\color{white}1}}{\circ} \kappa(\pi_{1})\,\right)
+	& = &
+		\left(\,f_{2} \overset{{\color{white}1}}{\circ} \pi_{2}\,\right) \circ\, \kappa(\pi_{1})
+	\;\; = \;\;
+		\left(\,f_{1} \overset{{\color{white}1}}{\circ} \pi_{1}\,\right) \circ\, \kappa(\pi_{1})
+	\;\; = \;\;
+		f_{1} \,\circ \left(\,\pi_{1} \overset{{\color{white}1}}{\circ} \kappa(\pi_{1})\,\right) 
+	\;\; = \;\;
+		f_{1} \,\circ\, 0
+	\;\; = \;\;
+		0\,,
+	\end{eqnarray*}
+	which implies
+	\,--\, by the universal property of \,$\kappa(f_{2})$\, as a kernel of \,$f_{2}$ \,--\,
+	that there exists a unique
+	\;$\alpha \,\in\, \Mor_{\mathfrak{A}}\!\left(\,\overset{{\color{white}.}}{K(\pi_{1})}\,,\,K(f_{2})\,\right)$\;
+	such that
+	\;$\kappa(f_{2}) \,\circ\, \alpha \,=\, \pi_{2} \,\circ\, \kappa(\pi_{1})$.\;
+\item
+	Suppose
+	\,$g,\, h \,\in\, \Mor_{\mathfrak{A}}(\,A\,,\,K(\pi_{1})\,)$\,
+	are two arbitrary morphisms satisfying
+	\,$\alpha \,\circ\, g \,=\, \alpha \,\circ\, h$.\,
+	We need to show that \,$g \,=\, h$.\,
+	To this end, note
+	\begin{eqnarray*}
+	\alpha \,\circ\, g \,=\, \alpha \,\circ\, h
+	& \Longrightarrow &
+		\kappa(f_{2}) \,\circ\, \alpha \,\circ\, g \;=\; \kappa(f_{2}) \,\circ\, \alpha \,\circ\, h
+	\\
+	& \Longrightarrow &
+		\pi_{2} \,\circ\, \kappa(\pi_{1}) \,\circ\, g \;=\; \pi_{2} \,\circ\, \kappa(\pi_{1}) \,\circ\, h\,,
+		\quad
+		\textnormal{by (i)}
+	\\
+	& \Longrightarrow &
+		\kappa(\pi_{1}) \,\circ\, g \;=\; \kappa(\pi_{1}) \,\circ\, h\,,
+		\quad
+		\textnormal{since \,$\pi_{2}$\, is a monomorphism,
+			by Proposition \ref{FiberProductsPreserveMonomorphisms}(i)
+			}
+	\\
+	& \Longrightarrow &
+		g \;=\; h\,,
+		\quad
+		\textnormal{since kernels are monomorphisms,
+			by Proposition \ref{KernelsAreMonoCokernelsAreEpi}
+			}
+	\end{eqnarray*}
+	This completes the proof of the monomorphicity of \,$\alpha$.\,
 	\qed
 \end{enumerate}
 
