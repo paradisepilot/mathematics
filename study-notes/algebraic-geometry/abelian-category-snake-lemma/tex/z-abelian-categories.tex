@@ -194,7 +194,7 @@ The Proposition now follows from Claim 2 and Claim 3.
 \vskip 0.1cm
 \noindent
 Suppose \,$\mathfrak{A}$\, is an abelian category,
-$f \in \Mor_{\mathfrak{A}}(A,B)$, and $g \in \Mor_{\mathfrak{A}}(B,C)$
+\,$f \in \Mor_{\mathfrak{A}}(A,B)$, and $g \in \Mor_{\mathfrak{A}}(B,C)$\,
 such that
 \begin{itemize}
 \item
@@ -1066,6 +1066,142 @@ Let \,$\mathfrak{A}$\, be an {\color{red}abelian} category.
 	This follows by dualizing the arguments given above for (i).
 	\qed
 \end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}
+\label{NecessarySufficientConditionForExactnessInAbelianCategories}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\mathfrak{A}$\, is an abelian category,
+\,$f \in \Mor_{\mathfrak{A}}(X^{\prime},X)$, and $g \in \Mor_{\mathfrak{A}}(X,X^{\prime\prime})$\,
+such that
+\,$g \circ f = 0$.\,
+Then, the following are equivalent:
+\begin{enumerate}
+\item
+	$X^{\prime} \overset{f}{\longrightarrow} X \overset{g}{\longrightarrow} X^{\prime\prime}$\,
+	is exact.
+\item
+	For any morphism
+	\,$h \in \Mor_{\mathfrak{A}}(A,X)$\, such that \,$g \,\circ\, h \,=\, 0$,\,
+	there exist an epimorphism
+	\,$f^{\prime} \,\in\, \Mor_{\mathfrak{A}}(A^{\prime},A)$\,
+	and a morphism
+	\,$h^{\prime} \,\in\, \Mor_{\mathfrak{A}}(A^{\prime},X^{\prime})$\,
+	such that
+	\,$h \,\circ\, f^{\prime} \,=\, f \,\circ\, h^{\prime}$.\,
+	\begin{center}
+	\begin{tikzcd}
+	{\color{red}A^{\prime}}
+		\arrow[rr, red, thick, dashed, two heads, "f^{\prime}"]
+		\arrow[dd, red, thick, dashed, "h^{\prime}", swap]
+	&&
+	{\color{blue}A}
+		\arrow[dd, blue, thick, "h"]
+		\arrow[ddrr, gray, bend left = 30, "0"]
+	&&
+	\\ \\
+	X^{\prime}
+		\arrow[rr, thick, "f", swap]
+	&&
+	X
+		\arrow[rr, thick, "g", swap]
+	&&
+	X^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+\end{enumerate}
+\end{proposition}
+\proof
+\vskip 0.1cm
+\noindent
+\underline{{\color{white}.}(i)\;\,$\Longrightarrow$\;(ii){\color{white}.}}
+\vskip 0.2cm
+\noindent
+Recall from Definition \ref{defnExactness} that
+the exactness hypothesis (i) is equivalent to the fact that the unique morphism
+\,$\theta_{0} \,\in\, \Mor_{\mathfrak{A}}(I_{f},K_{g})$\,
+in the commutative diagram below is an isomorphism:
+\begin{center}
+\begin{tikzcd}
+&& && {\color{blue}Q_{f}}
+	\arrow[dd, dashed, "\psi"]
+\\ \\
+X^{\prime}
+	\arrow[rr, thick, "f"]
+	\arrow[dd, red, thick, dashed, two heads, "\widetilde{f}\;", swap]
+	\arrow[rrrr, bend left = 27, "0", gray]
+&&
+X
+	\arrow[rr, thick, "g"]
+	\arrow[uurr, blue, two heads, "\pi_{f}"]
+&&
+X^{\prime\prime}
+\\ \\
+{\color{blue}I_{f}}
+	\arrow[uurr, blue, hook, "\kappa(\pi_{f})"]
+	\arrow[rr, thick, dashed, swap, "\exists !\,\theta_{0}", red]
+&&
+K_{g}
+	\arrow[uu, hook, swap, "\kappa_{g}"]
+	%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+&&
+%Q_{\theta}
+\end{tikzcd}
+\end{center}
+Next, note that, since \,$g \circ h = 0$,\,
+by the universal property of \,$\kappa_{g}$\, as a kernel of \,$g$,\,
+there exists a unique morphism
+\,$\theta_{h} \in \Mor_{\mathfrak{A}}(A,K_{g})$\,
+such that
+\,$h = \kappa_{g} \circ \theta_{h}$.\,
+So, choosing
+\,$A^{\prime} \,:=\, X^{\prime}\,\sqcap_{K_{g}}\!A$\,
+(hence, $f^{\prime} := \pi_{A}$ and $h^{\prime} := \pi_{X^{\prime}}$),
+we have the following diagram:
+\begin{center}
+\begin{tikzcd}
+{\color{red}X^{\prime}\,\sqcap_{K_{g}}\!A}
+	\arrow[rr, red, thick, dashed, "\pi_{A}"]
+	\arrow[dd, red, thick, dashed, "\pi_{X^{\prime}}", swap]
+&&
+{\color{blue}A}
+	\arrow[ddrr, blue, thick, "h"]
+	\arrow[rrrrdd, gray, bend left = 20, "0"]
+	\arrow[dd, red, thick, dashed, "\theta_{h}", swap]
+&&
+% {\color{blue}A}
+% 	\arrow[dd, blue, thick, "h"]
+% 	\arrow[ddrr, blue, "0"]
+% 	\arrow[ddll, red, thick, dashed, "\theta_{h}"]
+&&
+\\ \\
+X^{\prime}
+	\arrow[rrrr, thick, bend right = 30, "f", swap]
+	\arrow[rr, gray, thick, two heads, "\widetilde{f}", swap]
+&&
+{\color{gray}I_{f} \cong K_{g}}
+	\arrow[rr, gray, thick, hook, "\kappa_{g}", swap]
+&&
+X
+	\arrow[rr, thick, "g", swap]
+&&
+X^{\prime\prime}
+\end{tikzcd}
+\end{center}
+Lastly, note that, by Proposition \ref{FiberProductsPreserveEpimorphismsInAbelianCategories}(i),
+the morphism \,$\pi_{A}$\, is an epimorphism.
+This completes the proof of \;(i)\,$\Longrightarrow$\,(ii).\;
+
+
+\vskip 0.5cm
+\noindent
+\underline{{\color{white}.}(ii)\;\,$\Longrightarrow$\;(i){\color{white}.}}
+
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
