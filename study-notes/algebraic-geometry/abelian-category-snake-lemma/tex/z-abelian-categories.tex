@@ -1092,7 +1092,7 @@ Then, the following are equivalent:
 	and a morphism
 	\,$h^{\prime} \,\in\, \Mor_{\mathfrak{A}}(A^{\prime},X^{\prime})$\,
 	such that
-	\,$h \,\circ\, f^{\prime} \,=\, f \,\circ\, h^{\prime}$.\,
+	\,$f \,\circ\, h^{\prime} \,=\, h \,\circ\, f^{\prime}$.\,
 	\begin{center}
 	\begin{tikzcd}
 	{\color{red}A^{\prime}}
@@ -1146,7 +1146,7 @@ X^{\prime\prime}
 \\ \\
 {\color{blue}I_{f}}
 	\arrow[uurr, blue, hook, "\kappa(\pi_{f})"]
-	\arrow[rr, thick, dashed, swap, "\exists !\,\theta_{0}", red]
+	\arrow[rr, red, thick, dashed, hook, "\exists !\,\theta_{0}", swap]
 &&
 K_{g}
 	\arrow[uu, hook, swap, "\kappa_{g}"]
@@ -1203,8 +1203,215 @@ This completes the proof of \;(i)\,$\Longrightarrow$\,(ii).\;
 \vskip 0.5cm
 \noindent
 \underline{{\color{white}.}(ii)\;\,$\Longrightarrow$\;(i){\color{white}.}}
-
-\qed
+\vskip 0.1cm
+\noindent
+Conversely, assume \,(ii)\, is true.
+We need to establish that
+\begin{tikzcd}
+X^{\prime}
+	\arrow[r, "f"]
+&
+X
+	\arrow[r, "g"]
+&
+X^{\prime\prime}
+\end{tikzcd}
+is exact.
+\vskip 0.2cm
+\noindent
+Since \,$g \,\circ\, \kappa_{g} \,=\, 0$,\,
+the hypothesis \,(ii)\, implies the existence of 
+a morphism \,$\alpha \,\in\, \Mor_{\mathfrak{A}}(A^{\prime},X^{\prime})$\,
+and
+an epimorphism \,$\varepsilon \,\in\, \Mor_{\mathfrak{A}}(A^{\prime},K_{g})$\,
+such that
+\,$f \,\circ\, \alpha \,=\, \kappa_{g} \,\circ\, \varepsilon$.\,
+By Proposition \ref{propositionHomology},
+the morphism \,$f$\, factors as
+\,$f \,=\, \kappa_{g} \,\circ\, \theta \,\circ\, \widetilde{f}$,\,
+where
+\,$\theta$\, is a monomorphism and
+\,$\widetilde{f}$\, is an epimorphism (since $\widetilde{f}$ is a cokernel).
+We thus have the following diagram:
+\begin{center}
+\begin{tikzcd}
+{\color{red}A^{\prime}}
+	\arrow[rrrrr, red, thick, dashed, two heads, "\varepsilon"]
+	\arrow[dd,    red, thick, dashed, "\alpha", swap]
+&&&&&
+{\color{blue}A = K_{g}}
+	\arrow[dd, blue, thick, hook, "\kappa_{g}"]
+	\arrow[ddrr, gray, bend left = 20, "0"]
+	\arrow[ddll, gray, "1_{K_{g}}", swap]
+\\ \\
+X^{\prime}
+	\arrow[rr, thick, two heads, "\widetilde{f}\;\;\;"]
+	\arrow[rrrrr, thick, bend right = 30, "f", swap	]
+&&
+I_{f}
+	\arrow[r, thick, hook, "\theta"]
+&
+K_{g}
+	\arrow[rr, thick, hook, "\kappa_{g}"]
+&&
+X
+	\arrow[rr, thick, "g"]
+&&
+X^{\prime\prime}
+\end{tikzcd}
+\end{center}
+We first remark that we have
+\,$\theta \,\circ\, \widetilde{f} \,\circ\, \alpha \,=\, \varepsilon$.\,
+Indeed, simply oberve:
+\begin{eqnarray*}
+f \,\circ\, \alpha \; = \; \kappa_{g} \,\circ\, \varepsilon
+& \Longrightarrow &
+	\kappa_{g} \,\circ\, \theta \,\circ\, \widetilde{f} \,\circ\, \alpha
+	\; = \;
+	\kappa_{g} \,\circ\, \varepsilon
+\\
+& \Longrightarrow &
+	\theta \,\circ\, \widetilde{f} \,\circ\, \alpha
+	\; = \;
+	\varepsilon\,,
+	\quad\textnormal{since \,$\kappa_{g}$\, is a monomorphism (being a kernel)}
+\end{eqnarray*}
+Now, we are seeking to establish that
+\begin{tikzcd}
+X^{\prime}
+	\arrow[r, "f"]
+&
+X
+	\arrow[r, "g"]
+&
+X^{\prime\prime}
+\end{tikzcd}
+is exact; recall:
+\begin{eqnarray*}
+\begin{tikzcd}
+X^{\prime}
+	\arrow[r, "f"]
+&
+X
+	\arrow[r, "g"]
+&
+X^{\prime\prime}
+\end{tikzcd}
+\;\;\textnormal{is exact}
+& \Longleftrightarrow &
+	\textnormal{$\theta$\, is an isomorphism}\,,
+	\;\,\textnormal{by Definition \ref{defnExactness}}
+\\
+& \Longleftrightarrow &
+	\textnormal{$\theta$\, is both a monomorphism and an epimorphism}\,,
+	\;\,\textnormal{by Proposition \ref{AbelianImpliesIsomorphismIFFMonoEpi}}
+\end{eqnarray*}
+By Proposition \ref{propositionHomology}, we already know that \,$\theta$\, is a monomorphism.
+So, it remains only to establish that \,$\theta$\, is an epimorphism.
+To this end, observe that:
+\begin{eqnarray*}
+h_{1} \,\circ\, \theta \;=\; h_{2} \,\circ\, \theta
+& \Longrightarrow &
+	h_{1} \,\circ\, \theta \,\circ\, \widetilde{f} \,\circ\, \alpha
+	\; = \;
+	h_{2} \,\circ\, \theta \,\circ\, \widetilde{f} \,\circ\, \alpha
+\\
+& \Longrightarrow &
+	h_{1} \,\circ\, \varepsilon
+	\; = \;
+	h_{2} \,\circ\, \varepsilon\,,
+	\quad
+	\textnormal{since
+		\,$\theta \,\circ\, \widetilde{f} \,\circ\, \alpha \,=\, \varepsilon$\,
+		(as established above)
+		}
+\\
+& \Longrightarrow &
+	h_{1} \; = \; h_{2}\,,
+	\quad
+	\textnormal{since \,$\varepsilon$\, is an epimorphism, by hypothesis (ii)}
+\end{eqnarray*}
+This proves that \,$\theta$\, is indeed an epimorphism;
+hence, \,$\theta$\, is an isomorphism;
+hence,
+\begin{tikzcd}
+X^{\prime}
+	\arrow[r, "f"]
+&
+X
+	\arrow[r, "g"]
+&
+X^{\prime\prime}
+\end{tikzcd}
+is indeed exact.
+This completes the proof of \;(ii)\,$\Longrightarrow$\,(i),\;
+as well as the proof of the Proposition. \qed
+% \begin{center}
+% \begin{tikzcd}
+% && && && {\color{blue}Q_{f}}
+% 	\arrow[dd, blue, thick, dashed, "\psi"]
+% \\ \\
+% &&
+% X^{\prime}
+% 	\arrow[rr, thick, "f"]
+% 	\arrow[dd, red, thick, dashed, two heads, "\widetilde{f}\;", swap]
+% 	\arrow[rrrr, bend left = 27, "0", gray]
+% &&
+% X
+% 	\arrow[rr, thick, "g"]
+% 	\arrow[uurr, blue, thick, two heads, "\pi_{f}"]
+% &&
+% X^{\prime\prime}
+% \\ \\
+% &&
+% {\color{blue}I_{f}}
+% 	\arrow[uurr, blue, thick, hook, "\kappa(\pi_{f})"]
+% 	\arrow[rr, red, thick, dashed, hook, "\exists !\,\theta", swap]
+% &&
+% K_{g}
+% 	\arrow[uu, hook, "\kappa_{g}", swap]
+% 	%\arrow[rr, thick, two heads, swap, "\pi_{\theta}", red]
+% &&
+% %Q_{\theta}
+% \\ 
+% &
+% A^{\prime}
+% 	\arrow[urrr, thick, bend right = 20, two heads, "f^{\prime}", swap]
+% 	\arrow[uuur, thick, bend left  = 20, "\kappa_{g}^{\prime}"]
+% 	\arrow[ur, red, thick, dashed, "\rho"]
+% % \\
+% % A^{\prime}
+% % 	\arrow[uurrrr, thick, bend right = 20, two heads, "f^{\prime}", swap]
+% % 	\arrow[uuuurr, thick, bend left  = 20, "\kappa_{g}^{\prime}"]
+% \end{tikzcd}
+% \end{center}
+% \begin{center}
+% \begin{tikzcd}
+% A^{\prime}
+% 	\arrow[rrr, thick, dashed, two heads, "\varepsilon"]
+% 	\arrow[dd, thick, dashed, "\alpha", swap]
+% &&&
+% A = K_{g}
+% 	\arrow[dd, thick, "\;1_{K_{g}}"]
+% 	\arrow[ddrr, thick, "\kappa_{g}"]
+% 	\arrow[ddrrrr, gray, bend left = 20, "0"]
+% \\ \\
+% X^{\prime}
+% 	\arrow[rr, thick, two heads, "\widetilde{f}\;\;\;"]
+% 	\arrow[rrrrr, thick, bend right = 30, "f", swap	]
+% &&
+% I_{f}
+% 	\arrow[r, thick, hook, "\theta"]
+% &
+% K_{g}
+% 	\arrow[rr, thick, hook, "\kappa_{g}"]
+% &&
+% X
+% 	\arrow[rr, thick, "g"]
+% &&
+% X^{\prime\prime}
+% \end{tikzcd}
+% \end{center}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
