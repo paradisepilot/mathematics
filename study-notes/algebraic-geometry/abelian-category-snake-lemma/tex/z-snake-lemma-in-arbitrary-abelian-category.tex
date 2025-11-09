@@ -284,7 +284,13 @@ Then, the following statements are true:
 	\,$\varepsilon_{Q} : Q \longrightarrow Q^{\prime\prime}$.
 
 	\vskip 0.3cm
-	\underline{Exactness of{\color{white}.q}$K^{\prime}\longrightarrow\, K \,\longrightarrow\, K^{\prime\prime}$}
+	\underline{Exactness of{\color{white}.q}$
+		K^{\prime}
+		\,\overset{\mu_{K}}{\longrightarrow}\,
+		K
+		\,\overset{\varepsilon_{K}}{\longrightarrow}\,
+		K^{\prime\prime}
+		$}
 	\vskip -0.01cm
 	By Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories},
 	in order to establish the exactness of the composition
@@ -533,11 +539,11 @@ Then, the following statements are true:
 	\begin{center}
 	\begin{tikzcd}
 	&&{\color{blue}K(\pi_{K^{\prime\prime}})}
-		\arrow[rr, thick, hook, "\kappa(\pi_{K^{\prime\prime}})", blue]
+		\arrow[rr, blue, thick, hook, "\kappa(\pi_{K^{\prime\prime}})"]
 		\arrow[dd, blue, thick, hook, "\alpha", swap]
 	&&
 	{\color{blue}A \,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
-		\arrow[dd, blue, thick, hook, "\,\pi_{A}", swap]
+		\arrow[dd, blue, thick, hook, "\,\pi_{A}"]
 		\arrow[rr, blue, thick, two heads, "\pi_{K^{\prime\prime}}"]
 		\arrow[ddddll, red, thick, dashed, bend right = 5, "\theta_{1}", swap]
 	&&
@@ -871,8 +877,153 @@ Then, the following statements are true:
 	\end{center}
 
 	\vskip 0.5cm
+	\noindent
 	This construction of the (snake or connection) morphism \,$\delta$\, is now complete.
 	It remains to establish exactness.
+
+	\vskip 0.5cm
+	\noindent
+	\underline{Exactness of{\color{white}.q}$
+		K
+		\,\overset{\varepsilon_{K}}{\longrightarrow}\,
+		K^{\prime\prime}
+		\,\overset{\delta}{\longrightarrow}\,
+		Q^{\prime}
+		$}
+	\vskip -0.01cm
+	By Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories},
+	in order to establish the exactness of the composition
+	\begin{tikzcd}
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+		\arrow[r, "\delta"]
+	&
+	Q^{\prime}
+	\end{tikzcd}\!\!,
+	it suffices to show that, given an arbitrary morphism
+	\,$h \,\in\, \Mor_{\mathfrak{A}}(X,K^{\prime\prime})$\,
+	such that
+	\,$\delta \,\circ\, h \,=\, 0$,\,
+	there exist
+	a morphism \,$h^{\prime} \,\in\, \Mor_{\mathfrak{A}}(X^{\prime},K)$\, and
+	an epimorphism \,$\varepsilon^{\prime} \,\in\, \Mor_{\mathfrak{A}}(X^{\prime},X)$\,
+	such that
+	\,$\varepsilon_{K} \,\circ\, h^{\prime} \,=\, h \,\circ\, \varepsilon^{\prime}$,\,
+	i.e., the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	{\color{red}X^{\prime}}
+		\arrow[rr, red, thick, dashed, two heads, "\varepsilon^{\prime}"]
+		\arrow[dd, red, thick, dashed, "h^{\prime}", swap]
+	&&
+	{\color{blue}X}
+		\arrow[dd, blue, thick, "h"]
+		\arrow[ddrr, gray, bend left = 20, "0"]
+	\\ \\
+	K
+		\arrow[rr, black, thick, "\varepsilon_{K}"]
+	&&
+	K^{\prime\prime}
+		\arrow[rr, black, thick, "\delta"]
+	&&
+	Q^{\prime}
+	\end{tikzcd}
+	\end{center}
+	Let
+	\,$Y \,:=\, X \,\sqcap_{K^{\prime\prime}}\!(\,A\,\sqcap_{A^{\prime\prime}}\!K^{\prime\prime}\,)$\,
+	be the fiber product of \,$X$\, and
+	\,$A\,\sqcap_{A^{\prime\prime}}\!K^{\prime\prime}$\,
+	over \,$K^{\prime\prime}$.\,
+	Consider the following extended diagram:
+	\begin{center}
+	\begin{tikzcd}
+	&&
+	{\color{blue}Y^{\prime}}
+		\arrow[rr, blue, thick, two heads, "\mu_{A}^{\prime}"]
+		\arrow[ddddll, blue, thick, bend right = 21, "?", swap]
+		\arrow[ddddrr, blue, thick, bend left  = 21, "?"]
+	&&
+	{\color{blue}Y}
+		\arrow[rr, blue, thick, two heads, "p_{1}"]
+		\arrow[dd, blue, thick, "p_{2}"]
+	&&
+	{\color{blue}X}
+		\arrow[dd, blue, thick, "h"]
+	\\ \\
+	&&{\color{gray}K(\pi_{K^{\prime\prime}})}
+		\arrow[rr, gray, thick, hook, "\kappa(\pi_{K^{\prime\prime}})"]
+		\arrow[dd, gray, thick, hook, "\alpha", swap]
+	&&
+	{\color{gray}A \,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
+		\arrow[dd, gray, thick, hook, "\,\pi_{A}"]
+		\arrow[rr, gray, thick, two heads, "\pi_{K^{\prime\prime}}"]
+		\arrow[ddddll, gray, thick, dashed, bend right = 5, "\theta_{1}", swap]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, thick, hook, "\kappa^{\prime\prime}"]
+		\arrow[ddddddllll, red, thick, dashed, bend left = 30, "\textnormal{\LARGE$\delta$}"]
+	\\ \\
+	A^{\prime}
+		\arrow[ddrr, thick, "f^{\prime}", swap]
+		\arrow[rr, gray, thick, two heads, "{\color{white}...}\overset{{\color{white}.}}{\widetilde{\mu_{A}}}", swap]
+		\arrow[rrrr, thick, bend left = 30, "\quad{\color{white}....}\mu_{A}"]
+	&&
+	{\color{gray}I(\mu_{A})\,\cong\,K(\varepsilon_{A})}
+		\arrow[rr, gray, thick, hook,   "\kappa(\varepsilon_{A})", swap]
+		\arrow[dd, gray,  thick, dashed, "\theta_{2}", swap]
+	&&
+	A
+		\arrow[dd, thick, "f"]
+		\arrow[rr, thick, two heads, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, thick, "f^{\prime\prime}"]
+	\\ \\
+	&&B^{\prime}
+		\arrow[rr, thick, hook, swap, "\mu_{B}"]
+		\arrow[dd, thick, two heads, "\pi^{\prime}", swap]
+	&&
+	B
+		\arrow[rr, thick, "\varepsilon_{B}", swap]
+		\arrow[dd, gray, thick, two heads, "\iota_{B}"]
+	&&
+	B^{\prime\prime}
+		% \arrow[dd, "\pi^{\prime\prime}"]
+	\\ \\
+	&&Q^{\prime}
+		\arrow[rr, gray, thick, hook, "\iota_{Q^{\prime}}", swap]
+	&&
+	{\color{gray}Q^{\prime} \sqcup_{B^{\prime}}\! B}
+		\arrow[rr, gray, thick, two heads, "\pi(\iota_{Q^{\prime}}){\color{white}..}", swap]
+	&&
+	{\color{gray}Q(\iota_{Q^{\prime}})}
+	\end{tikzcd}
+	\end{center}
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 4:}\quad
+	\,$\pi^{\prime} \,\circ\, \theta_{1} \,\circ\, p_{2} \,=\, 0$\,
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 4:\;\;
+	Simply observe
+	\begin{eqnarray*}
+	\pi^{\prime} \,\circ\, \theta_{1} \,\circ\, p_{2}
+	& = &
+		\delta \,\circ\, \pi_{K^{\prime\prime}} \,\circ\, p_{2}
+	\;\; = \;\;
+		\delta \,\circ\, h \,\circ\, p_{1}
+	\;\; = \;\;
+		0 \,\circ\, p_{1}
+	\;\; = \;\;
+		0\,,
+	\end{eqnarray*}
+	where the first equality holds by Claim 3,
+	the second equality holds by the defining property of the fiber product, and
+	the third equality holds by hypothesis ($\delta \circ h = 0$).
+	This proves Claim 4.
 
 % \vskip 0.5cm
 % \item
