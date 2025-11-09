@@ -1877,6 +1877,74 @@ Then, we make the following definitions:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{corollary}
+\label{MorphismCokernelExactness}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\mathfrak{C}$\, is a category with zero objects,
+\,$f \in \Mor_{\mathfrak{C}}(A,B)$\, is a morphism in \,$\mathfrak{C}$,\, and
+\,$\pi_{f} \in \Mor_{\mathfrak{C}}(B,Q_{f})$\, is a cokernel of \,$f$.\,
+Then, the composition
+\begin{tikzcd}
+A
+	\arrow[r, "f"]
+&
+B
+	\arrow[r, "\pi_{f}"]
+&
+Q_{f}
+\end{tikzcd}
+is exact.
+\end{corollary}
+\proof
+Observe that replacing \,$g$\, in the diagram in Definition \ref{defnExactness} 
+with the cokernel \,$\pi_{f}$\, of \,$f$\, yields the following:
+\begin{center}
+\begin{tikzcd}
+&& && Q_{f}
+	\arrow[dd, blue, thick, dashed, "\psi\,=\,1_{Q_{f}}"]
+\\ \\
+A
+	\arrow[rr, thick, "f"]
+	\arrow[dd, thick, dashed, two heads, swap, "\varepsilon_{f}"]
+	\arrow[rrrr, gray, bend left = 30, "0"]
+&&
+B
+	\arrow[rr, blue, thick, two heads, "\pi_{f}"]
+	\arrow[uurr, thick, two heads, "\pi_{f}"]
+&&
+{\color{blue}Q_{f}}
+\\ \\
+I_{f}
+	\arrow[uurr, thick, hook, "\kappa(\pi_{f})"]
+	\arrow[rr, red, thick, dashed, hook, "\exists !\,\theta", swap]
+&&
+{\color{blue}I_{f}}
+	\arrow[uu, blue, thick, hook, swap, "\kappa(\pi_{f})"]
+	\arrow[rr, red, thick, two heads, "\pi_{\theta}", swap]
+&&
+Q_{\theta}
+\end{tikzcd}
+\end{center}
+The uniqueness of \,$\theta$\, now implies that
+\,$\theta$\, must in fact be the identity morphism of \,$I_{f}$.\,
+In particular, \,$\theta$\, is then an isomorphism.
+This proves the exactness of
+\begin{tikzcd}
+A
+	\arrow[r, "f"]
+&
+B
+	\arrow[r, "\pi_{f}"]
+&
+Q_{f}
+\end{tikzcd}\!\!.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{remark}
 \mbox{}
 \vskip 0.1cm
@@ -1888,6 +1956,5 @@ is exact, then its homology morphism is a zero morphism.
 \proof
 Immediately by Lemma \ref{CokernelOfAnIsomorphismIsZero} (that every cokernel of an isomorphism is a zero morphism).
 \qed
-
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
