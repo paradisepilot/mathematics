@@ -868,7 +868,7 @@ Then, the following statements are true:
 		\arrow[rrrd, blue, bend right = 15, "0", swap]
 		& &
 		{\color{red}A\,\sqcap_{A^{\prime\prime}}\! K^{\prime\prime}}
-		\arrow[rd, blue, thick, "\pi^{\prime}\,\circ\,\theta", swap]
+		\arrow[rd, blue, thick, "\pi^{\prime}\,\circ\,\theta_{1}", swap]
 		\arrow[ur, red, "\pi_{K^{\prime\prime}}"]
 		&
 	\\
@@ -941,9 +941,9 @@ Then, the following statements are true:
 	\begin{tikzcd}
 	&&
 	{\color{blue}Y^{\prime}}
-		\arrow[rr, blue, thick, two heads, "\mu_{A}^{\prime}"]
-		\arrow[ddddll, blue, thick, bend right = 21, "?", swap]
-		\arrow[ddddrr, blue, thick, bend left  = 21, "?"]
+		\arrow[rr, blue, thick, two heads, "\beta"]
+		\arrow[ddddll, blue, thick, bend right = 21, "\gamma", swap]
+		\arrow[ddddrr, blue, thick, bend left  = 21, "\lambda"]
 	&&
 	{\color{blue}Y}
 		\arrow[rr, blue, thick, two heads, "p_{1}"]
@@ -1004,7 +1004,7 @@ Then, the following statements are true:
 	\vskip 0.3cm
 	\noindent
 	\textbf{Claim 4:}\quad
-	\,$\pi^{\prime} \,\circ\, \theta_{1} \,\circ\, p_{2} \,=\, 0$\,
+	\,$\pi^{\prime} \,\circ\, (\,\theta_{1} \,\circ\, p_{2}\,) \,=\, 0$\,
 	\vskip 0.01cm
 	\noindent
 	Proof of Claim 4:\;\;
@@ -1024,6 +1024,237 @@ Then, the following statements are true:
 	the second equality holds by the defining property of the fiber product, and
 	the third equality holds by hypothesis ($\delta \circ h = 0$).
 	This proves Claim 4.
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 5:}\quad
+	There exist
+	an epimorphism \,$\beta \in \Mor_{\mathfrak{A}}(Y^{\prime},Y)$\,
+	and
+	a morphism \,$\gamma \in \Mor_{\mathfrak{A}}(Y^{\prime},A^{\prime})$\,
+	such that
+	\begin{equation*}
+	f^{\prime} \,\circ\, \gamma \,=\, (\,\theta_{1} \circ p_{2}\,) \,\circ\, \beta
+	\end{equation*}
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 5:\;\;
+	Since \,$\pi^{\prime}$\, is a cokernel of \,$f^{\prime}$,\,
+	the composition
+	\begin{tikzcd}
+	A^{\prime}
+		\arrow[r, "f^{\prime}"]
+	&
+	B^{\prime}
+		\arrow[r, "\pi^{\prime}"]
+	&
+	Q^{\prime}
+	\end{tikzcd}
+	is exact, by Corollary \ref{MorphismCokernelExactness}.
+	By Claim 4 and Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories},
+	there exist
+	an epimorphism \,$\beta \in \Mor_{\mathfrak{A}}(Y^{\prime},Y)$\,
+	and
+	a morphism \,$\gamma \in \Mor_{\mathfrak{A}}(Y^{\prime},A^{\prime})$\,
+	such that
+	\,$f^{\prime} \,\circ\, \gamma \,=\, (\,\theta_{1} \circ p_{2}\,) \,\circ\, \beta$.\,
+	See the following diagram:
+	\begin{center}
+	\begin{tikzcd}
+	{\color{red}Y^{\prime}}
+		\arrow[rr, red, thick, dashed, two heads, "\beta"]
+		\arrow[dd, red, thick, dashed, "\gamma", swap]
+	&&
+	{\color{blue}Y}
+		\arrow[dd, blue, thick, "\,\theta_{1} \circ\,p_{2}"]
+		\arrow[ddrr, gray, bend left = 30, "0"]
+	&&
+	\\ \\
+	A^{\prime}
+		\arrow[rr, thick, "f^{\prime}", swap]
+	&&
+	B^{\prime}
+		\arrow[rr, thick, two heads, "\pi^{\prime}", swap]
+	&&
+	Q^{\prime}
+	\end{tikzcd}
+	\end{center}
+	This proves Claim 5.
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 6:}\quad
+	Define
+	\,$\lambda \,:=\, \pi_{A} \,\circ\, p_{2} \,\circ\, \beta \,\in\, \Mor_{\mathfrak{A}}(Y^{\prime},A)$.\,
+	Then, \,$\lambda$\, satisfies
+	\,$f \,\circ\, (\,\lambda \,-\, \mu_{A}\circ\gamma\,)\,=\, 0$.\,
+	Consequently, there exists a unique morphism
+	\,$\theta_{3} \in \Mor_{\mathfrak{A}}(Y^{\prime},K)$\,
+	such that
+	\,$\lambda - \mu_{A}\circ\gamma \,=\, \kappa \,\circ\, \theta_{3}$.\,
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 6:\;\;
+	\begin{eqnarray*}
+	f \,\circ\, \lambda
+	& = &
+		f \,\circ\, \pi_{A} \,\circ\, p_{2} \,\circ\, \beta\,,
+		\quad\textnormal{by definition of \,$\lambda$}
+	\\
+	& = &
+		\mu_{B} \,\circ\, \theta_{1} \,\circ\, p_{2} \,\circ\, \beta\,,
+		\quad\textnormal{by Claim 1}
+	\\
+	& = &
+		\mu_{B} \,\circ\, f^{\prime} \,\circ\, \gamma\,,
+		\quad\textnormal{by Claim 5}
+	\\
+	& = &
+		f \,\circ\, \mu_{A} \,\circ\, \gamma\,,
+		\quad\textnormal{by the (commutativity) hypothesis that \,$\mu_{B}\circ f^{\prime}\,=\,f\circ\mu_{A}$}
+	\end{eqnarray*}
+	The existence and uniqueness of \,$\theta_{3}$\,
+	now follows from the universial property of \,$\kappa$\,
+	as a kernel of \,$f$.\, See the following diagram:
+	\begin{center}
+	\begin{tikzcd}
+	{\color{blue}Y^{\prime}}
+		\arrow[dd,   blue, thick, dashed, "\exists !\,\theta_{3}{\color{white}.}", swap]
+		\arrow[dr,   blue, thick, "\lambda \,-\, \mu_{A} \circ \gamma"]
+		\arrow[drrr, blue, bend left = 25, "0"] & & &
+	\\
+	& {\color{red}A}
+		\arrow[rr, swap, "f{\color{white}...}"] & & B
+	\\
+	{\color{red}K}
+		\arrow[ur, red, "\kappa", swap]
+		\arrow[urrr, gray, bend right = 25, swap, "0"]
+	\end{tikzcd}
+	\end{center}
+	This completes the proof of Claim 6.
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 7:}\quad
+	\,$\varepsilon_{K} \,\circ\, \theta_{3} \,=\, h \,\circ\, (\,p_{1} \,\circ\, \beta\,)$\,
+	\vskip 0.01cm
+	\noindent
+	Proof of Claim 7:\;\;
+	Observe that
+	\begin{eqnarray*}
+	\kappa^{\prime\prime} \,\circ\, \varepsilon_{K} \,\circ\, \theta_{3}
+	& = &
+		\varepsilon_{A} \,\circ\, \kappa \,\circ\, \theta_{3}\,,
+		\;\;
+		\textnormal{since \,$
+			\kappa^{\prime\prime}\circ\varepsilon_{K}
+			\, = \, \varepsilon_{A}\circ\kappa
+			$,\, by construction of \,$\varepsilon_{K}$\, in proof of (i)}
+	\\
+	& = &
+		\varepsilon_{A} \,\circ\, (\,\lambda \,-\, \mu_{A}\circ\gamma\,)\,,
+		\;\;
+		\textnormal{by Claim 6}
+	\\
+	& = &
+		\varepsilon_{A} \,\circ\, \lambda
+		\,-\,
+		\varepsilon_{A} \,\circ\, \mu_{A} \,\circ\, \gamma
+	\\
+	& = &
+		\varepsilon_{A} \,\circ\, \lambda
+		\,-\,
+		0 \,\circ\, \gamma\,,
+		\;\;
+		\textnormal{since
+			\,$\varepsilon_{A}\circ\mu_{A} = 0$,\,
+			by exactness of
+			\,$A^{\prime} \overset{\mu_{A}}{\longrightarrow} A \overset{\varepsilon_{A}}{\longrightarrow} A^{\prime\prime}$
+			}
+	\\
+	& = &
+		\varepsilon_{A} \,\circ\, \pi_{A} \,\circ\, p_{2} \,\circ\, \beta\,,
+		\quad\textnormal{by definition of \,$\lambda \,:=\, \pi_{A} \,\circ\, p_{2} \,\circ\, \beta$}
+	\\
+	& = &
+		\kappa^{\prime\prime} \,\circ\, \pi_{K^{\prime\prime}} \,\circ\, p_{2} \,\circ\, \beta\,,
+		\;\;
+		\textnormal{
+			since \,$\varepsilon_{A}\circ\pi_{A} \,=\, \kappa^{\prime\prime}\circ\pi_{K^{\prime\prime}}$,\,
+			by construction of \,$A\,\sqcap_{A^{\prime\prime}}K^{\prime\prime}$
+			}
+	\\
+	& = &
+		\kappa^{\prime\prime} \,\circ\, h \,\circ\, p_{1} \,\circ\, \beta\,,
+		\;\;
+		\textnormal{
+			since \,$\pi_{K^{\prime\prime}} \,\circ\, p_{2} \,=\, h \,\circ\, p_{1}$,\,
+			by construction of
+			\,$Y \,:=\, X\sqcap_{K^{\prime\prime}}\!(A\sqcap_{A^{\prime\prime}}\!K^{\prime\prime})$
+			}
+	\end{eqnarray*}
+	The monomorphicity of \,$\kappa^{\prime\prime}$\, now implies that
+	\,$\varepsilon_{K} \,\circ\, \theta_{3} \,=\, h \,\circ\, p_{1} \,\circ\, \beta$,\,
+	which completes the proof of Claim 7.
+	\vskip 0.3cm
+	\noindent
+	We remark here that the epimorphicity of
+	\,$p_{1} \circ \beta$\,
+	trivially follows from the epimorphicity of
+	\,$p_{1}$\, and \,$\beta$.\,
+	\vskip 0.3cm
+	\noindent
+	In summary, we have established that, given an arbitrary morphism
+	\,$h \in \Mor_{\mathfrak{A}}(X,K^{\prime\prime})$\,
+	satisfying
+	\,$\delta \,\circ\, h \,=\, 0$,\,
+	we have the following commutativity diagram:
+	\begin{center}
+	\begin{tikzcd}
+	{\color{red}Y^{\prime}}
+		\arrow[rr,   red,  thick, dashed, two heads, "p_{1}\,\circ\,\beta{\color{white}...}"]
+		\arrow[dd,   red,  thick, dashed, "\theta_{3}\,", swap]
+		\arrow[dddd, gray, thick, bend right = 80, "\lambda\,-\,\mu_{A}\,\circ\,\gamma\;", swap]
+	&&
+	{\color{blue}X}
+		\arrow[dd, blue, thick, "h"]
+		\arrow[ddrr, gray, bend left = 20, "0"]
+	\\ \\
+	K
+		\arrow[rr, black, thick, "\varepsilon_{K}"]
+		\arrow[dd, gray,  thick, hook, "\kappa"]
+	&&
+	K^{\prime\prime}
+		\arrow[rr, black, thick, "\delta"]
+		\arrow[dd, gray,  thick, hook, "\kappa^{\prime\prime}"]
+	&&
+	Q^{\prime}
+	\\ \\
+	{\color{gray}A}
+		\arrow[rr, gray, thick, two heads, "\varepsilon_{A}"]
+	&&
+	{\color{gray}A^{\prime\prime}}
+	\end{tikzcd}
+	\end{center}
+	The exactness of
+	\begin{tikzcd}
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+		\arrow[r, "\delta"]
+	&
+	Q^{\prime}
+	\end{tikzcd}
+	now follows by Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories}.
+	This completes the proof of the exactness of
+	\begin{tikzcd}
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+		\arrow[r, "\delta"]
+	&
+	Q^{\prime}
+	\end{tikzcd}\!\!.
+
 
 % \vskip 0.5cm
 % \item
