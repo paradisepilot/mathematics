@@ -286,7 +286,244 @@ Then, the following statements are true:
 	\vskip 0.3cm
 	\underline{Exactness of{\color{white}.q}$K^{\prime}\longrightarrow\, K \,\longrightarrow\, K^{\prime\prime}$}
 	\vskip -0.01cm
-	Note that ...
+	By Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories},
+	in order to establish the exactness of the composition
+	\begin{tikzcd}
+	K^{\prime}
+		\arrow[r, "\mu_{K}"]
+	&
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+	\end{tikzcd}\!\!,
+	it suffices to show that, given an arbitrary morphism
+	\,$h \,\in\, \Mor_{\mathfrak{A}}(X,K)$\,
+	such that
+	\,$\varepsilon_{K} \,\circ\, h \,=\, 0$,\,
+	there exist
+	a morphism \,$h^{\prime} \,\in\, \Mor_{\mathfrak{A}}(X^{\prime},K^{\prime})$\, and
+	an epimorphism \,$\mu^{\prime} \,\in\, \Mor_{\mathfrak{A}}(X^{\prime},X)$\,
+	such that
+	\,$\mu_{K} \,\circ\, h^{\prime} \,=\, h \,\circ\, \mu^{\prime}$,\,
+	i.e., the following diagram commutes:
+	\begin{center}
+	\begin{tikzcd}
+	{\color{red}X^{\prime}}
+		\arrow[rr, red, thick, dashed, two heads, "\mu^{\prime}"]
+		\arrow[dd, red, thick, dashed, "h^{\prime}", swap]
+	&&
+	{\color{blue}X}
+		\arrow[dd, blue, thick, "h"]
+		\arrow[ddrr, gray, bend left = 20, "0"]
+	\\ \\
+	K^{\prime}
+		\arrow[rr, black, thick, "\mu_{K}"]
+	&&
+	K
+		\arrow[rr, black, thick, "\varepsilon_{K}"]
+	&&
+	K^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+	To this end, consider the following extended diagram:
+	\begin{center}
+	\begin{tikzcd}
+	{\color{red}X^{\prime}}
+		\arrow[rr, red, thick, dashed, two heads, "\mu^{\prime}"]
+		\arrow[dd, red, thick, dashed, "h^{\prime}", swap]
+		\arrow[dddd, red, thick, dashed, bend right = 80, "\rho", swap]
+	&&
+	{\color{blue}X}
+		\arrow[dd, blue, thick, "h"]
+		\arrow[ddrr, gray, bend left = 20, "0"]
+	\\ \\
+	K^{\prime}
+		\arrow[rr, black, thick, "\mu_{K}"]
+		\arrow[dd, black, thick, "\kappa^{\prime}", swap]
+	&&
+	K
+		\arrow[rr, black, thick, "\varepsilon_{K}"]
+		\arrow[dd, black, thick, "\kappa"]
+	&&
+	K^{\prime\prime}
+		\arrow[dd, black, thick, "\kappa^{\prime\prime}"]
+	\\ \\
+	A^{\prime}
+		\arrow[rr, black, thick, "\mu_{A}"]
+		\arrow[dd, black, thick, "f^{\prime}", swap]
+	&&
+	A
+		\arrow[rr, black, thick, two heads, "\varepsilon_{A}"]
+		\arrow[dd, black, thick, "f"]
+		\arrow[rr, black, thick, "\varepsilon_{A}"]
+	&&
+	A^{\prime\prime}
+		\arrow[dd, black, thick, "f^{\prime\prime}"]
+	\\ \\
+	B^{\prime}
+		\arrow[rr, black, thick, hook, "\mu_{B}"]
+	&&
+	B
+		\arrow[rr, black, thick, "\varepsilon_{B}"]
+	&&
+	B^{\prime\prime}
+	\end{tikzcd}
+	\end{center}
+	% \begin{center}
+	% \begin{tikzcd}
+	% {\color{red}X^{\prime}}
+	% 	\arrow[ddddrr, red, thick, dashed, bend right = 30, "\rho", swap]
+	% 	\arrow[rrrr, red, thick, dashed, two heads, "\mu^{\prime}"]
+	% 	\arrow[ddrr, red, thick, dashed, "h^{\prime}", swap]
+	% &&
+	% % {\color{red}X^{\prime}}
+	% % 	\arrow[dd, red, thick, dashed, "h^{\prime}", swap]
+	% &&
+	% {\color{blue}X}
+	% 	\arrow[dd, blue, thick, "h"]
+	% 	\arrow[ddrr, gray, bend left = 20, "0"]
+	% \\ \\
+	% &&
+	% K^{\prime}
+	% 	\arrow[rr, black, thick, "\mu_{K}"]
+	% 	\arrow[dd, black, thick, "\kappa^{\prime}", swap]
+	% &&
+	% K
+	% 	\arrow[rr, black, thick, "\varepsilon_{K}"]
+	% 	\arrow[dd, black, thick, "\kappa"]
+	% &&
+	% K^{\prime\prime}
+	% 	\arrow[dd, black, thick, "\kappa^{\prime\prime}"]
+	% \\ \\
+	% &&
+	% A^{\prime}
+	% 	\arrow[rr, black, thick, "\mu_{A}"]
+	% 	\arrow[dd, black, thick, "f^{\prime}", swap]
+	% &&
+	% A
+	% 	\arrow[rr, black, thick, two heads, "\varepsilon_{A}"]
+	% 	\arrow[dd, black, thick, "f"]
+	% 	\arrow[rr, black, thick, "\varepsilon_{A}"]
+	% &&
+	% A^{\prime\prime}
+	% 	\arrow[dd, black, thick, "f^{\prime\prime}"]
+	% \\ \\
+	% &&
+	% B^{\prime}
+	% 	\arrow[rr, black, thick, hook, "\mu_{B}"]
+	% &&
+	% B
+	% 	\arrow[rr, black, thick, "\varepsilon_{B}"]
+	% &&
+	% B^{\prime\prime}
+	% \end{tikzcd}
+	% \end{center}
+	Note that:
+	\begin{eqnarray*}
+	\varepsilon_{A} \,\circ \left(\,
+		\kappa \overset{{\color{white}1}}{\circ} h
+		\,\right)
+	& = &
+		\left(\,\varepsilon_{A} \overset{{\color{white}1}}{\circ} \kappa \,\right)
+		\circ \, h
+	\;\; = \;\;
+		\left(\,\kappa^{\prime\prime} \overset{{\color{white}1}}{\circ} \varepsilon_{K} \,\right)
+		\circ \, h
+	\;\; = \;\;
+		\kappa^{\prime\prime} \,\circ \left(\,
+		\varepsilon_{K}
+		\overset{{\color{white}1}}{\circ}
+		h
+		 \,\right)
+	\;\; = \;\;
+		\kappa^{\prime\prime} \,\circ\, 0
+	\;\; = \;\;
+		0
+	\end{eqnarray*}
+	By Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories},
+	the exactness of
+	\begin{tikzcd}
+	A^{\prime}
+		\arrow[r, "\mu_{A}"]
+	&
+	A
+		\arrow[r, "\varepsilon_{A}"]
+	&
+	A^{\prime\prime}
+	\end{tikzcd}
+	implies the existence of
+	a morphism \,$\rho \,\in\, \Mor_{\mathfrak{A}}(X^{\prime},A^{\prime})$\,
+	and
+	an epimorphism \,$\mu^{\prime} \,\in\, \Mor_{\mathfrak{A}}(X^{\prime},X)$\,
+	such that
+	\,$\mu_{A} \,\circ\, \rho
+	\, = \,
+		\left(\,
+			\kappa \overset{{\color{white}1}}{\circ} h
+			\,\right)
+		\circ\, \mu^{\prime}
+	$.\,
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad $f^{\prime} \,\circ\, \rho \,=\, 0$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\;\;
+	Observe that
+	\begin{eqnarray*}
+	\mu_{B} \,\circ\, f^{\prime} \,\circ\, \rho
+	& = &
+		f \,\circ\, \mu_{A} \,\circ\, \rho
+	\;\; = \;\;
+		f \,\circ\, (\,\kappa \circ h\,) \,\circ\, \mu^{\prime}
+	\;\; = \;\;
+		(\,f \circ \kappa\,) \,\circ\, h \,\circ\, \mu^{\prime}
+	\;\; = \;\;
+		(\,0\,) \,\circ\, h \,\circ\, \mu^{\prime}
+	\;\; = \;\;
+		0\,,
+	\end{eqnarray*}
+	which implies
+	\,$f^{\prime} \,\circ\, \rho \,=\, 0$,\,
+	since \,$\mu_{B}$\, is by hypothesis a monomorphism.
+	This proves Claim 1.
+	\vskip 0.3cm
+	\noindent
+	The universal property of \,$\kappa^{\prime}$\, as a kernel of \,$f^{\prime}$\,
+	now implies that there exists a unique morphism
+	\,$h^{\prime} \,\in\, \Mor_{\mathfrak{A}}(X^{\prime},K^{\prime})$\,
+	such that
+	\,$\rho \,=\, \kappa^{\prime} \,\circ\, h^{\prime}$.\,
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2:}\quad $\mu_{K} \,\circ\, h^{\prime} \,=\, h \,\circ\, \mu^{\prime}$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 2:\;\;
+	Observe that
+	\begin{eqnarray*}
+	\kappa \,\circ\, \mu_{K} \,\circ\, h^{\prime}
+	& = &
+		\mu_{A} \,\circ\, \kappa^{\prime} \,\circ\, h^{\prime}
+	\;\; = \;\;
+		\mu_{A} \,\circ\, \rho
+	\;\; = \;\;
+		\kappa \,\circ\, h \,\circ\, \mu^{\prime}\,,
+	\end{eqnarray*}
+	which implies
+	\,$\mu_{K} \,\circ\, h^{\prime} \,=\, h \,\circ\, \mu^{\prime}$,\,
+	since \,$\kappa$\, is a monomorphism (being a kernel of a morphism in an abelian category).
+	This proves Claim 2, as well as completes the proof of the exactness of
+	\begin{tikzcd}
+	K^{\prime}
+		\arrow[r, "\mu_{K}"]
+	&
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+	\end{tikzcd}\!\!.
 	\vskip 0.5cm
 
 \item
