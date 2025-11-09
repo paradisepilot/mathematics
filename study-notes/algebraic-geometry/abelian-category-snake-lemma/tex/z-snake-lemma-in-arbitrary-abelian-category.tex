@@ -283,7 +283,7 @@ Then, the following statements are true:
 	now implies the existence (and uniqueness) of
 	\,$\varepsilon_{Q} : Q \longrightarrow Q^{\prime\prime}$.
 
-	\vskip 0.3cm
+	\vskip 0.5cm
 	\underline{Exactness of{\color{white}.q}$
 		K^{\prime}
 		\,\overset{\mu_{K}}{\longrightarrow}\,
@@ -291,7 +291,7 @@ Then, the following statements are true:
 		\,\overset{\varepsilon_{K}}{\longrightarrow}\,
 		K^{\prime\prime}
 		$}
-	\vskip -0.01cm
+	\vskip -0.15cm
 	By Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories},
 	in order to establish the exactness of the composition
 	\begin{tikzcd}
@@ -530,6 +530,19 @@ Then, the following statements are true:
 	&
 	K^{\prime\prime}
 	\end{tikzcd}\!\!.
+
+	\vskip 0.5cm
+	\underline{Exactness of{\color{white}.q}$
+		Q^{\prime}
+		\,\overset{\mu_{Q}}{\longrightarrow}\,
+		Q
+		\,\overset{\varepsilon_{Q}}{\longrightarrow}\,
+		Q^{\prime\prime}
+		$}
+	\vskip 0.05cm
+	\noindent
+	This proof can be established by reversing the arrows in the preceding argument.
+	We omit this proof.
 	\vskip 0.5cm
 
 \item
@@ -854,9 +867,6 @@ Then, the following statements are true:
 	\,$\delta \in \Mor_{\mathfrak{A}}(\,K^{\prime\prime}\,,\,Q^{\prime}\,)$\,
 	such that
 	\,$\pi^{\prime} \,\circ\, \theta_{1} \;=\; \delta \,\circ\, \pi_{K^{\prime\prime}}$.\,
-	This completes the proof of Claim 3.
-
-	\vskip 0.3cm
 	\begin{center}
 	\begin{tikzcd}
 	& & & {\color{red}K^{\prime\prime}}
@@ -875,11 +885,51 @@ Then, the following statements are true:
 	& & & {\color{blue}Q^{\prime}}
 	\end{tikzcd}
 	\end{center}
+	This completes the proof of Claim 3.
 
 	\vskip 0.5cm
 	\noindent
 	This construction of the (snake or connection) morphism \,$\delta$\, is now complete.
-	It remains to establish exactness.
+	As for the exactness statement, in the proof of (i), we have already established the exactness of
+	\begin{tikzcd}
+	K^{\prime}
+		\arrow[r, "\mu_{K}"]
+	&
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+	\end{tikzcd}
+	and
+	\begin{tikzcd}
+	Q^{\prime}
+		\arrow[r, "\mu_{Q}"]
+	&
+	Q
+		\arrow[r, "\varepsilon_{Q}"]
+	&
+	Q^{\prime\prime}
+	\end{tikzcd}\!\!.\,
+	Hence, it remains only to establish the exactness of
+	\begin{tikzcd}
+	K
+		\arrow[r, "\varepsilon_{K}"]
+	&
+	K^{\prime\prime}
+		\arrow[r, "\delta"]
+	&
+	Q^{\prime}
+	\end{tikzcd}
+	and
+	\begin{tikzcd}
+	K^{\prime\prime}
+		\arrow[r, "\delta"]
+	&
+	Q^{\prime}
+		\arrow[r, "\mu_{Q}"]
+	&
+	Q
+	\end{tikzcd}\!\!.\,
 
 	\vskip 0.5cm
 	\noindent
@@ -890,7 +940,7 @@ Then, the following statements are true:
 		\,\overset{\delta}{\longrightarrow}\,
 		Q^{\prime}
 		$}
-	\vskip -0.01cm
+	\vskip -0.15cm
 	By Proposition \ref{NecessarySufficientConditionForExactnessInAbelianCategories},
 	in order to establish the exactness of the composition
 	\begin{tikzcd}
@@ -1255,6 +1305,24 @@ Then, the following statements are true:
 	Q^{\prime}
 	\end{tikzcd}\!\!.
 
+	\vskip 0.5cm
+	\noindent
+	\underline{Exactness of{\color{white}.q}$
+		K^{\prime\prime}
+		\,\overset{\delta}{\longrightarrow}\,
+		Q^{\prime}
+		\,\overset{\mu_{Q}}{\longrightarrow}\,
+		Q
+		$}
+	\vskip 0.01cm
+	\noindent
+	This proof can be established by reversing the arrows in the preceding argument.
+	We omit this proof.
+
+	\vskip 0.5cm
+	\noindent
+	The proof of the Proposition is now complete.
+	\qed
 
 % \vskip 0.5cm
 % \item
@@ -1789,6 +1857,5 @@ Then, the following statements are true:
 % 	\vskip 0.3cm
 % 	This construction of the (snake or connection) morphism \,$\delta$\, is now complete.
 \end{enumerate}
-\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
