@@ -1,0 +1,153 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Connections on principal bundles}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+A very short summary of how fibre bundles enter quantum field theory:
+\begin{itemize}
+\item
+	The states of a quantum system (e.g., a single particle, or an ensemble of particles, etc.)
+	are unit vectors (alternative, one-dimensional subspaces) in a suitable (possibly infinite-dimensional) complex Hilbert space.
+\item
+	If the quantum system in question possesses a certain symmetry,
+	then the corresponding group (corresponding to the symmetry) will act on its state space (a complex Hilbert space).
+	Certain particles possess internal symmetries.
+	(Arguably, elementary particles are even determined/defined by the internal symmetries they possess or exhibit.)
+	These internal symmetries are often ``continuous symmetries''. 
+	This is where the theory of representations of Lie groups enters quantum field theory.
+\item
+	When we expand our scope of consideration from the local (or infinitesimal) to the global,
+	it becomes clear that the class of mathematical objects suitable for modelling or representing quantum systems
+	(e.g., elementary \textbf{\color{red}particles})
+	at the pre-quantization stage are smooth \textbf{\color{red}sections of complex vector bundles over spacetime}
+	(i.e., spacetime is the base space of such vector bundles),
+	where the complex vector bundles admit fibre-preserving actions by Lie groups.
+	Such sections of complex vector bundles are examples of what are called ``fields'' in the physics literature.
+\item
+	The Lagrangian describing the \textbf{dynamics} of a quantum system is generally expected to involve the ``derivatives''
+	of the field (section of a complex vector bundle) that represents the quantum system.
+	This is where the notion of \textbf{covariant derivatives} of sections of complex vector bundles
+	-- hence the notion of \textbf{connections} on vector bundles -- enters quantum field theory.
+\item
+	The frame bundle of a vector bundle is a principal bundle.
+	The connection on a vector bundle induces a connection on its frame bundle.
+	The theory of connections on principal bundles is ``cleaner'' than that of connections on vector bundles;
+	more precisely, the former can be given in global terms, and does not require the use of local coordinate charts.
+	This is where the notion of \textbf{\color{red}connections on principal bundles} enters quantum field theory;
+	connections on principal bundles represent \textbf{\color{red}force fields}.
+\item
+	We end by returning to a remark on Lagrangian densities:
+	In  the Standard Model of Particle Physics (which is a quantum field theory),
+	the ``interactions'' between particles (sections of complex vector bundles)
+	and force fields (connections on principal bundles)
+	appear in summands (of Lagrangian densities)
+	through the covariant derivatives of the sections of complex vector bundles
+	(``particles'') with respect to the connections (``force fields'') on principal bundles.
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Principal bundles}
+
+\begin{definition}[Principal bundles]
+\mbox{}
+\vskip 0.15cm
+\noindent
+A \textbf{principal fibre bundle} (or \textbf{principal bundle}) is a fibre bundle
+\,$\pi : P \longrightarrow M$\,
+which satisfies each of the following conditions:
+\begin{itemize}
+\item
+	The general fibre of the fibre bundle
+	\,$\pi : P \longrightarrow M$\,
+	is a Lie group \,$G$.\,
+	The Lie group \,$G$\, is called the \textbf{structure group} of the principal bundle.
+	% \begin{center}
+	% \begin{tikzcd}
+	% G
+	% 	\arrow[rr, hook, thick]
+	% &&
+	% P
+	% 	\arrow[dd, thick, two heads, "\pi"]
+	% \\ \\
+	% &&
+	% M
+	% \end{tikzcd}
+	% \end{center}
+	\begin{center}
+	\begin{tikzcd}
+	G
+		\arrow[r, hook]
+	&
+	P
+		\arrow[dd, two heads, "\pi"]
+	\\ \\
+	&
+	M
+	\end{tikzcd}
+	\end{center}
+\item
+	There is a smooth action
+	\,$P \times G \longrightarrow P$\,
+	on the right.
+\item
+	The aforemention right action on \,$P$\, by \,$G$\,
+	preserves each fibre of \,$\pi$\,
+	and is simply transitive on each fibre of \,$\pi$,\,
+	i.e., the action restricts to each fibre:
+	\begin{center}
+	\begin{tikzcd}
+	P_{x} \times G
+		\arrow[r]
+	&
+	P_{x}
+	\end{tikzcd}
+	\end{center}
+	and, for each \,$x \in M$\, and each \,$p \in P_{x} = \pi^{-1}(x)$\,,
+	the orbit map
+	\begin{equation*}
+	\begin{array}{ccc}
+	G & \longrightarrow & P_{x}
+	\\
+	g & \longmapsto & p \cdot g
+	\end{array}
+	\end{equation*}
+	is a bijection.
+\item
+	There exists a bundle atlas of \textbf{$G$-equivariant bundle charts}
+	\,$\phi_{i} : \pi^{-1}(U_{i}) \longrightarrow U_{i} \times G$,\, i.e.,
+	\renewcommand{\labelitemii}{$\circ$}
+	\begin{itemize}
+	\item
+		$M \; = \; \underset{i}{\bigcup}\;U_{i}$\,,
+	\item
+		for each \,$p \in \pi^{-1}(U_{i})$\, and each \,$g \in G$,\, we have:
+		\begin{equation*}
+		\phi_{i}(\,p \cdot g\,) \;=\; \phi_{i}(p) \,\cdot\, g
+		\end{equation*}
+	\item
+		for each \,$i$,\, the right action induced on \,$U_{i} \times G$\, by \,$\phi_{i}$\, is given by:
+		\begin{equation*}
+		\left(\, x \,\overset{{\color{white}1}}{,}\, h \,\right) \cdot\, g
+		\; = \;
+			\left(\, x \,\overset{{\color{white}1}}{,}\, h \cdot g \,\right),
+		\end{equation*}
+		for each \,$x \in M$\, and for each \,$g, h \in G$.\,
+	\end{itemize}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
