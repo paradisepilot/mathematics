@@ -59,170 +59,176 @@ A very short summary of how fibre bundles enter quantum field theory:
 
 %           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-% \clearpage
-% \section{The translates of a group by right multiplication}
-
-%           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-% \begin{remark}
-% \mbox{}
-% \vskip 0.05cm
-% \noindent
-% The following Lemma shows that, given any group $G$ and an arbitrary element $h \in G$,
-% we can obtain a new group $G_{(h)}$ that is isomorphic to $G$ via right multiplication by $h$.
-% $G_{(h)}$ can be regarded as a sort of {\color{red}``re-coordinatization''} of $G$,
-% by ``shifting'' the identity element from $\mathds{1}_{G}$ to $\mathds{1}_{G_{(g)}} = h$.
-% This observation will allow us to regard a \textbf{global gauge transformation}
-% on a principal bundle
-% \,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
-% as a smoothly varying family of fibre-wise re-coordinatizations.
-% The principle of \textbf{\color{red}gauge invariance} of physical phenomena can thus be regarded as
-% invariance of physical phenomena with respect to smoothly varying re-coordinatizations
-% of the internal symmetry group $G$ (over each point $x \in M$) as the base point \,$p \in M$\, varies.
-% \end{remark}
-
-
-% \vskip 0.5cm
-% \begin{lemma}[Each right translate of a group is itself a group]
-% \mbox{}
-% \vskip 0.05cm
-% \noindent
-% Suppose \,$G$\, is a group and \,$\mathds{1}_{G}$\, is the identity element of \,$G$.\,
-% We denote the multiplication in \,$G$\, with a dot (i.e., $g_{1} \cdot g_{2}$, for $g_{1}, g_{2} \in G$). 
-% For each \,$h \in G$,\, define:
-% \begin{equation*}
-% \begin{array}{cccl}
-% \star_{h} \;\; : & G \times G & \xrightarrow{{\color{white}22222}} & G
-% \\
-% & (g_{1},g_{2}) & \xmapsto{{\color{white}22222}} & (g_{1} \cdot h^{-1}) \cdot (g_{2} \cdot h^{-1}) \cdot h \,=\, g_{1} \cdot h^{-1} \cdot g_{2}
-% \end{array}
-% \end{equation*}
-% Then,
-% \begin{enumerate}
-% \item
-% 	\vskip -0.1cm
-% 	$G_{(h)} \; := \; \left(\,\overset{{\color{white}.}}{G}\,,\,\star_{h}\,\right)$\,
-% 	forms a group, whose identity element is:
-% 	\,$\mathds{1}_{G_{(h)}} = \, h$,\, and
-% \item
-% 	the map
-% 	\,$\Phi_{h} : G \xrightarrow{{\color{white}222}} G_{(h)} \,:\, g \xmapsto{{\color{white}222}} g \cdot h $\,
-% 	is an isomorphism of groups.
-% \end{enumerate}
-% \end{lemma}
-% \proof
-% \begin{enumerate}
-% \item
-% 	First, we show that \,$\star_{h}$\, is associative. To this end, observe:
-% 	\begin{eqnarray*}
-% 	g_{1} \,\star_{h}\, (\,g_{2} \,\star_{h}\, g_{3}\,)
-% 	& = &
-% 		g_{1} \,\star_{h}\, (\,g_{2} \cdot h^{-1} \cdot g_{3}\,)
-% 	\;\; = \;\;
-% 		g_{1} \cdot h^{-1} \cdot (\,g_{2} \cdot h^{-1} \cdot g_{3}\,)
-% 	\\
-% 	& = &
-% 		(\,g_{1} \cdot h^{-1} \cdot g_{2}\,) \cdot h^{-1} \cdot g_{3}
-% 	\;\; = \;\;
-% 		(\,g_{1} \,\star_{h}\, g_{2}\,) \,\star_{h}\, g_{3}\,,
-% 	\end{eqnarray*}
-% 	as required.
-% 	\vskip 0.2cm
-% 	\noindent
-% 	Next, we show that the identity element of \,$G_{(h)}$\, is indeed
-% 	\,$\mathds{1}_{G_{(h)}} \,=\, h$\,:
-% 	\begin{eqnarray*}
-% 	g \,\star_{h}\, h
-% 	\; = \;
-% 		g \cdot h^{-1} \cdot h
-% 	\; = \;
-% 		g\,,
-% 	\quad
-% 	\textnormal{for each \,$g \in G_{(h)}$}
-% 	\end{eqnarray*}
-% 	\vskip 0.2cm
-% 	\noindent
-% 	Lastly, we show that, for each \,$g \in G_{(h)}$,\, its inverse in \,$G_{(h)}$\, is
-% 	\begin{equation*}
-% 	g_{1}
-% 	\;\; := \;\;
-% 		\Phi_{h}\!\left[\,\left(\,\overset{{\color{white}.}}{\Phi_{h}^{-1}(g)}\,\right)^{-1}\,\right]
-% 	\;\; = \;\;
-% 		\Phi_{h}\!\left[\,\left(\,\overset{{\color{white}.}}{g \cdot h^{-1}}\,\right)^{-1}\,\right]
-% 	\;\; = \;\;
-% 		\Phi_{h}\!\left[\,h \cdot g^{-1}\,\right]
-% 	\;\; = \;\;
-% 		h \cdot g^{-1} \cdot h
-% 	\end{equation*}
-% 	Indeed,
-% 	\begin{eqnarray*}
-% 	g \,\star_{h}\, g_{1}
-% 	& = &
-% 		g \cdot h^{-1} \cdot (\,h \cdot g^{-1} \cdot h\,)
-% 	\;\; = \;\;
-% 		h
-% 	\;\; = \;\;
-% 		\mathds{1}_{G_{(h)}}\,,
-% 	\\
-% 	g_{1} \,\star_{h}\, g
-% 	& = &
-% 		(\,h \cdot g^{-1} \cdot h\,) \cdot h^{-1} \cdot g
-% 	\;\; = \;\;
-% 		h
-% 	\;\; = \;\;
-% 		\mathds{1}_{G_{(h)}}
-% 	\end{eqnarray*}
-% 	This completes the proof of (i).
-% \item
-% 	It is immediate that \,$\Phi_{h}$\, is a bijection.
-% 	Next, note that \,$\Phi_{h}$\, is indeed a group homomorphism:
-% 	\begin{eqnarray*}
-% 	\Phi_{h}\!\left(\,
-% 		g_{1} \overset{{\color{white}1}}{\cdot} g_{2}
-% 		\,\right)
-% 	& = &
-% 		g_{1} \cdot g_{2} \cdot h
-% 	\;\; = \;\;
-% 		\left(\,g_{1} \cdot h\,\right)
-% 		\cdot h^{-1} \cdot
-% 		\left(\,g_{2} \cdot h\,\right)
-% 	\;\; = \;\;
-% 		\Phi_{h}\!\left(\,g_{1}\,\right)
-% 		\,\star_{h}\,
-% 		\Phi_{h}\!\left(\,g_{2}\,\right)
-% 	\end{eqnarray*}
-% 	This completes the proof that \,$\Phi_{h}$\, is a group isomorphism.
-% 	\qed
-% \end{enumerate}
-
-% \noindent
-% \begin{remark}
-% \mbox{}
-% \vskip 0.05cm
-% \noindent
-% Note that \,$\star_{h}$\, can be given as a series of two compositions as indicated
-% in the following commutative diagram:
-% \begin{center}
-% \begin{tikzcd}
-% G_{(h)} \times G_{(h)}
-% 	\arrow[rr, thick, "\star_{h}"]
-% 	\arrow[dd, thick, "\Phi_{h}^{-1} \,\times\, \Phi_{h}^{-1}\;", swap]
-% &&
-% G_{(h)}
-% \\ \\
-% G \times G
-% 	\arrow[rr, thick]
-% &&
-% G
-% 	\arrow[uu, thick,, "\;\Phi_{h}", swap]
-% \end{tikzcd}
-% \end{center}
-% \end{remark}
-
-%           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-% \vskip 0.5cm
 \clearpage
+\section{The translates of a group by left multiplication}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{remark}
+\mbox{}
+\vskip 0.05cm
+\noindent
+The following Lemma shows that, given any group $G$ and an arbitrary element $h \in G$,
+we can obtain a new group $G_{(h)}$ that is isomorphic to $G$ via {\color{red}left} multiplication by $h$.
+$G_{(h)}$ can be regarded as a sort of {\color{red}``re-coordinatization''} of $G$,
+by ``shifting'' the identity element from $\mathds{1}_{G}$ to $\mathds{1}_{G_{(g)}} = h$.
+This observation will allow us to regard a \textbf{global gauge transformation}
+on a principal bundle
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+as a smoothly varying family of fibre-wise re-coordinatizations.
+The principle of \textbf{\color{red}gauge invariance} of physical phenomena can thus be regarded as
+invariance of physical phenomena with respect to smoothly varying re-coordinatizations
+of the internal symmetry group $G$ (over each point $x \in M$) as the base point \,$p \in M$\, varies.
+\end{remark}
+
+
+\vskip 0.5cm
+\begin{lemma}[Each left translate of a group is itself a group]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose \,$G$\, is a group and \,$\mathds{1}_{G}$\, is the identity element of \,$G$.\,
+We denote the multiplication in \,$G$\, with a dot (i.e., $g_{1} \cdot g_{2}$, for $g_{1}, g_{2} \in G$). 
+For each \,$h \in G$,\, define:
+\begin{equation*}
+\begin{array}{cccl}
+\star_{h} \;\; : & G \times G & \xrightarrow{{\color{white}22222}} & G
+\\
+& (g_{1},g_{2}) & \xmapsto{{\color{white}22222}} & h \cdot (h^{-1} \cdot g_{1}) \cdot (h^{-1} \cdot g_{2}) \,=\, g_{1} \cdot h^{-1} \cdot g_{2}
+\end{array}
+\end{equation*}
+Then,
+\begin{enumerate}
+\item
+	\vskip -0.1cm
+	$G_{(h)} \; := \; \left(\,\overset{{\color{white}.}}{G}\,,\,\star_{h}\,\right)$\,
+	forms a group, whose identity element is:
+	\,$\mathds{1}_{G_{(h)}} = \, h$,\, and
+\item
+	the map
+	\,$\Phi_{h} : G \xrightarrow{{\color{white}222}} G_{(h)} \,:\, g \xmapsto{{\color{white}222}} h \cdot g $\,
+	is an isomorphism of groups.
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+	First, we show that \,$\star_{h}$\, is associative. To this end, observe:
+	\begin{eqnarray*}
+	g_{1} \,\star_{h}\, (\,g_{2} \,\star_{h}\, g_{3}\,)
+	& = &
+		g_{1} \,\star_{h}\, (\,g_{2} \cdot h^{-1} \cdot g_{3}\,)
+	\;\; = \;\;
+		g_{1} \cdot h^{-1} \cdot (\,g_{2} \cdot h^{-1} \cdot g_{3}\,)
+	\\
+	& = &
+		(\,g_{1} \cdot h^{-1} \cdot g_{2}\,) \cdot h^{-1} \cdot g_{3}
+	\;\; = \;\;
+		(\,g_{1} \,\star_{h}\, g_{2}\,) \,\star_{h}\, g_{3}\,,
+	\end{eqnarray*}
+	as required.
+	\vskip 0.2cm
+	\noindent
+	Next, we show that the identity element of \,$G_{(h)}$\, is indeed
+	\,$\mathds{1}_{G_{(h)}} \,=\, h$\,:
+	\begin{eqnarray*}
+	g \,\star_{h}\, h
+	& = &
+		g \cdot h^{-1} \cdot h
+	\;\; = \;\;
+		g\,,
+		\quad
+		\textnormal{and}
+	\\
+	h \,\star_{h}\, g
+	& = &
+		h \cdot h^{-1} \cdot g
+	\;\; = \;\;
+		g\,,
+	\end{eqnarray*}
+	for each \,$g \in G_{(h)}$.\,
+	\vskip 0.2cm
+	\noindent
+	Lastly, we show that, for each \,$g \in G_{(h)}$,\, its inverse in \,$G_{(h)}$\, is
+	\begin{equation*}
+	g_{1}
+	\;\; := \;\;
+		\Phi_{h}\!\left[\,\left(\,\overset{{\color{white}.}}{\Phi_{h}^{-1}(g)}\,\right)^{-1}\,\right]
+	\;\; = \;\;
+		\Phi_{h}\!\left[\,\left(\,\overset{{\color{white}.}}{h^{-1} \cdot g}\,\right)^{-1}\,\right]
+	\;\; = \;\;
+		\Phi_{h}\!\left[\,g^{-1} \cdot h\,\right]
+	\;\; = \;\;
+		h \cdot g^{-1} \cdot h
+	\end{equation*}
+	Indeed,
+	\begin{eqnarray*}
+	g \,\star_{h}\, g_{1}
+	& = &
+		g \cdot h^{-1} \cdot (\,h \cdot g^{-1} \cdot h\,)
+	\;\; = \;\;
+		h
+	\;\; = \;\;
+		\mathds{1}_{G_{(h)}}\,,
+	\\
+	g_{1} \,\star_{h}\, g
+	& = &
+		(\,h \cdot g^{-1} \cdot h\,) \cdot h^{-1} \cdot g
+	\;\; = \;\;
+		h
+	\;\; = \;\;
+		\mathds{1}_{G_{(h)}}
+	\end{eqnarray*}
+	This completes the proof of (i).
+\item
+	It is immediate that \,$\Phi_{h}$\, is a bijection.
+	Next, note that \,$\Phi_{h}$\, is indeed a group homomorphism:
+	\begin{eqnarray*}
+	\Phi_{h}\!\left(\,
+		g_{1} \overset{{\color{white}1}}{\cdot} g_{2}
+		\,\right)
+	& = &
+		h \cdot g_{1} \cdot g_{2}
+	\;\; = \;\;
+		\left(\,h \cdot g_{1}\,\right)
+		\cdot h^{-1} \cdot
+		\left(\,h \cdot g_{2}\,\right)
+	\;\; = \;\;
+		\Phi_{h}\!\left(\,g_{1}\,\right)
+		\,\star_{h}\,
+		\Phi_{h}\!\left(\,g_{2}\,\right)
+	\end{eqnarray*}
+	This completes the proof that \,$\Phi_{h}$\, is a group isomorphism.
+	\qed
+\end{enumerate}
+
+\noindent
+\begin{remark}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Note that \,$\star_{h}$\, can be given as a series of two compositions as indicated
+in the following commutative diagram:
+\begin{center}
+\begin{tikzcd}
+G_{(h)} \times G_{(h)}
+	\arrow[rr, thick, "\star_{h}"]
+	\arrow[dd, thick, "\Phi_{h}^{-1} \,\times\, \Phi_{h}^{-1}\;", swap]
+&&
+G_{(h)}
+\\ \\
+G \times G
+	\arrow[rr, thick]
+&&
+G
+	\arrow[uu, thick,, "\;\Phi_{h}", swap]
+\end{tikzcd}
+\end{center}
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \section{Ehresmann connections on fibre bundles and parallel transport via horizontal lifts}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
