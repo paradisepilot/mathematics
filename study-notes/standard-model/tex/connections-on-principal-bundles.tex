@@ -243,37 +243,48 @@ which satisfies each of the following conditions:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
-\begin{lemma}[Vertical subbundle of principal bundles]
-\mbox{}
-\vskip -0.05cm
-\noindent
-Suppose that
-\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
-is a principal bundle, and \,$\mathcal{V}(P)$\, is the following disjoint union:
-\begin{equation*}
-\mathcal{V}(P)
-\;\; := \;
-	\underset{p\,\in\,P}{\bigsqcup}\,\ker(\,\d\pi_{p}\,)\,,
-\end{equation*}
-where, for each \,$p \in P$\, the map
-\,$\d\pi_{p} : T_{p}P \xrightarrow{{\color{white}222}} T_{\pi(p)}M$\,
-is the differential of
-\,$P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
-at \,$p \in P$.\,
-Then, \,$\mathcal{V}(P)$\, is a subbundle of the tangent bundle \,$TP$\, of \,$P$.\,
-$\mathcal{V}(P)$\, is called the \textbf{vertical subbundle} of
-the principal bundle
-\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$.\,
-\end{lemma}
+% \vskip 0.5cm
+% \begin{lemma}[Vertical subbundle of principal bundles]
+% \mbox{}
+% \vskip -0.05cm
+% \noindent
+% Suppose that
+% \,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+% is a principal bundle, and \,$\mathcal{V}(P)$\, is the following disjoint union:
+% \begin{equation*}
+% \mathcal{V}(P)
+% \;\; := \;
+% 	\underset{p\,\in\,P}{\bigsqcup}\,\ker(\,\d\pi_{p}\,)\,,
+% \end{equation*}
+% where, for each \,$p \in P$\, the map
+% \,$\d\pi_{p} : T_{p}P \xrightarrow{{\color{white}222}} T_{\pi(p)}M$\,
+% is the differential of
+% \,$P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+% at \,$p \in P$.\,
+% Then, \,$\mathcal{V}(P)$\, is a subbundle of the tangent bundle \,$TP$\, of \,$P$.\,
+% $\mathcal{V}(P)$\, is called the \textbf{vertical subbundle} of
+% the principal bundle
+% \,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$.\,
+% \end{lemma}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{definition}[Ehresmann principal connection of a principal bundle]
+\begin{definition}[Principal Ehresmann connection of a principal bundle]
 \mbox{}
 \vskip -0.05cm
 \noindent
+An Ehresmann connection \,$\mathcal{H} \subset \mathcal{T}(P)$\, on a principal bundle
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is said to be \textbf{principal} if \;$\mathcal{H} \subset \mathcal{T}(P)$\, is right-invariant, i.e.,
+\begin{equation*}
+\mathcal{H}_{\,p \cdot g}
+\;\; = \;\;
+	\d(R_{g})_{p}\!\left(\,\overset{{\color{white}.}}{\mathcal{H}_{\,p}}\,\right),
+\end{equation*}
+for each \,$p \in P$\, and for each \,$g \in G$.\,
+Here, \,$\d(R_{g})_{p}$\, denotes the differential at \,$p \in P$\,
+of the right translation on \,$P$\, by \,$g$.\, 
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
