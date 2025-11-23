@@ -290,6 +290,35 @@ of the right translation on \,$P$\, by \,$g$.\,
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{definition}[Fundamential vector fields on principal bundles]
+\mbox{}
+\vskip -0.05cm
+\noindent
+Suppose
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a principal bundle and
+\,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$.\,
+For each \,$A \in \mathfrak{g}$,\, define \,$A^{\sharp} \in \Gamma(\mathcal{V}(P))$\, as follows:
+\begin{equation*}
+A^{\sharp}(\,p\,)
+\;\, := \;\,
+	\d(\iota_{p})_{e}\!\left(\,\overset{{\color{white}.}}{A}\,\right)
+\; \in \;
+	\mathcal{V}_{p}(P)
+\; = \;
+	\ker(\,\d\pi_{p}\,)\,,
+\quad
+\textnormal{for each \,$p \in P$}\,,
+\end{equation*}
+where \,$e \in G$\, is the identity element of \,$G$,\, and
+\,$\iota_{p} : G \xrightarrow{{\color{white}222}} P : g \xmapsto{{\color{white}222}} p \cdot g$.\,
+The vertical vector field \,$A^{\sharp} \in \Gamma(\mathcal{V}(P))$\, is  called the
+\textbf{fundamental vector field} on \,$P$\, associated to \,$A \in \mathfrak{g}$.\, 
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{definition}[Connection $1$-form on a principal bundle]
 \mbox{}
 \vskip -0.05cm
@@ -309,7 +338,7 @@ the following propertiees:
 \item
 	$\omega_{p}\!\left(\,\overset{{\color{white}.}}{A^{\sharp}(p)}\,\right) \,=\, A$\,,\;
 	for each \,$p \in P$\, and each \,$A \in \mathfrak{g}$,\,
-	where \,$A^{\sharp} \in \Gamma(\mathcal{V}(\mathcal{T}P))$\, is the fundamental vector field
+	where \,$A^{\sharp} \in \Gamma(\mathcal{V}(P))$\, is the fundamental vector field
 	on \,$P$\, associated to \,$A \in \mathfrak{g}$.\,
 \end{itemize}
 \end{definition}
