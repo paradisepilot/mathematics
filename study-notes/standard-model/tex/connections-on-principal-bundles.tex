@@ -59,11 +59,103 @@ A very short summary of how fibre bundles enter quantum field theory:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Principal bundles}
+\clearpage
+\section{Ehresmann connections on fibre bundles and parallel transport via horizontal lifts}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{lemma}[Vertical tangent bundle of a fibre bundle]
+\mbox{}
+\vskip -0.05cm
+\noindent
+Suppose that
+\,$F \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a fibre bundle, and \,$\mathcal{V}(P)$\, is the following disjoint union:
+\begin{equation*}
+\mathcal{V}(P)
+\;\; := \;
+	\underset{p\,\in\,P}{\bigsqcup}\,\ker(\;\d\pi_{p}\,)\,,
+\end{equation*}
+where, for each \,$p \in P$,\, the map
+\,$\d\pi_{p} : \mathcal{T}_{p}P \xrightarrow{{\color{white}222}} \mathcal{T}_{\pi(p)}M$\,
+is the differential of
+\,$P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+at \,$p \in P$.\,
+Then, \,$\mathcal{V}(P)$\, is a subbundle of the tangent bundle \,$\mathcal{T}(P)$\, of \,$P$.\,
+$\mathcal{V}(P)$\, is called the \textbf{vertical tangent bundle} of
+the fibre bundle
+\,$F \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$.\,
+\end{lemma}
+
+\vskip 0.5cm
+\begin{definition}[Ehresmann connection of a fibre bundle]
+\mbox{}
+\vskip -0.05cm
+\noindent
+An \,\textbf{Ehresmann connection}\, on a fibre bundle
+\,$F \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a subbundle \,$\mathcal{H}$\, of the tangent bundle \,$\mathcal{T}(P)$\, of the total space \,$P$\,
+such that
+\,$\mathcal{T}(P) \,=\, \mathcal{H} \oplus \mathcal{V}(P)$.\,
+\end{definition}
+
+\vskip 0.5cm
+\begin{lemma}[Unique maximal horizontal lift induced by Ehresmann connection]
+\mbox{}
+\vskip -0.05cm
+\noindent
+Suppose that
+\,$F \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a fibre bundle, and \,$\mathcal{H} \subset \mathcal{V}(P)$\, an Ehresmann connection on \,$P$.\,
+Then, for each smooth curve
+\,$\gamma : [\,0,1] \xrightarrow{{\color{white}222}} M$\,
+in the base manifold \,$M$
+and each point
+\,$p \,\in\, P_{\gamma(0)} \,:=\, \pi^{-1}(\gamma(0))$\,
+in the fibre over
+\,$\gamma(0) \in M$,\,
+there exists a \textbf{\color{black}unique maximally defined initial horizontal lift}
+\;\,$\widetilde{\gamma} : [\,0\,,\varepsilon\,) \xrightarrow{{\color{white}222}} P$\,
+of \,$\gamma$ through \,$p$,\,
+i.e., \,$\widetilde{\gamma}$\, is a curve in \,$P$\, that satisfies:
+\begin{itemize}
+\item
+	$\widetilde{\gamma}(0) \,=\, p$\,,
+\item
+	$\pi \,\circ\, \widetilde{\gamma} \; = \; \gamma$\,,
+\item
+	$\widetilde{\gamma}^{\,\prime}(t) \,\in\, \mathcal{H}_{\,\widetilde{\gamma}(t)}$\,,\;
+	for each \,$t \in [\,0\,,\varepsilon\,)$\,, and
+% \item
+% 	$\varepsilon > 0$\, is maximal\,, and
+\item
+	if
+	\,$\xi : [\,0\,,\delta\,) \xrightarrow{{\color{white}222}} P$\,
+	is any initial horizontal lift of \,$\gamma$,\, i.e.,
+	\begin{equation*}
+	\xi(0) =\, p\,,
+	\quad
+	\pi \,\circ\, \xi(t) \,=\, \gamma(t)\,,
+	\quad\textnormal{and}\quad\;\;
+	\xi(t) \in \mathcal{H}_{\,\xi(t)}\,,
+	\quad
+	\textnormal{for each \,$t \in [\,0\,,\delta\,)$}\,,
+	\end{equation*}
+	then we have: \,$\delta < \varepsilon$,\, and
+	\;$\xi(t) = \widetilde{\gamma}(t)$\, for each \,$t \in [\,0\,,\delta\,)$.\,
+\end{itemize}
+\end{lemma}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{Principal bundles and principal (Ehresmann) connections thereon}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \begin{definition}[Principal bundles]
 \mbox{}
-\vskip 0.15cm
+\vskip 0.1cm
 \noindent
 A \textbf{principal fibre bundle} (or \textbf{principal bundle}) is a fibre bundle
 \,$\pi : P \longrightarrow M$\,
@@ -147,6 +239,41 @@ which satisfies each of the following conditions:
 		for each \,$x \in M$\, and for each \,$g, h \in G$.\,
 	\end{itemize}
 \end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{lemma}[Vertical subbundle of principal bundles]
+\mbox{}
+\vskip -0.05cm
+\noindent
+Suppose that
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a principal bundle, and \,$\mathcal{V}(P)$\, is the following disjoint union:
+\begin{equation*}
+\mathcal{V}(P)
+\;\; := \;
+	\underset{p\,\in\,P}{\bigsqcup}\,\ker(\,\d\pi_{p}\,)\,,
+\end{equation*}
+where, for each \,$p \in P$\, the map
+\,$\d\pi_{p} : T_{p}P \xrightarrow{{\color{white}222}} T_{\pi(p)}M$\,
+is the differential of
+\,$P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+at \,$p \in P$.\,
+Then, \,$\mathcal{V}(P)$\, is a subbundle of the tangent bundle \,$TP$\, of \,$P$.\,
+$\mathcal{V}(P)$\, is called the \textbf{vertical subbundle} of
+the principal bundle
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$.\,
+\end{lemma}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Ehresmann principal connection of a principal bundle]
+\mbox{}
+\vskip -0.05cm
+\noindent
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
