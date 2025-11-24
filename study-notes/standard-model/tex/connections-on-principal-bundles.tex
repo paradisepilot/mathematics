@@ -227,7 +227,7 @@ for each \,$g \in G$.\,
 Note also:
 \begin{center}
 \begin{tikzcd}
-h^{-1} \cdot g
+g
 	\arrow[dd, mapsto]
 	\arrow[rrrrrr, mapsto, bend left = 30]
 &
@@ -237,9 +237,9 @@ G
 &&&&
 G
 &
-\!\!\!\!\!\!\!\! h^{-1} \cdot \sigma_{f}(p) \cdot g
+\!\!\!\!\!\!\!\! h^{-1} \cdot \sigma_{f}(p) \cdot h \cdot g
 \\ \\
-g
+h \cdot g
 	\arrow[rrrrrr, mapsto, bend right = 30]
 &
 G
@@ -248,7 +248,7 @@ G
 G
 	\arrow[uu, thick,, "\;\Phi_{h}^{-1}", swap]
 &
-\!\!\!\!\!\! \sigma_{f}(p) \cdot g
+\!\!\!\!\!\! \sigma_{f}(p) \cdot h \cdot g
 	\arrow[uu, mapsto]
 \end{tikzcd}
 \end{center}
