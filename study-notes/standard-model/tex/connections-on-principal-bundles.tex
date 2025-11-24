@@ -57,13 +57,100 @@ A very short summary of how fibre bundles enter quantum field theory:
 	(``particles'') with respect to the connections (``force fields'') on principal bundles.
 \end{itemize}
 
-%           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \clearpage
 \section{Gauge invariance as invariance with respect to fibrewise recoordinatization by left translation}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+One of the axioms of quantum field theory is that the physics of a (relativistic) quantum
+system is encoded in the \textbf{Lagrangian density} of the system.
+The Lagrangian density is a $\Re$-valued function defined on the spacetime manifold, and it depends on
+``fields'' and their first ``derivatives'' with respect to spacetime coordinates.
+Fields that correspond to matter particles are sections of vector bundles associated with principal bundles.
+Fields that correspond to forces are connections on principal bundles.
+The structure groups of the aforementioned principal bundles correspond to the ``internal symmetries''
+(i.e., non-spacetime symmetries) exhibited by the species of particles in question.
+\vskip 0.1cm
+The principle of \textbf{gauge invariance} is a fundamental principle of quantum field theory
+which could be intuitively stated as follows:
+physical phenomena (involving relativistic quantum systems) should not change under
+an arbitrary smoothly varying local ``re-coordinatizations'' of the space of the internal symmetry.
+More precisely, the principle of gauge invariance states that
+the \textbf{Lagrangian density of a quantum system must be invariant with respect to gauge transformations}.
+\end{remark}
+
+
+\vskip 0.5cm
+\begin{definition}[Global gauge transformation]
+\mbox{}
+\vskip -0.05cm
+\noindent
+Suppose
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a principal bundle.
+A \textbf{(global) gauge transformation} of \,$P$\, is a bundle automorphism
+\,$f : P \xrightarrow{{\color{white}222}} P$\, that preserves fibres and is $G$-equivariant, i.e.,
+\,$f$\, satisfies:
+\begin{itemize}
+\item
+	$\pi \,\circ\, f \,=\, \pi$\,, and
+\item
+	$f(\,p \cdot g\,) \,=\, f(p) \cdot g$\,,
+	for each \,$p \in P$\, and each \,$g \in G$.\,
+\end{itemize}
+\end{definition}
+
+
+\vskip 0.5cm
+\begin{proposition}[Proposition 5.3.3, p.266, \cite{Hamilton2017}]
+\mbox{}
+\vskip -0.05cm
+\noindent
+Suppose
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a principal bundle.
+Let \,$\mathscr{G}(P)$\, denote the group of gauge transformations of \,$P$.\,
+Let \,$\mathscr{C}^{\infty}(P,G)^{G}$\, denote the group of $G$-valued functions
+defined on $P$ defined as follows:
+\begin{equation*}
+\mathscr{C}^{\infty}(P,G)^{G}
+\;\; := \;\;
+	\left\{\;
+		\left.
+		\overset{{\color{white}1}}{\sigma} \in \mathscr{C}^{\infty}(P,G)
+		\;\;\right\vert\;\,
+		\sigma(\,p \cdot g\,) \,=\, g^{-1} \cdot \sigma(p) \cdot g
+		\;\right\}
+\end{equation*}
+Define the map
+\begin{equation*}
+\begin{array}{ccl}
+\mathscr{G}(P) & \xrightarrow{{\color{white}2222}} & \mathscr{C}^{\infty}(P,G)^{G}
+\\
+f & \xmapsto{{\color{white}2222}} & \sigma_{f}\,,
+\end{array}
+\end{equation*}
+where \,$\sigma_{f} \in \mathscr{C}^{\infty}(P,G)^{G}$\, is defined (implicitly) by:
+\begin{equation*}
+f(p)
+\;\; = \;\;
+	p \cdot \sigma_{f}(p)\,,
+\quad
+\textnormal{for each \,$p \in P$}.
+\end{equation*}
+Then, the map
+\,$\mathscr{G}(P) \xrightarrow{{\color{white}222}} \mathscr{C}^{\infty}(P,G)^{G}$\,
+defined above is well-defined and is an isomorphism of groups.
+\end{proposition}
+
+
+\vskip 0.5cm
 \begin{remark}
 \mbox{}
 \vskip 0.05cm
