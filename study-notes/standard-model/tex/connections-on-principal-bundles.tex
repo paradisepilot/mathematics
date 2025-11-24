@@ -224,6 +224,34 @@ g
 \end{array}
 \end{equation*}
 for each \,$g \in G$.\,
+Note also:
+\begin{center}
+\begin{tikzcd}
+h^{-1} \cdot g
+	\arrow[dd, mapsto]
+	\arrow[rrrrrr, mapsto, bend left = 30]
+&
+G
+	\arrow[rrrr, thick, "\iota_{f(p \cdot h)}^{-1}\;\circ\;f\;\circ\;\iota_{p \cdot h}"]
+	\arrow[dd, thick, "\Phi_{h}\;", swap]
+&&&&
+G
+&
+\!\!\!\!\!\!\!\! h^{-1} \cdot \sigma_{f}(p) \cdot g
+\\ \\
+g
+	\arrow[rrrrrr, mapsto, bend right = 30]
+&
+G
+	\arrow[rrrr, thick,"\iota_{f(p)}^{-1}\;\circ\;f\;\circ\;\iota_{p}", swap]
+&&&&
+G
+	\arrow[uu, thick,, "\;\Phi_{h}^{-1}", swap]
+&
+\!\!\!\!\!\! \sigma_{f}(p) \cdot g
+	\arrow[uu, mapsto]
+\end{tikzcd}
+\end{center}
 \end{remark}
 
 
