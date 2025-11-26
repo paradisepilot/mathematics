@@ -694,8 +694,11 @@ is a $1$-form \,$\omega \in \Omega^{1}(P,\mathfrak{g})$\, on the total space \,$
 the following propertiees:
 \begin{itemize}
 \item
-	$R_{g}^{*}\!\left(\,\omega\,\right) \,=\, \Ad_{g^{-1}} \,\circ\, \omega$\,,\;
-	for each \,$g \in G$,\, and
+	$\left(\,R_{g}^{*}\,\omega\,\right)_{p}
+	\,=\,
+		\Ad_{g^{-1}} \,\circ\, \omega_{p} \,:
+		\mathcal{T}_{p}\,P \xrightarrow{{\color{white}222}} \mathfrak{g}$\,,\;
+	for each \,$g \in G$\, and each \,$p \in P$,\, and
 \item
 	$\omega_{p}\!\left(\,\overset{{\color{white}.}}{A^{\sharp}(p)}\,\right) \,=\, A$\,,\;
 	for each \,$p \in P$\, and each \,$A \in \mathfrak{g}$,\,
@@ -766,39 +769,52 @@ Then,
 		\; + \;
 		\sigma_{f}^{*}(\,\mu_{G}\,)\,,
 	\end{equation*}
-	where \,$\mu_{G} \in \Omega^{1}(G,\mathfrak{g})$\, is the Maurer-Cartan form of \,$G$.
+	where \,$\mu_{G} \in \Omega^{1}(G,\mathfrak{g})$\, is the Maurer-Cartan form of \,$G$,\,
+	and \,$\sigma_{f} \in \mathscr{C}^{\infty}(P,G)^{G}$\, is defined implicitly by:
+	\begin{equation*}
+	f(p)
+	\;\; = \;\;
+		p \cdot \sigma_{f}(p)\,,
+	\quad
+	\textnormal{for each \,$p \in P$}
+	\end{equation*}
 \end{enumerate}
 \end{theorem}
 \proof
 \begin{enumerate}
 \item
 \item
-	First note:
-	\begin{center}
-	\begin{tikzcd}
-	\mathcal{T}_{p}\,P
-		\arrow[rrr, "D_{p}\,\sigma_{f}", swap]
-		\arrow[rrrrrr, bend left = 35, "\sigma_{f}^{*}\,\mu_{G}"]
-	&&&
-	\mathcal{T}_{\sigma_{f}(p)}\,G
-		\arrow[rrr, "(\,\mu_{G}\,)_{\sigma_{f}(p)}\;\;", swap]
-	&&&
-	\mathfrak{g}
-	\end{tikzcd}
-	\end{center}
-	\begin{center}
-	\begin{tikzcd}
-	\mathcal{T}_{p}\,P
-		\arrow[rrr, "D_{p}\,R_{\sigma_{f}(p)}", swap]
-		\arrow[rrrrrr, bend left = 35, "R_{\sigma_{f}(p)}^{*}\,\omega_{f(p)}"]
-	&&&
-	\mathcal{T}_{f(p)}\,P
-		\arrow[rrr, "\omega_{f(p)}", swap]
-	&&&
-	\mathfrak{g}
-	\end{tikzcd}
-	\end{center}
-	Let \,$X \in \mathcal{T}_{p}(P)$.\,
+	% First note:
+	% \begin{center}
+	% \begin{tikzcd}
+	% \mathcal{T}_{p}\,P
+	% 	\arrow[rrr, "D_{p}\,\sigma_{f}", swap]
+	% 	\arrow[rrrrrr, bend left = 35, "\sigma_{f}^{*}\,\mu_{G}"]
+	% &&&
+	% \mathcal{T}_{\sigma_{f}(p)}\,G
+	% 	\arrow[rrr, "(\,\mu_{G}\,)_{\sigma_{f}(p)}\;\;", swap]
+	% &&&
+	% \mathfrak{g}
+	% \end{tikzcd}
+	% \end{center}
+	% \begin{center}
+	% \begin{tikzcd}
+	% \mathcal{T}_{p}\,P
+	% 	\arrow[rrr, "D_{p}\,R_{\sigma_{f}(p)}", swap]
+	% 	\arrow[rrrrrr, bend left = 35, "R_{\sigma_{f}(p)}^{*}\,\omega_{f(p)}"]
+	% &&&
+	% \mathcal{T}_{f(p)}\,P
+	% 	\arrow[rrr, "\omega_{f(p)}", swap]
+	% &&&
+	% \mathfrak{g}
+	% \end{tikzcd}
+	% \end{center}
+	Let \,$X \in \mathcal{T}_{p}(P)$\, and
+	\,$\gamma : (-\varepsilon,\varepsilon) \xrightarrow{{\color{white}222}} P$\,
+	be any smooth curve into \,$P$\, such that \,$\gamma(0) = p$\, and \,$\gamma^{\prime}(0) = X$.\,
+	Let \,$\Phi : P \times G \xrightarrow{{\color{white}222}} P$\,
+	be the right action of \,$G$\, on \,$P$,\, i.e., \,$\Phi(p,g) = p \cdot g$.\,
+	Then, we have:
 	\begin{eqnarray*}
 	(f_{*})_{p}(\,X\,)
 	& = &
@@ -873,8 +889,21 @@ Then,
 			% 	(D_{p}\,\sigma_{f})\!
 			%	\left[\;\overset{{\color{white}.}}{X}\;\right]
 			%	\,\right)
-			\,\right)^{\sharp}_{\!f(p)}
+			\,\right)^{\sharp}_{\!f(p)}\,,
 	\end{eqnarray*}
+	where the last equality follows from the following commutative diagram:
+	\begin{center}
+	\begin{tikzcd}
+	\mathcal{T}_{p}\,P
+		\arrow[rrr, "D_{p}\,\sigma_{f}", swap]
+		\arrow[rrrrrr, bend left = 35, "\left(\,\sigma_{f}^{*}\,\mu_{G}\,\right)_{p}"]
+	&&&
+	\mathcal{T}_{\sigma_{f}(p)}\,G
+		\arrow[rrr, "(\,\mu_{G}\,)_{\sigma_{f}(p)}\;\;", swap]
+	&&&
+	\mathfrak{g}
+	\end{tikzcd}
+	\end{center}
 	\begin{eqnarray*}
 	(\,f^{*}\omega\,)_{p}\left[\;\overset{{\color{white}.}}{X}\;\right]
 	& = &
@@ -890,7 +919,7 @@ Then,
 			\;\right]
 	\\
 	& = &
-		\omega_{f(p)}\!\left[\;
+		\omega_{\,p \cdot \sigma_{f}(p)}\!\left[\;
 			\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
 			\;\right]
 		\; + \;
@@ -902,7 +931,7 @@ Then,
 			\;\right]
 	\\
 	& = &
-		\left(\,R_{\sigma_{f}(p)}^{*}\,\omega_{f(p)}\,\right)\!
+		\left(\,R_{\sigma_{f}(p)}^{*}\,\omega\,\right)_{\!p}
 		\left[\;\overset{{\color{white}.}}{X}\;\right]
 		\; + \;
 		(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
@@ -913,17 +942,33 @@ Then,
 		\left[\;\overset{{\color{white}.}}{X}\;\right]
 		\; + \;
 		(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
-		\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\left[\;\overset{{\color{white}.}}{X}\;\right],
 	\end{eqnarray*}
+	where the last two equalities follow from the hypothesis that \,$\omega$\,
+	is a connection $1$-form, as well as from the following commutative diagram:
+	\begin{center}
+	\begin{tikzcd}
+	\mathcal{T}_{p}\,P
+		\arrow[rrr, "D_{p}\,R_{\sigma_{f}(p)}", swap]
+		\arrow[rrrrrr, bend left = 35, "\left(\,R_{\sigma_{f}(p)}^{*}\,\omega\,\right)_{p}"]
+	&&&
+	\mathcal{T}_{f(p)}\,P
+		\arrow[rrr, "\omega_{f(p)}", swap]
+	&&&
+	\mathfrak{g}
+	\end{tikzcd}
+	\end{center}
+	We may now conclude that
 	\begin{equation*}
 	f^{*}\omega
 	\;\; = \;\;
 		\Ad_{\sigma_{f}^{-1}} \,\circ\, \omega
 		\; + \;
-		\sigma_{f}^{*}(\,\mu_{G}\,)
+		\sigma_{f}^{*}(\,\mu_{G}\,)\,,
 	\end{equation*}
+	which completes the proof of (ii) as well as that of the present Proposition.
+	\qed
 \end{enumerate}
-\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
