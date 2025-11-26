@@ -510,7 +510,7 @@ i.e., \,$\widetilde{\gamma}$\, is a curve in \,$P$\, that satisfies:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\section{Principal bundles and principal (Ehresmann) connections thereon}
+\section{Principal bundles and principal (Ehresmann) connections}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -739,6 +739,191 @@ and the set of connection $1$-forms on \,$P$.\, More precisely,
 	Then, \,$\omega \in \Omega^{1}(P,\mathfrak{g})$\, is a connection $1$-form.
 \end{enumerate}
 \end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{theorem}\textnormal{\bf(Transformation of connections under gauge transformations, Theorem 5.4.4, p.273, \cite{Hamilton2017})}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose
+\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+is a principal bundle and
+\,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$.\,
+Let \,$f \in \mathscr{G}(P)$\, be a gauge transformation and
+\,$\omega \in \Omega^{1}(P,\mathfrak{g})$\, be a connection $1$-form.
+Then,
+\begin{enumerate}
+\item
+	$f^{*}(\omega)$\, is a connection $1$-form on \,$P$,\, and
+\item
+	$f^{*}(\omega)$\, can be given by:
+	\begin{equation*}
+	f^{*}\omega
+	\;\; = \;\;
+		\Ad_{\sigma_{f}^{-1}}\,\circ\,\omega
+		\; + \;
+		\sigma_{f}^{*}(\,\mu_{G}\,)\,,
+	\end{equation*}
+	where \,$\mu_{G} \in \Omega^{1}(G,\mathfrak{g})$\, is the Maurer-Cartan form of \,$G$.
+\end{enumerate}
+\end{theorem}
+\proof
+\begin{enumerate}
+\item
+\item
+	First note:
+	\begin{center}
+	\begin{tikzcd}
+	\mathcal{T}_{p}\,P
+		\arrow[rrr, "D_{p}\,\sigma_{f}", swap]
+		\arrow[rrrrrr, bend left = 35, "\sigma_{f}^{*}\,\mu_{G}"]
+	&&&
+	\mathcal{T}_{\sigma_{f}(p)}\,G
+		\arrow[rrr, "(\,\mu_{G}\,)_{\sigma_{f}(p)}\;\;", swap]
+	&&&
+	\mathfrak{g}
+	\end{tikzcd}
+	\end{center}
+	\begin{center}
+	\begin{tikzcd}
+	\mathcal{T}_{p}\,P
+		\arrow[rrr, "D_{p}\,R_{\sigma_{f}(p)}", swap]
+		\arrow[rrrrrr, bend left = 35, "R_{\sigma_{f}(p)}^{*}\,\omega_{f(p)}"]
+	&&&
+	\mathcal{T}_{f(p)}\,P
+		\arrow[rrr, "\omega_{f(p)}", swap]
+	&&&
+	\mathfrak{g}
+	\end{tikzcd}
+	\end{center}
+	Let \,$X \in \mathcal{T}_{p}(P)$.\,
+	\begin{eqnarray*}
+	(f_{*})_{p}(\,X\,)
+	& = &
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t = 0}\,
+		f\!\left(\,\overset{{\color{white}.}}{\gamma(t)}\,\right)
+	\;\; = \;\;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t = 0}\,
+		\gamma(t) \cdot \sigma_{f}(\gamma(t))
+	\;\; = \;\;
+		\left.\dfrac{\d}{\d\,t}\right\vert_{t = 0}\,
+		\Phi\!\left(\,
+			\overset{{\color{white}.}}{\gamma(t)}
+			\;,\,
+			\sigma_{f}(\gamma(t))
+			\,\right)
+	\\
+	& = &
+		\left(\,D_{(\,\gamma(0)\,,\,\sigma_{f}(\gamma(0))\,)}\Phi\,\right)\!
+		\left(\,
+			\gamma^{\prime}(0)
+			\,,\,
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}
+			\sigma_{f}(\gamma(t))
+			\,\right)
+	\\
+	& = &
+		\left(\,D_{(\,p\,,\,\sigma_{f}(p)\,)}\Phi\,\right)\!
+		\left(\,
+			X
+			\,,\,
+			\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\,\sigma_{f}(\gamma(t))
+			\,\right)
+	\\
+	& = &
+		\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \,
+		\left(\,
+			(\mu_{G})_{\sigma_{f}(p)}\!\left(\,
+				\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\,\sigma_{f}(\gamma(t))
+				\,\right)
+			\,\right)^{\sharp}_{p\cdot\sigma_{f}(p)},
+		\;\;
+		\textnormal{by Proposition 3.5.4, p.149, \cite{Hamilton2017}}
+	\\
+	& = &
+		\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \,
+		\left(\,
+			(\mu_{G})_{\sigma_{f}(p)}\!\left(\,
+				(D_{p}\,\sigma_{f})\!
+				\left[\,\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\,\gamma(t)\,\right]
+				\,\right)
+			\,\right)^{\sharp}_{\!f(p)}
+	\\
+	& = &
+		\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \,
+		\left(\,
+			(\mu_{G})_{\sigma_{f}(p)}\!\left(\,
+				(D_{p}\,\sigma_{f})\!
+				\left[\;\overset{{\color{white}.}}{X}\;\right]
+				\,\right)
+			\,\right)^{\sharp}_{\!f(p)}
+	\\
+	& = &
+		\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \,
+		\left(\,
+			(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+			\left[\;\overset{{\color{white}.}}{X}\;\right]
+			% (\mu_{G})_{\sigma_{f}(p)}\!\left(\,
+			% 	(D_{p}\,\sigma_{f})\!
+			%	\left[\;\overset{{\color{white}.}}{X}\;\right]
+			%	\,\right)
+			\,\right)^{\sharp}_{\!f(p)}
+	\end{eqnarray*}
+	\begin{eqnarray*}
+	(\,f^{*}\omega\,)_{p}\left[\;\overset{{\color{white}.}}{X}\;\right]
+	& = &
+		\omega_{f(p)}\!\left[\;(\overset{{\color{white}.}}{f_{*})_{p}(X)}\;\right]
+	\;\; = \;\;
+		\omega_{f(p)}\!\left[\;
+			\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+			\; + \,
+			\left(\,
+				(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+				\left[\;\overset{{\color{white}.}}{X}\;\right]
+				\,\right)^{\sharp}_{\!f(p)}
+			\;\right]
+	\\
+	& = &
+		\omega_{f(p)}\!\left[\;
+			\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+			\;\right]
+		\; + \;
+		\omega_{f(p)}\!\left[\;
+			\left(\,
+				(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+				\left[\;\overset{{\color{white}.}}{X}\;\right]
+				\,\right)^{\sharp}_{\!f(p)}
+			\;\right]
+	\\
+	& = &
+		\left(\,R_{\sigma_{f}(p)}^{*}\,\omega_{f(p)}\,\right)\!
+		\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \;
+		(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+		\left[\;\overset{{\color{white}.}}{X}\;\right]
+	\\
+	& = &
+		\left(\,\Ad_{\sigma_{f}(p)^{-1}}\,\circ\,\omega_{p}\,\right)\!
+		\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \;
+		(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+		\left[\;\overset{{\color{white}.}}{X}\;\right]
+	\end{eqnarray*}
+	\begin{equation*}
+	f^{*}\omega
+	\;\; = \;\;
+		\Ad_{\sigma_{f}^{-1}} \,\circ\, \omega
+		\; + \;
+		\sigma_{f}^{*}(\,\mu_{G}\,)
+	\end{equation*}
+\end{enumerate}
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
