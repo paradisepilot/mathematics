@@ -748,33 +748,53 @@ and the set of connection $1$-forms on \,$P$.\, More precisely,
 \vskip 0.5cm
 \begin{theorem}\textnormal{\bf(Transformation of connections under gauge transformations, Theorem 5.4.4, p.273, \cite{Hamilton2017})}
 \mbox{}
-\vskip 0.05cm
+\vskip 0.1cm
 \noindent
-Suppose
-\,$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
-is a principal bundle and
-\,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$.\,
-Let \,$f \in \mathscr{G}(P)$\, be a gauge transformation and
-\,$\omega \in \Omega^{1}(P,\mathfrak{g})$\, be a connection $1$-form.
-Then,
+Suppose:
+\begin{itemize}
+\item
+	\vskip -0.1cm
+	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+	is a principal bundle and \,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$,
+\item
+	$\omega \in \Omega^{1}(P,\mathfrak{g})$\, be a connection $1$-form, and
+\item
+	$f \in \mathscr{G}(P)$\, be a gauge transformation.
+\end{itemize}
+Let \;$\mu_{G} \in \Omega^{1}(G,\mathfrak{g})$\, be the Maurer-Cartan form of \,$G$,\, and
+\,$\sigma_{f} \in \mathscr{C}^{\infty}(P,G)^{G}$\,
+be defined implicitly by:
+\begin{equation*}
+f(p)
+\;\; = \;\;
+	p \cdot \sigma_{f}(p)\,,
+\quad
+\textnormal{for each \,$p \in P$}
+\end{equation*}
+Then, the following statements are true:
 \begin{enumerate}
 \item
-	$f^{*}(\omega)$\, is a connection $1$-form on \,$P$,\, and
+	For each \,$p \in P$\, and each \,$X \in \mathcal{T}_{p}\,P$,\, we have:
+	\begin{equation*}
+	(f_{*})_{p}(\,X\,)
+	\;\; = \;\;
+		\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \,
+		\left(\,
+			(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+			\left[\;\overset{{\color{white}.}}{X}\;\right]
+			\,\right)^{\sharp}_{\!f(p)}
+	\end{equation*}
+\item
+	$f^{*}(\omega)$\, is a connection $1$-form on \,$P$.
 \item
 	$f^{*}(\omega)$\, can be given by:
 	\begin{equation*}
-	f^{*}\omega
+	\left(\,f^{*}\omega\,\right)_{p}
 	\;\; = \;\;
-		\Ad_{\sigma_{f}^{-1}}\,\circ\,\omega
+		\Ad_{\sigma_{f}(p)^{-1}}\,\circ\,\omega_{p}
 		\; + \;
-		\sigma_{f}^{*}(\,\mu_{G}\,)\,,
-	\end{equation*}
-	where \,$\mu_{G} \in \Omega^{1}(G,\mathfrak{g})$\, is the Maurer-Cartan form of \,$G$,\,
-	and \,$\sigma_{f} \in \mathscr{C}^{\infty}(P,G)^{G}$\, is defined implicitly by:
-	\begin{equation*}
-	f(p)
-	\;\; = \;\;
-		p \cdot \sigma_{f}(p)\,,
+		\left(\,\sigma_{f}^{*}\,\mu_{G}\,\right)_{p}\,,
 	\quad
 	\textnormal{for each \,$p \in P$}
 	\end{equation*}
@@ -783,37 +803,18 @@ Then,
 \proof
 \begin{enumerate}
 \item
-\item
-	% First note:
-	% \begin{center}
-	% \begin{tikzcd}
-	% \mathcal{T}_{p}\,P
-	% 	\arrow[rrr, "D_{p}\,\sigma_{f}", swap]
-	% 	\arrow[rrrrrr, bend left = 35, "\sigma_{f}^{*}\,\mu_{G}"]
-	% &&&
-	% \mathcal{T}_{\sigma_{f}(p)}\,G
-	% 	\arrow[rrr, "(\,\mu_{G}\,)_{\sigma_{f}(p)}\;\;", swap]
-	% &&&
-	% \mathfrak{g}
-	% \end{tikzcd}
-	% \end{center}
-	% \begin{center}
-	% \begin{tikzcd}
-	% \mathcal{T}_{p}\,P
-	% 	\arrow[rrr, "D_{p}\,R_{\sigma_{f}(p)}", swap]
-	% 	\arrow[rrrrrr, bend left = 35, "R_{\sigma_{f}(p)}^{*}\,\omega_{f(p)}"]
-	% &&&
-	% \mathcal{T}_{f(p)}\,P
-	% 	\arrow[rrr, "\omega_{f(p)}", swap]
-	% &&&
-	% \mathfrak{g}
-	% \end{tikzcd}
-	% \end{center}
-	Let \,$X \in \mathcal{T}_{p}(P)$\, and
+	Let \,$p \in P$\, and \,$X \in \mathcal{T}_{p}\,P$.\,
+	\vskip -0.05cm
+	\noindent
+	Let
 	\,$\gamma : (-\varepsilon,\varepsilon) \xrightarrow{{\color{white}222}} P$\,
-	be any smooth curve into \,$P$\, such that \,$\gamma(0) = p$\, and \,$\gamma^{\prime}(0) = X$.\,
+	be any smooth curve into \,$P$\, such that \,$\gamma(0) = p$\, and \,$\gamma^{\prime}(0) = X$.
+	\vskip -0.05cm
+	\noindent
 	Let \,$\Phi : P \times G \xrightarrow{{\color{white}222}} P$\,
 	be the right action of \,$G$\, on \,$P$,\, i.e., \,$\Phi(p,g) = p \cdot g$.\,
+	\vskip 0.01cm
+	\noindent
 	Then, we have:
 	\begin{eqnarray*}
 	(f_{*})_{p}(\,X\,)
@@ -904,11 +905,16 @@ Then,
 	\mathfrak{g}
 	\end{tikzcd}
 	\end{center}
+\item
+\item
+	Let \,$p \in P$\, and \,$X \in \mathcal{T}_{p}\,P$.\,
+	Then, we have:
 	\begin{eqnarray*}
 	(\,f^{*}\omega\,)_{p}\left[\;\overset{{\color{white}.}}{X}\;\right]
 	& = &
 		\omega_{f(p)}\!\left[\;(\overset{{\color{white}.}}{f_{*})_{p}(X)}\;\right]
-	\;\; = \;\;
+	\\
+	& = &
 		\omega_{f(p)}\!\left[\;
 			\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
 			\; + \,
@@ -916,7 +922,9 @@ Then,
 				(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
 				\left[\;\overset{{\color{white}.}}{X}\;\right]
 				\,\right)^{\sharp}_{\!f(p)}
-			\;\right]
+			\;\right],
+		\quad
+		\textnormal{by (i)}
 	\\
 	& = &
 		\omega_{\,p \cdot \sigma_{f}(p)}\!\left[\;
