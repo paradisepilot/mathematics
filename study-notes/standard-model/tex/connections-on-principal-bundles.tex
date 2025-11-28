@@ -85,6 +85,94 @@ More precisely, the principle of gauge invariance states that
 the \textbf{Lagrangian density of a quantum system must be invariant with respect to gauge transformations}.
 \end{remark}
 
+\vskip 0.5cm
+\begin{definition}[Principal bundles]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A \textbf{principal fibre bundle} (or \textbf{principal bundle}) is a fibre bundle
+\,$\pi : P \longrightarrow M$\,
+which satisfies each of the following conditions:
+\begin{itemize}
+\item
+	The general fibre of the fibre bundle
+	\,$\pi : P \longrightarrow M$\,
+	is a Lie group \,$G$.\,
+	The Lie group \,$G$\, is called the \textbf{structure group} of the principal bundle.
+	% \begin{center}
+	% \begin{tikzcd}
+	% G
+	% 	\arrow[rr, hook, thick]
+	% &&
+	% P
+	% 	\arrow[dd, thick, two heads, "\pi"]
+	% \\ \\
+	% &&
+	% M
+	% \end{tikzcd}
+	% \end{center}
+	\begin{center}
+	\begin{tikzcd}
+	G
+		\arrow[r, hook]
+	&
+	P
+		\arrow[dd, two heads, "\pi"]
+	\\ \\
+	&
+	M
+	\end{tikzcd}
+	\end{center}
+\item
+	There is a smooth action
+	\,$P \times G \longrightarrow P$\,
+	on the right.
+\item
+	The aforemention right action on \,$P$\, by \,$G$\,
+	preserves each fibre of \,$\pi$\,
+	and is simply transitive on each fibre of \,$\pi$,\,
+	i.e., the action restricts to each fibre:
+	\begin{center}
+	\begin{tikzcd}
+	P_{x} \times G
+		\arrow[r]
+	&
+	P_{x}
+	\end{tikzcd}
+	\end{center}
+	and, for each \,$x \in M$\, and each \,$p \in P_{x} = \pi^{-1}(x)$\,,
+	the orbit map
+	\begin{equation*}
+	\begin{array}{ccc}
+	G & \longrightarrow & P_{x}
+	\\
+	g & \longmapsto & p \cdot g
+	\end{array}
+	\end{equation*}
+	is a bijection.
+\item
+	There exists a bundle atlas of \textbf{$G$-equivariant bundle charts}
+	\,$\phi_{i} : \pi^{-1}(U_{i}) \longrightarrow U_{i} \times G$,\, i.e.,
+	\renewcommand{\labelitemii}{$\circ$}
+	\begin{itemize}
+	\item
+		$M \; = \; \underset{i}{\bigcup}\;U_{i}$\,,
+	\item
+		for each \,$p \in \pi^{-1}(U_{i})$\, and each \,$g \in G$,\, we have:
+		\begin{equation*}
+		\phi_{i}(\,p \cdot g\,) \;=\; \phi_{i}(p) \,\cdot\, g
+		\end{equation*}
+	\item
+		for each \,$i$,\, the right action induced on \,$U_{i} \times G$\, by \,$\phi_{i}$\, is given by:
+		\begin{equation*}
+		\left(\, x \,\overset{{\color{white}1}}{,}\, h \,\right) \cdot\, g
+		\; = \;
+			\left(\, x \,\overset{{\color{white}1}}{,}\, h \cdot g \,\right),
+		\end{equation*}
+		for each \,$x \in M$\, and for each \,$g, h \in G$.\,
+	\end{itemize}
+\end{itemize}
+\end{definition}
 
 \vskip 0.5cm
 \begin{definition}[Global gauge transformation]
@@ -121,12 +209,16 @@ defined on $P$ defined as follows:
 \begin{equation*}
 \mathscr{C}^{\infty}(P,G)^{G}
 \;\; := \;\;
-	\left\{\;
-		\left.
+	\left\{\;\,
 		\overset{{\color{white}1}}{\sigma} \in \mathscr{C}^{\infty}(P,G)
-		\;\;\right\vert\;\,
-		\sigma(\,p \cdot g\,) \,=\, g^{-1} \cdot \sigma(p) \cdot g
-		\;\right\}
+		\;\;\left\vert\;
+		\begin{array}{c}
+		\sigma(\,p \cdot g\,) \,=\, g^{-1} \cdot \sigma(p) \cdot g\,,
+		\\
+		\textnormal{for each \,$\overset{{\color{white}1}}{g} \in G$}
+		\end{array}
+		\right.
+		\!\right\}
 \end{equation*}
 Define the map
 \begin{equation*}
@@ -510,97 +602,7 @@ i.e., \,$\widetilde{\gamma}$\, is a curve in \,$P$\, that satisfies:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\section{Principal bundles and principal (Ehresmann) connections}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\begin{definition}[Principal bundles]
-\mbox{}
-\vskip 0.1cm
-\noindent
-A \textbf{principal fibre bundle} (or \textbf{principal bundle}) is a fibre bundle
-\,$\pi : P \longrightarrow M$\,
-which satisfies each of the following conditions:
-\begin{itemize}
-\item
-	The general fibre of the fibre bundle
-	\,$\pi : P \longrightarrow M$\,
-	is a Lie group \,$G$.\,
-	The Lie group \,$G$\, is called the \textbf{structure group} of the principal bundle.
-	% \begin{center}
-	% \begin{tikzcd}
-	% G
-	% 	\arrow[rr, hook, thick]
-	% &&
-	% P
-	% 	\arrow[dd, thick, two heads, "\pi"]
-	% \\ \\
-	% &&
-	% M
-	% \end{tikzcd}
-	% \end{center}
-	\begin{center}
-	\begin{tikzcd}
-	G
-		\arrow[r, hook]
-	&
-	P
-		\arrow[dd, two heads, "\pi"]
-	\\ \\
-	&
-	M
-	\end{tikzcd}
-	\end{center}
-\item
-	There is a smooth action
-	\,$P \times G \longrightarrow P$\,
-	on the right.
-\item
-	The aforemention right action on \,$P$\, by \,$G$\,
-	preserves each fibre of \,$\pi$\,
-	and is simply transitive on each fibre of \,$\pi$,\,
-	i.e., the action restricts to each fibre:
-	\begin{center}
-	\begin{tikzcd}
-	P_{x} \times G
-		\arrow[r]
-	&
-	P_{x}
-	\end{tikzcd}
-	\end{center}
-	and, for each \,$x \in M$\, and each \,$p \in P_{x} = \pi^{-1}(x)$\,,
-	the orbit map
-	\begin{equation*}
-	\begin{array}{ccc}
-	G & \longrightarrow & P_{x}
-	\\
-	g & \longmapsto & p \cdot g
-	\end{array}
-	\end{equation*}
-	is a bijection.
-\item
-	There exists a bundle atlas of \textbf{$G$-equivariant bundle charts}
-	\,$\phi_{i} : \pi^{-1}(U_{i}) \longrightarrow U_{i} \times G$,\, i.e.,
-	\renewcommand{\labelitemii}{$\circ$}
-	\begin{itemize}
-	\item
-		$M \; = \; \underset{i}{\bigcup}\;U_{i}$\,,
-	\item
-		for each \,$p \in \pi^{-1}(U_{i})$\, and each \,$g \in G$,\, we have:
-		\begin{equation*}
-		\phi_{i}(\,p \cdot g\,) \;=\; \phi_{i}(p) \,\cdot\, g
-		\end{equation*}
-	\item
-		for each \,$i$,\, the right action induced on \,$U_{i} \times G$\, by \,$\phi_{i}$\, is given by:
-		\begin{equation*}
-		\left(\, x \,\overset{{\color{white}1}}{,}\, h \,\right) \cdot\, g
-		\; = \;
-			\left(\, x \,\overset{{\color{white}1}}{,}\, h \cdot g \,\right),
-		\end{equation*}
-		for each \,$x \in M$\, and for each \,$g, h \in G$.\,
-	\end{itemize}
-\end{itemize}
-\end{definition}
+\section{Principal (Ehresmann) connections on principal bundles}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -630,7 +632,7 @@ which satisfies each of the following conditions:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
+% \vskip 0.5cm
 \begin{definition}[Principal Ehresmann connection on a principal bundle]
 \mbox{}
 \vskip -0.05cm
@@ -680,7 +682,7 @@ The vertical vector field \,$A^{\sharp} \in \Gamma(\mathcal{V}(P))$\, is  called
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{definition}[Connection $1$-form on a principal bundle]
+\begin{definition}[Connection $1$-forms on principal bundles]
 \mbox{}
 \vskip -0.05cm
 \noindent
@@ -747,6 +749,189 @@ and the set of connection $1$-forms on \,$P$.\, More precisely,
 
 \vskip 0.5cm
 \section{Curvature $2$-forms of connection $1$-forms on principal bundles}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Curvature $2$-forms of connection $1$-forms on principal bundles]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	\vskip -0.2cm
+	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+	is a principal bundle and
+	\,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$.\,
+\item
+	\vskip -0.1cm
+	$\omega \in \Omega^{1}(P,\mathfrak{g})$\, is a connection $1$-form on the principle bundle
+	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$.\,
+\end{itemize}
+Then, the \textbf{curvature $2$-form} \,$F^{\,\omega} \in \Omega^{2}(P,\mathfrak{g})$\,
+of the connection $1$-form
+\,$\omega \in \Omega^{1}(P,\mathfrak{g})$\,
+is defined as follows:
+\begin{equation*}
+F^{\,\omega}\!\left(\,X\overset{{\color{white}1}}{,}\,Y\,\right)
+\;\; := \;\;
+	\d\,\omega\left(\,
+		\overset{{\color{white}.}}{\pi_{\mathcal{H}}(X)}
+		\,,\,
+		\pi_{\mathcal{H}}(Y)
+		\,\right),
+	\quad
+	\textnormal{for each \,$X,\,Y\,\in\,\mathcal{T}_{p}\,P$,\; for each \,$p \in P$}\,,
+\end{equation*}
+where \,$\mathcal{H} \subset \mathcal{T}(P)$\, is the (unique) Ehresmann connection
+corresponding to the connection $1$-form \,$\omega \in \Omega^{1}(P,\mathfrak{g})$,\, and
+\,$
+\left(\,\pi_{\mathcal{H}}\,\right)_{p} :
+	\mathcal{T}_{p}P =
+	\mathcal{V}_{p}P \oplus \mathcal{H}_{p}
+	\xrightarrow{{\color{white}2222}}
+	\mathcal{H}_{p}
+	$\,
+is the projection onto the second direct summand.
+\end{definition}
+
+\vskip 0.5cm
+\begin{proposition}[Proposition 5.5.2, p.274, \cite{Hamilton2017}]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	\vskip -0.2cm
+	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+	is a principal bundle and
+	\,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$.\,
+\item
+	\vskip -0.1cm
+	$\omega \in \Omega^{1}(P,\mathfrak{g})$\, is a connection $1$-form on the principle bundle
+	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$.\,
+\item
+	$F^{\,\omega} \in \Omega^{2}(P,\mathfrak{g})$\, is the curvature $2$-form
+	of the connection $1$-form $\omega \in \Omega^{1}(P,\mathfrak{g})$.\,
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	We have:
+	\begin{equation*}
+	R_{g}^{*}\left(\,F^{\,\omega}\,\right)
+	\;\, =\;
+		\Ad_{g^{-1}} \,\circ\, F^{\omega}\,,
+		\quad
+		\textnormal{for eah \,$g \in G$},
+	\end{equation*}
+	where \,$R_{g} : P \xrightarrow{{\color{white}222}} P$\,
+	denotes the right translation on \,$P$\, by \,$g \in G$,\, and
+\item
+	For each \,$X \in \mathfrak{g}$,\, the interior product
+	\,$\iota_{X^{\sharp}}(\omega)$\,
+	is identically zero.
+	\vskip 0.01cm
+	Recall that the interior product
+	\,$\iota_{X^{\sharp}}(\omega)$\,
+	of the fundamental vector field
+	\,$X^{\sharp} \,\in\, \Gamma(P,\mathcal{V}P) \,\subset\, \Gamma(P,\mathcal{T}P)$\,
+	of \,$X \in \mathfrak{g}$\, and
+	the curvature $2$-form
+	\,$F^{\,\omega} \in \Omega^{2}(P,\mathfrak{g})$\,
+	is defined as follows:
+	\begin{equation*}
+	\begin{array}{ccl}
+	\Gamma\!\left(P,\mathcal{T}P\,\right)
+	&
+	\xrightarrow{{\color{white}222}\iota_{X^{\sharp}}(\omega){\color{white}22}}
+	&
+	\mathscr{C}^{\infty}\!\left(\,P,\Re\,\right)
+	\\
+	Y
+	&
+	\xmapsto{{\color{white}22222222222}}
+	&
+	F^{\,\omega}(X^{\sharp},Y)
+	\end{array}
+	\end{equation*}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	First, observe that:
+	\begin{equation*}
+	\pi_{\mathcal{H}} \,\circ\, (R_{g})_{*}
+	\;\; = \;\;
+		(R_{g})_{*} \,\circ\, \pi_{\mathcal{H}}
+	\end{equation*}
+	For each \,$X,\, Y \in \mathcal{T}_{p}\,P$,\, we have:
+	\begin{eqnarray*}
+	\left(\,R_{g}^{*}\,F^{\,\omega}\,\right)_{\!p}\!\left(\,\overset{{\color{white}.}}{X}\,,\,Y\,\right)
+	& = &
+		\left(\,F^{\,\omega}\,\right)_{p \cdot g}\!\left(\,
+			(R_{g})_{*}(\overset{{\color{white}.}}{X})
+			\,,\,
+			(R_{g})_{*}(Y)
+			\,\right)
+	\\
+	& = &
+		\left(\,\d\,\omega\,\right)_{p \cdot g}\!\left(\,
+			\left(\pi_{\mathcal{H}}\overset{{\color{white}.}}{\circ}(R_{g})_{*}\right)
+			(\overset{{\color{white}.}}{X})
+			\,,\,
+			\left(\pi_{\mathcal{H}}\overset{{\color{white}.}}{\circ}(R_{g})_{*}\right)(Y)
+			\,\right)
+	\\
+	& = &
+		\left(\,\d\,\omega\,\right)_{p \cdot g}\!\left(\,
+			\left((R_{g})_{*}\overset{{\color{white}.}}{\circ}\pi_{\mathcal{H}}\right)
+			(\overset{{\color{white}.}}{X})
+			\,,\,
+			\left((R_{g})_{*}\overset{{\color{white}.}}{\circ}\pi_{\mathcal{H}}\right)(Y)
+			\,\right)
+	\\
+	& = &
+		\left(\,R_{g}^{*}(\d\,\omega)\,\right)_{p}\!\left(\,
+			\pi_{\mathcal{H}}(\overset{{\color{white}.}}{X})
+			\,,\,
+			\pi_{\mathcal{H}}(Y)
+			\,\right)
+	\\
+	& = &
+		\left(\,\d(R_{g}^{*}\,\omega)\,\right)_{p}\!\left(\,
+			\pi_{\mathcal{H}}(\overset{{\color{white}.}}{X})
+			\,,\,
+			\pi_{\mathcal{H}}(Y)
+			\,\right)
+	\\
+	& = &
+		\left(\,\d(\Ad_{g^{-1}}\circ\,\omega)\,\right)_{p}\!\left(\,
+			\pi_{\mathcal{H}}(\overset{{\color{white}.}}{X})
+			\,,\,
+			\pi_{\mathcal{H}}(Y)
+			\,\right)
+	\\
+	& \overset{{\color{red}?}}{=} &
+		\left(\,\Ad_{g^{-1}}\circ\,(\d\,\omega)\,\right)_{p}\!\left(\,
+			\pi_{\mathcal{H}}(\overset{{\color{white}.}}{X})
+			\,,\,
+			\pi_{\mathcal{H}}(Y)
+			\,\right)
+	\\
+	& = &
+		\left(\,\Ad_{g^{-1}}\circ\,F^{\,\omega}\,\right)_{p}\!\left(\,
+			\overset{{\color{white}.}}{X}
+			\,,\,
+			Y
+			\,\right)
+	\end{eqnarray*}
+\item
+	Immediate since \,$\pi_{\mathcal{H}}\!\left(\,X^{\sharp}\,\right) \,=\, 0$.\,
+\qed
+\end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
