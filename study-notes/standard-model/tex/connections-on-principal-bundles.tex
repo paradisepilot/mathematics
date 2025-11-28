@@ -992,19 +992,19 @@ Then, the following statements are true:
 	\end{equation*}
 	which completes the proof of (iii) as well as that of the present Proposition.
 \item
-	First, note that, for each \,$p \in P$,\, we have:\;
-	$f(p) \,=\, p \cdot \sigma_{f}(p) \,=\, R_{\sigma_{f}(p)}\!\left(\,\overset{{\color{white}1}}{p}\,\right)$\,
+	First, note that
+	\,$F^{\,f^{*}\omega} \,=\, f^{*}\!\left(\,F^{\,\omega}\,\right)$,\, indeed:
 	\begin{eqnarray*}
-	\left(\,F^{\,f^{*}\omega}\,\right)_{\!p}
+	F^{\,f^{*}\omega}
 	& = &
-		\left(\,\d(\,\overset{{\color{white}.}}{f^{*}\omega}\,)\,\right)_{p}
+		\d(\,\overset{{\color{white}.}}{f^{*}\omega}\,)
 		\; + \;
 		\dfrac{1}{2}\left[\,f^{*}\omega\,\overset{{\color{white}1}}{,}\,f^{*}\omega\,\right],
 		\quad
 		\textnormal{by structure equation}
 	\\
 	& = &
-		\left(\,\overset{{\color{white}.}}{f^{*}(\,\d\,\omega\,)}\,\right)_{p}
+		f^{*}(\,\d\,\omega\,)
 		\; + \;
 		f^{*}\!\left(\,\dfrac{1}{2}\left[\,\omega\,\overset{{\color{white}1}}{,}\,\omega\,\right]\,\right),
 		\quad
@@ -1015,16 +1015,23 @@ Then, the following statements are true:
 			\d\,\omega
 			\;+\;
 			\dfrac{1}{2}\left[\,\omega\,\overset{{\color{white}1}}{,}\,\omega\,\right]
-			\,\right)_{\!p}
+			\,\right)
 	\;\; = \;\;
-		f^{*}\!\left(\,F^{\omega}_{p}\,\right)
-	\;\; = \;\;
-		R^{*}_{\sigma_{f}(p)}\!\left(\;F^{\,\omega}_{p}\;\right)
-	\\
-	& = &
-		\Ad_{\sigma_{f}(p)^{-1}} \,\circ\, F^{\,\omega}_{p}\,,
+		f^{*}(\,F^{\,\omega}\,)
 	\end{eqnarray*}
-	where 
+	Now, note that, for each \,$p \in P$,\, we have:\;
+	$f(p) \,=\, p \cdot \sigma_{f}(p) \,=\, R_{\sigma_{f}(p)}\!\left(\,\overset{{\color{white}.}}{p}\,\right)$.\,
+	Hence,
+	\begin{equation*}
+	\left(\,F^{\,f^{*}\omega}\,\right)_{\!p}
+	\;\;\, = \;\;\,
+		\left(\,f^{*}F^{\,\omega}\,\right)_{p}
+	\;\;\, = \;\;\,
+		\left(\,R^{*}_{\sigma_{f}(p)}(\,F^{\,\omega}\,)\,\right)_{\!p}
+	\;\;\, = \;\;\,
+		\Ad_{\sigma_{f}(p)^{-1}} \,\circ\, F^{\,\omega}_{p}
+	\end{equation*}
+	as required.
 	\qed
 \end{enumerate}
 
