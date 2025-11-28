@@ -746,6 +746,11 @@ and the set of connection $1$-forms on \,$P$.\, More precisely,
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\section{Transformation laws under gauge transformations (bundle automorphisms)}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{theorem}\textnormal{\bf(Transformation of connections under gauge transformations, Theorem 5.4.4, p.273, \cite{Hamilton2017})}
 \mbox{}
 \vskip 0.1cm
@@ -757,7 +762,9 @@ Suppose:
 	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
 	is a principal bundle and \,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$,
 \item
-	$\omega \in \Omega^{1}(P,\mathfrak{g})$\, be a connection $1$-form, and
+	$\omega \in \Omega^{1}(P,\mathfrak{g})$\, is a connection $1$-form,\,
+	$F^{\,\omega} \in \Omega^{2}(P,\mathfrak{g})$\, is the curvature $2$-form of \,$\omega$,\,
+	and
 \item
 	$f \in \mathscr{G}(P)$\, be a gauge transformation.
 \end{itemize}
@@ -795,6 +802,15 @@ Then, the following statements are true:
 		\Ad_{\sigma_{f}(p)^{-1}}\,\circ\,\omega_{p}
 		\; + \;
 		\left(\,\sigma_{f}^{*}\,\mu_{G}\,\right)_{p}\,,
+	\quad
+	\textnormal{for each \,$p \in P$}
+	\end{equation*}
+\item
+	The curvature $2$-form \,$F^{\,f^{*}(\omega)}$\, is given by:
+	\begin{equation*}
+	\left(\,F^{\,f^{*}\omega}\,\right)_{\!p}
+	\;\; = \;\;
+		\Ad_{\sigma_{f}(p)^{-1}} \,\circ\, F^{\,\omega}_{p}\,,
 	\quad
 	\textnormal{for each \,$p \in P$}
 	\end{equation*}
@@ -975,6 +991,40 @@ Then, the following statements are true:
 		\sigma_{f}^{*}(\,\mu_{G}\,)\,,
 	\end{equation*}
 	which completes the proof of (iii) as well as that of the present Proposition.
+\item
+	First, note that, for each \,$p \in P$,\, we have:\;
+	$f(p) \,=\, p \cdot \sigma_{f}(p) \,=\, R_{\sigma_{f}(p)}\!\left(\,\overset{{\color{white}1}}{p}\,\right)$\,
+	\begin{eqnarray*}
+	\left(\,F^{\,f^{*}\omega}\,\right)_{\!p}
+	& = &
+		\left(\,\d(\,\overset{{\color{white}.}}{f^{*}\omega}\,)\,\right)_{p}
+		\; + \;
+		\dfrac{1}{2}\left[\,f^{*}\omega\,\overset{{\color{white}1}}{,}\,f^{*}\omega\,\right],
+		\quad
+		\textnormal{by structure equation}
+	\\
+	& = &
+		\left(\,\overset{{\color{white}.}}{f^{*}(\,\d\,\omega\,)}\,\right)_{p}
+		\; + \;
+		f^{*}\!\left(\,\dfrac{1}{2}\left[\,\omega\,\overset{{\color{white}1}}{,}\,\omega\,\right]\,\right),
+		\quad
+		\textnormal{by commutativity properties of pullbacks}
+	\\
+	& = &
+		f^{*}\!\left(\;
+			\d\,\omega
+			\;+\;
+			\dfrac{1}{2}\left[\,\omega\,\overset{{\color{white}1}}{,}\,\omega\,\right]
+			\,\right)_{\!p}
+	\;\; = \;\;
+		f^{*}\!\left(\,F^{\omega}_{p}\,\right)
+	\;\; = \;\;
+		R^{*}_{\sigma_{f}(p)}\!\left(\;F^{\,\omega}_{p}\;\right)
+	\\
+	& = &
+		\Ad_{\sigma_{f}(p)^{-1}} \,\circ\, F^{\,\omega}_{p}\,,
+	\end{eqnarray*}
+	where 
 	\qed
 \end{enumerate}
 
