@@ -1272,11 +1272,21 @@ Then, the following statements are true:
 	\begin{eqnarray*}
 	F^{\,f^{*}\omega}
 	& = &
-		\d(\,\overset{{\color{white}.}}{f^{*}\omega}\,)
+		\,\d(\,\overset{{\color{white}.}}{f^{*}\omega}\,)
 		\; + \;
 		\dfrac{1}{2}\left[\,f^{*}\omega\,\overset{{\color{white}1}}{,}\,f^{*}\omega\,\right],
 		\quad
 		\textnormal{by structure equation}
+	\\
+	& = &
+		f^{*}(\,\d\,\omega\,)
+		\; + \;
+		% f^{*}\!\left(\,\dfrac{1}{2}\left[\,\omega\,\overset{{\color{white}1}}{,}\,\omega\,\right]\,\right),
+		\dfrac{1}{2}\left[\,f^{*}\omega\,\overset{{\color{white}1}}{,}\,f^{*}\omega\,\right],
+		\quad
+		\textnormal{
+			since \,$f^{*}(\,\cdot\,) \,\circ\, \d(\,\cdot\,) = \d(\,\cdot\,) \,\circ\, f^{*}(\,\cdot\,)$\, on $k$-forms %\footnote{see Proposition A.8, p.304, \cite{Hamilton2017}}
+			}
 	\\
 	& = &
 		f^{*}(\,\d\,\omega\,)
