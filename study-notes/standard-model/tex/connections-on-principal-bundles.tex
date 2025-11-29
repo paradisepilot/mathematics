@@ -18,8 +18,45 @@
 A very short summary of how fibre bundles enter quantum field theory:
 \begin{itemize}
 \item
-	The states of a quantum system (e.g., a single particle, or an ensemble of particles, etc.)
-	are unit vectors (alternative, one-dimensional subspaces) in a suitable (possibly infinite-dimensional) complex Hilbert space.
+	The states of a quantum system \,$\mathcal{S}$\,
+	(e.g., a single particle, or an ensemble of particles, etc.)
+	are unit vectors (alternative, one-dimensional subspaces)
+	in a suitable (possibly infinite-dimensional) complex Hilbert space.
+	This complex Hilbert space is call the \textbf{state space} of the quantum system.
+	For the rest of this dicsussion, we will denote by \,$\mathbb{H}$\,
+	the state space of the quantum system in question.
+\item
+	Two ``observers'' may ``coordinatize'' the state space \,$\mathbb{H}$\, differently.
+	However, the coordinatizations of the state space \,$\mathbb{H}$\, by any two observers
+	will be related by a complex linear transformation, i.e., by an element in
+	\,$\U(\mathbb{H})$,\, where \,$\U(\mathbb{H})$\, denotes the group of unitary transformations
+	defined on \,$\mathbb{H}$.\,
+	\vskip -0.01cm
+	\noindent
+	An element in \,$\U(\mathbb{H})$\, is said to be \textbf{empirically admissible}
+	if it converts the coordinatization of \,$\mathbb{H}$\, by one observer to that of
+	another observer. Heuristically, we expect the collection of the empirically admissible
+	transformations to form a group (under composition); or more precisely,
+	the emipirically admissible transformations are expected to form a subgroup of \,$\U(\mathbb{H})$.\,
+\item
+	The quantum system \,$\mathcal{S}$\, is considered to ``possess'' or ``exhibit''
+	a \textbf{symmetry} if its group of empirically admissible transformations consitiutes
+	a proper subgroup of \,$\U(\mathbb{H})$\,
+	(rather than the entire group \,$\U(\mathbb{H})$).
+	\vskip -0.01cm
+	\noindent
+	More precisely, the quantum system \,$\mathcal{S}$\, is considered to ``possess'' or ``exhibit''
+	a \textbf{symmetry} if there exists a Lie group \,$G$\, and a Lie group homomorphism
+	\,$\rho : G \xrightarrow{{\color{white}222}} \U(\mathbb{H})$\,
+	such that
+	\renewcommand{\labelitemii}{$\circ$}
+	\begin{itemize}
+	\item
+		the group of empirically admissible transformations of \,$\mathcal{S}$\, is the image
+		\,$\rho(G) \subset \U(\mathbb{H})$,\, and
+	\item
+		the image \,$\rho(G) \subsetneq \U(\mathbb{H})$\, is a proper subgroup of \,$\U(\mathbb{H})$.\,
+	\end{itemize}
 \item
 	If the quantum system in question possesses a certain symmetry,
 	then the corresponding group (corresponding to the symmetry) will act on its state space (a complex Hilbert space).
