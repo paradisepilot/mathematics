@@ -1014,6 +1014,153 @@ Then, the following statements are true:
 \qed
 \end{enumerate}
 
+\vskip 0.5cm
+\begin{definition}[Brackets of $\mathfrak{g}$-valued differential forms]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$P$\, is a {\color{red}manifold} and \,$\mathfrak{g}$\, is a Lie algebra.
+For \,$\xi \in \Omega^{k}(P,\mathfrak{g})$\, and \,$\eta \in \Omega^{l}(P,\mathfrak{g})$,\,
+we define \,$\left[\,\xi\,,\,\eta\,\right] \,\in\, \Omega^{k+l}(P,\mathfrak{g})$\, as follows:
+\begin{equation*}
+\left[\,\xi\,,\,\eta\,\right](X_{1},\ldots,X_{k+l})
+\;\; := \;\;
+	\dfrac{1}{k! \cdot l!}\cdot
+	\underset{\sigma\,\in\,S_{k+l}}{\sum}\,
+	\textnormal{sign}(\sigma) \cdot
+	\left[\;
+		\overset{{\color{white}.}}{\xi}\!\left(X_{\sigma(1)}),\ldots,X_{\sigma(k)})\right)
+		\,,\,
+		\eta\!\left(X_{\sigma(k+1)}),\ldots,X_{\sigma(k+l)})\right)
+		\;\right]_{\mathfrak{g}}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+In particular, if \,$\eta \in \Omega^{1}(P,\mathfrak{g})$,\, then
+\begin{equation*}
+{\color{red}
+\left[\,\eta\,,\,\eta\,\right](X,Y)
+\;\; = \;\;
+	2 \cdot\! \left[\;
+		\overset{{\color{white}.}}{\eta(X)}
+		\,,\,
+		\eta(Y)
+		\;\right]_{\mathfrak{g}}
+}\,,
+\quad
+\textnormal{for each \,$X, Y \in \Gamma(\mathcal{T}P)$}
+\end{equation*}
+Indeed,
+\begin{eqnarray*}
+\left[\,\eta\,,\,\eta\,\right](X_{1},X_{2})
+& = &
+	\dfrac{1}{1! \cdot 1!}\cdot
+	\underset{{\sigma\,\in\,S_{2}}}{\sum}\,
+	\textnormal{sign}(\sigma) \,\cdot\!
+	\left[\;
+		\eta(X_{\sigma(1)})
+		\,,\,
+		\eta(X_{\sigma(2)})
+		\;\right]_{\mathfrak{g}}
+\\
+& = &
+	\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{(12)}\,\right)\cdot\!
+	\left[\;
+		\overset{{\color{white}.}}{\eta(X_{(12)(1)})}
+		\,,\,
+		\eta(X_{(12)(2)})
+		\;\right]_{\mathfrak{g}}
+	\;+\;
+	\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{(21)}\,\right)\cdot\!
+	\left[\;
+		\overset{{\color{white}.}}{\eta(X_{(21)(1)})}
+		\,,\,
+		\eta(X_{(21)(2)})
+		\;\right]_{\mathfrak{g}}
+\\
+& = &
+	\left(\,+1\,\right)\cdot\!
+	\left[\;
+		\overset{{\color{white}.}}{\eta(X_{1})}
+		\,,\,
+		\eta(X_{2})
+		\;\right]_{\mathfrak{g}}
+	\;+\;
+	\left(\,-1\,\right)\cdot\!
+	\left[\;
+		\overset{{\color{white}.}}{\eta(X_{2})}
+		\,,\,
+		\eta(X_{1})
+		\;\right]_{\mathfrak{g}}
+\\
+& = &
+	\left(\,+1\,\right)\cdot\!
+	\left[\;
+		\overset{{\color{white}.}}{\eta(X_{1})}
+		\,,\,
+		\eta(X_{2})
+		\;\right]_{\mathfrak{g}}
+	\;+\;
+	\left(\,-1\,\right)\cdot\left(\,-1\,\right)\cdot\!
+	\left[\;
+		\eta(X_{1})
+		\,,\,
+		\overset{{\color{white}.}}{\eta(X_{2})}
+		\;\right]_{\mathfrak{g}}
+\\
+& = &
+	2\cdot\!
+	\left[\;
+		\overset{{\color{white}.}}{\eta(X_{1})}
+		\,,\,
+		\eta(X_{2})
+		\;\right]_{\mathfrak{g}}
+\end{eqnarray*}
+\end{remark}
+
+
+\vskip 0.5cm
+\begin{proposition}
+\textnormal{\bf(The structure equation of the curvature $2$-form)}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	\vskip -0.2cm
+	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+	is a principal bundle and
+	\,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$.\,
+\item
+	\vskip -0.1cm
+	$\omega \in \Omega^{1}(P,\mathfrak{g})$\, is a connection $1$-form on the principle bundle
+	$G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$.\,
+\item
+	$F^{\,\omega} \in \Omega^{2}(P,\mathfrak{g})$\, is the curvature $2$-form
+	of the connection $1$-form $\omega \in \Omega^{1}(P,\mathfrak{g})$.\,
+\end{itemize}
+Then, we have:
+\begin{equation*}
+\left(\,F^{\,\omega}\,\right)_{p}\!\left(\,X\,,\,Y\,\right)
+\;\; = \;\;
+	(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+	\; + \;
+	\dfrac{1}{2}\left[\,\omega\,,\,\omega\,\right]_{p}(X,Y)
+\;\; \in \;\;
+	\mathscr{C}^{\infty}(P,\mathfrak{g})\,,
+\end{equation*}
+for each pair of tangent vectors \,$X, Y \in \mathcal{T}_{p}\,P$.
+\end{proposition}
+\proof
+
+\qed
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
