@@ -18,18 +18,32 @@
 A very short summary of how fibre bundles enter quantum field theory:
 \begin{itemize}
 \item
-	The states of a quantum system \,$\mathcal{S}$\,
-	(e.g., a single particle, or an ensemble of particles, etc.)
+	For simplicity, we think of a quantum system \,$\mathcal{S}$\,
+	as a collection of \textit{elementary particles}
+	that are \textit{interacting} with one another.
+\item
+	The states of each elementary particle
 	are unit vectors (alternative, one-dimensional subspaces)
 	in a suitable (possibly infinite-dimensional) complex Hilbert space.
-	This complex Hilbert space is call the \textbf{state space} of the quantum system.
+	This complex Hilbert space is called the \textbf{state space} of the elementary particle.
 	For the rest of this dicsussion, we will denote by \,$\mathbb{H}$\,
-	the state space of the quantum system in question.
+	the state space of the elementary particle in question.
+	\vskip -0.01cm
+	\noindent
+	The state space of the full quantum system \,$\mathcal{S}$\, is itself
+	a complex Hilbert space which is constructed from the state spaces
+	(each of which is a complex Hilbert space)
+	of the constituent elementary particles of \,$\mathcal{S}$.\,
 \item
-	Two ``observers'' may ``coordinatize'' the state space \,$\mathbb{H}$\, differently.
+	For a given elementary particle (or, a given species of elementary particles),
+	two ``observers'' may ``coordinatize'' its state space \,$\mathbb{H}$\, differently.
 	However, the coordinatizations of the state space \,$\mathbb{H}$\, by any two observers
-	will be related by a complex linear transformation, i.e., by an element in
-	\,$\U(\mathbb{H})$,\, where \,$\U(\mathbb{H})$\, denotes the group of unitary transformations
+	will be related by a ``transformation''
+	\,$\mathbb{H} \xrightarrow{{\color{white}222}} \mathbb{H}$\,
+	that preserves the complex Hilbert space structure of \,$\mathbb{H}$,\,
+	i.e., by a unitary linear transformation,
+	in other words, by an element in \,$\U(\mathbb{H})$,\,
+	where \,$\U(\mathbb{H})$\, denotes the group of unitary transformations
 	defined on \,$\mathbb{H}$.\,
 	\vskip -0.01cm
 	\noindent
@@ -39,25 +53,25 @@ A very short summary of how fibre bundles enter quantum field theory:
 	transformations to form a group (under composition); or more precisely,
 	the emipirically admissible transformations are expected to form a subgroup of \,$\U(\mathbb{H})$.\,
 \item
-	The quantum system \,$\mathcal{S}$\, is considered to ``possess'' or ``exhibit''
+	An elementary particle is considered to ``possess'' or ``exhibit''
 	a \textbf{symmetry} if its group of empirically admissible transformations consitiutes
 	a proper subgroup of \,$\U(\mathbb{H})$\,
 	(rather than the entire group \,$\U(\mathbb{H})$).
 	\vskip -0.01cm
 	\noindent
-	More precisely, the quantum system \,$\mathcal{S}$\, is considered to ``possess'' or ``exhibit''
-	an \textbf{symmetry} if there exists a group \,$G$\, and a group homomorphism
+	More precisely, the elementary particle is considered to ``possess'' or ``exhibit''
+	a \textbf{symmetry} if there exists a group \,$G$\, and a group homomorphism
 	\,$\rho : G \xrightarrow{{\color{white}222}} \U(\mathbb{H})$\,
 	such that
 	\renewcommand{\labelitemii}{$\circ$}
 	\begin{itemize}
 	\item
-		the group of empirically admissible transformations of \,$\mathcal{S}$\, is the image
+		the group of empirically admissible transformations of the particle is the image
 		\,$\rho(G) \subset \U(\mathbb{H})$,\, and
 	\item
 		the image \,$\rho(G) \subsetneq \U(\mathbb{H})$\, is a proper subgroup of \,$\U(\mathbb{H})$.\,
 	\end{itemize}
-	Furthermore, the aforementioned ``symmetry'' of the quantum system \,$\mathcal{S}$\,
+	Furthermore, the aforementioned ``symmetry'' of the elementary particle
 	is considered to be an \textbf{internal symmetry} if the group \,$G$\, is unrelated
 	to the Poincaré group.
 	Recall that the Poincaré group is the isometry group of spacetime in special relativity.
@@ -69,21 +83,35 @@ A very short summary of how fibre bundles enter quantum field theory:
 % 	These internal symmetries are often ``continuous symmetries''. 
 % 	This is where the theory of representations of Lie groups enters quantum field theory.
 \item
-	When we expand our scope of consideration from the local (or infinitesimal) to the global,
-	it becomes clear that
-	the class of mathematical objects suitable for modelling or representing quantum systems
-	(e.g., elementary \textbf{\color{red}particles})
+	The \textbf{\color{red}principle of locality} suggests that the class of mathematical objects
+	suitable for describing the ``dynamics'' (change of quantum states in spacetime)
+	of the constituent elementary particles of a given quantum system
 	at the pre-quantization stage are smooth
 	\textbf{\color{red}sections of complex vector bundles over spacetime}
 	(i.e., spacetime is the base manifold of such vector bundles).
-	Such sections of complex vector bundles are examples
-	of what are called ``fields'' in the physics literature.
 	\vskip -0.01cm
 	\noindent
-	A quanum system is considered to possess an internal symmetry
-	if its structure group is a proper subgroup of $\U(\mathbb{H})$.
+	Each such complex vector bundle corresponds to a species of elementary particles
+	that is involved in the quantum system.
+	% When we expand our scope of consideration from the local (or infinitesimal) to the global,
+	% it becomes clear that
+	% the class of mathematical objects suitable for modelling or representing quantum systems
+	% (e.g., elementary \textbf{\color{red}particles})
+	% at the pre-quantization stage are smooth
+	% \textbf{\color{red}sections of complex vector bundles over spacetime}
+	% (i.e., spacetime is the base manifold of such vector bundles).
+	Such sections of complex vector bundles are examples
+	of what are called \textbf{\color{red}fields} in the physics literature.
+	\vskip -0.01cm
+	\noindent
+	Recall that a given species of elementary particles
+	is considered to possess an internal symmetry
+	if its group of empirically admissible transformations
+	form a proper subgroup of $\U(\mathbb{H})$,
+	where \,$\mathbb{H}$\, is the state space of the given species of elementary particles.
 	In this case, the structure group \,$G$\,
-	of the corresponding complex vector bundle \,$E$\, admits a homomorphism
+	of the complex vector bundle \,$E$\, corresponding to the given species of elementary particles
+	admits a homomorphism
 	\,$\rho : G \xrightarrow{{\color{white}222}} \U(\mathbb{H})$\,
 	with \,$\rho(G) \subsetneq \U(\mathbb{H})$\, such that
 	\,$E$\, can be realized as an \textbf{associated vector bundle}
@@ -109,18 +137,25 @@ A very short summary of how fibre bundles enter quantum field theory:
 	% \,$\rho : G \xrightarrow{{\color{white}222}} \U(\mathbb{H})$\,
 	% is a group homomorphism with \,$\rho(G) \subsetneq \U(\mathbb{H})$.\,
 \item
-	The Lagrangian describing the \textbf{dynamics} of a quantum system is generally expected to involve the ``derivatives''
-	of the field (section of a complex vector bundle) that represents the quantum system.
+	The Lagrangian describing the \textbf{\color{red}dynamics} of a quantum system
+	is generally expected to involve the ``{\color{red}derivatives}'' (with respect to spacetime)
+	of the fields (sections of complex vector bundles over spacetime) of its constituent particles.
 	This is where the notion of \textbf{covariant derivatives} of sections of complex vector bundles
-	-- hence the notion of \textbf{connections} on vector bundles -- enters quantum field theory.
+	-- hence the notion of \textbf{connections} on vector bundles -- enters quantum field theory:
+	On a general vector bundle \,$E$\, (with no additional structure) over spacetime,
+	there is no canonical notion of spacetime derivatives for smooth sections of \,$E$.\,
+	A \textbf{\color{red}connection} on \,$E$\, is the additional structure required
+	to define a notion of spacetime derivatives for smooth sections of \,$E$.\,
 \item
 	The frame bundle of a vector bundle is a principal bundle.
-	The connection on a vector bundle induces a connection on its frame bundle;
+	\textbf{The connection on a vector bundle induces a connection on its frame bundle};
 	see Theorem 29.9, p.268, \cite{Tu2017}.
 	The theory of connections on principal bundles is ``cleaner'' than that of connections on vector bundles;
 	more precisely, the former can be given in global terms, and does not require the use of local coordinate charts.
-	This is where the notion of \textbf{\color{red}connections on principal bundles} enters quantum field theory;
-	connections on principal bundles represent \textbf{\color{red}force fields}.
+	This is where the notion of \textbf{\color{red}connections on principal bundles}
+	enters quantum field theory.
+	We remark also that connections on principal bundles correspond to
+	\textbf{\color{red}potentials of force fields}.
 \item
 	We end by returning to a remark on Lagrangian densities:
 	In  the Standard Model of Particle Physics (which is a quantum field theory),
@@ -128,7 +163,7 @@ A very short summary of how fibre bundles enter quantum field theory:
 	and force fields (connections on principal bundles)
 	appear in summands (of Lagrangian densities)
 	through the covariant derivatives of the sections of complex vector bundles
-	(``particles'') with respect to the connections (``force fields'') on principal bundles.
+	(``matter particles'') with respect to connections (``force fields'') on principal bundles.
 \end{itemize}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
