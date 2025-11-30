@@ -852,9 +852,9 @@ of the connection $1$-form
 \,$\omega \in \Omega^{1}(P,\mathfrak{g})$\,
 is defined as follows:
 \begin{equation*}
-F^{\,\omega}\!\left(\,X\overset{{\color{white}1}}{,}\,Y\,\right)
+\left(\,F^{\,\omega}\,\right)_{p}\!\left(\,X\overset{{\color{white}1}}{,}\,Y\,\right)
 \;\; := \;\;
-	\d\,\omega\left(\,
+	\left(\,\d\,\omega\,\right)_{p}\!\left(\,
 		\overset{{\color{white}.}}{\pi_{\mathcal{H}}(X)}
 		\,,\,
 		\pi_{\mathcal{H}}(Y)
@@ -1155,9 +1155,132 @@ Then, we have:
 \;\; \in \;\;
 	\mathfrak{g}\,,
 \end{equation*}
-for each pair of tangent vectors \,$X, Y \in \mathcal{T}_{p}\,P$.
+for each pair of tangent vectors \,$X, Y \in \mathcal{T}_{p}\,P$,\,
+for each \,$p \in P$.
 \end{proposition}
 \proof
+We split the proof into three separate cases.
+
+\vskip 0.2cm
+\noindent
+\underline{Both{\color{white}p}$X$ and $Y$ are vertical}
+\vskip 0.1cm
+\noindent
+In this case, we prove that both the left-hand and right-hand sides are zero.
+\begin{eqnarray*}
+\textnormal{L.H.S.}
+& = &
+	\left(\,F^{\,\omega}\,\right)_{p}\!\left(\,
+		\overset{{\color{white}.}}{\pi_{\mathcal{H}}(X)}
+		\,,\,
+		\pi_{\mathcal{H}}(Y)
+		\,\right)
+\;\; = \;\;
+	\left(\,F^{\,\omega}\,\right)_{p}\!\left(\,
+		\overset{{\color{white}.}}{0}
+		\,,\,
+		0
+		\,\right)
+\;\; = \;\;
+	0
+\;\; \in \;\;
+	\mathfrak{g}
+\end{eqnarray*}
+As for the right-hand side, since \,$X$\, and \,$Y$\, are vertical vectors,
+they are fundamental vector fields evaluated at \,$p \in P$.\,
+In other words, there exist \,$V,\, W \in \mathfrak{g}$\, such that
+\begin{equation*}
+X \; = \; V^{\sharp}_{p}
+\quad
+\textnormal{and}
+\quad
+Y \; = \; W^{\sharp}_{p}
+\end{equation*}
+Now, note:
+\begin{eqnarray*}
+(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,V^{\sharp}_{p}\,,\,W^{\sharp}_{p}\,\right)
+\;\; = \;\;
+	\left(\,
+		(\,\overset{{\color{white}.}}{\d\,\omega}\,)\!\left(\,V^{\sharp}\,,\,W^{\sharp}\,\right)
+		\,\right)_{p}
+\\
+& = &
+	\left(\,
+		\overset{{\color{white}.}}{V^{\sharp}(\,\omega(W^{\sharp})\,)}
+		\,-\,
+		W^{\sharp}(\,\omega(V^{\sharp})\,)
+		\,-\,
+		\omega\!\left(\,[V^{\sharp},W^{\sharp}]\,\right)
+		\,\right)_{\!p},
+	\;\;
+	\textnormal{by Exercise 21.8, p.198, \cite{Tu2017}}
+\\
+& = &
+	\left(\,
+		\overset{{\color{white}.}}{V^{\sharp}(\,\omega(W))}
+		\,-\,
+		W^{\sharp}(\,\omega(V))
+		\,-\,
+		\omega\!\left(\,[V^{\sharp},W^{\sharp}]\,\right)
+		\,\right)_{\!p},
+	\;\;
+	\textnormal{since \,$\omega$\, is a connection $1$-form}
+\\
+& = &
+	\left(\;
+		\overset{{\color{white}1}}{0}
+		\,-\,
+		0
+		\,-\,
+		\omega\!\left(\,[V,W]^{\sharp}\,\right)
+		\,\right)_{\!p},
+	\;\;
+	\textnormal{by Proposition 3.4.4, p.144, \cite{Hamilton2017}, or Exercise 27.1, p.252, \cite{Tu2017}}
+\\
+& = &
+	-\, \omega\!\left(\,[V,W]^{\sharp}_{p}\,\right)
+\;\; = \;\;
+	-\,[V,W]
+\end{eqnarray*}
+Next, note:
+\begin{eqnarray*}
+\dfrac{1}{2}\left[\,\omega\,,\,\omega\,\right]_{p}(X,Y)
+& = &
+	\dfrac{1}{2}
+	\left[\,\omega\,,\,\omega\,\right]_{p}\left(\,V^{\sharp}_{p}\,,W^{\sharp}_{p}\,\right)
+\;\; = \;\;
+	\dfrac{1}{2}\left(\;
+		\left[\,\omega\,,\,\omega\,\right](\,\overset{{\color{white}.}}{V^{\sharp}}\,,W^{\sharp}\,)
+		\;\right)_{p}
+\\
+& = &
+	\dfrac{1}{2}\left(\;
+		2\cdot\!\left[\,\omega(\,\overset{{\color{white}.}}{V^{\sharp}}\,)\,,\,\omega(\,W^{\sharp}\,)\,\right]
+		\;\right)_{p}
+\;\; = \;\;
+	[V,W]
+\end{eqnarray*}
+Hence,
+\begin{eqnarray*}
+\textnormal{R.H.S.}
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+	\; + \;
+	\dfrac{1}{2}\left[\,\omega\,,\,\omega\,\right]_{p}(X,Y)
+\;\; = \;\;
+	-\,[V,W] \; + \; [V,W]
+\;\; = \;\;
+	0
+\;\; \in \;\;
+	\mathfrak{g}
+\end{eqnarray*}
+This proves the Structural Equation for the case where both $X$ and $Y$ are vertical.
+
+\vskip 0.3cm
+\noindent
+\underline{Both{\color{white}p}$X$ and $Y$ are horizontal}
 
 \qed
 
