@@ -1124,7 +1124,7 @@ Indeed,
 \end{remark}
 
 \vskip 0.5cm
-\begin{proposition}
+\begin{proposition}\label{StructureEquationOfCurvatureTwoForm}
 \textnormal{\bf(The structure equation of the curvature $2$-form)}
 \mbox{}
 \vskip 0.1cm
@@ -1160,7 +1160,19 @@ for each pair of tangent vectors \,$X, Y \in \mathcal{T}_{p}\,P$,\,
 for each \,$p \in P$.
 \end{proposition}
 \proof
-We split the proof into three separate cases.
+Since each tangent vector of \,$P$\, decomposes uniquely
+as the sum of its vertical and horizontal components,
+by linearity, the structure equation will follow once we establish
+its validity in each of the following three scenarios:
+\begin{itemize}
+\item
+	both \,$X$\, and \,$Y$\, are vertical,
+\item
+	both \,$X$\, and \,$Y$\, are horizontal, or
+\item
+	one of \,$X$, $Y$\, is vertical and the other horizontal.
+\end{itemize}
+We now prove the structural equation for each of the above three scenarios.
 
 \vskip 0.2cm
 \noindent
@@ -1171,13 +1183,19 @@ In this case, we prove that both the left-hand and right-hand sides are zero.
 \begin{eqnarray*}
 \textnormal{L.H.S.}
 & = &
-	\left(\,F^{\,\omega}\,\right)_{p}\!\left(\,
+	\left(\,F^{\,\omega}\,\right)_{p}\!\left(
+		X
+		\overset{{\color{white}1}}{,}
+		Y
+		\right)
+\;\; := \;\;
+	\left(\,\d\,\omega\,\right)_{p}\!\left(\,
 		\overset{{\color{white}.}}{\pi_{\mathcal{H}}(X)}
 		\,,\,
 		\pi_{\mathcal{H}}(Y)
 		\,\right)
 \;\; = \;\;
-	\left(\,F^{\,\omega}\,\right)_{p}\!\left(\,
+	\left(\,\d\,\omega\,\right)_{p}\!\left(\,
 		\overset{{\color{white}.}}{0}
 		\,,\,
 		0
@@ -1220,9 +1238,9 @@ Now, note:
 \\
 & = &
 	\left(\,
-		\overset{{\color{white}.}}{V^{\sharp}(\,\omega(W))}
+		\overset{{\color{white}.}}{V^{\sharp}(\,W)}
 		\,-\,
-		W^{\sharp}(\,\omega(V))
+		W^{\sharp}(\,V))
 		\,-\,
 		\omega\!\left(\,[V^{\sharp},W^{\sharp}]\,\right)
 		\,\right)_{\!p},
@@ -1277,7 +1295,7 @@ Hence,
 \;\; \in \;\;
 	\mathfrak{g}
 \end{eqnarray*}
-This proves the structure equation for the case where both $X$ and $Y$ are vertical.
+This proves the structure equation for the scenario where both $X$ and $Y$ are vertical.
 
 \vskip 0.3cm
 \noindent
@@ -1320,10 +1338,145 @@ This proves the structure equation for the case where both $X$ and $Y$ are verti
 
 \vskip 0.3cm
 \noindent
-\underline{$X${\color{white}p}is vertical and $Y$ is horizontal}
+\underline{One{\color{white}p}of $X$, $Y$ is vertical and the other horizontal}
 \vskip 0.1cm
 \noindent
-In this case, ...
+Without loss of generality (due to antisymmetry), we may assume that
+\,$X$\, is vertical and \,$Y$\, is horizontal.
+In this case, we again prove that both the left-hand and right-hand sides are zero.
+\begin{eqnarray*}
+\textnormal{L.H.S.}
+& = &
+	\left(\,F^{\,\omega}\,\right)_{p}\!\left(
+		X
+		\overset{{\color{white}1}}{,}
+		Y
+		\right)
+\;\; := \;\;
+	\left(\,\d\,\omega\,\right)_{p}\!\left(\,
+		\overset{{\color{white}.}}{\pi_{\mathcal{H}}(X)}
+		\,,\,
+		\pi_{\mathcal{H}}(Y)
+		\,\right)
+\;\; = \;\;
+	\left(\,\d\,\omega\,\right)_{p}\!\left(\,
+		\overset{{\color{white}.}}{0}
+		\,,\,
+		Y
+		\,\right)
+\;\; = \;\;
+	0
+\;\; \in \;\;
+	\mathfrak{g}
+\end{eqnarray*}
+As for the right-hand side, since \,$X$\, is a vertical vector,
+it is a fundamental vector field evaluated at \,$p \in P$.\,
+In other words, there exist \,$V \in \mathfrak{g}$\, such that
+\,$X \; = \; V^{\sharp}_{p}$.\,
+On the other hand, let \,$\widetilde{Y}$\, be a right-invariance horizontal extension of \,$Y$,\,
+i.e., \,$\widetilde{Y}$\, is a right-invariant horizontal vector field on \,$P$\,
+such that \,$\widetilde{Y}_{p} = Y$.\,
+Now, note:
+\begin{eqnarray*}
+(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,V^{\sharp}_{p}\,,\,\widetilde{Y}_{p}\,\right)
+\;\; = \;\;
+	\left(\,
+		(\,\overset{{\color{white}.}}{\d\,\omega}\,)\!\left(\,V^{\sharp}\,,\,\widetilde{Y}\,\right)
+		\,\right)_{p}
+\\
+& = &
+	\left(\,
+		\overset{{\color{white}.}}{V^{\sharp}(\,\omega(\widetilde{Y})\,)}
+		\,-\,
+		\widetilde{Y}(\,\omega(V^{\sharp})\,)
+		\,-\,
+		\omega\!\left(\,[V^{\sharp},\widetilde{Y}]\,\right)
+		\,\right)_{\!p},
+	\;\;
+	\textnormal{by Exercise 21.8, p.198, \cite{Tu2017}}
+\\
+& = &
+	\left(\,
+		\overset{{\color{white}.}}{V^{\sharp}(\,0)}
+		\,-\,
+		\widetilde{Y}(\,V)
+		\,-\,
+		\omega\!\left(\,[V^{\sharp},\widetilde{Y}]\,\right)
+		\,\right)_{\!p},
+	\;\;
+	\textnormal{since \,$\widetilde{Y}$\, is horizontal and \,$\omega$\, is a connection $1$-form}
+\\
+& = &
+	\left(\,
+		0
+		\,-\,
+		0
+		\,-\,
+		\omega\!\left(\,[V^{\sharp},\widetilde{Y}]\,\right)
+		\,\right)_{\!p},
+	\;\;
+	\textnormal{since \,$V \in \mathfrak{g}$\, is constant}
+\\
+& = &
+	-\,\left(\,
+		\omega\!\left(\,[V^{\sharp},\widetilde{Y}]\,\right)
+		\,\right)_{\!p}
+\\
+& = &
+	-\,\left(\;
+		\overset{{\color{white}.}}{0}
+		\;\right)_{\!p},
+	\;\;
+	\textnormal{since \,$[V^{\sharp},\widetilde{Y}]$\, is horizontal,
+	by Lemma 28.7, p.260, \cite{Tu2017}}
+\\
+& = &
+	0
+\end{eqnarray*}
+Next, note:
+\begin{eqnarray*}
+\dfrac{1}{2}\left[\,\omega\,,\,\omega\,\right]_{p}(X,Y)
+& = &
+	\dfrac{1}{2}
+	\left[\,\omega\,,\,\omega\,\right]_{p}\left(\,V^{\sharp}_{p}\,,\widetilde{Y}_{p}\,\right)
+\;\; = \;\;
+	\dfrac{1}{2}\left(\;
+		\left[\,\omega\,,\,\omega\,\right](\,\overset{{\color{white}.}}{V^{\sharp}}\,,\widetilde{Y}\,)
+		\;\right)_{\!p}
+\\
+& = &
+	\dfrac{1}{2}\left(\;
+		2\cdot\!\left[\,\omega(\,\overset{{\color{white}.}}{V^{\sharp}}\,)\,,\,\omega(\,\widetilde{Y}\,)\,\right]
+		\;\right)_{\!p}
+\\
+& = &
+	\left(\;
+		\left[\,\omega(\,\overset{{\color{white}.}}{V^{\sharp}}\,)\,,\,0\,\right]
+		\;\right)_{\!p},
+	\;\;
+	\textnormal{since connection $1$-forms annihilate horizontal vectors}
+\\
+& = &
+	0
+\end{eqnarray*}
+Hence,
+\begin{eqnarray*}
+\textnormal{R.H.S.}
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+	\; + \;
+	\dfrac{1}{2}\left[\,\omega\,,\,\omega\,\right]_{p}(X,Y)
+\;\; = \;\;
+	0 \; + \; 0
+\;\; = \;\;
+	0
+\;\; \in \;\;
+	\mathfrak{g}
+\end{eqnarray*}
+This proves the structure equation for the scenario
+where one of \,$X$, $Y$\, is vertical and the other horizontal.
 
 \qed
 
@@ -1589,7 +1742,7 @@ Then, the following statements are true:
 		\; + \;
 		\dfrac{1}{2}\left[\,f^{*}\omega\,\overset{{\color{white}1}}{,}\,f^{*}\omega\,\right],
 		\quad
-		\textnormal{by structure equation}
+		\textnormal{by structure equation, Proposition \ref{StructureEquationOfCurvatureTwoForm}}
 	\\
 	& = &
 		f^{*}(\,\d\,\omega\,)
