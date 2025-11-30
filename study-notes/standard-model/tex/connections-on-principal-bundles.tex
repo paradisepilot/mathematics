@@ -1037,7 +1037,7 @@ we define \,$\left[\,\xi\,,\,\eta\,\right] \,\in\, \Omega^{k+l}(P,\mathfrak{g})$
 \end{definition}
 
 \vskip 0.5cm
-\begin{remark}
+\begin{remark}\label{BracketEtaEta}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1123,7 +1123,6 @@ Indeed,
 \end{eqnarray*}
 \end{remark}
 
-
 \vskip 0.5cm
 \begin{proposition}
 \textnormal{\bf(The structure equation of the curvature $2$-form)}
@@ -1147,11 +1146,13 @@ Suppose:
 \end{itemize}
 Then, we have:
 \begin{equation*}
+{\color{red}
 \left(\,F^{\,\omega}\,\right)_{p}\!\left(\,X\,,\,Y\,\right)
 \;\; = \;\;
 	(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
 	\; + \;
 	\dfrac{1}{2}\left[\,\omega\,,\,\omega\,\right]_{p}(X,Y)
+}
 \;\; \in \;\;
 	\mathfrak{g}\,,
 \end{equation*}
@@ -1276,11 +1277,53 @@ Hence,
 \;\; \in \;\;
 	\mathfrak{g}
 \end{eqnarray*}
-This proves the Structural Equation for the case where both $X$ and $Y$ are vertical.
+This proves the structure equation for the case where both $X$ and $Y$ are vertical.
 
 \vskip 0.3cm
 \noindent
 \underline{Both{\color{white}p}$X$ and $Y$ are horizontal}
+\begin{eqnarray*}
+\textnormal{R.H.S.}
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+	\; + \;
+	\dfrac{1}{2}\left[\,\omega\,,\,\omega\,\right]_{p}(X,Y)
+\\
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+	\; + \;
+	\left[\;\overset{{\color{white}.}}{\omega_{p}(X)}\,,\,\omega_{p}(Y)\,\right],
+	\quad
+	\textnormal{by Remark \ref{BracketEtaEta}}
+\\
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,X\,,\,Y\,\right)
+	\; + \;
+	\left[\;\overset{{\color{white}.}}{0}\,,\,0\,\right],
+	\;\;
+	\textnormal{since connection $1$-forms annihilate horizontal vectors}
+\\
+& = &
+	(\,\d\,\omega\,)_{p}\!\left(\,
+		\overset{{\color{white}.}}{\pi_{\mathcal{H}}(X)}
+		\,,\,
+		\pi_{\mathcal{H}}(Y)
+		\,\right)
+	\;\;
+	\textnormal{since $X$ and $Y$ are horizontal}
+\\
+& =: &
+	\left(\,F^{\,\omega}\,\right)_{p}\!\left(\,X\,,\,Y\,\right)
+\;\; = \;\;
+	\textnormal{L.H.S.}
+\end{eqnarray*}
+
+\vskip 0.3cm
+\noindent
+\underline{$X${\color{white}p}is vertical and $Y$ is horizontal}
+\vskip 0.1cm
+\noindent
+In this case, ...
 
 \qed
 
