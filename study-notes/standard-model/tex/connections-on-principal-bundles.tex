@@ -1020,18 +1020,23 @@ Then, the following statements are true:
 \vskip 0.1cm
 \noindent
 Suppose \,$P$\, is a {\color{red}manifold} and \,$\mathfrak{g}$\, is a Lie algebra.
-For \,$\xi \in \Omega^{k}(P,\mathfrak{g})$\, and \,$\eta \in \Omega^{l}(P,\mathfrak{g})$,\,
-we define \,$\left[\,\xi\,,\,\eta\,\right] \,\in\, \Omega^{k+l}(P,\mathfrak{g})$\, as follows:
+For
+\,$\omega_{1} \in \Omega^{k}(P,\mathfrak{g})$\,
+and
+\,$\omega_{2} \in \Omega^{l}(P,\mathfrak{g})$,\,
+we define
+\,$\left[\,\omega_{1}\,,\,\omega_{2}\,\right] \,\in\, \Omega^{k+l}(P,\mathfrak{g})$\,
+as follows:
 \begin{equation*}
-\left[\,\xi\,,\,\eta\,\right](X_{1},\ldots,X_{k+l})
+\left[\,\omega_{1}\,,\,\omega_{2}\,\right](X_{1},\ldots,X_{k+l})
 \;\; := \;\;
 	\dfrac{1}{k! \cdot l!}\cdot
 	\underset{\sigma\,\in\,S_{k+l}}{\sum}\,
-	\textnormal{sign}(\sigma) \cdot
+	\textnormal{sign}(\sigma)\,\cdot
 	\left[\;
-		\overset{{\color{white}.}}{\xi}\!\left(X_{\sigma(1)}),\ldots,X_{\sigma(k)})\right)
+		\overset{{\color{white}1}}{\omega_{1}}\!\left(X_{\sigma(1)}),\ldots,X_{\sigma(k)})\right)
 		\,,\,
-		\eta\!\left(X_{\sigma(k+1)}),\ldots,X_{\sigma(k+l)})\right)
+		\omega_{2}\!\left(X_{\sigma(k+1)}),\ldots,X_{\sigma(k+l)})\right)
 		\;\right]_{\mathfrak{g}}
 \end{equation*}
 \end{definition}
@@ -1041,15 +1046,15 @@ we define \,$\left[\,\xi\,,\,\eta\,\right] \,\in\, \Omega^{k+l}(P,\mathfrak{g})$
 \mbox{}
 \vskip 0.1cm
 \noindent
-In particular, if \,$\eta \in \Omega^{1}(P,\mathfrak{g})$,\, then
+In particular, if \,$\omega \in \Omega^{1}(P,\mathfrak{g})$,\, then
 \begin{equation*}
 {\color{red}
-\left[\,\eta\,,\,\eta\,\right](X,Y)
+\left[\,\omega\,,\,\omega\,\right](X,Y)
 \;\; = \;\;
 	2 \cdot\! \left[\;
-		\overset{{\color{white}.}}{\eta(X)}
+		\overset{{\color{white}.}}{\omega(X)}
 		\,,\,
-		\eta(Y)
+		\omega(Y)
 		\;\right]_{\mathfrak{g}}
 }\,,
 \quad
@@ -1057,71 +1062,149 @@ In particular, if \,$\eta \in \Omega^{1}(P,\mathfrak{g})$,\, then
 \end{equation*}
 Indeed,
 \begin{eqnarray*}
-\left[\,\eta\,,\,\eta\,\right](X_{1},X_{2})
+\left[\,\omega\,,\,\omega\,\right](X_{1},X_{2})
 & = &
 	\dfrac{1}{1! \cdot 1!}\cdot
 	\underset{{\sigma\,\in\,S_{2}}}{\sum}\,
 	\textnormal{sign}(\sigma) \,\cdot\!
 	\left[\;
-		\eta(X_{\sigma(1)})
+		\omega(X_{\sigma(1)})
 		\,,\,
-		\eta(X_{\sigma(2)})
+		\omega(X_{\sigma(2)})
 		\;\right]_{\mathfrak{g}}
 \\
 & = &
 	\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{(12)}\,\right)\cdot\!
 	\left[\;
-		\overset{{\color{white}.}}{\eta(X_{(12)(1)})}
+		\overset{{\color{white}.}}{\omega(X_{(12)(1)})}
 		\,,\,
-		\eta(X_{(12)(2)})
+		\omega(X_{(12)(2)})
 		\;\right]_{\mathfrak{g}}
 	\;+\;
 	\textnormal{sign}\!\left(\,\overset{{\color{white}.}}{(21)}\,\right)\cdot\!
 	\left[\;
-		\overset{{\color{white}.}}{\eta(X_{(21)(1)})}
+		\overset{{\color{white}.}}{\omega(X_{(21)(1)})}
 		\,,\,
-		\eta(X_{(21)(2)})
+		\omega(X_{(21)(2)})
 		\;\right]_{\mathfrak{g}}
 \\
 & = &
 	\left(\,+1\,\right)\cdot\!
 	\left[\;
-		\overset{{\color{white}.}}{\eta(X_{1})}
+		\overset{{\color{white}.}}{\omega(X_{1})}
 		\,,\,
-		\eta(X_{2})
+		\omega(X_{2})
 		\;\right]_{\mathfrak{g}}
 	\;+\;
 	\left(\,-1\,\right)\cdot\!
 	\left[\;
-		\overset{{\color{white}.}}{\eta(X_{2})}
+		\overset{{\color{white}.}}{\omega(X_{2})}
 		\,,\,
-		\eta(X_{1})
+		\omega(X_{1})
 		\;\right]_{\mathfrak{g}}
 \\
 & = &
 	\left(\,+1\,\right)\cdot\!
 	\left[\;
-		\overset{{\color{white}.}}{\eta(X_{1})}
+		\overset{{\color{white}.}}{\omega(X_{1})}
 		\,,\,
-		\eta(X_{2})
+		\omega(X_{2})
 		\;\right]_{\mathfrak{g}}
 	\;+\;
 	\left(\,-1\,\right)\cdot\left(\,-1\,\right)\cdot\!
 	\left[\;
-		\eta(X_{1})
+		\omega(X_{1})
 		\,,\,
-		\overset{{\color{white}.}}{\eta(X_{2})}
+		\overset{{\color{white}.}}{\omega(X_{2})}
 		\;\right]_{\mathfrak{g}}
 \\
 & = &
 	2\cdot\!
 	\left[\;
-		\overset{{\color{white}.}}{\eta(X_{1})}
+		\overset{{\color{white}.}}{\omega(X_{1})}
 		\,,\,
-		\eta(X_{2})
+		\omega(X_{2})
 		\;\right]_{\mathfrak{g}}
 \end{eqnarray*}
 \end{remark}
+
+\clearpage
+\begin{lemma}[Pullbacks of $\mathfrak{g}$-valued $1$-forms preserve brackets]
+\label{PullbacksPreserveBrackets}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	\vskip -0.2cm
+	$\mathfrak{g}$\, is a Lie algebra,
+\item
+	$P$\, and \,$Q$\, are {\color{red}manifolds}, and
+\item
+	$f : P \xrightarrow{{\color{white}222}} Q$\, is a smooth map.
+\end{itemize}
+Then,
+\begin{equation*}
+\left[\,\overset{{\color{white}.}}{f^{*}\,\omega_{1}}\,,\,f^{*}\,\omega_{2}\,\right]
+\;\; = \;\;
+	f^{*}\!\left(\,
+		\overset{{\color{white}.}}{
+			\left[\,\omega_{1}\,,\,\omega_{2}\,\right]
+			}
+		\,\right),
+\quad
+\textnormal{for each \;$\omega_{1},\, \omega_{2} \,\in\, \Omega^{1}(P,\mathfrak{g})$}
+\end{equation*}
+\end{lemma}
+\proof
+For any tangent vector fields $X_{1}, X_{2} \in \Gamma(\mathcal{T}P)$,\, we have:
+\begin{eqnarray*}
+\left[\,\overset{{\color{white}.}}{f^{*}\,\omega_{1}}\,,\,f^{*}\,\omega_{2}\,\right]\!(X_{1},X_{2})
+& := &
+	\left[\;
+		(\overset{{\color{white}.}}{f^{*}\,\omega_{1}})(X_{1})
+		\,,\,
+		(f^{*}\,\omega_{2})(X_{2})
+		\,\right]
+	\; - \;
+	\left[\;
+		(\overset{{\color{white}.}}{f^{*}\,\omega_{1}})(X_{2})
+		\,,\,
+		(f^{*}\,\omega_{2})(X_{1})
+		\,\right]
+\\
+& = &
+	\left[\;
+		\omega_{1}(\overset{{\color{white}.}}{f_{*}X_{1}})
+		\,,\,
+		\omega_{2}(f_{*}X_{2})
+		\,\right]
+	\; - \;
+	\left[\;
+		\omega_{1}(\overset{{\color{white}.}}{f_{*}X_{2}})
+		\,,\,
+		\omega_{2}(f_{*}X_{1})
+		\,\right]
+\\
+& =: &
+	\left[\;
+		\overset{{\color{white}1}}{\omega_{1}}
+		\,,\,
+		\omega_{2}
+		\,\right]\!
+	(\, f_{*}X_{1} \,,\, f_{*}X_{2} \,)
+\\
+& = &
+	\left(\,f^{*}\!\left[\;
+		\overset{{\color{white}1}}{\omega_{1}}
+		\,,\,
+		\omega_{2}
+		\,\right]\,\right)\!
+	(\, X_{1} \,,\, X_{2} \,)
+\end{eqnarray*}
+This completes the proof of the Lemma.
+\qed
 
 \vskip 0.5cm
 \begin{proposition}\label{StructureEquationOfCurvatureTwoForm}
@@ -1759,7 +1842,7 @@ Then, the following statements are true:
 		\; + \;
 		f^{*}\!\left(\,\dfrac{1}{2}\left[\,\omega\,\overset{{\color{white}1}}{,}\,\omega\,\right]\,\right),
 		\quad
-		\textnormal{by commutativity properties of pullbacks}
+		\textnormal{by Lemma \ref{PullbacksPreserveBrackets}}
 	\\
 	& = &
 		f^{*}\!\left(\;
