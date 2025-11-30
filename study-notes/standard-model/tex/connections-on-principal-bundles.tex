@@ -792,6 +792,7 @@ the following propertiees:
 
 \vskip 0.5cm
 \begin{theorem}\textnormal{\bf(Bijection between principal connections and connection $1$-forms on a principal bundle, Theorem 5.2.2, p.262, \cite{Hamilton2017})}
+\label{EhresmannConectionEquivalentToConnectionOneForm}
 \mbox{}
 \vskip 0.05cm
 \noindent
@@ -1484,14 +1485,26 @@ Now, note:
 \\
 & = &
 	\left(\,
-		\overset{{\color{white}.}}{V^{\sharp}(\,0)}
+		\overset{{\color{white}.}}{V^{\sharp}(\,{\color{red}0})}
 		\,-\,
-		\widetilde{Y}(\,V)
+		\widetilde{Y}(\,\omega(V^{\sharp})\,)
 		\,-\,
 		\omega\!\left(\,[V^{\sharp},\widetilde{Y}]\,\right)
 		\,\right)_{\!p},
 	\;\;
-	\textnormal{since \,$\widetilde{Y}$\, is horizontal and \,$\omega$\, is a connection $1$-form}
+	\textnormal{since \,$\omega(\widetilde{Y}) = 0$,\,
+	by Theorem \ref{EhresmannConectionEquivalentToConnectionOneForm}}
+\\
+& = &
+	\left(\;
+		\overset{{\color{white}1}}{0}
+		\,-\,
+		\widetilde{Y}(\,{\color{red}V})
+		\,-\,
+		\omega\!\left(\,[V^{\sharp},\widetilde{Y}]\,\right)
+		\,\right)_{\!p},
+	\;\;
+	\textnormal{since \,$\omega(V^{\sharp}) \equiv V$\, as \,$\omega$\, is a connection $1$-form}
 \\
 & = &
 	\left(\,
@@ -1513,9 +1526,17 @@ Now, note:
 	-\,\left(\;
 		\overset{{\color{white}.}}{0}
 		\;\right)_{\!p},
-	\;\;
-	\textnormal{since \,$[V^{\sharp},\widetilde{Y}]$\, is horizontal,
-	by Lemma 28.7, p.260, \cite{Tu2017}, or Lemma 5.5.5, p.276, \cite{Hamilton2017}}
+	\begin{array}{l}
+	\textnormal{
+		since \,$[V^{\sharp},\widetilde{Y}]$\, is horizontal,
+		by Lemma 28.7, p.260, \cite{Tu2017}, or Lemma 5.5.5, p.276, \cite{Hamilton2017}
+		}
+	\\
+	\textnormal{
+		and the connection $1$-form \,$\omega$\, annihilates horizontal vectors,
+		by Theorem \ref{EhresmannConectionEquivalentToConnectionOneForm}
+		}
+	\end{array}
 \\
 & = &
 	0
