@@ -255,25 +255,9 @@
 \vskip 0.5cm
 \section{The Stone theorem and the Schr\"odinger equation}
 
-\begin{itemize}
-\item
-	\underline{\textbf{The{\color{white}p}Stone Theorem}}
-\item
-	\underline{\textbf{``Derivation'' of the Schr\"odinger equation}}
-	\vskip 0.1cm
-	\noindent
-	Einstein-Planck relation:
-	\begin{equation*}
-	\Psi(t,\mathbf{x})
-	\;\; = \;\;
-		e^{-\,\i\cdot\omega t} \cdot \psi(\mathbf{x})
-	\end{equation*}
-\end{itemize}
-
-\vskip 0.3cm
 \begin{definition}
 \mbox{}
-\vskip 0.1cm
+\vskip 0.05cm
 \noindent
 Let \,$\mathbb{H}$\, be a complex Hilbert space.
 A \,\textbf{one-parameter unitary group on $\mathbb{H}$}\,
@@ -305,7 +289,7 @@ is said to be \textbf{strongly continuous} if
 \vskip 0.3cm
 \begin{definition}
 \mbox{}
-\vskip 0.1cm
+\vskip 0.05cm
 \noindent
 Suppose
 \,$\{\,U(t)\,\}_{t\in\Re}$\,
@@ -350,9 +334,28 @@ A(\psi)
 \end{definition}
 
 \vskip 0.3cm
+\begin{theorem}[The Stone Theorem]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\, is a strongly continuous one-parameter
+unitary group on a complex Hilbert space \,$\mathbb{H}$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	the infinitesimal generator \,$A$\, of \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\,
+	is densely defined and {\color{red}self-adjoint}, and
+\item
+	$U(t) \, = \, e^{\i t A}$,\,
+	for each \,$t \in \Re$,\,
+	where \,$e^{\i t A}$\, is defined via the functional calculus of \,$A$.\,
+\end{enumerate}
+\end{theorem}
+
+\vskip 0.3cm
 \begin{proposition}
 \mbox{}
-\vskip 0.1cm
+\vskip 0.05cm
 \noindent
 Suppose \,$A$\, is a self-adjoint operator on a complex Hilbert space \,$\mathbb{H}$\,
 and for each \,$t \in \Re$,\, define \,$U(t) \,:=\, e^{\i t A}$,\,
@@ -406,24 +409,6 @@ Then, the following statements are true:
 \end{proposition}
 
 \vskip 0.3cm
-\begin{theorem}[The Stone Theorem]
-\mbox{}
-\vskip 0.1cm
-\noindent
-Suppose \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\, is a strongly continuous one-parameter
-unitary group on a complex Hilbert space \,$\mathbb{H}$.\,
-Then, the following statements are true:
-\begin{enumerate}
-\item
-	the infinitesimal generator \,$A$\, of \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\,
-	is densely defined, and
-\item
-	$U(t) \, = \, e^{\i t A}$,\,
-	for each \,$t \in \Re$.\,
-\end{enumerate}
-\end{theorem}
-
-\vskip 0.3cm
 \begin{remark}[The Schr\"odinger equation]
 \mbox{}
 \vskip 0.05cm
@@ -431,7 +416,7 @@ Then, the following statements are true:
 Suppose \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\, is a strongly continuous one-parameter
 unitary group on a complex Hilbert space \,$\mathbb{H}$.\,
 Let \,$\psi(0) \in \mathbb{H}$\, be an arbitrary element in \,$\mathbb{H}$.\,
-For each \,$t \in \Re$,\, define \,$\psi(t) \,:=\, e^{\i t A}\cdot\psi(0)$.\,
+For each \,$t \in \Re$,\, define \,$\psi(t) \,:=\, U(t)\cdot\psi(0)$.\,
 Then, \,$\psi(\cdot)$\, satisfies the Schr\"odinger equation, i.e., 
 the following equality holds:
 \begin{equation*}
