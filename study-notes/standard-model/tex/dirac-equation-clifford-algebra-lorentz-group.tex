@@ -196,6 +196,93 @@ where \,$A$\, is the infinitesimal generator of
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\section{The momentum operator via the Fourier transform}
+
+\vskip 0.3cm
+\begin{proposition}[Momentum operator via Fourier transform]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Define the \textbf{momentum operator} by:
+\begin{equation*}
+P
+\;\; := \;\;
+	-\,\i\,\dfrac{\d}{\d x}
+\end{equation*}
+Then, for each sufficiently nice unit vector \,$\psi \in L^{2}(\Re)$,\,
+we have:
+\begin{equation*}
+\left\langle\;
+	\overset{{\color{white}.}}{\psi}
+	\;,\,
+	P^{m}(\psi)
+	\;\right\rangle
+\;\; = \;\;
+\left\langle\;
+	\psi
+	\,,\,
+	\left(-\,\i\,\dfrac{\d}{\d t}\right)^{m}\!(\psi)
+	\;\right\rangle
+\;\; = \;\;
+	\int_{\Re}\;
+		k^{m}\cdot\left\vert\,\widehat{\psi}(k)\,\right\vert^{2}
+		\d\,k\,,
+\end{equation*}
+where \,$\widehat{\psi}$\, is the Fourier transform of \,$\psi$,\, i.e.,\,
+\begin{equation*}
+\widehat{\psi}(k)
+\;\; := \;\;
+	\dfrac{1}{\sqrt{2\pi}}
+	\int_{\Re}\;
+		e^{-\,\i kx} \cdot \psi(x)
+		\;\d\,x
+\end{equation*}
+\end{proposition}
+
+
+\vskip 0.3cm
+\begin{remark}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose \,$\mathbb{H}$\, is the state space of a quantum system \,$Q$\,
+(hence, \,$\mathbb{H}$\, is a complex Hilbert space), and
+\,$\psi \in \mathbb{H}$\, is an arbitrary ``sufficiently nice'' unit vector.
+Then, the quantity
+\,$
+\left\langle\;
+	\overset{{\color{white}.}}{\psi}
+	\;,\,
+	P^{m}(\psi)
+	\;\right\rangle
+$\,
+has the following physical interpretation:
+\begin{equation*}
+\left\langle\;
+	\overset{{\color{white}.}}{\psi}
+	\;,\,
+	P^{m}(\psi)
+	\;\right\rangle
+\;\; = \;\;
+	\left\{\;
+		\begin{array}{c}
+		\textnormal{expected value of}
+		\\
+		\textnormal{the $m^{\textnormal{th}}$ power of}
+		\\
+		\textnormal{the momentum of }
+		\\
+		\textnormal{the quantum system $Q$}
+		\\
+		\textnormal{given that $Q$ is in state $\psi$}
+		\end{array}
+		\;\right\}
+\end{equation*}
+\end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \section{The Schr\"odinger equation}
 
 \begin{itemize}
