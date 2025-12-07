@@ -86,6 +86,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \section{The Klein-Gordon equation}
 
 \begin{itemize}
@@ -142,6 +143,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \section{The Dirac equation}
 
 \begin{itemize}
@@ -247,6 +249,201 @@
 %	This observation led to the following realization (when expressed in modern geometric language):
 %	The ``wave function'' \,$\psi$\, must be smooth sections of a spinor bundle over spacetime.
 \end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{The Stone theorem and the Schr\"odinger equation}
+
+\begin{itemize}
+\item
+	\underline{\textbf{The{\color{white}p}Stone Theorem}}
+\item
+	\underline{\textbf{``Derivation'' of the Schr\"odinger equation}}
+	\vskip 0.1cm
+	\noindent
+	Einstein-Planck relation:
+	\begin{equation*}
+	\Psi(t,\mathbf{x})
+	\;\; = \;\;
+		e^{-\,\i\cdot\omega t} \cdot \psi(\mathbf{x})
+	\end{equation*}
+\end{itemize}
+
+\vskip 0.3cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\mathbb{H}$\, be a complex Hilbert space.
+A \,\textbf{one-parameter unitary group on $\mathbb{H}$}\,
+is a family \,$\{\,U(t)\,\}_{t\in\Re}$\, of unitary operators on \,$\mathbb{H}$\,
+such that:
+\begin{itemize}
+\item
+	$U(0) \,=\, \mathbf{1}_{\mathbb{H}}$,\, and
+\item
+	$U(t_{1}+t_{2}) \;=\; U(t_{1}) \,\circ\, U(t_{2})$,\,
+	for each \,$t_{1}, t_{2} \in \Re$.\,
+\end{itemize}
+A one-parameter unitary group \,$\{\,U(t)\,\}_{t\in\Re}$\, in \,$\mathbb{H}$\,
+is said to be \textbf{strongly continuous} if
+\begin{equation*}
+\underset{s \rightarrow t}{\lim}\;
+\left\Vert\;
+	U(s) \cdot x
+	\,\overset{{\color{white}.}}{-}\,
+	U(t) \cdot x
+	\;\right\Vert_{\mathbb{H}}
+\;\;=\;\;
+	0\,,
+\quad
+\textnormal{for each \,$x \in \mathbb{H}$\, and each \,$t \in \Re$.\,}
+\end{equation*}
+\end{definition}
+
+\vskip 0.3cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose
+\,$\{\,U(t)\,\}_{t\in\Re}$\,
+is a strongly continuous one-parameter unitary group on a complex Hilbert space \,$\mathbb{H}$.\,
+The \textbf{infinitesimal generator} of
+\,$\{\,U(t)\,\}_{t\in\Re}$\,
+is an operator
+\,$A$\, on \,$\mathbb{H}$\, defined as follows:
+\begin{equation*}
+\textnormal{Domain}(A)
+\;\; := \;\;
+	\left\{\;
+		\psi \in \mathbb{H}
+		\;\;\left\vert\;\;
+		\begin{array}{c}
+		\underset{{\color{white}1}}{\textnormal{there exists \,$\phi \in \mathbb{H}$\,}}
+		\\
+		\underset{t\,\rightarrow\,0}{\lim}\,
+		\left\Vert\;
+			\phi
+			\,-\,
+			\dfrac{1}{\i}\cdot\dfrac{
+			U(t) \cdot \psi \,-\, \psi
+			}{t}
+			\;\right\Vert_{\mathbb{H}}
+		\,=\,0
+		\end{array}
+		\right.
+		\;\right\},
+\end{equation*}
+and \,$A : \textnormal{Domain}(A) \xrightarrow{{\color{white}222}} \mathbb{H}$\,
+is defined by:
+\begin{equation*}
+A(\psi)
+\;\; := \;\;
+	\underset{t\,\rightarrow\,0}{\lim}\;\dfrac{1}{\i}\cdot\dfrac{
+		U(t) \cdot \psi \,-\, \psi
+		}{t}\,,
+\quad
+\textnormal{for each \,$\psi \in \textnormal{Domain}(A)$.\,}
+\end{equation*}
+\end{definition}
+
+\vskip 0.3cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$A$\, is a self-adjoint operator on a complex Hilbert space \,$\mathbb{H}$\,
+and for each \,$t \in \Re$,\, define \,$U(t) \,:=\, e^{\i t A}$,\,
+where \,$e^{\i t A}$\, is defined via the functional calculus of \,$A$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	$\left\{\,U(t)\,\right\}_{t\in\Re}$\, is
+	a strongly continuous one-parameter unitary group on \,$\mathbb{H}$,\,
+\item
+	\,$\textnormal{Domain}(A)$\, is given by:
+	\begin{equation*}
+	\textnormal{Domain}(A)
+	\;\; = \;\;
+		\left\{\;
+			\psi \in \mathbb{H}
+			\;\;\left\vert\;\;
+			\begin{array}{c}
+			\underset{{\color{white}1}}{\textnormal{there exists \,$\phi \in \mathbb{H}$\,}}
+			\\
+			\underset{t\,\rightarrow\,0}{\lim}\,
+			\left\Vert\;
+				\phi
+				\,-\,
+				\dfrac{1}{\i}\cdot\dfrac{
+				U(t) \cdot \psi \,-\, \psi
+				}{t}
+				\;\right\Vert_{\mathbb{H}}
+			\,=\,0
+			\end{array}
+			\right.
+			\;\right\}\,,
+	\quad
+	\textnormal{and}
+	\end{equation*}
+\item
+	for each \,$\psi \in \textnormal{Domain}(A)$,\, we have:
+	\begin{equation*}
+	\underset{t\,\rightarrow\,0}{\lim}\;
+	\left\Vert\;
+		A(\psi)
+		\,-\,
+		\dfrac{1}{\i}\cdot\dfrac{
+			U(t) \cdot \psi \,-\, \psi
+			}{t}
+		\;\right\Vert_{\mathbb{H}}
+	\;\; = \;\;
+		0
+	\end{equation*}
+\end{enumerate}
+\end{proposition}
+
+\vskip 0.3cm
+\begin{theorem}[The Stone Theorem]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\, is a strongly continuous one-parameter
+unitary group on a complex Hilbert space \,$\mathbb{H}$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	the infinitesimal generator \,$A$\, of \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\,
+	is densely defined, and
+\item
+	$U(t) \, = \, e^{\i t A}$,\,
+	for each \,$t \in \Re$.\,
+\end{enumerate}
+\end{theorem}
+
+\vskip 0.3cm
+\begin{remark}[The Schr\"odinger equation]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose \,$\left\{\,U(t)\,\right\}_{t\in\Re}$\, is a strongly continuous one-parameter
+unitary group on a complex Hilbert space \,$\mathbb{H}$.\,
+Let \,$\psi(0) \in \mathbb{H}$\, be an arbitrary element in \,$\mathbb{H}$.\,
+For each \,$t \in \Re$,\, define \,$\psi(t) \,:=\, e^{\i t A}\cdot\psi(0)$.\,
+Then, \,$\psi(\cdot)$\, satisfies the Schr\"odinger equation, i.e., 
+the following equality holds:
+\begin{equation*}
+\dfrac{\d}{\d t}\,\psi(t)
+\;\; = \;\;
+	\i \, A \cdot \psi(t)\,,
+\quad
+\textnormal{for each \,$t \in \Re$}\,,
+\end{equation*}
+where \,$A$\, is the infinitesimal generator of
+\,$\left\{\,U(t)\,\right\}_{t\in\Re}$.\,
+\end{remark}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
