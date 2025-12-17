@@ -1,0 +1,359 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Spin, spinors, Spin groups and Clifford algebras}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Unitary projective representations}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Strongly continuous unitary representation, \cite{Simms1971}]
+\mbox{}
+\vskip 0.01cm
+\noindent
+A \textbf{strongly continuous unitary representation}
+of a topological group \,$G$\, on a complex Hilbert space \,$H$\,
+is a homomorphism \,$\rho : G \xrightarrow{{\color{white}22}} \mathcal{U}(H)$\,
+such that, for each fixed \,$v \in H$,\, the map
+\,$G \xrightarrow{{\color{white}222}} H : g \xmapsto{{\color{white}222}} \rho(g) \cdot v$ \,
+is a continuous.
+Here, \,$\mathcal{U}(H)$\, is the group of unitary automorphisms from \,$H$\, onto itself.
+\end{definition}
+
+\vskip 0.5cm
+\begin{definition}[Strongly continuous unitary {\color{red}projective} representation, \cite{Simms1971}]
+\mbox{}
+\vskip 0.01cm
+\noindent
+A \textbf{strongly continuous unitary projective representation}
+of a topological group \,$G$\, on a complex Hilbert space \,$H$\,
+is a continuous homomorphism of the form
+\begin{equation*}
+\rho : G \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H)) \,=\, \mathcal{U}(H) / \C^{*}\,,
+\end{equation*}
+where \,$\mathcal{U}(H)$\, is the group of unitary automorphisms from \,$H$\, onto itself.
+A unitary projective representation
+\,$\rho : G \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$\,
+is said to be \textbf{induced} by a unitary representation
+\,$\widetilde{\rho} : G \xrightarrow{{\color{white}222}} \mathcal{U}(H)$\,
+if \,$\rho = \pi \circ \widetilde{\rho}$,\,
+where
+\,$\pi : \mathcal{U}(H) \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H)) = \mathcal{U}(H) / \C^{*}$\,
+is the quotient map.
+\end{definition}
+
+\vskip 0.5cm
+\begin{theorem}[Schur’s lemma for unitary representations, Theorem 3.12, p.55, \cite{Sepanski2010}]
+\mbox{}
+\vskip 0.01cm
+\noindent
+Let \,$G$\, be a Lie group and let
+\,$\rho_{1} : G \xrightarrow{{\color{white}222}} \mathcal{U}(H_{1})$\,
+and
+\,$\rho_{2} : G \xrightarrow{{\color{white}222}} \mathcal{U}(H_{2})$\,
+be continuous irreducible unitary representations of 
+\,$G$\, on a (possibly infinite-dimensional) complex Hilbert spaces \,$H_{1}$\, and $H_{2}$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	If \,$\rho_{1}$\, and \,$\rho_{2}$\, are irreducible, then
+	\begin{equation*}
+	\dim_{\C}\!\left(\,\overset{{\color{white}.}}{\textnormal{Hom}_{G}(H_{1},H_{2})}\,\right)
+	\;\; = \;\;
+	\left\{\begin{array}{cl}
+	1\,, & \textnormal{if \,$\rho_{1}$\, and \,$\rho_{2}$\, are equivalent}
+	\\
+	0\,, & \textnormal{otherwise}
+	\end{array}\right.
+	\end{equation*}
+	where
+	\begin{equation*}
+	\textnormal{Hom}_{G}(H_{1},H_{2})
+	\;\; := \;\;
+		\left\{\;\,
+			T \in \textnormal{Hom}(H_{1},H_{2})
+			\;\,\left\vert\;
+			\begin{array}{c}
+			T \,\circ\, \rho_{1}(g) \,=\, \rho_{2}(g) \,\circ\, T
+			\\
+			\overset{{\color{white}.}}{\textnormal{for each \,$g \in G$}}
+			\end{array}
+			\right.
+			\right\}
+	\end{equation*}
+	and \,$\textnormal{Hom}(H_{1},H_{2})$\, is the set of continuous (equivalently, bounded)
+	linear maps from \,$H_{1}$\, into \,$H_{2}$.\,
+\item
+	\,$\rho_{1} : G \xrightarrow{{\color{white}222}} \mathcal{U}(H_{1})$\,
+	is irreducible if and only if
+	\,$\textnormal{Hom}_{G}(H_{1},H_{1}) \,=\, \C \cdot \mathbf{1}_{H_{1}}$.\,
+\end{enumerate}
+\end{theorem}
+
+\vskip 0.5cm
+\begin{corollary}
+\mbox{}
+\vskip 0.01cm
+\noindent
+Let \,$G$\, be a Lie group and let
+\,$\rho : G \xrightarrow{{\color{white}222}} \mathcal{U}(H)$\,
+be a continuous irreducible unitary representation of 
+\,$G$\, on a (possibly infinite-dimensional) complex Hilbert space \,$H$.
+Then, every bounded linear operator 
+\,$T \in \textnormal{Hom}(H,H)$\,
+that commutes with \,$\rho(g)$,\, for each \,$g \in G$,\,
+is a scalar multiple of the identity, i.e.,
+\begin{equation*}
+\left.\begin{array}{c}
+T \,\circ\, \rho(g) \;=\; \rho(g) \,\circ\, T
+\\
+\overset{{\color{white}.}}{\textnormal{for each \,$g \in G$}}
+\end{array}\right\}
+\quad
+\Longrightarrow
+\quad
+\left\{\begin{array}{c}
+T \,=\, \lambda \cdot \mathbf{1}_{H}
+\\
+\overset{{\color{white}.}}{\textnormal{for some \,$\lambda \in \C$}}
+\end{array}\right.
+\end{equation*}
+\end{corollary}
+
+\vskip 0.5cm
+\begin{corollary}
+\mbox{}
+\vskip 0.01cm
+\noindent
+Let \,$G$\, be a Lie group and
+\,$\rho : G \xrightarrow{{\color{white}222}} \mathcal{U}(H)$\,
+a strongly continuous unitary irreducible representation of
+\,$G$\, on a (possibly infinite-dimensional) complex Hilbert space \,$H$.\,
+Then, every element of the center 
+\,$Z(G)$\, acts as a scalar multiple of the identity on \,$H$,\, i.e.,
+for each \,$z \in Z(G)$,\, there exists \,$\lambda(z) \in \C$\, such that
+\begin{equation*}
+\rho(z) \;\;=\;\; \lambda(z) \cdot \mathbf{1}_{H}
+\end{equation*}
+\end{corollary}
+\proof
+
+\qed
+
+\vskip 0.5cm
+\begin{proposition}
+\textnormal{\bf(Unitary representations of $\SL(2,\C)\ltimes\Re^{4}$ indcues unitary projective representations of the Poincaré group $\SOup(1,3) \ltimes \Re^{1,3}$)}
+\mbox{}
+\vskip -0.01cm
+\noindent
+Every unitary representation
+\,$\rho : \SL(2,\C) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \mathcal{U}(H)$\,
+induces a unitary projective representation of
+\,$\rho^{\flat} : \SOup(1,3) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$.\,
+Furthermore, \,$\rho$\, is irreducible if and only if \,$\rho^{\flat}$\, is irreducible.
+\end{proposition}
+\proof
+Write
+\,$\widetilde{G} := \SL(2,\C) \ltimes \Re^{1,3}$\,
+and 
+\,$G := \SOup(1,3) \ltimes \Re^{1,3}$.\,
+Let
+\,$\pi : \SL(2,\C) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \SOup(1,3) \ltimes \Re^{1,3}$\,
+be the quotient map.
+Recall that
+\,$\ker(\pi)
+\,=\,
+	\left\{\,\overset{{\color{white}.}}{(\,\pm\,I_{2 \times 2}\,,\,0_{\Re^{1,3}}\,)}\,\right\}
+$\,
+and that \,$\ker(\pi)$\, equals the centre of \,$\widetilde{G}$.\,
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\quad
+Every unitary representation
+\,$\rho : \SL(2,\C) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \mathcal{U}(H)$\,
+induces a unitary projective representation
+\,$\rho^{\flat} : \SOup(1,3) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$\,
+as follows:
+For each \,$[g] \in G$\, and \,$[\,v\,] \in \mathbb{P}(H)$,\, we define
+\begin{equation*}
+\rho^{\flat}(\,[g]\,) \cdot [\,v\,]
+\;\; := \;\;
+	\left[\,\overset{{\color{white}.}}{\rho(g) \cdot v}\,\right],
+\quad
+\textnormal{for any \,$g \in [g]$\, and \,$v \in [\,v\,]$}
+\end{equation*}
+Proof of Claim 1:\;\;
+We first prove that the map is well-defined.
+Recall that, for any \,$[g] \in G$,\, we have
+\,$[g] = g \cdot \ker(\pi) \in G = \widetilde{G} \,/ \ker(\pi)$,\,
+where \,$g \in [g]$\, is an arbitrary element in the coset \,$[g] = g \cdot \ker(\pi)$.\,
+So, for any \,$g, g_{1} \in [g] \in G$,\, there exists \,$k \in \ker(\pi)$\, such that
+\,$g_{1} = g \cdot k$.\,
+Similarly, for any $v, v_{1} \in [\,v\,]$,\, there exists \,$\alpha \in \C$\, such that
+\,$v_{1} = \alpha \cdot v$.\,
+Hence,
+\begin{eqnarray*}
+\left[\,\overset{{\color{white}.}}{\rho(g_{1}) \cdot v_{1}}\,\right]
+& = &
+	\left[\,\overset{{\color{white}.}}{\rho(g \cdot k) \cdot (\alpha \cdot v)}\,\right]
+\;\; = \;\;
+	\left[\,\overset{{\color{white}.}}{
+		\rho(g) \cdot \rho(k) \cdot (\alpha \cdot v)
+		}\,\right]
+\;\; = \;\;
+	\left[\,\overset{{\color{white}.}}{
+		\lambda_{k} \cdot \alpha \cdot \rho(g) \cdot v
+		}\,\right]
+\;\; = \;\;
+	\left[\,\overset{{\color{white}.}}{
+		\rho(g) \cdot v
+		}\,\right],
+\end{eqnarray*}
+where \,$\rho(k) = \lambda_{k}\cdot\mathbf{1}_{H}$.\,
+This proves that
+\,$\rho^{\flat}(\,[g]\,) \cdot [\,v\,]
+\, := \,
+\left[\,\overset{{\color{white}.}}{\rho(g) \cdot v}\,\right]
+$\,
+does not depend on the particular representatives of \,$[g]$\, and \,$[\,v\,]$;\,
+hence, the map
+\,$\rho^{\flat} : \SOup(1,3) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$\,
+is well-defined.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\quad
+$\rho$\, is irreducible if and only if \,$\rho^{\flat}$\, is irreducible.
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;\;
+This follows immediately from the observation that a non-trivial closed subspace
+\,$V \subset H$\,
+is \,$\rho$-invariant if and only if its projectivization
+\,$\mathbb{P}(V) \subset \mathbb{P}(H)$\,
+is \,$\rho^{\flat}$-invariant.
+\qed
+
+\vskip 0.5cm
+\begin{lemma}
+\textnormal{\bf(Unitary projective representations of the Poincaré group $\SOup(1,3) \ltimes \Re^{1,3}$
+indcues unitary projective representations of $\SL(2,\C)\ltimes\Re^{4}$)}
+\mbox{}
+\vskip -0.01cm
+\noindent
+Every unitary projective representation
+\,$\rho : \SOup(1,3) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$\,
+induces a unitary representation
+\,$\rho^{\sharp} : \SL(2,\C) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$.\,
+Furthermore, \,$\rho$\, is irreducible if and only if \,$\rho^{\sharp}$\, is irreducible.
+\end{lemma}
+\proof
+Simply define
+\begin{equation*}
+\rho^{\sharp}
+\;\; := \;\;
+	\rho \,\circ\, \pi :
+	\SL(2,\C) \ltimes \Re^{1,3}
+	\xrightarrow{{\color{white}22}\pi{\color{white}22}}
+	\SOup(1,3) \ltimes \Re^{1,3}
+	\xrightarrow{{\color{white}22}\rho{\color{white}22}}
+	\Aut(\mathbb{P}(H))\,,
+\end{equation*}
+where
+\,$\pi : \SL(2,\C) \ltimes \Re^{1,3} \xrightarrow{{\color{white}222}} \SOup(1,3) \ltimes \Re^{1,3}$\,
+is the quotient map.
+Next, note that a non-trivial closed linear subspace \,$\mathbb{P}(V) \subset \mathbb{P}(H)$\,
+is $\rho$-invariant if and only if it is $\rho^{\sharp}$-invariant.
+It follows that \,$\rho$\, is invariant if and only if it is \,$\rho^{\sharp}$-invariant.\,
+\qed
+
+\vskip 0.5cm
+\begin{theorem}
+\textnormal{\bf(Unitary projective representations of $\SL(2,\C)\ltimes\Re^{4}$ lift to ordinary representations)}
+\mbox{}
+\vskip -0.01cm
+\noindent
+Let \,$H$\, be complex Hilbert space.
+Every unitary projective representation
+\,$\rho : \SL(2,\C) \ltimes \Re^{4} \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$\,
+lifts to a unique unitary representation
+\,$\widetilde{\rho} : \SL(2,\C) \ltimes \Re^{4} \xrightarrow{{\color{white}222}} \mathcal{U}(H)$.\,
+\begin{equation*}
+\begin{tikzcd}
+&&&
+\mathcal{U}(H)
+	\arrow[dd, thick, two heads, swap]
+\\ \\
+\SL(2,\C) \ltimes \Re^{4}
+	\arrow[uurrr, red, thick, dashed, "\widetilde{\rho}"]
+	\arrow[rrr, thick, "\overset{{\color{white}.}}{\rho}", swap]
+&&&
+\Aut(\mathbb{P}(H))
+\end{tikzcd}
+\end{equation*}
+Moreover, \,$\rho$\, is irreducible if and only if \,$\widetilde{\rho}$\, is irreducible.
+\end{theorem}
+
+\vskip 0.5cm
+\begin{corollary}
+\textnormal{\bf(Unitary projective representations of the Poincaré group $\SOup(1,3)\ltimes\Re^{4}$ lift to ordinary representations of $\SL(2,\C)\ltimes\Re^{4}$)}
+\mbox{}
+\vskip -0.01cm
+\noindent
+Let \,$H$\, be a complex Hilbert space and
+\,$\rho : \SOup(1,3) \ltimes \Re^{4} \xrightarrow{{\color{white}222}} \Aut(\mathbb{P}(H))$\,
+a unitary projective representation of the connected Poincaré group \,$\SOup(1,3) \ltimes \Re^{4}$\,
+on \,$H$.\,
+Then, there exists an ordinary representation
+\,$\widetilde{\rho} : \SL(2,\C) \ltimes \Re^{4} \xrightarrow{{\color{white}222}} \mathcal{U}(H)$\,
+such that the following diagram commutes:
+\begin{equation*}
+\begin{tikzcd}
+\SL(2,\C) \ltimes \Re^{4}
+	\arrow[dd, thick, two heads, "\pi", swap]
+	\arrow[rrr, red, thick, dashed, "\widetilde{\rho}"]
+&&&
+\mathcal{U}(H)
+	\arrow[dd, thick, two heads, swap]
+\\ \\
+\SOup(1,3) \ltimes \Re^{4}
+	\arrow[rrr, thick, "\overset{{\color{white}.}}{\rho}", swap]
+&&&
+\Aut(\mathbb{P}(H))
+\end{tikzcd}
+\end{equation*}
+Moreover, \,$\rho$\, is irreducible if and only if \,$\widetilde{\rho}$\, is irreducible.
+\end{corollary}
+
+\vskip 0.5cm
+\begin{definition}[Projective representation]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A \textbf{projective representation} of a group \,$G$\, is a group homomorphism
+\begin{equation*}
+G \xrightarrow{{\color{white}222}} \textnormal{GL}(V)/\mathbb{F}^{*}
+\end{equation*}
+where \,$V$\, is a vector space over a field \,$\mathbb{F}$\, and
+\,$\mathbb{F}^{*} \,=\, \mathbb{F}\,\backslash\{\,0\,\}$.\,
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
