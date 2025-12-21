@@ -15,8 +15,62 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{The Stone theorem and the Schr\"odinger equation}
+\section{The {\color{red}appearance of \,$\sqrt{-1}$}\, in the Schr\"odinger equation -- the Stone theorem}
 
+\textbf{Summary}
+\vskip 0.1cm
+\noindent
+If we assume:
+\begin{itemize}
+\item
+	the state \,$\psi(t) \in \mathbb{H}$\, at time \,$t \in \Re$\, of a quantum system
+	is a {\color{red}unit vector} in a complex Hilbert space \,$\mathbb{H}$,\,
+\item
+	the evolution of \,$\psi(t)$\, with respect to time \,$t \in \Re$\,
+	is {\color{red}induced by a one-parameter continuous group}
+	of operators \,$U(t)$\, on \,$\mathbb{H}$;\,
+	more precisely, for each \,$t \in \Re$,\, there exists a (unitary) operator
+	\,$U(t)$\, on \,$\mathbb{H}$\, such that,
+	for each each admissible time evolution \,$\psi(t)$ of the given quantum system,
+	we have:
+	\begin{equation*}
+	\psi(t) \; = \; U(t) \cdot \psi(0)\,,
+	\quad
+	\textnormal{for each \,$t \in \Re$}
+	\end{equation*}
+	We note that the operator \,$U(t)$\, is necessarily unitary since each \,$\psi(t)$\,
+	is (by hypothesis) a unit vector in \,$\mathbb{H}$\, and
+	\,$U(t)$\, needs to preserve the norms of the \,$\psi(t)$:\,
+	\begin{equation*}
+	\left\langle\,U(t)\cdot\psi(0)
+		\,\overset{{\color{white}\textnormal{\large1}}}{,}\,
+		U(t)\cdot\psi(0)\,\right\rangle
+	\; = \;
+		\left\langle\,\psi(t)
+			\,\overset{{\color{white}\textnormal{\large1}}}{,}\,
+			\psi(t)\,\right\rangle
+	\; = \;
+		1\,,
+	\quad
+	\textnormal{for each \,$t \in \Re$\, and each \,$\psi(0) \in \mathbb{H}$}
+	\end{equation*}
+\item
+	the {\color{red}strong continuity} of
+	\,$\left\{\,\overset{{\color{white}.}}{U(t)}\,\right\}_{t \in \Re}$\,
+\end{itemize}
+then, it follows from the Stone theorem that \,$\psi(t)$\, satisfies the Schr\"odinger equation:
+\begin{equation*}
+\dfrac{\d\,\psi(t)}{\d\,t}
+\; = \;
+\i\,A\cdot \psi(t)\,,
+\quad
+\textnormal{for each \,$t\in\Re$	}
+\end{equation*}
+where \,$A$\, is the infinitesimal generator of \,$\left\{\,U(t)\,\right\}_{t\in\Re}$.\,
+In particular, note that
+\textbf{\color{red}the appearance of \,$\i = \sqrt{-1}$\, is part of the conclusions of the Stone theorem}.
+
+\vskip 0.5cm
 \begin{definition}
 \mbox{}
 \vskip 0.05cm
