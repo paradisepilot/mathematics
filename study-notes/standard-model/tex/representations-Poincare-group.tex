@@ -688,6 +688,70 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 		\overset{{\color{white}1}}{0}
 	\end{eqnarray*}
 \item
+	We proceed by establishing a series of Claims.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	$\varepsilon_{mnk}\,W_{k}
+	\,=\,
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\;+\;\,
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}
+		\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\varepsilon_{mnk}\,\varepsilon_{pqk}
+			\,\right)
+		t_{p}\,b_{q}
+	$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:
+	\begin{eqnarray*}
+	\varepsilon_{mnk}\,W_{k}
+	& = &
+		\varepsilon_{mnk}\left(\,
+			-\,t_{0}\,r_{k}
+			\;+\,
+			\overset{3}{\underset{p=1}{\sum}}\;
+			\overset{3}{\underset{q=1}{\sum}}\;
+			\varepsilon_{kpq}\,t_{p}\,b_{q}
+			\,\right)
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\;+\;\,
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}
+		\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\varepsilon_{mnk}\,\varepsilon_{pqk}
+			\,\right)
+		t_{p}\,b_{q}
+	\end{eqnarray*}
+	This completes the proof of Claim 1.
+
+	\vskip 0.3cm
+	\textbf{Claim 2:}\quad
+	$\left[\,r_{m}\,,W_{n}\,\right]
+	\; = \;
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}\,
+		\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\,(\,
+				-\,\varepsilon_{mqk}\,\varepsilon_{npk}
+				\,+\,
+				\varepsilon_{mpk}\,\varepsilon_{nqk}
+				\,)
+			\,\right)
+		t_{p}\,b_{q}
+	$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 2:
 	\begin{eqnarray*}
 	\left[\,r_{m}\,,W_{n}\,\right]
 	& = &
@@ -874,28 +938,10 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 			\,\right)
 		t_{p}\,b_{q}
 	\end{eqnarray*}
-	\begin{eqnarray*}
-	\varepsilon_{mnk}\,W_{k}
-	& = &
-		\varepsilon_{mnk}\left(\,
-			-\,t_{0}\,r_{k}
-			\;+\,
-			\overset{3}{\underset{p=1}{\sum}}\;
-			\overset{3}{\underset{q=1}{\sum}}\;
-			\varepsilon_{kpq}\,t_{p}\,b_{q}
-			\,\right)
-	\;\; = \;\;
-		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
-		\;+\;\,
-		\overset{3}{\underset{p=1}{\sum}}\;
-		\overset{3}{\underset{q=1}{\sum}}
-		\left(\;
-			\overset{3}{\underset{k=1}{\sum}}\;
-			\varepsilon_{mnk}\,\varepsilon_{pqk}
-			\,\right)
-		t_{p}\,b_{q}
-	\end{eqnarray*}
-	So, it suffices to show:
+	This completes the proof of Claim 2.
+
+	\vskip 0.3cm
+	\textbf{Claim 3:}\quad
 	\begin{eqnarray*}
 	\overset{3}{\underset{k=1}{\sum}}\left(\,
 		\varepsilon_{mpk}\,\varepsilon_{nqk}
@@ -906,6 +952,8 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 		\overset{3}{\underset{k=1}{\sum}}\;
 		\varepsilon_{mnk}\,\varepsilon_{pqk}
 	\end{eqnarray*}
+	Proof of Claim 3:\;\;
+	First, note that:
 	\begin{equation*}
 	\textnormal{R.H.S.}(m,n,p,q)
 	\;\; = \;\;\,
@@ -922,7 +970,7 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 			0\,, & \textnormal{otherwise (i.e., \,$m \neq n$, \,$p \neq q$,\, and \,$\{m,n\} \neq \{p,q\}$)}
 			\end{array}\right.
 	\end{equation*}
-	Now, note the following \textbf{five} implications:
+	Next, note the following \textbf{five} implications:
 	\begin{equation*}
 	m\,=\,n
 	\quad\Longrightarrow\quad
@@ -1021,8 +1069,10 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 		\left\{\begin{array}{c}
 			m \neq n,\;\, p \neq q,\;\,\{m,n\} \neq \{p,q\}
 			\\
+			{\color{red}
 			\{m,n,p,q\} = \{1,2,3\} \,\overset{{\color{white}1}}{\ni}\, k,
 			\;\textnormal{for each \,$k = 1,2,3$}
+			}
 			\end{array}\right.
 	\\
 	& \Longrightarrow &
@@ -1042,7 +1092,7 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 	\; = \;
 		0
 	\end{eqnarray*}
-	The above \textbf{five} implications together imply:
+	The preceding \textbf{five} implications together imply:
 	\begin{eqnarray*}
 	\textnormal{L.H.S.}(m,n,p,q)
 	& = &
@@ -1064,8 +1114,50 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 			\end{array}\right.
 	\\
 	& = &
-		\textnormal{R.H.S.}(m,n,p,q)
+		\overset{{\color{white}.}}{\textnormal{R.H.S.}(m,n,p,q)}
 	\end{eqnarray*}
+	This completes the proof of Claim 3.
+
+	\vskip 0.3cm
+	\noindent
+	Lastly, now note that Claim 1, Claim 2 and Claim 3 together imply:
+	\begin{eqnarray*}
+	\left[\,r_{m}\,,W_{n}\,\right]
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}\,
+		\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\,(\,
+				-\,\varepsilon_{mqk}\,\varepsilon_{npk}
+				\,+\,
+				\varepsilon_{mpk}\,\varepsilon_{nqk}
+				\,)
+			\,\right)
+		t_{p}\,b_{q}\,,
+		\quad
+		\textnormal{by Claim 2}
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\;+\;\,
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}
+		\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\varepsilon_{mnk}\,\varepsilon_{pqk}
+			\,\right)
+		t_{p}\,b_{q}\,,
+		\quad
+		\textnormal{by Claim 3}
+	\\
+	& = &
+		\overset{{\color{white}1}}{\varepsilon_{mnk}\,W_{k}}\,,
+		\quad
+		\textnormal{by Claim 1},
+	\end{eqnarray*}
+	as required.
 \item
 \item
 \item
