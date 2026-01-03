@@ -529,6 +529,171 @@ To this end, observe:
 This completes the proof of the Lemma.
 \qed
 
+\vskip 0.5cm
+\begin{definition}[Pauli–Lubanski operator-vector]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{Pauli–Lubanski operator-vector}
+\,$W \,=\, \left(\,W_{\mu}\,\right) \,=\, \left(\,W_{0},W_{1},W_{2},W_{3}\,\right) $\,
+is a ``vector'' of operators defined ``component-wise'' as follows:
+\begin{eqnarray*}
+W_{0} & := & -\, t_{1}\,r_{1} \,-\, t_{2}\,r_{2} \,-\, t_{3}\,r_{3}
+\\
+W_{1} & := & -\, t_{0}\,r_{1} \,+\, t_{2}\,b_{3} \,-\, t_{3}\,b_{2}
+\\
+W_{2} & := & -\, t_{0}\,r_{2} \;\,{\color{red}-}\;\, t_{1}\,b_{3} \;{\color{red}+}\; t_{3}\,b_{1}
+\\
+W_{3} & := & -\, t_{0}\,r_{3} \,+\, t_{1}\,b_{2} \,-\, t_{2}\,b_{1}
+\end{eqnarray*}
+Equivalently,
+\begin{equation*}
+W_{0} \; := \; -\, \overset{3}{\underset{n=1}{\sum}}\;t_{n}\,r_{n}\,,
+\quad\quad\textnormal{and}\quad\quad\quad
+W_{m}
+\; := \;
+	-\, t_{0}\,r_{m}
+	\;+\,
+	\overset{3}{\underset{n=1}{\sum}}\;
+	\overset{3}{\underset{k=1}{\sum}}\;
+	\varepsilon_{mnk}\,t_{n}\,b_{k}
+\end{equation*}
+The \textbf{second Casimir operator} of the Poincaré algebra is defined as follows:
+\begin{equation*}
+W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\begin{lemma}
+\mbox{}
+\vskip 0.1cm
+\noindent
+\begin{enumerate}
+\item
+	$\left[\,t_{\mu}\,,\,W_{\nu}\,\right] \,=\, 0$,\, for each \,$\mu,\nu \in \{\,0,1,2,3\,\}$.
+\item
+	$\left[\,r_{m}\,,W_{0}\,\right] \,=\, 0$,\, for each \,$m = 1,2,3$
+\item
+	$\left[\,r_{m}\,,W_{n}\,\right] \,=\, \varepsilon_{mnk}\,W_{k}$,\, for each \,$m,n,k = 1,2,3$
+\item
+	$\left[\,b_{m}\,,W_{0}\,\right] \,=\, W_{m}$,\, for each \,$m = 1,2,3$
+\item
+	$\left[\,b_{m}\,,W_{n}\,\right] \,=\, \delta_{mn}\,W_{0}$,\, for each \,$m,n = 1,2,3$
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+\item
+	\begin{eqnarray*}
+	\left[\,r_{m}\,,W_{0}\,\right]
+	& = &
+		r_{m}\,W_{0} \,-\, W_{0}\,r_{m}
+	\;\; = \;\;
+		r_{m}\,(\,-\, t_{1}\,r_{1} \,-\, t_{2}\,r_{2} \,-\, t_{3}\,r_{3}\,)
+		\,-\,
+		(\,-\, t_{1}\,r_{1} \,-\, t_{2}\,r_{2} \,-\, t_{3}\,r_{3}\,)\,r_{m}
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			t_{n}r_{n}r_{m} \overset{{\color{white}.}}{-} r_{m}t_{n}r_{n}
+			\,\right)
+	\;\; = \;\;
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			t_{n}(r_{m}r_{n}+\varepsilon_{nmk}r_{k})
+			\overset{{\color{white}.}}{-}
+			r_{m}t_{n}r_{n}
+			\,\right)
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			t_{n}r_{m}r_{n}
+			\overset{{\color{white}.}}{-}
+			r_{m}t_{n}r_{n}
+			\,\right)
+		\;{\color{red}-}\;\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{{\color{red}mn}k}t_{n}r_{k}
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			(r_{m}t_{n} - \varepsilon_{mnk}t_{k})\,r_{n}
+			\overset{{\color{white}.}}{-}
+			r_{m}t_{n}r_{n}
+			\,\right)
+		\,-\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}t_{n}r_{k}
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			r_{m}t_{n}r_{n} - \varepsilon_{mnk}t_{k}r_{n}
+			\overset{{\color{white}.}}{-}
+			r_{m}t_{n}r_{n}
+			\,\right)
+		\,-\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}t_{n}r_{k}
+	\\
+	& = &
+		-\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}t_{k}r_{n}
+		\,-\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}t_{n}r_{k}
+	\;\; = \;\;
+		-\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mkn}t_{n}r_{k}
+		\,-\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}t_{n}r_{k}
+	\\
+	& = &
+		-\;
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\left(\,
+			\varepsilon_{mkn}
+			\,\overset{{\color{white}.}}{+}\,
+			\varepsilon_{mnk}
+			\,\right)
+		t_{n}r_{k}
+	\;\; = \;\;
+		-\;
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\left(\,
+			{\color{red}-}\,\varepsilon_{m{\color{red}nk}}
+			\,\overset{{\color{white}.}}{+}\,
+			\varepsilon_{mnk}
+			\,\right)
+		t_{n}r_{k}
+	\\
+	& = &
+		\overset{{\color{white}1}}{0}
+	\end{eqnarray*}
+\item
+\item
+\item
+\item
+\end{enumerate}
+\qed
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
