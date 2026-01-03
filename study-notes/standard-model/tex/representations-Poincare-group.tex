@@ -287,13 +287,13 @@ t_{3} = \left[{\color{gray}
 \textbf{Commutation relations:}
 \begin{enumerate}
 \item
-	$\left[\,r_{m}\,,r_{n}\,\right] \,=\, \varepsilon_{mnk}\,r_{k}$,\, for each \,$m,n,k = 1,2,3$
+	$\left[\,r_{m}\,,r_{n}\,\right] \,=\, \varepsilon_{mnk}\,r_{k}$,\, for each \,$m,n = 1,2,3$
 \item
 	\vskip 0.3cm
-	$\left[\,b_{m}\,,b_{n}\,\right] \,=\, -\,\varepsilon_{mnk}\,r_{k}$,\, for each \,$m,n,k = 1,2,3$
+	$\left[\,b_{m}\,,b_{n}\,\right] \,=\, -\,\varepsilon_{mnk}\,r_{k}$,\, for each \,$m,n = 1,2,3$
 \item
 	\vskip -0.23cm
-	$\left[\,r_{m}\,,b_{n}\,\right] \,=\, +\,\varepsilon_{mnk}\,b_{k}$,\, for each \,$m,n,k = 1,2,3$
+	$\left[\,r_{m}\,,b_{n}\,\right] \,=\, +\,\varepsilon_{mnk}\,b_{k}$,\, for each \,$m,n = 1,2,3$
 \item
 	\vskip 0.3cm
 	$\left[\,t_{\mu}\,,t_{\nu}\,\right] \,=\, 0$,\, for each \,$\mu, \nu = 0,1,2,3$
@@ -302,7 +302,7 @@ t_{3} = \left[{\color{gray}
 	$\left[\,r_{m}\,,t_{0}\,\right] \,=\, 0$,\, for each \,$m = 1,2,3$
 \item
 	\vskip -0.23cm
-	$\left[\,r_{m}\,,t_{n}\,\right] \,=\, \varepsilon_{mnk}\,t_{k}$,\, for each \,$m,n,k = 1,2,3$
+	$\left[\,r_{m}\,,t_{n}\,\right] \,=\, \varepsilon_{mnk}\,t_{k}$,\, for each \,$m,n = 1,2,3$
 \item
 	\vskip 0.3cm
 	$\left[\,b_{m}\,,t_{0}\,\right] \,=\, t_{m}$,\, for each \,$m = 1,2,3$
@@ -688,6 +688,189 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 		\overset{{\color{white}1}}{0}
 	\end{eqnarray*}
 \item
+	\begin{eqnarray*}
+	\left[\,r_{m}\,,W_{n}\,\right]
+	& = &
+		r_{m}\,W_{n} \,-\, W_{n}\,r_{m}
+	\\
+	& = &
+		r_{m}\left(\,
+			-\,t_{0}\,r_{n}
+			\;+\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,t_{k}\,b_{l}
+			\,\right)
+		\,-\,
+		\left(\,
+			-\,t_{0}\,r_{n}
+			\;+\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,t_{k}\,b_{l}
+			\,\right)
+		r_{m}
+	\\
+	& = &
+		\left(\,
+			-\,r_{m}\,t_{0}\,r_{n}
+			\,\overset{{\color{white}.}}{+}\,
+			t_{0}\,r_{n}\,r_{m}
+			\,\right)
+		\;+\;
+		r_{m}\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,t_{k}\,b_{l}
+			\,\right)
+		\,-\,
+		\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,t_{k}\,b_{l}
+			\,\right)
+		r_{m}
+	\\
+	& = &
+		\left(\,
+			-\,{\color{red}t_{0}}\,{\color{red}r_{m}}\,r_{n}
+			\,\overset{{\color{white}.}}{+}\,
+			t_{0}\,r_{n}\,r_{m}
+			\,\right)
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;\,
+		\varepsilon_{nkl}\left(\,
+			r_{m}\,\,t_{k}\,b_{l}
+			\,\overset{{\color{white}.}}{-}\,
+			t_{k}\,b_{l}\,r_{m}
+			\,\right)
+		% \;+\;
+		% r_{m}\left(\;
+		% 	\overset{3}{\underset{k=1}{\sum}}\;
+		% 	\overset{3}{\underset{l=1}{\sum}}\;
+		% 	\varepsilon_{nkl}\,t_{k}\,b_{l}
+		% 	\,\right)
+		% \,-\,
+		% \left(\;
+		% 	\overset{3}{\underset{k=1}{\sum}}\;
+		% 	\overset{3}{\underset{l=1}{\sum}}\;
+		% 	\varepsilon_{nkl}\,t_{k}\,b_{l}
+		% 	\,\right)
+		% r_{m}
+	\\
+	& = &
+		-\,t_{0}\,\left[\,r_{m}\,\overset{{\color{white}1}}{,}\,r_{n}\,\right]
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;\,
+		\varepsilon_{nkl}\left(\,
+			(t_{k}\,r_{m} + \varepsilon_{mkp}\,t_{p})\,b_{l}
+			\,\overset{{\color{white}.}}{-}\,
+			t_{k}\,b_{l}\,r_{m}
+			\,\right)
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;\,
+		\varepsilon_{nkl}\left(\,
+			t_{k}\,r_{m}\,b_{l} \,+\, \varepsilon_{mkp}\,t_{p}\,b_{l}
+			\,\overset{{\color{white}.}}{-}\,
+			t_{k}\,b_{l}\,r_{m}
+			\,\right)
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;\,
+		\varepsilon_{nkl}\,t_{k}\left[\,r_{m}\,\overset{{\color{white}1}}{,}\,b_{l}\,\right]
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;
+		\overset{3}{\underset{p=1}{\sum}}\;\,
+		\varepsilon_{nkl}\,\varepsilon_{mkp}\,t_{p}\,b_{l}
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;\,
+		\varepsilon_{nkl}\,t_{k}\,
+		{\color{red}\left(\;\overset{3}{\underset{q=1}{\sum}}\;\varepsilon_{mlq}\,b_{q}\right)}
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;
+		\overset{3}{\underset{p=1}{\sum}}\;\,
+		\varepsilon_{nkl}\,\varepsilon_{mkp}\,t_{p}\,b_{l}
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}\;\,
+		\varepsilon_{mlq}\,\varepsilon_{nkl}\,t_{k}\,b_{q}
+		\,\;+\;\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;
+		\overset{3}{\underset{p=1}{\sum}}\;\,
+		\varepsilon_{nkl}\,\varepsilon_{mkp}\,t_{p}\,b_{l}
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{{\color{red}p}=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}\;
+		\overset{3}{\underset{l=1}{\sum}}\;\,
+		\varepsilon_{mlq}\,\varepsilon_{n{\color{red}p}l}\,t_{{\color{red}p}}\,b_{q}
+		\,\;+\;\;
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{{\color{red}q}=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;\,
+		\varepsilon_{mkp}\,\varepsilon_{nk{\color{red}q}}\,t_{p}\,b_{{\color{red}q}}
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}\;
+		\left(\,
+			\overset{3}{\underset{{\color{red}k}=1}{\sum}}\;\,
+			\varepsilon_{m{\color{red}k}q}\,\varepsilon_{np{\color{red}k}}
+			\,+\,
+			\overset{3}{\underset{k=1}{\sum}}\;\,
+			\varepsilon_{mkp}\,\varepsilon_{nkq}
+			\,\right)
+		t_{p}\,b_{q}
+	\\
+	& = &
+		-\,\varepsilon_{mnk}\,t_{0}\,r_{k}
+		\,\;+\;\;
+		\overset{3}{\underset{p=1}{\sum}}\;
+		\overset{3}{\underset{q=1}{\sum}}\,
+		\left(\;
+			\overset{3}{\underset{k=1}{\sum}}\,(\,
+				\varepsilon_{mkq}\,\varepsilon_{npk}
+				\,+\,
+				\varepsilon_{mkp}\,\varepsilon_{nkq}
+				\,)
+			\,\right)
+		t_{p}\,b_{q}
+	\end{eqnarray*}
+	\begin{eqnarray*}
+	\varepsilon_{mnk}\,W_{k}
+	& = &
+		\varepsilon_{mnk}\left(\,
+			-\,t_{0}\,r_{k}
+			\;+\,
+			\overset{3}{\underset{p=1}{\sum}}\;
+			\overset{3}{\underset{q=1}{\sum}}\;
+			\varepsilon_{kpq}\,t_{p}\,b_{q}
+			\,\right)
+	\end{eqnarray*}
 \item
 \item
 \item
