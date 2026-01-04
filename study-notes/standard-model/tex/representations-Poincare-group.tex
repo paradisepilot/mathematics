@@ -1159,6 +1159,87 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 	\end{eqnarray*}
 	as required.
 \item
+	\begin{eqnarray*}
+	\left[\,b_{m}\,,W_{0}\,\right]
+	& = &
+		b_{m}\,W_{0} \,-\, W_{0}\,b_{m}
+	\;\; = \;\;
+		b_{m}\,(\,-\, t_{1}\,r_{1} \,-\, t_{2}\,r_{2} \,-\, t_{3}\,r_{3}\,)
+		\,-\,
+		(\,-\, t_{1}\,r_{1} \,-\, t_{2}\,r_{2} \,-\, t_{3}\,r_{3}\,)\,b_{m}
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			t_{n}r_{n}b_{m} \overset{{\color{white}.}}{-} b_{m}t_{n}r_{n}
+			\,\right)
+	\;\; = \;\;
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			t_{n}(b_{m}r_{n}+\varepsilon_{nmk}\,b_{k})
+			\overset{{\color{white}.}}{-}
+			b_{m}t_{n}r_{n}
+			\,\right)
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			t_{n}b_{m}r_{n} + \varepsilon_{nmk}\,t_{n}b_{k}
+			\overset{{\color{white}.}}{-}
+			b_{m}t_{n}r_{n}
+			\,\right)
+	\;\; = \;\;
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			t_{n}b_{m}r_{n}
+			\overset{{\color{white}.}}{-}
+			b_{m}t_{n}r_{n}
+			\,\right)
+		\; {\color{red}-} \;\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{{\color{red}mn}k}\,t_{n}b_{k}
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			(b_{m}t_{n} - \delta_{mn}t_{0})r_{n}
+			\overset{{\color{white}.}}{-}
+			b_{m}t_{n}r_{n}
+			\,\right)
+		\; - \;\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}\,t_{n}b_{k}
+	\\
+	& = &
+		\overset{3}{\underset{n=1}{\sum}}
+		\left(\,
+			b_{m}t_{n}r_{n} - \delta_{mn}t_{0}r_{n}
+			\overset{{\color{white}.}}{-}
+			b_{m}t_{n}r_{n}
+			\,\right)
+		\; - \;\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}\,t_{n}b_{k}
+	\\
+	& = &
+		-\,t_{0}\,r_{m}
+		\; - \;\,
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}\,t_{n}b_{k}
+	\\
+	& {\color{red}\neq} &
+		-\,t_{0}\,r_{m}
+		\;\; {\color{red}+} \;\;
+		\overset{3}{\underset{n=1}{\sum}}\;
+		\overset{3}{\underset{k=1}{\sum}}\;
+		\varepsilon_{mnk}\,t_{n}b_{k}
+	\;\; =: \;\;
+		W_{m}
+	\end{eqnarray*}
 \item
 \end{enumerate}
 \qed
