@@ -1241,6 +1241,158 @@ W^{2} \;\; := \;\; -\,W_{0}^{2} \,+\, W_{1}^{2} \,+\, W_{2}^{2} \,+\, W_{3}^{2}
 		W_{m}
 	\end{eqnarray*}
 \item
+	\begin{eqnarray*}
+	\left[\,b_{m}\,,W_{n}\,\right]
+	& = &
+		b_{m}\,W_{n} \,-\, W_{n}\,b_{m}
+	\\
+	& = &
+		b_{m}\left(\,
+			-\,t_{0}\,r_{n}
+			\;+\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,t_{k}\,b_{l}
+			\,\right)
+		\,-\,
+		\left(\,
+			-\,t_{0}\,r_{n}
+			\;+\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,t_{k}\,b_{l}
+			\,\right)
+		b_{m}
+	\\
+	& = &
+		\left(\,
+			t_{0}r_{n}b_{m}
+			\,\overset{{\color{white}1}}{-}\,
+			b_{m}t_{0}r_{n}
+			\,\right) 
+		\,+\;
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,b_{m}\,t_{k}\,b_{l}
+		\;-\;
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\varepsilon_{nkl}\,t_{k}\,b_{l}\,b_{m}	
+	\\
+	& = &
+		\left(\,
+			t_{0}r_{n}b_{m}
+			\,\overset{{\color{white}1}}{-}\,
+			(t_{0}b_{m}+t_{m})r_{n}
+			\,\right) 
+		\;+\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;\,
+			\varepsilon_{nkl}
+			\left(\,
+				b_{m}\,t_{k}\,b_{l}
+				\, \overset{{\color{white}1}}{-} \,
+				t_{k}\,b_{l}\,b_{m}	
+				\,\right)
+	\\
+	& = &
+		\left(\,
+			t_{0}\,\left[\,r_{n}\,,\,b_{m}\,\right]
+			\,\overset{{\color{white}1}}{-}\,
+			t_{m}r_{n}
+			\,\right) 
+		\;+\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;\,
+			\varepsilon_{nkl}
+			\left(\,
+				(t_{k}\,b_{m}+\delta_{mk}t_{0})\,b_{l}
+				\, \overset{{\color{white}1}}{-} \,
+				t_{k}\,b_{l}\,b_{m}	
+				\,\right)
+	\\
+	& = &
+		\left(\,
+			t_{0}\cdot\varepsilon_{nmk}\,b_{k}
+			\,\overset{{\color{white}1}}{-}\,
+			t_{m}r_{n}
+			\,\right) 
+		\;+\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;\,
+			\varepsilon_{nkl}
+			\left(\,
+				t_{k}\,b_{m}\,b_{l}
+				\,\overset{{\color{white}1}}{-}\,
+				t_{k}\,b_{l}\,b_{m}	
+				\,\overset{{\color{white}1}}{+}\,
+				\delta_{mk}\,t_{0}\,b_{l}
+				\,\right)
+	\\
+	& = &
+		\left(\,
+			\varepsilon_{nmk}\,t_{0}\,b_{k}
+			\,\overset{{\color{white}1}}{-}\,
+			t_{m}r_{n}
+			\,\right) 
+		\;+\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;\,
+			\varepsilon_{nkl}
+			\left(\,
+				t_{k}\left[\,b_{m}\,,\,b_{l}\,\right]
+				\,\overset{{\color{white}1}}{+}\,
+				\delta_{mk}\,t_{0}\,b_{l}
+				\,\right)
+	\\
+	& = &
+		\left(\,
+			\varepsilon_{nmk}\,t_{0}\,b_{k}
+			\,\overset{{\color{white}1}}{-}\,
+			t_{m}r_{n}
+			\,\right) 
+		\;+\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;\,
+			\varepsilon_{nkl}
+			\left(\,
+				%t_{k}\left[\,b_{m}\,,\,b_{l}\,\right]
+				-\,\varepsilon_{mlp}\,t_{k}\,r_{p}
+				\,\overset{{\color{white}1}}{+}\,
+				\delta_{mk}\,t_{0}\,b_{l}
+				\,\right)
+	\\
+	& = &
+		\left(\,
+			\varepsilon_{nmk}\,t_{0}\,b_{k}
+			\,\overset{{\color{white}1}}{-}\,
+			t_{m}r_{n}
+			\,\right) 
+		\;-\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\overset{3}{\underset{p=1}{\sum}}\;\,
+			\varepsilon_{nkl}\,\varepsilon_{mlp}\,t_{k}\,r_{p}
+		\;+\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;\,
+			\varepsilon_{nkl}\,\delta_{mk}\,t_{0}\,b_{l}
+	\\
+	& = &
+		\left(\,
+			\varepsilon_{nmk}\,t_{0}\,b_{k}
+			\,\overset{{\color{white}1}}{-}\,
+			t_{m}r_{n}
+			\,\right) 
+		\;-\;\,
+			\overset{3}{\underset{k=1}{\sum}}\;
+			\overset{3}{\underset{l=1}{\sum}}\;
+			\overset{3}{\underset{p=1}{\sum}}\;\,
+			\varepsilon_{nkl}\,\varepsilon_{mlp}\,t_{k}\,r_{p}
+		\;+\;\,
+			\overset{3}{\underset{l=1}{\sum}}\;\,
+			\varepsilon_{nml}\,t_{0}\,b_{l}
+	\end{eqnarray*}
 \end{enumerate}
 \qed
 
