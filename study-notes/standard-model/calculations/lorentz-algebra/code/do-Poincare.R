@@ -273,6 +273,14 @@ do.Poincare <- function(
     print( commutator(B03,P3) - (P0)   );
 
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+    cat("\ncommutator(R1,B02) - (B03)\n");
+    print( commutator(R1,B02) - (B03)   );
+    cat("\ncommutator(R2,B03) - (B01)\n");
+    print( commutator(R2,B03) - (B01)   );
+    cat("\ncommutator(R3,B01) - (B02)\n");
+    print( commutator(R3,B01) - (B02)   );
+
+    ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
     ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
     # cat("\nR23\n");
     # print( R23   );
