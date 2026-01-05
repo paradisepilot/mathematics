@@ -380,6 +380,21 @@ Then, the following statements are true:
 			& \textnormal{if \,$a = 4$\, or \,$b = 4$}
 			\end{array}\right.,
 	\end{equation*}
+	{\color{blue}
+	\begin{equation*}
+	\left(M_{\mu\nu}\right)_{ab}
+	\;\; = \;\;
+		\left\{\begin{array}{cl}
+			\delta_{a\mu}\,\eta_{b\nu}
+			\,-\,
+			\delta_{a\nu}\,\eta_{b\mu}\,,
+			& \textnormal{for \,$a, b = 0,1,2,3$}
+			\\
+			\overset{{\color{white}1}}{0}\,,
+			& \textnormal{if \,$a = 4$\, or \,$b = 4$}
+			\end{array}\right.,
+	\end{equation*}
+	}
 	where
 	\,$\left(\,\eta_{\mu\nu}\,\right) \,=\, \diag(+1,-1,-1,-1)$.\,
 \end{enumerate}
@@ -401,6 +416,19 @@ Then, the following statements are true:
 	\;\; = \;\;
 		0
 	\end{eqnarray*}
+	{\color{blue}
+	\begin{eqnarray*}
+	\left(M_{23}\right)_{{\color{red}12}}
+	& = &
+		\delta_{{\color{red}1}2}\eta_{{\color{red}2}3}
+		\,-\,
+		\delta_{{\color{red}1}3}\eta_{{\color{red}2}2}
+	\;\; = \;\;
+		0 \cdot 0 \,-\, 0 \cdot (+1)
+	\;\; = \;\;
+		0
+	\end{eqnarray*}
+	}
 	More generally, note:
 	\begin{eqnarray*}
 	\{\,a,b\,\} \neq \{\,\mu,\nu\,\}
@@ -469,6 +497,69 @@ Then, the following statements are true:
 	\;\; = \;\;
 		\left(M_{12}\right)_{{\color{red}21}}
 	\end{eqnarray*}
+	{\color{blue}
+	\begin{eqnarray*}
+	\delta_{{\color{red}2}2}\eta_{{\color{red}3}3}
+	\,-\,
+	\delta_{{\color{red}2}3}\eta_{{\color{red}3}2}
+	& = &
+		(\,+1\,)(-1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+		\left(M_{23}\right)_{{\color{red}23}}
+	\\
+	\delta_{{\color{red}3}2}\eta_{{\color{red}2}3}
+	\,-\,
+	\delta_{{\color{red}3}3}\eta_{{\color{red}2}2}
+	& = &
+		0 \cdot 0 \,-\, (\,+1\,)(-1)
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{23}\right)_{{\color{red}32}}
+	\\
+	\delta_{{\color{red}1}3}\eta_{{\color{red}3}1}
+	\,-\,
+	\delta_{{\color{red}1}1}\eta_{{\color{red}3}3}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		0 \cdot 0 \,-\, (\,+1\,)(-1)
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{31}\right)_{{\color{red}13}}
+	\\
+	\delta_{{\color{red}3}3}\eta_{{\color{red}1}1}
+	\,-\,
+	\delta_{{\color{red}3}1}\eta_{{\color{red}1}3}
+	& = &
+		(\,+1\,)(-1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+		\left(M_{31}\right)_{{\color{red}31}}
+	\\
+	\delta_{{\color{red}1}1}\eta_{{\color{red}2}2}
+	\,-\,
+	\delta_{{\color{red}1}2}\eta_{{\color{red}2}1}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		(\,+1\,)(-1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+	\left(M_{12}\right)_{{\color{red}12}}
+	\\
+	\delta_{{\color{red}2}1}\eta_{{\color{red}1}2}
+	\,-\,
+	\delta_{{\color{red}2}2}\eta_{{\color{red}1}1}
+	& = &
+		0 \cdot 0 \,-\, (\,+1\,)(-1)
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{12}\right)_{{\color{red}21}}
+	\end{eqnarray*}
+	}
 	Furthermore, for \,$k \in \{\,1,2,3\,\}$,\, we have:
 	\begin{eqnarray*}
 	\eta_{{\color{red}0}0}\delta_{{\color{red}k}k}
@@ -511,6 +602,49 @@ Then, the following statements are true:
 	\;\; = \;\;
 		\left(M_{k0}\right)_{{\color{red}k0}}
 	\end{eqnarray*}
+	{\color{blue}
+	\begin{eqnarray*}
+	\delta_{{\color{red}0}0}\eta_{{\color{red}k}k}
+	\,-\,
+	\delta_{{\color{red}0}k}\eta_{{\color{red}k}0}
+	& = &
+		(\,+1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{0k}\right)_{{\color{red}0k}}
+	\\
+	\delta_{{\color{red}k}0}\eta_{{\color{red}0}k}
+	\,-\,
+	\delta_{{\color{red}k}k}\eta_{{\color{red}0}0}
+	& = &
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{0k}\right)_{{\color{red}k0}}
+	\\
+	\delta_{{\color{red}0}k}\eta_{{\color{red}k}0}
+	\,-\,
+	\delta_{{\color{red}0}0}\eta_{{\color{red}k}k}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		0 \cdot 0 \,-\, (\,+1\,)(+1)
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+		\left(M_{k0}\right)_{{\color{red}0k}}
+	\\
+	\delta_{{\color{red}k}k}\eta_{{\color{red}0}0}
+	\,-\,
+	\delta_{{\color{red}k}0}\eta_{{\color{red}0}k}
+	& = &
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+		\left(M_{k0}\right)_{{\color{red}k0}}
+	\end{eqnarray*}
+	}
 \end{enumerate}
 This completes the proof of the Proposition.
 \qed
@@ -593,26 +727,26 @@ where
 	& = &
 		\overset{3}{\underset{c=0}{\sum}}
 		\left(\,%(M_{\mu\nu})_{ac}
-			\eta_{a\mu}\,\delta_{c\nu}
+			\delta_{a\mu}\,\eta_{c\nu}
 			-
-			\eta_{a\nu}\,\delta_{c\mu}
+			\delta_{a\nu}\,\eta_{c\mu}
 			\,\right)
 		\left(\,%(M_{\rho\sigma})_{cb}
-			\eta_{c\rho}\,\delta_{b\sigma}
+			\delta_{c\rho}\,\eta_{b\sigma}
 			-
-			\eta_{c\sigma}\,\delta_{b\rho}
+			\delta_{c\sigma}\,\eta_{b\rho}
 			\,\right)
 		\;+\;
 		\overset{3}{\underset{c=0}{\sum}}
 		\left(\,%(M_{\rho\sigma})_{ac}
-			\eta_{a\rho}\,\delta_{c\sigma}
+			\delta_{a\rho}\,\eta_{c\sigma}
 			-
-			\eta_{a\sigma}\,\delta_{c\rho}
+			\delta_{a\sigma}\,\eta_{c\rho}
 			\,\right)
 		\left(\,%(M_{\mu\nu})_{cb}
-			\eta_{c\mu}\,\delta_{b\nu}
+			\delta_{c\mu}\,\eta_{b\nu}
 			-
-			\eta_{c\nu}\,\delta_{b\mu}
+			\delta_{c\nu}\,\eta_{b\mu}
 			\,\right)
 	\\
 	& = &
@@ -629,13 +763,13 @@ where
 		% 	\eta_{c\sigma}\,\delta_{b\rho}
 		% 	\,\right)
 		\left(\,
-			\eta_{a\mu}\,\delta_{c\nu}\,\eta_{c\rho}\,\delta_{b\sigma}
+			\delta_{a\mu}\,\eta_{c\nu}\,\delta_{c\rho}\,\eta_{b\sigma}
 			\,\overset{{\color{white}.}}{-}\,
-			\eta_{a\mu}\,\delta_{c\nu}\,\eta_{c\sigma}\,\delta_{b\rho}
+			\delta_{a\mu}\,\eta_{c\nu}\,\delta_{c\sigma}\,\eta_{b\rho}
 			\,-\,
-			\eta_{a\nu}\,\delta_{c\mu}\,\eta_{c\rho}\,\delta_{b\sigma}
+			\delta_{a\nu}\,\eta_{c\mu}\,\delta_{c\rho}\,\eta_{b\sigma}
 			\,+\,
-			\eta_{a\nu}\,\delta_{c\mu}\,\eta_{c\sigma}\,\delta_{b\rho}
+			\delta_{a\nu}\,\eta_{c\mu}\,\delta_{c\sigma}\,\eta_{b\rho}
 			\,\right)
 	\\
 	&&
@@ -652,64 +786,64 @@ where
 		% 	\eta_{c\nu}\,\delta_{b\mu}
 		% 	\,\right)
 		\left(\,
-			\eta_{a\rho}\,\delta_{c\sigma}\,\eta_{c\mu}\,\delta_{b\nu}
+			\delta_{a\rho}\,\eta_{c\sigma}\,\delta_{c\mu}\,\eta_{b\nu}
 			\,\overset{{\color{white}.}}{-}\,
-			\eta_{a\rho}\,\delta_{c\sigma}\,\eta_{c\nu}\,\delta_{b\mu}
+			\delta_{a\rho}\,\eta_{c\sigma}\,\delta_{c\nu}\,\eta_{b\mu}
 			\,-\,
-			\eta_{a\sigma}\,\delta_{c\rho}\,\eta_{c\mu}\,\delta_{b\nu}
+			\delta_{a\sigma}\,\eta_{c\rho}\,\delta_{c\mu}\,\eta_{b\nu}
 			\,+\,
-			\eta_{a\sigma}\,\delta_{c\rho}\,\eta_{c\nu}\,\delta_{b\mu}
+			\delta_{a\sigma}\,\eta_{c\rho}\,\delta_{c\nu}\,\eta_{b\mu}
 			\,\right)
 	\\
 	& = &
 		{\color{white}+}\;
 		\left(\,
-			\eta_{a\mu}\,\eta_{\nu\rho}\,\delta_{b\sigma}
+			\delta_{a\mu}\,\eta_{\rho\nu}\,\eta_{b\sigma}
 			\,\overset{{\color{white}.}}{-}\,
-			\eta_{a\mu}\,\eta_{\nu\sigma}\,\delta_{b\rho}
+			\delta_{a\mu}\,\eta_{\sigma\nu}\,\eta_{b\rho}
 			\,-\,
-			\eta_{a\nu}\,\eta_{\mu\rho}\,\delta_{b\sigma}
+			\delta_{a\nu}\,\eta_{\rho\mu}\,\eta_{b\sigma}
 			\,+\,
-			\eta_{a\nu}\,\eta_{\mu\sigma}\,\delta_{b\rho}
+			\delta_{a\nu}\,\eta_{\sigma\mu}\,\eta_{b\rho}
 			\,\right)
 	\\
 	& &
 		+\;
 		\left(\,
-			\eta_{a\rho}\,\eta_{\sigma\mu}\,\delta_{b\nu}
+			\delta_{a\rho}\,\eta_{\mu\sigma}\,\eta_{b\nu}
 			\,\overset{{\color{white}.}}{-}\,
-			\eta_{a\rho}\,\eta_{\sigma\nu}\,\delta_{b\mu}
+			\delta_{a\rho}\,\eta_{\nu\sigma}\,\eta_{b\mu}
 			\,-\,
-			\eta_{a\sigma}\,\eta_{\rho\mu}\,\delta_{b\nu}
+			\delta_{a\sigma}\,\eta_{\mu\rho}\,\eta_{b\nu}
 			\,+\,
-			\eta_{a\sigma}\,\eta_{\rho\nu}\,\delta_{b\mu}
+			\delta_{a\sigma}\,\eta_{\nu\rho}\,\eta_{b\mu}
 			\,\right)
 	\\
-	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
 		-\,\eta_{\mu\rho}\left(\,
-			\eta_{a\nu}\,\delta_{b\sigma}
+			\delta_{a\nu}\,\eta_{b\sigma}
 			+
-			\eta_{a\sigma}\,\delta_{b\nu}
+			\delta_{a\sigma}\,\eta_{b\nu}
 			\,\right)
 		\,+\,
 		\eta_{\mu\sigma}\left(\,
-			\eta_{a\nu}\,\delta_{b\rho}
+			\delta_{a\nu}\,\eta_{b\rho}
 			+
-			\eta_{a\rho}\,\delta_{b\nu}
+			\delta_{a\rho}\,\eta_{b\nu}
 			\,\right)
 	\\
 	& &
 		+\,
 		\eta_{\nu\rho}\left(\,
-			\eta_{a\mu}\,\delta_{b\sigma}
+			\delta_{a\mu}\,\eta_{b\sigma}
 			+
-			\eta_{a\sigma}\,\delta_{b\mu}
+			\delta_{a\sigma}\,\eta_{b\mu}
 			\,\right)
 		\,-\,
 		\eta_{\nu\sigma}\left(\,
-			\eta_{a\mu}\,\delta_{b\rho}
+			\delta_{a\mu}\,\eta_{b\rho}
 			+
-			\eta_{a\rho}\,\delta_{b\mu}
+			\delta_{a\rho}\,\eta_{b\mu}
 			\,\right)
 	\\
 	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
@@ -740,6 +874,7 @@ where
 	\end{equation*}
 	as required.
 \item
+\item
 	First, we write \,$M_{\mu\nu}, P_{\rho} \in \Re^{5 \times 5}$\, in block form:
 	\begin{equation*}
 	M_{\mu\nu}
@@ -760,7 +895,29 @@ where
 			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
 			\end{array}\right]\,,
 	\end{equation*}
-	Observe:
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 1:}\quad
+	$
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\rho}
+		\,\right]
+	% \; = \;
+	% 	M_{\mu\nu}\,P_{\rho} \,-\, P_{\rho}\,M_{\mu\nu}
+	\; = \;
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & J_{\mu\nu}\,\mathbf{e}_{\rho}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\;\;
+	Observe
 	\begin{eqnarray*}
 	M_{\mu\nu}\,P_{\rho}
 	& = &
@@ -841,13 +998,28 @@ where
 			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
 			\end{array}\right]
 	\end{eqnarray*}
-	Now, note that the matrix entries of \,$J_{\mu\nu}$\, are given by:
+	This proves Claim 1.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Claim 2}:\quad
+	$
+	J_{\mu\nu}\,\mathbf{e}_{\rho}
+	\; = \;
+		-\,\eta_{\rho\mu}\,\mathbf{e}_{\nu}
+		\;+\;
+		\eta_{\rho\nu}\,\mathbf{e}_{\mu}
+	$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 2:\;\;
+	Note that the matrix entries of \,$J_{\mu\nu}$\, are given by
 	\begin{equation*}
 	\left(J_{\mu\nu}\right)_{ab}
 	\; = \;
-		\eta_{a\mu}\,\delta_{b\nu}
+		\delta_{a\mu}\,\eta_{b\nu}
 		\,-\,
-		\eta_{a\nu}\,\delta_{b\mu}\,,
+		\delta_{a\nu}\,\eta_{b\mu}\,,
 		\quad
 		\textnormal{for \,$a, b = 0,1,2,3$}
 	\end{equation*}
@@ -861,24 +1033,81 @@ where
 	\;\; = \;\;
 		\overset{3}{\underset{c=0}{\sum}}
 		\left(\,
-			\eta_{a\mu}\,\delta_{c\nu}
+			\delta_{a\mu}\,\eta_{c\nu}
 			\,-\,
-			\eta_{a\nu}\,\delta_{c\mu}
+			\delta_{a\nu}\,\eta_{c\mu}
 			\,\right)
 		\delta_{c\rho}
 	\;\; = \;\;
 		\overset{3}{\underset{c=0}{\sum}}\;\,
-		\eta_{a\mu}\,\delta_{c\nu}\,\delta_{c\rho}
+		\delta_{a\mu}\,\eta_{c\nu}\,\delta_{c\rho}
 		\; - \;
 		\overset{3}{\underset{c=0}{\sum}}\;\,
-		\eta_{a\nu}\,\delta_{c\mu}\,\delta_{c\rho}
+		\delta_{a\nu}\,\eta_{c\mu}\,\delta_{c\rho}
 	\\
 	& = &
-		\eta_{a\mu}\,\delta_{\nu\rho}
+		\delta_{a\mu}\,\eta_{\nu\rho}
 		\; - \;
-		\eta_{a\nu}\,\delta_{\mu\rho}
+		\delta_{a\nu}\,\eta_{\mu\rho}
+	\;\; = \;\;
+		-\,\eta_{\rho\mu}\left(\,\overset{{\color{white}.}}{\mathbf{e}_{\nu}}\,\right)_{a}
+		\;+\;
+		\eta_{\rho\nu}\left(\,\overset{{\color{white}.}}{\mathbf{e}_{\mu}}\,\right)_{a}
+	\\
+	& = &
+		\left(\;
+			-\,\eta_{\rho\mu}\,\mathbf{e}_{\nu}
+			\,\overset{{\color{white}.}}{+}\,
+			\eta_{\rho\nu}\,\mathbf{e}_{\mu}
+			\;\right)_{a}
 	\end{eqnarray*}
-\item
+	This proves Claim 2.
+
+	\vskip 0.3cm
+	\noindent
+	By Claim 1 and Claim 2, we see that:
+	\begin{eqnarray*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\rho}
+		\,\right]
+	& = &
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & J_{\mu\nu}\,\mathbf{e}_{\rho}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\;\; = \;\;
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4}
+			&
+			- \eta_{\rho\mu}\,\mathbf{e}_{\nu} + \eta_{\rho\nu}\,\mathbf{e}_{\mu}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\\
+	& = &
+		-\,\eta_{\rho\mu}
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\nu}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+		\; + \;
+		\eta_{\rho\nu}
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\mu}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		-\,\eta_{\rho\mu}\,P_{\nu}
+		\, + \,
+		\eta_{\rho\nu}\,P_{\mu}\,,
+	\end{eqnarray*}
+	as required.
 \end{enumerate}
 \qed
 
