@@ -740,6 +740,62 @@ where
 	\end{equation*}
 	as required.
 \item
+	First, we write \,$P_{\rho} \in \Re^{5 \times 5}$\, in block form:
+	\begin{equation*}
+	P_{\mu}
+	\;\; = \;\;
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\mu}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\end{equation*}
+	Hence,
+	\begin{eqnarray*}
+	P_{\mu}\,P_{\nu}
+	& = &
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\mu}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+		\cdot
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\nu}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\;\; = \;\;
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4}\,\mathbf{0}_{4 \times 4} + {\color{white}..}\mathbf{e}_{\mu}{\color{white}1}\mathbf{0}_{1 \times 4}
+			&
+			\mathbf{0}_{4 \times 4}\,\mathbf{e}_{\nu} + {\color{white}..}\mathbf{e}_{\mu}{\color{white}1}\mathbf{0}_{1 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4}\,\mathbf{0}_{4 \times 4} + \mathbf{0}_{1 \times 1}\,\mathbf{0}_{1 \times 4}
+			&
+			\mathbf{0}_{1 \times 4}\,\mathbf{e}_{\nu} + \mathbf{0}_{1 \times 1}\,\mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\\
+	& = &
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{0}_{4 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\;\; = \;\;
+		\mathbf{0}_{5 \times 5}
+	\end{eqnarray*}
+	The above observation immediately implies:
+	\begin{equation*}
+	\left[\,P_{\mu}\,\overset{{\color{white}1}}{,}\,P_{\nu}\,\right]
+	\;\; = \;\;
+		P_{\mu}\,P_{\nu} \,-\, P_{\nu}\,P_{\mu}
+	\;\; = \;\;
+		\mathbf{0}_{5 \times 5} \,-\, \mathbf{0}_{5 \times 5}
+	\;\; = \;\;
+		\mathbf{0}_{5 \times 5}\,,
+	\end{equation*}
+	as required.
 \item
 	First, we write \,$M_{\mu\nu}, P_{\rho} \in \Re^{5 \times 5}$\, in block form:
 	\begin{equation*}
