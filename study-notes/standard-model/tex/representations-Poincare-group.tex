@@ -557,9 +557,10 @@ satisfy the following commutation relations:
 		P_{\rho}
 		\,\right]
 	\;\; = \;\;
-		\eta_{\nu\rho}\,P_{\mu}
-		\,-\,
-		\eta_{\mu\rho}\,P_{\nu}
+		-\,
+		\eta_{\rho\mu}\,P_{\nu}
+		\,+\,
+		\eta_{\rho\nu}\,P_{\mu}
 	$\,,\;
 	for \,$\mu, \nu, \rho \in \{\,0,1,2,3\,\}$,
 \end{enumerate}
@@ -739,6 +740,144 @@ where
 	\end{equation*}
 	as required.
 \item
+	First, we write \,$M_{\mu\nu}, P_{\rho} \in \Re^{5 \times 5}$\, in block form:
+	\begin{equation*}
+	M_{\mu\nu}
+	\;\; = \;\;
+		\left[\begin{array}{cc}
+			J_{\mu\nu} & \mathbf{0}_{4 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]\,,
+	\quad\quad
+	\textnormal{and}
+	\quad\quad
+	P_{\rho}
+	\;\; = \;\;
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\rho}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]\,,
+	\end{equation*}
+	Observe:
+	\begin{eqnarray*}
+	M_{\mu\nu}\,P_{\rho}
+	& = &
+		\left[\begin{array}{cc}
+			J_{\mu\nu} & \mathbf{0}_{4 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+		\cdot
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\rho}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+		\;\; = \;\;
+		\left[\begin{array}{cc}
+			{\color{white}.}J_{\mu\nu}{\color{white}1}\mathbf{0}_{4 \times 4} + \mathbf{0}_{4 \times 1}\,\mathbf{0}_{1 \times 4}
+			&
+			{\color{white}.}J_{\mu\nu}{\color{white}1}\mathbf{e}_{\rho} + \mathbf{0}_{4 \times 1}\,\mathbf{0}_{1 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4}\,\mathbf{0}_{4 \times 4} + \mathbf{0}_{1 \times 1}\,\mathbf{0}_{1 \times 4}
+			&
+			\mathbf{0}_{1 \times 4}\,\mathbf{e}_{\rho} + \mathbf{0}_{1 \times 1}\,\mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\\
+	& = &
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & J_{\mu\nu}\,\mathbf{e}_{\rho}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\end{eqnarray*}
+	\begin{eqnarray*}
+	P_{\rho}\,M_{\mu\nu}
+	& = &
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{e}_{\rho}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+		\cdot
+		\left[\begin{array}{cc}
+			J_{\mu\nu} & \mathbf{0}_{4 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+		\;\; = \;\;
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4}{\color{white}.}J_{\mu\nu} + {\color{white}...}\mathbf{e}_{\rho}{\color{white}1}\mathbf{0}_{1 \times 4}
+			&
+			\mathbf{0}_{4 \times 4}\,\mathbf{0}_{4 \times 1} + {\color{white}..}\mathbf{e}_{\rho}{\color{white}1}\mathbf{0}_{1 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4}{\color{white}.}J_{\mu\nu} + \mathbf{0}_{1 \times 1}\,\mathbf{0}_{1 \times 4}
+			&
+			\mathbf{0}_{1 \times 4}\,\mathbf{0}_{4 \times 1} + \mathbf{0}_{1 \times 1}\,\mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\\
+	& = &
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & \mathbf{0}_{4 \times 1}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\end{eqnarray*}
+	Hence,
+	\begin{eqnarray*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\rho}
+		\,\right]
+	& = &
+		M_{\mu\nu}\,P_{\rho} \,-\, P_{\rho}\,M_{\mu\nu}
+	\;\; = \;\;
+		\left[\begin{array}{cc}
+			\mathbf{0}_{4 \times 4} & J_{\mu\nu}\,\mathbf{e}_{\rho}
+			\\
+			\mathbf{0}_{1 \times 4} & \mathbf{0}_{1 \times 1}
+			\end{array}\right]
+	\end{eqnarray*}
+	Now, note that the matrix entries of \,$J_{\mu\nu}$\, are given by:
+	\begin{equation*}
+	\left(J_{\mu\nu}\right)_{ab}
+	\; = \;
+		\eta_{a\mu}\,\delta_{b\nu}
+		\,-\,
+		\eta_{a\nu}\,\delta_{b\mu}\,,
+		\quad
+		\textnormal{for \,$a, b = 0,1,2,3$}
+	\end{equation*}
+	Hence,
+	\begin{eqnarray*}
+	\left(\,J_{\mu\nu}\,\mathbf{e}_{\rho}\,\right)_{a}
+	& = &
+		\overset{3}{\underset{c=0}{\sum}}
+		\left(J_{\mu\nu}\right)_{ac}
+		\left(\mathbf{e}_{\rho}\right)_{c}
+	\;\; = \;\;
+		\overset{3}{\underset{c=0}{\sum}}
+		\left(\,
+			\eta_{a\mu}\,\delta_{c\nu}
+			\,-\,
+			\eta_{a\nu}\,\delta_{c\mu}
+			\,\right)
+		\delta_{c\rho}
+	\;\; = \;\;
+		\overset{3}{\underset{c=0}{\sum}}\;\,
+		\eta_{a\mu}\,\delta_{c\nu}\,\delta_{c\rho}
+		\; - \;
+		\overset{3}{\underset{c=0}{\sum}}\;\,
+		\eta_{a\nu}\,\delta_{c\mu}\,\delta_{c\rho}
+	\\
+	& = &
+		\eta_{a\mu}\,\delta_{\nu\rho}
+		\; - \;
+		\eta_{a\nu}\,\delta_{\mu\rho}
+	\end{eqnarray*}
 \item
 \end{enumerate}
 \qed
