@@ -221,7 +221,7 @@ K_{1} = M_{01} = \textnormal{\footnotesize$\left[{\color{gray}
 	0 & 0 & 0 & 0 & 0 \\
 	\end{array}
 	}\right]$},
-\;\;
+\quad\;\;
 K_{2} = M_{02} = \textnormal{\footnotesize$\left[{\color{gray}
 	\begin{array}{rrrrr}
 	0 & 0 & {\color{red}1} & 0 & 0\\
@@ -231,7 +231,7 @@ K_{2} = M_{02} = \textnormal{\footnotesize$\left[{\color{gray}
 	0 & 0 & 0 & 0 & 0 \\
 	\end{array}
 	}\right]$},
-\;\;
+\quad\;\;
 K_{3} = M_{03} = \textnormal{\footnotesize$\left[{\color{gray}
 	\begin{array}{rrrrr}
 	0 & 0 & 0 & {\color{red}1} & 0\\
@@ -349,14 +349,12 @@ Direct computations.
 \vskip 0.1cm
 \noindent
 Define \,$M_{\mu\nu} \in \C^{5 \times 5}$,\,
-for \,$\mu, \nu \in \{\,0,1,2,3\,\}$\, with $\mu \neq \nu$,\,
-anti-symmetrically in \,$\mu$\, and \,$\nu$,\,
-as follows:
+for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,\, as follows:
 \begin{itemize}
 \item
-	$M_{0m} \, := \, K_{m}$,\, for \,$m = 1,2,3$,
+	$M_{0k} \, := \, K_{k}$,\, and \,$M_{0k} \, := \, -\,K_{k}$,\, for \,$k = 1,2,3$,
 \item
-	$M_{mn} \, := \, \varepsilon_{mnk} \, J_{k}$\, for \,$m, n = 1,2,3$,
+	$M_{mn} \, := \, \varepsilon_{mnk} \, J_{k}$,\, for \,$m, n \in \{\,1,2,3\,\}$.
 \end{itemize}
 Then, the following statements are true:
 \begin{enumerate}
@@ -419,69 +417,87 @@ Then, the following statements are true:
 \item
 	Obvious, as the ``new'' generators are in fact just the ``old'' onews with new names.
 \item
-	First, note:
+	First, note that:
 	\begin{eqnarray*}
-	\left(M_{23}\right)_{{\color{red}23}}
+	\left(M_{23}\right)_{{\color{red}12}}
 	& = &
-		\eta_{{\color{red}2}2}\delta_{{\color{red}3}3}
+		\eta_{{\color{red}1}2}\delta_{{\color{red}2}3}
 		\,-\,
-		\eta_{{\color{red}2}3}\delta_{{\color{red}3}2}
+		\eta_{{\color{red}1}3}\delta_{{\color{red}2}2}
 	\;\; = \;\;
-		(\,-1\,)(+1) \,-\, 0 \cdot 0
+		0 \cdot 0 \,-\, 0 \cdot (+1)
 	\;\; = \;\;
-		-1
-	\\
-	\left(M_{23}\right)_{{\color{red}32}}
-	& = &
-		\eta_{{\color{red}3}2}\delta_{{\color{red}2}3}
-		\,-\,
-		\eta_{{\color{red}3}3}\delta_{{\color{red}2}2}
-	\;\; = \;\;
-		0 \cdot 0 \,-\, (\,-1\,)(+1)
-	\;\; = \;\;
-		+1
-	\\
-	\left(M_{31}\right)_{{\color{red}13}}
-	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
-		\eta_{{\color{red}1}3}\delta_{{\color{red}3}1}
-		\,-\,
-		\eta_{{\color{red}1}1}\delta_{{\color{red}3}3}
-	\;\; = \;\;
-		0 \cdot 0 \,-\, (\,-1\,)(+1)
-	\;\; = \;\;
-		+1
-	\\
-	\left(M_{31}\right)_{{\color{red}31}}
-	& = &
-		\eta_{{\color{red}3}3}\delta_{{\color{red}1}1}
-		\,-\,
-		\eta_{{\color{red}3}1}\delta_{{\color{red}1}3}
-	\;\; = \;\;
-		(\,-1\,)(+1) \,-\, 0 \cdot 0
-	\;\; = \;\;
-		-1
-	\\
-	\left(M_{12}\right)_{{\color{red}12}}
-	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
-		\eta_{{\color{red}1}1}\delta_{{\color{red}2}2}
-		\,-\,
-		\eta_{{\color{red}1}2}\delta_{{\color{red}2}1}
-	\;\; = \;\;
-		(\,-1\,)(+1) \,-\, 0 \cdot 0
-	\;\; = \;\;
-		-1
-	\\
-	\left(M_{12}\right)_{{\color{red}21}}
-	& = &
-		\eta_{{\color{red}2}1}\delta_{{\color{red}1}2}
-		\,-\,
-		\eta_{{\color{red}2}2}\delta_{{\color{red}1}1}
-	\;\; = \;\;
-		0 \cdot 0 \,-\, (\,-1\,)(+1)
-	\;\; = \;\;
-		+1
+		0
 	\end{eqnarray*}
-	Next, note that, for \,$k \in \{\,1,2,3\,\}$,\, we have:
+	More generally, note:
+	\begin{eqnarray*}
+	\{\,a,b\,\} \neq \{\,\mu,\nu\,\}
+	\quad\Longrightarrow\quad
+	\left(M_{\mu\nu}\right)_{ab} \;=\; 0
+	\end{eqnarray*}
+	Next, observe that:
+	\begin{eqnarray*}
+	\eta_{{\color{red}2}2}\delta_{{\color{red}3}3}
+	\,-\,
+	\eta_{{\color{red}2}3}\delta_{{\color{red}3}2}
+	& = &
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+		\left(M_{23}\right)_{{\color{red}23}}
+	\\
+	\eta_{{\color{red}3}2}\delta_{{\color{red}2}3}
+	\,-\,
+	\eta_{{\color{red}3}3}\delta_{{\color{red}2}2}
+	& = &
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{23}\right)_{{\color{red}32}}
+	\\
+	\eta_{{\color{red}1}3}\delta_{{\color{red}3}1}
+	\,-\,
+	\eta_{{\color{red}1}1}\delta_{{\color{red}3}3}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{31}\right)_{{\color{red}13}}
+	\\
+	\eta_{{\color{red}3}3}\delta_{{\color{red}1}1}
+	\,-\,
+	\eta_{{\color{red}3}1}\delta_{{\color{red}1}3}
+	& = &
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+		\left(M_{31}\right)_{{\color{red}31}}
+	\\
+	\eta_{{\color{red}1}1}\delta_{{\color{red}2}2}
+	\,-\,
+	\eta_{{\color{red}1}2}\delta_{{\color{red}2}1}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+	\left(M_{12}\right)_{{\color{red}12}}
+	\\
+	\eta_{{\color{red}2}1}\delta_{{\color{red}1}2}
+	\,-\,
+	\eta_{{\color{red}2}2}\delta_{{\color{red}1}1}
+	& = &
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\;\; = \;\;
+		\left(M_{12}\right)_{{\color{red}21}}
+	\end{eqnarray*}
+	Furthermore, for \,$k \in \{\,1,2,3\,\}$,\, we have:
 	\begin{eqnarray*}
 	% \left(M_{01}\right)_{{\color{red}01}}
 	% & = &
@@ -523,43 +539,45 @@ Then, the following statements are true:
 	% \;\; = \;\;
 	% 	+1
 	% \\
-	\left(M_{0k}\right)_{{\color{red}0k}}
+	\eta_{{\color{red}0}0}\delta_{{\color{red}k}k}
+	\,-\,
+	\eta_{{\color{red}0}k}\delta_{{\color{red}k}0}
 	& = &
-		\eta_{{\color{red}0}0}\delta_{{\color{red}k}k}
-		\,-\,
-		\eta_{{\color{red}0}k}\delta_{{\color{red}k}0}
-	\;\; = \;\;
 		(\,+1\,)(+1) \,-\, 0 \cdot 0
 	\;\; = \;\;
 		+1
-	\\
-	\left(M_{0k}\right)_{{\color{red}k0}}
-	& = &
-		\eta_{{\color{red}k}0}\delta_{{\color{red}0}k}
-		\,-\,
-		\eta_{{\color{red}k}k}\delta_{{\color{red}0}0}
 	\;\; = \;\;
+		\left(M_{0k}\right)_{{\color{red}0k}}
+	\\
+	\eta_{{\color{red}k}0}\delta_{{\color{red}0}k}
+	\,-\,
+	\eta_{{\color{red}k}k}\delta_{{\color{red}0}0}
+	& = &
 		0 \cdot 0 \,-\, (\,-1\,)(+1)
 	\;\; = \;\;
 		+1
-	\end{eqnarray*}
-	Lastly, note that:
-	\begin{eqnarray*}
-	\left(M_{23}\right)_{{\color{red}12}}
+	\;\; = \;\;
+		\left(M_{0k}\right)_{{\color{red}k0}}
+	\\
+	\eta_{{\color{red}0}k}\delta_{{\color{red}k}0}
+	\,-\,
+	\eta_{{\color{red}0}0}\delta_{{\color{red}k}k}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		0 \cdot 0 \,-\, (\,+1\,)(+1)
+	\;\; = \;\;
+		-1
+	\;\; = \;\;
+		\left(M_{k0}\right)_{{\color{red}0k}}
+	\\
+	\eta_{{\color{red}k}k}\delta_{{\color{red}0}0}
+	\,-\,
+	\eta_{{\color{red}k}0}\delta_{{\color{red}0}k}
 	& = &
-		\eta_{{\color{red}1}2}\delta_{{\color{red}2}3}
-		\,-\,
-		\eta_{{\color{red}1}3}\delta_{{\color{red}2}2}
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
 	\;\; = \;\;
-		0 \cdot 0 \,-\, 0 \cdot (+1)
+		-1
 	\;\; = \;\;
-		0
-	\end{eqnarray*}
-	And, more generally, note:
-	\begin{eqnarray*}
-	\{\,a,b\,\} \neq \{\,\mu,\nu\,\}
-	\quad\Longrightarrow\quad
-	\left(M_{\mu\nu}\right)_{ab} \;=\; 0
+		\left(M_{k0}\right)_{{\color{red}k0}}
 	\end{eqnarray*}
 \end{enumerate}
 This completes the proof of the Proposition.
@@ -577,24 +595,36 @@ $M_{12}, M_{23}, M_{31}$\;\;
 satisfy the following commutation relations:
 \begin{enumerate}
 \item
-	$\left[\,P_{\mu}\,,\,P_{\nu}\,\right] \,=\, 0$,\, for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,
+	$\left[\,P_{\mu}\,,\,P_{\nu}\,\right] \,=\, 0$,\,
+	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,\, and
 \item
-	$\left[\,M_{\mu\nu}\,,\,M_{\rho\sigma}\,\right]
-	\;=\;
-	\i\left(\,
-		\eta_{\mu\rho}M_{\nu\sigma}
-		\,\overset{{\color{white}1}}{-}\,
-		\eta_{\mu\sigma}M_{\nu\rho}
+	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$, we have:
+	\begin{equation*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		M_{\rho\sigma}
+		\,\right]
+	\;\; = \;\;
 		\,-\,
-		\eta_{\nu\rho}M_{\mu\sigma}
+		\eta_{\mu\rho}M_{\nu\sigma}
 		\,+\,
+		\eta_{\mu\sigma}M_{\nu\rho}
+		\,+\,
+		\eta_{\nu\rho}M_{\mu\sigma}
+		\,-\,
 		\eta_{\nu\sigma}M_{\mu\rho}
-		\,\right)
-	$,\,
-	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$, where
+	\end{equation*}
+	where
 	\,$\left(\,\eta_{\mu\nu}\,\right) \,=\, \diag(+1,-1,-1,-1)$.
 \end{enumerate}
 \end{proposition}
+\proof
+\begin{enumerate}
+\item
+\item
+\end{enumerate}
+\qed
 
 \vskip 0.5cm
 \begin{equation*}
