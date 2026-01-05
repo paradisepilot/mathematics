@@ -175,7 +175,440 @@ Then,
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\section{The Lie algebra of \,$\SL(2,\C) \ltimes \Re^{1,3}$}
+\section{The Lie algebra $\so(1,3) \ltimes \Re^{1,3}$ of $\SOup(1,3) \ltimes \Re^{1,3}$}
+
+\noindent
+\textbf{Generators induced by spatial rotations:}
+\begin{equation*}
+J_{1} = M_{23} = \textnormal{\footnotesize$\left[{\color{gray}
+		\begin{array}{rrrrr}
+		0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+		0 & 0 & 0 & 0 & 0\\
+		0 & 0 & 0 & {\color{red}-1} & 0 \\
+		0 & 0 & {\color{red}1} & 0 & 0 \\
+		0 & 0 & 0 & 0 & 0 \\
+		\end{array}
+		}\right]$},
+\;\;
+J_{2} = M_{31} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+	0 & 0 & 0 & {\color{red}1} & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & {\color{red}-1} & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$},
+\;\;
+J_{3} = M_{12} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 \\
+	0 & 0 & {\color{red}-1} & 0 & 0 \\
+	0 & {\color{red}1} & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$}
+\end{equation*}
+\textbf{Generators induced by boosts:}
+\begin{equation*}
+K_{1} = M_{01} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & {\color{red}1} & 0 & 0 & 0\\
+	{\color{red}1} & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$},
+\;\;
+K_{2} = M_{02} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & 0 & {\color{red}1} & 0 & 0\\
+	0 & 0 & 0 & 0 & 0\\
+	{\color{red}1} & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$},
+\;\;
+K_{3} = M_{03} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & 0 & 0 & {\color{red}1} & 0\\
+	0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 \\
+	{\color{red}1} & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$}
+\end{equation*}
+\noindent
+\textbf{Generators induced by spatial translations:}
+\begin{equation*}
+P_{0} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+    %0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}0 & {\color{white}-}{\color{red}1} \\
+	0 & 0 & 0 & 0 & {\color{red}1} \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$},
+\;\;
+P_{1} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & {\color{red}1} \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$},
+\;\;
+P_{2} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & {\color{red}1} \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$},
+\;\;
+P_{3} = \textnormal{\footnotesize$\left[{\color{gray}
+	\begin{array}{rrrrr}
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & {\color{red}1} \\
+	0 & 0 & 0 & 0 & 0 \\
+	\end{array}
+	}\right]$}
+\end{equation*}
+
+\vskip 0.5cm
+\begin{proposition}[Commutation relations of the generators of the Poincaré algebra]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The generators
+\begin{equation*}
+J_{1},\; J_{2},\; J_{3},
+\quad\;\;
+K_{1},\; K_{2},\; K_{3},
+\quad\;\;
+P_{0},\; P_{1},\; P_{2},\; P_{3}
+\end{equation*}
+of the Lie algebra
+\,$\so(1,3) \ltimes \Re^{1,3}$\,
+of the Poincaré group
+\,$\SOup(1,3) \ltimes \Re^{1,3}$\,
+satisfy the following commutation relations:
+\begin{enumerate}
+\item
+	$\left[\,J_{m}\,,\,J_{n}\,\right] \; = \; \varepsilon_{mnk}\,J_{k}$,\,
+	for each \,$m, n = 1,2,3$,
+\item
+	\vskip -0.1cm
+	$\left[\,J_{m}\,,\,K_{n}\,\right] \; = \; \varepsilon_{mnk}\,K_{k}$,\,
+	for each \,$m, n = 1,2,3$,
+\item
+	\vskip -0.1cm
+	$\left[\,K_{m}\,,\,K_{n}\,\right] \; = \; -\,\varepsilon_{mnk}\,J_{k}$,\,
+	for each \,$m, n = 1,2,3$,
+\item
+	\vskip 0.2cm
+	$\left[\,P_{\mu}\,,\,P_{\nu}\,\right] \; = \; 0$,\,
+	for each \,$\mu,\, \nu = 0,1,2,3$,
+\item
+	\vskip 0.2cm
+	$\left[\,J_{m}\,,\,P_{0}\,\right] \; = \; 0$,\,
+	for each \,$m = 1,2,3$,
+\item
+	\vskip -0.1cm
+	$\left[\,K_{m}\,,\,P_{0}\,\right] \; = \; -\,P_{m}$,\,
+	for each \,$m = 1,2,3$,
+\item
+	\vskip -0.1cm
+	$\left[\,J_{m}\,,\,P_{n}\,\right] \; = \; \varepsilon_{mnk}\,P_{k}$,\,
+	for each \,$m, n = 1,2,3$,
+\item
+	\vskip -0.1cm
+	$\left[\,K_{m}\,,\,P_{n}\,\right] \; = \; \delta_{mn}\,P_{0}$,\,
+	for each \,$m, n = 1,2,3$.
+\end{enumerate}
+\end{proposition}
+\proof
+Direct computations.
+\qed
+
+\vskip 0.5cm
+\begin{proposition}[More compact presentation of the Poincaré algebra]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Define \,$M_{\mu\nu} \in \C^{5 \times 5}$,\,
+for \,$\mu, \nu \in \{\,0,1,2,3\,\}$\, with $\mu \neq \nu$,\,
+anti-symmetrically in \,$\mu$\, and \,$\nu$,\,
+as follows:
+\begin{itemize}
+\item
+	$M_{0m} \, := \, K_{m}$,\, for \,$m = 1,2,3$,
+\item
+	$M_{mn} \, := \, \varepsilon_{mnk} \, J_{k}$\, for \,$m, n = 1,2,3$,
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+	$P_{0}, P_{1}, P_{2}, P_{3}$,\;\;
+	$M_{01}, M_{02}, M_{03}$,\;\;
+	$M_{12}, M_{23}, M_{31}$\;\;
+	generate the Poincaré algebra
+	\,$\so(1,3) \ltimes \Re^{1,3}$.\,
+\item
+	For each $\mu, \nu \in \{\,0,1,2,3\,\}$,\,
+	the matrix entries of \,$M_{\mu\nu}$\, are given by:
+	\begin{equation*}
+	\left(M_{\mu\nu}\right)_{ab}
+	\;\; = \;\;
+		\left\{\begin{array}{cl}
+			\eta_{a\mu}\,\delta_{b\nu}
+			\,-\,
+			\eta_{a\nu}\,\delta_{b\mu}\,,
+			& \textnormal{for \,$a, b = 0,1,2,3$}
+			\\
+			\overset{{\color{white}1}}{0}\,,
+			& \textnormal{if \,$a = 4$\, or \,$b = 4$}
+			\end{array}\right.,
+	\end{equation*}
+	where
+	\,$\left(\,\eta_{\mu\nu}\,\right) \,=\, \diag(+1,-1,-1,-1)$.\,
+% \item
+% 	The above generators satisfy the following commutation relations:
+% 	\begin{itemize}
+% 	\item
+% 		$\left[\,P_{\mu}\,,\,P_{\nu}\,\right] \,=\, 0$,\, for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,
+% 	\item
+% 		$\left[\,M_{\mu\nu}\,,\,M_{\rho\sigma}\,\right]
+% 		\;=\;
+% 		\i\left(\,
+% 			\eta_{\mu\rho}M_{\nu\sigma}
+% 			\,\overset{{\color{white}1}}{-}\,
+% 			\eta_{\mu\sigma}M_{\nu\rho}
+% 			\,-\,
+% 			\eta_{\nu\rho}M_{\mu\sigma}
+% 			\,+\,
+% 			\eta_{\nu\sigma}M_{\mu\rho}
+% 			\,\right)
+% 		$,\,
+% 		for \,$\mu, \nu \in \{\,0,1,2,3\,\}$, where
+% 		\begin{equation*}
+% 		\left(\,\eta_{\mu\nu}\,\right)
+% 		\;\; = \;\;
+% 			\diag(+1,-1,-1,-1)
+% 		\end{equation*}
+% 	\end{itemize}
+% 	\begin{eqnarray*}
+% 	[P_{\mu},P_{\nu}] = 0, & \textnormal{for \,$\mu, \nu \in \{\,0,1,2,3\,\}$}
+% 	\end{eqnarray*}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	Obvious, as the ``new'' generators are in fact just the ``old'' onews with new names.
+\item
+	First, note:
+	\begin{eqnarray*}
+	\left(M_{23}\right)_{{\color{red}23}}
+	& = &
+		\eta_{{\color{red}2}2}\delta_{{\color{red}3}3}
+		\,-\,
+		\eta_{{\color{red}2}3}\delta_{{\color{red}3}2}
+	\;\; = \;\;
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\\
+	\left(M_{23}\right)_{{\color{red}32}}
+	& = &
+		\eta_{{\color{red}3}2}\delta_{{\color{red}2}3}
+		\,-\,
+		\eta_{{\color{red}3}3}\delta_{{\color{red}2}2}
+	\;\; = \;\;
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\\
+	\left(M_{31}\right)_{{\color{red}13}}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		\eta_{{\color{red}1}3}\delta_{{\color{red}3}1}
+		\,-\,
+		\eta_{{\color{red}1}1}\delta_{{\color{red}3}3}
+	\;\; = \;\;
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\\
+	\left(M_{31}\right)_{{\color{red}31}}
+	& = &
+		\eta_{{\color{red}3}3}\delta_{{\color{red}1}1}
+		\,-\,
+		\eta_{{\color{red}3}1}\delta_{{\color{red}1}3}
+	\;\; = \;\;
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\\
+	\left(M_{12}\right)_{{\color{red}12}}
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		\eta_{{\color{red}1}1}\delta_{{\color{red}2}2}
+		\,-\,
+		\eta_{{\color{red}1}2}\delta_{{\color{red}2}1}
+	\;\; = \;\;
+		(\,-1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		-1
+	\\
+	\left(M_{12}\right)_{{\color{red}21}}
+	& = &
+		\eta_{{\color{red}2}1}\delta_{{\color{red}1}2}
+		\,-\,
+		\eta_{{\color{red}2}2}\delta_{{\color{red}1}1}
+	\;\; = \;\;
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\end{eqnarray*}
+	Next, note that, for \,$k \in \{\,1,2,3\,\}$,\, we have:
+	\begin{eqnarray*}
+	% \left(M_{01}\right)_{{\color{red}01}}
+	% & = &
+	% 	\eta_{{\color{red}0}0}\delta_{{\color{red}1}1}
+	% 	\,-\,
+	% 	\eta_{{\color{red}0}1}\delta_{{\color{red}1}0}
+	% \;\; = \;\;
+	% 	(\,+1\,)(+1) \,-\, 0 \cdot 0
+	% \;\; = \;\;
+	% 	+1
+	% \\
+	% \left(M_{01}\right)_{{\color{red}10}}
+	% & = &
+	% 	\eta_{{\color{red}1}0}\delta_{{\color{red}0}1}
+	% 	\,-\,
+	% 	\eta_{{\color{red}1}1}\delta_{{\color{red}0}0}
+	% \;\; = \;\;
+	% 	0 \cdot 0 \,-\, (\,-1\,)(+1)
+	% \;\; = \;\;
+	% 	+1
+	% \\
+	% \left(M_{02}\right)_{{\color{red}02}}
+	% & \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+	% 	\eta_{{\color{red}0}0}\delta_{{\color{red}2}2}
+	% 	\,-\,
+	% 	\eta_{{\color{red}0}2}\delta_{{\color{red}2}0}
+	% \;\; = \;\;
+	% 	(\,+1\,)(+1) \,-\, 0 \cdot 0
+	% \;\; = \;\;
+	% 	+1
+	% \\
+	% \left(M_{02}\right)_{{\color{red}20}}
+	% & = &
+	% 	\eta_{{\color{red}2}0}\delta_{{\color{red}0}2}
+	% 	\,-\,
+	% 	\eta_{{\color{red}2}2}\delta_{{\color{red}0}0}
+	% \;\; = \;\;
+	% 	0 \cdot 0 \,-\, (\,-1\,)(+1)
+	% \;\; = \;\;
+	% 	+1
+	% \\
+	\left(M_{0k}\right)_{{\color{red}0k}}
+	& = &
+		\eta_{{\color{red}0}0}\delta_{{\color{red}k}k}
+		\,-\,
+		\eta_{{\color{red}0}k}\delta_{{\color{red}k}0}
+	\;\; = \;\;
+		(\,+1\,)(+1) \,-\, 0 \cdot 0
+	\;\; = \;\;
+		+1
+	\\
+	\left(M_{0k}\right)_{{\color{red}k0}}
+	& = &
+		\eta_{{\color{red}k}0}\delta_{{\color{red}0}k}
+		\,-\,
+		\eta_{{\color{red}k}k}\delta_{{\color{red}0}0}
+	\;\; = \;\;
+		0 \cdot 0 \,-\, (\,-1\,)(+1)
+	\;\; = \;\;
+		+1
+	\end{eqnarray*}
+	Lastly, note that:
+	\begin{eqnarray*}
+	\left(M_{23}\right)_{{\color{red}12}}
+	& = &
+		\eta_{{\color{red}1}2}\delta_{{\color{red}2}3}
+		\,-\,
+		\eta_{{\color{red}1}3}\delta_{{\color{red}2}2}
+	\;\; = \;\;
+		0 \cdot 0 \,-\, 0 \cdot (+1)
+	\;\; = \;\;
+		0
+	\end{eqnarray*}
+	And, more generally, note:
+	\begin{eqnarray*}
+	\{\,a,b\,\} \neq \{\,\mu,\nu\,\}
+	\quad\Longrightarrow\quad
+	\left(M_{\mu\nu}\right)_{ab} \;=\; 0
+	\end{eqnarray*}
+\end{enumerate}
+This completes the proof of the Proposition.
+\qed
+
+\vskip 0.5cm
+\begin{proposition}[Commutation relations of $M_{\mu\nu}$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The generators \;\;
+$P_{0}, P_{1}, P_{2}, P_{3}$,\;\;
+$M_{01}, M_{02}, M_{03}$,\;\;
+$M_{12}, M_{23}, M_{31}$\;\;
+satisfy the following commutation relations:
+\begin{enumerate}
+\item
+	$\left[\,P_{\mu}\,,\,P_{\nu}\,\right] \,=\, 0$,\, for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,
+\item
+	$\left[\,M_{\mu\nu}\,,\,M_{\rho\sigma}\,\right]
+	\;=\;
+	\i\left(\,
+		\eta_{\mu\rho}M_{\nu\sigma}
+		\,\overset{{\color{white}1}}{-}\,
+		\eta_{\mu\sigma}M_{\nu\rho}
+		\,-\,
+		\eta_{\nu\rho}M_{\mu\sigma}
+		\,+\,
+		\eta_{\nu\sigma}M_{\mu\rho}
+		\,\right)
+	$,\,
+	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$, where
+	\,$\left(\,\eta_{\mu\nu}\,\right) \,=\, \diag(+1,-1,-1,-1)$.
+\end{enumerate}
+\end{proposition}
+
+\vskip 0.5cm
+\begin{equation*}
+\left(\,J_{\mu\nu}\,\right)_{\alpha\beta}
+\;\; = \;\;
+	\eta_{\mu\alpha}\delta_{\nu\beta}
+	\,-\,
+	\eta_{\nu\alpha}\delta_{\mu\beta}
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{The Lie algebra of \,$\SL(2,\C) \ltimes \Re^{1,3}$ -- OBSOLETE}
 
 \begin{equation*}
 r_{1} = \left[{\color{gray}
