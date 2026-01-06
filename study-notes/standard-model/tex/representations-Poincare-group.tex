@@ -1034,13 +1034,299 @@ where
 \qed
 
 \vskip 0.5cm
+\begin{definition}[Pauli-Lubanski $4$-vector]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{Pauli-Lubanski $4$-vector} \,$W^{\mu}$\, is defined as follows:
 \begin{equation*}
-\left(\,J_{\mu\nu}\,\right)_{\alpha\beta}
-\;\; = \;\;
-	\eta_{\mu\alpha}\delta_{\nu\beta}
-	\,-\,
-	\eta_{\nu\alpha}\delta_{\mu\beta}
+W^{\mu}
+\;\; := \;\;
+	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
 \end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\begin{proposition}[Properties of the Pauli-Lubanski $4$-vector]
+\mbox{}
+\vskip 0.1cm
+\noindent
+The \textbf{Pauli-Lubanski $4$-vector} \,$W^{\mu}$\,
+satisfies the following commutation relations with the generators
+\,$P_{\mu}$\, and \,$M_{\mu\nu}$:
+\begin{enumerate}
+\item
+	$
+	\left[\,
+		P_{\lambda}
+		\,\overset{{\color{white}1}}{,}\,
+		W^{\mu}
+		\,\right]
+	\; = \;
+		0\,,
+	$
+\item
+	$
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		W^{\mu}
+		\,\right]
+	\; = \;
+		\eta_{\beta}\!{\color{white}.}^{\mu}\,W_{\alpha}
+		\,-\,
+		\eta_{\alpha}\!{\color{white}.}^{\mu}\,W_{\beta}
+	$
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	We compute:
+	\begin{eqnarray*}
+	\left[\,
+		P_{\lambda}
+		\,\overset{{\color{white}1}}{,}\,
+		W^{\mu}
+		\,\right]
+	& = &
+		P_{\lambda}\,W^{\mu} \,-\, W^{\mu}P_{\lambda}
+	\;\; = \;\;
+		P_{\lambda}
+		\cdot\!
+		\left(\,\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}\,\right)
+		\,-\,
+		\left(\,\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}\,\right)
+		\!\cdot
+		P_{\lambda}
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,P_{\lambda}\left(\,M_{\nu\rho}\,P_{\sigma}\,\right)
+		\;-\;
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\left(\,P_{\sigma}\,P_{\lambda}\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,P_{\lambda}
+		\left(\,
+			P_{\sigma}\,M_{\nu\rho}
+			\overset{{\color{white}1}}{-}
+			\eta_{\sigma\nu}\,P_{\rho}
+			+
+			\eta_{\sigma\rho}\,P_{\nu}
+			\,\right)
+		\;-\;
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\left(\,0\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			P_{\lambda}\,P_{\sigma}\,M_{\nu\rho}
+			\overset{{\color{white}1}}{-}
+			\eta_{\sigma\nu}\,P_{\lambda}\,P_{\rho}
+			+
+			\eta_{\sigma\rho}\,P_{\lambda}\,P_{\nu}
+			\,\right)
+	\;\; = \;\;
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			0 \cdot M_{\nu\rho}
+			\overset{{\color{white}1}}{-}
+			\eta_{\sigma\nu} \cdot 0
+			+
+			\eta_{\sigma\rho} \cdot 0
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		0
+	\end{eqnarray*}
+\item
+	We compute:
+	\begin{eqnarray*}
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		W^{\mu}
+		\,\right]
+	& = &
+		\left[\,
+			M_{\alpha\beta}
+			\,\overset{{\color{white}1}}{,}\,
+			\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
+			\,\right]
+	\;\; = \;\;
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left[\,
+			M_{\alpha\beta}
+			\,\overset{{\color{white}1}}{,}\,
+			M_{\nu\rho}\,P_{\sigma}
+			\,\right]
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			M_{\alpha\beta}\,M_{\nu\rho}\,P_{\sigma}
+			\,\overset{{\color{white}.}}{-}\,
+			M_{\nu\rho}\,P_{\sigma}\,M_{\alpha\beta}
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			M_{\alpha\beta}\,M_{\nu\rho}\,P_{\sigma}
+			{\color{red}
+			\;\,\overset{{\color{white}.}}{-}\;
+			M_{\nu\rho}\,M_{\alpha\beta}\,P_{\sigma}
+			\,\overset{{\color{white}.}}{+}\,
+			M_{\nu\rho}\,M_{\alpha\beta}\,P_{\sigma}
+			}
+			\,\overset{{\color{white}.}}{-}\,
+			M_{\nu\rho}\,P_{\sigma}\,M_{\alpha\beta}
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			\left[\,M_{\alpha\beta}\,,M_{\nu\rho}\,\right] P_{\sigma}
+			\,\overset{{\color{white}.}}{+}\,
+			M_{\nu\rho} \left[\,M_{\alpha\beta}\,,P_{\sigma}\,\right]
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			\left(\,
+				\,-\,
+				\eta_{\alpha\nu}M_{\beta\rho}
+				\,+\,
+				\eta_{\alpha\rho}M_{\beta\nu}
+				\,+\,
+				\eta_{\beta\nu}M_{\alpha\rho}
+				\,-\,
+				\eta_{\beta\rho}M_{\alpha\nu}
+				\,\right) P_{\sigma}
+			\,\overset{{\color{white}.}}{+}\,
+			M_{\nu\rho} \left(\,
+				-\,\eta_{\sigma\alpha}\,P_{\beta}
+				\, + \,
+				\eta_{\sigma\beta}\,P_{\alpha}
+				\,\right)
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			\left(\,
+				\,-\,
+				\eta_{\alpha\nu}M_{\beta\rho}
+				\;\,{\color{red}-}\;
+				\eta_{\alpha{\color{red}\nu}}M_{\beta{\color{red}\rho}}
+				\,+\,
+				\eta_{\beta\nu}M_{\alpha\rho}
+				\;\,{\color{red}+}\;
+				\eta_{\beta{\color{red}\nu}}M_{\alpha{\color{red}\rho}}
+				\,\right) P_{\sigma}
+			\,\overset{{\color{white}.}}{+}\,
+			M_{\nu\rho} \left(\,
+				-\,\eta_{\sigma\alpha}\,P_{\beta}
+				\, + \,
+				\eta_{\sigma\beta}\,P_{\alpha}
+				\,\right)
+			\,\right)
+	\\
+	& = &
+		\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			\overset{{\color{white}.}}{-}\,
+			\eta_{\alpha\nu}M_{\beta\rho}
+			\,+\,\eta_{\beta\nu}M_{\alpha\rho}
+			\,\right) P_{\sigma}
+		\;+\;
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}
+		\left(\,
+			\overset{{\color{white}.}}{-}\,
+			\eta_{\sigma\alpha}\,P_{\beta}
+			\, + \,
+			\eta_{\sigma\beta}\,P_{\alpha}
+			\,\right)
+	\end{eqnarray*}
+\end{enumerate}
+
+	\begin{eqnarray*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\rho}
+		\,\right]
+	& = &
+		-\,\eta_{\rho\mu}\,P_{\nu}
+		\, + \,
+		\eta_{\rho\nu}\,P_{\mu}\,,
+	\end{eqnarray*}
+
+	\begin{equation*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		M_{\rho\sigma}
+		\,\right]
+	\;\; = \;\;
+		\,-\,
+		\eta_{\mu\rho}M_{\nu\sigma}
+		\,+\,
+		\eta_{\mu\sigma}M_{\nu\rho}
+		\,+\,
+		\eta_{\nu\rho}M_{\mu\sigma}
+		\,-\,
+		\eta_{\nu\sigma}M_{\mu\rho}\,,
+	\end{equation*}
+
+\qed
+
+\vskip 0.5cm
+\begin{theorem}[The two Casimir elements of \,$\mathcal{U}(\so(1,3)\ltimes\Re^{1,3})$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Define the following two elements in the universal enveloping algebra
+\,$\mathcal{U}\!\left(\,\overset{{\color{white}.}}{\so(1,3)\ltimes\Re^{1,3}}\,\right)$\,
+of the Lie algebra
+\,$\so(1,3)\ltimes\Re^{1,3}$\,
+of the Lorentz group
+\,$\SOup(1,3)\ltimes\Re^{1,3}$:\,
+\begin{equation*}
+\begin{array}{ccccccc}
+C_{1}
+& := &
+	P^{\mu}P_{\mu}
+& = &
+	\eta^{\mu\nu}\,P_{\mu}\,P_{\nu}
+& = &
+	P_{0}^{2} - P_{1}^{2} - P_{2}^{2} - P_{3}^{2}
+\\
+C_{2}
+& \overset{{\color{white}\textnormal{\normalsize$1$}}}{:=} &
+	W^{\mu}W_{\mu}
+& = &
+	\eta^{\mu\nu}\,W_{\mu}\,W_{\nu}
+& = &
+	W_{0}^{2} - W_{1}^{2} - W_{2}^{2} - W_{3}^{2}
+\end{array},
+\end{equation*}
+where
+\begin{equation*}
+W^{\mu}
+\;\; := \;\;
+	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
+\end{equation*}
+Then,
+\,$C_{1}\,, C_{2} \in \mathcal{U}\!\left(\,\overset{{\color{white}.}}{\so(1,3)\ltimes\Re^{1,3}}\,\right)$\,
+are in the centre of
+\,$\mathcal{U}\!\left(\,\overset{{\color{white}.}}{\so(1,3)\ltimes\Re^{1,3}}\,\right)$.\,
+\end{theorem}
+\proof
+It suffices to show that each of \,$C_{1}$\, and \,$C_{2}$\, commutes with every generator of
+\,$\so(1,3)\ltimes\Re^{1,3}$.\,
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
