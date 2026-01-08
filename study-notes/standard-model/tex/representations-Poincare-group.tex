@@ -1034,6 +1034,215 @@ where
 \qed
 
 \vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	$Q_{0},\, Q_{1},\, Q_{2},\, Q_{3}$\, are $\C$-linear operators
+	on a complex Hilbert space \,$\mathcal{H}$,\, and
+\item
+	$U : \SOup(1,3) \longrightarrow U(\mathcal{H})$\,
+	is a unitary representation of the proper orthochronous Lorentz group
+	\,$\SOup(1,3)$\, on \,$\mathcal{H}$.
+\end{itemize}
+The quantity
+\,$\left(\,Q_{\mu}\,\right) \,:=\, \left(\,Q_{0},Q_{1},Q_{2},Q_{4}\,\right)$\,
+transforms as a $4$-vector (with respect to the unitary representation $U$)
+if and only if \,$Q_{\mu}$\, satisfies the following commutation relations:
+\begin{equation*}
+\left[\,M_{\mu\nu}
+	\,\overset{{\color{white}1}}{,}\,
+	Q_{\rho}
+	\,\right]
+\;\; = \;\;
+	-\,\eta_{\rho\mu}\,Q_{\nu}
+	\,+\,
+	\,\eta_{\rho\nu}\,Q_{\mu}
+\end{equation*}
+\end{proposition}
+\proof
+That \,$Q_{\mu}$\, transforms as a $4$-vector means the following:
+\begin{equation*}
+U(\Lambda)^{-1} \,\circ\, Q_{\mu} \,\circ\, U(\Lambda)
+\;\; = \;\;
+	\Lambda_{\mu}^{{\color{white}\mu}\nu}\,Q_{\nu}
+\end{equation*}
+We will establish that the desired commutation relation
+is an infinitesimal version of this transformation law.
+\begin{equation*}
+\Lambda_{\mu}^{{\color{white}\mu}\nu}
+\;\; = \;\;
+	\delta_{\mu}^{\nu}
+	\,+\,
+	\omega_{\mu}^{{\color{white}\mu}\nu}
+\end{equation*}
+\begin{equation*}
+U(\Lambda)
+\;\; \approx \;\;
+	I
+	\,+\,
+	\dfrac{1}{2}\,\omega^{\alpha\beta}\,M_{\alpha\beta}
+\end{equation*}
+\begin{equation*}
+\left(\,
+	I \,-\, \dfrac{1}{2}\,\omega^{\alpha\beta}\,M_{\alpha\beta}
+	\,\right)
+\cdot
+Q_{\rho}
+\cdot
+\left(\,
+	I \,+\, \dfrac{1}{2}\,\omega^{\mu\nu}\,M_{\mu\nu}
+	\,\right)
+\;\; \approx \;\;
+	U(\Lambda)^{-1} \cdot Q_{\rho} \cdot U(\Lambda)
+\;\; = \;\;
+	\Lambda_{\rho}^{{\color{white}\mu}\nu}\,Q_{\nu}
+\;\; \approx \;\;
+	\left(\,
+		\delta_{\rho}^{\nu} \,+\, \omega_{\rho}^{{\color{white}\alpha}\nu}
+		\,\right)
+	Q_{\nu}
+\end{equation*}
+\begin{eqnarray*}
+&&
+	\left(\,
+		I \,-\, \dfrac{1}{2}\,\omega^{\alpha\beta}\,M_{\alpha\beta}
+		\,\right)
+	\cdot
+	Q_{\rho}
+	\cdot
+	\left(\,
+		I \,+\, \dfrac{1}{2}\,\omega^{\mu\nu}\,M_{\mu\nu}
+		\,\right)
+\\
+& = &
+	\left(\,
+		Q_{\rho} \,-\, \dfrac{1}{2}\,\omega^{\alpha\beta}\,M_{\alpha\beta}\,Q_{\rho}
+		\,\right)
+	\cdot
+	\left(\,
+		I \,+\, \dfrac{1}{2}\,\omega^{\mu\nu}\,M_{\mu\nu}
+		\,\right)
+\\
+& = &
+	Q_{\rho}
+	\,+\,
+	\dfrac{1}{2}\,\omega^{\mu\nu}\,Q_{\rho}\,M_{\mu\nu}
+	\,-\,
+	\dfrac{1}{2}\,\omega^{\alpha\beta}\,M_{\alpha\beta}\,Q_{\rho}
+	\,-\,
+	\dfrac{1}{4}\,\omega^{\alpha\beta}\,M_{\alpha\beta}\,Q_{\rho}
+	\dfrac{1}{2}\,\omega^{\mu\nu}\,M_{\mu\nu}
+	% \left(\,
+	% 	Q_{\mu} \,-\, \dfrac{1}{2}\,\omega^{\alpha\beta}\,M_{\alpha\beta}\,Q_{\mu}
+	% 	\,\right)
+	% \cdot
+	% \left(\,
+	% 	I \,+\, \dfrac{1}{2}\,\omega^{\alpha\beta}\,M_{\alpha\beta}
+	% 	\,\right)
+\\
+& = &
+	Q_{\rho}
+	\,+\,
+	\dfrac{1}{2}\,\omega^{\mu\nu}\left[\,
+		Q_{\rho}\,\overset{{\color{white}1}}{,}\,M_{\mu\nu}
+		\,\right]
+	\,+\,
+	\left\{\begin{array}{c}
+		\textnormal{terms of higher}
+		\\
+		\textnormal{order in \,$\omega_{\mu\nu}$}
+		\end{array}\right\}		
+\end{eqnarray*}
+\begin{equation*}
+Q_{\rho}
+\,+\,
+\dfrac{1}{2}\,\omega^{\mu\nu}\left[\,
+	Q_{\rho}\,\overset{{\color{white}1}}{,}\,M_{\mu\nu}
+	\,\right]
+\;\; = \;\;
+	Q_{\rho}
+	\,+\,
+	\omega_{\rho}^{{\color{white}\mu}\nu}\,Q_{\nu}
+\end{equation*}
+\begin{equation*}
+\dfrac{1}{2}\,\omega^{\mu\nu}\left[\,
+	Q_{\rho}\,\overset{{\color{white}1}}{,}\,M_{\mu\nu}
+	\,\right]
+\;\; = \;\;
+	\omega_{\rho}^{{\color{white}\mu}\nu}\,Q_{\nu}
+\end{equation*}
+Now observe:
+% \begin{equation*}
+% \omega_{\mu}^{{\color{white}\mu}\nu}\,Q_{\nu}
+% \;\; = \;\;
+% 	\left(\,\omega^{\alpha\nu}\,\eta_{\alpha\mu}\,\right)\left(\,\eta_{\nu\lambda}\,Q^{\lambda}\,\right)
+% \;\; = \;\;
+% 	\left(\,\omega^{\alpha\beta}\,\eta_{\alpha\mu}\,\right)\left(\,\eta_{\beta\nu}\,Q^{\nu}\,\right)
+% \end{equation*}
+\begin{eqnarray*}
+\omega_{\rho}^{{\color{white}\mu}\nu}\,Q_{\nu}
+& = &
+	\left(\,\omega^{\mu\nu}\,\eta_{\mu\rho}\,\right)Q_{\nu}
+\;\; = \;\;
+	\omega^{\mu\nu}\,\eta_{\mu\rho}\,Q_{\nu}
+\\
+& = &
+	\omega^{\mu\nu}\cdot\dfrac{1}{2}\left(\,
+		\eta_{\mu\rho}\,Q_{\nu}
+		\,\overset{{\color{white}.}}{-}\,
+		\eta_{\nu\rho}\,Q_{\mu}
+		\,\right),
+	\quad
+	\textnormal{due to anti-symmetry of \,$\omega^{\mu\nu}$\, in \,$\mu,\,\nu$}
+\end{eqnarray*}
+Hence,
+\begin{equation*}
+\dfrac{1}{2}\,\omega^{\mu\nu}\left[\,
+	Q_{\rho}\,\overset{{\color{white}1}}{,}\,M_{\mu\nu}
+	\,\right]
+\;\; = \;\;
+	\omega_{\rho}^{{\color{white}\mu}\nu}\,Q_{\nu}
+\;\; = \;\;
+	\omega^{\mu\nu}\cdot\dfrac{1}{2}\left(\,
+		\eta_{\mu\rho}\,Q_{\nu}
+		\,\overset{{\color{white}.}}{-}\,
+		\eta_{\nu\rho}\,Q_{\mu}
+		\,\right),
+\end{equation*}
+which implies:
+\begin{equation*}
+\left[\,
+	Q_{\rho}\,\overset{{\color{white}1}}{,}\,M_{\mu\nu}
+	\,\right]
+\;\; = \;\;
+	\eta_{\mu\rho}\,Q_{\nu}
+	\,\overset{{\color{white}.}}{-}\,
+	\eta_{\nu\rho}\,Q_{\mu}
+\end{equation*}
+which in turn is equivalent to
+\begin{equation*}
+\left[\,
+	M_{\mu\nu}\,\overset{{\color{white}1}}{,}\,Q_{\rho}
+	\,\right]
+\;\; = \;\;
+	\,\overset{{\color{white}.}}{-}\,
+	\eta_{\mu\rho}\,Q_{\nu}
+	\,\overset{{\color{white}.}}{+}\,
+	\eta_{\nu\rho}\,Q_{\mu}
+\;\; = \;\;
+	\,\overset{{\color{white}.}}{-}\,
+	\eta_{\rho\mu}\,Q_{\nu}
+	\,\overset{{\color{white}.}}{+}\,
+	\eta_{\rho\nu}\,Q_{\mu}
+\end{equation*}
+as required.
+\qed
+
+\vskip 0.5cm
 \begin{definition}[Pauli-Lubanski $4$-vector]
 \mbox{}
 \vskip 0.1cm
