@@ -527,28 +527,8 @@ $M_{12}, M_{23}, M_{31}$\;\;
 satisfy the following commutation relations:
 \begin{enumerate}
 \item
-	$
-	\left[\,
-		M_{\mu\nu}
-		\,\overset{{\color{white}1}}{,}\,
-		M_{\rho\sigma}
-		\,\right]
-	\; = \,
-		\,-\,
-		\eta_{\mu\rho}M_{\nu\sigma}
-		\,+\,
-		\eta_{\mu\sigma}M_{\nu\rho}
-		\,+\,
-		\eta_{\nu\rho}M_{\mu\sigma}
-		\,-\,
-		\eta_{\nu\sigma}M_{\mu\rho}
-	$\,,\;
-	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,
-	% where
-	% \,$\left(\,\eta_{\mu\nu}\,\right) \,=\, \diag(+1,-1,-1,-1)$.
-\item
 	$\left[\,P_{\mu}\,\overset{{\color{white}1}}{,}\,P_{\nu}\,\right] \,=\, 0$,\,
-	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,\, and
+	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,
 \item
 	$
 	\left[\,
@@ -562,183 +542,57 @@ satisfy the following commutation relations:
 		\,+\,
 		\eta_{\rho\nu}\,P_{\mu}
 	$\,,\;
-	for \,$\mu, \nu, \rho \in \{\,0,1,2,3\,\}$,
+	for \,$\mu, \nu, \rho \in \{\,0,1,2,3\,\}$,\, and
+\item
+	$
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		M_{\rho\sigma}
+		\,\right]
+	\; = \,
+		% \,-\,
+		% \eta_{\mu\rho}M_{\nu\sigma}
+		% \,+\,
+		% \eta_{\mu\sigma}M_{\nu\rho}
+		% \,+\,
+		% \eta_{\nu\rho}M_{\mu\sigma}
+		% \,-\,
+		% \eta_{\nu\sigma}M_{\mu\rho}
+		\,-\,
+		\eta_{\rho\mu}M_{\nu\sigma}
+		\,+\,
+		\eta_{\rho\nu}M_{\mu\sigma}
+		\,-\,
+		\eta_{\sigma\mu}M_{\rho\nu}
+		\,+\,
+		\eta_{\sigma\nu}M_{\rho\mu}
+	$\,,\;
+	for \,$\mu, \nu \in \{\,0,1,2,3\,\}$,
+	% where
+	% \,$\left(\,\eta_{\mu\nu}\,\right) \,=\, \diag(+1,-1,-1,-1)$.
+	% \begin{equation*}
+	% \left[\,
+	% 	M_{\mu\nu}
+	% 	\,\overset{{\color{white}1}}{,}\,
+	% 	M_{\rho\sigma}
+	% 	\,\right]
+	% \; = \,
+	% 	\,-\,
+	% 	\eta_{\rho\mu}M_{\nu\sigma}
+	% 	\,+\,
+	% 	\eta_{\rho\nu}M_{\mu\sigma}
+	% 	\,-\,
+	% 	\eta_{\sigma\mu}M_{\rho\nu}
+	% 	\,+\,
+	% 	\eta_{\sigma\nu}M_{\rho\mu}
+	% \end{equation*}
 \end{enumerate}
 where
 \,$\left(\,\eta_{\mu\nu}\,\right) \,=\, \diag(+1,-1,-1,-1)$.
 \end{proposition}
 \proof
 \begin{enumerate}
-\item
-	We compute:
-	\begin{eqnarray*}
-	\left[\,
-		M_{\mu\nu}
-		\,\overset{{\color{white}1}}{,}\,
-		M_{\rho\sigma}
-		\,\right]_{ab}
-	& = &
-		\left(\,
-			M_{\mu\nu}\,M_{\rho\sigma}
-			\,\overset{{\color{white}1}}{-}\,
-			M_{\rho\sigma}\,M_{\mu\nu}
-			\,\right)_{ab}
-	\;\; = \;\;
-		\overset{3}{\underset{c=0}{\sum}}\,
-		(M_{\mu\nu})_{ac}(M_{\rho\sigma})_{cb}
-		\; - \;
-		\overset{3}{\underset{c=0}{\sum}}\,
-		(M_{\rho\sigma})_{ac}(M_{\mu\nu})_{cb}
-	\\
-	& = &
-		\overset{3}{\underset{c=0}{\sum}}
-		\left(\,%(M_{\mu\nu})_{ac}
-			\delta_{a\mu}\,\eta_{c\nu}
-			-
-			\delta_{a\nu}\,\eta_{c\mu}
-			\,\right)
-		\left(\,%(M_{\rho\sigma})_{cb}
-			\delta_{c\rho}\,\eta_{b\sigma}
-			-
-			\delta_{c\sigma}\,\eta_{b\rho}
-			\,\right)
-		\;+\;
-		\overset{3}{\underset{c=0}{\sum}}
-		\left(\,%(M_{\rho\sigma})_{ac}
-			\delta_{a\rho}\,\eta_{c\sigma}
-			-
-			\delta_{a\sigma}\,\eta_{c\rho}
-			\,\right)
-		\left(\,%(M_{\mu\nu})_{cb}
-			\delta_{c\mu}\,\eta_{b\nu}
-			-
-			\delta_{c\nu}\,\eta_{b\mu}
-			\,\right)
-	\\
-	& = &
-		{\color{white}+}\;
-		\overset{3}{\underset{c=0}{\sum}}
-		% \left(\,%(M_{\mu\nu})_{ac}
-		% 	\eta_{a\mu}\,\delta_{c\nu}
-		% 	-
-		% 	\eta_{a\nu}\,\delta_{c\mu}
-		% 	\,\right)
-		% \left(\,%(M_{\rho\sigma})_{cb}
-		% 	\eta_{c\rho}\,\delta_{b\sigma}
-		% 	-
-		% 	\eta_{c\sigma}\,\delta_{b\rho}
-		% 	\,\right)
-		\left(\,
-			\delta_{a\mu}\,\eta_{c\nu}\,\delta_{c\rho}\,\eta_{b\sigma}
-			\,\overset{{\color{white}.}}{-}\,
-			\delta_{a\mu}\,\eta_{c\nu}\,\delta_{c\sigma}\,\eta_{b\rho}
-			\,-\,
-			\delta_{a\nu}\,\eta_{c\mu}\,\delta_{c\rho}\,\eta_{b\sigma}
-			\,+\,
-			\delta_{a\nu}\,\eta_{c\mu}\,\delta_{c\sigma}\,\eta_{b\rho}
-			\,\right)
-	\\
-	&&
-		+\;
-		\overset{3}{\underset{c=0}{\sum}}
-		% \left(\,%(M_{\rho\sigma})_{ac}
-		% 	\eta_{a\rho}\,\delta_{c\sigma}
-		% 	-
-		% 	\eta_{a\sigma}\,\delta_{c\rho}
-		% 	\,\right)
-		% \left(\,%(M_{\mu\nu})_{cb}
-		% 	\eta_{c\mu}\,\delta_{b\nu}
-		% 	-
-		% 	\eta_{c\nu}\,\delta_{b\mu}
-		% 	\,\right)
-		\left(\,
-			\delta_{a\rho}\,\eta_{c\sigma}\,\delta_{c\mu}\,\eta_{b\nu}
-			\,\overset{{\color{white}.}}{-}\,
-			\delta_{a\rho}\,\eta_{c\sigma}\,\delta_{c\nu}\,\eta_{b\mu}
-			\,-\,
-			\delta_{a\sigma}\,\eta_{c\rho}\,\delta_{c\mu}\,\eta_{b\nu}
-			\,+\,
-			\delta_{a\sigma}\,\eta_{c\rho}\,\delta_{c\nu}\,\eta_{b\mu}
-			\,\right)
-	\\
-	& = &
-		{\color{white}+}\;
-		\left(\,
-			\delta_{a\mu}\,\eta_{\rho\nu}\,\eta_{b\sigma}
-			\,\overset{{\color{white}.}}{-}\,
-			\delta_{a\mu}\,\eta_{\sigma\nu}\,\eta_{b\rho}
-			\,-\,
-			\delta_{a\nu}\,\eta_{\rho\mu}\,\eta_{b\sigma}
-			\,+\,
-			\delta_{a\nu}\,\eta_{\sigma\mu}\,\eta_{b\rho}
-			\,\right)
-	\\
-	& &
-		+\;
-		\left(\,
-			\delta_{a\rho}\,\eta_{\mu\sigma}\,\eta_{b\nu}
-			\,\overset{{\color{white}.}}{-}\,
-			\delta_{a\rho}\,\eta_{\nu\sigma}\,\eta_{b\mu}
-			\,-\,
-			\delta_{a\sigma}\,\eta_{\mu\rho}\,\eta_{b\nu}
-			\,+\,
-			\delta_{a\sigma}\,\eta_{\nu\rho}\,\eta_{b\mu}
-			\,\right)
-	\\
-	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
-		-\,\eta_{\mu\rho}\left(\,
-			\delta_{a\nu}\,\eta_{b\sigma}
-			+
-			\delta_{a\sigma}\,\eta_{b\nu}
-			\,\right)
-		\,+\,
-		\eta_{\mu\sigma}\left(\,
-			\delta_{a\nu}\,\eta_{b\rho}
-			+
-			\delta_{a\rho}\,\eta_{b\nu}
-			\,\right)
-	\\
-	& &
-		+\,
-		\eta_{\nu\rho}\left(\,
-			\delta_{a\mu}\,\eta_{b\sigma}
-			+
-			\delta_{a\sigma}\,\eta_{b\mu}
-			\,\right)
-		\,-\,
-		\eta_{\nu\sigma}\left(\,
-			\delta_{a\mu}\,\eta_{b\rho}
-			+
-			\delta_{a\rho}\,\eta_{b\mu}
-			\,\right)
-	\\
-	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
-		-\,\eta_{\mu\rho}\left(\,M_{\nu\sigma}\,\right)_{ab}
-		\;+\;
-		\eta_{\mu\sigma}\left(\,M_{\nu\rho}\,\right)_{ab}
-		\;+\;
-		\eta_{\nu\rho}\left(\,M_{\mu\sigma}\,\right)_{ab}
-		\;-\;
-		\eta_{\nu\sigma}\left(\,M_{\mu\rho}\,\right)_{ab}
-	\end{eqnarray*}
-	The calculations above show that
-	\begin{equation*}
-	\left[\,
-		M_{\mu\nu}
-		\,\overset{{\color{white}1}}{,}\,
-		M_{\rho\sigma}
-		\,\right]
-	\;\; = \;\;
-		\,-\,
-		\eta_{\mu\rho}M_{\nu\sigma}
-		\,+\,
-		\eta_{\mu\sigma}M_{\nu\rho}
-		\,+\,
-		\eta_{\nu\rho}M_{\mu\sigma}
-		\,-\,
-		\eta_{\nu\sigma}M_{\mu\rho}\,,
-	\end{equation*}
-	as required.
 \item
 	First, we write \,$P_{\rho} \in \Re^{5 \times 5}$\, in block form:
 	\begin{equation*}
@@ -1029,6 +883,176 @@ where
 		\, + \,
 		\eta_{\rho\nu}\,P_{\mu}\,,
 	\end{eqnarray*}
+	as required.
+\item
+	We compute:
+	\begin{eqnarray*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		M_{\rho\sigma}
+		\,\right]_{ab}
+	& = &
+		\left(\,
+			M_{\mu\nu}\,M_{\rho\sigma}
+			\,\overset{{\color{white}1}}{-}\,
+			M_{\rho\sigma}\,M_{\mu\nu}
+			\,\right)_{ab}
+	\;\; = \;\;
+		\overset{3}{\underset{c=0}{\sum}}\,
+		(M_{\mu\nu})_{ac}(M_{\rho\sigma})_{cb}
+		\; - \;
+		\overset{3}{\underset{c=0}{\sum}}\,
+		(M_{\rho\sigma})_{ac}(M_{\mu\nu})_{cb}
+	\\
+	& = &
+		\overset{3}{\underset{c=0}{\sum}}
+		\left(\,%(M_{\mu\nu})_{ac}
+			\delta_{a\mu}\,\eta_{c\nu}
+			-
+			\delta_{a\nu}\,\eta_{c\mu}
+			\,\right)
+		\left(\,%(M_{\rho\sigma})_{cb}
+			\delta_{c\rho}\,\eta_{b\sigma}
+			-
+			\delta_{c\sigma}\,\eta_{b\rho}
+			\,\right)
+		\;+\;
+		\overset{3}{\underset{c=0}{\sum}}
+		\left(\,%(M_{\rho\sigma})_{ac}
+			\delta_{a\rho}\,\eta_{c\sigma}
+			-
+			\delta_{a\sigma}\,\eta_{c\rho}
+			\,\right)
+		\left(\,%(M_{\mu\nu})_{cb}
+			\delta_{c\mu}\,\eta_{b\nu}
+			-
+			\delta_{c\nu}\,\eta_{b\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{white}+}\;
+		\overset{3}{\underset{c=0}{\sum}}
+		% \left(\,%(M_{\mu\nu})_{ac}
+		% 	\eta_{a\mu}\,\delta_{c\nu}
+		% 	-
+		% 	\eta_{a\nu}\,\delta_{c\mu}
+		% 	\,\right)
+		% \left(\,%(M_{\rho\sigma})_{cb}
+		% 	\eta_{c\rho}\,\delta_{b\sigma}
+		% 	-
+		% 	\eta_{c\sigma}\,\delta_{b\rho}
+		% 	\,\right)
+		\left(\,
+			\delta_{a\mu}\,\eta_{c\nu}\,\delta_{c\rho}\,\eta_{b\sigma}
+			\,\overset{{\color{white}.}}{-}\,
+			\delta_{a\mu}\,\eta_{c\nu}\,\delta_{c\sigma}\,\eta_{b\rho}
+			\,-\,
+			\delta_{a\nu}\,\eta_{c\mu}\,\delta_{c\rho}\,\eta_{b\sigma}
+			\,+\,
+			\delta_{a\nu}\,\eta_{c\mu}\,\delta_{c\sigma}\,\eta_{b\rho}
+			\,\right)
+	\\
+	&&
+		+\;
+		\overset{3}{\underset{c=0}{\sum}}
+		% \left(\,%(M_{\rho\sigma})_{ac}
+		% 	\eta_{a\rho}\,\delta_{c\sigma}
+		% 	-
+		% 	\eta_{a\sigma}\,\delta_{c\rho}
+		% 	\,\right)
+		% \left(\,%(M_{\mu\nu})_{cb}
+		% 	\eta_{c\mu}\,\delta_{b\nu}
+		% 	-
+		% 	\eta_{c\nu}\,\delta_{b\mu}
+		% 	\,\right)
+		\left(\,
+			\delta_{a\rho}\,\eta_{c\sigma}\,\delta_{c\mu}\,\eta_{b\nu}
+			\,\overset{{\color{white}.}}{-}\,
+			\delta_{a\rho}\,\eta_{c\sigma}\,\delta_{c\nu}\,\eta_{b\mu}
+			\,-\,
+			\delta_{a\sigma}\,\eta_{c\rho}\,\delta_{c\mu}\,\eta_{b\nu}
+			\,+\,
+			\delta_{a\sigma}\,\eta_{c\rho}\,\delta_{c\nu}\,\eta_{b\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{white}+}\;
+		\left(\,
+			\delta_{a\mu}\,\eta_{\rho\nu}\,\eta_{b\sigma}
+			\,\overset{{\color{white}.}}{-}\,
+			\delta_{a\mu}\,\eta_{\sigma\nu}\,\eta_{b\rho}
+			\,-\,
+			\delta_{a\nu}\,\eta_{\rho\mu}\,\eta_{b\sigma}
+			\,+\,
+			\delta_{a\nu}\,\eta_{\sigma\mu}\,\eta_{b\rho}
+			\,\right)
+	\\
+	& &
+		+\;
+		\left(\,
+			\delta_{a\rho}\,\eta_{\mu\sigma}\,\eta_{b\nu}
+			\,\overset{{\color{white}.}}{-}\,
+			\delta_{a\rho}\,\eta_{\nu\sigma}\,\eta_{b\mu}
+			\,-\,
+			\delta_{a\sigma}\,\eta_{\mu\rho}\,\eta_{b\nu}
+			\,+\,
+			\delta_{a\sigma}\,\eta_{\nu\rho}\,\eta_{b\mu}
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		-\,\eta_{\mu\rho}\left(\,
+			\delta_{a\nu}\,\eta_{b\sigma}
+			+
+			\delta_{a\sigma}\,\eta_{b\nu}
+			\,\right)
+		\,+\,
+		\eta_{\mu\sigma}\left(\,
+			\delta_{a\nu}\,\eta_{b\rho}
+			+
+			\delta_{a\rho}\,\eta_{b\nu}
+			\,\right)
+	\\
+	& &
+		+\,
+		\eta_{\nu\rho}\left(\,
+			\delta_{a\mu}\,\eta_{b\sigma}
+			+
+			\delta_{a\sigma}\,\eta_{b\mu}
+			\,\right)
+		\,-\,
+		\eta_{\nu\sigma}\left(\,
+			\delta_{a\mu}\,\eta_{b\rho}
+			+
+			\delta_{a\rho}\,\eta_{b\mu}
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\Large$1$}}}{=} &
+		-\,\eta_{\mu\rho}\left(\,M_{\nu\sigma}\,\right)_{ab}
+		\;+\;
+		\eta_{\mu\sigma}\left(\,M_{\nu\rho}\,\right)_{ab}
+		\;+\;
+		\eta_{\nu\rho}\left(\,M_{\mu\sigma}\,\right)_{ab}
+		\;-\;
+		\eta_{\nu\sigma}\left(\,M_{\mu\rho}\,\right)_{ab}
+	\end{eqnarray*}
+	The calculations above show that
+	\begin{equation*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		M_{\rho\sigma}
+		\,\right]
+	\;\; = \;\;
+		\,-\,
+		\eta_{\mu\rho}M_{\nu\sigma}
+		\,+\,
+		\eta_{\mu\sigma}M_{\nu\rho}
+		\,+\,
+		\eta_{\nu\rho}M_{\mu\sigma}
+		\,-\,
+		\eta_{\nu\sigma}M_{\mu\rho}\,,
+	\end{equation*}
 	as required.
 \end{enumerate}
 \qed
