@@ -1040,9 +1040,9 @@ where
 \noindent
 The \textbf{Pauli-Lubanski $4$-vector} \,$W^{\mu}$\, is defined as follows:
 \begin{equation*}
-W^{\mu}
+W_{\mu}
 \;\; := \;\;
-	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
+	\dfrac{1}{2}\,\varepsilon_{\mu\nu\rho\sigma}\,M^{\nu\rho}\,P^{\sigma}
 \end{equation*}
 \end{definition}
 
@@ -1058,9 +1058,9 @@ satisfies the following commutation relations with the generators
 \item
 	$
 	\left[\,
-		P_{\lambda}
+		P_{\mu}
 		\,\overset{{\color{white}1}}{,}\,
-		W^{\mu}
+		W_{\nu}
 		\,\right]
 	\; = \;
 		0\,,
@@ -1068,14 +1068,15 @@ satisfies the following commutation relations with the generators
 \item
 	$
 	\left[\,
-		M_{\alpha\beta}
+		M_{\mu\nu}
 		\,\overset{{\color{white}1}}{,}\,
-		W^{\mu}
+		W_{\rho}
 		\,\right]
 	\; = \;
-		\eta_{\beta}\!{\color{white}.}^{\mu}\,W_{\alpha}
-		\,-\,
-		\eta_{\alpha}\!{\color{white}.}^{\mu}\,W_{\beta}
+		-\,
+		\eta_{\rho\mu}\,W_{\nu}
+		\,+\,
+		\eta_{\rho\nu}\,W_{\mu}
 	$
 \end{enumerate}
 \end{proposition}
@@ -1085,64 +1086,134 @@ satisfies the following commutation relations with the generators
 	We compute:
 	\begin{eqnarray*}
 	\left[\,
-		P_{\lambda}
+		P_{\mu}
 		\,\overset{{\color{white}1}}{,}\,
-		W^{\mu}
+		W_{\nu}
 		\,\right]
 	& = &
-		P_{\lambda}\,W^{\mu} \,-\, W^{\mu}P_{\lambda}
+		P_{\mu}\,W_{\nu} \,-\, W_{\nu}\,P_{\mu}
 	\;\; = \;\;
-		P_{\lambda}
+		P_{\mu}
 		\cdot\!
-		\left(\,\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}\,\right)
+		\left(\,\dfrac{1}{2}\,\varepsilon_{\nu\lambda\rho\sigma}\,M^{\lambda\rho}\,P^{\sigma}\,\right)
 		\,-\,
-		\left(\,\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}\,\right)
+		\left(\,\dfrac{1}{2}\,\varepsilon_{\nu\lambda\rho\sigma}\,M^{\lambda\rho}\,P^{\sigma}\,\right)
 		\!\cdot
-		P_{\lambda}
+		P_{\mu}
 	\\
 	& = &
-		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,P_{\lambda}\left(\,M_{\nu\rho}\,P_{\sigma}\,\right)
+		\dfrac{1}{2}\,\varepsilon_{\nu\lambda\rho\sigma}\,P_{\mu}\left(\,M^{\lambda\rho}\,P^{\sigma}\,\right)
 		\;-\;
-		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\left(\,P_{\sigma}\,P_{\lambda}\,\right)
+		\dfrac{1}{2}\,\varepsilon_{\nu\lambda\rho\sigma}\,M^{\lambda\rho}\left(\,P^{\sigma}P_{\mu}\,\right)
 	\\
 	& = &
 		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,P_{\lambda}
 		\left(\,
 			P_{\sigma}\,M_{\nu\rho}
-			\overset{{\color{white}1}}{-}
+			\;\overset{{\color{white}1}}{-}\;
 			\eta_{\sigma\nu}\,P_{\rho}
-			+
+			\;+\;
 			\eta_{\sigma\rho}\,P_{\nu}
 			\,\right)
 		\;-\;
-		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}\,P_{\lambda}
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\left(\;0\;\right)
 	\\
 	& = &
-		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,P_{\lambda}\,P_{\sigma}\,M_{\nu\rho}
-		\,-\,
-		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,\eta_{\sigma\nu}\,P_{\lambda}\,P_{\rho}
-		\,+\,
-		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,\eta_{\sigma\rho}\,P_{\lambda}\,P_{\nu}
-		\,-\,
-		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}\,P_{\lambda}
-	% \\
-	% & = &
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left(\,
-	% 		0 \cdot M_{\nu\rho}
-	% 		\overset{{\color{white}1}}{-}
-	% 		\eta_{\sigma\nu} \cdot 0
-	% 		+
-	% 		\eta_{\sigma\rho} \cdot 0
-	% 		\,\right)
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma} %\,P_{\lambda}
+		\left(\,
+			P_{\lambda}\,P_{\sigma}\,M_{\nu\rho}
+			\;\overset{{\color{white}1}}{-}\;
+			\eta_{\sigma\nu}\,P_{\lambda}\,P_{\rho}
+			\;+\;
+			\eta_{\sigma\rho}\,P_{\lambda}\,P_{\nu}
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			0 \cdot M_{\nu\rho}
+			\;\overset{{\color{white}1}}{-}\;
+			\eta_{\sigma\nu} \cdot 0
+			\;+\;
+			\eta_{\sigma\rho} \cdot 0
+			\,\right)
 	\\
 	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
-		0\,,
-		\quad
-		\textnormal{due to the anti-symmetry of \,$\varepsilon^{\mu\nu\sigma\rho}$\,
-		(in $\mu,\nu,\sigma,\rho$) and symmetry of \,$P_{\mu}\,P_{\nu}$\, (in $\mu,\nu$)}
+		0
 	\end{eqnarray*}
 \item
+	\textbf{Claim 1:}\quad
+	$W^{\mu}P_{\mu} \,=\, 0$
+	\vskip 0.1cm
+	\noindent
+	Proof of Claim 1:\;\;
+	\begin{equation*}
+	W^{\mu}\,P_{\mu}
+	\;\; = \;\;
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
+		\cdot
+		P_{\mu}
+	\;\; = \;\;
+		0\,,
+	\end{equation*}
+	where the last equality follows from the anti-symmetry of
+	\,$\varepsilon^{\mu\nu\rho\sigma}$\, (in \,$\mu, \nu, \rho, \sigma$)
+	and the symmetry of
+	\,$P_{\sigma}P_{\mu}$\, (in \,$\sigma, \mu$).
+	This proves Claim 1.
+
+	\begin{eqnarray*}
+	\left[\,M_{\kappa\lambda}\,,W^{\mu}P_{\mu}\,\right]
+	& = &
+		M_{\kappa\lambda}\,W^{\mu}\,P_{\mu}
+		\,-\,
+		W^{\mu}\,P_{\mu}\,M_{\kappa\lambda}
+	\\
+	& = &
+		M_{\kappa\lambda}\,W^{\mu}\,P_{\mu}
+		{\color{red}
+		\;-\;
+		W^{\mu}\,M_{\kappa\lambda}\,P_{\mu}
+		\,+\,
+		W^{\mu}\,M_{\kappa\lambda}\,P_{\mu}
+		}
+		\,-\,
+		W^{\mu}\,P_{\mu}\,M_{\kappa\lambda}
+	\\
+	& = &
+		\left[\,M_{\kappa\lambda}\,,W^{\mu}\,\right] P_{\mu}
+		\,+\,
+		W^{\mu} \left[\,M_{\kappa\lambda}\,,P_{\mu}\,\right]
+	\\
+	& = &
+		\left[\,M_{\kappa\lambda}\,,W^{\mu}\,\right] P_{\mu}
+		\,+\,
+		W^{\mu} \left(\,-\,\eta_{\mu\kappa}\,P_{\lambda}\,+\,\eta_{\mu\lambda}\,P_{\kappa}\,\right)
+	\end{eqnarray*}
+
+	\begin{eqnarray*}
+	\left[\,M_{\alpha\beta}\,,W^{\mu}\,\right] P_{\mu}
+	& = &
+		W^{\mu} \left(\,
+			\eta_{\mu\alpha}\,P_{\beta}
+			\,-\,
+			\eta_{\mu\beta}\,P_{\alpha}
+			\,\right)
+	\;\; = \;\;
+			W_{\alpha}\,\delta^{\mu}_{\beta}\,P_{\mu}
+			\,-\,
+			W_{\beta}\,\delta^{\mu}_{\alpha}\,P_{\mu}
+	\\
+	& = &
+		\left(\,
+			W_{\alpha}\,\delta^{\mu}_{\beta}
+			\,-\,
+			W_{\beta}\,\delta^{\mu}_{\alpha}
+			\,\right)
+			P_{\mu}
+	\end{eqnarray*}
+	\vskip 0.3cm
+	\noindent
 	We compute:
 	\begin{eqnarray*}
 	\left[\,
