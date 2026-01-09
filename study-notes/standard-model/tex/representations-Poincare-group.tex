@@ -1598,10 +1598,12 @@ of the Lie algebra
 of the Lorentz group
 \,$\SOup(1,3)\ltimes\Re^{1,3}$:\,
 \begin{equation*}
-\begin{array}{ccccccc}
+\begin{array}{ccccccccc}
 C_{1}
 & := &
-	P^{\mu}P_{\mu}
+	P_{\mu}\,P^{\mu}
+& = &
+	P_{\mu}\left(\,\eta^{\mu\nu}\,P_{\nu}\,\right)
 & = &
 	\eta^{\mu\nu}\,P_{\mu}\,P_{\nu}
 & = &
@@ -1609,7 +1611,9 @@ C_{1}
 \\
 C_{2}
 & \overset{{\color{white}\textnormal{\normalsize$1$}}}{:=} &
-	W^{\mu}W_{\mu}
+	W_{\mu}\,W^{\mu}
+& = &
+	W_{\mu}\left(\,\eta^{\mu\nu}\,W_{\nu}\,\right)
 & = &
 	\eta^{\mu\nu}\,W_{\mu}\,W_{\nu}
 & = &
@@ -1618,9 +1622,9 @@ C_{2}
 \end{equation*}
 where
 \begin{equation*}
-W^{\mu}
+W_{\mu}
 \;\; := \;\;
-	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
+	\dfrac{1}{2}\,\varepsilon_{\mu\nu\rho\sigma}\,M^{\nu\rho}\,P^{\sigma}
 \end{equation*}
 Then,
 \,$C_{1}\,, C_{2} \in \mathcal{U}\!\left(\,\overset{{\color{white}.}}{\so(1,3)\ltimes\Re^{1,3}}\,\right)$\,
@@ -1630,7 +1634,281 @@ are in the centre of
 \proof
 It suffices to show that each of \,$C_{1}$\, and \,$C_{2}$\, commutes with every generator of
 \,$\so(1,3)\ltimes\Re^{1,3}$.\,
-
+To this end, simply observe the following computations:
+\begin{eqnarray*}
+\left[\,
+	P_{\alpha}
+	\,\overset{{\color{white}1}}{,}\,
+	P_{\mu}\,P^{\mu}
+	\,\right]
+& = &
+	P_{\alpha}\,P_{\mu}\,P^{\mu}
+	\;-\;
+	P_{\mu}\,P^{\mu}\,P_{\alpha}
+% \\
+% & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+\;\; = \;\;
+	P_{\alpha}\,P_{\mu}\,P^{\mu}
+	{\color{red}
+	\;\,-\;\,
+	P_{\mu}\,P_{\alpha}\,P^{\mu}
+	\,+\,
+	P_{\mu}\,P_{\alpha}\,P^{\mu}
+	}
+	\;-\,
+	P_{\mu}\,P^{\mu}\,P_{\alpha}
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\mu}
+		\,\right]	
+	P^{\mu}
+	\;+\;
+	W_{\mu}
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		P^{\mu}
+		\,\right]
+\;\; = \;\;
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\mu}
+		\,\right]	
+	P^{\mu}
+	\;+\;
+	P_{\mu}
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		\eta^{\mu\nu}\,P_{\nu}
+		\,\right]
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\mu}
+		\,\right]	
+	P^{\mu}
+	\;+\;
+	\eta^{\mu\nu}\,P_{\mu}
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\nu}
+		\,\right]
+\;\; = \;\;
+	0 \cdot P^{\mu}
+	\;+\;
+	\eta^{\mu\nu}\,P_{\mu}\cdot 0
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	0
+\end{eqnarray*}
+\vskip -0.6cm
+\begin{eqnarray*}
+\left[\,
+	M_{\alpha\beta}
+	\,\overset{{\color{white}1}}{,}\,
+	P_{\mu}\,P^{\mu}
+	\,\right]
+& = &
+	M_{\alpha\beta}\,P_{\mu}\,P^{\mu}
+	\,-\,
+	P_{\mu}\,P^{\mu}\,M_{\alpha\beta}
+% \\
+% & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+\;\; = \;\;
+	M_{\alpha\beta}\,P_{\mu}\,P^{\mu}
+	{\color{red}
+	\;\,-\;\,
+	P_{\mu}\,M_{\alpha\beta}\,P^{\mu}
+	\,+\,
+	P_{\mu}\,M_{\alpha\beta}\,P^{\mu}
+	}
+	\;-\,
+	P_{\mu}\,P^{\mu}\,M_{\alpha\beta}
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\mu}
+		\,\right]
+	P^{\mu}
+	\;+\;
+	P_{\mu}
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		P^{\mu}
+		\,\right]
+\\
+& = &
+	\left(\,
+		-\,\eta_{\mu\alpha}\,P_{\beta}
+		\,\overset{{\color{white}.}}{+}\,
+		\eta_{\mu\beta}\,P_{\alpha}
+		\,\right)
+	P^{\mu}
+	\;+\;
+	P_{\mu}
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		\eta^{\mu\nu}\,P_{\nu}
+		\,\right]
+\\
+& = &
+	\left(\,
+		-\,P_{\beta}\,P_{\alpha}
+		\,\overset{{\color{white}.}}{+}\,
+		P_{\alpha}\,P_{\beta}
+		\,\right)
+	\;+\;
+	\eta^{\mu\nu}\,P_{\mu}
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		P_{\nu}
+		\,\right]
+\\
+& = &
+	\left(\,
+		-\,P_{\beta}\,P_{\alpha}
+		\,\overset{{\color{white}.}}{+}\,
+		P_{\alpha}\,P_{\beta}
+		\,\right)
+	\;+\;
+	\eta^{\mu\nu}\,P_{\mu}
+	\left(\,
+		-\,\eta_{\nu\alpha}\,P_{\beta}
+		\,\overset{{\color{white}.}}{+}\,
+		\eta_{\nu\beta}\,P_{\alpha}
+		\,\right)
+\\
+& = &
+	\left(\,
+		-\,P_{\beta}\,P_{\alpha}
+		\,\overset{{\color{white}.}}{+}\,
+		P_{\alpha}\,P_{\beta}
+		\,\right)
+	\;+\;
+	\left(\,
+		-\,\eta^{\mu\nu}\,\eta_{\nu\alpha}\,P_{\mu}\,P_{\beta}
+		\,\overset{{\color{white}.}}{+}\,
+		\eta^{\mu\nu}\,\eta_{\nu\beta}\,P_{\mu}\,P_{\alpha}
+		\,\right)
+\\
+& = &
+	\left(\,
+		-\,P_{\beta}\,P_{\alpha}
+		\,\overset{{\color{white}.}}{+}\,
+		P_{\alpha}\,P_{\beta}
+		\,\right)
+	\;+\;
+	\left(\,
+		-\,\delta^{\mu}_{\alpha}\,P_{\mu}\,P_{\beta}
+		\,\overset{{\color{white}.}}{+}\,
+		\delta^{\mu}_{\beta}\,P_{\mu}\,P_{\alpha}
+		\,\right)
+\\
+& = &
+	\left(\,
+		-\,P_{\beta}\,P_{\alpha}
+		\,\overset{{\color{white}.}}{+}\,
+		P_{\alpha}\,P_{\beta}
+		\,\right)
+	\;+\;
+	\left(\,
+		-\,P_{\alpha}\,P_{\beta}
+		\,\overset{{\color{white}.}}{+}\,
+		P_{\beta}\,P_{\alpha}
+		\,\right)
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	0
+\end{eqnarray*}
+\vskip -0.6cm
+\begin{eqnarray*}
+\left[\,
+	P_{\alpha}
+	\,\overset{{\color{white}1}}{,}\,
+	W_{\mu}\,W^{\mu}
+	\,\right]
+& = &
+	P_{\alpha}\,W_{\mu}\,W^{\mu}
+	\;-\;
+	W_{\mu}\,W^{\mu}\,P_{\alpha}
+% \\
+% & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+\;\; = \;\;
+	P_{\alpha}\,W_{\mu}\,W^{\mu}
+	{\color{red}
+	\;\,-\;\,
+	W_{\mu}\,P_{\alpha}\,W^{\mu}
+	\,+\,
+	W_{\mu}\,P_{\alpha}\,W^{\mu}
+	}
+	\;-\,
+	W_{\mu}\,W^{\mu}\,P_{\alpha}
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		W_{\mu}
+		\,\right]	
+	W^{\mu}
+	\;+\;
+	W_{\mu}
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		W^{\mu}
+		\,\right]
+\;\; = \;\;
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		W_{\mu}
+		\,\right]	
+	W^{\mu}
+	\;+\;
+	W_{\mu}
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		\eta^{\mu\nu}\,W_{\nu}
+		\,\right]
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		W_{\mu}
+		\,\right]	
+	W^{\mu}
+	\;+\;
+	\eta^{\mu\nu}\,W_{\mu}
+	\left[\,
+		P_{\alpha}
+		\,\overset{{\color{white}1}}{,}\,
+		W_{\nu}
+		\,\right]
+\;\; = \;\;
+	0 \cdot W^{\mu}
+	\;+\;
+	\eta^{\mu\nu}\,W_{\mu}\cdot 0
+\\
+& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+	0
+\end{eqnarray*}
+\vskip -0.6cm
 \begin{eqnarray*}
 \left[\,
 	M_{\alpha\beta}
@@ -1641,8 +1919,11 @@ It suffices to show that each of \,$C_{1}$\, and \,$C_{2}$\, commutes with every
 	M_{\alpha\beta}\,W_{\mu}\,W^{\mu}
 	\,-\,
 	W_{\mu}\,W^{\mu}\,M_{\alpha\beta}
-\\
-& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+% \\
+% & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
+\;\; = \;\;
+	\textnormal{\small
+	$
 	M_{\alpha\beta}\,W_{\mu}\,W^{\mu}
 	{\color{red}
 	\;-\;
@@ -1652,6 +1933,8 @@ It suffices to show that each of \,$C_{1}$\, and \,$C_{2}$\, commutes with every
 	}
 	\;-\,
 	W_{\mu}\,W^{\mu}\,M_{\alpha\beta}
+	$
+	}
 \\
 & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 	\left[\,
@@ -1753,7 +2036,7 @@ It suffices to show that each of \,$C_{1}$\, and \,$C_{2}$\, commutes with every
 & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 	0
 \end{eqnarray*}
-
+This completes the proof of the Theorem.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
