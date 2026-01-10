@@ -1385,6 +1385,7 @@ satisfies the following commutation relations with the generators
 		0
 	\end{eqnarray*}
 \item
+	{\color{gray}
 	\textbf{Claim 1:}\quad
 	$W^{\mu}P_{\mu} \,=\, 0$
 	\vskip 0.1cm
@@ -1508,6 +1509,407 @@ satisfies the following commutation relations with the generators
 			M_{\nu\rho} \left[\,M_{\alpha\beta}\,,P_{\sigma}\,\right]
 			\,\right)
 	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			\left(\,
+				\,-\,
+				\eta_{\alpha\nu}M_{\beta\rho}
+				\,+\,
+				\eta_{\alpha\rho}M_{\beta\nu}
+				\,+\,
+				\eta_{\beta\nu}M_{\alpha\rho}
+				\,-\,
+				\eta_{\beta\rho}M_{\alpha\nu}
+				\,\right) P_{\sigma}
+			\,\overset{{\color{white}.}}{+}\,
+			M_{\nu\rho} \left(\,
+				-\,\eta_{\sigma\alpha}\,P_{\beta}
+				\, + \,
+				\eta_{\sigma\beta}\,P_{\alpha}
+				\,\right)
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			\left(\,
+				\,-\,
+				\eta_{\alpha\nu}M_{\beta\rho}
+				\;\,{\color{red}-}\;
+				\eta_{\alpha{\color{red}\nu}}M_{\beta{\color{red}\rho}}
+				\,+\,
+				\eta_{\beta\nu}M_{\alpha\rho}
+				\;\,{\color{red}+}\;
+				\eta_{\beta{\color{red}\nu}}M_{\alpha{\color{red}\rho}}
+				\,\right) P_{\sigma}
+			\,\overset{{\color{white}.}}{+}\,
+			M_{\nu\rho} \left(\,
+				-\,\eta_{\sigma\alpha}\,P_{\beta}
+				\, + \,
+				\eta_{\sigma\beta}\,P_{\alpha}
+				\,\right)
+			\,\right)
+	\\
+	& = &
+		\varepsilon^{\mu\nu\rho\sigma}
+		\left(\,
+			\overset{{\color{white}.}}{-}\,
+			\eta_{\alpha\nu}M_{\beta\rho}
+			\,+\,\eta_{\beta\nu}M_{\alpha\rho}
+			\,\right) P_{\sigma}
+		\;+\;
+		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}
+		\left(\,
+			\overset{{\color{white}.}}{-}\,
+			\eta_{\sigma\alpha}\,P_{\beta}
+			\, + \,
+			\eta_{\sigma\beta}\,P_{\alpha}
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		\cdots
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		\eta_{\beta}\!{\color{white}.}^{\mu}\left(\,
+			\dfrac{1}{2}\,\varepsilon_{\alpha\nu\rho\sigma}\,M^{\nu\rho}\,P^{\sigma}
+			\,\right)
+		\,-\,
+		\eta_{\alpha}\!{\color{white}.}^{\mu}\left(\,
+			\dfrac{1}{2}\,\varepsilon_{\beta\nu\rho\sigma}\,M^{\nu\rho}\,P^{\sigma}
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		\eta_{\beta}\!{\color{white}.}^{\mu}\,W_{\alpha}
+		\,-\,
+		\eta_{\alpha}\!{\color{white}.}^{\mu}\,W_{\beta}
+	\end{eqnarray*}
+	}
+	\begin{eqnarray*}
+	&&
+		\left[\,
+			M_{\mu\nu}
+			\,\overset{{\color{white}1}}{,}\,
+			W_{\rho}
+			\,\right]
+	\;\; = \;\;
+		\left[\,
+			M_{\mu\nu}
+			\,\overset{{\color{white}1}}{,}\,
+			\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,M^{\alpha\beta}\,P^{\gamma}
+			\,\right]
+	\;\; = \;\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left[\,
+			M_{\mu\nu}
+			\,\overset{{\color{white}1}}{,}\,
+			M^{\alpha\beta}\,P^{\gamma}
+			\,\right]
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			M_{\mu\nu}\,M^{\alpha\beta}\,P^{\gamma}
+			\,\overset{{\color{white}.}}{-}\,
+			M^{\alpha\beta}\,P^{\gamma}\,M_{\mu\nu}
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			M_{\mu\nu}\,M^{\alpha\beta}\,P^{\gamma}
+			{\color{red}
+			\;\,\overset{{\color{white}.}}{-}\;
+			M^{\alpha\beta}\,M_{\mu\nu}\,P^{\gamma}
+			\,\overset{{\color{white}.}}{+}\,
+			M^{\alpha\beta}\,M_{\mu\nu}\,P^{\gamma}
+			}
+			\,\overset{{\color{white}.}}{-}\,
+			M^{\alpha\beta}\,P^{\gamma}\,M_{\mu\nu}
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			\left[\,M_{\mu\nu}\,,M^{\alpha\beta}\,\right] P^{\gamma}
+			\,\overset{{\color{white}.}}{+}\,
+			M^{\alpha\beta} \left[\,M_{\mu\nu}\,,P^{\gamma}\,\right]
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			\left[\,M_{\mu\nu}\,,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,M_{\lambda\sigma}\,\right] P^{\gamma}
+			\,\overset{{\color{white}.}}{+}\,
+			M^{\alpha\beta} \left[\,M_{\mu\nu}\,,\eta^{\gamma\lambda}\,P_{\lambda}\,\right]
+			\,\right)
+	\\
+	& = &
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			\eta^{\alpha\lambda}\,\eta^{\beta\sigma}
+			\left[\,M_{\mu\nu}\,,M_{\lambda\sigma}\,\right] P^{\gamma}
+			\;\overset{{\color{white}.}}{+}\;
+			\eta^{\gamma\lambda}\,M^{\alpha\beta}
+			\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\,\right)
+	\\
+	& = &
+		{\color{black}+}\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,M_{\lambda\sigma}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\eta_{\lambda\mu}\,M_{\nu\sigma}
+			+\,\eta_{\lambda\nu}\,M_{\mu\sigma}
+			-\,\eta_{\sigma\mu}\,M_{\lambda\nu}
+			+\,\eta_{\sigma\nu}\,M_{\lambda\mu}
+			\,\right)
+		P^{\gamma}
+	\\
+	&&
+		+\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,\eta^{\gamma\lambda}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\eta_{\lambda\mu}\,P_{\nu}
+			\,+\,
+			\eta_{\lambda\nu}\,P_{\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{black}+}\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		%\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,M_{\lambda\sigma}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\lambda\mu}\,M_{\nu\sigma}
+			+\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\lambda\nu}\,M_{\mu\sigma}
+			-\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\sigma\mu}\,M_{\lambda\nu}
+			+\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\sigma\nu}\,M_{\lambda\mu}
+			\,\right)
+		P^{\gamma}
+	\\
+	&&
+		+\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\eta^{\gamma\lambda}\,\eta_{\lambda\mu}\,P_{\nu}
+			\,+\,
+			\eta^{\gamma\lambda}\,\eta_{\lambda\nu}\,P_{\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{black}+}\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			\overset{{\color{white}.}}{-}\,
+			\delta^{\alpha}_{\mu}\,M_{\nu}^{{\color{white}\nu}\beta}
+			+\,\delta^{\alpha}_{\nu}\,M_{\mu}^{{\color{white}\mu}\beta}
+			-\,\delta^{\beta}_{\mu}\,M^{\alpha}_{{\color{white}\alpha}\nu}
+			+\,\delta^{\beta}_{\nu}\,M^{\alpha}_{{\color{white}\alpha}\mu}
+			\,\right)
+		P^{\gamma}
+	\\
+	&&
+		+\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\delta^{\gamma}_{\mu}\,\,P_{\nu}
+			\,+\,
+			\delta^{\gamma}_{\nu}\,P_{\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{black}+}\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			\overset{{\color{white}.}}{-}\,
+			\delta^{\alpha}_{\mu}\,M_{\nu}^{{\color{white}\nu}\beta}
+			+\,\delta^{\alpha}_{\nu}\,M_{\mu}^{{\color{white}\mu}\beta}
+			-\,({\color{red}-1})^{{\color{red}2}}\,\delta^{{\color{red}\alpha}}_{\mu}\,
+				M^{{\color{white}\alpha}{\color{red}\beta}}_{{\color{red}\nu}}
+			+\,({\color{red}-1})^{{\color{red}2}}\,\delta^{{\color{red}\alpha}}_{\nu}\,
+				M^{{\color{white}\alpha}{\color{red}\beta}}_{{\color{red}\mu}}
+			\,\right)
+		P^{\gamma}
+	\\
+	&&
+		+\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\delta^{\gamma}_{\mu}\,\,P_{\nu}
+			\,+\,
+			\delta^{\gamma}_{\nu}\,P_{\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{red}+}\;
+		\varepsilon_{\rho\alpha\beta\gamma}
+		\left(\,
+			\overset{{\color{white}.}}{-}\,
+			\delta^{\alpha}_{\mu}\,M_{\nu}^{{\color{white}\nu}\beta}
+			+\,\delta^{\alpha}_{\nu}\,M_{\mu}^{{\color{white}\mu}\beta}
+			% -\,({\color{red}-1})^{{\color{red}2}}\,\delta^{{\color{red}\alpha}}_{\mu}\,
+			% 	M^{{\color{white}\alpha}{\color{red}\beta}}_{{\color{red}\nu}}
+			% +\,({\color{red}-1})^{{\color{red}2}}\,\delta^{{\color{red}\alpha}}_{\nu}\,
+			% 	M^{{\color{white}\alpha}{\color{red}\beta}}_{{\color{red}\mu}}
+			\,\right)
+		P^{\gamma}
+		\;+\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\delta^{\gamma}_{\mu}\,\,P_{\nu}
+			\,+\,
+			\delta^{\gamma}_{\nu}\,P_{\mu}
+			\,\right)
+	\\ \\ \\
+	% \\
+	% & = &
+	% 	{\color{red}+}\;
+	% 	\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}
+	% 	\left(\,
+	% 		%\left[\,M_{\mu\nu}\,,M_{\lambda\sigma}\,\right]
+	% 		\overset{{\color{white}.}}{-}\,
+	% 		\eta_{\lambda\mu}\,M_{\nu\sigma}
+	% 		+\,\eta_{\lambda\nu}\,M_{\mu\sigma}
+	% 		-\,\eta_{\sigma\mu}\,M_{\lambda\nu}
+	% 		+\,\eta_{\sigma\nu}\,M_{\lambda\mu}
+	% 		\,\right)
+	% 	P^{\gamma}
+	\\
+	& = &
+		{\color{red}-}\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\lambda\mu}\,
+			M_{\nu\sigma}\,P^{\gamma}
+		\,+\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\lambda\nu}\,
+			M_{\mu\sigma}\,P^{\gamma}
+	\\
+	&&
+		-\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+			\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\sigma\mu}
+			\,M_{\lambda\nu}\,P^{\gamma}
+		\,+\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\sigma\nu}\,
+			M_{\lambda\mu}\,P^{\gamma}
+	\\
+	&&
+		+\;
+		% \dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,\eta^{\gamma\lambda}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\dfrac{1}{2}\,
+			\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\gamma\lambda}\,\eta_{\lambda\mu}\,
+			M^{\alpha\beta}\,P_{\nu}
+			\;+\;
+			\dfrac{1}{2}\,
+			\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\gamma\lambda}\,\eta_{\lambda\nu}\,
+			M^{\alpha\beta}\,P_{\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{red}-}\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,
+			\delta^{\alpha}_{\mu}\,M_{\nu}^{{\color{white}\nu}\beta}P^{\gamma}
+		\,+\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\lambda\nu}\,
+			M_{\mu\sigma}\,P^{\gamma}
+	\\
+	&&
+		-\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}
+			\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\sigma\mu}
+			\,M_{\lambda\nu}\,P^{\gamma}
+		\,+\,
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\alpha\lambda}\,\eta^{\beta\sigma}\,\eta_{\sigma\nu}\,
+			M_{\lambda\mu}\,P^{\gamma}
+	\\
+	&&
+		+\;
+		% \dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,\eta^{\gamma\lambda}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\dfrac{1}{2}\,
+			\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\gamma\lambda}\,\eta_{\lambda\mu}\,
+			M^{\alpha\beta}\,P_{\nu}
+			\;+\;
+			\dfrac{1}{2}\,
+			\varepsilon_{\rho\alpha\beta\gamma}\,
+			\eta^{\gamma\lambda}\,\eta_{\lambda\nu}\,
+			M^{\alpha\beta}\,P_{\mu}
+			\,\right)
+	\\
+	& = &
+		{\color{white}+}\;
+		\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,\eta^{\alpha\lambda}\,\eta^{\beta\sigma}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,M_{\lambda\sigma}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\eta_{\lambda\mu}\,M_{\nu\sigma}
+			+\,\eta_{\lambda\nu}\,M_{\mu\sigma}
+			-\,\eta_{\sigma\mu}\,M_{\lambda\nu}
+			+\,\eta_{\sigma\nu}\,M_{\lambda\mu}
+			\,\right)
+		P^{\gamma}
+	\\
+	&&
+		+\;
+		% \dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\gamma}\,\eta^{\gamma\lambda}\,M^{\alpha\beta}
+		\left(\,
+			%\left[\,M_{\mu\nu}\,,P_{\lambda}\,\right]
+			\overset{{\color{white}.}}{-}\,
+			\dfrac{1}{2}\,
+			\varepsilon_{\rho\alpha\beta\gamma}\,
+			\delta^{\gamma}_{\mu}\,%\eta^{\gamma\lambda}\,\eta_{\lambda\mu}\,
+			M^{\alpha\beta}\,P_{\nu}
+			\;+\;
+			\dfrac{1}{2}\,
+			\varepsilon_{\rho\alpha\beta\gamma}\,
+			\delta^{\gamma}_{\nu}\,%\eta^{\gamma\lambda}\,\eta_{\lambda\nu}\,
+			M^{\alpha\beta}\,P_{\mu}
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		\cdots
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		-\;
+		\eta_{\rho\mu}\left(\,
+			\dfrac{1}{2}\,\varepsilon_{\nu\alpha\beta\gamma}\,M^{\alpha\beta}\,P^{\gamma}
+			\,\right)
+		\,+\,
+		\eta_{\rho\nu}\left(\,
+			\dfrac{1}{2}\,\varepsilon_{\mu\alpha\beta\gamma}\,M^{\alpha\beta}\,P^{\gamma}
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		-\;
+		\eta_{\rho\mu}\,W_{\nu}
+		\,+\,
+		\eta_{\rho\nu}\,W_{\mu}
+	\\ \\ \\
 	& = &
 		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
 		\left(\,
