@@ -1848,6 +1848,52 @@ satisfies the following commutation relations with the generators
 	\vskip 0.1cm
 	\noindent
 	Proof of Claim 2:\;\;
+	First, observe that the full anti-symmetrization of an arbitary rank-five tensor
+	defined on $4$-dimensional space must vanish (since repeated indices must occur).
+	Hence, we see that:
+    \begin{equation*}
+    \varepsilon_{[\rho\nu\beta\gamma}\,\eta_{\sigma]\mu}
+    \;\; = \;\;
+    	0
+    \end{equation*}
+    The full expansion of the anti-symmetrized tensor on the left-hand side
+    of the above equation has $5! = 120$ terms.
+    However, due to the anti-symmetry of \,$\varepsilon_{\rho\mu\beta\gamma}$,\,
+    these \,$5! = 120$\, collapse to
+    \,$5 = \left(\begin{array}{c} 5 \\ 4 \end{array}\right)$\,
+    distinct terms.
+    In particular, invoking the anti-symmetry of
+    \,$\varepsilon_{\rho\nu\beta\gamma}$\,
+    and collecting like terms, the above equation simplifies to:
+    \begin{equation*}
+    24\cdot\!\left(\,
+	    \varepsilon_{\rho\nu\beta\gamma}\,\eta_{\sigma\mu}
+	    \,\overset{{\color{white}.}}{-}\,
+	    \varepsilon_{\sigma\nu\beta\gamma}\,\eta_{\rho\mu}
+	    \,+\,
+	    \varepsilon_{\sigma\rho\beta\gamma}\,\eta_{\nu\mu}
+	    \,-\,
+	    \varepsilon_{\sigma\rho\nu\gamma}\,\eta_{\beta\mu}
+	    \,+\,
+	    \varepsilon_{\sigma\rho\nu\beta}\,\eta_{\gamma\mu}
+	    \,\right)
+    \;\; = \;\;
+    	0
+    \end{equation*}
+    Equivalently,
+    \begin{equation*}
+    \varepsilon_{\rho\nu\beta\gamma}\,\eta_{\sigma\mu}
+    \,\overset{{\color{white}.}}{-}\,
+    \varepsilon_{\sigma\nu\beta\gamma}\,\eta_{\rho\mu}
+    \,+\,
+    \varepsilon_{\sigma\rho\beta\gamma}\,\eta_{\nu\mu}
+    \,-\,
+    \varepsilon_{\sigma\rho\nu\gamma}\,\eta_{\beta\mu}
+    \,+\,
+    \varepsilon_{\sigma\rho\nu\beta}\,\eta_{\gamma\mu}
+    \;\; = \;\;
+    	0
+    \end{equation*}
 \end{enumerate}
 \qed
 
@@ -1899,408 +1945,240 @@ are in the centre of
 \proof
 It suffices to show that each of \,$C_{1}$\, and \,$C_{2}$\, commutes with every generator of
 \,$\so(1,3)\ltimes\Re^{1,3}$.\,
-To this end, simply observe the following computations:
+To this end, we first state and prove:
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\quad
+Let \,$Q_{0},\, Q_{1},\, Q_{2},\, Q_{3}$\, be affine operators on \,$\Re^{1,3}$.\,
+Then,
+\begin{equation*}
+\left.\begin{array}{ccl}
+	\left[\,P_{\alpha}\,\overset{{\color{white}1}}{,}\,Q_{\mu}\,\right]
+	& = &
+		0
+	\\
+	\left[\,M_{\alpha\beta}\,\overset{{\color{white}1}}{,}\,Q_{\mu}\,\right]
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		-\,\eta_{\mu\alpha}\,Q_{\beta} \,+\, \eta_{\mu\beta}\,Q_{\alpha} 
+	\end{array}\right\}
+\quad\Longrightarrow\quad
+	\left\{\begin{array}{ccc}
+		\left[\,P_{\alpha}\,\overset{{\color{white}1}}{,}\,Q_{\mu}\,Q^{\mu}\,\right]
+		& = &
+			0
+		\\
+		\left[\,M_{\alpha\beta}\,\overset{{\color{white}1}}{,}\,Q_{\mu}\,Q^{\mu}\,\right]
+		& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+			0
+		\end{array}\right.
+\end{equation*}
+Proof of Claim 1:\;\; We compute
 \begin{eqnarray*}
+{\color{white}.}
 \left[\,
 	P_{\alpha}
 	\,\overset{{\color{white}1}}{,}\,
-	P_{\mu}\,P^{\mu}
+	Q_{\mu}\,Q^{\mu}
 	\,\right]
+	{\color{white}.}
 & = &
-	P_{\alpha}\,P_{\mu}\,P^{\mu}
+	P_{\alpha}\,Q_{\mu}\,Q^{\mu}
 	\;-\;
-	P_{\mu}\,P^{\mu}\,P_{\alpha}
+	Q_{\mu}\,Q^{\mu}\,P_{\alpha}
 % \\
 % & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 \;\; = \;\;
-	P_{\alpha}\,P_{\mu}\,P^{\mu}
+	P_{\alpha}\,Q_{\mu}\,Q^{\mu}
 	{\color{red}
 	\;\,-\;\,
-	P_{\mu}\,P_{\alpha}\,P^{\mu}
+	Q_{\mu}\,P_{\alpha}\,Q^{\mu}
 	\,+\,
-	P_{\mu}\,P_{\alpha}\,P^{\mu}
+	Q_{\mu}\,P_{\alpha}\,Q^{\mu}
 	}
 	\;-\,
-	P_{\mu}\,P^{\mu}\,P_{\alpha}
+	Q_{\mu}\,Q^{\mu}\,P_{\alpha}
 \\
 & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 	\left[\,
 		P_{\alpha}
 		\,\overset{{\color{white}1}}{,}\,
-		P_{\mu}
+		Q_{\mu}
 		\,\right]	
-	P^{\mu}
+	Q^{\mu}
 	\;+\;
-	W_{\mu}
+	Q_{\mu}
 	\left[\,
 		P_{\alpha}
 		\,\overset{{\color{white}1}}{,}\,
-		P^{\mu}
+		Q^{\mu}
 		\,\right]
 \;\; = \;\;
 	\left[\,
 		P_{\alpha}
 		\,\overset{{\color{white}1}}{,}\,
-		P_{\mu}
+		Q_{\mu}
 		\,\right]	
-	P^{\mu}
+	Q^{\mu}
 	\;+\;
-	P_{\mu}
+	Q_{\mu}
 	\left[\,
 		P_{\alpha}
 		\,\overset{{\color{white}1}}{,}\,
-		\eta^{\mu\nu}\,P_{\nu}
+		\eta^{\mu\nu}\,Q_{\nu}
 		\,\right]
 \\
 & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 	\left[\,
 		P_{\alpha}
 		\,\overset{{\color{white}1}}{,}\,
-		P_{\mu}
+		Q_{\mu}
 		\,\right]	
-	P^{\mu}
+	Q^{\mu}
 	\;+\;
-	\eta^{\mu\nu}\,P_{\mu}
+	\eta^{\mu\nu}\,Q_{\mu}
 	\left[\,
 		P_{\alpha}
 		\,\overset{{\color{white}1}}{,}\,
-		P_{\nu}
+		Q_{\nu}
 		\,\right]
 \;\; = \;\;
-	0 \cdot P^{\mu}
+	0 \cdot Q^{\mu}
 	\;+\;
-	\eta^{\mu\nu}\,P_{\mu}\cdot 0
+	\eta^{\mu\nu}\,Q_{\mu}\cdot 0
 \\
 & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 	0
-\end{eqnarray*}
-\vskip -0.6cm
-\begin{eqnarray*}
+\\ \\
 \left[\,
 	M_{\alpha\beta}
 	\,\overset{{\color{white}1}}{,}\,
-	P_{\mu}\,P^{\mu}
+	Q_{\mu}\,Q^{\mu}
 	\,\right]
 & = &
-	M_{\alpha\beta}\,P_{\mu}\,P^{\mu}
+	M_{\alpha\beta}\,Q_{\mu}\,Q^{\mu}
 	\,-\,
-	P_{\mu}\,P^{\mu}\,M_{\alpha\beta}
+	Q_{\mu}\,Q^{\mu}\,M_{\alpha\beta}
 % \\
 % & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 \;\; = \;\;
-	M_{\alpha\beta}\,P_{\mu}\,P^{\mu}
+	M_{\alpha\beta}\,Q_{\mu}\,Q^{\mu}
 	{\color{red}
 	\;\,-\;\,
-	P_{\mu}\,M_{\alpha\beta}\,P^{\mu}
+	Q_{\mu}\,M_{\alpha\beta}\,Q^{\mu}
 	\,+\,
-	P_{\mu}\,M_{\alpha\beta}\,P^{\mu}
+	Q_{\mu}\,M_{\alpha\beta}\,Q^{\mu}
 	}
 	\;-\,
-	P_{\mu}\,P^{\mu}\,M_{\alpha\beta}
+	Q_{\mu}\,Q^{\mu}\,M_{\alpha\beta}
 \\
 & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 	\left[\,
 		M_{\alpha\beta}
 		\,\overset{{\color{white}1}}{,}\,
-		P_{\mu}
+		Q_{\mu}
 		\,\right]
-	P^{\mu}
+	Q^{\mu}
 	\;+\;
-	P_{\mu}
+	Q_{\mu}
 	\left[\,
 		M_{\alpha\beta}
 		\,\overset{{\color{white}1}}{,}\,
-		P^{\mu}
+		Q^{\mu}
 		\,\right]
-\\
-& = &
-	\left(\,
-		-\,\eta_{\mu\alpha}\,P_{\beta}
-		\,\overset{{\color{white}.}}{+}\,
-		\eta_{\mu\beta}\,P_{\alpha}
-		\,\right)
-	P^{\mu}
-	\;+\;
-	P_{\mu}
+\;\; = \;\;
 	\left[\,
 		M_{\alpha\beta}
 		\,\overset{{\color{white}1}}{,}\,
-		\eta^{\mu\nu}\,P_{\nu}
+		Q_{\mu}
 		\,\right]
-\\
-& = &
-	\left(\,
-		-\,P_{\beta}\,P_{\alpha}
-		\,\overset{{\color{white}.}}{+}\,
-		P_{\alpha}\,P_{\beta}
-		\,\right)
+	Q^{\mu}
 	\;+\;
-	\eta^{\mu\nu}\,P_{\mu}
+	Q_{\mu}
 	\left[\,
 		M_{\alpha\beta}
 		\,\overset{{\color{white}1}}{,}\,
-		P_{\nu}
+		\eta^{\mu\nu}\,Q_{\nu}
 		\,\right]
 \\
 & = &
-	\left(\,
-		-\,P_{\beta}\,P_{\alpha}
-		\,\overset{{\color{white}.}}{+}\,
-		P_{\alpha}\,P_{\beta}
-		\,\right)
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		Q_{\mu}
+		\,\right]
+	Q^{\mu}
 	\;+\;
-	\eta^{\mu\nu}\,P_{\mu}
+	\eta^{\mu\nu}\,Q_{\mu}
+	\left[\,
+		M_{\alpha\beta}
+		\,\overset{{\color{white}1}}{,}\,
+		Q_{\nu}
+		\,\right]
+\\
+& {\color{black}=} &
 	\left(\,
-		-\,\eta_{\nu\alpha}\,P_{\beta}
+		-\,\eta_{\mu\alpha}\,Q_{\beta}
 		\,\overset{{\color{white}.}}{+}\,
-		\eta_{\nu\beta}\,P_{\alpha}
+		\eta_{\mu\beta}\,Q_{\alpha}
+		\,\right)
+	Q^{\mu}
+	\;+\;
+	\eta^{\mu\nu}\,Q_{\mu}
+	\left(\,
+		-\,\eta_{\nu\alpha}\,Q_{\beta}
+		\,\overset{{\color{white}.}}{+}\,
+		\eta_{\nu\beta}\,Q_{\alpha}
 		\,\right)
 \\
 & = &
 	\left(\,
-		-\,P_{\beta}\,P_{\alpha}
+		-\,Q_{\beta}\,Q_{\alpha}
 		\,\overset{{\color{white}.}}{+}\,
-		P_{\alpha}\,P_{\beta}
+		Q_{\alpha}\,P_{\beta}
 		\,\right)
 	\;+\;
 	\left(\,
-		-\,\eta^{\mu\nu}\,\eta_{\nu\alpha}\,P_{\mu}\,P_{\beta}
+		-\,\eta^{\mu\nu}\,\eta_{\nu\alpha}\,Q_{\mu}\,Q_{\beta}
 		\,\overset{{\color{white}.}}{+}\,
-		\eta^{\mu\nu}\,\eta_{\nu\beta}\,P_{\mu}\,P_{\alpha}
+		\eta^{\mu\nu}\,\eta_{\nu\beta}\,Q_{\mu}\,Q_{\alpha}
 		\,\right)
 \\
 & = &
 	\left(\,
-		-\,P_{\beta}\,P_{\alpha}
+		-\,Q_{\beta}\,Q_{\alpha}
 		\,\overset{{\color{white}.}}{+}\,
-		P_{\alpha}\,P_{\beta}
+		Q_{\alpha}\,Q_{\beta}
 		\,\right)
 	\;+\;
 	\left(\,
-		-\,\delta^{\mu}_{\alpha}\,P_{\mu}\,P_{\beta}
+		-\,\delta^{\mu}_{\alpha}\,Q_{\mu}\,Q_{\beta}
 		\,\overset{{\color{white}.}}{+}\,
-		\delta^{\mu}_{\beta}\,P_{\mu}\,P_{\alpha}
+		\delta^{\mu}_{\beta}\,Q_{\mu}\,Q_{\alpha}
 		\,\right)
 \\
 & = &
 	\left(\,
-		-\,P_{\beta}\,P_{\alpha}
+		-\,Q_{\beta}\,Q_{\alpha}
 		\,\overset{{\color{white}.}}{+}\,
-		P_{\alpha}\,P_{\beta}
+		Q_{\alpha}\,Q_{\beta}
 		\,\right)
 	\;+\;
 	\left(\,
-		-\,P_{\alpha}\,P_{\beta}
+		-\,Q_{\alpha}\,Q_{\beta}
 		\,\overset{{\color{white}.}}{+}\,
-		P_{\beta}\,P_{\alpha}
+		Q_{\beta}\,Q_{\alpha}
 		\,\right)
 \\
 & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
 	0
 \end{eqnarray*}
-\vskip -0.6cm
-\begin{eqnarray*}
-\left[\,
-	P_{\alpha}
-	\,\overset{{\color{white}1}}{,}\,
-	W_{\mu}\,W^{\mu}
-	\,\right]
-& = &
-	P_{\alpha}\,W_{\mu}\,W^{\mu}
-	\;-\;
-	W_{\mu}\,W^{\mu}\,P_{\alpha}
-% \\
-% & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
-\;\; = \;\;
-	P_{\alpha}\,W_{\mu}\,W^{\mu}
-	{\color{red}
-	\;\,-\;\,
-	W_{\mu}\,P_{\alpha}\,W^{\mu}
-	\,+\,
-	W_{\mu}\,P_{\alpha}\,W^{\mu}
-	}
-	\;-\,
-	W_{\mu}\,W^{\mu}\,P_{\alpha}
-\\
-& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
-	\left[\,
-		P_{\alpha}
-		\,\overset{{\color{white}1}}{,}\,
-		W_{\mu}
-		\,\right]	
-	W^{\mu}
-	\;+\;
-	W_{\mu}
-	\left[\,
-		P_{\alpha}
-		\,\overset{{\color{white}1}}{,}\,
-		W^{\mu}
-		\,\right]
-\;\; = \;\;
-	\left[\,
-		P_{\alpha}
-		\,\overset{{\color{white}1}}{,}\,
-		W_{\mu}
-		\,\right]	
-	W^{\mu}
-	\;+\;
-	W_{\mu}
-	\left[\,
-		P_{\alpha}
-		\,\overset{{\color{white}1}}{,}\,
-		\eta^{\mu\nu}\,W_{\nu}
-		\,\right]
-\\
-& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
-	\left[\,
-		P_{\alpha}
-		\,\overset{{\color{white}1}}{,}\,
-		W_{\mu}
-		\,\right]	
-	W^{\mu}
-	\;+\;
-	\eta^{\mu\nu}\,W_{\mu}
-	\left[\,
-		P_{\alpha}
-		\,\overset{{\color{white}1}}{,}\,
-		W_{\nu}
-		\,\right]
-\;\; = \;\;
-	0 \cdot W^{\mu}
-	\;+\;
-	\eta^{\mu\nu}\,W_{\mu}\cdot 0
-\\
-& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
-	0
-\end{eqnarray*}
-\vskip -0.6cm
-\begin{eqnarray*}
-\left[\,
-	M_{\alpha\beta}
-	\,\overset{{\color{white}1}}{,}\,
-	W_{\mu}\,W^{\mu}
-	\,\right]
-& = &
-	M_{\alpha\beta}\,W_{\mu}\,W^{\mu}
-	\,-\,
-	W_{\mu}\,W^{\mu}\,M_{\alpha\beta}
-% \\
-% & \overset{{\color{white}\textnormal{\small$1$}}}{=} &
-\;\; = \;\;
-	\textnormal{\small
-	$
-	M_{\alpha\beta}\,W_{\mu}\,W^{\mu}
-	{\color{red}
-	\;-\;
-	W_{\mu}\,M_{\alpha\beta}\,W^{\mu}
-	\,+\,
-	W_{\mu}\,M_{\alpha\beta}\,W^{\mu}
-	}
-	\;-\,
-	W_{\mu}\,W^{\mu}\,M_{\alpha\beta}
-	$
-	}
-\\
-& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
-	\left[\,
-		M_{\alpha\beta}
-		\,\overset{{\color{white}1}}{,}\,
-		W_{\mu}
-		\,\right]
-	W^{\mu}
-	\;+\;
-	W_{\mu}
-	\left[\,
-		M_{\alpha\beta}
-		\,\overset{{\color{white}1}}{,}\,
-		W^{\mu}
-		\,\right]
-\\
-& = &
-	\left(\,
-		-\,\eta_{\mu\alpha}\,W_{\beta}
-		\,\overset{{\color{white}.}}{+}\,
-		\eta_{\mu\beta}\,W_{\alpha}
-		\,\right)
-	W^{\mu}
-	\;+\;
-	W_{\mu}
-	\left[\,
-		M_{\alpha\beta}
-		\,\overset{{\color{white}1}}{,}\,
-		\eta^{\mu\nu}\,W_{\nu}
-		\,\right]
-\\
-& = &
-	\left(\,
-		-\,W_{\beta}\,W_{\alpha}
-		\,\overset{{\color{white}.}}{+}\,
-		W_{\alpha}\,W_{\beta}
-		\,\right)
-	\;+\;
-	\eta^{\mu\nu}\,W_{\mu}
-	\left[\,
-		M_{\alpha\beta}
-		\,\overset{{\color{white}1}}{,}\,
-		W_{\nu}
-		\,\right]
-\\
-& = &
-	\left(\,
-		-\,W_{\beta}\,W_{\alpha}
-		\,\overset{{\color{white}.}}{+}\,
-		W_{\alpha}\,W_{\beta}
-		\,\right)
-	\;+\;
-	\eta^{\mu\nu}\,W_{\mu}
-	\left(\,
-		-\,\eta_{\nu\alpha}\,W_{\beta}
-		\,\overset{{\color{white}.}}{+}\,
-		\eta_{\nu\beta}\,W_{\alpha}
-		\,\right)
-\\
-& = &
-	\left(\,
-		-\,W_{\beta}\,W_{\alpha}
-		\,\overset{{\color{white}.}}{+}\,
-		W_{\alpha}\,W_{\beta}
-		\,\right)
-	\;+\;
-	\left(\,
-		-\,\eta^{\mu\nu}\,\eta_{\nu\alpha}\,W_{\mu}\,W_{\beta}
-		\,\overset{{\color{white}.}}{+}\,
-		\eta^{\mu\nu}\,\eta_{\nu\beta}\,W_{\mu}\,W_{\alpha}
-		\,\right)
-\\
-& = &
-	\left(\,
-		-\,W_{\beta}\,W_{\alpha}
-		\,\overset{{\color{white}.}}{+}\,
-		W_{\alpha}\,W_{\beta}
-		\,\right)
-	\;+\;
-	\left(\,
-		-\,\delta^{\mu}_{\alpha}\,W_{\mu}\,W_{\beta}
-		\,\overset{{\color{white}.}}{+}\,
-		\delta^{\mu}_{\beta}\,W_{\mu}\,W_{\alpha}
-		\,\right)
-\\
-& = &
-	\left(\,
-		-\,W_{\beta}\,W_{\alpha}
-		\,\overset{{\color{white}.}}{+}\,
-		W_{\alpha}\,W_{\beta}
-		\,\right)
-	\;+\;
-	\left(\,
-		-\,W_{\alpha}\,W_{\beta}
-		\,\overset{{\color{white}.}}{+}\,
-		W_{\beta}\,W_{\alpha}
-		\,\right)
-\\
-& \overset{{\color{white}\textnormal{\small$1$}}}{=} &
-	0
-\end{eqnarray*}
+This proves Claim 1.
+\vskip 0.3cm
+\noindent
+The Theorem now follows immediately from Claim 1, since both
+\,$P_{\mu}$\, and \,$W_{\mu}$\,
+satisfy the hypothesis of Claim 1.
 This completes the proof of the Theorem.
 \qed
 
