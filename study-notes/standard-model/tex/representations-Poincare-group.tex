@@ -1073,19 +1073,12 @@ where
 \vskip 0.1cm
 \noindent
 Suppose:
-\begin{itemize}
-\item
-	$Q_{0},\, Q_{1},\, Q_{2},\, Q_{3}$\, are $\C$-linear operators
-	on a complex Hilbert space \,$\mathcal{H}$,\, and
-\item
-	$U : \SOup(1,3) \longrightarrow U(\mathcal{H})$\,
-	is a unitary representation of the proper orthochronous Lorentz group
-	\,$\SOup(1,3)$\, on \,$\mathcal{H}$.
-\end{itemize}
-The quantity
+\,$Q_{0},\, Q_{1},\, Q_{2},\, Q_{3}$\,
+are affine operators on \,$\Re^{1,3}$.\,
+Then, the quantity
 \,$\left(\,Q_{\mu}\,\right) \,:=\, \left(\,Q_{0},Q_{1},Q_{2},Q_{4}\,\right)$\,
-transforms as a $4$-vector (with respect to the unitary representation $U$)
-if and only if \,$Q_{\mu}$\, satisfies the following commutation relations:
+transforms as a Lorentz $4$-vector if and only if
+\,$Q_{\mu}$\, satisfies the following commutation relations:
 \begin{equation*}
 \left[\,M_{\mu\nu}
 	\,\overset{{\color{white}1}}{,}\,
@@ -1098,14 +1091,17 @@ if and only if \,$Q_{\mu}$\, satisfies the following commutation relations:
 \end{equation*}
 \end{proposition}
 \proof
-That \,$Q_{\mu}$\, transforms as a $4$-vector means the following:
+That \,$Q_{\mu}$\, transforms as a Lorentz $4$-vector means the following:
 \begin{equation*}
 U(\Lambda)^{-1} \,\circ\, Q_{\mu} \,\circ\, U(\Lambda)
 \;\; = \;\;
-	\Lambda_{\mu}^{{\color{white}\mu}\nu}\,Q_{\nu}
+	\Lambda_{\mu}^{{\color{white}\mu}\nu}\,Q_{\nu}\,,
 \end{equation*}
+where
+\,$U : \SOup(1,3) \longrightarrow \Isom(\Re^{1,3})$\,
+is the canonical representation.
 We will establish that the desired commutation relation
-is an infinitesimal version of this transformation law.
+is an infinitesimal version of the above transformation law.
 \begin{equation*}
 \Lambda_{\mu}^{{\color{white}\mu}\nu}
 \;\; = \;\;
