@@ -517,6 +517,7 @@ This completes the proof of the Proposition.
 
 \vskip 0.5cm
 \begin{proposition}[Commutation relations of $P_{\mu}$ and $M_{\mu\nu}$]
+\label{CommRelationsPM}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1068,7 +1069,8 @@ where
 \end{enumerate}
 
 \vskip 0.5cm
-\begin{proposition}
+\begin{proposition}[Infinitesimal transformation law for Lorentz $4$-vectors]
+\label{InfinitesimalLorentzFourVectorTransformationLaw}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1090,8 +1092,27 @@ transforms as a Lorentz $4$-vector if and only if
 	\,\eta_{\rho\nu}\,Q_{\mu}
 \end{equation*}
 \end{proposition}
-\proof
-That \,$Q_{\mu}$\, transforms as a Lorentz $4$-vector means the following:
+
+\vskip 0.3cm
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+By Proposition \ref{InfinitesimalLorentzFourVectorTransformationLaw}, we see that
+the transformation law in Proposition \ref{CommRelationsPM}(ii)
+shows that \,$P_{\mu}$\, form a Lorentz four-vector (of affine operators on \,$\Re^{1,3}$).
+Similarly, the transformation law in Proposition \ref{CommRelationsPauliLubanski}(ii)
+shows that the Pauli-Lubanski vector \,$W_{\mu}$\,
+(see Definition \ref{DefnPauliLubanskiFourVector} below)
+indeed form a Lorentz four-vector (of affine operators on \,$\Re^{1,3}$).
+\end{remark}
+
+\vskip 0.3cm
+\noindent
+\proofof Proposition \ref{InfinitesimalLorentzFourVectorTransformationLaw}
+\vskip 0.1cm
+\noindent
+That \,$\left(\,Q_{\mu}\,\right)$\, transforms as a Lorentz $4$-vector means the following:
 \begin{equation*}
 U(\Lambda)^{-1} \,\circ\, Q_{\mu} \,\circ\, U(\Lambda)
 \;\; = \;\;
@@ -1274,6 +1295,7 @@ as required.
 
 \vskip 0.5cm
 \begin{definition}[Pauli-Lubanski $4$-vector]
+\label{DefnPauliLubanskiFourVector}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1287,6 +1309,7 @@ W_{\mu}
 
 \vskip 0.5cm
 \begin{proposition}[Commutation relations of Pauli-Lubanski $4$-vector with $P_{\mu}$ and $M_{\mu\nu}$]
+\label{CommRelationsPauliLubanski}
 \mbox{}
 \vskip 0.1cm
 \noindent
