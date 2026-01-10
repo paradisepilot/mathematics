@@ -1290,7 +1290,7 @@ W_{\mu}
 \end{definition}
 
 \vskip 0.5cm
-\begin{proposition}[Properties of the Pauli-Lubanski $4$-vector]
+\begin{proposition}[Commutation relations of Pauli-Lubanski $4$-vector with $P_{\mu}$ and $M_{\mu\nu}$]
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1385,207 +1385,6 @@ satisfies the following commutation relations with the generators
 		0
 	\end{eqnarray*}
 \item
-	% {\color{gray}
-	% \textbf{Claim 1:}\quad
-	% $W^{\mu}P_{\mu} \,=\, 0$
-	% \vskip 0.1cm
-	% \noindent
-	% Proof of Claim 1:\;\;
-	% \begin{equation*}
-	% W^{\mu}\,P_{\mu}
-	% \;\; = \;\;
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
-	% 	\cdot
-	% 	P_{\mu}
-	% \;\; = \;\;
-	% 	0\,,
-	% \end{equation*}
-	% where the last equality follows from the anti-symmetry of
-	% \,$\varepsilon^{\mu\nu\rho\sigma}$\, (in \,$\mu, \nu, \rho, \sigma$)
-	% and the symmetry of
-	% \,$P_{\sigma}P_{\mu}$\, (in \,$\sigma, \mu$).
-	% This proves Claim 1.
-
-	% \begin{eqnarray*}
-	% \left[\,M_{\kappa\lambda}\,,W^{\mu}P_{\mu}\,\right]
-	% & = &
-	% 	M_{\kappa\lambda}\,W^{\mu}\,P_{\mu}
-	% 	\,-\,
-	% 	W^{\mu}\,P_{\mu}\,M_{\kappa\lambda}
-	% \\
-	% & = &
-	% 	M_{\kappa\lambda}\,W^{\mu}\,P_{\mu}
-	% 	{\color{red}
-	% 	\;-\;
-	% 	W^{\mu}\,M_{\kappa\lambda}\,P_{\mu}
-	% 	\,+\,
-	% 	W^{\mu}\,M_{\kappa\lambda}\,P_{\mu}
-	% 	}
-	% 	\,-\,
-	% 	W^{\mu}\,P_{\mu}\,M_{\kappa\lambda}
-	% \\
-	% & = &
-	% 	\left[\,M_{\kappa\lambda}\,,W^{\mu}\,\right] P_{\mu}
-	% 	\,+\,
-	% 	W^{\mu} \left[\,M_{\kappa\lambda}\,,P_{\mu}\,\right]
-	% \\
-	% & = &
-	% 	\left[\,M_{\kappa\lambda}\,,W^{\mu}\,\right] P_{\mu}
-	% 	\,+\,
-	% 	W^{\mu} \left(\,-\,\eta_{\mu\kappa}\,P_{\lambda}\,+\,\eta_{\mu\lambda}\,P_{\kappa}\,\right)
-	% \end{eqnarray*}
-
-	% \begin{eqnarray*}
-	% \left[\,M_{\alpha\beta}\,,W^{\mu}\,\right] P_{\mu}
-	% & = &
-	% 	W^{\mu} \left(\,
-	% 		\eta_{\mu\alpha}\,P_{\beta}
-	% 		\,-\,
-	% 		\eta_{\mu\beta}\,P_{\alpha}
-	% 		\,\right)
-	% \;\; = \;\;
-	% 		W_{\alpha}\,\delta^{\mu}_{\beta}\,P_{\mu}
-	% 		\,-\,
-	% 		W_{\beta}\,\delta^{\mu}_{\alpha}\,P_{\mu}
-	% \\
-	% & = &
-	% 	\left(\,
-	% 		W_{\alpha}\,\delta^{\mu}_{\beta}
-	% 		\,-\,
-	% 		W_{\beta}\,\delta^{\mu}_{\alpha}
-	% 		\,\right)
-	% 		P_{\mu}
-	% \end{eqnarray*}
-	% \vskip 0.3cm
-	% \noindent
-	% We compute:
-	% \begin{eqnarray*}
-	% \left[\,
-	% 	M_{\alpha\beta}
-	% 	\,\overset{{\color{white}1}}{,}\,
-	% 	W^{\mu}
-	% 	\,\right]
-	% & = &
-	% 	\left[\,
-	% 		M_{\alpha\beta}
-	% 		\,\overset{{\color{white}1}}{,}\,
-	% 		\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}\,P_{\sigma}
-	% 		\,\right]
-	% \;\; = \;\;
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left[\,
-	% 		M_{\alpha\beta}
-	% 		\,\overset{{\color{white}1}}{,}\,
-	% 		M_{\nu\rho}\,P_{\sigma}
-	% 		\,\right]
-	% \\
-	% & = &
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left(\,
-	% 		M_{\alpha\beta}\,M_{\nu\rho}\,P_{\sigma}
-	% 		\,\overset{{\color{white}.}}{-}\,
-	% 		M_{\nu\rho}\,P_{\sigma}\,M_{\alpha\beta}
-	% 		\,\right)
-	% \\
-	% & = &
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left(\,
-	% 		M_{\alpha\beta}\,M_{\nu\rho}\,P_{\sigma}
-	% 		{\color{red}
-	% 		\;\,\overset{{\color{white}.}}{-}\;
-	% 		M_{\nu\rho}\,M_{\alpha\beta}\,P_{\sigma}
-	% 		\,\overset{{\color{white}.}}{+}\,
-	% 		M_{\nu\rho}\,M_{\alpha\beta}\,P_{\sigma}
-	% 		}
-	% 		\,\overset{{\color{white}.}}{-}\,
-	% 		M_{\nu\rho}\,P_{\sigma}\,M_{\alpha\beta}
-	% 		\,\right)
-	% \\
-	% & = &
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left(\,
-	% 		\left[\,M_{\alpha\beta}\,,M_{\nu\rho}\,\right] P_{\sigma}
-	% 		\,\overset{{\color{white}.}}{+}\,
-	% 		M_{\nu\rho} \left[\,M_{\alpha\beta}\,,P_{\sigma}\,\right]
-	% 		\,\right)
-	% \\
-	% & = &
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left(\,
-	% 		\left(\,
-	% 			\,-\,
-	% 			\eta_{\alpha\nu}M_{\beta\rho}
-	% 			\,+\,
-	% 			\eta_{\alpha\rho}M_{\beta\nu}
-	% 			\,+\,
-	% 			\eta_{\beta\nu}M_{\alpha\rho}
-	% 			\,-\,
-	% 			\eta_{\beta\rho}M_{\alpha\nu}
-	% 			\,\right) P_{\sigma}
-	% 		\,\overset{{\color{white}.}}{+}\,
-	% 		M_{\nu\rho} \left(\,
-	% 			-\,\eta_{\sigma\alpha}\,P_{\beta}
-	% 			\, + \,
-	% 			\eta_{\sigma\beta}\,P_{\alpha}
-	% 			\,\right)
-	% 		\,\right)
-	% \\
-	% & = &
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left(\,
-	% 		\left(\,
-	% 			\,-\,
-	% 			\eta_{\alpha\nu}M_{\beta\rho}
-	% 			\;\,{\color{red}-}\;
-	% 			\eta_{\alpha{\color{red}\nu}}M_{\beta{\color{red}\rho}}
-	% 			\,+\,
-	% 			\eta_{\beta\nu}M_{\alpha\rho}
-	% 			\;\,{\color{red}+}\;
-	% 			\eta_{\beta{\color{red}\nu}}M_{\alpha{\color{red}\rho}}
-	% 			\,\right) P_{\sigma}
-	% 		\,\overset{{\color{white}.}}{+}\,
-	% 		M_{\nu\rho} \left(\,
-	% 			-\,\eta_{\sigma\alpha}\,P_{\beta}
-	% 			\, + \,
-	% 			\eta_{\sigma\beta}\,P_{\alpha}
-	% 			\,\right)
-	% 		\,\right)
-	% \\
-	% & = &
-	% 	\varepsilon^{\mu\nu\rho\sigma}
-	% 	\left(\,
-	% 		\overset{{\color{white}.}}{-}\,
-	% 		\eta_{\alpha\nu}M_{\beta\rho}
-	% 		\,+\,\eta_{\beta\nu}M_{\alpha\rho}
-	% 		\,\right) P_{\sigma}
-	% 	\;+\;
-	% 	\dfrac{1}{2}\,\varepsilon^{\mu\nu\rho\sigma}\,M_{\nu\rho}
-	% 	\left(\,
-	% 		\overset{{\color{white}.}}{-}\,
-	% 		\eta_{\sigma\alpha}\,P_{\beta}
-	% 		\, + \,
-	% 		\eta_{\sigma\beta}\,P_{\alpha}
-	% 		\,\right)
-	% \\
-	% & \overset{{\color{white}\textnormal{\large$1$}}}{=} &
-	% 	\cdots
-	% \\
-	% & \overset{{\color{white}\textnormal{\large$1$}}}{=} &
-	% 	\eta_{\beta}\!{\color{white}.}^{\mu}\left(\,
-	% 		\dfrac{1}{2}\,\varepsilon_{\alpha\nu\rho\sigma}\,M^{\nu\rho}\,P^{\sigma}
-	% 		\,\right)
-	% 	\,-\,
-	% 	\eta_{\alpha}\!{\color{white}.}^{\mu}\left(\,
-	% 		\dfrac{1}{2}\,\varepsilon_{\beta\nu\rho\sigma}\,M^{\nu\rho}\,P^{\sigma}
-	% 		\,\right)
-	% \\
-	% & \overset{{\color{white}\textnormal{\large$1$}}}{=} &
-	% 	\eta_{\beta}\!{\color{white}.}^{\mu}\,W_{\alpha}
-	% 	\,-\,
-	% 	\eta_{\alpha}\!{\color{white}.}^{\mu}\,W_{\beta}
-	% \end{eqnarray*}
-	% }
-	\vskip 0.3cm
 	\noindent
 	\textbf{Claim 1:}\quad
 	$
@@ -1594,20 +1393,20 @@ satisfies the following commutation relations with the generators
 		\,\overset{{\color{white}1}}{,}\,
 		W_{\rho}
 		\,\right]
-	\;\; = \;\;
+	\; = \;
 		\left(\,
 			\varepsilon_{\rho\nu\beta\gamma}\,
 			M_{\mu}^{{\color{white}\mu}\beta}P^{\gamma}
-			\,+\,
-			\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\nu}\,
+			+
+			\dfrac{1}{2}\,\varepsilon_{\rho\nu\alpha\beta}\,
 			M^{\alpha\beta}P_{\mu}
 			\,\right)
-		\,-\,
+		\;-\;
 		\left(\,
 			\varepsilon_{\rho\mu\beta\gamma}\,
 			M_{\nu}^{{\color{white}\nu}\beta}P^{\gamma}
-			\,+\,
-			\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\mu}\,
+			+
+			\dfrac{1}{2}\,\varepsilon_{\rho\mu\alpha\beta}\,
 			M^{\alpha\beta}P_{\nu}
 			\,\right)
 	$
@@ -1821,7 +1620,7 @@ satisfies the following commutation relations with the generators
 			\varepsilon_{\rho\nu\beta\gamma}\,
 			M_{\mu}^{{\color{white}\mu}\beta}P^{\gamma}
 			\,+\,
-			\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\nu}\,
+			\dfrac{1}{2}\,\varepsilon_{\rho{\color{red}\nu}\alpha\beta}\,
 			M^{\alpha\beta}P_{\mu}
 			\,\right)
 		\,-\,
@@ -1829,7 +1628,7 @@ satisfies the following commutation relations with the generators
 			\varepsilon_{\rho\mu\beta\gamma}\,
 			M_{\nu}^{{\color{white}\nu}\beta}P^{\gamma}
 			\,+\,
-			\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\mu}\,
+			\dfrac{1}{2}\,\varepsilon_{\rho{\color{red}\mu}\alpha\beta}\,
 			M^{\alpha\beta}P_{\nu}
 			\,\right)
 	\end{eqnarray*}
@@ -1843,7 +1642,7 @@ satisfies the following commutation relations with the generators
 	\dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\nu}\,
 	M^{\alpha\beta}P_{\mu}
 	\;\; = \;\;
-		\eta_{\rho\nu}\,W_{\mu}
+	    -\,\eta_{\rho\mu}\,W_{\nu} \,+\, \eta_{\nu\mu}\,W_{\rho}
 	$
 	\vskip 0.1cm
 	\noindent
@@ -1856,15 +1655,17 @@ satisfies the following commutation relations with the generators
     \;\; = \;\;
     	0
     \end{equation*}
-    The full expansion of the anti-symmetrized tensor on the left-hand side
-    of the above equation has $5! = 120$ terms.
+    The full unsimplified expansion of the anti-symmetrized tensor
+    on the left-hand side of the above equation has $5! = 120$ terms.
     However, due to the anti-symmetry of \,$\varepsilon_{\rho\mu\beta\gamma}$,\,
-    these \,$5! = 120$\, collapse to
-    \,$5 = \left(\begin{array}{c} 5 \\ 4 \end{array}\right)$\,
-    distinct terms.
+    these \,$5! = 120$\, terms collapse to
+    \,$\left(\begin{array}{c} 5 \\ 4 \end{array}\right) = 5$\,
+    distinct terms (number of ways to choose 4 among the five indices
+    \,$\rho,\nu,\beta,\gamma,\eta,\sigma$\, to appear in the fully anti-symmetric Levi-Civita tensor
+    \,$\varepsilon_{****}$).
     In particular, invoking the anti-symmetry of
     \,$\varepsilon_{\rho\nu\beta\gamma}$\,
-    and collecting like terms, the above equation simplifies to:
+    and collecting like terms, the preceding equation reduces to:
     \begin{equation*}
     24\cdot\!\left(\,
 	    \varepsilon_{\rho\nu\beta\gamma}\,\eta_{\sigma\mu}
@@ -1894,8 +1695,158 @@ satisfies the following commutation relations with the generators
     \;\; = \;\;
     	0
     \end{equation*}
+    Multiplying the precdding equation through by
+    \,$\dfrac{1}{2}\,M^{\nu\beta}P^{\gamma}$\,
+    yields:
+    \begin{eqnarray*}
+    0
+    & = &
+	    {\color{white}\,+\,}
+    	\dfrac{1}{2}\,\varepsilon_{\rho\nu\beta\gamma}\,\eta_{\sigma\mu}\,M^{\nu\beta}P^{\gamma}
+	    \,\overset{{\color{white}.}}{-}\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\nu\beta\gamma}\,\eta_{\rho\mu}\,M^{\nu\beta}P^{\gamma}
+    \\
+    &&
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\beta\gamma}\,\eta_{\nu\mu}\,M^{\nu\beta}P^{\gamma}
+	    \,-\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\nu\gamma}\,\eta_{\beta\mu}\,M^{\nu\beta}P^{\gamma}
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\nu\beta}\,\eta_{\gamma\mu}\,M^{\nu\beta}P^{\gamma}
+	\\
+    & = &
+	    {\color{white}\,+\,}
+	    \eta_{\sigma\mu}\left(\,
+    	    \dfrac{1}{2}\,\varepsilon_{\rho\nu\beta\gamma}\,M^{\nu\beta}P^{\gamma}
+	    	\,\right)
+	    \,\overset{{\color{white}.}}{-}\,
+	    \eta_{\rho\mu}\left(\,
+		    \dfrac{1}{2}\,\varepsilon_{\sigma\nu\beta\gamma}\,M^{\nu\beta}P^{\gamma}
+	    	\,\right)
+    \\
+    &&
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\beta\gamma}\,\eta_{\nu\mu}\,M^{\nu\beta}P^{\gamma}
+	    \,-\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho{\color{red}\beta}\gamma}\,\eta_{{\color{red}\nu}\mu}\,
+	    	M^{{\color{red}\beta\nu}}P^{\gamma}
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\nu\beta}\,\eta_{\gamma\mu}\,M^{\nu\beta}P^{\gamma}
+	\\
+    & \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+	    {\color{white}\,+\,}
+	    \eta_{\sigma\mu}\,W_{\rho}
+	    \,\overset{{\color{white}.}}{-}\,
+	    \eta_{\rho\mu}\,W_{\sigma}
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\beta\gamma}\,\eta_{\nu\mu}
+	    	\left(\,
+	    		M^{\nu\beta}
+	    		\,\overset{{\color{white}.}}{-}\,
+	    		{\color{red}(-1)}\,M^{{\color{red}\nu\beta}}
+	    		\,\right)
+			P^{\gamma}
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\nu\beta}\,\eta_{\gamma\mu}\,M^{\nu\beta}P^{\gamma}
+	\\
+    & \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+	    {\color{white}\,+\,}
+	    \eta_{\sigma\mu}\,W_{\rho}
+	    \,\overset{{\color{white}.}}{-}\,
+	    \eta_{\rho\mu}\,W_{\sigma}
+	    \,+\,
+	    \varepsilon_{\sigma\rho\beta\gamma}\,\eta_{\nu\mu}\,M^{\nu\beta}P^{\gamma}
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho{\color{red}\alpha}\beta}\,
+	    	\eta_{\gamma\mu}\,M^{{\color{red}\alpha}\beta}P^{\gamma}
+	\\
+    & \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+	    {\color{white}\,+\,}
+	    \eta_{\sigma\mu}\,W_{\rho}
+	    \,\overset{{\color{white}.}}{-}\,
+	    \eta_{\rho\mu}\,W_{\sigma}
+	    \,+\,
+	    \varepsilon_{\sigma\rho\beta\gamma}\,M^{{\color{white}\mu}\beta}_{\mu}P^{\gamma}
+	    \,+\,
+	    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\alpha\beta}\,M^{\alpha\beta}P_{\mu}
+    \end{eqnarray*}
+    Hence,
+    \begin{equation*}
+    \varepsilon_{\sigma\rho\beta\gamma}\,M^{{\color{white}\mu}\beta}_{\mu}P^{\gamma}
+    \,+\,
+    \dfrac{1}{2}\,\varepsilon_{\sigma\rho\alpha\beta}\,M^{\alpha\beta}P_{\mu}
+    \;\; = \;\;
+	    -\,\eta_{\sigma\mu}\,W_{\rho}
+	    \,\overset{{\color{white}.}}{+}\,
+	    \eta_{\rho\mu}\,W_{\sigma}
+    \end{equation*}
+    Under the index renaming $\rho\rightarrow\nu$,\, $\sigma\rightarrow\rho$), we have:
+    \begin{equation*}
+    \varepsilon_{\rho\nu\beta\gamma}\,M^{{\color{white}\mu}\beta}_{\mu}P^{\gamma}
+    \,+\,
+    \dfrac{1}{2}\,\varepsilon_{\rho\nu\alpha\beta}\,M^{\alpha\beta}P_{\mu}
+    \;\; = \;\;
+	    -\,\eta_{\rho\mu}\,W_{\nu}
+	    \,\overset{{\color{white}.}}{+}\,
+	    \eta_{\nu\mu}\,W_{\rho}
+    \end{equation*}
+    This proves Claim 2.
+	% $
+	% \varepsilon_{\rho\nu\beta\gamma}\,
+	% M_{\mu}^{{\color{white}\mu}\beta}P^{\gamma}
+	% \,+\,
+	% \dfrac{1}{2}\,\varepsilon_{\rho\alpha\beta\nu}\,
+	% M^{\alpha\beta}P_{\mu}
+	% \;\; = \;\;
+	% 	\eta_{\rho\nu}\,W_{\mu}
+	% $
+	\vskip 0.3cm
+	\noindent
+	By Claim 1 and Claim 2, we have:
+	\begin{eqnarray*}
+	\left[\,
+		M_{\mu\nu}
+		\,\overset{{\color{white}1}}{,}\,
+		W_{\rho}
+		\,\right]
+	& = &
+		\left(\,
+			\varepsilon_{\rho\nu\beta\gamma}\,
+			M_{\mu}^{{\color{white}\mu}\beta}P^{\gamma}
+			+
+			\dfrac{1}{2}\,\varepsilon_{\rho\nu\alpha\beta}\,
+			M^{\alpha\beta}P_{\mu}
+			\,\right)
+		\;-\;
+		\left(\,
+			\varepsilon_{\rho\mu\beta\gamma}\,
+			M_{\nu}^{{\color{white}\nu}\beta}P^{\gamma}
+			+
+			\dfrac{1}{2}\,\varepsilon_{\rho\mu\alpha\beta}\,
+			M^{\alpha\beta}P_{\nu}
+			\,\right)
+	\\
+	& = &
+		\left(\,
+			-\,\eta_{\rho\mu}\,W_{\nu}
+			\,\overset{{\color{white}.}}{+}\,
+			\eta_{\nu\mu}\,W_{\rho}
+			\,\right)
+		\; - \;
+		\left(\,
+			-\,\eta_{\rho\nu}\,W_{\mu}
+			\,\overset{{\color{white}.}}{+}\,
+			\eta_{\mu\nu}\,W_{\rho}
+			\,\right)
+	\\
+	& \overset{{\color{white}\textnormal{\large$1$}}}{=} &
+		-\,\eta_{\rho\mu}\,W_{\nu} \,+\, \eta_{\rho\nu}\,W_{\mu}\,,
+	\end{eqnarray*}
+	as required.
+	This completes the proof of the Proposition.
+	\qed
 \end{enumerate}
-\qed
+
 
 \vskip 0.5cm
 \begin{theorem}[The two Casimir elements of \,$\mathcal{U}(\so(1,3)\ltimes\Re^{1,3})$]
