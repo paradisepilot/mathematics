@@ -1866,7 +1866,6 @@ satisfies the following commutation relations with the generators
 	\qed
 \end{enumerate}
 
-
 \vskip 0.5cm
 \begin{theorem}[Two Casimir elements of \,$\mathcal{U}(\so(1,3)\ltimes\Re^{1,3})$]
 \mbox{}
@@ -2154,6 +2153,102 @@ Similarly, by Proposition \ref{CommRelationsPauliLubanski},
 we see that \,$W_{\mu}$\, satisfies the hypothesis of Claim 1.
 Consequently, the Theorem follows immediately from Claim 1.
 This completes the proof of the Theorem.
+\qed
+
+
+\vskip 0.5cm
+\begin{theorem}[Eigenvalues of $C_{2} = W_{\mu}W^{\mu}$ in relation to those of $C_{1} = P_{\mu}P^{\mu}$]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose that
+\,$\rho : \SOup(1,3) \ltimes \Re^{1,3} \longrightarrow U(\mathcal{H})$\,
+is an irreducible unitary representation of
+\,$\SOup(1,3) \ltimes \Re^{1,3}$\,
+on a complex Hilbert space
+\,$\mathcal{H}$\,
+(necessarily infinite-dimensional since $\SOup(1,3) \ltimes \Re^{1,3}$ is not compact), and
+that the eigenvalue of
+\,$\rho_{*}\!\left(P_{\mu}P^{\mu}\right) \in \End(V)$\, is \,$m^{2} \in \Re$.\,
+Then, the following statements hold:
+\begin{enumerate}
+\item
+	If \,$m^{2} > 0$,\, then the eigenvalue of
+	\,$\rho_{*}\!\left(W_{\mu}W^{\mu}\right)$\,
+	is \;{\color{red}$\,m^{2} \cdot s \cdot (s+1)$},\; where
+	\,$s \in \left\{\,0,\,\frac{1}{2},\,1,\,\frac{3}{2},\,2,\,\frac{5}{2},\,\ldots\,\right\}$\,
+	such that \,$s \cdot (s+1)$\, is the eigenvalue of the Casimir element
+	\begin{equation*}
+	\rho_{*}\!\left(\,\mathbf{J}^{2}\,\right)
+	\;\; = \;\;
+		\rho_{*}\!\left(\,J_{1}^{2} + J_{2}^{2} + J_{3}^{2}\,\right)
+	\;\; = \;\;
+		\rho_{*}\!\left(\,M_{23}^{2} + M_{31}^{2} + M_{12}^{2}\,\right)
+	\end{equation*}
+	of \,$\so(3)$.\,
+\item
+	If \,$m^{2} = 0$,\, then the eigenvalue of
+	\,$\rho_{*}\!\left(W_{\mu}W^{\mu}\right)$\,
+	$\cdots\;\cdots$
+\end{enumerate}
+\end{theorem}
+\proof
+\begin{enumerate}
+\item
+	Since the eigenvalue of \,$\rho_{*}(W_{\mu}W^{\mu})$\, is Poincaré-invariant,
+	we can compute it in any convenient choice of inertial frame.
+	If we use the rest frame of the massive particle, then the eigenvalues
+	\,$(\,p_{0},p_{1},p_{2},p_{3}\,) \,=\, (\,m,\,0,\,0,\,0\,)$.\,
+	Hence,
+	\begin{equation*}
+	W_{\mu}
+	\;\; := \;\;
+		\dfrac{1}{2}\,\varepsilon_{\mu\nu\rho\sigma}\,M^{\nu\rho}P^{\sigma}
+	\;\; = \;\;
+		\dfrac{1}{2}\,\varepsilon_{\mu\nu\rho 0}\,M^{\nu\rho}P^{0}
+		\,+\,
+		\dfrac{1}{2}\,\varepsilon_{\mu\nu\rho k}\,M^{\nu\rho}P^{k}
+	\;\; = \;\;
+		\dfrac{1}{2}\,\varepsilon_{\mu\nu\rho 0}\,M^{\nu\rho}P^{0}
+	\end{equation*}
+	Writing the temporal and spatial components separately, we have:
+	\begin{eqnarray*}
+	W_{0}
+	& = &
+		\dfrac{1}{2}\,\varepsilon_{{\color{red}0\,}\nu\rho{\color{red}\,0}}\,M^{\nu\rho}P^{0}
+	\;\; = \;\;
+		0
+	\\
+	W_{k}
+	& = &
+		\dfrac{1}{2}\,\varepsilon_{k\nu\rho 0}\,M^{\nu\rho}P^{0}
+	\;\; = \;\;
+		m\cdot{\color{red}\dfrac{1}{2}\,\varepsilon_{k\nu\rho}\,M^{\nu\rho}}
+	\;\; = \;\;
+		m\cdot{\color{red}J_{k}}
+	\end{eqnarray*}
+	Hence, in the rest frame of the massive particle, we have
+	\begin{eqnarray*}
+	W_{\mu}W^{\mu}
+	& = &
+		W_{0}W^{0}
+		\,-\, \left(\,m J_{1}\,\right)^{2}
+		\,-\, \left(\,m J_{2}\,\right)^{2}
+		\,-\, \left(\,m J_{3}\,\right)^{2}
+	\;\; = \;\;
+		0 \,-\, m^{2}\left(\,J_{1}^{2} + J_{2}^{2} + J_{3}^{2}\,\right)
+	\\
+	& = &
+		-\,m^{2}\,s\,(s+1)\,
+	\end{eqnarray*}
+	where
+	\,$s \in \left\{\,0,\,\frac{1}{2},\,1,\,\frac{3}{2},\,2,\,\frac{5}{2},\,\ldots\,\right\}$\,
+	such that
+	\,$s\,(s+1)$\, is the eigenvalue of the Casimir element
+	\,$\mathbf{J}^{2} \,:= \, J_{1}^{2} + J_{2}^{2} + J_{3}^{2}$\,
+	of \,$\so(3)$.\,
+\item
+\end{enumerate}
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
