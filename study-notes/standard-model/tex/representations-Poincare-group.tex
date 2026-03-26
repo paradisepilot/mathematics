@@ -2220,8 +2220,38 @@ Then, the following statements hold:
 	Recall that the operators
 	\,$P_{0}, P_{1}, P_{2}, P_{3}$\,
 	pairwise commute;
-	hence, any eigenvector of any one of the \,$P_{\mu}$'s\,
-	is a simultaneous eigenvector of all four operators.
+	hence, they preserve the eigenvectors of each other:
+	\begin{equation*}
+	\left.\begin{array}{ccc}
+		\left[\,P_{\mu}\,,\,P_{\nu}\,\right] & = & 0
+		\\
+		\overset{{\color{white}1}}{P_{\mu}(\mathbf{w})} &=& \lambda\cdot\mathbf{w}
+		\end{array}
+	\;\;\right\}\Longrightarrow\;\;
+	P_{\mu}\!\left(\,P_{\nu}(\mathbf{w})\,\right)
+	\,=\,
+		P_{\nu}\!\left(\,P_{\mu}(\mathbf{w})\,\right)
+	\,=\,
+		P_{\nu}\!\left(\,\lambda\cdot\mathbf{w}\,\right)
+	\,=\,
+		\lambda \cdot P_{\nu}(\,\mathbf{w}\,)
+	\end{equation*}
+	Similarly,
+	\begin{equation*}
+	\left.\begin{array}{ccc}
+		\left[\,P_{\mu}\,,\,W_{\nu}\,\right] & = & 0
+		\\
+		\overset{{\color{white}1}}{P_{\mu}(\mathbf{w})} &=& \lambda\cdot\mathbf{w}
+		\end{array}
+	\;\;\right\}\Longrightarrow\;\;
+	P_{\mu}\!\left(\,W_{\nu}(\mathbf{w})\,\right)
+	\,=\,
+		W_{\nu}\!\left(\,P_{\mu}(\mathbf{w})\,\right)
+	\,=\,
+		W_{\nu}\!\left(\,\lambda\cdot\mathbf{w}\,\right)
+	\,=\,
+		\lambda \cdot W_{\nu}(\,\mathbf{w}\,)
+	\end{equation*}
 	\vskip 0.1cm
 	By hypothesis, we have:
 	\begin{equation*}
@@ -2332,9 +2362,28 @@ Then, the following statements hold:
 	& = &
 		-\,m^{2}\,s\,(s+1)\,
 	\end{eqnarray*}
-	Hence, in the rest frame of the massive particle, we have
 	\begin{eqnarray*}
-	W_{\mu}W^{\mu}
+	W_{\mu}W^{\mu}(\mathbf{v})
+	& = &
+	% 	W_{\mu}W^{\mu}(\mathbf{v})
+	% \;\; = \;\;
+		W_{\mu}(\eta^{\mu\nu}W_{\nu})(\mathbf{v})
+	\;\; = \;\;
+		(\eta^{\mu\nu}W_{\mu}W_{\nu})(\mathbf{v})
+	\;\; = \;\;
+		\left(\,
+			\overset{{\color{white}.}}{+}\,W_{0}W_{0}
+			\,-\,W_{1}W_{1}
+			\,-\,W_{2}W_{2}
+			\,-\,W_{3}W_{3}
+			\,\right)\!(\mathbf{v})
+	\\
+	& = &
+		+\,W_{0}W_{0}(\mathbf{v})
+		\,-\,W_{1}W_{1}(\mathbf{v})
+		\,-\,W_{2}W_{2}(\mathbf{v})
+		\,-\,W_{3}W_{3}(\mathbf{v})
+	\\
 	& = &
 		W_{0}W^{0}
 		\,-\, \left(\,m J_{1}\,\right)^{2}
