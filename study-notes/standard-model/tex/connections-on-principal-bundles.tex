@@ -179,12 +179,42 @@ A very short summary of how fibre bundles enter quantum field theory:
 \noindent
 One of the axioms of quantum field theory is that the physics of a (relativistic) quantum
 system is encoded in the \textbf{Lagrangian density} of the system.
-The Lagrangian density is a $\Re$-valued function defined on the spacetime manifold, and it depends on
+The Lagrangian density is an $\Re$-valued function defined on the spacetime manifold, and it depends on
 ``fields'' and their first ``derivatives'' with respect to spacetime coordinates.
 Fields that correspond to matter particles are sections of vector bundles associated with principal bundles.
 Fields that correspond to forces are connections on principal bundles.
 The structure groups of the aforementioned principal bundles correspond to the ``internal symmetries''
 (i.e., non-spacetime symmetries) exhibited by the species of particles in question.
+\vskip 0.3cm
+\begin{center}
+\begin{minipage}{5.5in}
+\noindent
+\textbf{Key observation:}\;
+While the fibres of a principal bundle are each diffeomorphic to the structure group of the principal bundle,
+they are {\color{red}NOT canonically isomorphic} (as groups) to the structure group.
+Equivalently, an arbitrary fibre of a principal bundle
+(despite the fact that it is diffeomorphic to the structure group)
+does not admit a distinguished element that serves as its identity element.
+\vskip 0.1cm
+The lack of canonical identification of each fibre to the structure group is at the root of the notion of gauge invariance in quantum field theory.
+More precisely, suppose
+\begin{itemize}
+\item
+	a certain physical theory is mathematically formulated
+	via certain mathematical structures \,$\mathcal{L}$\,
+	defined on a certain principal $G$-bundle \,$P$,\, and
+\item
+	$f : P \longrightarrow P$\, is a global gauge transformation
+	(see Definition \ref{GlobalGaugeTranformation}).
+\end{itemize}
+Then, the principle of gauge invariance could be heuristically described as follows:
+The physics described by the pullback
+\,$f^{*}(\mathcal{L})$\, of \,$\mathcal{L}$\,
+should be identical to the physics described by \,$\mathcal{L}$\,
+itself.
+See Remark \ref{FibrewiseRecoordinatization}.
+\end{minipage}
+\end{center}
 \vskip 0.1cm
 The principle of \textbf{gauge invariance} is a fundamental principle of quantum field theory
 which could be intuitively stated as follows:
@@ -287,6 +317,7 @@ which satisfies each of the following conditions:
 
 \vskip 0.5cm
 \begin{definition}[Global gauge transformation]
+\label{GlobalGaugeTranformation}
 \mbox{}
 \vskip -0.05cm
 \noindent
@@ -461,7 +492,8 @@ G
 
 
 \vskip 0.5cm
-\begin{remark}
+\begin{remark}[Fibrewise re-coordinatizations of principal bundles]
+\label{FibrewiseRecoordinatization}
 \mbox{}
 \vskip 0.05cm
 \noindent
