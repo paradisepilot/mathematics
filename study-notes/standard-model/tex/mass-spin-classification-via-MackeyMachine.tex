@@ -194,6 +194,54 @@ Let
 	\end{equation*}
 	where \,$n \in \Z$.\,
 	The integer \,$n \in \Z$\, is called \textbf{helicity} of the representation \,$\rho_{n}$\,.
+\item
+	Recall that
+	\begin{equation*}
+	\mathcal{O}_{m}
+	\;\; = \;\;
+		G\,/\,(N \rtimes H_{k})
+	\;\; \cong \;\;
+		\SL(2,\C)\,/\,H_{k}
+	\end{equation*}
+	Thus, we have a natural principal $H_{k}$-bundle over the orbit $\mathcal{O}_{m}$,\, i.e.,
+	\begin{center}
+    \begin{tikzcd}
+    H_{k}
+    	\arrow[r, hook]
+    &
+    \SL(2,\C)
+    	\arrow[d, two heads]
+    \\
+    &
+    \mathcal{O}_{m}
+    \end{tikzcd}
+	\end{center}
+	We denote by \,$P$\, the above principal $H_{k}$-bundle over the orbit $\mathcal{O}_{m}$.
+	Note that the total space \,$P$\, is diffeomorphic to $\SL(2,\C)$.
+	For each irreducible unitary representation
+	\,$\sigma : H_{k} \longrightarrow U(V_{\sigma})$,\,
+	let
+	\,$E \,=\, P\times_{\sigma}V_{\sigma}$\,
+	be the associated vector bundle (with fibre $V_{\sigma}$), and
+	let
+	\begin{equation*}
+	\mathcal{H}_{m,\sigma}
+	\;\; := \;\;
+		L^{2}(\mathcal{O}_{m},P\times_{\sigma}V_{\sigma})
+	\;\; = \;\;
+		\left\{\;
+			\psi \in \Gamma(\mathcal{O}_{m},P\times_{\sigma}V_{\sigma})
+			\;\;\left\vert\;\;
+			\int_{\Omega_{m}}
+				\left\Vert\,\overset{{\color{white}.}}{f_{\psi}(p)}\,\right\Vert_{V_{\sigma}}^{2}
+				\,\d\mu(p)
+			\, < \, \infty
+			\right.
+			\;\right\}
+	\end{equation*}
+	Then,
+	\,$G = \SL(2,\C) \times \Re^{1,3}$\,
+	admits the following (induced) action on \,$\mathcal{H}_{m,\sigma}$:\,
 \end{itemize}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
