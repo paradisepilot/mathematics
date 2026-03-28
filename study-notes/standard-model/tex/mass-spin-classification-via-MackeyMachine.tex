@@ -1,0 +1,201 @@
+
+		%%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Classification of elementary particles by mass and spin via application of the Mackey Machine to the Poincaré group}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Chapter summary}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.2cm
+\noindent
+\textbf{The Mackey Machine}
+\vskip 0.2cm
+Let \,$G$\, be a locally compact group which admits the structure of a semidirect product
+\,$G = N \rtimes H$\,
+where \,$N$\, is a locally compact abelian normal subgroup of $G$.
+The \textbf{Mackey Machine} is a mathematical result that characterizes
+the irreducible unitary representations of such a group \,$G$.\,
+\begin{itemize}
+\item
+	Let
+	\,$\widehat{N}$\,
+	denote the set of all \textbf{characters} of \,$N$,\,
+	i.e., the set of all continuous group homomorphisms
+	\,$\chi : N \longrightarrow \mathbb{T}$\,
+	from \,$N$\, into the circle group
+	\,$\mathbb{T} \,:=\, \left\{\,
+		\left.
+		z \overset{{\color{white}.}}{\in} \C
+		\,\;\right\vert\;
+		\vert\,z\,\vert = 1
+		\,\right\}$.\,
+	Note that \,$H$\, acts on \,$\widehat{N}$\, by conjugation:
+	\begin{equation*}
+	(h\cdot\chi)(n)
+	\;\; := \;\;
+		\chi\!\left(\,h^{-1}\cdot n \cdot h\,\right)
+	\end{equation*}
+\item
+	Under certain ``regularity'' conditions, the irreducible unitary representations of
+	\,$G = N \rtimes H$\,
+	are classified by two pieces of data:
+	\begin{itemize}
+	\item
+		an orbit \,$\mathcal{O} \in \widehat{N} / H$,\, and
+	\item
+		an irreducible unitary representation
+		\,$\sigma : H_{\chi} \longrightarrow U(\mathcal{H}_{\sigma})$\,
+		of the stabilizer subgroup
+		\begin{equation*}
+		H_{\chi}
+		\;\; := \;\;
+			\left\{\;
+				\left.
+				h \overset{{\color{white}.}}{\in} H
+				\;\,\right\vert\;
+				h \cdot \chi = \chi
+				\;\right\}
+		\end{equation*}
+		of \,$H$,\, where \,$\chi \in \mathcal{O}$\, is a character of \,$N$\,
+		in the orbit \,$\mathcal{O} \in \widehat{N}/H$.\,
+	\end{itemize}
+	The \textbf{Mackey Machine} refers to the following two-part mathematical result:
+	\begin{enumerate}
+	\item
+		\renewcommand{\thefootnote}{$\dagger$}
+		The above data determine an irreducible unitary representation
+		\,$\textnormal{Ind}^{G}_{N \rtimes H_{\chi}}(\,\chi\otimes\sigma\,)$\,
+		of $G$.
+		The representation
+		\,$\textnormal{Ind}^{G}_{N \rtimes H_{\chi}}(\,\chi\otimes\sigma\,)$\, is unique up to
+		unitary equivalence\footnote{In particular,
+		for each fixed orbit \,$\mathcal{O} \in \widehat{N}/H$,\,
+		different choices of \,$\chi \in \mathcal{O}$\,
+		lead to unitarily equivalent induced representations of \,$G$.},
+		and is called the
+		\textbf{induced representation} of \,$G$\, by \,$\mathcal{O}$\, and \,$\sigma$.\,
+	\item
+		In addition, every irreducible unitary representation of
+		\,$G = N \rtimes H$\,
+		is unitarily equivalent an induced representation of \,$G$.\,
+	\end{enumerate}
+	\vskip 0.1cm
+\end{itemize}
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\textbf{Application of the Mackey Machine to the double cover $\SL(2,\C)\ltimes\Re^{1,3}$ of the Poincaré group}
+\vskip 0.3cm
+\noindent
+Let
+\,$G = \SL(2,\C)\ltimes\Re^{1,3}$,
+\,$H = \SL(2,\C)$,\, and \,$N = \Re^{1,3}$.\,
+\begin{itemize}
+\item
+	$N = \Re^{1,3}$\, is the translation subgroup of
+	\,$G = \SL(2,\C)\ltimes\Re^{1,3}$.\,
+\item
+	The dual group
+	\,$\widehat{N} \cong \Re^{1,3}$\,
+	is naturally identified with the momentum Minkowski space.
+\item
+	Every $\SL(2,\C)$-orbit \,$\mathcal{O} \in \widehat{N}/H = \widehat{N}/\SL(2,\C)$\,
+	has the form of a \textbf{mass shell}
+	\,$\mathcal{O}_{m} \subset \widehat{N}$\,
+	in the momentum Minkowski space
+	\,$\widehat{N}\cong\Re^{1,3}$,\,
+	which can be expressed as follows:
+	\begin{equation*}
+	\mathcal{O}_{m}
+	\;\; := \;\;
+		\left\{\;
+			\left.
+			p = (p_{0},p_{1},p_{2},p_{3}) \in \widehat{N} \cong \Re^{1,3}
+			\;\;\right\vert\;
+			(p_{0})^{2} - (p_{1})^{2} - (p_{2})^{2} - (p_{3})^{2} = m^{2}
+			\;\right\}
+	\end{equation*}
+	for some \,$m \in \Re$.\,
+\item
+	For \,$m > 0$,\, we may pick a reference momentum \,$p_{*} = (m,0,0,0)$.\,
+	The stabilizer subgroup
+	\,$\SL(2,\C)_{p_{*}}$\, is isomorphic to \,$\SU(2)$.\,
+	The irreducible unitary representations of \,$\SU(2)$\,
+	are classified by their spin (or ``spin type'', or equivalently,
+	the dimension of the (finite-dimensional) carrier space).
+\item
+	For \,$m = 0$,\, we may pick a reference momentum \,$p_{*} = (1,0,0,1)$.\,
+	The stabilizer subgroup
+	\,$\SL(2,\C)_{p_{*}}$\, is isomorphic to the Euclidean group
+	\,$\textnormal{E}(2) = \textnormal{ISO}(2)$,\,
+	the isometry group of the $2$-dimensional Euclidean space.
+	\vskip 0.2cm
+	Recall that, \,$\textnormal{E}(2) \cong \SO(2) \ltimes \Re^{2}$,\,
+	where \,$\Re^{2}$\, here is viewed as the translation subgroup
+	of the Euclidean group \,$\textnormal{E}(2)$.\,
+	\vskip 0.2cm
+	Now, we invoke a physical argument (based on experimental observations)
+	to exclude the irreducible unitary representations of
+	\,$\textnormal{E}(2)$\,
+	for which the translation subgroup
+	\,$\Re^{2} \subset \textnormal{E}(2)$\,
+	acts non-trivially.
+	Let
+	\,$\rho : \textnormal{E}(2) = \SO(2) \ltimes \Re^{2} \longrightarrow U(\mathcal{H}_{\rho})$\,
+	be an irreducible unitary representation of \,$\textnormal{E}(2)$.\,
+	If the restricitons of \,$\rho$\, to \,$\Re^{2}$\, acts non-trivially on \,$\mathcal{H}_{\rho}$,\,
+	then we must have \,$\dim_{\C}(\,\mathcal{H}_{\sigma}\,) = \infty$.\,
+	Any species of elementary particles that corresponds to an irreducible unitary representation of
+	\,$G = \SL(2,\C)\ltimes\Re^{1,3}$\,
+	induced by \,$\rho$\, must then admit an internal symmetry acting on an infinite-dimensional state space.
+	No such elementary particles have been observed experimentally;
+	in other words, {\color{red}the state space of every internal symmetry
+	of every known species of elementary particles is finite-dimensional.}
+	\vskip 0.2cm
+	Consequently, in what follows, we consider only the irreducible unitary representations of
+	\,$\textnormal{E}(2) \cong \SO(2) \ltimes \Re^{2}$\,
+	for which the translation subgroup \,$\Re^{2} \subset \textnormal{E}(2)$\, acts trivially.
+	In other words, {\color{red}the only physically relevant irreducible unitary representations of
+	\,$\textnormal{E}(2) \cong \SO(2) \ltimes \Re^{2}$\,
+	are precisely those of
+	\,$\SO(2)$.}\,
+	\vskip 0.2cm
+	Every irreducible unitary representation of
+	\,$
+	\SO(2)
+	\,\cong\,
+		\mathbb{T}
+	\, = \,
+		\left\{\,
+			\left.z
+			\overset{{\color{white}.}}{\in} \C
+			\,\;\right\vert\;
+			\vert\,z\,\vert = 1
+			\,\right\}
+	$\,
+	is $1$-dimensional and has the following form:
+	\begin{equation*}
+	\rho_{n}(\,\theta\,) \;\; = \;\; \exp\!\left(\,\sqrt{-1}\,n\,\theta\,\right),
+	\quad
+	\textnormal{for \,$\theta \in \SO(2) = \mathbb{T}$}\,,
+	\end{equation*}
+	where \,$n \in \Z$.\,
+	The integer \,$n \in \Z$\, is called \textbf{helicity} of the representation \,$\rho_{n}$\,.
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
