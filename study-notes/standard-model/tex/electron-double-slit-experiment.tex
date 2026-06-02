@@ -1,0 +1,211 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{The electron double-slit experiment}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The experimental set-up}
+
+Suppose:
+\begin{itemize}
+\item
+    a source $S$ emitting electrons (or photons, neutrons, atoms, molecules, etc.),
+\item
+    a barrier containing two narrow slits A and B,
+\item
+    a distant detection screen.
+\end{itemize}
+
+\begin{center}
+\includegraphics[height=1.75in]{graphics/double-slit-experimental-setup}
+\end{center}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Observation 1: one slit open}
+\begin{itemize}
+\item
+    After many rounds of single-election emissions,
+    we get an (empirical) probability distribution of where the electron hits the detection screen.
+\item
+    The left panel in the following figure shows the resulting probability distribution
+    when only Slit A was open,
+    whereas the right panel shows the resulting probability distribution when only Slit B was open.
+    \begin{center}
+    \includegraphics[height=1.75in]{graphics/Kaiser-MIT-2011-Fig2-classical-probability-distribution-one-slit-open}
+    \end{center}
+\item
+	If electrons behave like {\color{red}classical} point-like projectiles (imagine: bullets),
+	we would expect that the resulting probability distribution with both slits open
+    would be the {\color{red}pointwise} sum of the above two single-slit-open distributions, i.e.,
+    \begin{center}
+    \includegraphics[height=1.75in]{graphics/Kaiser-MIT-2011-Fig3-classicial-probability-distribution-both-slits-open}
+    \end{center}
+\item
+	Electrons:
+    \begin{center}
+    \includegraphics[height=1.75in]{graphics/Kaiser-MIT-2011-Fig6-quantum-probability-distribution-one-slit-open}
+    \end{center}
+    \begin{center}
+    \includegraphics[height=1.75in]{graphics/Kaiser-MIT-2011-Fig6-quantum-probability-distribution-both-slits-open}
+    \end{center}
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{eqnarray*}
+P_{AB}(x)
+& = &
+    \left\vert\;
+        \psi_{A}(x)
+        \, \overset{{\color{white}.}}{+} \,
+        \psi_{B}(x)
+        \;\right\vert^{2}
+\;\; = \;\;
+    \left(\;
+        \psi_{A}(x)
+        \, \overset{{\color{white}.}}{+} \,
+        \psi_{B}(x)
+        \;\right)
+    \cdot
+    \overline{\left(\;
+        \psi_{A}(x)
+        \, \overset{{\color{white}.}}{+} \,
+        \psi_{B}(x)
+        \;\right)}
+\\
+& = &
+    \left(\;
+        \psi_{A}(x)
+        \, \overset{{\color{white}.}}{+} \,
+        \psi_{B}(x)
+        \;\right)
+    \cdot
+    \left(\;
+        \overline{\psi_{A}(x)}
+        \; \overset{{\color{white}.}}{+} \;
+        \overline{\psi_{B}(x)}
+        \;\right)
+\\
+& = &
+    \psi_{A}(x)\;\overline{\psi_{A}(x)}
+    \; + \;
+    \psi_{A}(x)\;\overline{\psi_{B}(x)}
+    \; + \;
+    \overline{\psi_{A}(x)}\;\psi_{B}(x)
+    \; + \;
+    \psi_{B}(x)\;\overline{\psi_{B}(x)}
+\\
+& = &
+    \left\vert\;
+        \overset{{\color{white}.}}{\psi_{A}(x)}
+        \;\right\vert^{2}
+    \; + \;
+    \left\vert\;
+        \overset{{\color{white}.}}{\psi_{B}(x)}
+        \;\right\vert^{2}
+    \; + \;
+    2 \cdot \textnormal{Re}\!\left(\,
+        \psi_{A}(x)\;\overline{\psi_{B}(x)}
+        \,\right)
+\\
+& = &
+	P_{A}(x)
+    \; + \;
+	P_{B}(x)
+    \; + \;
+    2 \cdot \textnormal{Re}\!\left(\,
+        \psi_{A}(x)\;\overline{\psi_{B}(x)}
+        \,\right)
+\end{eqnarray*}
+Writing
+\;\;$
+\psi_{A}(x)
+\; = \;
+    \rho_{A}(x)\,e^{\i\,\theta_{A}(x)}
+$\;
+and
+\;$
+\psi_{B}(x)
+\; = \;
+    \rho_{B}(x)\,e^{\i\,\theta_{B}(x)}
+$,\;\;
+we see that
+\begin{eqnarray*}
+\psi_{A}(x)\;\overline{\psi_{B}(x)}
+& = &
+    \left(\,
+    	\rho_{A}(x)\,e^{\i\,\theta_{A}(x)}
+    	\,\right)
+    \!\cdot\!
+    \left(\,
+    	\rho_{B}(x)\,e^{-\,\i\,\theta_{B}(x)}
+    	\,\right)
+\;\; = \;\;\
+    \rho_{A}(x)\,\rho_{B}(x)
+    \cdot
+    e^{\,\i\,\left(\theta_{A}(x)\,-\,\theta_{B}(x)\right)}
+\\
+& = &
+    \rho_{A}(x)\,\rho_{B}(x)
+    \cdot
+    \left(\,
+        \cos\!\left(\,\theta_{A}(x)\,\overset{{\color{white}.}}{-}\,\theta_{B}(x)\,\right)
+        \, + \,
+        \i\,
+        \sin\!\left(\,\theta_{A}(x)\,\overset{{\color{white}.}}{-}\,\theta_{B}(x)\,\right)
+    	\,\right)
+\end{eqnarray*}
+Hence, we now see:
+\begin{eqnarray*}
+P_{AB}(x)
+& = &
+	P_{A}(x)
+    \; + \;
+	P_{B}(x)
+    \; + \;
+    2 \cdot \textnormal{Re}\!\left(\,
+        \psi_{A}(x)\;\overline{\psi_{B}(x)}
+        \,\right)
+\\
+& = &
+	P_{A}(x)
+    \; + \;
+	P_{B}(x)
+    \; + \;
+    2 \cdot \rho_{A}(x)\,\rho_{B}(x)
+    \cdot
+        \cos\!\left(\,\theta_{A}(x)\,\overset{{\color{white}.}}{-}\,\theta_{B}(x)\,\right)
+\\
+& = &
+	P_{A}(x)
+    \; + \;
+	P_{B}(x)
+    \; + \;
+    2 \cdot \sqrt{P_{A}(x)\,P_{B}(x){\color{white}.}}
+    \cdot
+        \cos\!\left(\,\theta_{A}(x)\,\overset{{\color{white}.}}{-}\,\theta_{B}(x)\,\right),
+\end{eqnarray*}
+which implies:
+\begin{eqnarray*}
+\cos\!\left(\,\theta_{A}(x)\,\overset{{\color{white}.}}{-}\,\theta_{B}(x)\,\right)
+& = &
+	\dfrac{
+        P_{AB}(x) \,-\, P_{A}(x) \,-\, P_{B}(x)
+        }{
+        \overset{{\color{white}.}}{
+            2 \cdot \sqrt{P_{A}(x)\,P_{B}(x){\color{white}.}}
+            }
+        }
+\end{eqnarray*}
