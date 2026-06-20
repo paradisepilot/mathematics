@@ -26,7 +26,7 @@
 A mutually commuting family of linear operators on a finite-dimensional
 complex vector space admits at least one simultaneous eigenvector.
 More precisely, suppose:
-\begin{enumerate}
+\begin{itemize}
 \item
     $V$\, is a finite-dimensional vector space over the field $\C$ of complex numbers,
 \item
@@ -36,122 +36,159 @@ More precisely, suppose:
     \quad
     \textnormal{for each \,$A_{1}, A_{2} \,\in\,\mathcal{F}$}
     \end{equation*}
-\end{enumerate}
-Then, there exists non-zero vector \,$v \,\in\, V\,\backslash\{\,0\,\}$\,
-and a $\C$-valued function $\lambda : \mathcal{F} \longrightarrow \C$
-such that
-\begin{equation*}
-A(v) \; = \; \lambda({A}) \cdot v\,,
-\quad
-\textnormal{for each \,$A \in \mathcal{F}$}
-\end{equation*}
-\end{proposition}
-\proof
-We proceed by induction on \,$\dim(V)$.\,
-
-\vskip 0.3cm
-\noindent
-\textbf{Base step:}\; The Proposition is valid for $\dim(V) = 1$.
-\vskip 0.1cm
-\noindent
-If \,$\dim(V) = 1$,\, then any non-zero vector, say \,$v \in V\,\backslash\,\{\,0\,\}$,\,
-forms a basis for \,$V$,\, and every linear operator \,$T \in \End(V)$\, can be given by
-\,$v \longmapsto c_{T} \cdot v$,\, for some \,$c_{T} \in \C$.\,
-In particular, the non-zero vector \,$v$\, is thus a simultaneous eigenvector of \,$\mathcal{F}$.\,
-This establishes the base step.
-
-\vskip 0.3cm
-\noindent
-\textbf{Induction hypothesis:}\; The Proposition is valid for every complex vector space of dimension $< n$.
-
-\vskip 0.3cm
-\noindent
-\textbf{Induction step:}\;
-\vskip 0.1cm
-\noindent
-Suppose \,$1 < \dim(V) = n$.\,
-Observe that exactly one of the following two scenarios is true:
+\end{itemize}
+Then, the following statements are true:
 \begin{enumerate}
 \item
-	Every operator \,$A \in \mathcal{F} \subset \End(V)$\,
-	is a scalar multiple of the identity map
-	\,$\id_{V} \in \End(V)$.\,
-	\vskip -0.05cm
-	\noindent
-	The present Proposition is (trivially) true in this scenario.
-\item
-	There exists \,$A \in \mathcal{F}\subset \End(V)$\,
-	which is not a scalar multiple of the identity map
-	\,$\id_{V} \in \End(V)$.\,
-	\vskip -0.05cm
-    In this scenario, the Fundamental Theorem Algebra implies that \,$A$\,
-    admits at least one eigenvector
-    \,$w \in V\,\backslash\,\{\,0\,\}$,\, with associated eigenvalue \,$\beta \in \C$,\,
-    i.e., \,$A(w) = \beta \cdot w$.\,
-    We denote the eigenspace of the eigenvalue \,$\beta \in \C$\, by:
-    \begin{equation*}
-    E_{A}(\beta)
-    \;\; := \;\;
-    	\left\{\,
-    	    w^{\prime} \in V
-    	    \,\left\vert\;
-    	    A(w^{\prime}) \overset{{\color{white}1}}{=} \beta \cdot w^{\prime}
-    	    \right.
-    	    \right\}
-    \end{equation*}
-    Since \,$A$\, is not a scalar multiple of \,$\id_{V}$,\,
-    we see that \,$1 \,\leq\, \dim(\,E_{A}(\beta)\,) \,<\, n$\,
-    (otherwise, \,$\dim(\,E_{A}(\beta)\,) = n$\, would imply \,$A = \beta \cdot \id_{V}$).
-    By the induction hypothesis, the following family admits a simultaneous eigenvector:
-    \begin{equation*}
-    \mathcal{F}\,\vert_{E_{A}(\beta)}
-    \;\; := \;\;
-    	\left\{\,
-    	    B\,\vert_{E_{A}(\beta)} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right)
-    	    \,\left\vert\;
-    	    B \overset{{\color{white}1}}{\in} \mathcal{F}
-    	    \right.
-    	    \right\}
-    \end{equation*}
-    In other words, by the induction hypothesis, there exists non-zero
-    \,$v \in E_{A}(\beta) \subset V$\,
-    and a $\C$-valued function
-    \,$\mu : \mathcal{F}\,\vert_{E_{A}(\beta)} \longrightarrow \C$\,
+    There exists non-zero vector \,$v \,\in\, V\,\backslash\{\,0\,\}$\,
+    and a $\C$-valued function $\lambda : \mathcal{F} \longrightarrow \C$
     such that
     \begin{equation*}
-    B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
-    \; = \;
-        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v\,,
+    A(v) \; = \; \lambda({A}) \cdot v\,,
     \quad
-    \textnormal{for each \,$B \in \mathcal{F}$}
+    \textnormal{for each \,$A \in \mathcal{F}$}
     \end{equation*}
-    Now, note that
-    \,$B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\,\right) \,=\, B(v)$,\,
-    since \,$v \in E_{A}(\beta)$.\,
-    Next, we define the $\C$-valued function
+\item
+    Furthermore, if the family \,$\mathcal{F} \subset \End(V)$\,
+    is a vector subspace of \,$\End(V)$,\,
+    then the above function
     \,$\lambda : \mathcal{F} \longrightarrow \C$\,
-    by
-    \,$\lambda(B) \,:=\, \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right)$,\,
-    for each \,$B \in \mathcal{F}$.\,
-    Now, observe that:
-    \begin{equation*}
-    B(v)
-    \; = \;
-        B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
-    \; = \;
-        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v
-    \; = \;
-        \lambda(B) \cdot v\,,
-    \quad
-    \textnormal{for each \,$B \in \mathcal{F}$}
-    \end{equation*}
-    Thus, the non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\,
-    is a simultaneous eigenvector of the family \,$\mathcal{F} \subset \End(V)$,\,
-    and the present Proposition is thus valid in this scenario.
+    is a linear function.
 \end{enumerate}
-This completes the proof of the induction step, and
-the present Proposition now follows by the principle of mathematical induction.
-\qed
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+	We proceed by induction on \,$\dim(V)$.\,
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Base step:}\; The Proposition is valid for $\dim(V) = 1$.
+	\vskip 0.1cm
+	\noindent
+	If \,$\dim(V) = 1$,\, then any non-zero vector, say \,$v \in V\,\backslash\,\{\,0\,\}$,\,
+	forms a basis for \,$V$,\, and every linear operator \,$T \in \End(V)$\, can be given by
+	\,$v \longmapsto c_{T} \cdot v$,\, for some \,$c_{T} \in \C$.\,
+	In particular, the non-zero vector \,$v$\, is thus a simultaneous eigenvector of \,$\mathcal{F}$.\,
+	This establishes the base step.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Induction hypothesis:}\; The Proposition is valid for every complex vector space of dimension $< n$.
+
+	\vskip 0.3cm
+	\noindent
+	\textbf{Induction step:}\;
+	\vskip 0.1cm
+	\noindent
+	Suppose \,$1 < \dim(V) = n$.\,
+	Observe that exactly one of the following two scenarios is true:
+	\begin{itemize}
+	\item
+		Every operator \,$A \in \mathcal{F} \subset \End(V)$\,
+		is a scalar multiple of the identity map
+		\,$\id_{V} \in \End(V)$.\,
+		\vskip -0.05cm
+		\noindent
+		The present Proposition is (trivially) true in this scenario.
+	\item
+		There exists \,$A \in \mathcal{F}\subset \End(V)$\,
+		which is not a scalar multiple of the identity map
+		\,$\id_{V} \in \End(V)$.\,
+		\vskip -0.05cm
+	    In this scenario, the Fundamental Theorem Algebra implies that \,$A$\,
+	    admits at least one eigenvector
+	    \,$w \in V\,\backslash\,\{\,0\,\}$,\, with associated eigenvalue \,$\beta \in \C$,\,
+	    i.e., \,$A(w) = \beta \cdot w$.\,
+	    We denote the eigenspace of the eigenvalue \,$\beta \in \C$\, by:
+	    \begin{equation*}
+	    E_{A}(\beta)
+	    \;\; := \;\;
+	    	\left\{\,
+	    	    w^{\prime} \in V
+	    	    \,\left\vert\;
+	    	    A(w^{\prime}) \overset{{\color{white}1}}{=} \beta \cdot w^{\prime}
+	    	    \right.
+	    	    \right\}
+	    \end{equation*}
+	    Since \,$A$\, is not a scalar multiple of \,$\id_{V}$,\,
+	    we see that \,$1 \,\leq\, \dim(\,E_{A}(\beta)\,) \,<\, n$\,
+	    (otherwise, \,$\dim(\,E_{A}(\beta)\,) = n$\, would imply \,$A = \beta \cdot \id_{V}$).
+	    By the induction hypothesis, the following family admits a simultaneous eigenvector:
+	    \begin{equation*}
+	    \mathcal{F}\,\vert_{E_{A}(\beta)}
+	    \;\; := \;\;
+	    	\left\{\,
+	    	    B\,\vert_{E_{A}(\beta)} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right)
+	    	    \,\left\vert\;
+	    	    B \overset{{\color{white}1}}{\in} \mathcal{F}
+	    	    \right.
+	    	    \right\}
+	    \end{equation*}
+	    In other words, by the induction hypothesis, there exists non-zero
+	    \,$v \in E_{A}(\beta) \subset V$\,
+	    and a $\C$-valued function
+	    \,$\mu : \mathcal{F}\,\vert_{E_{A}(\beta)} \longrightarrow \C$\,
+	    such that
+	    \begin{equation*}
+	    B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
+	    \; = \;
+	        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v\,,
+	    \quad
+	    \textnormal{for each \,$B \in \mathcal{F}$}
+	    \end{equation*}
+	    Now, note that
+	    \,$B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\,\right) \,=\, B(v)$,\,
+	    since \,$v \in E_{A}(\beta)$.\,
+	    Next, we define the $\C$-valued function
+	    \,$\lambda : \mathcal{F} \longrightarrow \C$\,
+	    by
+	    \,$\lambda(B) \,:=\, \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right)$,\,
+	    for each \,$B \in \mathcal{F}$.\,
+	    Now, observe that:
+	    \begin{equation*}
+	    B(v)
+	    \; = \;
+	        B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
+	    \; = \;
+	        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v
+	    \; = \;
+	        \lambda(B) \cdot v\,,
+	    \quad
+	    \textnormal{for each \,$B \in \mathcal{F}$}
+	    \end{equation*}
+	    Thus, the non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\,
+	    is a simultaneous eigenvector of the family \,$\mathcal{F} \subset \End(V)$,\,
+	    and the present Proposition is thus valid in this scenario.
+	\end{itemize}
+	This completes the proof of the induction step, and
+    the desired result now follows by the principle of mathematical induction.
+\item
+    Simply observe that,
+    for each \,$c_{1}, c_{2} \in \C$\, and each \,$A_{1}, A_{2} \in \mathcal{F} \subset \End(V)$,\,
+    we have:
+    \begin{eqnarray*}
+    \lambda\left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right) \cdot\, v
+    & = &
+        \left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right)\!(\,v\,)
+    \;\; = \;\;
+        c_{1}A_{1}(v) \,+\, c_{2}A_{2}(v)
+    \;\; = \;\;
+        c_{1}\lambda(A_{1}) \cdot v \,+\, c_{2}\lambda(A_{2}) \cdot v
+    \\
+    & = &
+        \left(\,c_{1}\lambda(A_{1}) \overset{{\color{white}.}}{+} c_{2}\lambda(A_{2})\,\right) \cdot\, v
+    \end{eqnarray*}
+    Since \,$v \neq 0$,\, it follows that
+    \,$
+    \lambda\left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right)
+    \,=\,
+        c_{1}\lambda(A_{1}) \overset{{\color{white}.}}{+} c_{2}\lambda(A_{2})
+    $,\,
+    which proves the linearity of the function
+    \,$\lambda : \mathcal{F} \longrightarrow \C$,\, as required.
+    \qed
+\end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
