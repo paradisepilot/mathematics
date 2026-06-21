@@ -15,158 +15,6 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Commuting operators on a complex vector space admit at least one simultaneous eigenvector}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\begin{proposition}
-\mbox{}
-\vskip 0.1cm
-\noindent
-A mutually commuting family of linear operators on a finite-dimensional
-complex vector space admits at least one simultaneous eigenvector.
-More precisely, suppose:
-\begin{itemize}
-\item
-    $V$\, is a finite-dimensional vector space over the field $\C$ of complex numbers, and
-\item
-    $\mathcal{F} \subset \End(V)$\, is a family of mutually commuting linear operators defined on \,$V$,\, i.e.,
-    \begin{equation*}
-    A_{1}\,A_{2} \;\; = \;\; A_{2}\,A_{1}\,,
-    \quad
-    \textnormal{for each \,$A_{1}, A_{2} \,\in\,\mathcal{F}$}
-    \end{equation*}
-\end{itemize}
-Then, there exists a non-zero vector \,$v \,\in\, V\,\backslash\{\,0\,\}$\,
-and a $\C$-valued function $\lambda : \mathcal{F} \longrightarrow \C$
-such that
-\begin{equation*}
-A(v) \; = \; \lambda({A}) \cdot v\,,
-\quad
-\textnormal{for each \,$A \in \mathcal{F}$}
-\end{equation*}
-\end{proposition}
-\proof
-We proceed by induction on \,$\dim(V)$.\,
-
-\vskip 0.3cm
-\noindent
-\textbf{Base step:}\; The Proposition is valid for $\dim(V) = 1$.
-\vskip 0.1cm
-\noindent
-If \,$\dim(V) = 1$,\, then any non-zero vector, say \,$v \in V\,\backslash\,\{\,0\,\}$,\,
-forms a basis for \,$V$,\, and every linear operator \,$T \in \End(V)$\, can be given by
-\,$v \longmapsto c_{T} \cdot v$,\, for some \,$c_{T} \in \C$.\,
-In particular, the non-zero vector \,$v$\, is thus a simultaneous eigenvector of \,$\mathcal{F}$.\,
-This establishes the base step.
-
-\vskip 0.3cm
-\noindent
-\textbf{Induction hypothesis:}\;
-Assume that the Proposition is valid for every complex vector space of dimension $< n$.
-
-\vskip 0.3cm
-\noindent
-\textbf{Induction step:}\;
-\vskip 0.1cm
-\noindent
-Suppose \,$1 < \dim(V) = n$.\,
-Observe that exactly one of the following two scenarios is true:
-\begin{itemize}
-\item
-	Every operator \,$A \in \mathcal{F} \subset \End(V)$\,
-	is a scalar multiple of the identity map
-	\,$\id_{V} \in \End(V)$.\,
-	\vskip -0.05cm
-	\noindent
-	The present Proposition is (trivially) true in this scenario.
-\item
-	There exists \,$A \in \mathcal{F}\subset \End(V)$\,
-	which is not a scalar multiple of the identity map
-	\,$\id_{V} \in \End(V)$.\,
-	\vskip -0.05cm
-    In this scenario, the Fundamental Theorem Algebra implies
-    (since \,$V$\, is a {\color{red}finite-dimensional} vector space over \,{\color{red}$\C$})
-    that \,$A$\, admits at least one eigenvector
-    \,$w \in V\,\backslash\,\{\,0\,\}$,\, with associated eigenvalue \,$\beta \in \C$,\,
-    i.e., \,$A(w) = \beta \cdot w$.\,
-    We denote the eigenspace of the eigenvalue \,$\beta \in \C$\, by:
-    \begin{equation*}
-    E_{A}(\beta)
-    \;\; := \;\;
-    	\left\{\,
-    	    w^{\prime} \in V
-    	    \,\left\vert\;
-    	    A(w^{\prime}) \overset{{\color{white}1}}{=} \beta \cdot w^{\prime}
-    	    \right.
-    	    \right\}
-    \end{equation*}
-    Since \,$A$\, is not a scalar multiple of \,$\id_{V}$,\,
-    we see that \,$1 \,\leq\, \dim(\,E_{A}(\beta)\,) \,<\, n$\,
-    (otherwise, \,$\dim(\,E_{A}(\beta)\,) = n$\, would imply \,$A = \beta \cdot \id_{V}$).
-    \vskip 0.1cm
-    Now, the {\color{red}mutual commutativity} of the elements of \,$\mathcal{F}$\, implies that
-    \,$B\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right) \,\subset\, E_{A}(\beta)$,\,
-    for each \,$B \in \mathcal{F}$.\,
-    Indeed, for each \,$B \in \mathcal{F}$\, and each \,$u \in E_{A}(\beta)$,\, we have:
-    \,$A(B(u)) = B(A(u)) = B(\beta \cdot u) = \beta \cdot B(u)$.\,
-    Hence, we see that \,$B(u) \in E_{A}(\beta)$.\,
-    Thus, every \,$B \in \mathcal{F}$\, restricts to a linear operator on \,$E_{A}(\beta)$.\,
-    \vskip 0.1cm
-    By the induction hypothesis, the following family admits a simultaneous eigenvector:
-    \begin{equation*}
-    \mathcal{F}\,\vert_{E_{A}(\beta)}
-    \;\; := \;\;
-    	\left\{\,
-    	    B\vert_{E_{A}(\beta)} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right)
-    	    \,\left\vert\;
-    	    B \overset{{\color{white}1}}{\in} \mathcal{F}
-    	    \right.
-    	    \right\}
-    \end{equation*}
-    In other words, by the induction hypothesis, there exists non-zero
-    \,$v \in E_{A}(\beta) \subset V$\,
-    and a $\C$-valued function
-    \,$\mu : \mathcal{F}\,\vert_{E_{A}(\beta)} \longrightarrow \C$\,
-    such that
-    \begin{equation*}
-    B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
-    \; = \;
-        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v\,,
-    \quad
-    \textnormal{for each \,$B \in \mathcal{F}$}
-    \end{equation*}
-    Now, note that
-    \,$B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\,\right) \,=\, B(v)$,\,
-    since \,$v \in E_{A}(\beta)$.\,
-    Next, we define the $\C$-valued function
-    \,$\lambda : \mathcal{F} \longrightarrow \C$\,
-    by
-    \,$\lambda(B) \,:=\, \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right)$,\,
-    for each \,$B \in \mathcal{F}$.\,
-    Now, observe that:
-    \begin{equation*}
-    B(v)
-    \; = \;
-        B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
-    \; = \;
-        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v
-    \; = \;
-        \lambda(B) \cdot v\,,
-    \quad
-    \textnormal{for each \,$B \in \mathcal{F}$}
-    \end{equation*}
-    Thus, the non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\,
-    is a simultaneous eigenvector of the family \,$\mathcal{F} \subset \End(V)$,\,
-    and the present Proposition is thus valid in this scenario.
-\end{itemize}
-This completes the proof of the induction step, and
-the Proposition now follows by the principle of mathematical induction.
-\qed
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-\vskip 0.5cm
 \section{Weights and weight spaces}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -183,8 +31,10 @@ Suppose:
 \item
     $\mathcal{F} \subset \End(V)$\, is a linear subspace of \,$\End(V)$,\, and
 \item
-	$v \in V\,\backslash\,\{\,0\,\}$\, is a simultaneous eigenvector for \,$\mathcal{F}$,\, i.e.,
-	there exiss a $\C$-valued \,$\lambda : \mathcal{F} \longrightarrow \F$\,
+	$v \in V\,\backslash\,\{\,0\,\}$\, is
+	a \textbf{simultaneous eigenvector} for \,$\mathcal{F}$,\, i.e.,
+	there exiss a $\C$-valued function
+	\,$\lambda : \mathcal{F} \longrightarrow \F$\,
 	such that
 	\,$
 	A(\,v\,)
@@ -279,6 +129,7 @@ We define:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \begin{proposition}
 \label{DistinctWeightSpacesAreLinearIndependent}
 \mbox{}
@@ -308,8 +159,13 @@ Then, the following statements are true:
     then \,$v_{1} = v_{2} = \cdots = v_{m} = 0$.
 \item
     If \,$v_{1} + v_{2} + \cdots + v_{m}$\, is a \textbf{\color{black}weight vector} with weight $\mu$,
-    then \,$\mu = \mu_{k_{0}}$, for some $k_{0} \in \{1,2,\ldots,m\}$,\, and
-    \,$v_{k} = 0$,\, for each \,$k \in \{1,2,\ldots,m\} \,\backslash\, \{\,k_{0}\,\}$.
+    then
+    \begin{itemize}
+    \item
+        $\mu = \mu_{k_{0}}$, for some $k_{0} \in \{1,2,\ldots,m\}$,\, and
+    \item
+        $v_{k} = 0$,\, for each \,$k \in \{1,2,\ldots,m\} \,\backslash\, \{\,k_{0}\,\}$.
+    \end{itemize}
 \end{enumerate}
 \end{proposition}
 \proof
@@ -318,7 +174,7 @@ Then, the following statements are true:
     We proceed by induction on $m \in \N$.
     \vskip 0.1cm
     \noindent
-    \textbf{Base case:}\; $m = 1$.
+    \textbf{Base step:}\; $m = 1$.
     \vskip -0.1cm
     \noindent
     In this case, we have $v_{1} = 0$, by assumption, and there is nothing to prove.
@@ -338,7 +194,7 @@ Then, the following statements are true:
     \end{equation*}
     \vskip 0.1cm
     \noindent
-    \textbf{Induction step:}\;
+    \textbf{Induction step:}\; $m \geq 2$.
     \vskip 0.01cm
     \noindent
     Suppose \,$v_{1} + v_{2} + \cdots + v_{m} \,=\, 0$.\,
@@ -517,7 +373,6 @@ for each \,$k = 1, \ldots, n$,\, the basis element
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\vskip 0.5cm
 \begin{proposition}
 \mbox{}
 \vskip 0.1cm
@@ -676,6 +531,65 @@ This proves the simultaneous diagonalizability of the elements of \,$\mathcal{F}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 1.0cm
+\section{Pairwise commutativity and simultaneous diagonalizability of families of operators on finite-dimensional vector spaces}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}[Restrictions diagonalizable operators are themselves diagonalizable]
+\label{RestrictionsPreserveDiagonalizability}
+\mbox{}
+\vskip 0.1cm
+\noindent
+The restriction to a linear subspace of a diagonalizable operator
+on a finite-dimensional vector space is itself diagonalizable.
+\end{proposition}
+\proof
+First, we recall two well known results from linear algebra:
+\begin{enumerate}
+\item 
+    A linear operator \,$A$\,
+    defined on a finite-dimensional vector space over a base field \,$\F$\,
+    is diagonalizable if and only if its minimal polynomial \,$p_{A}(z)$\,
+    splits into (finitely many) distinct linear factors over the base \,$\F$,\,
+    i.e., \,$p_{A}(z)$\, is of the form
+    \,$p_{A}(z) \,=\, (z - \lambda_{1}) \cdot (z - \lambda_{2}) \cdots (z - \lambda_{m})$,\,
+    for distinct \,$\lambda_{k} \in \F$.\,
+    (See, for example, 5.62, p.169, \cite{Axler2024}.)
+\item
+    Let \,$V$\, be a finite-dimensional vector space,
+    \,$T \in \End(V)$\, a linear operator defined on \,$V$,\, and
+    \,$W \subset V$\, a linear subspace such that \,$T(\,W\,) \subset W$.\,
+    Then, diagonalizability of \,$T$\, implies the diagonalizability of \,$T\vert_{W}$.\,
+    (See, for example, 5.31, p.148, \cite{Axler2024}.)
+\end{enumerate}
+
+\vskip 0.1cm
+Now, let \,$V$\, be a finite-dimensional vector space (over an arbitrary base field \,$\F$),
+\,$T \in \End(V)$\, a diagonalizable linear operator on \,$V$,\, and
+\,$W \subset V$\, a linear subspace of \,$V$\, such that \,$T(\,W\,) \subset W$.\,
+
+\vskip 0.1cm
+By (i) above, the minimal polynomial of \,$T$\, equals
+\,$(z - \lambda_{1}) \cdots (z - \lambda_{m})$\,
+for some list of distinct elements
+\,$\lambda_{1}, \cdots,\, \lambda_{m} \in \F$ (by (i) above),\,
+since the operator \,$T$\, is diagonalizable by hypothesis.
+
+\vskip 0.1cm
+By (ii) above, the minimal polynomial of \,$T$\, is a polynomial multiple
+of the minimal polynomial of \,$T\vert_{W}$.\,
+Hence, the minimal polynomial of \,$T\vert_{W}$\, equals
+\begin{equation*}
+\underset{i\,\in\,\mathcal{S}}{\prod}\;(z - \lambda_{k})\,,
+\quad
+\textnormal{for some subset \,$\mathcal{S} \subset \{1,2,\ldots,m\}$}
+\end{equation*}
+By (i) again, it follows that \,$T\vert_{W}$\, is diagonalizable.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 0.5cm
 \begin{proposition}
 \mbox{}
@@ -695,8 +609,8 @@ Then, the following statements are true:
     then they must pairwise commute.
 \item
     If the elements of \,$\mathcal{F}$\, pairwise commute and
-    each operator \,$A \in \mathcal{F}$\, is (individually) diagonalizable,
-    then in fact the elements of \,$\mathcal{F}$\, are simultaneously diagonalizable.
+    each operator in \,$\mathcal{F}$\, is (individually) diagonalizable over \,$\F$,\,
+    then in fact the entire family \,$\mathcal{F}$\, is simultaneously diagonalizable.
 \end{enumerate}
 \end{proposition}
 \proof
@@ -767,13 +681,376 @@ Then, the following statements are true:
     \end{eqnarray*}
     This proves that \,$A \circ B \,=\, B \circ A$,\, as required.
 \item
+    We proceed by induction on \,$n \,:=\, \dim(V)$.\,
+    \vskip 0.2cm
+    \textbf{Base step:}\; $\dim(V) \,=\, 1$
+    \vskip -0.05cm
+    Since \,$\dim(V) = 1$,\,
+    any non-zero vector \,$v \in V$\, forms a basis for \,$V$\,.
+    Because a linear operator on a one-dimensional vector space
+    maps any basis vector to a scalar multiple of itself,
+    every operator \,$T \in \mathcal{F}$\, acts as
+    \,$T(\,v\,) = \lambda_{T} \cdot v$\, for some scalar \,$\lambda_{T} \in \F$.\,
+    Therefore, the basis \,$\{\,v\,\}$\, trivially diagonalizes
+    every operator in \,$\mathcal{F}$\, simultaneously.
+    \vskip 0.2cm
+    \textbf{Induction hypothesis:}\; The desired property holds for any vector space of dimension
+    \,$< n := \dim(V)$.
+
+    \vskip 0.2cm
+    \textbf{Induction step:}\; $n \,:=\, \dim(V) \,\geq\, 2$
+    \vskip -0.05cm
+    \noindent
+    Observe that exactly one of the following two scenarios is true:
+    \begin{itemize}
+    \item
+        Every operator \,$A \in \mathcal{F}$\, is a scalar multiple of
+        the identity map \,$\id_{V} \in \End(V)$.\,
+        \vskip -0.05cm
+        In this scenario, for each operator \,$A \in \mathcal{F}$,\,
+        there exists \,$\lambda_{A} \in \F$\, such that
+        \,$A(\,v\,) \,=\, \lambda_{A} \cdot v$,\, for each \,$v \in V$.\,
+        Therefore, any basis of \,$V$\, consists of simultaneous eigenvectors, and
+        \,$\mathcal{F}$\, is simultaneously diagonalizable.
+    \item
+    	There exists \,$A \in \mathcal{F}$\, that is not a scalar multiple
+    	of the identity map \,$\id_{V} \in \End(V)$.\,
+        \vskip -0.05cm
+    \end{itemize}
+    \vskip 0.2cm
+    \noindent
+    We now establish the validity of the desired result in the second scenario.
+    Let \,$\lambda_{1}, \lambda_{2}, \ldots,\, \lambda_{m} \in \F$\,
+    be the distinct eigenvalues of \,$A \in \mathcal{A} \subset \End(V)$,\, and let
+    \,$E_{A}(\lambda_{1}),\, E_{A}(\lambda_{2}),\, \ldots,\, E_{A}(\lambda_{m}) \subset V$\,
+    be their respective eigenspaces.
+    The diagonalizability of \,$A \in \mathcal{F} \subset \End(V)$\, implies
+    the direct sum decomposition:
+    \begin{equation*}
+    V
+    \;\; = \;\;
+        \overset{m}{\underset{k = 1}{\bigoplus}}\;\,
+        E_{A}(\lambda_{k})
+    \end{equation*}
+
+    \vskip 0.2cm
+    \noindent
+    \textbf{Claim 1:}\;
+    \,$
+    \dim\!\left(\,\overset{{\color{white}.}}{E_{A}(\lambda_{k})}\,\right) \,<\, n \,:=\, \dim(V)\,,
+    \;\;
+    \textnormal{for each \,$k \in \{1,2,\ldots,m\}$}
+    $\,
+    \vskip -0.1cm
+    \noindent
+    Proof of Claim 1:\;
+    Since \,$A \in \mathcal{F}$\, is not a scalar multiple of the identity \,$\id_{V} \in \End(V)$,\,
+    it must have at least two distinct eigenvalues
+    (otherwise, if \,$A$\, had just a unique eigenvalue \,$\lambda \in \F$,\,
+    then we would have \,$V \,=\, E_{A}(\lambda)$,\, in which case, \,$A = \lambda \cdot \id_{V}$,\,
+    contradicing the assumption that \,$A$\, is not a scalar multiple of the identity map).
+    Therefore, the dimension of each eigenspace is strictly less than \,$n \,:=\, \dim(V)$,\, i.e.,
+    \,$
+    \dim\!\left(\,\overset{{\color{white}.}}{E_{A}(\lambda_{k})}\,\right) \,<\, n \,:=\, \dim(V)\,,
+    \;\;
+    \textnormal{for each $k \in \{1,2,\ldots,m\}$}
+    $.\,
+    This completes the proof of Claim 1.
+
+    \vskip 0.3cm
+    \noindent
+    \textbf{Claim 2:}\;
+    \,$
+    B\!\left(\,\overset{{\color{white}.}}{E_{A}(\lambda_{k})}\,\right) \,\subset\, E_{A}(\lambda_{k})\,,
+    \;\;
+    \textnormal{for each \,$B \in \mathcal{F}$\, and each \,$k \in \{1,2,\ldots,m\}$}
+    $\,
+    \vskip -0.1cm
+    \noindent
+    Proof of Claim 2:\;
+    This follows readily from the pairwise commutativity of the family \,$\mathcal{F}$.\,
+    Indeed, for each \,$w \in E_{A}(\lambda_{k})$,\, we have:
+    \begin{equation*}
+    A\!\left(\,\overset{{\color{white}.}}{B(\,w\,)}\,\right)
+    \; = \;
+        B\!\left(\,\overset{{\color{white}.}}{A(\,w\,)}\,\right)
+    \; = \;
+        B(\,\lambda_{k} \cdot w\,)
+    \; = \;
+        \lambda_{k} \cdot B(\,w\,)\,,
+    \end{equation*}
+    which implies \,$B(\,w\,) \subset E_{A}(\lambda_{k})$.\,
+    This completes the proof of Claim 2.
+
+    \vskip 0.3cm
+    \noindent
+    Now, for each \,$k \in \{1,\ldots,m\}$,\, consider the family of operators:
+    \begin{equation*}
+    \mathcal{F}\vert_{E_{A}(\lambda_{k})}
+    \;\; := \;\;
+        \left\{\;
+            B\vert_{E_{A}(\lambda_{k})} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\lambda_{k})}\,\right)
+            \,\left\vert\;
+            \overset{{\color{white}.}}{B \in \mathcal{F}}
+            \right.
+            \,\right\}
+    \end{equation*}
+    Note that the elements of \,$\mathcal{F}\vert_{E_{A}(\lambda_{k})}$\,
+    still pairwise commute.
+
+    \vskip 0.3cm
+    \noindent
+    \textbf{Claim 3:}\;
+    For each \,$k \in \{1,2,\ldots,m\}$,\,
+    the elements of \,$\mathcal{F}\vert_{E_{A}(\lambda_{k})}$\, are individually diagonalizable.
+    \vskip -0.01cm
+    \noindent
+    Proof of Claim 3:\;
+    Recall that each element \,$B \in \mathcal{F}$\, is (individually) diagonalizable.
+    Hence, by Proposition \ref{RestrictionsPreserveDiagonalizability}, its restriction
+    \,$B\vert_{E_{A}(\lambda_{k})} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\lambda_{k})}\,\right)$\,
+    is itself (individually) diagonalizable.
+    This completes the proof of Claim 3.
+
+    \vskip 0.3cm
+    \noindent
+    \textbf{Claim 4:}\;
+    For each \,$k \in \{1,2,\ldots,m\}$,\,
+    the family \,$\mathcal{F}\vert_{E_{A}(\lambda_{k})}$\, of operators
+    are simultaneously diagonalizable, i.e.,
+    there exists a basis
+    \,$v^{(k)}_{1},\, v^{(k)}_{2},\, \ldots,\, v^{(k)}_{n_{k}}$\,
+    for \,$E_{A}(\lambda_{k})$\, and $\F$-valued functions
+    \,$
+    \mu^{(k)}_{1},\, \mu^{(k)}_{1},\, \mu^{(k)}_{1} :
+        \mathcal{F}\vert_{E_{A}(\lambda_{k})} \longrightarrow \F
+    $\,
+    such that
+    \begin{equation*}
+    B\vert_{E_{A}(\lambda_{k})}\!\left(\;v^{(k)}_{j}\,\right)
+    \; = \;
+        \mu^{(k)}_{j}\!\left(\,B\vert_{E_{A}(\lambda_{k})}\,\right) \,\cdot\, v^{(k)}_{j}\,,
+    \quad
+    \textnormal{for each \,$B \in \mathcal{F}$,\, $k \in \{1,\ldots,m\}$,\, and \,$j \in \{1, 2, \ldots, n_{k}\}$}
+    \end{equation*}
+    % consisting of simultaneous eigenvectors
+    % for the family \,$\mathcal{F}\vert_{E_{A}(\lambda_{k})}$.\,
+    \vskip -0.01cm
+    \noindent
+    Proof of Claim 4:\;
+    This follows immediately from Claim 1, Claim 3,
+    the pairwise commutativity of \,$\mathcal{F}\vert_{E_{A}(\lambda_{k})}$,\, and
+    the induction hypothesis.
+    This completes the proof of Claim 4.
+
+    \vskip 0.3cm
+    \noindent
+    \textbf{Claim 5:}\;
+    $V$\, admits a basis consisting of simultaneous eigenvectors for \,$\mathcal{F}$.\,
+    \vskip -0.01cm
+    \noindent
+    Proof of Claim 5:\;
+    By Claim 4,
+    \begin{equation*}
+    v^{(1)}_{1},\, v^{(1)}_{2},\, \ldots,\, v^{(1)}_{n_{1}},
+    \quad
+    v^{(2)}_{1},\, v^{(2)}_{2},\, \ldots,\, v^{(2)}_{n_{1}},
+    \quad
+    \ldots,
+    \quad
+    v^{(m)}_{1},\, v^{(m)}_{2},\, \ldots,\, v^{(m)}_{n_{m}}
+    \end{equation*}
+    form a basis for \,$V$,\, since
+    \,$V \,=\, \overset{m}{\underset{k\,=\,1}{\bigoplus}}\;E_{A}(\lambda_{k})$.\,
+    It remains to establish that each \,$v^{(k)}_{j}$\, is a simultaneous eigenvector
+    for the family \,$\mathcal{F}$.\,
+    To this end, we define
+    \,$\widetilde{\mu}^{\,(k)}_{j} : \mathcal{F} \longrightarrow \F$\,
+    by:
+    \begin{equation*}
+    \widetilde{\mu}^{\,(k)}_{j}\!\left(\,B\,\right)
+    \;\; := \;\;
+        \mu^{(k)}_{j}\!\left(\,\overset{{\color{white}.}}{B\vert_{E_{A}(\lambda_{k})}}\,\right),
+    \quad
+    \textnormal{for each \,$B \in \mathcal{F}$\, and each \,$j = \{1,\ldots,n_{k}\}$}
+    \end{equation*}
+    We then have, for each
+    \,$k \in \{1,\ldots,m\}$,\, and
+    \,$j \in \{1, 2, \ldots, n_{k}\}$,
+    \begin{eqnarray*}
+    B\!\left(\,v^{(k)}_{j}\,\right)
+    & = &
+        B_{E_{A}(\lambda_{k})}\!\left(\,v^{(k)}_{j}\,\right)
+    \;\; = \;\;
+        \mu^{(k)}_{j}\!\left(\,B_{E_{A}(\lambda_{k})}\,\right) \cdot v^{(k)}_{j}
+    \\
+    & = &
+        \widetilde{\mu}^{\,(k)}_{j}\!\left(\,B\,\right) \cdot v^{(k)}_{j}\,,
+    \quad
+    \textnormal{for each \,$B \in \mathcal{F}$}
+    \end{eqnarray*}
+    In other words, \,$v^{(k)}_{j}$\,
+    (\,for each \,$k \in \{1,\ldots,m\}$\, and each \,$j \in \{1,\ldots,n_{k}\}$\,)
+    is indeed a simultaneous eigenvector for the family \,$\mathcal{F}$\,
+    of pairwise commuting and indvidually diagonalizable operators.
+    This completes the proof of Claim 5.
+
+    \vskip 0.3cm
+    We can now finish the proof: By Claim 5, we may conclude that
+    \,$\mathcal{F}$\, is simultaneously diagonalizable.
+    This establishes the desired result for the second scenario above, and hence
+    completes the proof of the induction step as well as that of the Proposition.
+    \qed
 \end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+A pairwise commuting family of linear operators on a finite-dimensional
+complex vector space admits at least one simultaneous eigenvector.
+More precisely, suppose:
+\begin{itemize}
+\item
+    $V$\, is a finite-dimensional vector space over the field $\C$ of complex numbers, and
+\item
+    $\mathcal{F} \subset \End(V)$\, is a family of pairwise commuting linear operators defined on \,$V$,\, i.e.,
+    \begin{equation*}
+    A_{1}\,A_{2} \;\; = \;\; A_{2}\,A_{1}\,,
+    \quad
+    \textnormal{for each \,$A_{1}, A_{2} \,\in\,\mathcal{F}$}
+    \end{equation*}
+\end{itemize}
+Then, there exists a non-zero vector \,$v \,\in\, V\,\backslash\{\,0\,\}$\,
+and a $\C$-valued function $\lambda : \mathcal{F} \longrightarrow \C$
+such that
+\begin{equation*}
+A(v) \; = \; \lambda({A}) \cdot v\,,
+\quad
+\textnormal{for each \,$A \in \mathcal{F}$}
+\end{equation*}
+\end{proposition}
+\proof
+We proceed by induction on \,$\dim(V)$.\,
+
+\vskip 0.3cm
+\noindent
+\textbf{Base step:}\; The Proposition is valid for $\dim(V) = 1$.
+\vskip 0.1cm
+\noindent
+If \,$\dim(V) = 1$,\, then any non-zero vector, say \,$v \in V\,\backslash\,\{\,0\,\}$,\,
+forms a basis for \,$V$,\, and every linear operator \,$T \in \End(V)$\, can be given by
+\,$v \longmapsto c_{T} \cdot v$,\, for some \,$c_{T} \in \C$.\,
+In particular, the non-zero vector \,$v$\, is thus a simultaneous eigenvector of \,$\mathcal{F}$.\,
+This establishes the base step.
+
+\vskip 0.3cm
+\noindent
+\textbf{Induction hypothesis:}\;
+Assume that the Proposition is valid for every complex vector space of dimension $< n$.
+
+\vskip 0.3cm
+\noindent
+\textbf{Induction step:}\; $n \,:=\, \dim(V) \,\geq\, 2$
+\vskip 0.1cm
+\noindent
+Observe that exactly one of the following two scenarios is true:
+\begin{itemize}
+\item
+	Every operator \,$A \in \mathcal{F} \subset \End(V)$\,
+	is a scalar multiple of the identity map
+	\,$\id_{V} \in \End(V)$.\,
+	\vskip -0.05cm
+	\noindent
+	The present Proposition is (trivially) true in this scenario.
+\item
+	There exists \,$A \in \mathcal{F}\subset \End(V)$\,
+	which is not a scalar multiple of the identity map
+	\,$\id_{V} \in \End(V)$.\,
+	\vskip -0.05cm
+    In this scenario, the Fundamental Theorem Algebra implies
+    (since \,$V$\, is a {\color{red}finite-dimensional} vector space over \,{\color{red}$\C$})
+    that \,$A$\, admits at least one eigenvector
+    \,$w \in V\,\backslash\,\{\,0\,\}$,\, with associated eigenvalue \,$\beta \in \C$,\,
+    i.e., \,$A(w) = \beta \cdot w$.\,
+    We denote the eigenspace of the eigenvalue \,$\beta \in \C$\, by:
+    \begin{equation*}
+    E_{A}(\beta)
+    \;\; := \;\;
+    	\left\{\,
+    	    w^{\prime} \in V
+    	    \,\left\vert\;
+    	    A(w^{\prime}) \overset{{\color{white}1}}{=} \beta \cdot w^{\prime}
+    	    \right.
+    	    \right\}
+    \end{equation*}
+    Since \,$A$\, is not a scalar multiple of \,$\id_{V}$,\,
+    we see that \,$1 \,\leq\, \dim(\,E_{A}(\beta)\,) \,<\, n$\,
+    (otherwise, \,$\dim(\,E_{A}(\beta)\,) = n$\, would imply \,$A = \beta \cdot \id_{V}$).
+    \vskip 0.1cm
+    Now, the {\color{red}pairwise commutativity} of the elements of \,$\mathcal{F}$\, implies that
+    \,$B\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right) \,\subset\, E_{A}(\beta)$,\,
+    for each \,$B \in \mathcal{F}$.\,
+    Indeed, for each \,$B \in \mathcal{F}$\, and each \,$u \in E_{A}(\beta)$,\, we have:
+    \,$A(B(u)) = B(A(u)) = B(\beta \cdot u) = \beta \cdot B(u)$.\,
+    Hence, we see that \,$B(u) \in E_{A}(\beta)$.\,
+    Thus, every \,$B \in \mathcal{F}$\, restricts to a linear operator on \,$E_{A}(\beta)$.\,
+    \vskip 0.1cm
+    By the induction hypothesis, the following family admits a simultaneous eigenvector:
+    \begin{equation*}
+    \mathcal{F}\,\vert_{E_{A}(\beta)}
+    \;\; := \;\;
+    	\left\{\,
+    	    B\vert_{E_{A}(\beta)} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right)
+    	    \,\left\vert\;
+    	    B \overset{{\color{white}1}}{\in} \mathcal{F}
+    	    \right.
+    	    \right\}
+    \end{equation*}
+    In other words, by the induction hypothesis, there exists non-zero
+    \,$v \in E_{A}(\beta) \subset V$\,
+    and a $\C$-valued function
+    \,$\mu : \mathcal{F}\,\vert_{E_{A}(\beta)} \longrightarrow \C$\,
+    such that
+    \begin{equation*}
+    B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
+    \; = \;
+        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v\,,
+    \quad
+    \textnormal{for each \,$B \in \mathcal{F}$}
+    \end{equation*}
+    Now, note that
+    \,$B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\,\right) \,=\, B(v)$,\,
+    since \,$v \in E_{A}(\beta)$.\,
+    Next, we define the $\C$-valued function
+    \,$\lambda : \mathcal{F} \longrightarrow \C$\,
+    by
+    \,$\lambda(B) \,:=\, \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right)$,\,
+    for each \,$B \in \mathcal{F}$.\,
+    Now, observe that:
+    \begin{equation*}
+    B(v)
+    \; = \;
+        B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
+    \; = \;
+        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v
+    \; = \;
+        \lambda(B) \cdot v\,,
+    \quad
+    \textnormal{for each \,$B \in \mathcal{F}$}
+    \end{equation*}
+    Thus, the non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\,
+    is a simultaneous eigenvector of the family \,$\mathcal{F} \subset \End(V)$,\,
+    and the present Proposition is thus valid in this scenario.
+\end{itemize}
+This completes the proof of the induction step, and
+the Proposition now follows by the principle of mathematical induction.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
 
