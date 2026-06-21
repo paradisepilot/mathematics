@@ -28,7 +28,7 @@ complex vector space admits at least one simultaneous eigenvector.
 More precisely, suppose:
 \begin{itemize}
 \item
-    $V$\, is a finite-dimensional vector space over the field $\C$ of complex numbers,
+    $V$\, is a finite-dimensional vector space over the field $\C$ of complex numbers, and
 \item
     $\mathcal{F} \subset \End(V)$\, is a family of mutually commuting linear operators defined on \,$V$,\, i.e.,
     \begin{equation*}
@@ -37,160 +37,618 @@ More precisely, suppose:
     \textnormal{for each \,$A_{1}, A_{2} \,\in\,\mathcal{F}$}
     \end{equation*}
 \end{itemize}
-Then, the following statements are true:
-\begin{enumerate}
+Then, there exists non-zero vector \,$v \,\in\, V\,\backslash\{\,0\,\}$\,
+and a $\C$-valued function $\lambda : \mathcal{F} \longrightarrow \C$
+such that
+\begin{equation*}
+A(v) \; = \; \lambda({A}) \cdot v\,,
+\quad
+\textnormal{for each \,$A \in \mathcal{F}$}
+\end{equation*}
+\end{proposition}
+\proof
+We proceed by induction on \,$\dim(V)$.\,
+
+\vskip 0.3cm
+\noindent
+\textbf{Base step:}\; The Proposition is valid for $\dim(V) = 1$.
+\vskip 0.1cm
+\noindent
+If \,$\dim(V) = 1$,\, then any non-zero vector, say \,$v \in V\,\backslash\,\{\,0\,\}$,\,
+forms a basis for \,$V$,\, and every linear operator \,$T \in \End(V)$\, can be given by
+\,$v \longmapsto c_{T} \cdot v$,\, for some \,$c_{T} \in \C$.\,
+In particular, the non-zero vector \,$v$\, is thus a simultaneous eigenvector of \,$\mathcal{F}$.\,
+This establishes the base step.
+
+\vskip 0.3cm
+\noindent
+\textbf{Induction hypothesis:}\;
+Assume that the Proposition is valid for every complex vector space of dimension $< n$.
+
+\vskip 0.3cm
+\noindent
+\textbf{Induction step:}\;
+\vskip 0.1cm
+\noindent
+Suppose \,$1 < \dim(V) = n$.\,
+Observe that exactly one of the following two scenarios is true:
+\begin{itemize}
 \item
-    There exists non-zero vector \,$v \,\in\, V\,\backslash\{\,0\,\}$\,
-    and a $\C$-valued function $\lambda : \mathcal{F} \longrightarrow \C$
+	Every operator \,$A \in \mathcal{F} \subset \End(V)$\,
+	is a scalar multiple of the identity map
+	\,$\id_{V} \in \End(V)$.\,
+	\vskip -0.05cm
+	\noindent
+	The present Proposition is (trivially) true in this scenario.
+\item
+	There exists \,$A \in \mathcal{F}\subset \End(V)$\,
+	which is not a scalar multiple of the identity map
+	\,$\id_{V} \in \End(V)$.\,
+	\vskip -0.05cm
+    In this scenario, the Fundamental Theorem Algebra implies
+    (since \,$V$\, is a {\color{red}finite-dimensional} vector space over \,{\color{red}$\C$})
+    that \,$A$\, admits at least one eigenvector
+    \,$w \in V\,\backslash\,\{\,0\,\}$,\, with associated eigenvalue \,$\beta \in \C$,\,
+    i.e., \,$A(w) = \beta \cdot w$.\,
+    We denote the eigenspace of the eigenvalue \,$\beta \in \C$\, by:
+    \begin{equation*}
+    E_{A}(\beta)
+    \;\; := \;\;
+    	\left\{\,
+    	    w^{\prime} \in V
+    	    \,\left\vert\;
+    	    A(w^{\prime}) \overset{{\color{white}1}}{=} \beta \cdot w^{\prime}
+    	    \right.
+    	    \right\}
+    \end{equation*}
+    Since \,$A$\, is not a scalar multiple of \,$\id_{V}$,\,
+    we see that \,$1 \,\leq\, \dim(\,E_{A}(\beta)\,) \,<\, n$\,
+    (otherwise, \,$\dim(\,E_{A}(\beta)\,) = n$\, would imply \,$A = \beta \cdot \id_{V}$).
+    \vskip 0.1cm
+    Now, the {\color{red}mutual commutativity} of the elements of \,$\mathcal{F}$\, implies that
+    \,$B\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right) \,\subset\, E_{A}(\beta)$,\,
+    for each \,$B \in \mathcal{F}$.\,
+    Indeed, for each \,$B \in \mathcal{F}$\, and each \,$u \in E_{A}(\beta)$,\, we have:
+    \,$A(B(u)) = B(A(u)) = B(\beta \cdot u) = \beta \cdot B(u)$.\,
+    Hence, we see that \,$B(u) \in E_{A}(\beta)$.\,
+    Thus, every \,$B \in \mathcal{F}$\, restricts to a linear operator on \,$E_{A}(\beta)$.\,
+    \vskip 0.1cm
+    By the induction hypothesis, the following family admits a simultaneous eigenvector:
+    \begin{equation*}
+    \mathcal{F}\,\vert_{E_{A}(\beta)}
+    \;\; := \;\;
+    	\left\{\,
+    	    B\vert_{E_{A}(\beta)} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right)
+    	    \,\left\vert\;
+    	    B \overset{{\color{white}1}}{\in} \mathcal{F}
+    	    \right.
+    	    \right\}
+    \end{equation*}
+    In other words, by the induction hypothesis, there exists non-zero
+    \,$v \in E_{A}(\beta) \subset V$\,
+    and a $\C$-valued function
+    \,$\mu : \mathcal{F}\,\vert_{E_{A}(\beta)} \longrightarrow \C$\,
     such that
     \begin{equation*}
-    A(v) \; = \; \lambda({A}) \cdot v\,,
+    B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
+    \; = \;
+        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v\,,
+    \quad
+    \textnormal{for each \,$B \in \mathcal{F}$}
+    \end{equation*}
+    Now, note that
+    \,$B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\,\right) \,=\, B(v)$,\,
+    since \,$v \in E_{A}(\beta)$.\,
+    Next, we define the $\C$-valued function
+    \,$\lambda : \mathcal{F} \longrightarrow \C$\,
+    by
+    \,$\lambda(B) \,:=\, \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right)$,\,
+    for each \,$B \in \mathcal{F}$.\,
+    Now, observe that:
+    \begin{equation*}
+    B(v)
+    \; = \;
+        B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
+    \; = \;
+        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v
+    \; = \;
+        \lambda(B) \cdot v\,,
+    \quad
+    \textnormal{for each \,$B \in \mathcal{F}$}
+    \end{equation*}
+    Thus, the non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\,
+    is a simultaneous eigenvector of the family \,$\mathcal{F} \subset \End(V)$,\,
+    and the present Proposition is thus valid in this scenario.
+\end{itemize}
+This completes the proof of the induction step, and
+the Proposition now follows by the principle of mathematical induction.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{Weights and weight spaces}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{lemma}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $V$\, is a vector space
+    (over an arbitrary field \,$\F$,\, and not necessarily finite-dimensional),
+\item
+    $\mathcal{F} \subset \End(V)$\, is a linear subspace of \,$\End(V)$,\, and
+\item
+	$v \in V\,\backslash\,\{\,0\,\}$\, is a simultaneous eigenvector for \,$\mathcal{F}$,\, i.e.,
+	there exiss a $\C$-valued \,$\lambda : \mathcal{F} \longrightarrow \F$\,
+	such that
+	\,$
+	A(\,v\,)
+	\;\; = \;\;
+		\lambda(A) \cdot v
+	$,\,
+	for each \,$A \in \mathcal{F}$.\,
+\end{itemize}
+Then, the function
+\,$\lambda : \mathcal{F} \longrightarrow \F$\,
+is a linear function.
+\end{lemma}
+\proof
+Simply observe that,
+for each \,$c_{1}, c_{2} \in \F$\, and each \,$A_{1}, A_{2} \in \mathcal{F} \subset \End(V)$,\,
+we have:
+\begin{eqnarray*}
+\lambda\left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right) \cdot\, v
+& = &
+    \left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right)\!(\,v\,)
+\;\; = \;\;
+    c_{1}A_{1}(v) \,+\, c_{2}A_{2}(v)
+\;\; = \;\;
+    c_{1}\lambda(A_{1}) \cdot v \,+\, c_{2}\lambda(A_{2}) \cdot v
+\\
+& = &
+    \left(\,c_{1}\lambda(A_{1}) \overset{{\color{white}.}}{+} c_{2}\lambda(A_{2})\,\right) \cdot\, v
+\end{eqnarray*}
+Since \,$v \neq 0$,\, it follows that
+\,$
+\lambda\left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right)
+\,=\,
+    c_{1}\lambda(A_{1}) \overset{{\color{white}.}}{+} c_{2}\lambda(A_{2})
+$,\,
+which proves the linearity of the function
+\,$\lambda : \mathcal{F} \longrightarrow \F$,\, as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Weights and weight spaces]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $V$\, is a vector space
+    (over an arbitrary field \,$\F$,\, and not necessarily finite-dimensional), and
+\item
+    $\mathcal{F} \subset \End(V)$\, is a linear subspace of \,$\End(V)$.
+\end{itemize}
+We define:
+\begin{enumerate}
+\item
+    A \textbf{weight} for \,$\mathcal{F}$\, is a linear functional
+    \,$\mu : \mathcal{F} \longrightarrow \F$\,
+    such that there exists \,$v \in V \,\backslash\, \{\,0\,\}$\,
+    satisfying
+    \begin{equation*}
+    A(v) \; = \; \mu({A}) \cdot v\,,
     \quad
     \textnormal{for each \,$A \in \mathcal{F}$}
     \end{equation*}
 \item
-    Furthermore, if the family \,$\mathcal{F} \subset \End(V)$\,
-    is a vector subspace of \,$\End(V)$,\,
-    then the above function
-    \,$\lambda : \mathcal{F} \longrightarrow \C$\,
-    is a linear function.
+	The \textbf{weight space} \,$W_{\mu} \subset V$\,
+	associated to each weight \,$\mu$\, for \,$\mathcal{F}$\,
+	is defined to be:
+    \begin{equation*}
+    W_{\mu}
+    \;\; := \;\;
+        \left\{\;
+            w \in V
+            \,\left\vert
+            \begin{array}{c}
+                A(\,w\,) \overset{{\color{white}1}}{=} \mu(A) \cdot w\,,
+                \\
+                \overset{{\color{white}.}}{\textnormal{for each \,$A \in \mathcal{F}$}}
+                \end{array}
+            \right.
+            \!\!\right\}
+    \;\; \subset \;\;
+        V
+    \end{equation*}
+\end{enumerate}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}
+\label{DistinctWeightSpacesAreLinearIndependent}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $V$\, is a vector space
+    (over an arbitrary field \,$\F$,\, and not necessarily finite-dimensional),
+\item
+    $\mathcal{F} \subset \End(V)$\, is a linear subspace of \,$\End(V)$,\, and
+\end{itemize}
+Let
+\begin{itemize}
+\item
+    $\mu_{1},\, \mu_{2},\, \ldots,\, \mu_{m}$\, be distinct weights for \,$\mathcal{F}$,\,
+\item
+    $W_{\mu_{1}},\, W_{\mu_{2}},\, \ldots,\, W_{\mu_{m}}$\, be the corresponding weight spaces, and
+\item
+    $v_{k} \in W_{\mu_{k}}$,\, for \,$k = 1, 2, \ldots, m$.
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    If \,$v_{1} + v_{2} + \cdots + v_{m} \,=\, 0$,\,
+    then \,$v_{1} = v_{2} = \cdots = v_{m} = 0$.
+\item
+    If \,$v_{1} + v_{2} + \cdots + v_{m}$\, is a \textbf{\color{black}weight vector} with weight $\mu$,
+    then \,$\mu = \mu_{k_{0}}$, for some $k_{0} \in \{1,2,\ldots,m\}$,\, and
+    \,$v_{k} = 0$,\, for each \,$k \in \{1,2,\ldots,m\} \,\backslash\, \{\,k_{0}\,\}$.
 \end{enumerate}
 \end{proposition}
 \proof
 \begin{enumerate}
 \item
-	We proceed by induction on \,$\dim(V)$.\,
-
-	\vskip 0.3cm
-	\noindent
-	\textbf{Base step:}\; The Proposition is valid for $\dim(V) = 1$.
-	\vskip 0.1cm
-	\noindent
-	If \,$\dim(V) = 1$,\, then any non-zero vector, say \,$v \in V\,\backslash\,\{\,0\,\}$,\,
-	forms a basis for \,$V$,\, and every linear operator \,$T \in \End(V)$\, can be given by
-	\,$v \longmapsto c_{T} \cdot v$,\, for some \,$c_{T} \in \C$.\,
-	In particular, the non-zero vector \,$v$\, is thus a simultaneous eigenvector of \,$\mathcal{F}$.\,
-	This establishes the base step.
-
-	\vskip 0.3cm
-	\noindent
-	\textbf{Induction hypothesis:}\; The Proposition is valid for every complex vector space of dimension $< n$.
-
-	\vskip 0.3cm
-	\noindent
-	\textbf{Induction step:}\;
-	\vskip 0.1cm
-	\noindent
-	Suppose \,$1 < \dim(V) = n$.\,
-	Observe that exactly one of the following two scenarios is true:
-	\begin{itemize}
-	\item
-		Every operator \,$A \in \mathcal{F} \subset \End(V)$\,
-		is a scalar multiple of the identity map
-		\,$\id_{V} \in \End(V)$.\,
-		\vskip -0.05cm
-		\noindent
-		The present Proposition is (trivially) true in this scenario.
-	\item
-		There exists \,$A \in \mathcal{F}\subset \End(V)$\,
-		which is not a scalar multiple of the identity map
-		\,$\id_{V} \in \End(V)$.\,
-		\vskip -0.05cm
-	    In this scenario, the Fundamental Theorem Algebra implies that \,$A$\,
-	    admits at least one eigenvector
-	    \,$w \in V\,\backslash\,\{\,0\,\}$,\, with associated eigenvalue \,$\beta \in \C$,\,
-	    i.e., \,$A(w) = \beta \cdot w$.\,
-	    We denote the eigenspace of the eigenvalue \,$\beta \in \C$\, by:
-	    \begin{equation*}
-	    E_{A}(\beta)
-	    \;\; := \;\;
-	    	\left\{\,
-	    	    w^{\prime} \in V
-	    	    \,\left\vert\;
-	    	    A(w^{\prime}) \overset{{\color{white}1}}{=} \beta \cdot w^{\prime}
-	    	    \right.
-	    	    \right\}
-	    \end{equation*}
-	    Since \,$A$\, is not a scalar multiple of \,$\id_{V}$,\,
-	    we see that \,$1 \,\leq\, \dim(\,E_{A}(\beta)\,) \,<\, n$\,
-	    (otherwise, \,$\dim(\,E_{A}(\beta)\,) = n$\, would imply \,$A = \beta \cdot \id_{V}$).
-	    By the induction hypothesis, the following family admits a simultaneous eigenvector:
-	    \begin{equation*}
-	    \mathcal{F}\,\vert_{E_{A}(\beta)}
-	    \;\; := \;\;
-	    	\left\{\,
-	    	    B\,\vert_{E_{A}(\beta)} \in \End\!\left(\,\overset{{\color{white}.}}{E_{A}(\beta)}\,\right)
-	    	    \,\left\vert\;
-	    	    B \overset{{\color{white}1}}{\in} \mathcal{F}
-	    	    \right.
-	    	    \right\}
-	    \end{equation*}
-	    In other words, by the induction hypothesis, there exists non-zero
-	    \,$v \in E_{A}(\beta) \subset V$\,
-	    and a $\C$-valued function
-	    \,$\mu : \mathcal{F}\,\vert_{E_{A}(\beta)} \longrightarrow \C$\,
-	    such that
-	    \begin{equation*}
-	    B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
-	    \; = \;
-	        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v\,,
-	    \quad
-	    \textnormal{for each \,$B \in \mathcal{F}$}
-	    \end{equation*}
-	    Now, note that
-	    \,$B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\,\right) \,=\, B(v)$,\,
-	    since \,$v \in E_{A}(\beta)$.\,
-	    Next, we define the $\C$-valued function
-	    \,$\lambda : \mathcal{F} \longrightarrow \C$\,
-	    by
-	    \,$\lambda(B) \,:=\, \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right)$,\,
-	    for each \,$B \in \mathcal{F}$.\,
-	    Now, observe that:
-	    \begin{equation*}
-	    B(v)
-	    \; = \;
-	        B\vert_{E_{A}(\beta)}\!\left(\,\overset{{\color{white}.}}{v}\right)
-	    \; = \;
-	        \mu\!\left(\,B\vert_{E_{A}(\beta)}\,\right) \cdot v
-	    \; = \;
-	        \lambda(B) \cdot v\,,
-	    \quad
-	    \textnormal{for each \,$B \in \mathcal{F}$}
-	    \end{equation*}
-	    Thus, the non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\,
-	    is a simultaneous eigenvector of the family \,$\mathcal{F} \subset \End(V)$,\,
-	    and the present Proposition is thus valid in this scenario.
-	\end{itemize}
-	This completes the proof of the induction step, and
-    the desired result now follows by the principle of mathematical induction.
-\item
-    Simply observe that,
-    for each \,$c_{1}, c_{2} \in \C$\, and each \,$A_{1}, A_{2} \in \mathcal{F} \subset \End(V)$,\,
-    we have:
+    We proceed by induction on $m \in \N$.
+    \vskip 0.1cm
+    \noindent
+    \textbf{Base case:}\; $m = 1$.
+    \vskip -0.1cm
+    \noindent
+    In this case, we have $v_{1} = 0$, by assumption, and there is nothing to prove.
+    \vskip 0.1cm
+    \noindent
+    \textbf{Induction hypothesis:}\; Assume that
+    \begin{equation*}
+    \left.\begin{array}{c}
+    u_{1}, \ldots, u_{l} \in V \;\;\textnormal{belong to distinct weight spaces of \,$\mathcal{F}$}\,,
+    \\
+    u_{1} + u_{2} + \cdots + u_{l} \,=\, 0\,,
+    \quad\textnormal{and}\quad
+    \overset{{\color{white}.}}{l < m}
+    \end{array}\;\right\}
+    \!\!\Longrightarrow\;\;
+    \,u_{1} = u_{2} = \cdots = u_{l} = 0
+    \end{equation*}
+    \vskip 0.1cm
+    \noindent
+    \textbf{Induction step:}\;
+    \vskip 0.01cm
+    \noindent
+    Suppose \,$v_{1} + v_{2} + \cdots + v_{m} \,=\, 0$.\,
+    \vskip 0.2cm
+    \noindent
+    \textbf{Claim 1:}\;\; $v_{1} = 0$
+    \vskip -0.1cm
+    Proof of Claim 1:\;
+    Since the \,$\mu_{k}$'s\, are distinct weights, there exists \,$A \in \mathcal{A}$\,
+    such that \,$\mu_{1}(A) \,\neq\, \mu_{2}(A)$.\,
+    Applying the operator
+    \,$A - \mu_{2}(A)\cdot\id_{V} \in \End(V)$\,
+    to
+    \,$v_{1} + v_{2} + \cdots + v_{m} \,=\, 0$\,
+    yields
     \begin{eqnarray*}
-    \lambda\left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right) \cdot\, v
+    0
     & = &
-        \left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right)\!(\,v\,)
-    \;\; = \;\;
-        c_{1}A_{1}(v) \,+\, c_{2}A_{2}(v)
-    \;\; = \;\;
-        c_{1}\lambda(A_{1}) \cdot v \,+\, c_{2}\lambda(A_{2}) \cdot v
+        \left(\,
+            A \overset{{\color{white}.}}{-} \mu_{2}(A)\cdot\id_{V}
+            \,\right)\!
+        (\,v_{1} + v_{2} + \cdots + v_{m}\,)
     \\
     & = &
-        \left(\,c_{1}\lambda(A_{1}) \overset{{\color{white}.}}{+} c_{2}\lambda(A_{2})\,\right) \cdot\, v
+    \left(\,A \cdot v_{1} \overset{{\color{white}.}}{-} \mu_{2}(A) \cdot v_{1}\,\right)
+    \,+\,
+    \left(\,A \cdot v_{2} \overset{{\color{white}.}}{-} \mu_{2}(A) \cdot v_{2}\,\right)
+    \,+\,
+    \left(\,A \cdot v_{3} \overset{{\color{white}.}}{-} \mu_{2}(A) \cdot v_{3}\,\right)
+    \,+\,
+    \cdots
+    \,+\,
+    \left(\,A \cdot v_{m} \overset{{\color{white}.}}{-} \mu_{2}(A) \cdot v_{m}\,\right)
+    \\
+    & = &
+    \left(\,\mu_{1}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right)\!\cdot v_{1}
+    \,+\,
+    \left(\,{\color{red}\mu_{2}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)}\,\right)\!\cdot v_{2}
+    \,+\,
+    \left(\,\mu_{3}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right)\!\cdot v_{3}
+    \,+\,
+    \cdots
+    \,+\,
+    \left(\,\mu_{m}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right)\!\cdot v_{m}
+    \\
+    & = &
+    \left(\,\mu_{1}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right)\!\cdot v_{1}
+    \,+\,
+    \left(\,\mu_{3}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right)\!\cdot v_{3}
+    \,+\,
+    \cdots
+    \,+\,
+    \left(\,\mu_{m}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right)\!\cdot v_{m}
     \end{eqnarray*}
-    Since \,$v \neq 0$,\, it follows that
+    By the induction hypothesis, we have:
+    \,$\left(\,\mu_{k}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right)\cdot v_{k} \,=\, 0$,\,
+    for each \,$k \in \{1,3,\ldots,m\}$.\,
+    In particular, we have:
+    \,$\left(\,\mu_{1}(A) \overset{{\color{white}.}}{-} \mu_{2}(A)\,\right) \cdot v_{1} \,=\, 0$.\,
+    This in turn implies \,$v_{1} \,=\, 0$\,
+    (since \,$\mu_{1}(A) \neq \mu_{2}(A)$\, by choice of \,$A \in \mathcal{F}$).
+    This completes the proof of Claim 1.
+    \vskip 0.2cm
+    \noindent
+    \textbf{Claim 2:}\;\; $v_{2} = v_{3} = v_{m} = 0$
+    \vskip -0.1cm
+    Proof of Claim 2:\; Simply observe that
+    \begin{equation*}
+    \left.\begin{array}{c}
+    v_{1} + v_{2} + \cdots + v_{m} \,=\, 0\,,
+    \\
+    \overset{{\color{white}.}}{\textnormal{Claim 1 (i.e., \,$v_{1} \,=\, 0$),\, and}}
+    \\
+    \overset{{\color{white}.}}{\textnormal{induction hypothesis}}
+    \end{array}\;\right\}
+    \!\!\Longrightarrow\;\;
+    \,v_{2} = v_{3} = \cdots = v_{m} = 0
+    \end{equation*}
+    This proves Claim 2.
+    \vskip 0.2cm
+    \noindent
+    The induction step now follows immediately by Claim 1 and Claim 2, as required.
+\item
+    Suppose \,$v \,:=\, v_{1} + v_{2} + \cdots + v_{m}$\, is a (non-zero) weight vector
+    with weight \,$\mu$.\,
+    Since \,$v \neq 0$,\, there exists \,$k_{0} \in \{\,1,2,\ldots,m\,\}$\,
+    such that \,$v_{k_{0}} \neq 0$.\,
+    Then, for each \,$A \in \mathcal{F}$,\, we have:
+    \begin{eqnarray*}
+    0
+    & = &
+        A \cdot v - \mu(A) \cdot v
+    \;\; = \;\;
+        \overset{m}{\underset{k=1}{\sum}}
+        \left(\,
+            \mu_{k}(A) \overset{{\color{white}.}}{-} \mu(A)
+            \,\right)
+        \cdot
+        v_{k}
+    \end{eqnarray*}
+    By (i), we have:
     \,$
-    \lambda\left(\,c_{1}A_{1} \overset{{\color{white}.}}{+} c_{2}A_{2}\,\right)
-    \,=\,
-        c_{1}\lambda(A_{1}) \overset{{\color{white}.}}{+} c_{2}\lambda(A_{2})
+    \left(\,
+            \mu_{k}(A) \overset{{\color{white}.}}{-} \mu(A)
+            \,\right)
+        \cdot
+        v_{k}
+    \; = \;
+        0
     $,\,
-    which proves the linearity of the function
-    \,$\lambda : \mathcal{F} \longrightarrow \C$,\, as required.
+    for each \,$A \in \mathcal{F}$\, and each \,$k \in \{1,2,\ldots,m\}$.\,
+    \vskip 0.1cm
+    In particular, we have:
+    \,$
+    \left(\,
+            \mu_{k_{0}}(A) \overset{{\color{white}.}}{-} \mu(A)
+            \,\right)
+        \cdot
+        v_{k_{0}}
+    \; = \;
+        0
+    $,\,
+    for each \,$A \in \mathcal{F}$.\,
+    Since \,$v_{k_{0}} \neq 0$,\, it follows that
+    \,$\mu_{k_{0}}(A) \overset{{\color{white}.}}{-} \mu(A) = 0$,\,
+    for each \,$A \in \mathcal{F}$.\,
+    Hence, \,$\mu_{k_{0}} = \mu$\, as linear functionals on \,$\mathcal{F}$.\,
+    \vskip 0.1cm
+    Lastly, for each \,$k \in \{1,2,\ldots,m\} \,\backslash\, \{\,k_{0}\,\}$,\,
+    choose \,$A_{k} \in \mathcal{F}$\, such that
+    \,$\mu_{k}(A_{k}) \neq \mu_{k_{0}}(A_{k})$,\,
+    and we see (since we have just established that $\mu_{k_{0}} = \mu$) that:
+    \begin{equation*}
+    0
+    \;\; = \;\;
+	    \left(\,
+	            \mu_{k}(A_{k}) \overset{{\color{white}.}}{-} \mu(A_{k})
+	            \,\right)
+	        \cdot
+	        v_{k}
+    \;\; = \;\;
+	    \left(\,
+	            \mu_{k}(A_{k}) \overset{{\color{white}.}}{-} \mu_{k_{0}}(A_{k})
+	            \,\right)
+	        \cdot
+	        v_{k}\,,
+    \end{equation*}
+    which in turn implies that \,$v_{k} = 0$,\,
+    for each \,$k \in \{1,2,\ldots,m\} \,\backslash\, \{\,k_{0}\,\}$\,
+    (since \,$\mu_{k}(A_{k}) \neq \mu_{k_{0}}(A_{k})$\, by choice of \,$A_{k} \in \mathcal{F}$).
+    \vskip 0.2cm
+    \noindent
+    This completes the proof of (ii) as well as the Proposition.
     \qed
 \end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{definition}[Simultaneous diagonalizability]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $V$\, is a finite-dimensional vector space (over an arbitrary field \,$\F$),
+\item
+    $\mathcal{F} \subset \End(V)$\, is a family of operators defined on \,$V$.
+\end{itemize}
+The elements of \,$\mathcal{F}$\, are said to be \textbf{simultaneously diagonalizable}
+if there exists a basis \,$v_{1},\, v_{2},\, \cdots,\, v_{n} \,\in\, V$\, such that,
+for each \,$k = 1, \ldots, n$,\, the basis element
+\,$v_{k}$\, is an eigenvector for every \,$A \in \mathcal{F}$.\,
+\end{definition}
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $V$\, is a finite-dimensional vector space (over an arbitrary field $\F$), and
+\item
+    $\mathcal{F} \subset \End(V)$\, is a linear subspace of \,$\End(V)$.\,
+\end{itemize}
+Then, the following are equivalent:
+\begin{enumerate}
+\item
+    The elements of \,$\mathcal{F}$\, are simultaneously diagonalizable.
+\item
+    $V$\, can be expressed as a direct sum of weight spaces for \,$\mathcal{F}$.
+\end{enumerate}
+\end{proposition}
+\proof
+
+\vskip 0.1cm
+\noindent
+\underline{{\color{white}.}(i)\,$\Longrightarrow$\,(ii){\color{white}.}}
+\vskip 0.2cm
+\noindent
+Since the elements of \,$\mathcal{F}$\, are simultaneously diagonalizable,
+there exists a basis \,$v_{1},\, v_{2},\, \cdots, v_{n} \in V$\,
+such that each basis element \,$v_{k}$\, ($k = 1, \ldots, n$) is an eigenvector
+for every \,$A \in \mathcal{F}$.\,
+For each \,$k = 1, \ldots, n$,\, let
+\,$\lambda_{k} : \mathcal{F} \longrightarrow \F$\,
+be the $\C$-valued function such that
+\begin{equation*}
+A(\,v_{k}\,)
+\; = \;
+    \lambda_{k}(A) \cdot v_{k}
+\end{equation*}
+Note that each \,$\lambda_{k}$\, ($k = 1, \ldots, n$) is a weight for \,$\mathcal{F}$.\,
+Note also that \,$\lambda_{1}, \lambda_{2}, \ldots, \lambda_{n}$\, may not be pairwise distinct.
+Let
+\,$
+\left\{\,
+    \mu_{1},\, \mu_{2},\, \ldots,\, \mu_{m} :
+    \mathcal{F}
+    \overset{{\color{white}1}}{\longrightarrow}
+    \F
+    \,\right\}
+$\,
+($m \leq n$) be the ``de-duplication'' of
+\,$\left\{\,\lambda_{1},\, \lambda_{2},\, \ldots,\, \lambda_{n}\,\right\}$,\,
+i.e.,
+\begin{itemize}
+\item
+    $\mu_{1},\, \mu_{2},\, \ldots,\, \mu_{m}$\, are pairwise distinct
+    (as $\C$-valued functions defined on $\mathcal{F}$),
+\item
+    for each \,$i \in \{1,\ldots,n\}$,\, there exists unique
+    \,$k(i) \in \{1,2,\ldots,m\}$ such that
+    \,$\lambda_{i} \,=\, \mu_{k(i)}$.
+\end{itemize}
+In particular, note that
+$
+\left\{\,
+    \mu_{1},\, \mu_{2},\, \ldots,\, \mu_{m}
+    \,\right\}
+\, = \,
+\left\{\,
+    \lambda_{1},\, \lambda_{2},\, \ldots,\, \lambda_{n}
+    \,\right\}
+$\,
+as sets (of $\C$-valued functions defined on $\mathcal{F}$).
+Next, for each \,$k \in \{1,2,\ldots,m\}$,\, let
+\,$
+W_{\mu_{k}}
+\, := \,
+    \left\{\;
+        v \in V
+        \,\left\vert
+        \begin{array}{c}
+            A(\,v\,) \,=\, \mu_{k}(A) \cdot v\,,
+            \\
+            \textnormal{for each \,$A \in \mathcal{F}$}
+            \end{array}
+        \right.
+        \!\!\right\}
+$\,
+denote the weight space associated to the weight \,$\mu_{k}$\, for \,$\mathcal{F}$.\,
+We claim that \,$V$\, can be expressed as the direct sum of
+\,$W_{\mu_{1}},\, W_{\mu_{2}},\, \ldots,\, W_{\mu_{m}}$,\, i.e.,
+\begin{equation*}
+V \;\; = \;\; \overset{m}{\underset{k=1}{\bigoplus}}\;W_{\mu_{k}}
+\end{equation*}
+To this end, first note that \,$V$\, is spanned by the elements of
+\,$W_{\mu_{1}},\, W_{\mu_{2}},\, \ldots,\, W_{\mu_{m}}$;\,
+indeed, recall that each vector \,$v \in V$\, is a linear combination of the basis vectors
+\,$v_{1},\, v_{2},\, \ldots,\, v_{n}$,\,
+and each \,$v_{i} \in W_{\mu_{k(i)}}$,\, where \,$k(i) \in \{1,\ldots,m\}$\,
+is uniquely determined by the condition that \,$\lambda_{i} = \mu_{k(i)}$.\,
+Hence, \,$v_{i} \in W_{\mu_{k(i)}}$,\, for each \,$i \in \{1,\ldots,n\}$.\,
+This proves that \,$V$\, is spanned by the elements of
+\,$W_{\mu_{1}},\, W_{\mu_{2}},\, \ldots,\, W_{\mu_{m}}$.\,
+It remains to establish that
+\begin{equation*}
+\left.\begin{array}{c}
+w_{1} + w_{2} + \cdots + w_{m} \,=\, 0\,,
+\\
+\overset{{\color{white}.}}{
+    w_{k} \in W_{\mu_{k}}, \;\textnormal{for each \,$k = 1,\ldots,m$}
+    }
+\end{array}\;\right\}
+\!\!\Longrightarrow\;\;
+\,w_{1} = w_{2} = \cdots = w_{m} = 0.
+\end{equation*}
+However, the implication above is an immediately consequence of
+Proposition \ref{DistinctWeightSpacesAreLinearIndependent}.
+This therefore completes the proof of (i)\,$\Longrightarrow$\,(ii).
+% be the de-duplication of
+% \,$\left\{\,\lambda_{1},\, \lambda_{2},\, \ldots,\, \lambda_{n}\,\right\}$.\,
+% Let \,$\{\,\lambda_{1},\,\cdots,\lambda_{m}\,\} \subset \F$\, the distinct eigenvalues of
+% \,$v_{1},\, v_{2},\, \cdots,\, v_{n} \in V$\, (note that \,$m \leq n$).
+% Then, we have:
+\vskip 0.5cm
+\noindent
+\underline{{\color{white}.}(ii)\,$\Longrightarrow$\,(i){\color{white}.}}
+\vskip 0.2cm
+\noindent
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 
