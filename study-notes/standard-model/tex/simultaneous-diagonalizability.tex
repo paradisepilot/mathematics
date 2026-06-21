@@ -676,6 +676,100 @@ This proves the simultaneous diagonalizability of the elements of \,$\mathcal{F}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $V$\, is a finite-dimensional vector space (over an arbitrary field $\F$), and
+\item
+    $\mathcal{F} \subset \End(V)$\, is a family of operators on \,$V$.\,
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    If the elements of \,$\mathcal{F}$\, are simultaneously diagonalizable,
+    then they must pairwise commute.
+\item
+    If the elements of \,$\mathcal{F}$\, pairwise commute and
+    each operator \,$A \in \mathcal{F}$\, is (individually) diagonalizable,
+    then in fact the elements of \,$\mathcal{F}$\, are simultaneously diagonalizable.
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+    Suppose that the elements of \,$\mathcal{F}$\, are simultaneously diagonalizable, i.e.,
+    there exists a basis \,$v_{1}, v_{2}, \ldots, v_{n}$\, for \,$V$\, such that
+    each \,$v_{j}$\, (\,$j = 1, \ldots, n$\,) is a simultaneous eigenvector for \,$\mathcal{F}$.\,
+    Hence, for each \,$j = 1, \ldots n$,\, there exists an $\F$-valued function
+    \,$\lambda_{j} : \mathcal{F} \longrightarrow \F$\, such that
+    \begin{equation*}
+    A(\,v_{j}\,)
+    \; = \;
+        \lambda_{j}(A) \cdot v_{j}\,,
+    \quad
+    \textnormal{for each \,$A \in \mathcal{F}$}
+    \end{equation*}
+    Now, we need to establish that
+    \,$A \circ B \,=\, B \circ A \in \End(V)$,\,
+    for each pair of elements \,$A, B \in \mathcal{F} \subset \End(V)$.\,
+    To this end, note that, for each \,$c_{1}, \ldots, c_{n} \in \F$,\, we have:
+    \begin{eqnarray*}
+    A\!\left(B\!\left(\;\,
+        \overset{n}{\underset{j=1}{\sum}}\;c_{j} \cdot v_{j}
+        \right)\right)
+    & = &
+	    A\!\left(\;\,
+	        \overset{n}{\underset{j=1}{\sum}}\;c_{j} \cdot B(\,v_{j}\,)
+	        \right)
+	\;\; = \;\;
+	    A\!\left(\;\,
+	        \overset{n}{\underset{j=1}{\sum}}\;c_{j}\,\lambda_{j}(B) \cdot v_{j}
+	        \right)
+    \\
+    & = &
+	    \overset{n}{\underset{j=1}{\sum}}\;c_{j}\,\lambda_{j}(B) \cdot A(\,v_{j}\,)
+	\;\; = \;\;
+	    \overset{n}{\underset{j=1}{\sum}}\;c_{j}\,\lambda_{j}(B)\,\lambda_{j}(A) \cdot v_{j}
+    \\
+    & = &
+	    \overset{n}{\underset{j=1}{\sum}}\;
+	        c_{j}\,
+	        \lambda_{j}({\color{red}A})\,
+	        \lambda_{j}({\color{red}B})
+	        \cdot
+	        v_{j}
+	\;\; = \;\;
+	    \overset{n}{\underset{j=1}{\sum}}\;
+	        c_{j}\,
+	        \lambda_{j}(A)\cdot
+	        B\!\left(\,v_{j}\,\right)
+    \\
+    & = &
+	    B\!\left(\;\;
+	    \overset{n}{\underset{j=1}{\sum}}\;
+	        c_{j}\,\lambda_{j}(A) \cdot v_{j}
+	    \,\right)
+	\;\; = \;\;
+	    B\!\left(\;\;
+	    \overset{n}{\underset{j=1}{\sum}}\;
+	        c_{j} \cdot A(\,v_{j}\,)
+	    \,\right)
+    \\
+    & = &
+    B\!\left(A\!\left(\;\,
+        \overset{n}{\underset{j=1}{\sum}}\;c_{j} \cdot v_{j}
+        \right)\right)
+    \end{eqnarray*}
+    This proves that \,$A \circ B \,=\, B \circ A$,\, as required.
+\item
+\end{enumerate}
+\qed
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
