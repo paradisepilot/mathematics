@@ -542,17 +542,19 @@ Then, the following are equivalent:
 \noindent
 Since the elements of \,$\mathcal{F}$\, are simultaneously diagonalizable,
 there exists a basis \,$v_{1},\, v_{2},\, \cdots, v_{n} \in V$\,
-such that each basis element \,$v_{k}$\, ($k = 1, \ldots, n$) is an eigenvector
+such that each basis element \,$v_{j}$\, ($j = 1, \ldots, n$) is an eigenvector
 for every \,$A \in \mathcal{F}$.\,
-For each \,$k = 1, \ldots, n$,\, let
-\,$\lambda_{k} : \mathcal{F} \longrightarrow \F$\,
+For each \,$j = 1, \ldots, n$,\, let
+\,$\lambda_{j} : \mathcal{F} \longrightarrow \F$\,
 be the $\C$-valued function such that
 \begin{equation*}
-A(\,v_{k}\,)
+A(\,v_{j}\,)
 \; = \;
-    \lambda_{k}(A) \cdot v_{k}
+    \lambda_{j}(A) \cdot v_{j}\,,
+\quad
+\textnormal{for each \,$A \in \mathcal{A}$}
 \end{equation*}
-Note that each \,$\lambda_{k}$\, ($k = 1, \ldots, n$) is a weight for \,$\mathcal{F}$.\,
+Note that each \,$\lambda_{j}$\, ($j = 1, \ldots, n$) is a weight for \,$\mathcal{F}$.\,
 Note also that \,$\lambda_{1}, \lambda_{2}, \ldots, \lambda_{n}$\, may not be pairwise distinct.
 Let
 \,$
@@ -571,9 +573,9 @@ i.e.,
     $\mu_{1},\, \mu_{2},\, \ldots,\, \mu_{m}$\, are pairwise distinct
     (as $\C$-valued functions defined on $\mathcal{F}$),
 \item
-    for each \,$i \in \{1,\ldots,n\}$,\, there exists unique
-    \,$k(i) \in \{1,2,\ldots,m\}$ such that
-    \,$\lambda_{i} \,=\, \mu_{k(i)}$.
+    for each \,$j \in \{1,\ldots,n\}$,\, there exists unique
+    \,$k(j) \in \{1,2,\ldots,m\}$ such that
+    \,$\lambda_{j} \,=\, \mu_{k(j)}$.
 \end{itemize}
 In particular, note that
 $
@@ -611,9 +613,9 @@ To this end, first note that \,$V$\, is spanned by the elements of
 \,$W_{\mu_{1}},\, W_{\mu_{2}},\, \ldots,\, W_{\mu_{m}}$;\,
 indeed, recall that each vector \,$v \in V$\, is a linear combination of the basis vectors
 \,$v_{1},\, v_{2},\, \ldots,\, v_{n}$,\,
-and each \,$v_{i} \in W_{\mu_{k(i)}}$,\, where \,$k(i) \in \{1,\ldots,m\}$\,
-is uniquely determined by the condition that \,$\lambda_{i} = \mu_{k(i)}$.\,
-Hence, \,$v_{i} \in W_{\mu_{k(i)}}$,\, for each \,$i \in \{1,\ldots,n\}$.\,
+and each \,$v_{j} \in W_{\mu_{k(j)}}$,\, where \,$k(j) \in \{1,\ldots,m\}$\,
+is uniquely determined by the condition that \,$\lambda_{j} = \mu_{k(j)}$.\,
+% Hence, \,$v_{j} \in W_{\mu_{k(j)}}$,\, for each \,$j \in \{1,\ldots,n\}$.\,
 This proves that \,$V$\, is spanned by the elements of
 \,$W_{\mu_{1}},\, W_{\mu_{2}},\, \ldots,\, W_{\mu_{m}}$.\,
 It remains to establish that
@@ -628,7 +630,7 @@ w_{1} + w_{2} + \cdots + w_{m} \,=\, 0\,,
 \!\!\Longrightarrow\;\;
 \,w_{1} = w_{2} = \cdots = w_{m} = 0.
 \end{equation*}
-However, the implication above is an immediately consequence of
+However, the implication above is an immediate consequence of
 Proposition \ref{DistinctWeightSpacesAreLinearIndependent}.
 This therefore completes the proof of (i)\,$\Longrightarrow$\,(ii).
 % be the de-duplication of
