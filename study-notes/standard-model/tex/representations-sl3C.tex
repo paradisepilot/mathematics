@@ -1,0 +1,111 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{The representations of $\sl(3,\C)$}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{$\sl(n,\C) \,\cong\, \su(n)_{\C}$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+$\sl(n,\C)$\, is isomorphic, as a complex Lie algebra,
+to the complexification \,$\su(n)_{\C}$\, of \,$\su(n)$,\,
+i.e., for each \,$n \in \N$,\, we have: 
+\begin{equation*}
+\sl(n,\C) \;\cong\; \su(n)_{\C}\,,
+\quad
+\textnormal{as complex Lie algebras}
+\end{equation*}
+\end{proposition}
+\proof
+Recall (see, for example, Example 3.4, p.50, \cite{Hall2015}) that, by definition,
+\begin{equation*}
+\sl(n,\C)
+\;\; := \;\;
+    \left\{\;
+        X \in \C^{n \times n}
+        \,\left\vert\;\,
+        \overset{{\color{white}.}}{\trace(X) = 0}
+        \right.
+        \,\right\}
+\end{equation*}
+Recall (see, for example, Proposition 3.24, p.58, \cite{Hall2015}) that
+\begin{equation*}
+\su(n)
+\;\; = \;\;
+    \left\{\;
+        X \in \C^{n \times n}
+        \,\left\vert
+        \begin{array}{c}
+            X^{*} \,=\, -X
+            \\
+            \trace(X) \,= 0
+            \end{array}
+        \right.
+        \!\!\right\}
+\end{equation*}
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\; $X \in \su(n) \,\Longrightarrow\, \i \cdot X \notin \su(n)$,\, for each nonzero \,$X \in \su(n)$.\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;
+\begin{eqnarray*}
+X \in \su(n)
+& \Longleftrightarrow &
+    X^{*} \,=\, -X, \;\;\textnormal{and}\;\; \trace(X) = 0
+\;\; \Longrightarrow \;\;
+    (\,\i \cdot X\,)^{*} \,=\, +\,\i\cdot X
+\end{eqnarray*}
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\; $\su(n) \,\bigcap\, \i\cdot\su(n) \,=\, \{\,0\,\}$
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;
+\begin{eqnarray*}
+X \in \su(n)
+& \Longleftrightarrow &
+    \left\{\begin{array}{c}
+       X^{*} = -X, \;\textnormal{and}
+       \\
+       \overset{{\color{white}.}}{\trace(X) = 0}
+       \!\!\end{array}\right\}
+\;\; \Longrightarrow \;\;
+    \left\{\begin{array}{c}
+       (\,\i \cdot X\,)^{*} \,=\, +\,\i \cdot X, \;\textnormal{and}
+       \\
+       \overset{{\color{white}.}}{\trace(X) = 0}
+       \!\!\end{array}\right\}
+\end{eqnarray*}
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\; $\su(n)_{\C} \,\cong\, \su(n) \oplus \i\cdot\su(n)$
+\vskip 0.1cm
+\noindent
+Proof of Claim 3:\;
+
+
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
