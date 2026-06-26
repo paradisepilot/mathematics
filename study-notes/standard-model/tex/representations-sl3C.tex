@@ -19,6 +19,159 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{lemma}\label{glnCunC}
+\mbox{}
+\vskip 0.05cm
+\noindent
+$\gl(n,\C)$\, is isomorphic, as a complex Lie algebra, to \,$\mathfrak{u}(n)_{\C}$,\,
+i.e.,
+\,$\gl(n,\C) \,\cong\, \mathfrak{u}(n)_{\C}$.\,
+\end{lemma}
+\proof
+Recall:
+\begin{itemize}
+\item
+    $\gl(n,\C) \; = \; \C^{n \times n}$
+\item
+    $
+    \mathfrak{u}(n)
+    \; = \;
+        \left\{\;
+            X \in \C^{n \times n}
+            \,\left\vert\;\,
+            \overset{{\color{white}.}}{X^{*} \,=\, -X}
+            \right.
+            \,\right\}
+    $
+    \quad
+    (see, for example, Proposition 3.24, p.58, \cite{Hall2015})
+\end{itemize}
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;
+$
+\left(\,\overset{{\color{white}.}}{\mathfrak{u}(n)}\,\right)
+\bigcap
+\left(\,\overset{{\color{white}.}}{\i\cdot\mathfrak{u}(n)}\,\right)
+\, = \,
+    \{\,0\,\}
+$\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;
+First note that
+\begin{equation*}
+Y \in \mathfrak{u}(n)
+\;\;\Longrightarrow\;\;
+    Y^{*} \, = \, -Y
+\;\;\Longrightarrow\;\;
+    \left(\,\overset{{\color{white}.}}{\i \cdot Y}\right)^{\!*}
+    \; = \;
+    (-\i) \cdot Y^{*}
+    \; = \;
+    (-\i) \cdot (-Y)
+    \; = \;
+    \i \cdot Y
+\end{equation*}
+Thus,
+\,$X \in \i \cdot \mathfrak{u}(n) \;\Longrightarrow\; X^{*} = X$.\,
+Hence, we see that 
+\begin{equation*}
+X \in
+    \left(\,\overset{{\color{white}.}}{\mathfrak{u}(n)}\,\right)
+    \bigcap
+    \left(\,\overset{{\color{white}.}}{\i\cdot\mathfrak{u}(n)}\,\right)
+\;\;\Longrightarrow\;\;
+    \left\{\begin{array}{c}
+        X^{*} = -X
+        \\
+        X^{*} = {\color{white}-}X
+        \end{array}\right.
+\;\;\Longrightarrow\;\;
+    X = X^{*} = -X
+\;\;\Longrightarrow\;\;
+    X = 0
+\end{equation*}
+This proves Claim 1.
+\vskip 0.5cm
+\noindent
+\textbf{Claim 2:}\;
+\,$\gl(n,\C) \;\subset\; \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n)$\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;
+For each \,$X \in \gl(n,\C) = \C^{n \times n}$,\, we may write:
+\begin{equation*}
+X
+\; = \;
+    X_{1} \,+\, \i \cdot X_{2}
+\; = \;
+    \left(\dfrac{X - X^{*}}{2}\right)
+    \,+\,
+    \i\,\cdot\left(\dfrac{X + X^{*}}{\i \cdot 2}\right),
+\quad
+\textnormal{where}\;\;
+X_{1}
+\; := \;
+    \left(\dfrac{X - X^{*}}{2}\right),
+\;\;
+X_{2}
+\; := \;
+    \left(\dfrac{X + X^{*}}{\i \cdot 2}\right).
+\end{equation*}
+Next, note that \,$X_{1},\, X_{2} \in \mathfrak{u}(n)$.\,
+Indeed,
+\begin{eqnarray*}
+X_{1}^{*}
+& = &
+    \left(\dfrac{X - X^{*}}{2}\right)^{\!*}
+\;\; = \;\;
+    \left(\dfrac{X^{*} - X^{**}}{2}\right)
+\;\; = \;\;
+    \left(\dfrac{X^{*} - X}{2}\right)
+\;\; = \;\;
+    -\left(\dfrac{X - X^{*}}{2}\right)
+\;\; = \;\;
+    -\,X_{1}
+\\
+X_{2}^{*}
+& = &
+    \left(\dfrac{X + X^{*}}{\i \cdot 2}\right)^{\!*}
+\;\; = \;\;
+    \left(\dfrac{X^{*} + X^{**}}{-\,\i \cdot 2}\right)
+\;\; = \;\;
+    \left(\dfrac{X^{*} + X}{-\,\i \cdot 2}\right)
+\;\; = \;\;
+    -\left(\dfrac{X + X^{*}}{\i \cdot 2}\right)
+\;\; = \;\;
+    -\,X_{2}
+\end{eqnarray*}
+This shows indeed that
+\,$X_{1},\, X_{2} \in \mathfrak{u}(n)$,\,
+and completes the proof of Claim 2.
+\vskip 0.5cm
+\noindent
+Claim 1 and Claim 2 together imply
+\begin{equation*}
+\gl(n,\C)
+\;\;\subset\;\;
+    \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n)
+\;\; =: \;\;
+    \mathfrak{u}(n)_{\C}
+\;\;\subset\;\;
+    \C^{n \times n}
+\;\; = \;\;
+    \gl(n,\C)\,,
+\end{equation*}
+from which it immediately follows that
+\,$\mathfrak{u}(n)_{\C} \,:=\, \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n) \,=\, \gl(n,\C)$,\,
+and this completes the proof of the Lemma.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \begin{proposition}
 \mbox{}
 \vskip 0.05cm
@@ -33,74 +186,189 @@ i.e., for each \,$n \in \N$,\, we have:
 \end{equation*}
 \end{proposition}
 \proof
-Recall (see, for example, Example 3.4, p.50, \cite{Hall2015}) that, by definition,
-\begin{equation*}
-\sl(n,\C)
-\;\; := \;\;
-    \left\{\;
-        X \in \C^{n \times n}
-        \,\left\vert\;\,
-        \overset{{\color{white}.}}{\trace(X) = 0}
-        \right.
-        \,\right\}
-\end{equation*}
-Recall (see, for example, Proposition 3.24, p.58, \cite{Hall2015}) that
-\begin{equation*}
-\su(n)
-\;\; = \;\;
-    \left\{\;
-        X \in \C^{n \times n}
-        \,\left\vert
-        \begin{array}{c}
-            X^{*} \,=\, -X
-            \\
-            \trace(X) \,= 0
-            \end{array}
-        \right.
-        \!\!\right\}
-\end{equation*}
-\vskip 0.3cm
+Recall:
+\begin{itemize}
+\item
+    $
+    \sl(n,\C)
+    \; = \;
+        \left\{\;
+            X \in \C^{n \times n}
+            \,\left\vert\;\,
+            \overset{{\color{white}.}}{\trace(X) = 0}
+            \right.
+            \,\right\}
+    $
+    \quad
+    (see, for example, Example 3.4, p.50, \cite{Hall2015})
+\item
+    $
+    \mathfrak{u}(n)
+    \; = \;
+        \left\{\;
+            X \in \C^{n \times n}
+            \,\left\vert\;\,
+            \overset{{\color{white}.}}{X^{*} \,=\, -X}
+            \right.
+            \,\right\}
+    $
+    \quad
+    (see, for example, Proposition 3.24, p.58, \cite{Hall2015})
+\item
+    $
+    \su(n)
+    \; = \;
+        \left\{\;
+            X \in \C^{n \times n}
+            \,\left\vert
+            \begin{array}{c}
+                X^{*} \,=\, -X
+                \\
+                \trace(X) \,= 0
+                \end{array}
+            \right.
+            \!\!\right\}
+    $
+    \quad
+    (see, for example, Proposition 3.24, p.58, \cite{Hall2015})
+\end{itemize}
+Hence,
+\;$
+\su(n) \,=\, \mathfrak{u}(n) \,\bigcap\, \sl(n,\C)
+$.\;
+\vskip 0.5cm
 \noindent
-\textbf{Claim 1:}\; $X \in \su(n) \,\Longrightarrow\, \i \cdot X \notin \su(n)$,\, for each nonzero \,$X \in \su(n)$.\,
+\textbf{Claim 1:}\;
+$
+\left(\,\overset{{\color{white}.}}{\su(n)}\,\right)
+\bigcap
+\left(\,\overset{{\color{white}.}}{\i\cdot\su(n)}\,\right)
+\, = \,
+    \{\,0\,\}
+$\,
 \vskip 0.1cm
 \noindent
 Proof of Claim 1:\;
-\begin{eqnarray*}
-X \in \su(n)
-& \Longleftrightarrow &
-    X^{*} \,=\, -X, \;\;\textnormal{and}\;\; \trace(X) = 0
-\;\; \Longrightarrow \;\;
-    (\,\i \cdot X\,)^{*} \,=\, +\,\i\cdot X
-\end{eqnarray*}
-\vskip 0.3cm
+First note that
+\begin{equation*}
+Y \in \su(n)
+\;\;\Longrightarrow\;\;
+    Y^{*} \, = \, -Y
+\;\;\Longrightarrow\;\;
+    \left(\,\overset{{\color{white}.}}{\i \cdot Y}\right)^{\!*}
+    \; = \;
+    (-\i) \cdot Y^{*}
+    \; = \;
+    (-\i) \cdot (-Y)
+    \; = \;
+    \i \cdot Y
+\end{equation*}
+Thus,
+\,$X \in \i \cdot \su(n) \;\Longrightarrow\; X^{*} = X$.\,
+Hence, we see that 
+\begin{equation*}
+X \in
+    \left(\,\overset{{\color{white}.}}{\su(n)}\,\right)
+    \bigcap
+    \left(\,\overset{{\color{white}.}}{\i\cdot\su(n)}\,\right)
+\;\;\Longrightarrow\;\;
+    \left\{\begin{array}{c}
+        X^{*} = -X
+        \\
+        X^{*} = {\color{white}-}X
+        \end{array}\right.
+\;\;\Longrightarrow\;\;
+    X = X^{*} = -X
+\;\;\Longrightarrow\;\;
+    X = 0
+\end{equation*}
+This proves Claim 1.
+\vskip 0.5cm
 \noindent
-\textbf{Claim 2:}\; $\su(n) \,\bigcap\, \i\cdot\su(n) \,=\, \{\,0\,\}$
+\textbf{Claim 2:}\; $\su(n) \oplus \i\cdot\su(n) \,\subset\, \sl(n,\C)$\,
 \vskip 0.1cm
 \noindent
 Proof of Claim 2:\;
-\begin{eqnarray*}
-X \in \su(n)
-& \Longleftrightarrow &
-    \left\{\begin{array}{c}
-       X^{*} = -X, \;\textnormal{and}
-       \\
-       \overset{{\color{white}.}}{\trace(X) = 0}
-       \!\!\end{array}\right\}
-\;\; \Longrightarrow \;\;
-    \left\{\begin{array}{c}
-       (\,\i \cdot X\,)^{*} \,=\, +\,\i \cdot X, \;\textnormal{and}
-       \\
-       \overset{{\color{white}.}}{\trace(X) = 0}
-       \!\!\end{array}\right\}
-\end{eqnarray*}
-\vskip 0.3cm
+Let \,$X,\, Y \in \su(2)$\, and \,$Z = X + \i\cdot Y \in \su(n) \oplus \i\cdot\su(n)$.\,
+Then, \,$\trace(Z) \,=\, \trace(X) + \i\cdot\trace(Y) = 0 + \i\cdot 0 = 0$,\,
+which implies that \,$Z \in \sl(n,\C)$.\,
+This proves Claim 2.
+\vskip 0.5cm
 \noindent
-\textbf{Claim 3:}\; $\su(n)_{\C} \,\cong\, \su(n) \oplus \i\cdot\su(n)$
+\textbf{Claim 3:}\; $\sl(n,\C) \,\subset\, \su(n) \oplus \i\cdot\su(n)$\,
 \vskip 0.1cm
 \noindent
 Proof of Claim 3:\;
-
-
+Let \,$X \in \sl(n,\C)$.\,
+Since \,$\sl(n,\C) \subset \gl(n,\C) = \mathfrak{u}(n) \oplus \i\cdot\mathfrak{u}(n)$,\,
+by Lemma \ref{glnCunC}, we may write:
+\begin{equation*}
+X
+\; = \;
+    X_{1} \,+\, \i \cdot X_{2}\,,
+\quad
+\textnormal{where}\;\;
+X_{1}
+\, \in \,
+    \mathfrak{u}(n),
+\;\;
+X_{2}
+\, \in \,
+    \mathfrak{u}(n)
+\end{equation*}
+Hence, Claim 3 will follow once we establish that
+\,$X_{1},\, X_{2} \,\in\, \su(n)$.\,
+Since we already have
+\,$X_{1},\, X_{2} \,\in\, \mathfrak{u}(n)$,\,
+it remains only to prove that
+\,$\trace(X_{1}) \,=\, \trace(X_{2}) \,=\, 0$.\,
+To this end, first note that
+\,$X_{1} \in \mathfrak{u}(n) \;\Longrightarrow\; \trace(\,X_{1}\,) \in \i\cdot\Re$.\,
+Indeed,
+\begin{eqnarray*}
+X_{1} \in \mathfrak{u}(n)
+& \Longleftrightarrow &
+    X_{1}^{*} \,=\, -X_{1}
+\\
+& \Longrightarrow &
+    \trace(\,X_{1}^{*}\,) \,=\, \trace(\,-X_{1}\,)
+\;\;\Longrightarrow\;\;
+    \overline{\trace(\,X_{1}\,)} \,=\, -\,\trace(\,X_{1}\,)
+\\
+& \Longrightarrow &
+    X_{1} \in \i\cdot\Re
+\end{eqnarray*}
+Similarly, we have \,$\trace(\,X_{2}\,) \in \i\cdot\Re$.\,
+Now, recall that \,$X_{1} + \i \cdot X_{2} = X \in \sl(2,\C)$;\,
+in particular, \,$\trace(X) \,=\, 0$.\,
+Hence,
+\begin{eqnarray*}
+0
+& = &
+    \trace(\,X\,)
+\;\; = \;\;
+    \trace(\,X_{1} + \i \cdot X_{2}\,)
+\;\; = \;\;
+    \trace(\,X_{1}\,) + \i\cdot\trace(\,X_{2}\,)\,,
+\end{eqnarray*}
+which implies
+\,$
+\trace(\,X_{1}\,)
+\, = \,
+    -\,\i\cdot\trace(\,X_{2}\,)
+\, \in \,
+    \left(\,\i\cdot\Re\,\right)
+    \bigcap
+    \left(\,\Re\,\right)
+\, = \,
+    \{\,0\,\}
+$,\,
+which in turn implies
+\,$\trace(\,X_{1}\,) = \trace(\,X_{2}\,) \,=\, 0$.\,
+This completes the proof of Claim 3.
+\vskip 0.5cm
+\noindent
+The Proposition now follows immediately from Claim 2 and Claim 3.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
