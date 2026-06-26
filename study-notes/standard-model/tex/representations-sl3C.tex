@@ -15,7 +15,7 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{$\sl(n,\C) \,\cong\, \su(n)_{\C}$}
+\section{$\sl(n,\C) \,\cong\, \su(n)_{\C} \,=\, \su(n) \oplus \i\cdot\su(n)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -23,12 +23,24 @@
 \mbox{}
 \vskip 0.05cm
 \noindent
-$\gl(n,\C)$\, is isomorphic, as a complex Lie algebra, to \,$\mathfrak{u}(n)_{\C}$,\,
-i.e.,
-\,$\gl(n,\C) \,\cong\, \mathfrak{u}(n)_{\C}$.\,
+\begin{enumerate}
+\item
+    $
+    \left(\,\overset{{\color{white}.}}{\mathfrak{u}(n)}\,\right)
+    \bigcap
+    \left(\,\overset{{\color{white}.}}{\i\cdot\mathfrak{u}(n)}\,\right)
+    \, = \,
+    \{\,0\,\}
+    $\,
+\item
+    $\gl(n,\C) \,\cong\, \mathfrak{u}(n)_{\C} \,=\, \mathfrak{u}(n) \oplus \i\cdot\mathfrak{u}(n)$\,
+    as complex Lie algebras
+\end{enumerate}
 \end{lemma}
 \proof
-Recall:
+\vskip 0.1cm
+\noindent
+First, recall:
 \begin{itemize}
 \item
     $\gl(n,\C) \; = \; \C^{n \times n}$
@@ -46,127 +58,124 @@ Recall:
     \quad
     (see, for example, Proposition 3.24, p.58, \cite{Hall2015})
 \end{itemize}
-\vskip 0.3cm
-\noindent
-\textbf{Claim 1:}\;
-$
-\left(\,\overset{{\color{white}.}}{\mathfrak{u}(n)}\,\right)
-\bigcap
-\left(\,\overset{{\color{white}.}}{\i\cdot\mathfrak{u}(n)}\,\right)
-\, = \,
-    \{\,0\,\}
-$\,
-\vskip 0.1cm
-\noindent
-Proof of Claim 1:\;
-First note that
-\begin{equation*}
-Y \in \mathfrak{u}(n)
-\;\;\Longrightarrow\;\;
-    Y^{*} \, = \, -Y
-\;\;\Longrightarrow\;\;
-    \left(\,\overset{{\color{white}.}}{\i \cdot Y}\right)^{\!*}
-    \; = \;
-    (-\i) \cdot Y^{*}
-    \; = \;
-    (-\i) \cdot (-Y)
-    \; = \;
-    \i \cdot Y
-\end{equation*}
-Thus,
-\,$X \in \i \cdot \mathfrak{u}(n) \;\Longrightarrow\; X^{*} = X$.\,
-Hence, we see that 
-\begin{equation*}
-X \in
+\begin{enumerate}
+\item
+    Note that
+    \begin{equation*}
+    Y \in \mathfrak{u}(n)
+    \;\;\Longrightarrow\;\;
+        Y^{*} \, = \, -Y
+    \;\;\Longrightarrow\;\;
+        \left(\,\overset{{\color{white}.}}{\i \cdot Y}\right)^{\!*}
+        \; = \;
+        (-\i) \cdot Y^{*}
+        \; = \;
+        (-\i) \cdot (-Y)
+        \; = \;
+        \i \cdot Y
+    \end{equation*}
+    Thus,
+    \,$X \in \i \cdot \mathfrak{u}(n) \;\Longrightarrow\; X^{*} = X$.\,
+    Hence, we see that 
+    \begin{equation*}
+    X \in
+        \left(\,\overset{{\color{white}.}}{\mathfrak{u}(n)}\,\right)
+        \bigcap
+        \left(\,\overset{{\color{white}.}}{\i\cdot\mathfrak{u}(n)}\,\right)
+    \;\;\Longrightarrow\;\;
+        \left\{\begin{array}{c}
+            X^{*} = -X
+            \\
+            X^{*} = {\color{white}-}X
+            \end{array}\right.
+    \;\;\Longrightarrow\;\;
+        X = X^{*} = -X
+    \;\;\Longrightarrow\;\;
+        X = 0
+    \end{equation*}
+    This proves
+    $
     \left(\,\overset{{\color{white}.}}{\mathfrak{u}(n)}\,\right)
     \bigcap
     \left(\,\overset{{\color{white}.}}{\i\cdot\mathfrak{u}(n)}\,\right)
-\;\;\Longrightarrow\;\;
-    \left\{\begin{array}{c}
-        X^{*} = -X
-        \\
-        X^{*} = {\color{white}-}X
-        \end{array}\right.
-\;\;\Longrightarrow\;\;
-    X = X^{*} = -X
-\;\;\Longrightarrow\;\;
-    X = 0
-\end{equation*}
-This proves Claim 1.
-\vskip 0.5cm
-\noindent
-\textbf{Claim 2:}\;
-\,$\gl(n,\C) \;\subset\; \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n)$\,
-\vskip 0.1cm
-\noindent
-Proof of Claim 2:\;
-For each \,$X \in \gl(n,\C) = \C^{n \times n}$,\, we may write:
-\begin{equation*}
-X
-\; = \;
-    X_{1} \,+\, \i \cdot X_{2}
-\; = \;
-    \left(\dfrac{X - X^{*}}{2}\right)
-    \,+\,
-    \i\,\cdot\left(\dfrac{X + X^{*}}{\i \cdot 2}\right),
-\quad
-\textnormal{where}\;\;
-X_{1}
-\; := \;
-    \left(\dfrac{X - X^{*}}{2}\right),
-\;\;
-X_{2}
-\; := \;
-    \left(\dfrac{X + X^{*}}{\i \cdot 2}\right).
-\end{equation*}
-Next, note that \,$X_{1},\, X_{2} \in \mathfrak{u}(n)$.\,
-Indeed,
-\begin{eqnarray*}
-X_{1}^{*}
-& = &
-    \left(\dfrac{X - X^{*}}{2}\right)^{\!*}
-\;\; = \;\;
-    \left(\dfrac{X^{*} - X^{**}}{2}\right)
-\;\; = \;\;
-    \left(\dfrac{X^{*} - X}{2}\right)
-\;\; = \;\;
-    -\left(\dfrac{X - X^{*}}{2}\right)
-\;\; = \;\;
-    -\,X_{1}
-\\
-X_{2}^{*}
-& = &
-    \left(\dfrac{X + X^{*}}{\i \cdot 2}\right)^{\!*}
-\;\; = \;\;
-    \left(\dfrac{X^{*} + X^{**}}{-\,\i \cdot 2}\right)
-\;\; = \;\;
-    \left(\dfrac{X^{*} + X}{-\,\i \cdot 2}\right)
-\;\; = \;\;
-    -\left(\dfrac{X + X^{*}}{\i \cdot 2}\right)
-\;\; = \;\;
-    -\,X_{2}
-\end{eqnarray*}
-This shows indeed that
-\,$X_{1},\, X_{2} \in \mathfrak{u}(n)$,\,
-and completes the proof of Claim 2.
-\vskip 0.5cm
-\noindent
-Claim 1 and Claim 2 together imply
-\begin{equation*}
-\gl(n,\C)
-\;\;\subset\;\;
-    \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n)
-\;\; =: \;\;
-    \mathfrak{u}(n)_{\C}
-\;\;\subset\;\;
-    \C^{n \times n}
-\;\; = \;\;
-    \gl(n,\C)\,,
-\end{equation*}
-from which it immediately follows that
-\,$\mathfrak{u}(n)_{\C} \,:=\, \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n) \,=\, \gl(n,\C)$,\,
-and this completes the proof of the Lemma.
-\qed
+    \, = \,
+    \{\,0\,\}
+    $,\,
+    as required.
+\item
+    \textbf{Claim 1:}\;
+    \,$\gl(n,\C) \;\subset\; \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n)$\,
+    \vskip 0.1cm
+    \noindent
+    Proof of Claim 1:\;
+    For each \,$X \in \gl(n,\C) = \C^{n \times n}$,\, we may write:
+    \begin{equation*}
+    X
+    \; = \;
+        X_{1} \,+\, \i \cdot X_{2}
+    \; = \;
+        \left(\dfrac{X - X^{*}}{2}\right)
+        \,+\,
+        \i\,\cdot\left(\dfrac{X + X^{*}}{\i \cdot 2}\right),
+    \quad
+    \textnormal{where}\;\;
+    X_{1}
+    \; := \;
+        \left(\dfrac{X - X^{*}}{2}\right),
+    \;\;
+    X_{2}
+    \; := \;
+        \left(\dfrac{X + X^{*}}{\i \cdot 2}\right).
+    \end{equation*}
+    Next, note that \,$X_{1},\, X_{2} \in \mathfrak{u}(n)$.\,
+    Indeed,
+    \begin{eqnarray*}
+    X_{1}^{*}
+    & = &
+        \left(\dfrac{X - X^{*}}{2}\right)^{\!*}
+    \;\; = \;\;
+        \left(\dfrac{X^{*} - X^{**}}{2}\right)
+    \;\; = \;\;
+        \left(\dfrac{X^{*} - X}{2}\right)
+    \;\; = \;\;
+        -\left(\dfrac{X - X^{*}}{2}\right)
+    \;\; = \;\;
+        -\,X_{1}
+    \\
+    X_{2}^{*}
+    & = &
+        \left(\dfrac{X + X^{*}}{\i \cdot 2}\right)^{\!*}
+    \;\; = \;\;
+        \left(\dfrac{X^{*} + X^{**}}{-\,\i \cdot 2}\right)
+    \;\; = \;\;
+        \left(\dfrac{X^{*} + X}{-\,\i \cdot 2}\right)
+    \;\; = \;\;
+        -\left(\dfrac{X + X^{*}}{\i \cdot 2}\right)
+    \;\; = \;\;
+        -\,X_{2}
+    \end{eqnarray*}
+    This shows indeed that
+    \,$X_{1},\, X_{2} \in \mathfrak{u}(n)$,\,
+    and completes the proof of Claim 1.
+    \vskip 0.5cm
+    \noindent
+    We can now finish the proof: Conclusion (i) and Claim 1 together imply
+    \begin{equation*}
+    \gl(n,\C)
+    \;\;\subset\;\;
+        \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n)
+    \;\; =: \;\;
+        \mathfrak{u}(n)_{\C}
+    \;\;\subset\;\;
+        \C^{n \times n}
+    \;\; = \;\;
+        \gl(n,\C)\,,
+    \end{equation*}
+    from which it immediately follows that
+    \,$\mathfrak{u}(n)_{\C} \,:=\, \mathfrak{u}(n) \,\oplus\, \i\cdot\mathfrak{u}(n) \,=\, \gl(n,\C)$.\,
+    This completes the proof of Conclusion (ii), as well as that of the Lemma.
+    \qed
+\end{enumerate}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -288,7 +297,7 @@ This proves Claim 1.
 \vskip 0.1cm
 \noindent
 Proof of Claim 2:\;
-Let \,$X,\, Y \in \su(2)$\, and \,$Z = X + \i\cdot Y \in \su(n) \oplus \i\cdot\su(n)$.\,
+Let \,$X,\, Y \in \su(n)$\, and \,$Z = X + \i\cdot Y \in \su(n) \oplus \i\cdot\su(n)$.\,
 Then, \,$\trace(Z) \,=\, \trace(X) + \i\cdot\trace(Y) = 0 + \i\cdot 0 = 0$,\,
 which implies that \,$Z \in \sl(n,\C)$.\,
 This proves Claim 2.
