@@ -738,10 +738,133 @@ $\alpha_{(-1,-1)}$ & $-1$ & $-1$ & $Y_{3}$ \\
 \end{center}
 \end{proposition}
 \proof
-Let
-\,$\alpha : \mathfrak{h} = \span_{\C}\{H_{1},H_{2}\} \longrightarrow \C$\,
-be a root, i.e., a weight (functional) for the adjoint representation
-\,$\ad : \sl(3,\C) \longrightarrow \End\!\left(\,\overset{{\color{white}.}}{\sl(3,\C)}\,\right)$.\,
+\vskip 0.2cm
+\noindent
+\textbf{Claim 1:}\;\; The elements of \,$\span_{\C}\{H_{1},H_{2}\}$\, are simultaneously diagonalizable.
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;\;
+Observe that both \,$H_{1}$\, and \,$H_{2}$\, are diagonal matrices (with complex entries).
+Hence, every linear combination of \,$H_{1}$\, and \,$H_{2}$\, is itself a diagonal matrix.
+In particular, the standard basis vectors
+\;$\mathbf{e}_{1} = {\scriptsize\left(\begin{array}{c} 1 \\ 0 \\ 0\end{array}\right)}$,\,
+\,$\mathbf{e}_{2} = {\scriptsize\left(\begin{array}{c} 0 \\ 1 \\ 0\end{array}\right)}$,\,
+\,$\mathbf{e}_{3} = {\scriptsize\left(\begin{array}{c} 0 \\ 0 \\ 1\end{array}\right)}$\;
+of \,$\C^{3}$\, are simultaneously eigenvectors for
+\,$\span_{\C}\{H_{1},H_{2}\}$.\,
+This completes the proof of Claim 1.
+
+\vskip 0.3cm
+\noindent
+Claim 1 and Proposition \ref{SDiagonalizableEqualsDirectSumOfWeightSpaces} together implies that
+\,$\sl(3,\C)$\, can be expressed as a direct sum of (finitely many) {\color{red}weight} spaces.
+Next, in order to determine these weight spaces, recall the following commutation relations:
+\begin{equation*}
+\begin{array}{ccr}
+\left[H_{1},H_{2}\right] &=& 0,
+\\ \\
+\left[H_{1},X_{1}\right] &=& 2\,X_{1},
+\\
+\left[H_{2},X_{1}\right] &=& -\,X_{1},
+\\ \\
+\left[H_{1},X_{2}\right] &=& -\,X_{2},
+\\
+\left[H_{2},X_{2}\right] &=& 2\,X_{2},
+\\ \\
+\left[H_{1},X_{3}\right] &=& X_{3},
+\\
+\left[H_{2},X_{3}\right] &=& X_{3},
+\end{array}
+\quad\quad
+\begin{array}{ccr}
+&&
+\\ \\
+\left[H_{1},Y_{1}\right] &=& -\,2\,Y_{1},
+\\
+\left[H_{2},Y_{1}\right] &=& Y_{1},
+\\ \\
+\left[H_{1},Y_{2}\right] &=& Y_{2},
+\\
+\left[H_{2},Y_{2}\right] &=& -\,2\,Y_{2},
+\\ \\
+\left[H_{1},Y_{3}\right] &=& -\,Y_{3},
+\\
+\left[H_{2},Y_{3}\right] &=& -\,Y_{3},
+\end{array}
+\end{equation*}
+The above commutation relations are equivalent to the statement that each of
+\;$H_{1},H_{2},\; X_{1},X_{2},X_{3}\; Y_{1},Y_{2},Y_{3}$\;
+is a weight vector for the adjoint representation
+\,$\ad : \sl(3,\C) \longrightarrow \End\!\left(\,\overset{{\color{white}.}}{\sl(3,\C)}\,\right)$\,
+with their repective weights indicated as follows:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+{\color{white}??}{\color{red}weight}{\color{white}??}& & & {\color{red}weight} vector(s) \\
+$\alpha$ & $\alpha(H_{1})$ & $\alpha(H_{2})$ & $Z_{\alpha}$ \\
+\hline\hline
+$\alpha_{(0,0)}$ & ${\color{white}+}0$ & ${\color{white}+}0$ & $H_{1},H_{2}$ \\
+\hline
+$\alpha_{(2,-1)}$ & ${\color{white}+}2$ & $-1$ & $X_{1}$ \\
+\hline
+$\alpha_{(-1,2)}$ & $-1$ & ${\color{white}+}2$ & $X_{2}$ \\
+\hline
+$\alpha_{(1,1)}$ & ${\color{white}+}1$ & ${\color{white}+}1$ & $X_{3}$ \\
+\hline
+\end{tabular}
+\quad\quad
+\begin{tabular}{|c|c|c|c|}
+\hline
+{\color{white}??}{\color{red}weight}{\color{white}??}& & & {\color{red}weight} vector \\
+$\alpha$ & $\alpha(H_{1})$ & $\alpha(H_{2})$ & $Z_{\alpha}$ \\
+\hline\hline
+$\alpha_{(-2,1)}$ & $-2$ & ${\color{white}+}1$ & $Y_{1}$ \\
+\hline
+$\alpha_{(1,-2)}$ & ${\color{white}+}1$ & $-2$ & $Y_{2}$ \\
+\hline
+$\alpha_{(-1,-1)}$ & $-1$ & $-1$ & $Y_{3}$ \\
+\hline
+\end{tabular}
+\end{center}
+Since
+\;$H_{1},H_{2},\; X_{1},X_{2},X_{3}\; Y_{1},Y_{2},Y_{3}$\;
+form a basis for \,$\sl(2,\C)$,\, we see that we have the following
+decomposition of \,$\sl(3,\C)$\, into a direct sum of weight spaces:
+\begin{eqnarray*}
+\sl(3,\C)
+& = &
+    \langle\,H_{1},H_{2}\,\rangle
+    \;\oplus\;
+    \langle\,X_{1}\,\rangle
+    \;\oplus\;
+    \langle\,X_{2}\,\rangle
+    \;\oplus\;
+    \langle\,X_{3}\,\rangle
+    \;\oplus\;
+    \langle\,Y_{1}\,\rangle
+    \;\oplus\;
+    \langle\,Y_{2}\,\rangle
+    \;\oplus\;
+    \langle\,Y_{3}\,\rangle
+\\
+& = &
+    W_{\alpha_{(0,0)}}
+    \,\oplus\,
+    W_{\alpha_{(2,-1)}}
+    \,\oplus\,
+    W_{\alpha_{(-1,2)}}
+    \,\oplus\,
+    W_{\alpha_{(1,1)}}
+    \,\oplus\,
+    W_{\alpha_{(-2,1)}}
+    \,\oplus\,
+    W_{\alpha_{(1,-2)}}
+    \,\oplus\,
+    W_{\alpha_{(-1,-1)}}
+\end{eqnarray*}
+Lastly, the proposition follows by recalling that roots are, by definition,
+simply non-zero weights (i.e., non-zero weight functionals defined on
+\,$\mathfrak{h} = \span_{\C}\{H_{1},H_{2}\}$).
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
