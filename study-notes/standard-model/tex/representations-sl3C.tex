@@ -869,6 +869,87 @@ simply non-zero weights (i.e., non-zero weight functionals defined on
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{lemma} %[The sum of a weight and a root is itself a weight]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $\alpha : \mathfrak{h} \longrightarrow \C$\,
+    is a root\,\footnote{i.e.,
+    \,$\alpha$\, is a weight (i.e., weight functional) for the adjoint representation
+    \,$\ad : \sl(3,\C) \longrightarrow \End\!\left(\,\overset{{\color{white}.}}{\sl(3,\C)}\,\right)$}
+    of \,$\sl(3,\C)$\, and
+    \,$Z_{\alpha} \in \sl(3,\C)$\, is a root vector corresponding to the root \,$\alpha$,\,
+\item
+    $\pi : \sl(3,\C) \longrightarrow \End\!\left(\,V\,\right)$\,
+    is a representation of the complex Lie algebra \,$\sl(3,\C)$,\,
+    \,$\mu : \mathfrak{h} \longrightarrow \C$\,
+    is a weight (or weight functional) for the representation \,$\pi$,\, and
+    \,$v \in V\,\backslash\,\{\,0\,\}$\,
+    is a (non-zero) weight vector corresponding to the weight \,$\mu$.\,
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    For \,$H \in \mathfrak{h} = \span_{\C}\{H_{1},H_{2}\}$,\, we have:
+    \begin{equation*}
+    \pi(H) \circ \pi(Z_{\alpha})[\,v\,]
+    \;\; = \;\;
+        \left(\,
+            \overset{}{
+                \mu(H) + \alpha(H)
+                }
+            \,\right) \cdot \pi(Z_{\alpha})[\,v\,]
+    \end{equation*}
+\item
+    Consequently, either \,$\pi(Z_{\alpha})[\,v\,] = 0$,\, or
+    \,$\pi(Z_{\alpha})[\,v\,]$\, is itself a weight vector
+    corresponding to the weight
+    \,$\mu + \alpha : \mathfrak{h} \longrightarrow \C$.\,
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+    The commutation relations
+    \,$[H,Z_{\alpha}] \,=\, \alpha(H) \cdot Z_{\alpha}$,\,
+    for each \,$H \in \mathfrak{h} = \span_{\C}\{H_{1},H_{2}\}$,\,
+    imply:
+    \begin{eqnarray*}
+    \pi(H) \circ \pi(Z_{\alpha})[\,v\,]
+    & = &
+        \left(\,
+            \overset{{\color{white}.}}{
+                \pi(Z_{\alpha}) \circ \pi(H) + \alpha(H)\cdot\pi(Z_{\alpha})
+                }
+            \,\right)[\,v\,]
+    \\
+    & = &
+        \pi(Z_{\alpha}) \circ \pi(H)[\,v\,] + \alpha(H)\cdot\pi(Z_{\alpha})[\,v\,]
+    \;\; = \;\;
+        \pi(Z_{\alpha})[\,\mu(H) \cdot v\,] + \alpha(H)\cdot\pi(Z_{\alpha})[\,v\,]
+    \\
+    & = &
+        \mu(H) \cdot \pi(Z_{\alpha})[\,v\,] + \alpha(H)\cdot\pi(Z_{\alpha})[\,v\,]
+    \\
+    & = &
+        \left(\,
+            \overset{{\color{white}.}}{
+                \mu(H) + \alpha(H)
+                }
+            \,\right)
+        \cdot
+        \left[\,\overset{{\color{white}.}}{\pi(Z_{\alpha})[\,v\,]}\,\right],
+    \end{eqnarray*}
+    as required.
+\item
+    Immediate.
+    \qed
+\end{enumerate}
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
