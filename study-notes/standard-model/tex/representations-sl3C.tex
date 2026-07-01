@@ -381,6 +381,201 @@ The Proposition now follows immediately from Claim 2 and Claim 3.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\section{A common basis over \,$\C$\, for \,$\sl(3,\C)$\,}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{lemma}
+\mbox{}
+\vskip 0.05cm
+\noindent
+The following matrices form a basis over \,$\C$\, for 
+\,$\sl(3,\C)$:
+\begin{equation*}
+\begin{array}{ccccccccc}
+H_{1}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 1 & 0 & {\color{white}..}0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{array}
+        \,\right)},
+&
+H_{2}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 0 & {\color{white}..}0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{array}
+        \,\right)},
+\\ \\
+X_{1}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 0 & {\color{white}..}1 & {\color{white}..}0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{array}
+        \,\right)},
+&
+X_{2}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 0 & {\color{white}..}0 & {\color{white}..}0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{array}
+        \,\right)},
+&
+X_{3}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 0 & {\color{white}..}0 & {\color{white}..}1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{array}
+        \,\right)},
+\\ \\
+Y_{1}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 0 & {\color{white}..}0 & {\color{white}..}0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{array}
+        \,\right)},
+&
+Y_{2}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 0 & {\color{white}..}0 & {\color{white}..}0 \\ 0 & 0 & 0 \\ 0 & 1 & 0 \end{array}
+        \,\right)},
+&
+Y_{3}
+\!\!\!
+&=&
+    \!\!
+    {\footnotesize\left(\,
+        \begin{array}{rrr} 0 & {\color{white}..}0 & {\color{white}..}0 \\ 0 & 0 & 0 \\ 1 & 0 & 0 \end{array}
+        \,\right)}.
+\end{array}
+\end{equation*}
+Furthermore,
+\,$H_{1},H_{2},\; X_{1},X_{2},X_{3},\; Y_{1},Y_{2},Y_{3} \,\in\, \sl(3,\C)$\,
+satisfy the following commutation relations:
+\begin{equation*}
+\begin{array}{ccr}
+\left[H_{1},X_{1}\right] &=& 2\,X_{1},
+\\
+\left[H_{1},\;Y_{1}\right] &=& -\,2\,\,Y_{1},
+\\
+\left[X_{1},\;Y_{1}\right] &=& H_{1},
+\end{array}
+\quad\quad
+\begin{array}{ccr}
+\left[H_{2},X_{2}\right] &=& 2\,X_{2},
+\\
+\left[H_{2},\;Y_{2}\right] &=& -\,2\,\,Y_{2},
+\\
+\left[X_{2},\;Y_{2}\right] &=& H_{2},
+\end{array}
+\end{equation*}
+\begin{equation*}
+\begin{array}{ccr}
+\left[H_{1},H_{2}\right] &=& 0,
+\\ \\
+\left[H_{1},X_{1}\right] &=& 2\,X_{1},
+\\
+\left[H_{2},X_{1}\right] &=& -\,X_{1},
+\\ \\
+\left[H_{1},X_{2}\right] &=& -\,X_{2},
+\\
+\left[H_{2},X_{2}\right] &=& 2\,X_{2},
+\\ \\
+\left[H_{1},X_{3}\right] &=& X_{3},
+\\
+\left[H_{2},X_{3}\right] &=& X_{3},
+\end{array}
+\quad\quad
+\begin{array}{ccr}
+&&
+\\ \\
+\left[H_{1},Y_{1}\right] &=& -\,2\,Y_{1},
+\\
+\left[H_{2},Y_{1}\right] &=& Y_{1},
+\\ \\
+\left[H_{1},Y_{2}\right] &=& Y_{2},
+\\
+\left[H_{2},Y_{2}\right] &=& -\,2\,Y_{2},
+\\ \\
+\left[H_{1},Y_{3}\right] &=& -\,Y_{3},
+\\
+\left[H_{2},Y_{3}\right] &=& -\,Y_{3},
+\end{array}
+\end{equation*}
+\begin{equation*}
+\begin{array}{ccr}
+\left[X_{1},Y_{1}\right] &=& H_{1},
+\\
+\left[X_{2},Y_{2}\right] &=& H_{2},
+\\
+\left[X_{3},Y_{3}\right] &=& H_{1}+H_{2},
+\\ \\
+\left[X_{1},X_{2}\right] &=& X_{3},
+\\
+\left[X_{1},Y_{2}\right] &=& 0,
+\\ \\
+\left[X_{1},X_{3}\right] &=& 0,
+\\
+\left[X_{2},X_{3}\right] &=& 0,
+\\ \\
+\left[X_{2},Y_{3}\right] &=& Y_{1},
+\\
+\left[X_{1},Y_{3}\right] &=& -\,Y_{2},
+\end{array}
+\quad\quad
+\begin{array}{ccr}
+&&
+\\
+&&
+\\
+&&
+\\ \\
+\left[Y_{1},Y_{2}\right] &=& -\,Y_{3},
+\\
+\left[X_{2},Y_{1}\right] &=& 0,
+\\ \\
+\left[Y_{1},Y_{3}\right] &=& 0,
+\\
+\left[Y_{2},Y_{3}\right] &=& 0,
+\\ \\
+\left[X_{3},Y_{2}\right] &=& X_{1},
+\\
+\left[X_{3},Y_{1}\right] &=& -\,X_{2},
+\end{array}
+\end{equation*}
+\end{lemma}
+\proof
+Recall that:
+\,$
+\sl(n,\C)
+\; = \;
+    \left\{\;
+        X \in \C^{n \times n}
+        \,\left\vert\;\,
+        \overset{{\color{white}.}}{\trace(X) = 0}
+        \right.
+        \,\right\}
+$\,
+(see, for example, Example 3.4, p.50, \cite{Hall2015}).
+Hence, \,$\dim_{\C}\!\left(\,\overset{{\color{white}.}}{\sl(3,\C)}\,\right) \,=\, 9-1 \,=\, 8$.\,
+On the other hand, it is clear that
+\,$H_{1}, H_{2},\; X_{1}, X_{2}, X_{3},\; Y_{1}, Y_{2}, Y_{3} \,\in\, \sl(3,\C)$,\,
+and that these $8$ matrices are linearly independent.
+It thus follows that
+\,$H_{1}, H_{2},\; X_{1}, X_{2}, X_{3},\; Y_{1}, Y_{2}, Y_{3} \,\in\, \sl(3,\C)$\,
+indeed form a basis over \,$\C$\, for \,$\sl(3,\C)$.\,
+Their commutation relations follow by straightforward computations.
+\qed
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
