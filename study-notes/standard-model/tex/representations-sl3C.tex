@@ -578,9 +578,66 @@ Their commutation relations follow by straightforward computations.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\clearpage
 \section{Weights and roots of \,$\sl(3,\C)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let \,$\pi : \sl(3,\C) \longrightarrow \End(V)$\,
+be a representation of \,$\sl(3,\C)$.\,
+Let \,$\mathfrak{h} := \span_{\C}\{H_{1},H_{2}\}$\,
+be the commutative Lie subalgebra of \,$\sl(3,\C)$\, spanned by \,$H_{1}, H_{2} \in \sl(3,\C)$.\,
+\begin{itemize}
+\item
+    A functional\,\footnote{In this case, a functional is a $\C$-valued $\C$-linear function.}
+    \,$\mu : \mathfrak{h} \longrightarrow \C$\,
+    defined on the commutative Lie subalgebra
+    \,$\mathfrak{h} := \span_{\C}\{H_{1},H_{2}\} \subset \sl(3,\C)$\,
+    is called a \textbf{weight} (or \textbf{weight functional}) for \,$\pi$\,
+    if there exists a non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\, such that
+    \begin{equation*}
+    \pi(H)\!\left[\,v\,\right]
+    \;\; = \;\;
+        \mu(H) \cdot v\,,
+    \quad
+    \textnormal{for each $H \in \span_{\C}\{H_{1},H_{2}\}$}
+    \end{equation*}
+    The non-zero vector \,$v \in V\,\backslash\,\{\,0\,\}$\,
+    is called a \textbf{weight vector} corresponding to
+    the weight (weight functional) \,$\mu$.\,
+\item
+    Let
+    \,$\mu : \mathfrak{h} \longrightarrow \C$\,
+    be a weight for the Lie algebra representation\
+    \,$\pi : \sl(3,\C) \longrightarrow \End(V)$.\,
+    The subspace
+    \begin{equation*}
+    W_{\mu}
+    \;\; := \;\;
+        \left\{\;
+            v \in V
+            \;\left\vert\!
+            \begin{array}{c}
+                \pi(H)\!\left[\,v\,\right] = \mu(H) \cdot v,
+                \\
+                \overset{{\color{white}.}}{
+                    \textnormal{for each \,$H \in \mathfrak{h} := \span_{\C}\{H_{1},H_{2}\}$}
+                    }
+                \end{array}
+            \right.
+            \!\!\right\}
+    \;\; \subset \;\;
+        V
+    \end{equation*}
+    of \,$V$\, is called the \textbf{weight space} corresponding to the weight \,$\mu$.\,
+    The \textbf{multiplicity} of the weight \,$\mu$\, is defined to be the integer
+    \,$\dim_{\C}(\,W_{\mu}\,)$.\,
+\end{itemize}
+\end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
