@@ -458,26 +458,19 @@ Y_{3}
         \,\right)}.
 \end{array}
 \end{equation*}
-Furthermore,
+The basis elements
 \,$H_{1},H_{2},\; X_{1},X_{2},X_{3},\; Y_{1},Y_{2},Y_{3} \,\in\, \sl(3,\C)$\,
-satisfy the following commutation relations:
+satisfy the following
 \begin{equation*}
-\begin{array}{ccr}
-\left[H_{1},X_{1}\right] &=& 2\,X_{1},
-\\
-\left[H_{1},\;Y_{1}\right] &=& -\,2\,\,Y_{1},
-\\
-\left[X_{1},\;Y_{1}\right] &=& H_{1},
-\end{array}
-\quad\quad
-\begin{array}{ccr}
-\left[H_{2},X_{2}\right] &=& 2\,X_{2},
-\\
-\left[H_{2},\;Y_{2}\right] &=& -\,2\,\,Y_{2},
-\\
-\left[X_{2},\;Y_{2}\right] &=& H_{2},
-\end{array}
+\left(\!\begin{array}{c} 8 \\ 2 \end{array}\!\right)
+\;\; = \;\;
+    \dfrac{8!}{2!\,6!}
+\;\; = \;\;
+    \dfrac{8 \cdot 7 \cdot 6!}{2! \cdot 6!}
+\;\; = \;\;
+    28
 \end{equation*}
+commutation relations:
 \begin{equation*}
 \begin{array}{ccr}
 \left[H_{1},H_{2}\right] &=& 0,
@@ -552,6 +545,34 @@ satisfy the following commutation relations:
 \left[X_{3},Y_{1}\right] &=& -\,X_{2},
 \end{array}
 \end{equation*}
+In particular, each of
+\,$\span_{\C}\{H_{1},X_{1},Y_{1}\}$\,
+and
+\,$\span_{\C}\{H_{2},X_{2},Y_{2}\}$\,
+is a Lie subalgebra of \,$\sl(3,\C)$\,
+satisfying the following commutation relations:
+\begin{equation*}
+\begin{array}{ccr}
+\left[H_{1},X_{1}\right] &=& 2\,X_{1},
+\\
+\left[H_{1},\;Y_{1}\right] &=& -\,2\,\,Y_{1},
+\\
+\left[X_{1},\;Y_{1}\right] &=& H_{1},
+\end{array}
+\quad\quad
+\begin{array}{ccr}
+\left[H_{2},X_{2}\right] &=& 2\,X_{2},
+\\
+\left[H_{2},\;Y_{2}\right] &=& -\,2\,\,Y_{2},
+\\
+\left[X_{2},\;Y_{2}\right] &=& H_{2},
+\end{array}
+\end{equation*}
+and hence each of
+\,$\span_{\C}\{H_{1},X_{1},Y_{1}\}$\,
+and
+\,$\span_{\C}\{H_{2},X_{2},Y_{2}\}$\,
+is isomorphic to \,$\sl(2,\C)$\, as a complex Lie algebra.
 \end{lemma}
 \proof
 Recall that:
@@ -578,7 +599,7 @@ Their commutation relations follow by straightforward computations.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\clearpage
+\vskip 0.5cm
 \section{Weights and roots of \,$\sl(3,\C)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -612,7 +633,7 @@ be the commutative Lie subalgebra of \,$\sl(3,\C)$\, spanned by \,$H_{1}, H_{2} 
 \item
     Let
     \,$\mu : \mathfrak{h} \longrightarrow \C$\,
-    be a weight for the Lie algebra representation\
+    be a weight for the complex Lie algebra representation\
     \,$\pi : \sl(3,\C) \longrightarrow \End(V)$.\,
     The subspace
     \begin{equation*}
@@ -641,8 +662,8 @@ be the commutative Lie subalgebra of \,$\sl(3,\C)$\, spanned by \,$H_{1}, H_{2} 
     \,$\mu : \mathfrak{h} \longrightarrow \C$\,
     for the adjoint representation
     \,$\ad : \sl(3,\C) \longrightarrow \End\!\left(\,\overset{{\color{white}.}}{\sl(3,\C)}\,\right)$\,
-    is called a \textbf{root} (or \textbf{root functional}) of the Lie algebra \,$\sl(3\,C)$.\,
-    A \textbf{root vector} of the Lie algebra \,$\sl(3,\C)$\,
+    is called a \textbf{root} (or \textbf{root functional}) of the complex Lie algebra \,$\sl(3\,C)$.\,
+    A \textbf{root vector} of the complex Lie algebra \,$\sl(3,\C)$\,
     is a weight vector corresponding a root (i.e., weight for the adjoint representation)
     of \,$\sl(3,\C)$.\, 
 \end{itemize}
@@ -677,4 +698,65 @@ Then, we have:
     \left(c_{1}\mu(H_{1}) \overset{{\color{white}.}}{+} c_{2}\mu(H_{2})\right)\cdot v
 \end{eqnarray*}
 \end{remark}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+The complex Lie algebra \,$\sl(3,\C)$\, has exactly six roots (root functionals);
+these six roots, their respective values on \,$H_{1}, H_{2} \in \sl(3,\C)$,\,
+as well as their respective root vectors are displayed in the following tables:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+{\color{white}???}root{\color{white}???}& & & root vector \\
+$\alpha$ & $\alpha(H_{1})$ & $\alpha(H_{2})$ & $Z_{\alpha}$ \\
+\hline\hline
+$\alpha_{(2,-1)}$ & ${\color{white}+}2$ & $-1$ & $X_{1}$ \\
+\hline
+$\alpha_{(-1,2)}$ & $-1$ & ${\color{white}+}2$ & $X_{2}$ \\
+\hline
+$\alpha_{(1,1)}$ & ${\color{white}+}1$ & ${\color{white}+}1$ & $X_{3}$ \\
+\hline
+\end{tabular}
+\quad\quad
+\begin{tabular}{|c|c|c|c|}
+\hline
+{\color{white}???}root{\color{white}???}& & & root vector \\
+$\alpha$ & $\alpha(H_{1})$ & $\alpha(H_{2})$ & $Z_{\alpha}$ \\
+\hline\hline
+$\alpha_{(-2,1)}$ & $-2$ & ${\color{white}+}1$ & $Y_{1}$ \\
+\hline
+$\alpha_{(1,-2)}$ & ${\color{white}+}1$ & $-2$ & $Y_{2}$ \\
+\hline
+$\alpha_{(-1,-1)}$ & $-1$ & $-1$ & $Y_{3}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{proposition}
+\proof
+Let
+\,$\alpha : \mathfrak{h} = \span_{\C}\{H_{1},H_{2}\} \longrightarrow \C$\,
+be a root, i.e., a weight (functional) for the adjoint representation
+\,$\ad : \sl(3,\C) \longrightarrow \End\!\left(\,\overset{{\color{white}.}}{\sl(3,\C)}\,\right)$.\,
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
