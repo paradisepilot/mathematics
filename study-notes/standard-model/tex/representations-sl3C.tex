@@ -993,16 +993,16 @@ Equivalently, but more explicitly:
 
 \vskip 0.5cm
 \begin{definition}[Root system in
-\,$\mathfrak{k} \,:=\, \span_{\Re}\{H_{1},H_{2}\} \,\subset\, \mathfrak{h} \,:=\, \span_{\C}\{H_{1},H_{2}\} \,\subset\, \sl(3,\C)$]
+\,$\mathfrak{t} \,:=\, \span_{\Re}\{H_{1},H_{2}\} \,\subset\, \mathfrak{h} \,:=\, \span_{\C}\{H_{1},H_{2}\} \,\subset\, \sl(3,\C)$]
 \mbox{}
 \vskip 0.05cm
 \noindent
-A \textbf{root system} \,$R$\, $\subset$ \,$\mathfrak{k} := \span_{\Re}\{H_{1},H_{2}\}$\,
-is a finite set of roots of \,$\mathfrak{h}$\, in \,$\mathfrak{k}$\,
+A \textbf{root system} \,$R$\, $\subset$ \,$\mathfrak{t} := \span_{\Re}\{H_{1},H_{2}\}$\,
+is a finite set of roots of \,$\mathfrak{h}$\, in \,$\mathfrak{t}$\,
 satisfying the following properties:
 \begin{itemize}
 \item
-    $\span_{\Re}(\,R\,) = \mathfrak{k}$
+    $\span_{\Re}(\,R\,) = \mathfrak{t}$
 \item
     $
     \left.\begin{array}{c}
@@ -1024,8 +1024,8 @@ satisfying the following properties:
     \rho_{\alpha}(\,\beta\,) \in R
     $,\,
     where
-    \,$\rho_{\alpha} : \mathfrak{k} \longrightarrow \mathfrak{k}$\,
-    is reflection in \,$\alpha \in R \subset \mathfrak{k}$,\,
+    \,$\rho_{\alpha} : \mathfrak{t} \longrightarrow \mathfrak{t}$\,
+    is reflection in \,$\alpha \in R \subset \mathfrak{t}$,\,
     i.e., \,$\rho_{\alpha}$\, is defined as follows:
     \begin{equation*}
     \rho_{\alpha}(\,H\,)
@@ -1040,7 +1040,7 @@ satisfying the following properties:
             }
         \cdot \alpha\,,
     \quad
-    \textnormal{for each \,$H \in \mathfrak{k} = \span_{\Re}\{H_{1},H_{2}\}$}
+    \textnormal{for each \,$H \in \mathfrak{t} = \span_{\Re}\{H_{1},H_{2}\}$}
     \end{equation*}
 \end{itemize}
 \end{definition}
@@ -1053,12 +1053,12 @@ satisfying the following properties:
 \vskip 0.05cm
 \noindent
 Let
-\,$R \,\subset\, \mathfrak{k} \,\subset\, \mathfrak{h} \,\subset\, \sl(3,\C)$\,
+\,$R \,\subset\, \mathfrak{t} \,\subset\, \mathfrak{h} \,\subset\, \sl(3,\C)$\,
 be a root system.
 A subset \,$\Delta \,\subset\, R$ \, is called a \textbf{base} if \,$\Delta$\, satisfies:
 \begin{itemize}
 \item
-    $\Delta$\, is a basis for \,$\mathfrak{k} := \span_{\Re}\{H_{1},H_{2}\}$,\, and
+    $\Delta$\, is a basis for \,$\mathfrak{t} := \span_{\Re}\{H_{1},H_{2}\}$,\, and
 \item
     each root \,$\alpha \in R$\, can be expressed as a linear combination of elements
     in \,$\Delta$\, with integer coefficients such that
@@ -1083,13 +1083,13 @@ The elements of \,$\Delta$\, are called the \textbf{$\Delta$-positive simple roo
 \vskip 0.05cm
 \noindent
 Let
-\,$R \,\subset\, \mathfrak{k} \,\subset\, \mathfrak{h} \,\subset\, \sl(3,\C)$\,
+\,$R \,\subset\, \mathfrak{t} \,\subset\, \mathfrak{h} \,\subset\, \sl(3,\C)$\,
 be a root system, and
 \,$\Delta \,\subset\, R$ \, a base in \,$R$.\,
 \vskip 0.1cm
 \noindent
-An element \,$\mu \in \mathfrak{k}$\, is said to be \,\textbf{$\Delta$-higher}\,
-than another element \,$\lambda \in \mathfrak{k}$\, (denoted: $\mu \succeq_{\Delta} \lambda$) if
+An element \,$\mu \in \mathfrak{t}$\, is said to be \,\textbf{$\Delta$-higher}\,
+than another element \,$\lambda \in \mathfrak{t}$\, (denoted: $\mu \succeq_{\Delta} \lambda$) if
 \begin{equation*}
 \mu - \lambda
 \;\; = \;\;
@@ -1108,14 +1108,14 @@ In thise case, we also equivalently say \,$\lambda$\, is $\Delta$-lower than \,$
 \vskip 0.05cm
 \noindent
 Let
-\,$R \,\subset\, \mathfrak{k} \,:=\, \span_{\Re}\{\,H_{1},H_{2}\,\} \,\subset\, \mathfrak{h} \,:=\, \span_{\C}\{\,H_{1},H_{2}\,\} \,\subset\, \sl(3,\C)$\,
+\,$R \,\subset\, \mathfrak{t} \,:=\, \span_{\Re}\{\,H_{1},H_{2}\,\} \,\subset\, \mathfrak{h} \,:=\, \span_{\C}\{\,H_{1},H_{2}\,\} \,\subset\, \sl(3,\C)$\,
 be a root system, and
 \,$\Delta \,\subset\, R$ \, a base in \,$R$.\,
 Let
 \,$\pi : \sl(3,\C) \longrightarrow \End(\,V\,)$\,
 be a representation of \,$\sl(3,\C)$.\,
-A weight \,$\mu_{0} \in \mathfrak{k}$\, is called a \,\textbf{$\Delta$-highest weight}\,
-if \,$\mu_{0} \,\succeq_{\Delta}\, \mu$,\, for each weight \,$\mu \in \mathfrak{k}$.\,
+A weight \,$\mu_{0} \in \mathfrak{t}$\, is called a \,\textbf{$\Delta$-highest weight}\,
+if \,$\mu_{0} \,\succeq_{\Delta}\, \mu$,\, for each weight \,$\mu \in \mathfrak{t}$.\,
 \end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
