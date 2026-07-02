@@ -600,7 +600,7 @@ Their commutation relations follow by straightforward computations.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\section{Weights and roots of \,$\sl(3,\C)$}
+\section{Roots of \,$\sl(3,\C)$\, and weights of representations of \,$\sl(3,\C)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -952,15 +952,172 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\section{Highest weights of representations of \,$\sl(3,\C)$}
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Choice of inner product on \,$\mathfrak{h} \subset \sl(3,\C)$]
+\mbox{}
+\vskip 0.05cm
+\noindent
+We define an inner product
+\,$\langle\,\cdot\,,\,\cdot\,\rangle : \mathfrak{h} \times \mathfrak{h} \longrightarrow \C$\,
+on
+\,$\mathfrak{h} = \span_{\C}\{H_{1},H_{2}\}$\,
+as follows:
+\begin{equation*}
+\left\langle\,
+    H
+    \,,\,
+    H^{\prime}
+    \,\right\rangle
+\;\; := \;\;
+    \trace\!\left(\,H^{*} \cdot H^{\prime}\,\right),
+\quad\quad
+\textnormal{for each \,$H, H^{\prime} \in \mathfrak{h} = \span_{\C}\{H_{1},H_{2}\}$}
+\end{equation*}
+Equivalently, but more explicitly:
+\begin{equation*}
+\left\langle\,
+    {\scriptsize\left(\begin{array}{ccc} a & 0 & 0 \\  0 & b & 0 \\  0 & 0 & c \end{array}\right)}
+    \,,\,
+    {\scriptsize\left(\begin{array}{ccc} d & 0 & 0 \\  0 & e & 0 \\  0 & 0 & f \end{array}\right)}
+    \,\right\rangle
+\;\; := \;\;
+    \overline{a}\,d \; + \; \overline{b}\,e \; + \; \overline{c}\,f
+\end{equation*}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Root system in
+\,$\mathfrak{k} \,:=\, \span_{\Re}\{H_{1},H_{2}\} \,\subset\, \mathfrak{h} \,:=\, \span_{\C}\{H_{1},H_{2}\} \,\subset\, \sl(3,\C)$]
+\mbox{}
+\vskip 0.05cm
+\noindent
+A \textbf{root system} \,$R$\, $\subset$ \,$\mathfrak{k} := \span_{\Re}\{H_{1},H_{2}\}$\,
+is a finite set of roots of \,$\mathfrak{h}$\, in \,$\mathfrak{k}$\,
+satisfying the following properties:
+\begin{itemize}
+\item
+    $\span_{\Re}(\,R\,) = \mathfrak{k}$
+\item
+    $
+    \left.\begin{array}{c}
+        \alpha \in R,\; c \in \Re,
+        \\
+        c \cdot \alpha \in R
+        \end{array}\right\}
+    \!\!\Longrightarrow\;\;
+    c \in \{\,\pm 1\,\}
+    $
+\item
+    For each \,$\alpha,\, \beta \in R$,\, the quantity
+    \,$2 \cdot \dfrac{\langle\,\beta\,,\,\alpha\,\rangle}{\langle\,\alpha\,,\,\alpha\,\rangle}$\,
+    is an integer.
+\item
+    $
+    \alpha,\, \beta \in R
+    \;\;\Longrightarrow\;\;
+    \rho_{\alpha}(\,\beta\,) \in R
+    $,\,
+    where
+    \,$\rho_{\alpha} : \mathfrak{k} \longrightarrow \mathfrak{k}$\,
+    is reflection in \,$\alpha \in R \subset \mathfrak{k}$,\,
+    i.e., \,$\rho_{\alpha}$\, is defined as follows:
+    \begin{equation*}
+    \rho_{\alpha}(\,H\,)
+    \;\; := \;\;
+        H
+        \;-\;
+        2 \cdot
+        \dfrac{
+            \langle \beta,\alpha \rangle
+            }{
+            \langle \alpha,\alpha \rangle
+            }
+        \cdot \alpha\,,
+    \quad
+    \textnormal{for each \,$H \in \mathfrak{k} = \span_{\Re}\{H_{1},H_{2}\}$}
+    \end{equation*}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Base, positive roots, negative roots]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let
+\,$R \,\subset\, \mathfrak{k} \,\subset\, \mathfrak{h} \,\subset\, \sl(3,\C)$\,
+be a root system.
+A subset \,$\Delta \,\subset\, R$ \, is called a \textbf{base} if \,$\Delta$\, satisfies:
+\begin{itemize}
+\item
+    $\Delta$\, is a basis for \,$\mathfrak{k} := \span_{\Re}\{H_{1},H_{2}\}$,\, and
+\item
+    each root \,$\alpha \in R$\, can be expressed as a linear combination of elements
+    in \,$\Delta$\, with integer coefficients such that
+    the coefficients are either all non-negative or all non-positive.
+\end{itemize}
+The roots for which the coefficients (with respect to $\Delta$) are all non-negative
+are called the \textbf{positive roots} (or \textbf{$\Delta$-positive roots}), and the others
+are called the \textbf{negative roots} (or \textbf{$\Delta$-negative roots}).
+The set of all $\Delta$-positive roots in $R$ is denoted by \,$R^{\,+}_{\Delta}$,\,
+and
+the set of all $\Delta$-negative roots in $R$ is denoted by \,$R^{\,-}_{\Delta}$.\,
+\vskip 0.1cm
+\noindent
+The elements of \,$\Delta$\, are called the \textbf{$\Delta$-positive simple roots}.
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[$\Delta$-higher]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let
+\,$R \,\subset\, \mathfrak{k} \,\subset\, \mathfrak{h} \,\subset\, \sl(3,\C)$\,
+be a root system, and
+\,$\Delta \,\subset\, R$ \, a base in \,$R$.\,
+\vskip 0.1cm
+\noindent
+An element \,$\mu \in \mathfrak{k}$\, is said to be \,\textbf{$\Delta$-higher}\,
+than another element \,$\lambda \in \mathfrak{k}$\, (denoted: $\mu \succeq_{\Delta} \lambda$) if
+\begin{equation*}
+\mu - \lambda
+\;\; = \;\;
+    c_{1}\,\alpha_{1} \,+\, \cdots \,+\, c_{r}\,\alpha_{r}\,,
+\end{equation*}
+where \,$c_{1}, \ldots, c_{r} \in \Re$\, are non-negative real numbers.
+In thise case, we also equivalently say \,$\lambda$\, is $\Delta$-lower than \,$\mu$
+(denoted: $\lambda \preceq_{\Delta} \mu$).\,
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[$\Delta$-highest weight of a representation of \,$\sl(3,\C)$]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let
+\,$R \,\subset\, \mathfrak{k} \,:=\, \span_{\Re}\{\,H_{1},H_{2}\,\} \,\subset\, \mathfrak{h} \,:=\, \span_{\C}\{\,H_{1},H_{2}\,\} \,\subset\, \sl(3,\C)$\,
+be a root system, and
+\,$\Delta \,\subset\, R$ \, a base in \,$R$.\,
+Let
+\,$\pi : \sl(3,\C) \longrightarrow \End(\,V\,)$\,
+be a representation of \,$\sl(3,\C)$.\,
+A weight \,$\mu_{0} \in \mathfrak{k}$\, is called a \,\textbf{$\Delta$-highest weight}\,
+if \,$\mu_{0} \,\succeq_{\Delta}\, \mu$,\, for each weight \,$\mu \in R$.\,
+\end{definition}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
