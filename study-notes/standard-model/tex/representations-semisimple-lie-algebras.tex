@@ -1,0 +1,193 @@
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\chapter{Classification of irreducible representations of semisimple Lie algebras via highest weights}
+\setcounter{theorem}{0}
+\setcounter{equation}{0}
+
+%\cite{vanDerVaart1996}
+%\cite{Kosorok2008}
+
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Semisimplicity $\Longleftrightarrow$ direct sum of simple Lie algebras}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{definition}[Irreducibility and simplicity of Lie algebras]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A Lie algebra \,$\mathfrak{g}$\, is said to be
+\begin{itemize}
+\item
+    \textbf{irreducible} if the only ideals in \,$\mathfrak{g}$\,
+    are \,$\mathfrak{g}$\, and \,$\{\,0\,\}$\,, and
+\item
+    \textbf{simple} if \,$\mathfrak{g}$\, is irreducible and
+    \,{\color{red}$\dim(\,\mathfrak{g}\,) \,\geq\, 2$}.\,
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Reductiveness and semisimplicity of complex Lie algebras]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A complex Lie algebra \,$\mathfrak{g}$\, is said to be
+\begin{itemize}
+\item
+    \textbf{reductive} if there exists a real Lie subalgebra
+    \,$\mathfrak{k} \,\subset\, \mathfrak{g}$\,
+    such that
+    \,$\mathfrak{g} \,\cong\, \mathfrak{k}_{\C}$,\,
+    where \,$\mathfrak{k}$\, is isomorphic
+    to the Lie algebra of a {\color{red}compact} matrix Lie group, and
+\item
+    \textbf{semisimple} if \,$\mathfrak{g}$\, is reductive and
+    the centre of \,$\mathfrak{g}$\, is trivial.
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Compact real forms of semisimple complex Lie algebras]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\mathfrak{g}$\, is a semisimple complex Lie algebra.
+A real Lie subalgebra \,$\mathfrak{k} \,\subset \mathfrak{g}\,$\,
+is called a \textbf{compact real form} of \,$\mathfrak{g}$\, if
+\,$\mathfrak{k}$\, is isomorphic to the Lie algebra of some
+{\color{red}compact} matrix Lie group, and, for each \,$Z \in \mathfrak{g}$,\,
+there exist unique \,$X,\, Y \in \mathfrak{k}$\, such that
+\,$Z \,=\, X \,+\, \i\,Y$.\,
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+After first establishing a number of auxiliary results, we will prove the following:
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{theorem}[Semisimple $\Longrightarrow$ direct sum of simple Lie algebras]
+\label{SemisimpleImpliesDirectSumOfSimples}
+\mbox{}
+\vskip 0.1cm
+\noindent
+If \,$\mathfrak{g}$\, is a semisimple complex Lie algebra,
+then \,$\mathfrak{g}$\, can be expressed as a Lie algebra direct sum
+\begin{equation*}
+\mathfrak{g}
+\;\; = \;\;
+    \overset{m}{\underset{j = 1}{\bigoplus}}\;\mathfrak{g}_{j}\,,
+\end{equation*}
+where each \,$\mathfrak{g}_{j} \subset \mathfrak{g}$\, is a simple Lie algebra.
+\end{theorem}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Reductive $\Longrightarrow$ ``unitary'' inner product exists on real form]
+\label{ReductiveImpliesUnitaryInnerProductOnRealForm}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose \,$\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\, is a reductive complex Lie algebra,
+with compact real form \,$\mathfrak{k} \,\subset\, \mathfrak{g}$.\,
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    There exists an $\Re$-valued inner product
+    \,$\langle\,\cdot\,,\,\cdot\,\rangle : \mathfrak{k} \times \mathfrak{k} \longrightarrow \Re$\,
+    on \,$\mathfrak{k}$\,
+    with respect to which the adjoint action of
+    \,$\mathfrak{k}$\, on \,$\mathfrak{g}$\,
+    is ``unitary'' in the sense that
+    \begin{equation}\label{almostUnitarity}
+    \langle\,\ad_{X}(Y)\,,\,Z\,\rangle
+    \;\; = \;\;
+        -\,\langle\,Y\,,\,\ad_{X}(Z)\,\rangle\,,
+    \quad
+    \textnormal{for each \,$X \in \mathfrak{k}$\, and each \,$Y,Z \in \mathfrak{g}$}
+    \end{equation}
+\item
+    If we define an operation
+    \,$\mathfrak{g} \longrightarrow \mathfrak{g} : X \longmapsto X^{*}$\,
+    by
+    \begin{equation*}
+    \left(\,\overset{{\color{white}.}}{X_{1} + \i\cdot X_{2}}\,\right)^{*}
+    \;\; := \;\;
+        -\,X_{1} + \i\cdot X_{2}\,,
+    \quad
+    \textnormal{for each \,$X_{1}, X_{2} \in \mathfrak{k}$}\,,
+    \end{equation*}
+    then any inner product on \,$\mathfrak{g}$\, satisfying \eqref{almostUnitarity}
+    also satisfies:
+    \begin{equation}
+    \langle\,\ad_{X}(Y)\,,\,Z\,\rangle
+    \;\; = \;\;
+        \langle\,Y\,,\,\ad_{X^{*}}(Z)\,\rangle\,,
+    \quad
+    \textnormal{for each \,$X,Y,Z \in \mathfrak{g}$}
+    \end{equation}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+    By hypothesis, \,$\mathfrak{k}$\, is the Lie algebra of a compact (real) matrix Lie group \,$K$.\,
+    Next, recall that every complex representation of a compact Lie group is
+    unitary\footnote{If $G$ is a compact Lie group and $\pi : G \longrightarrow \GL(V)$
+    is a finite-dimensional complex representation,
+    then there exists a $G$-invariant Hermitian inner product
+    $\langle\,\cdot\,,\,\cdot\,\rangle$ on $V$,
+    i.e., $\langle\,\pi(g)\cdot v \,,\,\pi(g)\cdot w\,\rangle \,=\, \langle\,v\,,\,w\,\rangle$,\,
+    for each $g \in G$, and each $v, w \in V$.}; see, for example, Lemma 5.6, p.100, \cite{Sepanski2010}.
+    Hence, there exists an ($\Re$-valued) inner product
+    \,$\langle\,\cdot\,,\,\cdot\,\rangle : \mathfrak{k} \times \mathfrak{k} \longrightarrow \Re$\,
+    that is (a) invariant with respect to the adjoint action
+    \,$\Ad : K \longrightarrow \GL(\mathfrak{k})$,\, and (b) skew-symmetric with respect to
+    the infinitesimal adjoint
+    action\footnote{(differential of $\Ad : K \longrightarrow \GL(\mathfrak{k})$)}
+    \,$\ad : \mathfrak{k} \longrightarrow \gl(\mathfrak{k})$,\, i.e.,
+    \begin{equation}
+    \langle\,\Ad(k) \cdot Y\,,\,\Ad(k) \cdot Z\,\rangle 
+    \;\; = \;\;
+        \langle\,Y\,,\,Z\,\rangle\,,
+    \quad
+    \textnormal{for each \,$k \in K$\, and each \,$Y,Z \in \mathfrak{k}$}
+    \end{equation}
+    and
+    \begin{equation}
+    \langle\,\ad_{X}(Y)\,,\,Z\,\rangle \,+\, \langle\,Y\,,\,\ad_{X}(Z)\,\rangle
+    \;\; = \;\;
+        0\,,
+    \quad
+    \textnormal{for each \,$X,Y,Z \in \mathfrak{k}$}
+    \end{equation}
+\end{enumerate}
+\qed
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
