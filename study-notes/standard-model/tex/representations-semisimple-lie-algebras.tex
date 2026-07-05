@@ -96,7 +96,7 @@ where each \,$\mathfrak{g}_{j} \subset \mathfrak{g}$\, is a simple Lie algebra.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\begin{proposition}[Reductive $\Longrightarrow$ ``unitary'' inner product exists on real form]
+\begin{proposition}[Reductive $\Longrightarrow$ ``unitary'' inner product exists on compact real form]
 \label{ReductiveImpliesUnitaryInnerProductOnRealForm}
 \mbox{}
 \vskip 0.1cm
@@ -174,8 +174,87 @@ Then, the following statements are true:
     \quad
     \textnormal{for each \,$X,Y,Z \in \mathfrak{k}$}
     \end{equation}
+    Extension of \,$\ad_{X}$\, by {\color{red}$\C$-linearity} and
+    extension of \,$\langle\,\cdot\,,\,\cdot\,\rangle$\, by {\color{red}bi-additivity}
+    together yield the desired equality.
+    Indeed, for each \,$X \in \mathfrak{k}$\, and each \,$Y, Z \in \mathfrak{g}$,\,
+    where \,$Y = Y_{1} + \i\,Y_{2}$\, and \,$Z = Z_{1} + \i\,Z_{2}$\,
+    with \,$Y_{1}, Y_{2}, Z_{1}, Z_{2} \in \mathfrak{k}$,\, we have:
+    \begin{eqnarray*}
+    \langle\,\ad_{X}(Y)\,,\,Z\,\rangle
+    & = &
+        \langle\,\ad_{X}(Y_{1}+\i\,Y_{2})\,,\,Z_{1} + \i\,Z_{2}\,\rangle
+    \;\; = \;\;
+        \langle\,\ad_{X}(Y_{1})+\ad_{X}(\i\,Y_{2})\,,\,Z_{1} + \i\,Z_{2}\,\rangle
+    \\
+    & = &
+        \langle\,\ad_{X}(Y_{1})\,,\,Z_{1}\,\rangle
+        \,+\,
+        \langle\,\ad_{X}(Y_{1})\,,\,\i\,Z_{2}\,\rangle
+        \,+\,
+        \langle\,\ad_{X}(\i\,Y_{2})\,,\,Z_{1}\,\rangle
+        \,+\,
+        \langle\,\ad_{X}(\i\,Y_{2})\,,\,\i\,Z_{2}\,\rangle
+    \\
+    & = &
+        -\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{1})\,\rangle
+        \,-\,\langle\,Y_{1}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
+        \,-\,\langle\,\i\,Y_{2}\,,\,\ad_{X}(Z_{1})\,\rangle
+        \,-\,\langle\,\i\,Y_{2}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
+    % \\
+    % & = &
+    %     -\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{1})\,\rangle
+    %     -\,\langle\,Y_{1}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
+    %     -\,\langle\,\i\,Y_{2}\,,\,\ad_{X}(Z_{1})\,\rangle
+    %     -\,\langle\,\i,Y_{2}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
+    \\
+    & = &
+        -\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{1}+\i\,Z_{2})\,\rangle
+        -\,\langle\,\i\,Y_{2}\,,\,\ad_{X}(Z_{1}+\i\,Z_{2})\,\rangle
+    \\
+    & = &
+        -\,\langle\,Y_{1}+\i\,Y_{2}\,,\,\ad_{X}(Z_{1}+\i\,Z_{2})\,\rangle
+    \\
+    & = &
+        -\,\langle\,Y\,,\,\ad_{X}(Z)\,\rangle\,,
+    \quad
+    \textnormal{as desired}
+    \end{eqnarray*}
+\item
+    Extension of \,$\ad_{X}$\, by {\color{red}$\C$-linearity} and
+    extension of
+    \,$\langle\,\cdot\,,\,\cdot\,\rangle$\, by {\color{red}$\C$-bilinearity}
+    (anti-linear in the first argument)
+    together yield:
+    \begin{eqnarray*}
+    \langle\,\ad_{X}(Y)\,,\,Z\,\rangle
+    & = &
+        \langle\,\ad_{X_{1} + \i\,X_{2}}(Y)\,,\,Z\,\rangle
+    \;\; = \;\;
+        \langle\,\ad_{X_{1}}(Y) + \i\,\ad_{X_{2}}(Y)\,,\,Z\,\rangle
+    \\
+    & = &
+        \langle\,\ad_{X_{1}}(Y)\,,\,Z\,\rangle
+        \; + \;
+        ({\color{red}-\,\i})\,\langle\,\ad_{X_{2}}(Y)\,,\,Z\,\rangle
+    \;\; = \;\;
+        {\color{red}-}\,\langle\,Y\,,\,\ad_{X_{1}}(Z)\,\rangle
+        \; {\color{red}+} \;
+        {\color{red}\i}\,\langle\,Y\,,\,\ad_{X_{2}}(Z)\,\rangle
+    \\
+    & = &
+        \langle\,Y\,,\,\ad_{({\color{red}-}X_{1})}(Z)\,\rangle
+        \; + \;
+        \langle\,Y\,,\,\ad_{({\color{red}\i}X_{2})}(Z)\,\rangle
+    \;\; = \;\;
+        \langle\,Y\,,\,\ad_{(-X_{1}+\i X_{2})}(Z)\,\rangle
+    \\
+    & = &
+        \langle\,Y\,,\,\ad_{X^{*}}(Z)\,\rangle\,,
+    \end{eqnarray*}
+    as required.
+    \qed
 \end{enumerate}
-\qed
 
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
