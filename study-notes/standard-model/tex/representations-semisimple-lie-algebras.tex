@@ -1,5 +1,5 @@
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \chapter{Classification of irreducible representations of semisimple Lie algebras via highest weights}
 \setcounter{theorem}{0}
@@ -13,11 +13,11 @@
 \renewcommand{\theenumi}{\roman{enumi}}
 \renewcommand{\labelenumi}{\textnormal{(\theenumi)}$\;\;$}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \section{Semisimplicity $\Longleftrightarrow$ direct sum of simple Lie algebras}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
 \begin{definition}[Irreducibility and simplicity of Lie algebras]
@@ -35,7 +35,7 @@ A Lie algebra \,$\mathfrak{g}$\, is said to be
 \end{itemize}
 \end{definition}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \begin{definition}[Reductiveness and semisimplicity of complex Lie algebras]
 \mbox{}
@@ -56,7 +56,7 @@ A complex Lie algebra \,$\mathfrak{g}$\, is said to be
 \end{itemize}
 \end{definition}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \begin{definition}[Compact real forms of semisimple complex Lie algebras]
 \mbox{}
@@ -71,11 +71,11 @@ there exist unique \,$X,\, Y \in \mathfrak{k}$\, such that
 \,$Z \,=\, X \,+\, \i\,Y$.\,
 \end{definition}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-After first establishing a number of auxiliary results, we will prove the following:
+The first key result we would like to establish is the following:
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
 \begin{theorem}[Semisimple $\Longrightarrow$ direct sum of simple Lie algebras]
@@ -93,7 +93,12 @@ then \,$\mathfrak{g}$\, can be expressed as a Lie algebra direct sum
 where each \,$\mathfrak{g}_{j} \subset \mathfrak{g}$\, is a simple Lie algebra.
 \end{theorem}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+In order to prove the preceding Theorem, we will first establish a number of auxiliary results,
+from which the proof of the Theorem will follow readily.
+
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
 \begin{proposition}[Reductive $\Longrightarrow$ ``unitary'' inner product exists on compact real form]
@@ -101,8 +106,7 @@ where each \,$\mathfrak{g}_{j} \subset \mathfrak{g}$\, is a simple Lie algebra.
 \mbox{}
 \vskip 0.1cm
 \noindent
-Suppose \,$\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\, is a reductive complex Lie algebra,
-with compact real form \,$\mathfrak{k} \,\subset\, \mathfrak{g}$.\,
+Suppose \,$\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\, is a reductive complex Lie algebra.
 Then, the following statements are true:
 \begin{enumerate}
 \item
@@ -272,17 +276,181 @@ Then, the following statements are true:
     \qed
 \end{enumerate}
 
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+\vskip 0.5cm
+\begin{proposition}[Reductive $\Longrightarrow$ Lie-algebraic orthogonal complements of ideals exist]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\,
+    is a {\color{red}reductive} complex Lie algebra, equipped with an inner product
+    \,$\langle\,\cdot\,,\,\cdot\,\rangle : \mathfrak{g} \times \mathfrak{g} \longrightarrow \C$\,
+    as described in Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}(ii), and
+\item
+    $\mathfrak{h} \,\subset\, \mathfrak{g}$\, is a Lie-algebra ideal in \,$\mathfrak{g}$.\,
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    The (inner-product space) orthogonal complement
+    \,$\mathfrak{h}^{\perp} \,\subset\, \mathfrak{g}$\,
+    of \,$\mathfrak{h}$\, is itself an ideal in \,$\mathfrak{g}$.
+\item
+    The Lie algebra \,$\mathfrak{g}$\, is equal to the Lie-algebra direct sum of
+    \,$\mathfrak{h}$\, and \,$\mathfrak{h}^{\perp}$,\, i.e.,
+    \begin{equation*}
+    \mathfrak{g}
+    \;\; = \;\;
+        \mathfrak{h} \,\oplus\, \mathfrak{h}^{\perp}\,,
+    \quad
+    \textnormal{as Lie algebras}
+    \end{equation*}
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+    First, recall that, in general:
+    \begin{itemize}
+    \item
+        a linear subspace \,$\,\mathfrak{b} \,\subset\,\mathfrak{a}$\,
+        is called a \textbf{subalgebra} of \,$\mathfrak{a}$\, if
+        \,$[B_{1},B_{2}] \in \mathfrak{b}$,\, for each \,$B_{1}, B_{2} \in \mathfrak{b}$,
+    \item
+        a subalgebra \,$\,\mathfrak{b} \,\subset\,\mathfrak{a}$\,
+        is called an \textbf{ideal} of \,$\mathfrak{a}$\, if
+        \,$\ad_{A}(B) \,:=\, [A,B] \,\in\, \mathfrak{B}$,\, \
+        for each \,$A \in \mathfrak{a}$\, and each \,$B \in \mathfrak{b}$;
+        thus, an ideal in \,$\mathfrak{a}$\, is exactly the same thing
+        as an invariant linear subspace of \,$\mathfrak{a}$\,
+        with respect to the adjoint action of \,$\mathfrak{a}$\, on itself
+        (Definition 3.5, p.51, \cite{Hall2015}), and
+    \item
+        the (inner-product-space) orthogonal complement
+        \,$\mathfrak{b}^{\perp} \,\subset\, \mathfrak{a}$\,
+        of an ideal
+        \,$\mathfrak{b} \,\subset\, \mathfrak{a}$\,
+        in a real Lie algebra \,$\mathfrak{a}$\, equipped with an inner product
+        is itself an ideal in \,$\mathfrak{a}$\,;
+        see Proposition 4.27, p.92, \cite{Hall2015}.
+    \end{itemize}
+    \vskip 0.3cm
+    \noindent
+    Let
+    \,$\ad\vert_{\mathfrak{k}} : \mathfrak{k} \times \mathfrak{k} \longrightarrow \gl(\,\mathfrak{g}\,)$\,
+    be the restriction to \,$\mathfrak{k}$\, of the adjoint action \,$\ad$\, of \,$\mathfrak{g}$\, on itself.
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+    \vskip 0.3cm
+    \noindent
+    \textbf{Claim 1:}\;\;
+    $\mathfrak{h} \,\subset\, \mathfrak{g}$\, is an \,$(\ad\vert_{\mathfrak{k}})$-invariant subspace.
+    \vskip 0.01cm
+    Proof of Claim 1:\;\; This is immediate; indeed, simply note:
+    \begin{equation*}
+    \left\{\begin{array}{c}
+        \textnormal{$\mathfrak{h}$\, is an}
+        \\
+        \textnormal{ideal of \,$\mathfrak{g}$}
+        \end{array}\right\}
+    \;\;\Longleftrightarrow\;\;
+    \left\{\begin{array}{c}
+        \textnormal{$\mathfrak{h} \,\subset\, \mathfrak{g}$\, is an}
+        \\
+        \textnormal{$(\ad)$-invariant}
+        \\
+        \textnormal{subspace}
+        \end{array}\right\}
+    \;\;\Longrightarrow\;\;
+    \left\{\begin{array}{c}
+        \textnormal{$\mathfrak{h} \,\subset\, \mathfrak{g}$\, is an}
+        \\
+        \textnormal{$(\ad\vert_{\mathfrak{k}})$-invariant}
+        \\
+        \textnormal{subspace}
+        \end{array}\right\}
+    \end{equation*}
+    This proves Claim 1.
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+    \vskip 0.3cm
+    \noindent
+    \textbf{Claim 2:}\;\; 
+    $\mathfrak{h}^{\perp} \,\subset\, \mathfrak{g}$\,
+    is an \,$(\ad\vert_{\mathfrak{k}})$-invariant subspace.
+    \vskip 0.01cm
+    Proof of Claim 2:\;\;
+    This is an immediate consequence of Proposition 4.27, p.92, \cite{Hall2015},
+    which states that a ``unitary'' representation of a real Lie algebra
+    on a finite-dimensional inner product space is completely reducible.
+    This proves Claim 2.
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+    \vskip 0.3cm
+    \noindent
+    \textbf{Claim 3:}\;\; 
+    $\mathfrak{h}^{\perp} \,\subset\, \mathfrak{g}$\,
+    is an \,$(\ad)$-invariant subspace;
+    equivalently,
+    \,$\mathfrak{h}^{\perp} \,\subset\, \mathfrak{g}$\,
+    is an ideal in \,$\mathfrak{g}$.\,
+    \vskip 0.01cm
+    Proof of Claim 3:\;\;
+    Immediate by Claim 2 and $\C$-linearity of
+    \,$\ad\vert_{\mathfrak{k}} : \mathfrak{k} \longrightarrow \gl(\,\mathfrak{g}\,)$:
+    \begin{equation*}
+    \ad_{(X_{1}+\i X_{2})}(Q)
+    \; = \;
+        \ad_{X_{1}}(Q)
+        \, + \,
+        \i\,\ad_{X_{2}}(Q)
+    \; \in \;
+        \mathfrak{h}^{\perp} + \i\,\mathfrak{h}^{\perp}
+    \; = \;
+        \mathfrak{h}^{\perp}\,,
+    \;\;
+    \textnormal{for each \,$X_{1},X_{2}\in\mathfrak{k}$,\, $Q \in \mathfrak{h}^{\perp}$}
+    \end{equation*}
+    This completes the proof of (i).
+\item
+    We already have the inner-product-space direct sum decomposition:
+    \begin{equation*}
+    \mathfrak{g}
+    \;\; = \;\;
+        \mathfrak{h} \,\oplus\, \mathfrak{h}^{\perp}\,,
+    \quad
+    \textnormal{as inner product spaces}
+    \end{equation*}
+    Thus, it reamins only to show that the above decomposition
+    is also a direct sum of Lie algebras.
+    To this end, note that, since both \,$\mathfrak{h}$\, and \,$\mathfrak{h}^{\perp}$\,
+    are ideals in \,$\mathfrak{g}$,\, we have:
+    \begin{equation*}
+    \left.\begin{array}{l}
+        X \in \mathfrak{h},
+        \\
+        Y \in \mathfrak{h}^{\perp}
+        \end{array}\quad\right\}
+    \!\Longrightarrow\quad
+    [X,Y] \;\in\; \mathfrak{h} \cap \mathfrak{h}^{\perp} \;=\; \{\,0\,\} 
+    \end{equation*}
+    This proves that the direct sum of inner product spaces
+    \,$\mathfrak{g} \,=\, \mathfrak{h} \,\oplus\, \mathfrak{h}^{\perp}$\,
+    is in fact a direct sum of Lie algebras.
+    \vskip 0.3cm
+    This completes the proof of (ii), as well as that of the Proposition.
+    \qed
+\end{enumerate}
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
