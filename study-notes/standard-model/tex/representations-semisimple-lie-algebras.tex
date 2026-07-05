@@ -175,7 +175,8 @@ Then, the following statements are true:
     \textnormal{for each \,$X,Y,Z \in \mathfrak{k}$}
     \end{equation}
     Extension of \,$\ad_{X}$\, by {\color{red}$\C$-linearity} and
-    extension of \,$\langle\,\cdot\,,\,\cdot\,\rangle$\, by {\color{red}bi-additivity}
+    extension of \,$\langle\,\cdot\,,\,\cdot\,\rangle$\, by {\color{red}$\C$-bilinearity}
+    (anti-linear in the first argument)
     together yield the desired equality.
     Indeed, for each \,$X \in \mathfrak{k}$\, and each \,$Y, Z \in \mathfrak{g}$,\,
     where \,$Y = Y_{1} + \i\,Y_{2}$\, and \,$Z = Z_{1} + \i\,Z_{2}$\,
@@ -185,28 +186,43 @@ Then, the following statements are true:
     & = &
         \langle\,\ad_{X}(Y_{1}+\i\,Y_{2})\,,\,Z_{1} + \i\,Z_{2}\,\rangle
     \;\; = \;\;
-        \langle\,\ad_{X}(Y_{1})+\ad_{X}(\i\,Y_{2})\,,\,Z_{1} + \i\,Z_{2}\,\rangle
+        \langle\,\ad_{X}(Y_{1})+\i\,\ad_{X}(Y_{2})\,,\,Z_{1} + \i\,Z_{2}\,\rangle
     \\
     & = &
         \langle\,\ad_{X}(Y_{1})\,,\,Z_{1}\,\rangle
         \,+\,
         \langle\,\ad_{X}(Y_{1})\,,\,\i\,Z_{2}\,\rangle
         \,+\,
-        \langle\,\ad_{X}(\i\,Y_{2})\,,\,Z_{1}\,\rangle
+        \langle\,\i\,\ad_{X}(Y_{2})\,,\,Z_{1}\,\rangle
         \,+\,
-        \langle\,\ad_{X}(\i\,Y_{2})\,,\,\i\,Z_{2}\,\rangle
+        \langle\,\i\,\ad_{X}(Y_{2})\,,\,\i\,Z_{2}\,\rangle
+    \\
+    & = &
+        \langle\,\ad_{X}(Y_{1})\,,\,Z_{1}\,\rangle
+        \,+\,
+        \i\,\langle\,\ad_{X}(Y_{1})\,,\,Z_{2}\,\rangle
+        \,+\,
+        (-\,\i\,)\,\langle\,\ad_{X}(Y_{2})\,,\,Z_{1}\,\rangle
+        \,+\,
+        (-\,\i)\,\i\,\langle\,\ad_{X}(Y_{2})\,,\,Z_{2}\,\rangle
     \\
     & = &
         -\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{1})\,\rangle
-        \,-\,\langle\,Y_{1}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
-        \,-\,\langle\,\i\,Y_{2}\,,\,\ad_{X}(Z_{1})\,\rangle
-        \,-\,\langle\,\i\,Y_{2}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
-    % \\
-    % & = &
-    %     -\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{1})\,\rangle
-    %     -\,\langle\,Y_{1}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
-    %     -\,\langle\,\i\,Y_{2}\,,\,\ad_{X}(Z_{1})\,\rangle
-    %     -\,\langle\,\i,Y_{2}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
+        \,-\,
+        \i\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{2})\,\rangle
+        \,-\,
+        (-\,\i\,)\,\langle\,Y_{2}\,,\,\ad_{X}(Z_{1})\,\rangle
+        \,-\,
+        (-\,\i)\,\i\,\langle\,Y_{2}\,,\,\ad_{X}(Z_{2})\,\rangle
+    \\
+    & = &
+        -\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{1})\,\rangle
+        \,-\,
+        \langle\,Y_{1}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
+        \,-\,
+        \langle\,\i\,Y_{2}\,,\,\ad_{X}(Z_{1})\,\rangle
+        \,-\,
+        \langle\,\i\,Y_{2}\,,\,\ad_{X}(\i\,Z_{2})\,\rangle
     \\
     & = &
         -\,\langle\,Y_{1}\,,\,\ad_{X}(Z_{1}+\i\,Z_{2})\,\rangle
