@@ -258,6 +258,7 @@ Then, the following statements are true:
 
 \vskip 0.5cm
 \begin{proposition}[Reductive $\Longrightarrow$ Lie-algebraic orthogonal complements of ideals exist]
+\label{ReductiveImpliesOrthogonalComplementsOfIdealsExist}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -326,7 +327,7 @@ Then, the following statements are true:
     \noindent
     \textbf{Claim 1:}\;\;
     $\mathfrak{h} \,\subset\, \mathfrak{g}$\, is an \,$(\ad\vert_{\mathfrak{k}})$-invariant subspace.
-    \vskip 0.01cm
+    \vskip 0.05cm
     Proof of Claim 1:\;\; This is immediate; indeed, simply note:
     \begin{equation*}
     \left\{\begin{array}{c}
@@ -358,7 +359,7 @@ Then, the following statements are true:
     \textbf{Claim 2:}\;\; 
     $\mathfrak{h}^{\perp} \,\subset\, \mathfrak{g}$\,
     is an \,$(\ad\vert_{\mathfrak{k}})$-invariant subspace.
-    \vskip 0.01cm
+    \vskip 0.05cm
     Proof of Claim 2:\;\;
     This is an immediate consequence of Proposition 4.27, p.92, \cite{Hall2015},
     which states that a ``unitary'' representation of a real Lie algebra
@@ -373,7 +374,7 @@ Then, the following statements are true:
     equivalently,
     \,$\mathfrak{h}^{\perp} \,\subset\, \mathfrak{g}$\,
     is an ideal in \,$\mathfrak{g}$.\,
-    \vskip 0.01cm
+    \vskip 0.05cm
     Proof of Claim 3:\;\;
     Immediate by Claim 2 and $\C$-linearity of
     \,$\ad\vert_{\mathfrak{k}} : \mathfrak{k} \longrightarrow \gl(\,\mathfrak{g}\,)$:
@@ -429,7 +430,7 @@ Then, the following statements are true:
 \mbox{}
 \vskip 0.1cm
 \noindent
-If \,$\mathfrak{g}$\, is a semisimple complex Lie algebra,
+If \,$\mathfrak{g}$\, is a non-zero semisimple complex Lie algebra,
 then \,$\mathfrak{g}$\, can be expressed as a Lie algebra direct sum
 \begin{equation*}
 \mathfrak{g}
@@ -439,7 +440,121 @@ then \,$\mathfrak{g}$\, can be expressed as a Lie algebra direct sum
 where each \,$\mathfrak{g}_{j} \subset \mathfrak{g}$\, is a simple Lie algebra.
 \end{theorem}
 \proof
+Either \,$\mathfrak{g}$\, has no non-trivial ideals, or it does.
+We will prove that the Theorem is true in either case.
 
+\vskip 0.5cm
+\noindent
+\underline{\textbf{Case I: \,$\mathfrak{g}$\, has no non-trivial ideals.}}
+\vskip 0.2cm
+\noindent
+Suppose first that \,$\mathfrak{g} \neq \{\,0\,\}$\, has no non-trivial ideals;
+equivalently, \,$\mathfrak{g} \neq \{\,0\,\}$\, is irreducible.
+We argue that the Theorem is true because, in this case,
+\,$\mathfrak{g} \neq \{\,0\,\}$\, is in fact a simple Lie algebra,
+which in turn follows immediately from the following general fact:
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;\;
+Every irreducible semisimple Lie algebra is in fact a simple Lie algebra.
+\vskip 0.05cm
+\noindent
+Proof of Claim 1:\;\;
+Let \,$\mathfrak{a}$\, be an irreducible semisimple (complex) Lie algebra.
+To establish that \,$\mathfrak{a}$\, is in fact a simple Lie algebra,
+it suffices only to show that \,$\dim_{\C}(\mathfrak{g}) \,\geq\, 2$.\,
+To this end, note that \,$\dim_{\C}(\mathfrak{g}) \,=\, 1$\, would imply that
+\,$\mathfrak{g} \neq \{\,0\,\}$\,
+is commutative; hence, the centre \,$Z(\mathfrak{g})$\,
+of \,$\mathfrak{g}$\, would be \,$\mathfrak{g}$\, itself.
+In particular,
+\,$Z(\mathfrak{g}) \,=\, \mathfrak{g} \,\neq\, \{\,0\,\}$\,
+would be non-trivial, contradicting the semisimplicity hypothesis on \,$\mathfrak{g}$.\,
+So, we see that the irreducibility and semisimplicity of \,$\mathfrak{g}$\, together
+imply that \,$\dim_{\C}(\mathfrak{g}) \,\geq\, 2$.\,
+This proves Claim 1.
+
+\vskip 0.5cm
+\noindent
+\underline{\textbf{Case II: \,$\mathfrak{g}$\, admits a non-trivial ideal \,$\mathfrak{h} \subset \mathfrak{g}$.}}
+\vskip 0.2cm
+\noindent
+By Proposition \ref{ReductiveImpliesOrthogonalComplementsOfIdealsExist},
+we have
+\,$\mathfrak{g} \,=\, \mathfrak{h} \oplus \mathfrak{h}^{\perp}$,\,
+as Lie algebras (hence, \,$\mathfrak{h}^{\perp}$\, is itself an ideal in \,$\mathfrak{g}$).
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\;\;
+If \,$\mathfrak{h}$\, admits a non-trivial ideal \,$\mathfrak{h}^{\prime}$,\,
+then \,$\mathfrak{h}^{\prime}$\, is in fact also an ideal in \,$\mathfrak{g}$.\,
+\vskip 0.05cm
+\noindent
+Proof of Claim 2:\;\;
+Since \,$\mathfrak{h}^{\prime}$\, is an ideal in \,$\mathfrak{h}$,\, we have:
+\begin{equation*}
+[H,H^{\prime}]
+\; \in \;
+    \mathfrak{h}^{\prime}\,,
+\quad
+\textnormal{for each \,$H \in \mathfrak{h}$\, and each \,$H^{\prime} \in \mathfrak{h}^{\prime}$}
+\end{equation*}
+On the other hand, we also have:
+\begin{equation*}
+[Q,H^{\prime}]
+\; = \;
+    0
+\; \in \;
+    \mathfrak{h}^{\prime}\,,
+\quad
+\textnormal{for each \,$Q \in \mathfrak{h}^{\perp}$\, and each \,$H^{\prime} \in \mathfrak{h}^{\prime}$}
+\end{equation*}
+Bilinearity of the Lie bracket now implies:
+\begin{equation*}
+[H,H^{\prime}]
+\; \in \;
+    \mathfrak{h}^{\prime}\,,
+\quad
+\textnormal{for each \,$H \in \mathfrak{g} = \mathfrak{h} \oplus \mathfrak{h}^{\perp}$\, and each \,$H^{\prime} \in \mathfrak{h}^{\prime}$}
+\end{equation*}
+This proves Claim 2.
+
+\vskip 0.3cm
+\noindent
+By Claim 2, we see that
+\,$\mathfrak{h}^{\prime\prime} \,:=\, \left(\mathfrak{h}^{\prime}\right)^{\perp} \cap \mathfrak{h}$\,
+is an ideal in \,$\mathfrak{g}$,\, and we see that \,$\mathfrak{g}$\,
+decomposes as an orthogonal direct sum of Lie algebras, i.e.,
+\,$\mathfrak{g} \,=\, \mathfrak{h}^{\prime} \oplus \mathfrak{h}^{\prime\prime} \oplus \mathfrak{h}^{\perp}$.\,
+Proceeding analogously, we may conclude that
+\,$\mathfrak{g}$\, decomposes into a direct sum of ideals \,$\mathfrak{g}_{j} \subset \mathfrak{g}$,\,
+where each \,$\mathfrak{g}_{j}$\, has no non-trival ideals.
+
+\vskip 0.3cm
+\noindent
+It remains only to show that
+\,$\dim_{\C}(\mathfrak{g}_{j}) \,\geq\, 2$,\, for each \,$j$.\,
+To this end, note that
+\,$\dim_{\C}(\mathfrak{g}_{j}) \,=\, 1$\,
+would imply
+\,$\mathfrak{g}_{j} \,\neq\, \{\,0\,\}$\, is commutative.
+In addition, since elements of \,$\mathfrak{g}_{j}$\,
+commute with elements of \,$\mathfrak{g}_{k}$\,
+for each \,$k \neq j$,\, we see that
+\,$\mathfrak{g}_{j} \,\neq\, \{\,0\,\}$\, must be contained in the centre
+\,$Z(\mathfrak{g})$\, of \,$\mathfrak{g}$.\,
+This contradicts the semisimplicity hypothesis on \,$\mathfrak{g}$\,
+(in particular, the triviality of the centre of \,$\mathfrak{g}$).
+Hence, we may now conclude that we indeed have:
+\,$\dim_{\C}(\mathfrak{g}_{j}) \,\geq\, 2$,\, for each \,$j$.\,
+
+\vskip 0.3cm
+\noindent
+So, each \,$\mathfrak{g}_{j}$\, is irreducible and \,$\dim_{\C}(\mathfrak{g}_{j}) \geq 2$,\,
+i.e., each \,$\mathfrak{g}_{j}$\, is a simple Lie algebra.
+This completes the proof of the Theorem.
 \qed
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
