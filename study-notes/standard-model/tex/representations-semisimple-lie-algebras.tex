@@ -629,7 +629,7 @@ This proves Claim 2.
 \noindent
 \textbf{Claim 3:}\;\; $\mathfrak{z}$\, is invariant under the conjugation map
 \,$\mathfrak{g} \longrightarrow \mathfrak{g} : X + \i \cdot Y \longmapsto X - \i\cdot Y$\,
-(for each \,$X, Y \in \mathfrak{k}$).
+(for \,$X, Y \in \mathfrak{k}$).
 \vskip 0.05cm
 \noindent
 Proof of Claim 3:\;\;
@@ -645,31 +645,146 @@ This proves Claim 3.
 
 \vskip 0.3cm
 \noindent
-\textbf{Claim 4:}\;\; $\mathfrak{z}^{\perp}$\, is also invariant conjugation
-\,$\mathfrak{g} \longrightarrow \mathfrak{g} : X + \i \cdot Y \longmapsto X - \i\cdot Y$\,
-(for each \,$X, Y \in \mathfrak{k}$).
+\textbf{Claim 4:}\;\;
+$\mathfrak{z} = \left(\,\mathfrak{z}\cap\mathfrak{k}\,\right)_{\C}$.\,
+% and
+% \,$\mathfrak{g}_{1} = \left(\,\mathfrak{g}_{1}\cap\mathfrak{k}\,\right)_{\C}$\,
 \vskip 0.05cm
 \noindent
 Proof of Claim 4:\;\;
-Let \,$H \in \mathfrak{z}^{\perp}$,\, and write \,$H = X + \i\cdot Y$,\, where \,$X, Y \in \mathfrak{k}$.\,
-Then, note that, for each \,$Z \in \mathfrak{z}$,\, we have:
-\,$0 \,=\, \langle Z,H \rangle \,=\, \langle Z,X+\i\cdot Y\rangle \,=\, \langle Z,X\rangle + \i\,\langle Q,Y\rangle$,\,
+Let \,$Z \in \mathfrak{z} := Z(\mathfrak{g}) \subset \mathfrak{g} = \mathfrak{k}_{\C}$,\,
+and write \,$Z = X + \i\cdot Y$,\, where \,$X, Y \in \mathfrak{k}$.\,
+It suffices to show that \,$X, Y \in \mathfrak{z} \cap \mathfrak{k}$.\,
+Since we already have \,$X, Y \in \mathfrak{k}$\,, by Claim 2,
+we need only show that, in addition,
+each of \,$X$\, and \,$Y$\, commutes with every element of \,$\mathfrak{k}$.\,
+% Now, by Claim 3, we also have \,$X - \i\cdot Y \in \mathfrak{z}$.\,
+Now, let \,$Q \in \mathfrak{k}$\, be an arbitrary element of \,$\mathfrak{k}$.\,
+Then,
+\,$0 \,=\, [Q,X+\i\,Y] \,=\, [Q,X] + \i\,[Q,Y]$,\,
 which implies
-\,$\langle Z,X \rangle \,=\, \langle Q,Y \rangle \,=\, 0$,\,
-which in turn implies
-\,$\langle Q,X-\i\cdot Y\rangle \,=\, \langle Q,X \rangle - \i\,\langle Q,Y \rangle \,=\, 0 - \i\cdot 0 \,=\, 0$.\,
+\,$[Q,X] \,=\, [Q,Y] \,=\, 0$,\, as required.
 This proves Claim 4.
 
 \vskip 0.3cm
 \noindent
 \textbf{Claim 5:}\;\;
-$\mathfrak{z} = \left(\,\mathfrak{z}\cap\mathfrak{k}\,\right)_{\C}$\,
-and
-\,$\mathfrak{g}_{1} = \left(\,\mathfrak{g}_{1}\cap\mathfrak{k}\,\right)_{\C}$\,
+Let \,$X + \i\cdot Y \in \mathfrak{z}^{\perp}$,\, where \,$X, Y \in \mathfrak{k}$.\,
+Then,
+\,$\langle Z,X \rangle \,=\, \langle Z,Y \rangle \,=\, 0$,\,
+for each \,$Z \in \mathfrak{z} \cap \mathfrak{k}$.\,
+% $\mathfrak{g}_{1} := \mathfrak{z}^{\perp}$\, is invariant under conjugation
+% \,$\mathfrak{g} \longrightarrow \mathfrak{g} : X + \i \cdot Y \longmapsto X - \i\cdot Y$
+% (for \,$X, Y \in \mathfrak{k}$).
 \vskip 0.05cm
 \noindent
 Proof of Claim 5:\;\;
+Simply note that we have:
+\,$0 \,=\, \langle Z,X+\i\cdot Y\rangle \,=\, \langle Z,X\rangle + \i\,\langle Z,Y\rangle$,\,
+which implies
+\,$\langle Z,X \rangle \,=\, \langle Z,Y \rangle \,=\, 0$,\, as required.
 This proves Claim 5.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 6:}\;\; $\mathfrak{g}_{1} := \mathfrak{z}^{\perp}$\, is invariant under conjugation
+\,$\mathfrak{g} \longrightarrow \mathfrak{g} : X + \i \cdot Y \longmapsto X - \i\cdot Y$
+(for \,$X, Y \in \mathfrak{k}$).
+\vskip 0.05cm
+\noindent
+Proof of Claim 6:\;\;
+Let \,$X + \i\cdot Y \in \mathfrak{z}^{\perp}$,\, where \,$X, Y \in \mathfrak{k}$,\, and
+let \,$Z \in \mathfrak{z}$.\,
+We need to show: \,$X - \i\cdot Y \in \mathfrak{z}^{\perp}$,
+i.e., \,$\langle Z, X - \i\cdot Y \rangle = 0$.\,
+By Claim 4, we have: \,$Z = Z_{1} + \i\,Z_{2}$,\,
+where \,$Z_{1}, Z_{2} \in \mathfrak{z} \cap \mathfrak{k}$.\,
+Hence,
+\begin{eqnarray*}
+\langle\,Z\,,\,X - \i\cdot Y\,\rangle
+& = &
+    \langle\,Z_{1} + \i\cdot Z_{2}\,,\,X - \i\cdot Y\,\rangle
+\\
+& = &
+    \langle\,Z_{1}\,,\,X\,\rangle
+    \,+\,
+    \langle\,Z_{1}\,,\,- \i\cdot Y\,\rangle
+    \,+\,
+    \langle\,\i\cdot Z_{2}\,,\,X\,\rangle
+    \,+\,
+    \langle\,\i\cdot Z_{2}\,,\,- \i\cdot Y\,\rangle
+\\
+& = &
+    \langle\,Z_{1}\,,\,X\,\rangle
+    \,-\,
+    \i\,\langle\,Z_{1}\,,\,Y\,\rangle
+    \,-\,
+    \i\,\langle\,Z_{2}\,,\,X\,\rangle
+    \,+\,
+    (-\i)\,(-\i)\,\langle\,Z_{2}\,,\,Y\,\rangle
+\\
+& = &
+    0
+    \,-\,
+    \i\cdot 0
+    \,-\,
+    \i\cdot 0
+    \,+\,
+    (-\i)\,(-\i)\cdot 0\,,
+    \quad
+    \textnormal{by Claim 5}
+\\
+& = &
+    0\,,
+\quad
+\textnormal{as required}
+\end{eqnarray*}
+This proves Claim 6.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 7:}\;\;
+$\mathfrak{g}_{1} = \left(\,\mathfrak{g}_{1}\cap\mathfrak{k}\,\right)_{\C}$\,
+\vskip 0.05cm
+\noindent
+Proof of Claim 7:\;\;
+Let \,$Q = Q_{1} + \i\cdot Q_{2} \in \mathfrak{g}_{1} := \mathfrak{z}^{\perp} \subset \mathfrak{g} = \mathfrak{k}_{\C}$,\,
+where \,$Q_{1}, Q_{2} \in \mathfrak{k}$.\,
+It suffices to show that \,$Q_{1}, Q_{2} \in \mathfrak{g}_{1} \cap \mathfrak{k} = \mathfrak{z}^{\perp} \cap \mathfrak{k}$.\,
+Since we already have \,$Q_{1}, Q_{2} \in \mathfrak{k}$,\,
+we need only show \,$Q_{1}, Q_{2} \in \mathfrak{g}_{1} := \mathfrak{z}^{\perp}$.\,
+To this end, first note that
+\,$\langle\,Q_{1}\,,\,Z\,\rangle \,=\, \langle\,Q_{2}\,,\,Z\,\rangle \,=\, 0$,\,
+for each \,$Z \in \mathfrak{z} \cap \mathfrak{k}$.\,
+Indeed,
+\,$Z \in \mathfrak{z}\cap\mathfrak{k}$
+\;$\Longrightarrow$\;
+$0 \,=\, \langle\,Q\,,\,Z\,\rangle \,=\, \langle\,Q_{1} + \i\cdot Q_{2}\,,\,Z\,\rangle \,=\, \langle\,Q_{1}\,,\,Z\,\rangle - \i\,\langle\,\cdot Q_{2}\,,\,Z\,\rangle$,\,
+which in turn implies
+\,$\langle\,Q_{1}\,,\,Z\,\rangle \,=\, \langle\,Q_{2}\,,\,Z\,\rangle \,=\, 0$,\,
+as desired.
+Next, given any \,$Z \in \mathfrak{z}$,\, we may write, by Claim 4,
+\,$Z = Z_{1} + \i\cdot Z_{2}$,\, for \,$Z_{1}, Z_{2} \in \mathfrak{z} \cap \mathfrak{k}$.\,
+% Now, by Claim 3, we also have \,$X - \i\cdot Y \in \mathfrak{z}$.\,
+% Next, let \,$W \in \mathfrak{g}$\, be an arbitrary element of \,$\mathfrak{g}$.\,
+Hence, for \,$j = 1, 2$,\, we have:
+\begin{eqnarray*}
+\langle\,Q_{j}\,,\,Z\,\rangle
+& = &
+    \langle\,Q_{j}\,,\,Z_{1} + \i\cdot Z_{2}\,\rangle
+\;\; = \;\;
+    \langle\,Q_{j}\,,\,Z_{1}\,\rangle
+    \,+\,
+    \i\,\langle\,Q_{j}\,,\,Z_{2}\,\rangle
+\;\; = \;\;
+    0 \,+\, \i\cdot 0
+\;\; = \;\;
+    0
+\end{eqnarray*}
+Hence, we see that
+\,$Q_{1}, Q_{2} \in \mathfrak{z}^{\perp} =: \mathfrak{g}_{1}$,\, as required.
+This proves Claim 7.
+
 
 
 
