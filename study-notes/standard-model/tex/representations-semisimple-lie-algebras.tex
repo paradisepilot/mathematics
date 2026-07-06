@@ -622,7 +622,9 @@ Trivially, \,$Z \in \mathfrak{z}$ \;$\Longrightarrow$\; $Z$\, commutes with ever
 Conversely, suppose \,$Z$\, commutes with every element of \,$\mathfrak{k}$.\,
 Let \,$X = X_{1} + \i\,X_{2} \in \mathfrak{g} = \mathfrak{k} + \i\cdot\mathfrak{k}$\,
 be an arbitrary element of \,$\mathfrak{g}$,\, where \,$X_{1}, X_{2} \in \mathfrak{k}$.\,
-Then, $[X,Z] = [X_{1} + \i\,X_{2},Z] = [X_{1},Z] + \i\cdot[X_{2},Z] = 0 + \i \cdot 0 = 0$.\,
+Then, $[X,Z] = [X_{1} + \i\,X_{2},Z] = [X_{1},Z] + \i\cdot[X_{2},Z] = 0 + \i \cdot 0 = 0$,\,
+noting that \,$[X_{1},Z] = [X_{2},Z] = 0$\,
+(since, by hypothesis, \,$Z$\, commutes with every element of \,$\mathfrak{k}$).\,
 This completes the proof of Claim 2.
 
 \vskip 0.3cm
@@ -638,7 +640,8 @@ By Claim 2, it suffices to show that \,$X - \i\cdot Y$\, commutes with every ele
 To this end, note
 \,$0 \,=\, [Q,Z] \,=\, [Q,X+\i\cdot Y] \,=\, [Q,X] + \i\cdot[Q,Y]$,\,
 which implies
-\,$[Q,X] \,=\, [Q,Y] \,=\, 0$,\,
+\,$[Q,X] \,=\, [Q,Y] \,=\, 0$\,
+(since \,$[Q,X],\, [Q,Y] \,\in\, \mathfrak{k}$,\, as \,$Q,X,Y \in \mathfrak{k}$\,),
 which in turn implies
 \,$[Q,X-\i\cdot Y] \,=\, [Q,X] - \i\,[Q,Y] \,=\, 0 - \i\cdot 0 \,=\, 0$.\,
 This proves Claim 3.
@@ -655,16 +658,18 @@ Proof of Claim 4:\;\;
 Let \,$Z \in \mathfrak{z} := Z(\mathfrak{g}) \subset \mathfrak{g} = \mathfrak{k}_{\C}$,\,
 and write \,$Z = X + \i\cdot Y$,\, where \,$X, Y \in \mathfrak{k}$.\,
 It suffices to show that \,$X, Y \in \mathfrak{z} \cap \mathfrak{k}$.\,
-Since we already have \,$X, Y \in \mathfrak{k}$\,, by Claim 2,
-we need only show that, in addition,
+Since we already have \,$X, Y \in \mathfrak{k}$,\,
+we need to show that we in addition have: \,$X, Y \in \mathfrak{z}$.\,
+However, by Claim 2, we need only show that
 each of \,$X$\, and \,$Y$\, commutes with every element of \,$\mathfrak{k}$.\,
 % Now, by Claim 3, we also have \,$X - \i\cdot Y \in \mathfrak{z}$.\,
-Now, let \,$Q \in \mathfrak{k}$\, be an arbitrary element of \,$\mathfrak{k}$.\,
+To this end, let \,$Q \in \mathfrak{k}$\, be an arbitrary element of \,$\mathfrak{k}$.\,
 Then,
 \,$0 \,=\, [Q,X+\i\,Y] \,=\, [Q,X] + \i\,[Q,Y]$,\,
 which implies
-\,$[Q,X] \,=\, [Q,Y] \,=\, 0$,\, as required.
-This proves Claim 4.
+\,$[Q,X] \,=\, [Q,Y] \,=\, 0$\,
+(since \,$[Q,X],\, [Q,Y] \,\in\, \mathfrak{k}$,\, as \,$Q,X,Y \in \mathfrak{k}$\,), as required.
+This completes the proof of Claim 4.
 
 \vskip 0.3cm
 \noindent
@@ -682,7 +687,8 @@ Proof of Claim 5:\;\;
 Simply note that we have:
 \,$0 \,=\, \langle Z,X+\i\cdot Y\rangle \,=\, \langle Z,X\rangle + \i\,\langle Z,Y\rangle$,\,
 which implies
-\,$\langle Z,X \rangle \,=\, \langle Z,Y \rangle \,=\, 0$,\, as required.
+\,$\langle Z,X \rangle \,=\, \langle Z,Y \rangle \,=\, 0$\,
+(since \,$\langle Z,X \rangle,\, \langle Z,Y \rangle \,\in\, \Re$), as required.
 This proves Claim 5.
 
 \vskip 0.3cm
@@ -739,7 +745,7 @@ Hence,
 \quad
 \textnormal{as required}
 \end{eqnarray*}
-This proves Claim 6.
+This completes the proof of Claim 6.
 
 \vskip 0.3cm
 \noindent
@@ -759,10 +765,11 @@ for each \,$Z \in \mathfrak{z} \cap \mathfrak{k}$.\,
 Indeed,
 \,$Z \in \mathfrak{z}\cap\mathfrak{k}$
 \;$\Longrightarrow$\;
-$0 \,=\, \langle\,Q\,,\,Z\,\rangle \,=\, \langle\,Q_{1} + \i\cdot Q_{2}\,,\,Z\,\rangle \,=\, \langle\,Q_{1}\,,\,Z\,\rangle - \i\,\langle\,\cdot Q_{2}\,,\,Z\,\rangle$,\,
+$0 \,=\, \langle\,Q\,,\,Z\,\rangle \,=\, \langle\,Q_{1} + \i\cdot Q_{2}\,,\,Z\,\rangle \,=\, \langle\,Q_{1}\,,\,Z\,\rangle - \i\,\langle\,Q_{2}\,,\,Z\,\rangle$,\,
 which in turn implies
-\,$\langle\,Q_{1}\,,\,Z\,\rangle \,=\, \langle\,Q_{2}\,,\,Z\,\rangle \,=\, 0$,\,
-as desired.
+\,$\langle\,Q_{1}\,,\,Z\,\rangle \,=\, \langle\,Q_{2}\,,\,Z\,\rangle \,=\, 0$\,
+(since \,$\langle\,Q_{1}\,,\,Z\,\rangle,\, \langle\,Q_{2}\,,\,Z\,\rangle \in \Re$,\,
+as \,$Q_{1}, Q_{2}, Z \in \mathfrak{k}$\,), as desired.
 Next, given any \,$Z \in \mathfrak{z}$,\, we may write, by Claim 4,
 \,$Z = Z_{1} + \i\cdot Z_{2}$,\, for \,$Z_{1}, Z_{2} \in \mathfrak{z} \cap \mathfrak{k}$.\,
 % Now, by Claim 3, we also have \,$X - \i\cdot Y \in \mathfrak{z}$.\,
@@ -783,7 +790,7 @@ Hence, for \,$j = 1, 2$,\, we have:
 \end{eqnarray*}
 Hence, we see that
 \,$Q_{1}, Q_{2} \in \mathfrak{z}^{\perp} =: \mathfrak{g}_{1}$,\, as required.
-This proves Claim 7.
+This completes the proof of Claim 7.
 
 
 
