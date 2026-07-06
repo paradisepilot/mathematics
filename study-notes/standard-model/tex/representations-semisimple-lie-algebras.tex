@@ -559,6 +559,135 @@ This completes the proof of the Theorem.
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Every reductive complex Lie algebra
+\,$\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\,
+decomposes as a Lie algebra direct sum
+\,$\mathfrak{g} \,=\, \mathfrak{g}_{1} \oplus \mathfrak{z}$,\,
+where \,$\mathfrak{z}$\, is the centre of \,$\mathfrak{g}$\,
+and \,$\mathfrak{g}_{1}$\, is semisimple.
+\end{proposition}
+\proof
+First, observe that
+\,$\mathfrak{z} \subset \mathfrak{g}$\,
+is an ideal in \,$\mathfrak{g}$.\,
+Fix any inner product on \,$\mathfrak{g}$\, as described in
+Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}.
+Then, by Proposition \ref{ReductiveImpliesOrthogonalComplementsOfIdealsExist}, we have
+\,$\mathfrak{g} = \mathfrak{z} \oplus \mathfrak{g}_{1}$,\,
+where \,$\mathfrak{g}_{1} := \mathfrak{z}^{\perp}$.\,
+Thus, it remains only to show that \,$\mathfrak{g}_{1}$\, is semisimple,
+i.e., \,$\mathfrak{g}_{1}$\, is reductive and has trivial centre.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;\; The centre
+\,$Z(\mathfrak{g}_{1}) \subset \mathfrak{g}_{1}$\,
+of \,$\mathfrak{g}_{1}$\, is \,$\{\,0\,\}$.\,
+\vskip 0.05cm
+\noindent
+Proof of Claim 1:\;\;
+Let \,$Z \in Z(\mathfrak{g}_{1})$.\,
+Then, by definition of \,$Z(\mathfrak{g}_{1})$,\,
+we trivially have \,$[Z,Y] = 0$,\, for each \,$Y \in \mathfrak{g}_{1}$.\,
+However, since \,$\mathfrak{g} = \mathfrak{g}_{1} \oplus \mathfrak{z}$\,
+is a Lie algebra direct sum, \,$Z$\, also commutes with each element of
+\,$\mathfrak{z}$.\, By linearity, we see that \,$Z$\, thus commutes with
+every element of \,$\mathfrak{g}$, i.e.,
+\,$Z \in \mathfrak{z} := Z(\mathfrak{g})$.\,
+Hence, we may now conclude
+\,$
+Z(\mathfrak{g}_{1})
+\,\subset\,
+    \mathfrak{g}_{1} \cap Z(\mathfrak{g})
+\, = \,
+    \mathfrak{z}^{\perp} \cap \mathfrak{z}
+\, = \,
+    \{\,0\,\}
+$.\,
+This proves Claim 1.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\;\; $Z \in \mathfrak{z} := Z(\mathfrak{g}) = Z(\mathfrak{k}_{\C})$\,
+if and only if \,$Z$\, commutes with every element of \,$\mathfrak{k}$.\,
+\vskip 0.05cm
+\noindent
+Proof of Claim 2:\;\;
+Trivially, \,$Z \in \mathfrak{z}$ \;$\Longrightarrow$\; $Z$\, commutes with every element of \,$\mathfrak{k}$.\,
+Conversely, suppose \,$Z$\, commutes with every element of \,$\mathfrak{k}$.\,
+Let \,$X = X_{1} + \i\,X_{2} \in \mathfrak{g} = \mathfrak{k} + \i\cdot\mathfrak{k}$\,
+be an arbitrary element of \,$\mathfrak{g}$,\, where \,$X_{1}, X_{2} \in \mathfrak{k}$.\,
+Then, $[X,Z] = [X_{1} + \i\,X_{2},Z] = [X_{1},Z] + \i\cdot[X_{2},Z] = 0 + \i \cdot 0 = 0$.\,
+This proves Claim 2.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\;\; $\mathfrak{z}$\, is invariant under the conjugation map
+\,$\mathfrak{g} \longrightarrow \mathfrak{g} : X + \i \cdot Y \longmapsto X - \i\cdot Y$\,
+(for each \,$X, Y \in \mathfrak{k}$).
+\vskip 0.05cm
+\noindent
+Proof of Claim 3:\;\;
+Let \,$Z \in \mathfrak{z}$,\, and write \,$Z = X + \i\cdot Y$,\, where \,$X, Y \in \mathfrak{k}$.\,
+By Claim 2, it suffices to show that \,$X - \i\cdot Y$\, commutes with every element \,$Q \in \mathfrak{k}$.\,
+To this end, note
+\,$0 \,=\, [Q,Z] \,=\, [Q,X+\i\cdot Y] \,=\, [Q,X] + \i\cdot[Q,Y]$,\,
+which implies
+\,$[Q,X] \,=\, [Q,Y] \,=\, 0$,\,
+which in turn implies
+\,$[Q,X-\i\cdot Y] \,=\, [Q,X] - \i\,[Q,Y] \,=\, 0 - \i\cdot 0 \,=\, 0$.\,
+This proves Claim 3.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 4:}\;\; $\mathfrak{z}^{\perp}$\, is also invariant conjugation
+\,$\mathfrak{g} \longrightarrow \mathfrak{g} : X + \i \cdot Y \longmapsto X - \i\cdot Y$\,
+(for each \,$X, Y \in \mathfrak{k}$).
+\vskip 0.05cm
+\noindent
+Proof of Claim 4:\;\;
+Let \,$H \in \mathfrak{z}^{\perp}$,\, and write \,$H = X + \i\cdot Y$,\, where \,$X, Y \in \mathfrak{k}$.\,
+Then, note that, for each \,$Z \in \mathfrak{z}$,\, we have:
+\,$0 \,=\, \langle Z,H \rangle \,=\, \langle Z,X+\i\cdot Y\rangle \,=\, \langle Z,X\rangle + \i\,\langle Q,Y\rangle$,\,
+which implies
+\,$\langle Z,X \rangle \,=\, \langle Q,Y \rangle \,=\, 0$,\,
+which in turn implies
+\,$\langle Q,X-\i\cdot Y\rangle \,=\, \langle Q,X \rangle - \i\,\langle Q,Y \rangle \,=\, 0 - \i\cdot 0 \,=\, 0$.\,
+This proves Claim 4.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 5:}\;\;
+$\mathfrak{z} = \left(\,\mathfrak{z}\cap\mathfrak{k}\,\right)_{\C}$\,
+and
+\,$\mathfrak{g}_{1} = \left(\,\mathfrak{g}_{1}\cap\mathfrak{k}\,\right)_{\C}$\,
+\vskip 0.05cm
+\noindent
+Proof of Claim 5:\;\;
+This proves Claim 5.
+
+
+
+
+
+
+
+\vskip 5.0cm
+\noindent
+\textbf{Claim 10:}\;\; $\mathfrak{g}_{1}$\, is reductive
+i.e., \,$\mathfrak{g}_{1} \cong \mathfrak{k}_{\C}$,\,
+where \,$\mathfrak{k}$\, is the Lie algebra of a compact matrix Lie group \,$K$.
+\vskip 0.05cm
+\noindent
+Proof of Claim 10:\;\;
+
+\qed
+
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
