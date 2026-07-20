@@ -649,12 +649,15 @@ This proves Claim 3.
 \vskip 0.3cm
 \noindent
 \textbf{Claim 4:}\;\;
-$\mathfrak{z} = \left(\,\mathfrak{z}\cap\mathfrak{k}\,\right)_{\C}$.\,
+$\mathfrak{z} = \left(\,\mathfrak{z}\cap\mathfrak{k}\,\right)_{\C}$\,,\,
+and
+\,$Z(\mathfrak{k}) = \mathfrak{z} \cap \mathfrak{k}$.\,
 % and
 % \,$\mathfrak{g}_{1} = \left(\,\mathfrak{g}_{1}\cap\mathfrak{k}\,\right)_{\C}$\,
 \vskip 0.05cm
 \noindent
 Proof of Claim 4:\;\;
+We start with the proof of the first equality.
 Let \,$Z \in \mathfrak{z} := Z(\mathfrak{g}) \subset \mathfrak{g} = \mathfrak{k}_{\C}$,\,
 and write \,$Z = X + \i\cdot Y$,\, where \,$X, Y \in \mathfrak{k}$.\,
 It suffices to show that \,$X, Y \in \mathfrak{z} \cap \mathfrak{k}$.\,
@@ -669,6 +672,14 @@ Then,
 which implies
 \,$[Q,X] \,=\, [Q,Y] \,=\, 0$\,
 (since \,$[Q,X],\, [Q,Y] \,\in\, \mathfrak{k}$,\, as \,$Q,X,Y \in \mathfrak{k}$\,), as required.
+Next, we prove the second equality.
+Note that we trivially have:
+\,$\mathfrak{z} \cap \mathfrak{g} \,\subset\, Z(\mathfrak{k})$.\,
+Conversely, the reverse inclusion
+(i.e., \,$Z(\mathfrak{k}) \,\subset\, \mathfrak{z} \cap \mathfrak{g}$)
+is an immediate consequence of Claim 2.
+We may thus conclude
+\,$Z(\mathfrak{k}) \,=\, \mathfrak{z} \cap \mathfrak{g}$.\,
 This completes the proof of Claim 4.
 
 \vskip 0.3cm
@@ -794,13 +805,71 @@ This completes the proof of Claim 7.
 
 \vskip 0.3cm
 \noindent
-\textbf{Claim 10:}\;\; $\mathfrak{g}_{1}$\, is reductive
-i.e., \,$\mathfrak{g}_{1} \cong \mathfrak{k}_{\C}$,\,
-where \,$\mathfrak{k}$\, is the Lie algebra of a compact matrix Lie group \,$K$.
+\textbf{Claim 10:}\;\;
+$\mathfrak{k}_{1} \,:=\, \mathfrak{g}_{1}\cap\mathfrak{k}$\;
+is the Lie algebra of a compact matrix Lie group \,$K_{1}$.
+% is reductive
+% i.e., \,$\mathfrak{g}_{1} \cong \mathfrak{k}_{\C}$,\,
+% where \,$\mathfrak{k}$\, is the Lie algebra of a compact matrix Lie group \,$K$.
 \vskip 0.05cm
 \noindent
 Proof of Claim 10:\;\;
-
+Since \,$\mathfrak{g} = \mathfrak{k}_{\C}$\, is reductive,
+\,$\mathfrak{k}$\, is the Lie algebra of some compact matrix Lie group \,$K$.\, 
+Let
+\,$K_{1} \,:=\, \Ad\!\left(\,K\,\right) \,\subset\, \GL(\mathfrak{g})$\,
+be the image of the adjoint homomorphism
+\,$\Ad : K \longrightarrow \GL(\mathfrak{g})$.\,
+Since \,$K$\, is compact and the adjoint homomorphism
+\,$\Ad : K \longrightarrow \GL(\mathfrak{g})$\,
+is continuous, we see that \,$K_{1} \,:=\, \Ad(K)$\, is itself compact, hence closed.
+The differential map of
+\,$\Ad : K \longrightarrow \GL(\mathfrak{g})$\,
+is
+\,$\ad : \mathfrak{k} \longrightarrow \gl(\mathfrak{k}) : X \longrightarrow \ad_{X}$,\,
+and
+\begin{equation*}
+\ker\!\left(\,\ad\,\right)
+\;\; := \;\;
+    \left\{\;
+        X \in \mathfrak{k}
+        \;\,\left\vert\;\,
+        \overset{{\color{white}.}}{\ad_{X}} \,=\, 0 \,\in\, \gl(\mathfrak{k})
+        \right.
+        \,\right\}
+\;\; = \;\;
+    \left\{\;
+        X \in \mathfrak{k}
+        \;\,\left\vert\,
+        \begin{array}{c}
+            [X,Y] \,=\, 0,
+            \\
+            \textnormal{for each \,$Y \in \mathfrak{k}$}
+            \end{array}
+        \right.
+        \!\!\right\}
+\;\; =: \;\;
+    Z(\mathfrak{k})
+\;\; = \;\;
+    \mathfrak{z} \cap \mathfrak{k}
+\end{equation*}
+\begin{eqnarray*}
+\textnormal{LieAlgebra}\!\left(\;\overset{{\color{white}.}}{K_{1}}\,\right)
+& = &
+    \textnormal{LieAlgebra}\!\left(\;\overset{{\color{white}.}}{\image(\Ad)}\,\right)
+\\
+& \overset{{\color{red}?}}{=} &
+    \image\!\left(\,\overset{{\color{white}.}}{\ad}\,\right)
+\;\; \cong \;\;
+    \mathfrak{k} \left\slash \ker(\ad)\right.
+\;\; = \;\;
+    \mathfrak{k} \left\slash (\mathfrak{z} \cap \mathfrak{k})\right.
+\\
+& \overset{{\color{red}?}}{\cong} &
+    \mathfrak{g}_{1} \cap \mathfrak{k}
+\;\; =: \;\;
+    \mathfrak{k}_{1}
+\end{eqnarray*}
 \qed
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
