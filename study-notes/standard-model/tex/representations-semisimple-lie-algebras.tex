@@ -807,7 +807,7 @@ This completes the proof of Claim 7.
 \noindent
 \textbf{Claim 10:}\;\;
 $\mathfrak{k}_{1} \,:=\, \mathfrak{g}_{1}\cap\mathfrak{k}$\;
-is the Lie algebra of a compact matrix Lie group \,$K_{1}$.
+is the Lie algebra of a compact matrix Lie group.
 % is reductive
 % i.e., \,$\mathfrak{g}_{1} \cong \mathfrak{k}_{\C}$,\,
 % where \,$\mathfrak{k}$\, is the Lie algebra of a compact matrix Lie group \,$K$.
@@ -853,23 +853,116 @@ and
 \;\; = \;\;
     \mathfrak{z} \cap \mathfrak{k}
 \end{equation*}
+Hence, we have:
 \begin{eqnarray*}
 \textnormal{LieAlgebra}\!\left(\;\overset{{\color{white}.}}{K_{1}}\,\right)
 & = &
     \textnormal{LieAlgebra}\!\left(\;\overset{{\color{white}.}}{\image(\Ad)}\,\right)
-\\
-& \overset{{\color{red}?}}{=} &
+\;\; \overset{{\color{red}?}}{=} \;\;
     \image\!\left(\,\overset{{\color{white}.}}{\ad}\,\right)
 \;\; \cong \;\;
-    \mathfrak{k} \left\slash \ker(\ad)\right.
+    \mathfrak{k} \left\slash\, \ker(\ad)\right.
+\\
+& = &
+    \mathfrak{k} \left\slash (\mathfrak{z} \cap \mathfrak{k})\right.,
+    \quad
+    \textnormal{by preceding equality}
+\\
+& = &
+    \dfrac{
+        \mathfrak{g} \cap \mathfrak{k}
+        }{
+        \mathfrak{z}\cap\mathfrak{k}
+        }
 \;\; = \;\;
-    \mathfrak{k} \left\slash (\mathfrak{z} \cap \mathfrak{k})\right.
+    \dfrac{
+        (\mathfrak{g}_{1}\oplus\mathfrak{z}) \cap \mathfrak{k}
+        }{
+        \mathfrak{z}\cap\mathfrak{k}
+        }
+\;\; = \;\;
+    \dfrac{
+        (\mathfrak{g}_{1}\cap\mathfrak{k}) \oplus (\mathfrak{z}\cap\mathfrak{k})
+        }{
+        \mathfrak{z}\cap\mathfrak{k}
+        }
+\;\; = \;\;
+    \dfrac{
+        {\color{white}.}
+        \mathfrak{g}_{1}\cap\mathfrak{k}
+        {\color{white}.}
+        }{
+        \mathfrak{z}\cap\mathfrak{k}
+        }
+    \; \oplus \;
+    \dfrac{
+        {\color{white}.}
+        \mathfrak{z}\cap\mathfrak{k}
+        {\color{white}.}
+        }{
+        \mathfrak{z}\cap\mathfrak{k}
+        }
+\;\; = \;\;
+    \dfrac{
+        {\color{white}.}
+        \mathfrak{g}_{1}\cap\mathfrak{k}
+        {\color{white}.}
+        }{
+        \mathfrak{z}\cap\mathfrak{k}
+        }
 \\
 & \overset{{\color{red}?}}{\cong} &
     \mathfrak{g}_{1} \cap \mathfrak{k}
 \;\; =: \;\;
-    \mathfrak{k}_{1}
+    \mathfrak{k}_{1}\,,
+    \quad
+    \textnormal{since the centre \,$Z(\mathfrak{g}_{1}) = \{\,0\,\}$,\, by Claim 1}
 \end{eqnarray*}
+Thus,
+\,$\mathfrak{k}_{1} \,:=\, \mathfrak{g}_{1} \cap \mathfrak{k}$\,
+is the Lie algebra of the compact matrix Lie group \,$K_{1}$.\,
+This completes the proof of Claim 10.
+% \begin{equation*}
+% \mathfrak{k} \left\slash (\mathfrak{z}\cap\mathfrak{k}) \right.
+% \;\; = \;\;
+%     \dfrac{
+%         \mathfrak{g} \cap \mathfrak{k}
+%         }{
+%         \mathfrak{z}\cap\mathfrak{k}
+%         }
+% \;\; = \;\;
+%     \dfrac{
+%         (\mathfrak{g}_{1}\oplus\mathfrak{z}) \cap \mathfrak{k}
+%         }{
+%         (\mathfrak{z}\cap\mathfrak{k})
+%         }
+% \;\; = \;\;
+%     \dfrac{
+%         (\mathfrak{g}_{1}\cap\mathfrak{k}) \oplus (\mathfrak{z}\cap\mathfrak{k})
+%         }{
+%         (\mathfrak{z}\cap\mathfrak{k})
+%         }
+% \;\; = \;\;
+%     \dfrac{
+%         (\mathfrak{g}_{1}\cap\mathfrak{k})
+%         }{
+%         (\mathfrak{z}\cap\mathfrak{k})
+%         }
+%     \; \oplus \;
+%     \dfrac{
+%         (\mathfrak{z}\cap\mathfrak{k})
+%         }{
+%         (\mathfrak{z}\cap\mathfrak{k})
+%         }
+% \;\; = \;\;
+%     \dfrac{
+%         (\mathfrak{g}_{1}\cap\mathfrak{k})
+%         }{
+%         (\mathfrak{z}\cap\mathfrak{k})
+%         }
+% \;\; = \;\;
+%     \mathfrak{g}_{1}\cap\mathfrak{k}
+% \end{equation*}
 \qed
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
