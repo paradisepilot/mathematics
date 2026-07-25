@@ -1134,9 +1134,86 @@ The \textbf{rank} of \,$\mathfrak{g}$\, is the dimension of any of its Cartan su
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+\section{Roots and root spaces}
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}[Roots of a semisimple complex Lie algebra]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suupose:
+\begin{itemize}
+\item
+    \vskip -0.1cm
+    $\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\, be a semisimple complex Lie algebra,\,
+\item
+    $\mathfrak{k} \,\subset\, \mathfrak{g}$\, is a compact real form of \,$\mathfrak{g}$,\,
+\item
+    $\mathfrak{t} \,\subset\, \mathfrak{k}$\, is a maximal commutative subalgebra of \,$\mathfrak{k}$,\,
+\item
+    $\mathfrak{h} \,=\, \mathfrak{t} + \i\cdot\mathfrak{t} \,\subset\, \mathfrak{g}$\,
+    is the Cartan subalgebra corresponding to \,$\mathfrak{t}$,\, and
+\item
+    $\langle\,\cdot\,,\cdot\,\rangle$\, is an $\Re$-valued inner product on
+    \,$\mathfrak{k}$\, as in Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}.
+\end{itemize}
+A nonzero element \,$\alpha \in \mathfrak{h}$\, is called a
+\,\textbf{{\color{red}root} for \,$\mathfrak{g}$\, relative to the Cartan subalgebra \,$\mathfrak{h}$}\,
+if there exists a nonzero element \,$X \in \mathfrak{g}$\, such that
+\begin{equation*}
+\left[\,H\,,X\,\right]
+\;\; = \;\;
+    \langle\,\alpha\,,H\,\rangle \cdot X\,,
+\quad
+\textnormal{for each \,$H \in \mathfrak{h}$}
+\end{equation*}
+The set of all roots for \,$\mathfrak{g}$\, relative to the Cartan subalgebra \,$\mathfrak{h}$\,
+is denoted by \,$R = R(\mathfrak{h})$.\,
+\end{definition}
+
+        %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{theorem}[Vector space decomposition of a semisimple complex Lie algebra]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suupose:
+\begin{itemize}
+\item
+    \vskip -0.1cm
+    $\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\, be a semisimple complex Lie algebra,\,
+\item
+    $\mathfrak{k} \,\subset\, \mathfrak{g}$\, is a compact real form of \,$\mathfrak{g}$,\,
+\item
+    $\mathfrak{t} \,\subset\, \mathfrak{k}$\, is a maximal commutative subalgebra of \,$\mathfrak{k}$,\,
+\item
+    $\mathfrak{h} \,=\, \mathfrak{t} + \i\cdot\mathfrak{t} \,\subset\, \mathfrak{g}$\,
+    is the Cartan subalgebra corresponding to \,$\mathfrak{t}$,\, and
+\item
+    $\langle\,\cdot\,,\cdot\,\rangle$\, is an $\Re$-valued inner product on
+    \,$\mathfrak{k}$\, as in Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}.
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    The Lie algebra \,$\mathfrak{g}$\, admits the following vector space direct sum decomposition:
+    \begin{equation*}
+    \mathfrak{g}
+    \;\; = \;\;
+        \mathfrak{h} \, \oplus \, \underset{\alpha \in R(\mathfrak{h})}{\bigoplus}\,\mathfrak{g}_{\alpha}\,,
+    \end{equation*}
+    where \,$R(\mathfrak{h})$\, is the set of all roots for \,$\mathfrak{g}$\,
+    relative to the Cartan subalgebra \,$\mathfrak{h} \subset \mathfrak{g}$.\,
+\item
+    For each \,$\alpha \in R(\mathfrak{h})$,\, the only multiples of \,$\alpha$\, that are roots
+    are \,$\alpha$\, and \,$-\,\alpha$.\,
+\item
+    For each \,$\alpha \in R(\mathfrak{h})$,\, the root space \,$\mathfrak{g}_{\alpha}$\,
+    is one-dimensional.
+\end{enumerate}
+\end{theorem}
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
