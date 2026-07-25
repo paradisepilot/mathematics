@@ -88,10 +88,9 @@ Suppose \,$\mathfrak{g} \,=\, \mathfrak{k}_{\C}$\, is a reductive complex Lie al
 Then, the following statements are true:
 \begin{enumerate}
 \item
-    There exists an $\Re$-valued inner product
-    \,$\langle\,\cdot\,,\,\cdot\,\rangle : \mathfrak{k} \times \mathfrak{k} \longrightarrow \Re$\,
-    on \,$\mathfrak{k}$\,
-    with respect to which the adjoint action of
+    There exists an inner product\footnote{conjugate-linear in the first argument}
+    \,$\langle\,\cdot\,,\cdot\,\rangle : \mathfrak{g} \times \mathfrak{g} \longrightarrow \C$\,
+    which is $\Re$-valued on \,$\mathfrak{k}$\, and with respect to which the adjoint action of
     \,$\mathfrak{k}$\, on \,$\mathfrak{g}$\,
     is ``unitary'' in the sense that
     \begin{equation}\label{almostUnitarity}
@@ -1158,18 +1157,46 @@ Suupose:
     $\langle\,\cdot\,,\cdot\,\rangle$\, is an $\Re$-valued inner product on
     \,$\mathfrak{k}$\, as in Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}.
 \end{itemize}
-A nonzero element \,$\alpha \in \mathfrak{h}$\, is called a
-\,\textbf{{\color{red}root} for \,$\mathfrak{g}$\, relative to the Cartan subalgebra \,$\mathfrak{h}$}\,
-if there exists a nonzero element \,$X \in \mathfrak{g}$\, such that
-\begin{equation*}
-\left[\,H\,,X\,\right]
-\;\; = \;\;
-    \langle\,\alpha\,,H\,\rangle \cdot X\,,
-\quad
-\textnormal{for each \,$H \in \mathfrak{h}$}
-\end{equation*}
-The set of all roots for \,$\mathfrak{g}$\, relative to the Cartan subalgebra \,$\mathfrak{h}$\,
-is denoted by \,$R = R(\mathfrak{h})$.\,
+Then, we make the following definitions:
+\begin{enumerate}
+\item
+    A nonzero element \,$\alpha \in \mathfrak{h}$\, is called a
+    \,\textbf{{\color{red}root} for \,$\mathfrak{g}$\, relative to the Cartan subalgebra \,$\mathfrak{h}$}\,
+    if there exists a nonzero element \,$X \in \mathfrak{g}$\, such that
+    \begin{equation*}
+    \left[\,H\,,X\,\right]
+    \;\; = \;\;
+        \langle\,\alpha\,,H\,\rangle \cdot X\,,
+    \quad
+    \textnormal{for each \,$H \in \mathfrak{h}$}
+    \end{equation*}
+\item
+    The set of all roots for \,$\mathfrak{g}$\,
+    relative to the Cartan subalgebra \,$\mathfrak{h}$\,
+    is denoted by \,$R = {\color{red}R(\mathfrak{h})}$.\,
+\item
+    For each \,$\alpha \in \mathfrak{h}$\, (\,here, $\alpha$\, need NOT be a root),
+    we define the subspace
+    \begin{equation*}
+    \mathfrak{g}_{\alpha}
+    \;\; := \;\;
+        \left\{\;
+            X \in \mathfrak{g}
+            \;\left\vert\!
+            \begin{array}{c}
+                [\,H\,,X\,] \,=\, \langle\,\alpha\,,H\,\rangle \cdot X,
+                \\
+                \overset{{\color{white}.}}{\textnormal{for each \,$H \in \mathfrak{h}$}}
+            \end{array}
+            \right.
+            \!\!\right\}
+    \;\; \subset \;\;
+        \mathfrak{g}
+    \end{equation*}
+    If \,$\alpha \in \mathfrak{h}$\, is a root
+    (\,i.e., \,$\alpha \in R(\mathfrak{h}) \subset \mathfrak{h}$\,),
+    then \,$\mathfrak{g}_{\alpha}$\, is called a \textbf{\color{red}root space}.
+\end{enumerate}
 \end{definition}
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
