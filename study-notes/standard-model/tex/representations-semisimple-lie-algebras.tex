@@ -954,7 +954,157 @@ This completes the proof of the Proposition.
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{definition}[Cartan subalgebras]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let \,$\mathfrak{g}$\, be a semisimple complex Lie algebra.
+A \textbf{Cartan subalgebra} of \,$\mathfrak{g}$\,
+is a complex vector subspace \,$\mathfrak{h} \subset \mathfrak{g}$\,
+with the following properties:
+\begin{itemize}
+\item
+    $\mathfrak{h}$\, is a commutative subalgebra of \,$\mathfrak{g}$,\, i.e.,
+    \begin{equation*}
+    [\,H_{1}\,,\,H_{2}\,] \,=\, 0,\,
+    \quad
+    \textnormal{for each \,$H_{1}, H_{2} \in \mathfrak{h}$}
+    \end{equation*}
+\item
+    $\mathfrak{h}$\, is maximal with respect to commutativity,\, i.e.,
+    for each \,$X \in \mathfrak{g}$,\,
+    \begin{equation*}
+    [H,X] \,=\, 0, \;\forall\; H \in \mathfrak{h} 
+    \quad\Longrightarrow\quad
+    X \in \mathfrak{h}
+    \end{equation*}
+\item
+    For each \,$H \,\in\, \mathfrak{h}$,\,
+    \,$\ad_{H} \,\in\, \gl(\mathfrak{g})$\,
+    is diagonalizable.
+\end{itemize}
+\end{definition}
+
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{proposition}[Semisimple complex Lie algebras admit Cartan subalgebras]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Let \,$\mathfrak{g} = \mathfrak{k}_{\C}$\, be a semisimple complex Lie algebra,
+and let \,$\mathfrak{t} \subset \mathfrak{k}$\,
+be any {\color{red}maximal commutative subalgebra}
+of the compact real form \,$\mathfrak{k} \subset \mathfrak{g}$.\,
+Define \,$\mathfrak{h} \subset \mathfrak{g}$\, by
+\begin{equation*}
+\mathfrak{h} \;\; := \;\; \mathfrak{t}_{\C} \;\; = \;\; \mathfrak{t} + \i\cdot\mathfrak{t}
+\end{equation*}
+Then, \,$\mathfrak{h}$\, is a Cartan subalgebra of the semisimple complex Lie algebra \,$\mathfrak{g}$.\,
+\end{proposition}
+\proof
+\vskip 0.1cm
+\noindent
+\textbf{Claim 1:}\;\; $\mathfrak{h} \,=\, \mathfrak{t} + \i\cdot\mathfrak{t} \,\subset\, \mathfrak{g}$
+is a commutative subalgebra of \,$\mathfrak{g}$.\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;
+Let \,$X_{1} + \i\,X_{2}\,, Y_{1} + \i\,Y_{2} \,\in\, \mathfrak{h} = \mathfrak{t} + \i\cdot\mathfrak{t}$,\,
+with
+\,$X_{1}, X_{2}, Y_{1}, Y_{2} \,\in\, \mathfrak{t}$.\,
+Then,
+\begin{eqnarray*}
+\left[\,X_{1} + \i X_{2}\,,\,Y_{1} + \i\,Y_{2}\,\right]
+& = &
+    \left[\,X_{1}\,,\,Y_{1}\,\right]
+    \, + \,
+    \i\cdot\left[\,X_{1}\,,\,Y_{2}\,\right]
+    \, + \,
+    \i\cdot\left[\,X_{2}\,,\,Y_{1}\,\right]
+    \, + \,
+    \i^{2}\cdot\left[\,X_{2}\,,\,Y_{2}\,\right]
+\\
+& = &
+    0 + \i\cdot0 + \i\cdot0 + (-1)\cdot0\,,
+    \quad
+    \textnormal{since \,$X_{1}, X_{2}, Y_{1}, Y_{2} \in \mathfrak{t}$}
+\\
+& = &
+    0
+\end{eqnarray*}
+This completes the proof of Claim 1.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\;\; $\mathfrak{h}$\, is maximal with respect to commutativity.
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;
+Let
+\,$X = X_{1} + \i\,X_{2} \in \mathfrak{g} = \mathfrak{k}_{\C}$\,
+(\,with \,$X_{1}, X_{2} \in \mathfrak{k}$\,)
+be an element of \,$\mathfrak{g}$\, that commutes with every element of
+\,$\mathfrak{h} = \mathfrak{t} + \i\cdot\mathfrak{t}$.\,
+We need to show that \,$X \in \mathfrak{h}$.\,
+To this end, observe that, for each
+\,$H \in \mathfrak{t} \subset \mathfrak{k}$,\, we have:
+\begin{equation*}
+0
+\, = \,
+    \left[\,H\,,\,X_{1}+\i\,X_{2}\,\right]
+\, = \,
+    \left[\,H\,,\,X_{1}\,\right]
+    \, + \,
+    \i\cdot\left[\,H\,,\,X_{2}\,\right]
+\quad\Longrightarrow\quad
+    \left[\,H\,,\,X_{1}\,\right]
+    \,=\,
+    \left[\,H\,,\,X_{2}\,\right]
+    \,=\,
+    0\,,
+\end{equation*}
+which in turn implies that
+\,$X_{1}, X_{2} \in \mathfrak{t}$,\,
+by maximality of \,$\mathfrak{t}$\, with respect to commutativity.
+We therefore see that
+\,$X \,=\, X_{1} + \i\,X_{2} \,\in\, \mathfrak{t} + \i\cdot\mathfrak{t} \,=:\, \mathfrak{h}$,\,
+as required.
+This completes the proof of Claim 2.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\;\; $\ad_{H} \in \mathfrak{gl}(\mathfrak{g})$\, is diagonalizable,
+for each \,$H \in \mathfrak{h}$.\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 3:\;
+Fix an inner product \,$\langle\,\cdot\,,\cdot\,\rangle$\, on \,$\mathfrak{g}$\,
+as described in Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}.
+Consider an arbitrary element
+\,$H \,=\, H_{1} + \i\,H_{2} \,\in\, \mathfrak{h} \,=\, \mathfrak{t} + \i\cdot\mathfrak{t}$,\,
+with \,$H_{1}, H_{2} \,\in\, \mathfrak{t} \,\subset\, \mathfrak{k}$.\,
+Then, \,$\ad_{H_{1}}, \ad_{H_{2}} \,\in\, \mathfrak{gl}(\mathfrak{k})$\,
+are skew-adjoint with respect to
+\,$\langle\,\cdot\,,\cdot\,\rangle$;\,
+hence, each of \,$\ad_{H_{1}}$\, and \,$\ad_{H_{2}}$\, is diagonalizable,
+by Theorem A.3, p.411, \cite{Hall2015}.
+Next, the commutativity of the elements of \,$\mathfrak{t}$\,
+implies that \,$\ad_{H_{1}}$\, and \,$\ad_{H_{2}}$\, commute,
+which in turn implies that
+\,$\ad_{H_{1}}$\, and \,$\ad_{H_{2}}$\,
+are simultaneously diagonalizable,
+by Proposition \ref{SDiagonalizableEqualsCommuteAndDiagonalizable}.
+Simultaneously diagonalizability of
+\,$\ad_{H_{1}}$\, and \,$\ad_{H_{2}}$\,
+now implies the diagonalizability of
+\,$\ad_{H} \,=\, \ad_{H_{1}+\i\,H_{2}} \,=\, \ad_{H_{1}} + \i\cdot\ad_{H_{2}}$.
+This completes the proof of Claim 3.
+
+\vskip 0.3cm
+\noindent
+The Proposition now follows from Claim 1, Claim 2 and Claim 3.
+\qed
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
