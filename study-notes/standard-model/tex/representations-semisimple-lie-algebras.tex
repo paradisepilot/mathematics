@@ -1155,8 +1155,8 @@ Suupose:
     $\mathfrak{h} \,=\, \mathfrak{t} + \i\cdot\mathfrak{t} \,\subset\, \mathfrak{g}$\,
     is the Cartan subalgebra corresponding to \,$\mathfrak{t}$,\, and
 \item
-    $\langle\,\cdot\,,\cdot\,\rangle$\, is an $\Re$-valued inner product on
-    \,$\mathfrak{k}$\, as in Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}.
+    $\langle\,\cdot\,,\cdot\,\rangle$\, is an inner product on
+    \,$\mathfrak{g}$\, as in Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm}.
 \end{itemize}
 Then, we make the following definitions:
 \begin{enumerate}
@@ -1216,23 +1216,190 @@ be as in Definition \ref{DefinitionRoots}.
 Then, the following statements are true:
 \begin{enumerate}
 \item
+    $R(\mathfrak{h}) \;\subset\; \i\cdot\mathfrak{t} \;\subset\; \i\cdot\mathfrak{k} \;\subset\; \mathfrak{h}$,\,
+    i.e., every root \,$\alpha$\, is an element of \,$\i\cdot\mathfrak{t}$.\,
+\item
     For each \,$\alpha, \beta \in \mathfrak{h}$,\, we have:
     \;$\left[\,\mathfrak{g}_{\alpha}\,,\mathfrak{g}_{\beta}\,\right]
     \, \subset \,
         \mathfrak{g}_{\alpha + \beta}
     $.\;
 \item
-    For each \,$X \in \mathfrak{g}$,\, we have
-    \,$X \in \mathfrak{g}_{\alpha} \,\Longrightarrow\, X^{*}\in\mathfrak{g}_{-\alpha}$.
-    In particular, if
-    \,$\alpha \in \mathfrak{h}$\, is a root, then so is \,$-\alpha \in \mathfrak{h}$,\,
-    i.e., we have:
-    \;$\alpha \in R(\mathfrak{h}) \;\Longrightarrow\, -\alpha \in R(\mathfrak{h})$.\,
+    If
+    \,$\alpha \,\in\, \i\cdot\mathfrak{t} \,\subset\, \mathfrak{h}$\,
+    is a root and
+    \,$X = X_{1} + \i \cdot X_{2} \,\in\, \mathfrak{g}_{\alpha}$
+    (\,where \,$X_{1}, X_{2} \in \mathfrak{k}$\,),\,
+    then
+    \begin{equation*}
+    X^{*} \;\; := \;\; -\,X_{1} \,+\, \i \cdot X_{2} \;\;\in\;\; \mathfrak{g}_{-\alpha}
+    \end{equation*}
+    % and
+    % \,$-\,\alpha \,\in\, \i\cdot\mathfrak{t}$\,
+    % is also a root.
+    % \vskip 0.3cm
+    % For each \,$\alpha \in \mathfrak{h}$\, and each \,$X \in \mathfrak{g}$,\, we have
+    % \,$X \in \mathfrak{g}_{\alpha} \,\Longrightarrow\, X^{*}\in\mathfrak{g}_{-\alpha}$.
+    % In particular, if
+    % \,$\alpha \in \mathfrak{h}$\, is a root, then so is \,$-\alpha \in \mathfrak{h}$,\,
+    % i.e., we have:
+    % \;$\alpha \in R(\mathfrak{h}) \;\Longrightarrow\, -\alpha \in R(\mathfrak{h})$.\,
+\item
+    $\alpha \,\in\, R(\mathfrak{h}) \;\;\Longrightarrow\;\, -\,\alpha \,\in\, R(\mathfrak{h})$
 \item
     The set \,$R(\mathfrak{h})$\, of roots (\,relative to $\mathfrak{h}$\,)
     is a spanning set for \,$\mathfrak{h}$.\,
 \end{enumerate}
 \end{proposition}
+\proof
+\begin{enumerate}
+\item
+\item
+    Let \,$X \in \mathfrak{g}_{\alpha}$\, and \,$Y \in \mathfrak{g}_{\beta}$.\,
+    We need to show \,$[\,X\,,Y\,] \,\in\, \mathfrak{g}_{\alpha+\beta}$.\,
+    Hence, let \,$H \in \mathfrak{h}$.\, By the Jacobi identity, we have:
+    \begin{equation*}
+    [\,H\,,[X,Y]\,] \,+\, [\,X\,,[Y,H]\,] \,+\, [\,Y\,,[H,X]\,] \;\; = \;\; 0
+    \end{equation*}
+    Hence,
+    \begin{eqnarray*}
+    [\,H\,,[X,Y]\,]
+    & = &
+    %     -\, [\,X\,,[Y,H]\,] \,-\, [\,Y\,,[H,X]\,]
+    % \;\; = \;\;
+        [\,X\,,[H,Y]\,] \,-\, [\,Y\,,[H,X]\,]
+    \;\; = \;\;
+        [\,X\,,\langle\,\beta,H\,\rangle \cdot Y\,] \,-\, [\,Y\,,\langle\,\alpha,H\,\rangle \cdot X\,]
+    \\
+    & = &
+        \langle\,\beta,H\,\rangle \cdot [\,X\,,Y\,] \,-\, \langle\,\alpha,H\,\rangle \cdot [\,Y\,, X\,]
+    \;\; = \;\;
+        \left(\,
+            \langle\,\beta,H\,\rangle
+            \,\overset{{\color{white}.}}{+}\,
+            \langle\,\alpha,H\,\rangle
+            \,\right)
+        \cdot
+        [\,X\,,Y\,]
+    \\
+    & = &
+        \langle\,\alpha+\beta,H\,\rangle
+        \cdot
+        [\,X\,,Y\,]
+    \end{eqnarray*}
+    Since \,$H \in \mathfrak{h}$\, is arbitrary,
+    we see that we indeed have
+    \,$X + Y \in\mathfrak{g}_{\alpha+\beta}$,\,
+    as required.
+\item
+    Write \,$\alpha \in \mathfrak{h} = \mathfrak{t} + \i\cdot\mathfrak{t}$\,
+    as \,$\alpha = \alpha_{1} + \i\cdot\alpha_{2}$,\,
+    where \,$\alpha_{1}, \alpha_{2} \in \mathfrak{t} \subset \mathfrak{k}$.\,
+    (Note that we in fact have \,$\alpha_{1} = 0$,\, since \,$\alpha$\, is a root, and
+    hence \,$\alpha \in \i\cdot\mathfrak{t}$.\,)
+    Next, write \,$X \in \mathfrak{g}_{\alpha} \subset \mathfrak{g} = \mathfrak{k}_{\C}$\,
+    as \,$X = X_{1} + \i \cdot X_{2}$,\,
+    where \,$X_{1}, X_{2} \in \mathfrak{k}$.\,
+    Then, by definition, \,$X^{*} = -X_{1} + \i \cdot X_{2}$.\,
+    Hence, for each \,$H \in \mathfrak{t} \subset \mathfrak{k}$,\, we have:
+    % \begin{eqnarray*}
+    % [\,H\,,X\,]
+    % & = &
+    %     [\,H\,,X_{1} + \i \cdot X_{2}\,]
+    % \;\; = \;\;
+    %     [\,H\,,X_{1}\,]
+    %     \, + \,
+    %     \i \cdot [\,H\,,X_{2}\,]
+    % \end{eqnarray*}
+    \begin{eqnarray*}
+    [\,H\,,X_{1}\,]
+    \, + \,
+    \i \cdot [\,H\,,X_{2}\,]
+    & = &
+        [\,H\,,X_{1} + \i \cdot X_{2}\,]
+    \;\; = \;\;
+        \textnormal{$[\,H\,,X\,]$}
+    \;\; = \;\;
+        \langle\,\alpha\,,H\,\rangle \cdot X
+    \\
+    & = &
+        \langle\,\alpha_{1} + \i\cdot\alpha_{2}\,,H\,\rangle \cdot (\,X_{1} + \i \cdot X_{2}\,)
+    \\
+    & = &
+        \left(\,
+            \langle\,\alpha_{1}\,,H\,\rangle
+            \, \overset{{\color{white}.}}{+} \,
+            \i\cdot\langle\,\alpha_{2}\,,H\,\rangle
+            \,\right)
+        \cdot
+        (\,X_{1} + \i \cdot X_{2}\,)
+    \\
+    & = &
+        \left(\,
+            \langle\,\alpha_{1}\,,H\,\rangle \cdot X_{1}
+            \, \overset{{\color{white}.}}{-} \,
+            \langle\,\alpha_{2}\,,H\,\rangle \cdot X_{2}
+            \,\right)
+        \, + \,
+        \i
+        \left(\,
+            \langle\,\alpha_{2}\,,H\,\rangle \cdot X_{1}
+            \, \overset{{\color{white}.}}{-} \,
+            \langle\,\alpha_{1}\,,H\,\rangle \cdot X_{2}
+            \,\right)
+    \\
+    & = &
+        -\,\langle\,\alpha_{2}\,,H\,\rangle \cdot X_{2}
+        \, + \,
+        \i\cdot\langle\,\alpha_{2}\,,H\,\rangle \cdot X_{1}\,,
+        \quad
+        \textnormal{since \,$\alpha$\, being a root \;$\Longrightarrow$\; $\alpha_{1} \,=\, 0$}\,,
+    \end{eqnarray*}
+    which implies
+    \begin{equation*}
+    [\,H\,,X_{1}\,] \; = \; -\,\langle\,\alpha_{2}\,,H\,\rangle \cdot X_{2}
+    \;\;\quad\textnormal{and}\quad\;\;
+    [\,H\,,X_{2}\,] \; = \; \langle\,\alpha_{2}\,,H\,\rangle \cdot X_{1}
+    \end{equation*}
+    Hence,
+    \begin{eqnarray*}
+    [\,H\,,X^{*}\,]
+    & = &
+        [\,H\,,-X_{1}+\i\cdot X_{2}\,]
+    \;\; = \;\;
+        -\,[\,H\,,X_{1}\,]
+        \, + \,
+        \i\cdot[\,H\,,X_{2}\,]
+    \\
+    & = &
+        -\,(-1)\cdot\langle\,\alpha_{2}\,,H\,\rangle \cdot X_{2}
+        \, + \,
+        \i\cdot\langle\,\alpha_{2}\,,H\,\rangle \cdot X_{1}
+    \;\; = \;\;
+        \i\cdot\langle\,-\,\i\cdot\alpha_{2}\,,H\,\rangle \cdot X_{2}
+        \, - \,
+        \langle\,-\,\i\cdot\alpha_{2}\,,H\,\rangle \cdot X_{1}
+    \\
+    & = &
+        \langle\,-\,\i\cdot\alpha_{2}\,,H\,\rangle
+        \cdot
+        \left(\,
+            -\,X_{1}
+            \, \overset{{\color{white}.}}{+} \,
+            \i\cdot X_{2}
+            \,\right)
+    \;\; = \;\;
+        \langle\,-\,\alpha\,,H\,\rangle
+        \cdot
+        X^{*}\,,
+    \end{eqnarray*}
+    which implies that \,$X^{*} \in \mathfrak{g}_{-\alpha}$,\,
+    as required.
+\item
+    Immediate by part (iii).
+\item
+\end{enumerate}
+\qed
 
         %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
