@@ -1254,6 +1254,110 @@ Then, the following statements are true:
 \proof
 \begin{enumerate}
 \item
+    First, recall that each eigenvalue of a skew-self-adjoint operator \,$A$\,
+    on a finite-dimensional complex inner product space
+    \,$\left(\,\overset{{\color{white}.}}{V}\,,\,\langle\!\langle\,\cdot\,,\,\cdot\,\rangle\!\rangle\,\right)$\,
+    is pure imaginary.
+    Indeed, let \,$v$\, be an eigenvector of \,$A$\, corresponding to the eigenvalue \,$\lambda \in \C$.\,
+    Then,
+    \begin{eqnarray*}
+    \overline{\lambda}\cdot\langle\!\langle\,v\,,\,v\,\rangle\!\rangle
+    & = &
+        \langle\!\langle\,\lambda\cdot v\,,\,v\,\rangle\!\rangle
+    \;\; = \;\;
+        \langle\!\langle\,A\,v\,,\,v\,\rangle\!\rangle
+    \;\; = \;\;
+        \langle\!\langle\,v\,,\,A^{*}\,v\,\rangle\!\rangle
+    \;\; = \;\;
+        \langle\!\langle\,v\,,\,-\,A\,v\,\rangle\!\rangle
+    \;\; = \;\;
+        \langle\!\langle\,v\,,\,-\,\lambda \cdot v\,\rangle\!\rangle
+    \\
+    & = &
+        -\,\lambda \cdot \langle\!\langle\,v\,,\,v\,\rangle\!\rangle
+    \end{eqnarray*}
+    which immediately implies
+    \,$\lambda + \overline{\lambda} \,=\, 0$,\,
+    % $\Longleftrightarrow$
+    % \;\;$\overline{\lambda} = -\,\lambda$\;\;
+    % $\Longleftrightarrow$
+    equivalently
+    \,$\lambda \in \i\cdot\Re$.\,
+    \vskip 0.1cm
+    Next, let \,$\alpha \,\in\, R(\mathfrak{h})$, i.e.,\, let \,$\alpha$\, be a root.
+    We need to show that \,$\alpha \,\in\, \i\cdot\mathfrak{t}$.\,
+    Write:
+    \,$
+    \alpha
+    \,=\,
+        \alpha_{1} + \i\cdot\alpha_{2}
+    \,\in\,
+        \mathfrak{h}
+    \,=\,
+        \mathfrak{t} + \i\cdot\mathfrak{t}
+    $\,
+    (\,where \,$\alpha_{1}, \alpha_{2} \in \mathfrak{t}$\,).
+    Now, \,$\alpha$\, being a root means that
+    there exist a nonzero \,$X \in \mathfrak{g}$\, such that
+    \begin{equation*}
+    \ad_{H}(\,X\,)
+    \;\; = \;\;
+        [\,H\,,X\,]
+    \;\; = \;\;
+        \langle\,\alpha\,,H\,\rangle \cdot X\,,
+    \quad
+    \textnormal{for each \,$H \in \mathfrak{h}$}
+    \end{equation*}
+    We need to show that $\alpha_{1} = 0$.
+    By Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm},
+    \,$\ad_{H} \in \gl(\mathfrak{g})$\, is skew-self-adjoint,
+    for each \,$H \in \mathfrak{t} \subset \mathfrak{k}$.\,
+    Hence, for each \,$H \in \mathfrak{t}$,\, we have:
+    \,$\langle\,\alpha\,,H\,\rangle \in \i\cdot\Re$,\,
+    since \,$\langle\,\alpha\,,H\,\rangle$\, is an eigenvalue of \,$\ad_{H} \in \gl(\mathfrak{g})$.\,
+    But,
+    \,$
+    \langle\,\alpha\,,H\,\rangle
+    \,=\,
+        \langle\,\alpha_{1}+\i\cdot\alpha_{2}\,,H\,\rangle
+    \,=\,
+        \langle\,\alpha_{1}\,,H\,\rangle
+        \,+\,
+        \i\cdot\langle\,\alpha_{2}\,,H\,\rangle
+    $,\,
+    with
+    \,$\langle\,\alpha_{1}\,,H\,\rangle, \langle\,\alpha_{2}\,,H\,\rangle \in \Re$\,
+    (\,since \,$\alpha_{1}, \alpha_{2}, H \in \mathfrak{t} \subset \mathfrak{k}$.\,)
+    Thus, we see that
+    \begin{equation*}
+    \langle\,\alpha_{1}\,,H\,\rangle \,=\, 0\,,
+    \quad
+    \textnormal{for each \,$H \in \mathfrak{t}$}
+    \end{equation*}
+    Since \,$\mathfrak{h} \,=\, \mathfrak{t} + \i\cdot\mathfrak{t}$,\,
+    it follows that we also have:
+    \begin{equation*}
+    \langle\,\alpha_{1}\,,H\,\rangle \,=\, 0\,,
+    \quad
+    \textnormal{for each \,$H \,\in\, \mathfrak{h} \,=\, \mathfrak{t} + \i\cdot\mathfrak{t}$}
+    \end{equation*}
+    So, we see that \,$\alpha_{1} \,\in\, \mathfrak{h}^{\perp}$.\,
+    Now recall that we also have \,$\alpha_{1} \in \mathfrak{t} \subset \mathfrak{h}$.\,
+    Thus, \,$\alpha_{1} \in \mathfrak{h} \cap \mathfrak{h}^{\perp} = \{\,0\,\}$.\,
+    This establishes that \,$\alpha_{1} = 0$.\,
+    We may now conclude that
+    \,$
+    \alpha
+    \,=\,
+        \alpha_{1} + \i\cdot\alpha_{2}
+    \,=\,
+        0 + \i\cdot\alpha_{2}
+    \,=\,
+        \i\cdot\alpha_{2}
+    \,\in\,
+        \i\cdot\mathfrak{t}
+    $,\,
+    as required.
 \item
     Let \,$X \in \mathfrak{g}_{\alpha}$\, and \,$Y \in \mathfrak{g}_{\beta}$.\,
     We need to show \,$[\,X\,,Y\,] \,\in\, \mathfrak{g}_{\alpha+\beta}$.\,
