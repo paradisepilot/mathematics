@@ -1257,8 +1257,9 @@ Then, the following statements are true:
     First, recall that each eigenvalue of a skew-self-adjoint operator \,$A$\,
     on a finite-dimensional complex inner product space
     \,$\left(\,\overset{{\color{white}.}}{V}\,,\,\langle\!\langle\,\cdot\,,\,\cdot\,\rangle\!\rangle\,\right)$\,
-    is pure imaginary.
-    Indeed, let \,$v$\, be an eigenvector of \,$A$\, corresponding to the eigenvalue \,$\lambda \in \C$.\,
+    is purely imaginary.
+    Indeed, let \,$v \in V$\, be an eigenvector of \,$A$\,
+    corresponding to the eigenvalue \,$\lambda \in \C$.\,
     Then,
     \begin{eqnarray*}
     \overline{\lambda}\cdot\langle\!\langle\,v\,,\,v\,\rangle\!\rangle
@@ -1277,16 +1278,14 @@ Then, the following statements are true:
         -\,\lambda \cdot \langle\!\langle\,v\,,\,v\,\rangle\!\rangle
     \end{eqnarray*}
     which immediately implies
-    \,$\lambda + \overline{\lambda} \,=\, 0$,\,
-    % $\Longleftrightarrow$
-    % \;\;$\overline{\lambda} = -\,\lambda$\;\;
-    % $\Longleftrightarrow$
+    \,$\lambda + \overline{\lambda} \,=\, 0$\,
+    (\,since \,$\langle\!\langle\,v\,,\,v\,\rangle\!\rangle > 0$\,),
     equivalently
     \,$\lambda \in \i\cdot\Re$.\,
     \vskip 0.1cm
     Next, let \,$\alpha \,\in\, R(\mathfrak{h})$, i.e.,\, let \,$\alpha$\, be a root.
     We need to show that \,$\alpha \,\in\, \i\cdot\mathfrak{t}$.\,
-    Write:
+    Writing
     \,$
     \alpha
     \,=\,
@@ -1296,7 +1295,9 @@ Then, the following statements are true:
     \,=\,
         \mathfrak{t} + \i\cdot\mathfrak{t}
     $\,
-    (\,where \,$\alpha_{1}, \alpha_{2} \in \mathfrak{t}$\,).
+    (\,where \,$\alpha_{1}, \alpha_{2} \in \mathfrak{t}$\,),
+    we see that we need to show $\alpha_{1} = 0$.
+    \vskip 0.1cm
     Now, \,$\alpha$\, being a root means that
     there exist a nonzero \,$X \in \mathfrak{g}$\, such that
     \begin{equation*}
@@ -1308,7 +1309,6 @@ Then, the following statements are true:
     \quad
     \textnormal{for each \,$H \in \mathfrak{h}$}
     \end{equation*}
-    We need to show that $\alpha_{1} = 0$.
     By Proposition \ref{ReductiveImpliesUnitaryInnerProductOnRealForm},
     \,$\ad_{H} \in \gl(\mathfrak{g})$\, is skew-self-adjoint,
     for each \,$H \in \mathfrak{t} \subset \mathfrak{k}$.\,
