@@ -930,6 +930,9 @@ Recall:
 \end{itemize}
 
 \proof
+We follow the solution of Problem 4.10, p.98, \cite{Radovanovic2008}.
+\vskip 0.1cm
+\noindent
 Recall:
 \,$W_{\mu} \,:=\, \dfrac{1}{2}\,\varepsilon_{\mu\nu\rho\sigma}\,M^{\nu\rho}P^{\sigma}$\,
 and
@@ -948,18 +951,238 @@ W_{\mu}\,W^{\mu}\cdot\psi
     \left(\,
         \dfrac{\i}{4}\,\varepsilon_{\mu\nu\rho\sigma}\,S^{\nu\rho}\partial^{\sigma}
         \,\right)
+    \!
     \left(\,
         \dfrac{\i}{4}\,\varepsilon^{\mu\alpha\beta\gamma}\,S_{\alpha\beta}\partial_{\gamma}
         \,\right)
     \psi
 \;\; = \;\;
     -\,\dfrac{1}{16}\,
-    \varepsilon_{\mu\nu\rho\sigma}\,\varepsilon^{\mu\alpha\beta\gamma}\,
-    S^{\nu\rho}\,S_{\alpha\beta}\,
-    \partial^{\sigma}\,\partial_{\gamma}\,\psi
+    \varepsilon_{\mu\nu\rho\sigma}\,\varepsilon^{\mu\alpha\beta\gamma}
+    \cdot
+    S^{\nu\rho}\,S_{\alpha\beta}
+    \cdot
+    \partial^{\sigma}\partial_{\gamma}\,\psi
 \\
 & = &
+    {\color{red}+}\,\dfrac{1}{16}\,
+    \left(\,
+        {\color{red}\delta_{\nu}^{\alpha}\,\delta_{\rho}^{\beta}\,\delta_{\sigma}^{\gamma}}
+        \,\overset{{\color{white}.}}{-}\,
+        \delta_{\nu}^{\alpha}\,\delta_{\rho}^{\gamma}\,\delta_{\sigma}^{\beta}
+        \,\overset{{\color{white}.}}{+}\,
+        \delta_{\nu}^{\beta}\,\delta_{\rho}^{\gamma}\,\delta_{\sigma}^{\alpha}
+        \,\overset{{\color{white}.}}{-}\,
+        {\color{red}\delta_{\nu}^{\beta}\,\delta_{\rho}^{\alpha}\,\delta_{\sigma}^{\gamma}}
+        \,\overset{{\color{white}.}}{+}\,
+        \delta_{\nu}^{\gamma}\,\delta_{\rho}^{\alpha}\,\delta_{\sigma}^{\beta}
+        \,\overset{{\color{white}.}}{-}\,
+        \delta_{\nu}^{\gamma}\,\delta_{\rho}^{\beta}\,\delta_{\sigma}^{\alpha}
+        \,\right)
+    S^{\nu\rho}\,S_{\alpha\beta}
+    \cdot
+    \partial^{\sigma}\partial_{\gamma}\,\psi
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            {\color{red}S^{\alpha\beta}S_{\alpha\beta}\cdot\partial^{\gamma}\partial_{\gamma}}
+            \,-\,
+            {\color{red}S^{\beta\alpha}S_{\alpha\beta}\cdot\partial^{\gamma}\partial_{\gamma}}
+            \\
+            \overset{{\color{white}1}}{-}\,
+            S^{\alpha\gamma}S_{\alpha\beta}\cdot\partial^{\beta}\partial_{\gamma}
+            \overset{{\color{white}1}}{+}\,
+            S^{\beta\gamma}S_{\alpha\beta}\cdot\partial^{\alpha}\partial_{\gamma}
+            \overset{{\color{white}1}}{+}\,
+            S^{\gamma\alpha}S_{\alpha\beta}\cdot\partial^{\beta}\partial_{\gamma}
+            \overset{{\color{white}1}}{-}\,
+            S^{\gamma\beta}S_{\alpha\beta}\cdot\partial^{\alpha}\partial_{\gamma}
+            \end{array}
+        \,\right)
+    \psi
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            {\color{black}S^{\alpha\beta}S_{\alpha\beta}\cdot\textnormal{\large$\Box$}}
+            \;\;{\color{red}+}\;\,
+            S^{{\color{red}\alpha\beta}}S_{\alpha\beta}\cdot\textnormal{\large$\Box$}
+            \\
+            \overset{{\color{white}1}}{-}\,
+            S^{\alpha\gamma}S_{\alpha\beta}\cdot\partial^{\beta}\partial_{\gamma}
+            \;\overset{{\color{white}1}}{{\color{red}-}}\;\,
+            S^{{\color{red}\gamma\beta}}S_{\alpha\beta}\cdot\partial^{\alpha}\partial_{\gamma}
+            \;\overset{{\color{white}1}}{{\color{red}-}}\;
+            S^{{\color{red}\alpha\gamma}}S_{\alpha\beta}\cdot\partial^{\beta}\partial_{\gamma}
+            \,\overset{{\color{white}1}}{-}\,
+            S^{\gamma\beta}S_{\alpha\beta}\cdot\partial^{\alpha}\partial_{\gamma}
+            \end{array}
+        \,\right)
+    \psi
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            2\cdot S^{\alpha\beta}S_{\alpha\beta}\cdot\textnormal{\large$\Box$}
+            \\
+            \overset{{\color{white}1}}{-}\,
+            2 \cdot S^{\alpha\gamma}S_{\alpha\beta}\cdot\partial^{\beta}\partial_{\gamma}
+            \,\overset{{\color{white}1}}{-}\,
+            2 \cdot S^{\gamma\beta}S_{\alpha\beta}\cdot\partial^{\alpha}\partial_{\gamma}
+            \end{array}
+        \,\right)
+    \psi
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            2\cdot\left(\,
+                2\cdot\gamma_{\alpha}\gamma^{\alpha} + \delta^{\alpha}_{\alpha}
+                \,\right)
+            \cdot
+            \textnormal{\large$\Box$}
+            \\
+            \overset{{\color{white}1}}{-}\,
+            2 \cdot\left(\,
+                2\cdot\gamma^{\gamma}\gamma_{\beta} + \delta^{\gamma}_{\beta}
+                \,\right)
+            \cdot\partial^{\beta}\partial_{\gamma}
+            \,\overset{{\color{white}1}}{-}\,
+            2 \cdot\left(\,
+                2\cdot\gamma^{\gamma}\gamma_{\alpha} + \delta^{\gamma}_{\alpha}
+                \,\right)
+            \cdot\partial^{\alpha}\partial_{\gamma}
+            \end{array}
+        \,\right)
+    \psi
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            2\cdot\left(\,
+                2 \cdot 4 + 4
+                \,\right)
+            \cdot
+            \textnormal{\large$\Box$}
+            \\
+            \overset{{\color{white}1}}{-}\,
+            4 \cdot\left(\,
+                2\cdot\gamma^{\gamma}\gamma_{\beta} + \delta^{\gamma}_{\beta}
+                \,\right)
+            \cdot\partial^{\beta}\partial_{\gamma}
+            \end{array}
+        \,\right)
+    \psi
+\;\; = \;\;
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            2\cdot\left(\,
+                2 \cdot 4 + 4
+                \,\right)
+            \cdot
+            \textnormal{\large$\Box$}
+            \\
+            \overset{{\color{white}1}}{-}\,
+            4 \cdot\left(\,
+                2\cdot\gamma^{\gamma}\gamma_{\beta}\cdot\partial^{\beta}\partial_{\gamma}
+                +
+                \textnormal{\large$\Box$}
+                \,\right)
+            \end{array}
+        \,\right)
+    \psi
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            24 \cdot \textnormal{\large$\Box$}\,\psi
+            \\
+            \overset{{\color{white}1}}{-}\,
+            4 \cdot\left(\,
+                2\cdot\gamma_{\beta}\partial^{\beta}\left(\gamma^{\gamma}\partial_{\gamma}\psi\right)
+                \overset{{\color{white}.}}{+}
+                \textnormal{\large$\Box$}\,\psi
+                \,\right)
+            \end{array}
+        \,\right)    
+\;\; = \;\;
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            24 \cdot \left(-\,m^{2}\,\psi\right)
+            \\
+            \overset{{\color{white}1}}{-}\,
+            4 \cdot\left(\,
+                2\cdot\gamma_{\beta}\,\partial^{\beta}\left(-\i\,m\,\psi\right)
+                \overset{{\color{white}.}}{+}
+                \left(-\,m^{2}\,\psi\right)
+                \,\right)
+            \end{array}
+        \,\right)
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        \begin{array}{c}
+            -\, 24 \, m^{2} \,\psi
+            \\
+            \overset{{\color{white}1}}{-}\,
+            4 \cdot\left(\,
+                2\cdot(-m^{2}\,\psi)%\gamma_{\beta}\,\partial^{\beta}\left(-\i\,m\,\psi\right)
+                \overset{{\color{white}.}}{+}
+                \left(-\,m^{2}\,\psi\right)
+                \,\right)
+            \end{array}
+        \,\right)
+\;\; = \;\;
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        -\,24 \,\overset{{\color{white}.}}{-}\, 4 \cdot (-3)
+        \,\right)
+    \cdot
+    m^{2}\,\psi
+\\
+& = &
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        -\,24 \,\overset{{\color{white}.}}{+}\, 12
+        \,\right)
+    \cdot
+    m^{2}\,\psi
+\;\; = \;\;
+    +\,\dfrac{1}{16}\,
+    \left(\,
+        -\,12
+        \,\right)
+    \cdot
+    m^{2}\,\psi
+\\
+& = &
+    {\color{red}-}\,\dfrac{3}{4}\,m^{2}\,\psi\,,
 \end{eqnarray*}
+Since \,$W_{\mu}W^{\mu}\cdot\psi \,=\, -\,\,m^{2}\,s(s+1)\,\psi$,\,
+it follows that \,$s(s+1) \,=\, \dfrac{3}{4}$.\,
+Now observe:
+\begin{equation*}
+s(s+1) \,=\, \dfrac{3}{4}
+\quad\Longleftrightarrow\quad
+s^{2} + s - \dfrac{3}{4} \,=\, 0
+\quad\Longleftrightarrow\quad
+\left(\,s - \dfrac{1}{2}\,\right)\!\left(\,s + \dfrac{3}{2}\,\right) \,=\, 0
+\quad\Longrightarrow\quad
+s \,=\, \dfrac{1}{2} \;,\; -\,\dfrac{3}{2} 
+\end{equation*}
+Since the spin of a species of elementary particles must be a non-negative multiple of \,$\dfrac{1}{2}$,\,
+we see that we must have \,$s \,=\, \dfrac{1}{2}$\,
+(\,i.e., we reject \,$s = -\,\dfrac{3}{2}$\, as inadmissible\,),\, as required.
 \qed
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
