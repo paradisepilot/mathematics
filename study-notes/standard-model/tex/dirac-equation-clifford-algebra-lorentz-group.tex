@@ -955,7 +955,35 @@ recall that the Dirac equation was first conceived by Dirac as
 a form of ``square root'' of the Klein-Gordon equation;
 in particular, so that solutions of the Dirac equation
 would also satisfy the Klein-Gordon equation.
-Here is the precise proof:
+Here is the formal proof:
+\begin{eqnarray*}
+\i\,\gamma^{\mu}\,\partial_{\mu}\left(\,\i\,\gamma^{\nu}\,\partial_{\nu}\,\psi\,\right)
+& = &
+    \i\,\gamma^{\mu}\,\partial_{\mu}\left(\,m\,\psi\,\right)
+\;\; = \;\;
+    m\cdot\left(\,\i\,\gamma^{\mu}\,\partial_{\mu}\psi\,\right)
+\;\; = \;\;
+    m\cdot\left(\,m\,\psi\,\right)
+\;\; = \;\;
+    m^{2}\,\psi
+\\
+\Vert\quad\quad\quad\,{\color{white}.}
+&&
+\\
+% \i\,\gamma^{\mu}\,\partial_{\mu}\left(\,\i\,\gamma^{\nu}\,\partial_{\nu}\,\psi\,\right)
+% & = &
+    -\,\gamma^{\mu}\gamma^{\nu}\,\partial_{\mu}\partial_{\nu}\,\psi
+& = &
+    -\,\dfrac{\{\gamma^{\mu},\gamma^{\nu}\}}{2}\;\partial_{\mu}\partial_{\nu}\,\psi
+\;\; = \;\;
+    -\,\dfrac{2\,g^{\mu\nu}}{2}\;\partial_{\mu}\partial_{\nu}\,\psi
+\;\; = \;\;
+    -\,\partial^{\mu}\partial_{\nu}\,\psi
+\;\; = \;\;
+    -\,\textnormal{\large$\Box$}\,\psi\,,
+\end{eqnarray*}
+which implies: \,$\left(\,\textnormal{\large$\Box$} \,+\, m^{2}\,\right)\psi \,=\, 0$,\,
+i.e., that \,$\psi$\, indeed satisfies the Klein-Gordon equation, as desired.
 
 \vskip 0.1cm
 \noindent
