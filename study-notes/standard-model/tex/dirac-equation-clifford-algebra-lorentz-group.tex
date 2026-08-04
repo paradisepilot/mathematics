@@ -892,5 +892,74 @@ has the following physical interpretation:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\section{The mass and spin of a Dirac field}
+
+Recall:
+\begin{itemize}
+\item
+    Each species of elementary particles is mathematically described by
+    an irreducible representation of the Poincaré group.
+\item
+    The irreducible representations of the Poincaré group
+    are classified by the eigenvalues of its two Casimir operators:
+    \begin{equation*}
+    P_{\mu}P^{\mu}\cdot\psi \,=\, m^{2}\,\psi\,
+    \quad\quad\textnormal{and}\quad\quad
+    W_{\mu}W^{\mu}\cdot\psi \,=\, -m^{2}\,s\,(s+1)\,\psi\,,
+    \end{equation*}
+    where \,$m^{2} \in \Re$\, is the mass, and
+    \,$s \in \left\{\,0,\,\frac{1}{2},\,1,\,\frac{3}{2},\,2,\,\frac{5}{2},\ldots\,\right\}$\,
+    is the spin of the given species of elementary particles.
+\item
+    In this section, we seek to show that a Dirac field \,$\psi$\, necessarily has spin $\frac{1}{2}$.
+    Given the above facts, what we need to show is that,
+    if a field \,$\psi$\, satisfies the Dirac equation (with mass parameter \,$m$,\, say),
+    then it also satisfies the Klein-Gordon equation with the same mass parameter \,$m$,\,
+    and it is an eigenvector of the square of the Pauli-Lubanski pseudovector with eigvenvalue 
+    \,$-\,\dfrac{3}{4} \cdot m^{2} = -\,m^{2}\cdot\dfrac{1}{2}\cdot\left(\dfrac{1}{2}+1\right)$,\, i.e.,
+    \begin{equation*}
+    \left(\,\i\cdot\gamma^{\mu}\partial_{\mu} \overset{{\color{white}.}}{-} m\,\right)\cdot\psi \,=\, 0
+    \quad\Longrightarrow\;\;
+    \left\{\;\begin{array}{l}
+        P_{\mu}P^{\mu}\cdot\psi \,=\, m^{2}\,\psi\,, \;\;\textnormal{and}
+        \\
+        W_{\mu}W^{\mu}\cdot\psi \,=\, -\,\dfrac{3}{4}\,m^{2}\,\psi\,,
+        \end{array}\right.
+    \end{equation*}
+\end{itemize}
+
+\proof
+Recall:
+\,$W_{\mu} \,:=\, \dfrac{1}{2}\,\varepsilon_{\mu\nu\rho\sigma}\,M^{\nu\rho}P^{\sigma}$\,
+and
+\,$M^{\nu\rho} \,=\, \i\left(x^{\nu}P^{\rho} - x^{\rho}P^{\nu}\right) \,+\, \dfrac{1}{2}\,S^{\nu\rho}$.\,
+Hence,
+\begin{equation*}
+W_{\mu}
+\;\; = \;\;
+    \dfrac{1}{4}\,\varepsilon_{\mu\nu\rho\sigma}\,S^{\nu\rho}P^{\sigma}
+\;\; = \;\;
+    \dfrac{\i}{4}\,\varepsilon_{\mu\nu\rho\sigma}\,S^{\nu\rho}\partial^{\sigma}
+\end{equation*}
+\begin{eqnarray*}
+W_{\mu}\,W^{\mu}\cdot\psi
+& = &
+    \left(\,
+        \dfrac{\i}{4}\,\varepsilon_{\mu\nu\rho\sigma}\,S^{\nu\rho}\partial^{\sigma}
+        \,\right)
+    \left(\,
+        \dfrac{\i}{4}\,\varepsilon^{\mu\alpha\beta\gamma}\,S_{\alpha\beta}\partial_{\gamma}
+        \,\right)
+    \psi
+\;\; = \;\;
+    -\,\dfrac{1}{16}\,
+    \varepsilon_{\mu\nu\rho\sigma}\,\varepsilon^{\mu\alpha\beta\gamma}\,
+    S^{\nu\rho}\,S_{\alpha\beta}\,
+    \partial^{\sigma}\,\partial_{\gamma}\,\psi
+\\
+& = &
+\end{eqnarray*}
+\qed
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
