@@ -1977,3 +1977,112 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\section{Gauge invariance of Lagrangian densities in terms of local coordinates}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{proposition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+	\,$\Phi = \left(\phi_{1},\ldots,\phi_{r}\right) :U \longrightarrow \C^{r}$\,
+	is a {\color{red}local representative} of a smooth section
+	of a complex vector bundle of rank \,$r \in \N$\,
+	over a spacetime manifold \,$\mathcal{M}$\,
+	(\,i.e., \,$\mathcal{M}$\, is a Lorentzian manifold of dimension \,$4$\,)\,
+	associated (\,via a representation \,$G \longrightarrow \GL(r,\C)$\,)
+	to a principal $G$-bundle over \,$\mathcal{M}$,\,
+	where \,$G$\, is a compact Lie subgroup of \,$\GL(n,\C)$\, and
+	\,$U \subset \mathcal{M}$\, is an open subset of a spacetime manifold \,$\mathcal{M}$.\,
+\item
+    $\mathcal{L}_{0}\!\left(\,\Phi\,,\,\partial\,\Phi\,\right)$\,
+    is a Lagranggian density {\color{red}(globally) invariant}
+    under the associated action of \,$G$\, on \,$\C^{r}$,\, i.e.,
+    \begin{equation*}
+    \mathcal{L}_{0}\!\left(\,g\cdot\Phi\,,\,g\cdot\partial\,\Phi\,\right)
+    \;\; = \;\;
+        \mathcal{L}_{0}\!\left(\,\Phi\,,\,\partial\,\Phi\,\right),
+    \quad
+    \textnormal{for each \,$g \in G \subset \GL(r,\C)$}
+    \end{equation*}
+    Here,
+    \,$g \cdot \Phi$\, and \,$g \cdot \partial\,\Phi$\,
+    are given by
+    \begin{eqnarray*}
+    (\,g\cdot\Phi\,)_{k}
+    {\color{white}..}
+    & = &
+        \overset{n}{\underset{l=1}{\sum}}\;
+        g_{k}^{l}\,\phi_{l}\,,
+    \quad\textnormal{for each \,$k = 1, \ldots, r$}
+    \\
+    (\,g\cdot\partial_{\mu}\Phi\,)_{k}
+    & = &
+        \overset{n}{\underset{l=1}{\sum}}\;
+        g_{k}^{l}\,\partial_{\mu}\phi_{l}\,,
+    \quad\textnormal{for each \,$k = 1, \ldots, r$,\, and each \,$\mu = 0,1,2,3$}
+    \end{eqnarray*}
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    If the collection
+    \,$
+    \left\{\,
+        A_{\mu} :
+        U \longrightarrow \mathfrak{g} \subset \gl(r,\C) = \C^{r \times r}
+        \,\right\}_{\mu = 0}^{4}
+    $\,
+    of $\mathfrak{g}$-valued (\,$\C^{r \times r}$-valued\,) functions defined on \,$U$\,
+    is a local representative of a connection $1$-form,
+    then it satisfies the following transformation law:
+    \begin{equation*}
+    A_{\mu}^{(g)}
+    \;\; = \;\;
+        g \cdot A_{\mu} \cdot g^{-1}
+        \,+\,
+        \i\left(\,\partial_{\mu}g\,\right) \cdot g^{-1}\,,
+    \end{equation*}
+    for each local gauge transformation \,$g : U \longrightarrow G$,\,
+    where \,$(\,g , A_{\mu}\,) \longmapsto A_{\mu}^{(g)}$\,
+    represents the induced locally variable action of \,$G$\, on \,$A_{\mu}$;\,
+    in other words,
+    \,$A_{\mu}^{(g)}$\, is the transformed version of \,$A_{\mu}$\,
+    under the local gauge transformation \,$g : U \longrightarrow G$.\,
+\item
+    The modified Lagrangian \,$\mathcal{L}_{0}\!\left(\,\Phi\,,\,D\,\Phi\,\right)$\,
+    is gauge invariant (i.e., invariant with respect to the locally variable action of $G$).
+\end{enumerate}
+\end{proposition}
+\proof
+\begin{enumerate}
+\item
+    Recall that the covariant derivative operator \,$D_{\mu}$\, determined by \,$A_{\mu}$\,
+    is given by:
+    \begin{equation*}
+    D_{\mu}\!\left(\,\Phi\,\right)
+    \;\; = \;\;
+        \partial_{\mu}\,\Phi
+        \,+\,
+        \i\,A_{\mu}\cdot\Phi
+    \end{equation*}
+    Hence,
+    \,$D_{\mu}^{(g)} \,=\, \partial_{\mu} + \i\,A_{\mu}^{(g)}$\,
+    \begin{equation*}
+    D^{(g)}_{\mu}\!\left(\,\Phi^{(g)}\,\right)
+    \;\; = \;\;
+        \left(\,D_{\mu}\,\Phi\,\right)^{(g)}
+    \end{equation*}
+\item
+
+\end{enumerate}
+\qed
+
+
+
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
