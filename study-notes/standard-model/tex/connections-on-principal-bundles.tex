@@ -2058,7 +2058,7 @@ Then, we make the following definitions:
     \textnormal{for each \,$(p,v,\theta) \in J(P,V)$,\, $g \in G$}
     \end{equation*}
 \item
-    A Lagrangian \,$L(p,v,\theta)$\, is said to be \,\textbf{$G$-invariant}\, if
+    A Lagrangian \,$L(p,v,\theta)$\, is said to be \,\textbf{$\rho$-invariant}\, if
     \begin{equation*}
     L\!\left(\;
         \overset{{\color{white}1}}{p}
@@ -2149,7 +2149,7 @@ L\!\left(\;
 	    \d\psi_{p}
 	    \,\right),
 	\quad
-	\textnormal{since \,$L(\,\cdot\,,\,\cdot\,,\,\cdot\,)$\, is a Lagrangian}
+	\textnormal{since \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\, is a Lagrangian}
 \end{eqnarray*}
 This completes the proof of the Theorem.
 \qed
@@ -2163,7 +2163,7 @@ This completes the proof of the Theorem.
 \noindent
 Suppose
 \,$L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
-is a $G$-invariant Lagrangian.
+is a $\rho$-invariant Lagrangian.
 Then,
 \,$L^{\flat}\!\left(\psi\right)$\,
 transforms
@@ -2195,6 +2195,15 @@ as follows:
         \psi(p)
         \;\right)
 \end{eqnarray*}
+In particular, the \,$\rho$-invariance\, of \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\,
+does NOT imply the gauge
+invariance\footnote{
+The gauge invariance of
+\,$L^{\flat}(\,\psi\,)$\,
+means
+\,\,$L^{\flat}(\,f^{*}\psi\,) \,=\, \,L^{\flat}(\,\psi\,)$\,
+}
+of \,$L^{\flat}(\,\psi\,)$.\,
 \end{theorem}
 \proof
 \vskip 0.3cm
@@ -2483,6 +2492,24 @@ Hence,
         \psi(p)
         \;\right)
 \end{eqnarray*}
+Lastly, we note that the \,$\rho$-invariance\, of \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\,
+does not imply the gauge invariance of \,$L^{\flat}(\,\psi\,)$\, due to the presence
+of the term
+\,$
+\left[\;
+    \d\rho_{e}
+    \,\circ\,
+    \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\right)_{\!*}
+    \,\circ\,
+    \left(\,\sigma_{f}^{-1}\,\right)_{*}
+    {\color{red}\left(\,\overset{{\color{white}.}}{\cdot}\,\right)}
+    \,\right]
+\cdot\,
+{\color{black}\rho(\sigma_{f}(p))^{-1}}
+\,\cdot
+\psi(p)
+$\,
+in the right-hand side of the above transformation formula.
 This completes the proof of the Theorem.
 \qed
 
