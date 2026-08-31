@@ -1692,7 +1692,7 @@ Suppose:
 	$F^{\,\omega} \in \Omega^{2}(P,\mathfrak{g})$\, is the curvature $2$-form of \,$\omega$,\,
 	and
 \item
-	$f \in \mathscr{G}(P)$\, be a gauge transformation.
+	$f \in \mathscr{G}(P)$\, is a gauge transformation.
 \end{itemize}
 Let \;$\mu_{G} \in \Omega^{1}(G,\mathfrak{g})$\, be the Maurer-Cartan form of \,$G$,\, and
 \,$\sigma_{f} \in \mathscr{C}^{\infty}(P,G)^{G}$\,
@@ -2169,10 +2169,322 @@ Then,
 transforms
 -- under pullbacks by bundle automorphisms (a.k.a. gauge transformations) --
 as follows:
-\begin{equation*}
-L^{\flat}\!\left(\,\overset{{\color{white}.}}{f^{*}(\psi)}\,\right)\!(x)
-\end{equation*}
+\begin{eqnarray*}
+&&
+    L^{\flat}\!\left(\,\overset{{\color{white}.}}{f^{*}\psi}\,\right)\!(\,x\,)
+\\
+& = &
+    L\!\left(\;
+        p
+        \;,\;
+        \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
+        \;,\;
+        \rho\!\left(\sigma_{f}^{-1}(p)\right)\,\circ\,\d\psi_{p}
+        \,+\,
+        \left[\;
+            \d\rho_{e}
+            \,\circ\,
+            \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\right)_{\!*}
+            \,\circ\,
+            \left(\,\sigma_{f}^{-1}\,\right)_{*}
+            {\color{red}\left(\,\overset{{\color{white}.}}{\cdot}\,\right)}
+            \,\right]
+        \cdot\,
+        {\color{black}\rho(\sigma_{f}(p))^{-1}}
+        \,\cdot
+        \psi(p)
+        \;\right)
+\end{eqnarray*}
 \end{theorem}
+\proof
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;
+For smooth 
+\,$A : (-\varepsilon,\varepsilon) \xrightarrow{{\color{white}....}} \GL(V)$\,
+and
+\,$v : (-\varepsilon,\varepsilon) \xrightarrow{{\color{white}....}} V$,\,
+where \,$V$\, is a finite-dimensional vector space over \,$\Re$\, or \,$\C$,\,
+we have:
+\,$
+\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\,A(t) \cdot v(t)
+\; = \;
+    A(0) \cdot v^{\prime}(0)
+    \, + \,
+    A^{\prime}(0) \cdot v(0)
+$\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;\;
+\begin{eqnarray*}
+\left.\dfrac{\d}{\d\,t}\right\vert_{t=0}\,A(t) \cdot v(t)
+& = &
+    \underset{t\,\rightarrow\,0}{\lim}\;
+    \dfrac{1}{t}
+    \left(\,
+        A(t) \cdot v(t)
+        \, \overset{{\color{white}1}}{-} \,
+        A(0) \cdot v(0)
+        \,\right)
+\\
+& = &
+    \underset{t\,\rightarrow\,0}{\lim}\;
+    \dfrac{1}{t}
+    \left(\,
+        A(t) \cdot v(t)
+        \, \overset{{\color{white}1}}{-} \,
+        A(t) \cdot v(0)
+        \, \overset{{\color{white}1}}{+} \,
+        A(t) \cdot v(0)
+        \, \overset{{\color{white}1}}{-} \,
+        A(0) \cdot v(0)
+        \,\right)
+\\
+& = &
+    \underset{t\,\rightarrow\,0}{\lim}\;
+    \dfrac{1}{t}
+    \left(\,
+        A(t) \cdot v(t)
+        \, \overset{{\color{white}1}}{-} \,
+        A(t) \cdot v(0)
+        \,\right)
+    \; + \;
+    \underset{t\,\rightarrow\,0}{\lim}\;
+    \dfrac{1}{t}
+    \left(\,
+        A(t) \cdot v(0)
+        \, \overset{{\color{white}1}}{-} \,
+        A(0) \cdot v(0)
+        \,\right)
+\\
+& = &
+    \underset{t\,\rightarrow\,0}{\lim}\;\,
+    A(t) \cdot 
+    \left(\,
+        \dfrac{v(t) - v(0)}{t}
+        \,\right)
+    \; + \;
+    \left(\,
+        \underset{t\,\rightarrow\,0}{\lim}\;
+        \dfrac{A(t) - A(0)}{t}
+        \,\right)
+    \cdot
+    v(0)
+\\
+& = &
+    A(0) \cdot v^{\prime}(0)
+    \, + \,
+    A^{\prime}(0) \cdot v(0)
+\end{eqnarray*}
+This completes the proof of Claim 1.
+
+\vskip 0.3cm
+\noindent
+Now, recall that \,$f^{*}\psi \,:=\, \psi \circ f$.\,
+We therefore have
+\begin{equation*}
+(f^{*}\psi)\!\left(\;\overset{{\color{white}.}}{
+    p
+    }\;\right)
+\;\; = \;\;
+    \psi\!\left(\,\overset{{\color{white}.}}{
+        f(p)
+        }\,\right)
+\;\; = \;\;
+    \psi\!\left(\,\overset{{\color{white}.}}{
+        p\cdot\sigma_{f}(p)
+        }\right)
+\;\; = \;\;
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}(p)^{-1}
+        }\,\right)
+    \cdot
+    \psi(p)
+\;\; = \;\;
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}^{-1}(p)
+        }\,\right)
+    \cdot
+    \psi(p)
+\end{equation*}
+We next compute the differential \,$\d(f^{*}\psi)_{p}$\,:
+\begin{eqnarray*}
+&&
+    \d(f^{*}\psi)_{p}\!\left(\,\overset{{\color{white}.}}{X}\,\right)
+\;\; = \;\;
+    \left.\dfrac{\d}{\d\,t}\right\vert_{t=0}
+    \,
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}^{-1}(\gamma(t))
+        }\,\right)
+    \cdot
+    \psi(\gamma(t))
+\\
+& = &
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}^{-1}(p)
+        }\,\right)
+    \cdot
+    \left(\,
+        \left.\dfrac{\d}{\d\,t}\right\vert_{t=0}
+        \,
+        \psi(\gamma(t))
+        \,\right)
+    \; + \;
+    \left(\,
+        \left.\dfrac{\d}{\d\,t}\right\vert_{t=0}
+        \,
+        \rho\!\left(\,\overset{{\color{white}.}}{
+            \sigma_{f}^{-1}(\gamma(t))
+            }\,\right)
+        \,\right)
+    \cdot
+    \psi(p)\,,
+\\
+&&
+    \quad
+    \textnormal{by Claim 1,\, since
+        \,$
+        \rho\!\left(\,\overset{{\color{white}.}}{
+            % \sigma_{f}(p)^{-1}
+            \sigma_{f}^{-1}(\gamma(t))
+            }\,\right)
+        \,\in\,
+        \GL(V)
+        $,\,
+        \,$
+        \psi(\gamma(t)) \,\in\, V
+        $\,
+        }
+\\
+& = &
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}^{-1}(p)
+        }\,\right)
+    \cdot
+    \left(\,\overset{{\color{white}1}}{
+        \d\psi_{p}(\,\gamma^{\prime}(0)\,)
+        }\,\right)
+    \; + \;
+    \left(\,
+        \left.\dfrac{\d}{\d\,t}\right\vert_{t=0}
+        \,
+        \rho\!\left(\,\overset{{\color{white}.}}{
+            \sigma_{f}^{-1}(\gamma(t))
+            }\,\right)
+        \cdot
+        {\color{red}\rho(\sigma_{f}(p))}
+        \,\right)
+    \cdot
+    {\color{red}\rho(\sigma_{f}(p))^{-1}}
+    \cdot
+    \psi(p)
+\\
+& = &
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}^{-1}(p)
+        }\,\right)
+    \cdot
+    \left(\,\overset{{\color{white}1}}{
+        \d\psi_{p}(\,X\,)
+        }\,\right)
+    \; + \;
+    \left(\,
+        \left.\dfrac{\d}{\d\,t}\right\vert_{t=0}
+        \,
+        \rho\!\left(\,\overset{{\color{white}.}}{
+            \sigma_{f}^{-1}(\gamma(t))
+            \cdot
+            \sigma_{f}(p)
+            }\,\right)
+        \,\right)
+    \cdot
+    {\color{black}\rho(\sigma_{f}(p))^{-1}}
+    \cdot
+    \psi(p)
+\\
+& = &
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}^{-1}(p)
+        }\,\right)
+    \cdot
+    \left(\,\overset{{\color{white}.}}{
+        \d\psi_{p}(X)
+        }\,\right)
+    \; + \;
+    \left(\,
+        \left.\dfrac{\d}{\d\,t}\right\vert_{t=0}
+        \,
+        \rho\!\left(\,\overset{{\color{white}.}}{
+            R_{\sigma_{f}(p)}
+            \,\circ\,
+            \sigma_{f}^{-1}(\,\gamma(t)\,)
+            }\,\right)
+        \right)
+    \cdot\,
+    {\color{black}\rho(\sigma_{f}(p))^{-1}}
+    \,\cdot
+    \psi(p)
+\\
+& = &
+    \rho\!\left(\,\overset{{\color{white}.}}{
+        \sigma_{f}^{-1}(p)
+        }\,\right)
+    \cdot
+    \left(\,\overset{{\color{white}.}}{
+        \d\psi_{p}(X)
+        }\,\right)
+    \; + \;
+    \left[\;
+        \d\rho_{e}
+        \,\circ\,
+        \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\,\right)_{*}
+        \,\circ\,
+        \left(\,\sigma_{f}^{-1}\,\right)_{*}
+        \left(\,\overset{{\color{white}.}}{X}\,\right)
+        \,\right]
+    \cdot\,
+    {\color{black}\rho(\sigma_{f}(p))^{-1}}
+    \,\cdot
+    \psi(p)
+\end{eqnarray*}
+Hence,
+\begin{eqnarray*}
+&&
+    L^{\flat}\!\left(\,\overset{{\color{white}.}}{f^{*}\psi}\,\right)\!(\,x\,)
+\;\; = \;\;
+    L\!\left(\;
+        \overset{{\color{white}1}}{p}
+        \;,\;
+        (f^{*}\psi)(p)
+        \;,\;
+        \d(f^{*}\psi)_{p}
+        \;\right)
+\\
+& = &
+    L\!\left(\;
+        p
+        \;,\;
+        \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
+        \;,\;
+        \rho\!\left(\sigma_{f}^{-1}(p)\right)\,\circ\,\d\psi_{p}
+        \,+\,
+        \left[\;
+            \d\rho_{e}
+            \,\circ\,
+            \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\right)_{\!*}
+            \,\circ\,
+            \left(\,\sigma_{f}^{-1}\,\right)_{*}
+            {\color{red}\left(\,\overset{{\color{white}.}}{\cdot}\,\right)}
+            \,\right]
+        \cdot\,
+        {\color{black}\rho(\sigma_{f}(p))^{-1}}
+        \,\cdot
+        \psi(p)
+        \;\right)
+\end{eqnarray*}
+This completes the proof of the Theorem.
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
