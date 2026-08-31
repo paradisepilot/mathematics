@@ -2052,8 +2052,25 @@ Then, we make the following definitions:
         \,,\;
         \rho(g)^{-1} \,\circ\, \theta \,\circ\, (R_{g^{-1}})_{*}
         \;\right)
-    \;\; = \;\;
-        L\!\left(\,p,v,\theta\,\right)
+    \; = \;
+        L\!\left(\,p,v,\theta\,\right),
+    \quad
+    \textnormal{for each \,$(p,v,\theta) \in J(P,V)$,\, $g \in G$}
+    \end{equation*}
+\item
+    A Lagrangian \,$L(p,v,\theta)$\, is said to be \,\textbf{$G$-invariant}\, if
+    \begin{equation*}
+    L\!\left(\;
+        \overset{{\color{white}1}}{p}
+        \,,\;
+        \rho(g)\cdot v
+        \,,\;
+        \rho(g) \,\circ\, \theta
+        \;\right)
+    \; = \;
+        L\!\left(\,p,v,\theta\,\right),
+    \quad
+    \textnormal{for each \,$(p,v,\theta) \in J(P,V)$,\, $g \in G$}
     \end{equation*}
 \end{itemize}
 \end{definition}
@@ -2070,7 +2087,7 @@ Suppose
 is a Lagrangian.
 Then, the following formula
 \begin{equation*}
-L^{\sharp}(\psi)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
+L^{\flat}(\psi)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
 \;\; := \;\;
     L\!\left(\,
         \overset{{\color{white}1}}{p}
@@ -2083,7 +2100,7 @@ L^{\sharp}(\psi)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
 \textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $x \in M$,\; $p \in \pi^{-1}(x) \subset P$}
 \end{equation*}
 yields a well-defined map
-\,$L^{\sharp} : C^{\infty}_{\rho}(P,V) \xrightarrow{{\color{white}....}} C^{\infty}(M)$.\,
+\,$L^{\flat} : C^{\infty}_{\rho}(P,V) \xrightarrow{{\color{white}....}} C^{\infty}(M)$.\,
 \end{theorem}
 \proof
 We need only establish that the right-hand side of the above formula
@@ -2136,6 +2153,26 @@ L\!\left(\;
 \end{eqnarray*}
 This completes the proof of the Theorem.
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{theorem}[Theorem 3.3.4, p.51, \cite{Bleecker2005}]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose
+\,$L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
+is a $G$-invariant Lagrangian.
+Then,
+\,$L^{\flat}\!\left(\psi\right)$\,
+transforms
+-- under pullbacks by bundle automorphisms (a.k.a. gauge transformations) --
+as follows:
+\begin{equation*}
+L^{\flat}\!\left(\,\overset{{\color{white}.}}{f^{*}(\psi)}\,\right)\!(x)
+\end{equation*}
+\end{theorem}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
