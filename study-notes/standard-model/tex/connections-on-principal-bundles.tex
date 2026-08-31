@@ -1978,6 +1978,168 @@ Then, the following statements are true:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\section{Lagrangians and gauge invariance}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{definition}
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    $G \xhookrightarrow{{\color{white}..\pi..}} P \xrightarrow{{\color{white}..}\pi{\color{white}..}} M$\,
+    is a principal fibre bundle with structure group \,$G$\, and spacetime base manifold \,$M$,\,
+\item
+    $G \xrightarrow{{\color{white}..}\rho{\color{white}..}} \GL(V)$\,
+    is a representation of \,$G$\, on a finite-dimensional vector space \,$V$\, over \,$\C$.\,
+\end{itemize}
+Then, we make the following definitions:
+\begin{itemize}
+\item
+    The space of ``particle fields'' determined by the representation
+    $G \xrightarrow{{\color{white}..}\rho{\color{white}..}} \GL(V)$:\,
+    \begin{equation*}
+    C^{\infty}_{\rho}(P,V)
+    \;\; := \;\;
+        \left\{\;
+            \psi \in C^{\infty}(P,V)
+            \;\left\vert\,
+                \begin{array}{c}
+                \psi(\,p \cdot g\,) \,=\, \rho(g)^{-1}\cdot\psi(\,p\,),
+                \\
+                \overset{{\color{white}.}}{\textnormal{for each \,$p \in P$,\, $g \in G$}}
+                \end{array}
+                \right.
+            \!\right\}
+    \end{equation*}
+    Remark: There exists a ``natural'' isomorphism
+    \,$C^{\infty}_{\rho}(P,V) \,\cong\, \Gamma\!\left(M,P\times_{\rho}V\right)$,\,
+    where
+    \,$P\times_{\rho}V$\, is the associated vector bundle of the principal fibre bundle
+    $G \xhookrightarrow{{\color{white}..\pi..}} P \xrightarrow{{\color{white}..}\pi{\color{white}..}} M$\,
+    induced by the representation
+    $G \xrightarrow{{\color{white}..}\rho{\color{white}..}} \GL(V)$.\,
+\item
+    The \,\textbf{space of $1$-jets}\, from \,$P$\, to \,$V$:\,
+    \begin{equation*}
+    J(P,V)
+    \;\; := \;\;
+        \left\{\;
+            (\,p, v, \theta\,)
+            \;\left\vert\,
+                \begin{array}{c}
+                p \in P,\;\; v \in V,\;\; \textnormal{and}
+                \\
+                \overset{{\color{white}.}}{\textnormal{
+                    $\theta : T_{p}P \xrightarrow{{\color{white}....}} V$\,
+                    is a linear map 
+                    }}
+                \end{array}
+                \right.
+            \!\right\}
+    \end{equation*}
+\item
+    A \,\textbf{Lagrangian}\, is a map
+    \,$L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
+    such that
+    \begin{equation*}
+    L\!\left(\;
+        \overset{{\color{white}1}}{p \cdot g}
+        \,,\;
+        \rho(g)^{-1}\cdot v
+        \,,\;
+        \rho(g)^{-1} \,\circ\, \theta \,\circ\, (R_{g^{-1}})_{*}
+        \;\right)
+    \;\; = \;\;
+        L\!\left(\,p,v,\theta\,\right)
+    \end{equation*}
+\end{itemize}
+\end{definition}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{theorem}[Theorem 3.3.3, p.51, \cite{Bleecker2005}]
+\mbox{}
+\vskip 0.05cm
+\noindent
+Suppose
+\,$L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
+is a Lagrangian.
+Then, the following formula
+\begin{equation*}
+L^{\sharp}(\psi)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
+\;\; := \;\;
+    L\!\left(\,
+        \overset{{\color{white}1}}{p}
+        \,,\,
+        \psi(p)
+        \,,\,
+        \d\psi_{p}
+        \,\right),
+\quad
+\textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $x \in M$,\; $p \in \pi^{-1}(x) \subset P$}
+\end{equation*}
+yields a well-defined map
+\,$L^{\sharp} : C^{\infty}_{\rho}(P,V) \xrightarrow{{\color{white}....}} C^{\infty}(M)$.\,
+\end{theorem}
+\proof
+We need only establish that the right-hand side of the above formula
+depends only on \,$x \in M$\,
+but otherwise does not depend on the particular choice of \,$p \in \pi^{-1}(x)$.\,
+To this end, first note that, by the definition of \,$C^{\infty}_{\rho}(P,V)$,\,
+we have:
+\,$\psi \circ R_{g} = \rho(g)^{-1} \circ \psi$,\,
+for each \,$\psi \in C^{\infty}_{\rho}(P,V)$,\,
+hence
+\begin{equation*}
+\d\psi_{p{\color{black}\,\cdot g}} \,\circ\, (R_{g})_{*}
+\;\; = \;\;
+    \rho(g)^{-1} \,\circ\, \d\psi_{p}\,,
+\end{equation*}
+which in turn implies that
+\begin{equation*}
+\d\psi_{p{\color{black}\,\cdot g}} 
+\;\; = \;\;
+    \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+\end{equation*}
+Consequently,
+\begin{eqnarray*}
+L\!\left(\;
+    \overset{{\color{white}1}}{p{\color{red}\;\cdot\,g}}
+    \,,\,
+    \psi(p{\color{red}\;\cdot\,g})
+    \,,\,
+    \d\psi_{p{\color{red}\,\cdot g}}
+    \;\right)
+& = &
+    L\!\left(\;
+        \overset{{\color{white}1}}{p{\color{black}\;\cdot\,g}}
+        \;,\;
+        \rho(g)^{-1} \cdot \psi(p)
+        \;,\;
+        \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+        \;\right)
+\\
+& = &
+	L\!\left(\,
+	    \overset{{\color{white}1}}{p}
+	    \,,\,
+	    \psi(p)
+	    \,,\,
+	    \d\psi_{p}
+	    \,\right),
+	\quad
+	\textnormal{since \,$L(\,\cdot\,,\,\cdot\,,\,\cdot\,)$\, is a Lagrangian}
+\end{eqnarray*}
+This completes the proof of the Theorem.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \section{Gauge invariance of Lagrangian densities in terms of local coordinates}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -2081,8 +2243,5 @@ Then, the following statements are true:
 
 \end{enumerate}
 \qed
-
-
-
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
