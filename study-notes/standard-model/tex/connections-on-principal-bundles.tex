@@ -2118,44 +2118,112 @@ Then, we make the following definitions:
 \mbox{}
 \vskip 0.05cm
 \noindent
-Suppose
+Let
 \,$L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
-is a {\color{red}Lagrangian}.
-Then, for each fixed \,$\psi \in C^{\infty}_{\rho}(P,V)$,\, the map
+be a smooth $\Re$-valued function defined on the space \,$J(P,V)$\, of $1$-jets
+from the total space \,$P$\, to the vector space \,$V$.\,
+Trivially, \,$L(\,\cdot\,,\,\cdot\,,\,\cdot\,)$\,
+induces the following map
 \begin{equation*}
-P \,\xrightarrow{{\color{white}......}}\, \Re \,:\,
-p \,\xmapsto{{\color{white}......}}\,
-    L\!\left(\,
-        \overset{{\color{white}1}}{p}
-        \,,\,
-        \psi(p)
-        \,,\,
-        \d\psi_{p}
-        \,\right)
+C^{\infty}_{\rho}(P,V) \,\xrightarrow{{\color{white}..}\Psi^{\sharp}{\color{white}..}}\, C^{\infty}(P,\Re) \,:\,
+\psi \,\xmapsto{{\color{white}......}}\,
+    \left(\;\overset{{\color{white}.}}{
+        p
+        \,\xmapsto{{\color{white}....}}\,
+        L\!\left(\,
+            \overset{{\color{white}.}}{p}
+            \,,\,
+            \psi(p)
+            \,,\,
+            \d\psi_{p}
+            \,\right)
+        }\;\right)
 \end{equation*}
-{\color{red}descends} to a smooth $\Re$-valued function defined on \,$M$,\,
-in the sense that the following formula
-\begin{equation*}
-L^{\flat}(\psi)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
-\;\; := \;\;
-    L\!\left(\,
-        \overset{{\color{white}1}}{p}
+If \,$L(\,\cdot\,,\,\cdot\,,\,\cdot\,)$\, is furthermore a Lagrangian,
+then the following statements are true:
+\begin{enumerate}
+\item
+	$
+    L\!\left(\;
+        \overset{{\color{white}1}}{p{\color{red}\;\cdot\,g}}
         \,,\,
-        \psi(p)
+        \psi(p{\color{red}\;\cdot\,g})
         \,,\,
-        \d\psi_{p}
-        \,\right),
-\quad
-\textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $x \in M$,\; $p \in \pi^{-1}(x) \subset P$}
-\end{equation*}
-yields a well-defined map
-\,$L^{\flat} : C^{\infty}_{\rho}(P,V) \xrightarrow{{\color{white}....}} C^{\infty}(M)$.\,
+        \d\psi_{p{\color{red}\,\cdot g}}
+        \;\right)
+	\;\; = \;\;
+		L\!\left(\,
+	        \overset{{\color{white}1}}{p}
+	        \,,\,
+	        \psi(p)
+	        \,,\,
+	        \d\psi_{p}
+	        \,\right)
+	$,\;
+    for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $p \in P$,\; $g \in G$.\,
+\item
+    The map \,$\Psi^{\sharp}$\, induces a map
+    \,$
+    C^{\infty}_{\rho}(P,V) \,\xrightarrow{{\color{white}..}\Psi^{\flat}{\color{white}..}}\, C^{\infty}(M,\Re)
+    $;\,
+    equivalently,
+    for each fixed \,$\psi \in C^{\infty}_{\rho}(P,V)$,\, the map
+    \begin{equation*}
+    P \,\xrightarrow{{\color{white}......}}\, \Re \,:\,
+    p \,\xmapsto{{\color{white}......}}\,
+        L\!\left(\,
+            \overset{{\color{white}1}}{p}
+            \,,\,
+            \psi(p)
+            \,,\,
+            \d\psi_{p}
+            \,\right)
+    \end{equation*}
+    {\color{red}descends} to a smooth $\Re$-valued function defined on \,$M$,\,
+    in the sense that the following formula
+    \begin{equation*}
+    L^{\flat}(\psi)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
+    \;\; := \;\;
+        L\!\left(\,
+            \overset{{\color{white}1}}{p}
+            \,,\,
+            \psi(p)
+            \,,\,
+            \d\psi_{p}
+            \,\right),
+    \quad
+    \textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $x \in M$,\; $p \in \pi^{-1}(x) \subset P$}
+    \end{equation*}
+    yields a well-defined map
+    \,$L^{\flat} : C^{\infty}_{\rho}(P,V) \xrightarrow{{\color{white}....}} C^{\infty}(M,\Re)$.\,
+\end{enumerate}
 \end{theorem}
 \proof
-We need only establish that the right-hand side of the above formula
-depends only on \,$x \in M$\,
-but otherwise does not depend on the particular choice of \,$p \in \pi^{-1}(x)$.\,
-To this end, first note that, by the definition of \,$C^{\infty}_{\rho}(P,V)$,\,
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;
+$
+L\!\left(\;
+    \overset{{\color{white}1}}{p{\color{red}\;\cdot\,g}}
+    \,,\,
+    \psi(p{\color{red}\;\cdot\,g})
+    \,,\,
+    \d\psi_{p{\color{red}\,\cdot g}}
+    \;\right)
+\;\; = \;\;
+    L\!\left(\;
+        \overset{{\color{white}1}}{p{\color{black}\;\cdot\,g}}
+        \;,\;
+        \rho(g)^{-1} \cdot \psi(p)
+        \;,\;
+        \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+        \;\right)
+$\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;
+Note that, by the definition of \,$C^{\infty}_{\rho}(P,V)$,\,
 we have:
 \,$\psi \circ R_{g} = \rho(g)^{-1} \circ \psi$,\,
 for each \,$\psi \in C^{\infty}_{\rho}(P,V)$,\,
@@ -2172,6 +2240,34 @@ which in turn implies that
     \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
 \end{equation*}
 Consequently,
+\begin{equation*}
+L\!\left(\;
+    \overset{{\color{white}1}}{p{\color{red}\;\cdot\,g}}
+    \,,\,
+    \psi(p{\color{red}\;\cdot\,g})
+    \,,\,
+    \d\psi_{p{\color{red}\,\cdot g}}
+    \;\right)
+\;\; = \;\;
+    L\!\left(\;
+        \overset{{\color{white}1}}{p{\color{black}\;\cdot\,g}}
+        \;,\;
+        \rho(g)^{-1} \cdot \psi(p)
+        \;,\;
+        \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+        \;\right)
+\end{equation*}
+This proves Claim 1.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\;
+If \,$L(\,\cdot\,,\,\cdot\,,\,\cdot\,)$\, is a Lagrangian,
+then (i) holds.
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;
+Simply observe:
 \begin{eqnarray*}
 L\!\left(\;
     \overset{{\color{white}1}}{p{\color{red}\;\cdot\,g}}
@@ -2187,7 +2283,9 @@ L\!\left(\;
         \rho(g)^{-1} \cdot \psi(p)
         \;,\;
         \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
-        \;\right)
+        \;\right),
+    \;\;
+    \textnormal{by Claim 1}
 \\
 & = &
 	L\!\left(\,
@@ -2200,6 +2298,17 @@ L\!\left(\;
 	\quad
 	\textnormal{since \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\, is a Lagrangian}
 \end{eqnarray*}
+This completes the proof of Claim 2.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\; (ii)\;$\Longleftrightarrow$\;(iii)
+\vskip 0.2cm
+\noindent
+Proof of Claim 3:\; Immediate.
+
+\vskip 0.3cm
+\noindent
 This completes the proof of the Theorem.
 \qed
 
