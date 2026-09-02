@@ -2115,13 +2115,25 @@ Then, we make the following definitions:
 
 \vskip 0.5cm
 \begin{theorem}[Theorem 3.3.3, p.51, \cite{Bleecker2005}]
+\label{LagrangianDescendsToBaseManifold}
 \mbox{}
 \vskip 0.05cm
 \noindent
-Let
-\,$L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
-be a smooth $\Re$-valued function defined on the space \,$J(P,V)$\, of $1$-jets
-from the total space \,$P$\, to the vector space \,$V$.\,
+Suppose:
+\begin{itemize}
+\item
+    \vskip -0.3cm
+    $G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+    is a principal fibre bundle, \,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$,\,
+\item
+    $\rho : G \xrightarrow{{\color{white}....}}\GL(V)$\,
+    is a representation of \,$G$\,
+    on a finite-dimensional vector space \,$V$\, over \,$\Re$\, or \,$\C$,\,
+\item
+    $L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
+    is a smooth $\Re$-valued function defined on the space \,$J(P,V)$\, of $1$-jets
+    from the total space \,$P$\, to the vector space \,$V$.\,
+\end{itemize}
 Trivially, \,$L(\,\cdot\,,\,\cdot\,,\,\cdot\,)$\,
 induces the following map
 \begin{equation*}
@@ -2317,11 +2329,40 @@ This completes the proof of the Theorem.
 \vskip 0.5cm
 \begin{theorem}[Theorem 3.3.4, p.51, \cite{Bleecker2005}]
 \mbox{}
-\vskip 0.05cm
+\vskip 0.1cm
 \noindent
-Suppose
-\,$L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
-is a {\color{red}$\rho$-invariant Lagrangian}.
+Suppose:
+\begin{itemize}
+\item
+    \vskip -0.2cm
+    $G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+    is a principal fibre bundle, \,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$,\,
+\item
+    $\rho : G \xrightarrow{{\color{white}....}}\GL(V)$\,
+    is a representation of \,$G$\,
+    on a finite-dimensional vector space \,$V$\, over \,$\Re$\, or \,$\C$,\,
+\item
+    $L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
+    is a {\color{red}$\rho$-invariant Lagrangian}.
+\item
+    $L^{\flat} : C^{\infty}_{\rho}(P,V) \xrightarrow{{\color{white}....}} C^{\infty}(M,\Re)$\,
+    is the map defined via the following:
+    \begin{equation*}
+    L^{\flat}(\psi)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
+    \;\; := \;\;
+        L\!\left(\,
+            \overset{{\color{white}1}}{p}
+            \,,\,
+            \psi(p)
+            \,,\,
+            \d\psi_{p}
+            \,\right),
+    \quad
+    \textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $x \in M$,\; $p \in \pi^{-1}(x) \subset P$}
+    \end{equation*}
+    The well-definition of \,$L^{\flat}$\, is established in
+    Theorem \ref{LagrangianDescendsToBaseManifold}.
+\end{itemize}
 Then,
 \,$L^{\flat}\!\left(\psi\right)$\,
 transforms
@@ -2669,6 +2710,237 @@ of the term
 $\,
 in the right-hand side of the above transformation formula.
 This completes the proof of the Theorem.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\begin{theorem}[Theorem 3.3.6, p.52, \cite{Bleecker2005}]
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose
+\begin{itemize}
+\item
+    \vskip -0.2cm
+    $G \xhookrightarrow{{\color{white}222}} P \xrightarrow{{\color{white}2}\pi{\color{white}2}} M$\,
+    is a principal bundle and \,$\mathfrak{g}$\, is the Lie algebra of the structure group \,$G$,
+\item
+    $\Gamma(P)$\, denotes the collection of all Ehresmann connections on \,$P$,
+\item
+    $\rho : G \xrightarrow{{\color{white}....}}\GL(V)$\,
+    is a representation of \,$G$\,
+    on a finite-dimensional vector space \,$V$\, over \,$\Re$\, or \,$\C$,\,
+\item
+    $L : J(P,V) \xrightarrow{{\color{white}....}} \Re$\,
+    is a {\color{red}$\rho$-invariant Lagrangian}.
+\item
+    $
+    L^{\sharp} :
+    C^{\infty}_{\rho}(P,V) \times \Gamma(P)
+    \xrightarrow{{\color{white}....}}
+    C^{\infty}({\color{red}M},\Re)
+    $\,
+    is the map defined via the following:
+    \begin{equation*}
+    L^{\sharp}(\psi,\omega)\!\left(\,\overset{{\color{white}.}}{x}\,\right)
+    \;\; := \;\;
+        L\!\left(\,
+            \overset{{\color{white}1}}{p}
+            \,,\,
+            \psi(p)
+            \,,\,
+            D^{\,\omega}\psi_{p}
+            \,\right),
+    \quad
+    \begin{array}{c}
+        \textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\;\; $\omega \in \Gamma(P)$},
+        \\
+        \overset{{\color{white}.}}{\textnormal{$x \in M$,\;\; $p \in \pi^{-1}(x) \subset P$}}
+        \end{array}
+    \end{equation*}
+\end{itemize}
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    The map
+    \,$
+    L^{\sharp} :
+    C^{\infty}_{\rho}(P,V) \times \Gamma(P)
+    \xrightarrow{{\color{white}....}}
+    C^{\infty}({\color{black}M},\Re)
+    $\,
+    is indeed well-defined;
+    equivalently, the following equality holds:
+    \begin{equation*}
+    L\!\left(\;
+        \overset{{\color{white}1}}{p \cdot g}
+        \;,\,
+        \psi(p\cdot g)
+        \;,\,
+        D^{\,\omega}\psi_{p \cdot g}
+        \,\right)
+    \; = \;
+	    L\!\left(\;
+	        \overset{{\color{white}1}}{p}
+	        \;,\,
+	        \psi(p)
+	        \;,\,
+	        D^{\,\omega}\psi_{p}
+	        \,\right),
+    \quad
+    \begin{array}{c}
+        \textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\;\; $\omega \in \Gamma(P)$},
+        \\
+        \overset{{\color{white}.}}{\textnormal{$x \in M$,\;\; $p \in \pi^{-1}(x) \subset P$,\;\; $g \in G$}}
+        \end{array}
+    \end{equation*}
+\item
+    $L^{\sharp}\!\left(\,\cdot\,,\,\cdot\,\right)$\, is gauge invariant, i.e.,
+    \begin{equation*}
+    L^{\sharp}\!\left(\;
+        \overset{{\color{white}.}}{f^{*}\psi}
+        \;,\,
+        f^{*}\omega
+        \,\right)
+    \; = \;
+	    L^{\sharp}\!\left(\;
+	        \overset{{\color{white}.}}{\psi}
+	        \;,\,
+	        \omega
+	        \,\right),
+    \quad
+    \begin{array}{c}
+        \textnormal{for each\;\,
+            $\psi \in C^{\infty}_{\rho}(P,V)$,
+            \,
+            $\omega \in \Gamma(P)$,
+            \,
+            $f \in \mathscr{G}(P)$
+            }
+        \end{array}
+    \end{equation*}
+\end{enumerate}
+\end{theorem}
+\proof
+\begin{enumerate}
+\item
+    \cite{Tu2017}
+\item
+    \noindent
+    \textbf{Claim 1:}\;
+    $
+    f^{*}\!\left(\,\overset{{\color{white}.}}{
+        D^{\,\omega}\psi_{p}
+        }\,\right)
+    \; = \;
+        \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot
+        \left(\,\overset{{\color{white}.}}{
+            D^{\,\omega}\psi_{p}
+            }\,\right)
+    $\,
+    \vskip 0.1cm
+    \noindent
+    Proof of Claim 1:\;
+    \begin{eqnarray*}
+    f^{*}\!\left(\,\overset{{\color{white}.}}{
+        D^{\,\omega}\psi_{p}
+        }\,\right)
+    & = &
+        \cdots\;\;\cdots\;\;\cdots 
+    \end{eqnarray*}
+    See also Theorem 3.2.15, p.49, \cite{Bleecker2005} and/or Proposition 31.16, p.281, \cite{Tu2017}.
+    \vskip 0.01cm
+    \noindent
+    This completes the proof of Claim 1.
+
+    \vskip 0.3cm
+    \begin{eqnarray*}
+    L^{\sharp}\!\left(\;
+        \overset{{\color{white}.}}{f^{*}\psi}
+        \;,\,
+        f^{*}\omega
+        \,\right)(\,x\,)
+    & = &
+        L\!\left(\;
+            p
+            \,,\,
+            (f^{*}\psi)(p)
+            \,,\,
+            D^{\,f^{*}\omega}(f^{*}\psi)_{p}
+            \;\right)
+    \\
+    & = &
+        L\!\left(\;
+            p
+            \;,\;
+            \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
+            \;,\;
+            \d(f^{*}\psi)_{p} + f^{*}\omega_{p} \cdot f^{*}(\psi)(p)
+            \;\right),
+    \\
+    &&
+        \quad
+        \textnormal{by Theorem 3.1.5, p.44, \cite{Bleecker2005}, or Theorem 31.19, p.283, \cite{Tu2017}}
+    \\
+    & = &
+        L\!\left(\;
+            p
+            \;,\;
+            \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
+            \;,\;
+            f^{*}\!\left(\,
+                \d\psi_{p} \overset{{\color{white}.}}{+} \omega_{p} \cdot \psi(p)
+                \,\right)
+            \;\right)
+    \\
+    & = &
+        L\!\left(\;
+            p
+            \;,\;
+            \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
+            \;,\;
+            f^{*}\!\left(\,\overset{{\color{white}.}}{
+                D^{\,\omega}\psi_{p}
+                }\,\right)
+            \;\right)
+    \\
+    &&
+        \quad
+        \textnormal{by Theorem 3.1.5, p.44, \cite{Bleecker2005}, or Theorem 31.19, p.283, \cite{Tu2017}}
+    \\
+    & = &
+        L\!\left(\;
+            p
+            \;,\;
+            \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
+            \;,\;
+            \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot
+            \left(\,\overset{{\color{white}.}}{
+                D^{\,\omega}\psi_{p}
+                }\,\right)
+            \;\right),
+        \quad
+        \textnormal{by Claim 1}
+    \\
+    & = &
+        L\!\left(\;
+            \overset{{\color{white}-}}{p}
+            \;,\;
+            \psi(p)
+            \;,\;
+                D^{\,\omega}\psi_{p}
+            \;\right),
+        \quad
+        \textnormal{by \,$\rho$-invariance of \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$}
+    \\
+    & =: &
+        L^{\sharp}(\psi,\omega)\!\left(\,\overset{{\color{white}.}}{x}\,\right),
+        \quad
+        \textnormal{by definition of \,$L^{\sharp}(\;\cdot\;,\;\cdot\;)$}
+    \end{eqnarray*}
+\end{enumerate}
+
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
