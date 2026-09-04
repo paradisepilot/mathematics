@@ -1678,6 +1678,7 @@ where one of \,$X$, $Y$\, is vertical and the other horizontal.
 
 \vskip 0.5cm
 \begin{theorem}\textnormal{\bf(Transformation of connections under gauge transformations, Theorem 5.4.4, p.273, \cite{Hamilton2017})}
+\label{ConnectionTransformationLaw}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -2829,10 +2830,30 @@ Then, the following statements are true:
 \item
     \noindent
     \textbf{Claim 1:}\;
+	For each \,$p \in P$\, and each \,$X \in \mathcal{T}_{p}\,P$,\, we have:
+	\begin{equation*}
+	(f_{*})_{p}(\,X\,)
+	\;\; = \;\;
+		\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+		\; + \,
+		\left(\,
+			(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+			\left[\;\overset{{\color{white}.}}{X}\;\right]
+			\,\right)^{\sharp}_{\!f(p)}
+	\end{equation*}
+    \vskip -0.2cm
+    \noindent
+    Proof of Claim 1:\;
+    Immediate by Theorem \ref{ConnectionTransformationLaw}(i).
+    This completes the proof of Claim 1.
+
+    \vskip 0.4cm
+    \noindent
+    \textbf{Claim 2:}\;
     $
     f^{*}\!\left(\,\overset{{\color{white}.}}{
-        D^{\,\omega}\psi_{p}
-        }\,\right)
+        D^{\,\omega}\psi
+        }\,\right)_{\!p}
     \; = \;
         \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot
         \left(\,\overset{{\color{white}.}}{
@@ -2841,18 +2862,59 @@ Then, the following statements are true:
     $\,
     \vskip 0.1cm
     \noindent
-    Proof of Claim 1:\;
+    Proof of Claim 2:\;
     \begin{eqnarray*}
     f^{*}\!\left(\,\overset{{\color{white}.}}{
-        D^{\,\omega}\psi_{p}
-        }\,\right)
+        D^{\,\omega}\psi
+        }\,\right)_{\!p}
+        \left[\;\overset{{\color{white}.}}{X}\;\right]
     & = &
-        \cdots\;\;\cdots\;\;\cdots 
+        \left(\,\overset{{\color{white}.}}{
+            D^{\,\omega}\psi
+            }\,\right)_{\!f(p)}
+            \left[\;\overset{{\color{white}.}}{f_{*}(X)}\;\right]
+    \\
+    & = &
+        \left(\,\overset{{\color{white}.}}{
+            D^{\,\omega}\psi
+            }\,\right)_{\!f(p)}
+            \left[\;\overset{{\color{white}.}}{
+				\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+				\, + 
+				\left(\,
+					(\,\sigma_{f}^{*}\,\mu_{G}\,)_{p}
+					\left[\;\overset{{\color{white}.}}{X}\;\right]
+					\,\right)^{\sharp}_{\!f(p)}
+                }\;\right],
+        \quad
+        \textnormal{by Claim 1}
+    \\
+    & = &
+        \left(\,\overset{{\color{white}.}}{
+            \d\psi
+            }\,\right)_{\!f(p)}
+            \left[\;\overset{{\color{white}.}}{
+				\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+                }\;\right],
+        \quad
+        \textnormal{by definition of the covariant derivative}
+    \\
+    & = &
+        D_{p}\!\left(\,\overset{{\color{white}.}}{
+            \psi \circ R_{\sigma_{f}(p)}
+            }\,\right)\!
+        \left[\;\overset{{\color{white}.}}{X}\;\right]
+    \;\; = \;\;
+        D_{p}\!\left(\,\overset{{\color{white}.}}{
+            % \psi \circ R_{\sigma_{f}(p)}
+            \rho(\sigma_{f}(p))^{-1} \circ \psi
+            }\,\right)\!
+        \left[\;\overset{{\color{white}.}}{X}\;\right]
     \end{eqnarray*}
     See also Theorem 3.2.15, p.49, \cite{Bleecker2005} and/or Proposition 31.16, p.281, \cite{Tu2017}.
     \vskip 0.01cm
     \noindent
-    This completes the proof of Claim 1.
+    This completes the proof of Claim 2.
 
     \vskip 0.3cm
     \begin{eqnarray*}
@@ -2921,7 +2983,7 @@ Then, the following statements are true:
                 }\,\right)
             \;\right),
         \quad
-        \textnormal{by Claim 1}
+        \textnormal{by Claim 2}
     \\
     & = &
         L\!\left(\;
