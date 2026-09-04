@@ -2851,28 +2851,29 @@ Then, the following statements are true:
     \noindent
     \textbf{Claim 2:}\;
     $
-    f^{*}\!\left(\,\overset{{\color{white}.}}{
+    \left(\,f^{*}\!\left(\,\overset{{\color{white}.}}{
         D^{\,\omega}\psi
-        }\,\right)_{\!p}
+        }\,\right)\right)_{\!p}
     \; = \;
-        \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot
+        \rho\!\left(\sigma_{f}^{-1}(p)\right)
+        \circ
         \left(\,\overset{{\color{white}.}}{
-            D^{\,\omega}\psi_{p}
-            }\,\right)
+            D^{\,\omega}\psi
+            }\,\right)_{\!p}
     $\,
     \vskip 0.1cm
     \noindent
     Proof of Claim 2:\;
     \begin{eqnarray*}
-    f^{*}\!\left(\,\overset{{\color{white}.}}{
+    \left(\,f^{*}\!\left(\,\overset{{\color{white}.}}{
         D^{\,\omega}\psi
-        }\,\right)_{\!p}
+        }\,\right)\right)_{\!p}
         \left[\;\overset{{\color{white}.}}{X}\;\right]
     & = &
         \left(\,\overset{{\color{white}.}}{
             D^{\,\omega}\psi
             }\,\right)_{\!f(p)}
-            \left[\;\overset{{\color{white}.}}{f_{*}(X)}\;\right]
+            \left[\;\overset{{\color{white}.}}{(f_{*})_{p}(X)}\;\right]
     \\
     & = &
         \left(\,\overset{{\color{white}.}}{
@@ -2894,22 +2895,61 @@ Then, the following statements are true:
             \d\psi
             }\,\right)_{\!f(p)}
             \left[\;\overset{{\color{white}.}}{
-				\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+				\pi_{\mathcal{H}(\omega)}\!\left(\,
+				    \left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+				    \,\right)
                 }\;\right],
         \quad
         \textnormal{by definition of the covariant derivative}
     \\
     & = &
-        D_{p}\!\left(\,\overset{{\color{white}.}}{
-            \psi \circ R_{\sigma_{f}(p)}
-            }\,\right)\!
-        \left[\;\overset{{\color{white}.}}{X}\;\right]
-    \;\; = \;\;
-        D_{p}\!\left(\,\overset{{\color{white}.}}{
-            % \psi \circ R_{\sigma_{f}(p)}
-            \rho(\sigma_{f}(p))^{-1} \circ \psi
-            }\,\right)\!
-        \left[\;\overset{{\color{white}.}}{X}\;\right]
+        \left(\,\overset{{\color{white}.}}{
+            \d\psi
+            }\,\right)_{\!f(p)}
+            \left[\;\overset{{\color{white}.}}{
+				\left(\,D_{p}\,R_{\sigma_{f}(p)}\,\right)\!\left(\,
+				    \pi_{\mathcal{H}(\omega)}\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+				    \,\right)
+                }\;\right],
+        \quad
+        \textnormal{by Proposition 28.4, p.257, \cite{Tu2017}}
+    \\
+    & = &
+        \rho\!\left(\overset{{\color{white}.}}{\sigma_{f}(p)}\right)^{-1}
+        \circ
+        \left(\,\overset{{\color{white}.}}{
+            \d\psi
+            }\,\right)_{\!p}
+            \left[\;\overset{{\color{white}.}}{
+				    \pi_{\mathcal{H}(\omega)}\!\left[\;\overset{{\color{white}.}}{X}\;\right]
+				    % \,\right)
+                }\;\right],
+        \quad
+        \textnormal{by \,$\rho$-equivariance\, of \,$\psi$}
+    \\
+    & = &
+        \rho\!\left(\overset{{\color{white}.}}{\sigma_{f}(p)}\right)^{-1}
+        \circ
+        \left(\,\overset{{\color{white}.}}{
+            D^{\,\omega}\psi
+            }\,\right)_{\!p}
+            \left[\;\overset{{\color{white}.}}{
+                X
+                }\;\right],
+        \quad
+        \textnormal{by definition of the covariant derivative}
+    % \\
+    % & = &
+    %     D_{p}\!\left(\,\overset{{\color{white}.}}{
+    %         \psi \circ R_{\sigma_{f}(p)}
+    %         }\,\right)\!
+    %     \left[\;\overset{{\color{white}.}}{X}\;\right]
+    % \;\; = \;\;
+    %     D_{p}\!\left(\,\overset{{\color{white}.}}{
+    %         % \psi \circ R_{\sigma_{f}(p)}
+    %         \rho(\sigma_{f}(p))^{-1} \circ \psi
+    %         }\,\right)\!
+    %     \left[\;\overset{{\color{white}.}}{X}\;\right]
     \end{eqnarray*}
     See also Theorem 3.2.15, p.49, \cite{Bleecker2005} and/or Proposition 31.16, p.281, \cite{Tu2017}.
     \vskip 0.01cm
@@ -2929,7 +2969,7 @@ Then, the following statements are true:
             \,,\,
             (f^{*}\psi)(p)
             \,,\,
-            D^{\,f^{*}\omega}(f^{*}\psi)_{p}
+            \left(D^{\,f^{*}\omega}(f^{*}\psi)\right)_{p}
             \;\right)
     \\
     & = &
@@ -2938,7 +2978,7 @@ Then, the following statements are true:
             \;,\;
             \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
             \;,\;
-            \d(f^{*}\psi)_{p} + f^{*}\omega_{p} \cdot f^{*}(\psi)(p)
+            \d(f^{*}\psi)_{p} + f^{*}\omega_{p} \cdot (f^{*}\psi)(p)
             \;\right),
     \\
     &&
@@ -2962,9 +3002,9 @@ Then, the following statements are true:
             \;,\;
             \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
             \;,\;
-            f^{*}\!\left(\,\overset{{\color{white}.}}{
-                D^{\,\omega}\psi_{p}
-                }\,\right)
+            \left(\,\overset{{\color{white}.}}{
+                f^{*}\!\left(D^{\,\omega}\psi\right)
+                }\,\right)_{\!p}
             \;\right)
     \\
     &&
@@ -2977,10 +3017,11 @@ Then, the following statements are true:
             \;,\;
             \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
             \;,\;
-            \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot
+            \rho\!\left(\sigma_{f}^{-1}(p)\right)
+            \circ
             \left(\,\overset{{\color{white}.}}{
-                D^{\,\omega}\psi_{p}
-                }\,\right)
+                D^{\,\omega}\psi
+                }\,\right)_{\!p}
             \;\right),
         \quad
         \textnormal{by Claim 2}
@@ -2991,7 +3032,7 @@ Then, the following statements are true:
             \;,\;
             \psi(p)
             \;,\;
-                D^{\,\omega}\psi_{p}
+                \left(D^{\,\omega}\psi\right)_{p}
             \;\right),
         \quad
         \textnormal{by \,$\rho$-invariance of \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$}
