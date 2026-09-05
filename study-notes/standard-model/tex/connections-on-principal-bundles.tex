@@ -2087,7 +2087,7 @@ Then, we make the following definitions:
         \,,\;
         \rho(g)^{-1}\cdot v
         \,,\;
-        \rho(g)^{-1} \,\circ\, \theta \,\circ\, (R_{g^{-1}})_{*}
+        \rho(g)^{-1} \,\circ\, \theta \,\circ\, \left(DR_{g^{-1}}\right)_{p}
         \;\right)
     \; = \;
         L\!\left(\,p,v,\theta\,\right),
@@ -2148,7 +2148,7 @@ C^{\infty}_{\rho}(P,V) \,\xrightarrow{{\color{white}..}\Psi^{\sharp}{\color{whit
             \,,\,
             \psi(p)
             \,,\,
-            \d\psi_{p}
+            \left(\d\psi\right)_{p}
             \,\right)
         }\;\right)
 \end{equation*}
@@ -2162,7 +2162,7 @@ then the following statements are true:
         \,,\,
         \psi(p{\color{red}\;\cdot\,g})
         \,,\,
-        \d\psi_{p{\color{red}\,\cdot g}}
+        \left(\d\psi\right)_{p{\color{red}\,\cdot g}}
         \;\right)
 	\;\; = \;\;
 		L\!\left(\,
@@ -2170,7 +2170,7 @@ then the following statements are true:
 	        \,,\,
 	        \psi(p)
 	        \,,\,
-	        \d\psi_{p}
+	        \left(\d\psi\right)_{p}
 	        \,\right)
 	$,\;
     for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $p \in P$,\; $g \in G$.\,
@@ -2189,7 +2189,7 @@ then the following statements are true:
             \,,\,
             \psi(p)
             \,,\,
-            \d\psi_{p}
+            \left(\d\psi\right)_{p}
             \,\right)
     \end{equation*}
     {\color{red}descends} to a smooth $\Re$-valued function defined on \,$M$,\,
@@ -2202,7 +2202,7 @@ then the following statements are true:
             \,,\,
             \psi(p)
             \,,\,
-            \d\psi_{p}
+            \left(\d\psi\right)_{p}
             \,\right),
     \quad
     \textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $x \in M$,\; $p \in \pi^{-1}(x) \subset P$}
@@ -2222,7 +2222,7 @@ L\!\left(\;
     \,,\,
     \psi(p{\color{red}\;\cdot\,g})
     \,,\,
-    \d\psi_{p{\color{red}\,\cdot g}}
+    \left(\d\psi\right)_{p{\color{red}\,\cdot g}}
     \;\right)
 \;\; = \;\;
     L\!\left(\;
@@ -2230,7 +2230,7 @@ L\!\left(\;
         \;,\;
         \rho(g)^{-1} \cdot \psi(p)
         \;,\;
-        \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+        \rho(g)^{-1} \,\circ\, \left(\d\psi\right)_{p} \,\circ\, \left(DR_{g^{-1}}\right)_{p}
         \;\right)
 $\,
 \vskip 0.1cm
@@ -2242,15 +2242,17 @@ we have:
 for each \,$\psi \in C^{\infty}_{\rho}(P,V)$,\,
 hence
 \begin{equation*}
-\d\psi_{p{\color{black}\,\cdot g}} \,\circ\, (R_{g})_{*}
+\left(\d\psi\right)_{p{\color{black}\,\cdot g}} \,\circ\, \left(DR_{g}\right)_{p}
 \;\; = \;\;
-    \rho(g)^{-1} \,\circ\, \d\psi_{p}\,,
+    \rho(g)^{-1} \,\circ\, \left(\d\psi\right)_{p}\,,
 \end{equation*}
 which in turn implies that
 \begin{equation*}
-\d\psi_{p{\color{black}\,\cdot g}} 
+\left(\d\psi\right)_{p{\color{black}\,\cdot g}} 
 \;\; = \;\;
-    \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+    \rho(g)^{-1} \,\circ\, \left(\d\psi\right)_{p} \,\circ\, \left(DR_{g}\right)_{p}^{-1}
+\;\; = \;\;
+    \rho(g)^{-1} \,\circ\, \left(\d\psi\right)_{p} \,\circ\, \left(DR_{g^{-1}}\right)_{p}
 \end{equation*}
 Consequently,
 \begin{equation*}
@@ -2259,7 +2261,7 @@ L\!\left(\;
     \,,\,
     \psi(p{\color{red}\;\cdot\,g})
     \,,\,
-    \d\psi_{p{\color{red}\,\cdot g}}
+    \left(\d\psi\right)_{p{\color{red}\,\cdot g}}
     \;\right)
 \;\; = \;\;
     L\!\left(\;
@@ -2267,7 +2269,7 @@ L\!\left(\;
         \;,\;
         \rho(g)^{-1} \cdot \psi(p)
         \;,\;
-        \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+        \rho(g)^{-1} \,\circ\, \left(\d\psi\right)_{p} \,\circ\, \left(DR_{g^{-1}}\right)_{p}
         \;\right)
 \end{equation*}
 This proves Claim 1.
@@ -2287,7 +2289,7 @@ L\!\left(\;
     \,,\,
     \psi(p{\color{red}\;\cdot\,g})
     \,,\,
-    \d\psi_{p{\color{red}\,\cdot g}}
+    \left(\d\psi\right)_{p{\color{red}\,\cdot g}}
     \;\right)
 & = &
     L\!\left(\;
@@ -2295,7 +2297,7 @@ L\!\left(\;
         \;,\;
         \rho(g)^{-1} \cdot \psi(p)
         \;,\;
-        \rho(g)^{-1} \,\circ\, \d\psi_{p} \,\circ\, (R_{g^{-1}})_{*}
+        \rho(g)^{-1} \,\circ\, \left(\d\psi\right)_{p} \,\circ\, \left(DR_{g^{-1}}\right)_{p}
         \;\right),
     \;\;
     \textnormal{by Claim 1}
@@ -2306,7 +2308,7 @@ L\!\left(\;
 	    \,,\,
 	    \psi(p)
 	    \,,\,
-	    \d\psi_{p}
+	    \left(\d\psi\right)_{p}
 	    \,\right),
 	\quad
 	\textnormal{since \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\, is a Lagrangian}
@@ -2356,7 +2358,7 @@ Suppose:
             \,,\,
             \psi(p)
             \,,\,
-            \d\psi_{p}
+            \left(\d\psi\right)_{p}
             \,\right),
     \quad
     \textnormal{for each \;$\psi \in C^{\infty}_{\rho}(P,V)$,\; $x \in M$,\; $p \in \pi^{-1}(x) \subset P$}
@@ -2367,26 +2369,27 @@ Suppose:
 Then,
 \,$L^{\flat}\!\left(\psi\right)$\,
 transforms
--- under pullbacks by bundle automorphisms (a.k.a. gauge transformations) --
+-- under pullbacks by gauge transformations --
 as follows:
 \begin{eqnarray*}
 &&
     L^{\flat}\!\left(\,\overset{{\color{white}.}}{f^{*}\psi}\,\right)\!(\,x\,)
 \\
 & = &
+    \textnormal{\small$
     L\!\left(\;
         p
         \;,\;
         \rho\!\left(\sigma_{f}^{-1}(p)\right)\cdot\psi(p)
         \;,\;
-        \rho\!\left(\sigma_{f}^{-1}(p)\right)\,\circ\,\d\psi_{p}
+        \rho\!\left(\sigma_{f}^{-1}(p)\right)\,\circ\,\left(\d\psi\right)_{p}
         \,+\,
         \left[\;
-            \d\rho_{e}
+            \left(D\rho\right)_{e}
             \,\circ\,
-            \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\right)_{\!*}
+            \left(\,\overset{{\color{white}.}}{DR_{\sigma_{f}(p)}}\right)_{\!\sigma_{f}^{-1}(p)}
             \,\circ\,
-            \left(\,\sigma_{f}^{-1}\,\right)_{*}
+            \left(\,D\sigma_{f}^{-1}\,\right)_{\!p}
             {\color{red}\left(\,\overset{{\color{white}.}}{\cdot}\,\right)}
             \,\right]
         \cdot\,
@@ -2394,6 +2397,7 @@ as follows:
         \,\cdot
         \psi(p)
         \;\right)
+    $}
 \end{eqnarray*}
 In particular, the \,$\rho$-invariance\, of \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\,
 does NOT imply the gauge
@@ -2645,11 +2649,11 @@ We next compute the differential \,$\d(f^{*}\psi)_{p}$\,:
         }\,\right)
     \; + \;
     \left[\;
-        \d\rho_{e}
+        \left(D\rho\right)_{e}
         \,\circ\,
-        \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\,\right)_{*}
+        \left(\,D\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\,\right)_{\sigma_{f}^{-1}(p)}
         \,\circ\,
-        \left(\,\sigma_{f}^{-1}\,\right)_{*}
+        \left(\,D\sigma_{f}^{-1}\,\right)_{p}
         \left(\,\overset{{\color{white}.}}{X}\,\right)
         \,\right]
     \cdot\,
@@ -2671,6 +2675,7 @@ Hence,
         \;\right)
 \\
 & = &
+    \textnormal{\small$
     L\!\left(\;
         p
         \;,\;
@@ -2679,11 +2684,11 @@ Hence,
         \rho\!\left(\sigma_{f}^{-1}(p)\right)\,\circ\,\d\psi_{p}
         \,+\,
         \left[\;
-            \d\rho_{e}
+            \left(D\rho\right)_{e}
             \,\circ\,
-            \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\right)_{\!*}
+            \left(\,\overset{{\color{white}.}}{DR_{\sigma_{f}(p)}}\right)_{\!\sigma_{f}^{-1}(p)}
             \,\circ\,
-            \left(\,\sigma_{f}^{-1}\,\right)_{*}
+            \left(\,D\sigma_{f}^{-1}\,\right)_{p}
             {\color{red}\left(\,\overset{{\color{white}.}}{\cdot}\,\right)}
             \,\right]
         \cdot\,
@@ -2691,6 +2696,7 @@ Hence,
         \,\cdot
         \psi(p)
         \;\right)
+    $}
 \end{eqnarray*}
 Lastly, we note that the \,$\rho$-invariance\, of \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\,
 does not imply the gauge invariance of \,$L^{\flat}(\,\psi\,)$\, due to the presence
@@ -2699,9 +2705,9 @@ of the term
 \left[\;
     \d\rho_{e}
     \,\circ\,
-    \left(\,\overset{{\color{white}.}}{R_{\sigma_{f}(p)}}\right)_{\!*}
+    \left(\,\overset{{\color{white}.}}{DR_{\sigma_{f}(p)}}\right)_{\!\sigma_{f}^{-1}(p)}
     \,\circ\,
-    \left(\,\sigma_{f}^{-1}\,\right)_{*}
+    \left(\,D\sigma_{f}^{-1}\,\right)_{p}
     {\color{red}\left(\,\overset{{\color{white}.}}{\cdot}\,\right)}
     \,\right]
 \cdot\,
@@ -2751,7 +2757,7 @@ Suppose:
             \,,\,
             \psi(p)
             \,,\,
-            D^{\,\omega}\psi_{p}
+            \left(D^{\,\omega}\psi\right)_{p}
             \,\right),
     \quad
     \begin{array}{c}
@@ -2777,9 +2783,9 @@ Then, the following statements are true:
     L\!\left(\;
         \overset{{\color{white}1}}{p \cdot g}
         \;,\,
-        \psi(p\cdot g)
+        \psi(\,p\cdot g\,)
         \;,\,
-        D^{\,\omega}\psi_{p \cdot g}
+        \left(D^{\,\omega}\psi\right)_{p \cdot g}
         \,\right)
     \; = \;
 	    L\!\left(\;
@@ -2787,7 +2793,7 @@ Then, the following statements are true:
 	        \;,\,
 	        \psi(p)
 	        \;,\,
-	        D^{\,\omega}\psi_{p}
+	        \left(D^{\,\omega}\psi\right)_{p}
 	        \,\right),
     \quad
     \begin{array}{c}
@@ -2826,7 +2832,76 @@ Then, the following statements are true:
 \proof
 \begin{enumerate}
 \item
-    \cite{Tu2017}
+    First, note:
+    \begin{eqnarray*}
+    \left(D^{\,\omega}\psi\right)_{p \cdot g}
+    \circ
+    \left(DR_{g}\right)_{p}
+    & = &
+        \left(R_{g}\right)^{*}\!\left(\,
+            \left(D^{\,\omega}\psi\right)_{p \cdot g}
+            \,\right),
+        \quad
+        \textnormal{by definition of pull-backs}
+    \\
+    & = &
+            \rho(g)^{-1}
+            \circ
+            \left(D^{\,\omega}\psi\right)_{p}\,,
+        \quad
+        \textnormal{since \,$D^{\,\omega}\psi$\, is \,$\rho$-equivariant,}
+    \end{eqnarray*}
+    from which it trivially follows that
+    \begin{equation*}
+    \left(D^{\,\omega}\psi\right)_{p \cdot g}
+    \;\; = \;\;
+        \rho(g)^{-1}
+        \circ
+        \left(D^{\,\omega}\psi\right)_{p}
+        \circ
+        \left(DR_{g}\right)_{p}^{-1}
+    \;\; = \;\;
+        \rho(g)^{-1}
+        \circ
+        \left(D^{\,\omega}\psi\right)_{p}
+        \circ
+        \left(DR_{g^{-1}}\right)_{p}
+    \end{equation*}
+    Hence,
+    \begin{eqnarray*}
+    &&
+	    L\!\left(\;
+	        \overset{{\color{white}1}}{p \cdot g}
+	        \;,\,
+	        \psi(\,p\cdot g\,)
+	        \;,\,
+	        \left(D^{\,\omega}\psi\right)_{p \cdot g}
+	        \,\right)
+    \\
+    & = &
+	    L\!\left(\;
+	        \overset{{\color{white}1}}{p \cdot g}
+	        \;,\,
+	        \rho(g)^{-1} \cdot \psi(p)
+	        \;,\,
+	        % \left(D^{\,\omega}\psi\right)_{p \cdot g}
+            \rho(g)^{-1}
+            \circ
+            \left(D^{\,\omega}\psi\right)_{p}
+            \circ
+            \left(DR_{g^{-1}}\right)_{p}
+	        \,\right)
+    \\
+    & = &
+	    L\!\left(\;
+	        \overset{{\color{white}1}}{p}
+	        \;,\,
+	        \psi(p)
+	        \;,\,
+            \left(D^{\,\omega}\psi\right)_{p}
+	        \,\right),
+        \;\;\textnormal{since \,$L(\;\cdot\;,\;\cdot\;,\;\cdot\;)$\, is a Lagrangian, as required}
+    \end{eqnarray*}
 \item
     \noindent
     \textbf{Claim 1:}\;
