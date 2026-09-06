@@ -69,11 +69,98 @@ u(\nu, T, C_1)
 Consequently, \,$u$\, is independent of \,$C$\, and is a universal function \,$u(\nu, T)$.\,
 \end{theorem}
 \proof
-Assume, for the sake of contradiction, that there exists a specific temperature $T > 0$, a frequency $\nu_0 > 0$, and two configurations $C_1, C_2 \in \mathcal{C}$ such that their spectral energy densities differ.
+Suppose, to the contrary, that there exists a specific temperature
+\,$T > 0$,\, a frequency \,$\nu_0 > 0$,\, and two configurations
+\,$C_1, C_2 \in \mathcal{C}$\,
+such that their spectral energy densities differ.
 
 \vskip 0.2cm
 \noindent
-Without loss of generality, assume:$$u(\nu_0, T, C_1) > u(\nu_0, T, C_2)$$Because $u$ is continuous with respect to $\nu$ (Axiom 1), there must exist a finite frequency neighborhood $[\nu_1, \nu_2]$ containing $\nu_0$ (where $\nu_1 < \nu_2$) such that for all $\nu \in [\nu_1, \nu_2]$, the inequality holds:$$u(\nu, T, C_1) > u(\nu, T, C_2)$$Let the two cavities $C_1$ and $C_2$ be placed facing each other, connected only by a small aperture of area $A$.Between the cavities, insert an ideal filter (Axiom 4) that exclusively transmits radiation in the frequency range $[\nu_1, \nu_2]$, reflecting all other frequencies back into their respective cavities.The total power $P_{1 \to 2}$ radiated from cavity $C_1$ to $C_2$ through the filter is the integral of the emitted flux over the transmitted frequencies:$$P_{1 \to 2} = A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_1)) \, d\nu$$Similarly, the total power radiated from cavity $C_2$ to $C_1$ is:$$P_{2 \to 1} = A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_2)) \, d\nu$$By Axiom 2, because $u(\nu, T, C_1) > u(\nu, T, C_2)$ everywhere on the interval $[\nu_1, \nu_2]$, it strictly follows that $f(u(\nu, T, C_1)) > f(u(\nu, T, C_2))$ on this interval.Since the integral of a strictly positive difference over a non-zero interval $[\nu_1, \nu_2]$ is strictly positive, we have:$$P_{1 \to 2} > P_{2 \to 1}$$This implies there is a net transfer of heat energy $P_{\text{net}} = P_{1 \to 2} - P_{2 \to 1} > 0$ flowing continuously from cavity $C_1$ to cavity $C_2$.However, both $C_1$ and $C_2$ are precisely at the same temperature $T$. A spontaneous, continuous net flow of heat between two bodies at identical temperatures constitutes a violation of the Second Law of Thermodynamics (Axiom 3).Therefore, our initial assumption must be false.We conclude that no such $\nu_0$ exists, and $u(\nu, T, C_1) = u(\nu, T, C_2)$ for all $\nu, T > 0$ and all $C_1, C_2 \in \mathcal{C}$.
+Without loss of generality, we may assume:
+\begin{equation*}
+u(\nu_0, T, C_1)
+\;\; > \;\;
+    u(\nu_0, T, C_2)
+\end{equation*}
+Because $u$ is continuous with respect to \,$\nu$\, (Axiom 1),
+there must exist a finite frequency neighborhood \,$[\nu_1, \nu_2]$\,
+containing \,$\nu_0$\, (\,where \,$\nu_1 < \nu_2$\,)
+such that the following inequality holds:
+\begin{equation*}
+u(\nu, T, C_1)
+\;\; > \;\;
+    u(\nu, T, C_2)\,,
+\quad
+\textnormal{for each \,$\nu \in [\nu_1, \nu_2]$}
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+Let two cavities
+whose macroscopic blackbody configurations are respectively \,$C_1$\, and \,$C_2$\,
+be placed facing each other,
+connected only by a small aperture of area \,$A > 0$.\,
+Between the cavities, insert an ideal filter (Axiom 4)
+that exclusively transmits radiation in the frequency range \,$[\nu_1, \nu_2]$,\,
+reflecting all other frequencies back into their respective cavities.
+The total power \,$P_{1 \to 2}$\, radiated from cavity \,$C_1$\, to \,$C_2$\,
+through the filter is the integral of the emitted flux over the transmitted frequencies:
+\begin{equation*}
+P_{1 \rightarrow 2}
+\;\; = \;\;
+    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_1)) \, \d\nu
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+Similarly, the total power radiated from cavity \,$C_2$\, to \,$C_1$\, is:
+\begin{equation*}
+P_{2 \rightarrow 1}
+\;\; = \;\;
+    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_2)) \, \d\nu
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+By Axiom 2, since
+\,$u(\nu, T, C_1) \,>\, u(\nu, T, C_2)$\,
+everywhere on the interval $[\nu_1, \nu_2]$, it strictly follows that
+\,$f(u(\nu, T, C_1)) \,>\, f(u(\nu, T, C_2))$\, on this interval.
+Since the integral of a strictly positive difference over a non-zero interval $[\nu_1, \nu_2]$ is strictly positive, we have:
+\begin{equation*}
+P_{1 \rightarrow 2}
+\;\; = \;\;
+    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_1)) \, \d\nu
+\;\; > \;\;
+    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_2)) \, \d\nu
+\;\; = \;\;
+    P_{2 \rightarrow 1}
+\end{equation*}
+This implies that there is a net transfer of heat energy
+\,$P_{\textnormal{net}} \,=\, P_{1 \to 2} - P_{2 \to 1} \,>\, 0$\,
+flowing continuously from cavity $C_1$ to cavity $C_2$.
+
+\vskip 0.2cm
+\noindent
+However, both $C_1$ and $C_2$ are precisely at the same temperature $T$.
+A spontaneous, continuous net flow of heat between two bodies
+at identical temperatures constitutes a violation of
+the Second Law of Thermodynamics (Axiom 3).
+
+\vskip 0.2cm
+\noindent
+Therefore, our initial contrary assumption must be false.
+We may now conclude that no such
+\,$\nu_0 > 0$\, exists,
+and hence,
+\begin{equation*}
+u(\nu, T, C_1)
+\;\; = \;\;
+    u(\nu, T, C_2)\,,
+\quad
+\textnormal{for each \,$\nu,\, T \,>\, 0$\, and each \,$C_1, C_2 \,\in\, \mathcal{C}$}
+\end{equation*}
+This completes the proof of the Theorem.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
