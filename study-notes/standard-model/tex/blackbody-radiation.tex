@@ -203,7 +203,277 @@ This completes the proof of the Theorem.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{The ultraviolet catastrophe -- the Rayleigh–Jeans law}
+\section{Blackbody radiation spectral energy density}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.3cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+\begin{equation*}
+\rho(\nu,T)
+\;\; = \;\;
+    g(\nu) \cdot \langle\,E(\nu,T)\,\rangle\,,
+% \;\; = \;\;
+%     \left(\begin{array}{c}
+%         \textnormal{number of}
+%         \\
+%         \textnormal{admissible modes of vibration}
+%         \\
+%         \textnormal{per unit volume, at frequency \,$\nu$}
+%         \end{array}\right)
+%     \times
+%     \left(\begin{array}{c}
+%         \textnormal{average energy over all}
+%         \\
+%         \textnormal{admissible modes of vibration}
+%         \\
+%         \textnormal{at frequency \,$\nu$\, and temperature \,$T$}
+%         \end{array}\right)
+\end{equation*}
+where
+\begin{eqnarray*}
+g(\nu)
+{\color{white}....}
+& := &
+    \left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{admissible modes of vibration}
+        \\
+        \textnormal{per unit volume, at frequency \,$\nu$}
+        \end{array}\right),
+    \quad
+    \textnormal{and}
+\\
+\langle\,E(\nu,T)\,\rangle
+& := &
+    \left(\begin{array}{c}
+        \textnormal{average energy over all}
+        \\
+        \textnormal{admissible modes of vibration}
+        \\
+        \textnormal{at frequency \,$\nu$\, and temperature \,$T$}
+        \end{array}\right)
+\end{eqnarray*}
+\end{proposition}
+\proof
+\begin{equation*}
+U_{\textnormal{total}}
+\;\; = \;\;
+    \int_{0}^{\infty} N(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
+\;\; = \;\;
+    \int_{0}^{\infty} V \cdot g(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
+\end{equation*}
+
+\begin{equation*}
+\int_{0}^{\infty}\, g(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
+\;\; = \;\;
+    \dfrac{U_{\textnormal{total}}}{V}
+\;\; = \;\;
+    \left(\begin{array}{c}
+        \textnormal{energy}
+        \\
+        \textnormal{per unit volume}
+        \end{array}\right)
+\;\; = \;\;
+    \int_{0}^{\infty}\rho(\nu,T)\,\d\nu
+\end{equation*}
+
+\begin{equation*}
+\int_{0}^{\infty}
+    \left(\,
+        \rho(\nu,T)
+        \, \overset{{\color{white}1}}{-} \,
+        g(\nu) \langle\,E(\nu,T)\,\rangle
+        \,\right)
+    \,\d\nu
+\;\; = \;\;
+    0
+\end{equation*}
+\qed
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+\begin{equation*}
+g(\nu)
+\;\; := \;\;
+    \left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{admissible modes of vibration}
+        \\
+        \textnormal{at frequency \,$\nu$}
+        \end{array}\right)
+\;\; = \;\;
+    \dfrac{8\,\pi}{c^{3}}\cdot\nu^{2}
+\end{equation*}
+\end{proposition}
+\proof
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;
+$
+g(\nu)
+\;\; = \;\;
+    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}
+$
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;
+\begin{equation*}
+\int_{0}^{\infty}\, \dfrac{\d N(\nu)}{\d\nu} \,\d\nu
+\;\; = \;\;
+    N(\nu)
+\;\; = \;\;
+    \int_{0}^{\infty}\, V \cdot g(\nu) \,\d\nu
+\end{equation*}
+Hence,
+\begin{equation*}
+g(\nu)
+\;\; = \;\;
+    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}
+\end{equation*}
+This completes the proof of Claim 1.
+
+\vskip 0.4cm
+\noindent
+\textbf{Claim 2:}\;
+$
+N(\nu)
+\; = \;
+    \dfrac{
+        8\,\pi\,V\,\nu^{3}
+        }{
+        3\,c^{3}
+        }
+$
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\;
+\begin{equation*}
+k_{x} \;=\; \dfrac{n_{x}\pi}{L},
+\quad
+k_{y} \;=\; \dfrac{n_{y}\pi}{L},
+\quad
+k_{z} \;=\; \dfrac{n_{z}\pi}{L},
+\end{equation*}
+where
+\,$n_{x},\, n_{y},\, n_{z} \,\in\, \N$.\,
+
+\begin{eqnarray*}
+\vert\,\mathbf{k}\,\vert^{2}
+& = &
+    \left(k_{x}\right)^{2}
+    \,+\,
+    \left(k_{y}\right)^{2}
+    \,+\,
+    \left(k_{z}\right)^{2}
+\;\; = \;\;
+    \left(\dfrac{n_{x}\pi}{L}\right)^{2}
+    \,+\,
+    \left(\dfrac{n_{y}\pi}{L}\right)^{2}
+    \,+\,
+    \left(\dfrac{n_{z}\pi}{L}\right)^{2}
+\;\; = \;\;
+    \left(\,\dfrac{\pi}{L}\,\right)^{2}
+    \left(n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\right)
+\\
+& = &
+    \left(\,\dfrac{\pi}{L}\,\right)^{2}
+    \vert\,\mathbf{n}\,\vert^{2}
+\end{eqnarray*}
+Now, recall the relation between the magnitude of the wave vector and the frequency:
+\begin{equation*}
+\vert\,\mathbf{k}\,\vert
+\; = \;
+    \dfrac{2\,\pi}{\lambda}
+\; = \;
+    \dfrac{2\,\pi}{c/\nu}
+\; = \;
+    \dfrac{2\,\pi\,\nu}{c}
+\end{equation*}
+Hence,
+\begin{equation*}
+\left(\,\dfrac{2\,\pi\,\nu}{c}\,\right)^{2}
+\;\; = \;\;
+    \vert\,\mathbf{k}\,\vert^{2}
+\;\; = \;\;
+    \left(\,\dfrac{\pi}{L}\,\right)^{2}
+    \vert\,\mathbf{n}\,\vert^{2}\,,
+\end{equation*}
+which in turn implies:
+\begin{equation*}
+\vert\,\mathbf{n}\,\vert
+\;\; = \;\;
+    \dfrac{2\,L\,\nu}{c}
+\end{equation*}
+
+\begin{equation*}
+N(\nu)
+\;\; = \;\;
+    2 \times \dfrac{1}{8} \times \left(\dfrac{4}{3}\,\pi\,\vert\,\mathbf{n}\,\vert^{3}\right)
+\;\; = \;\;
+    \dfrac{\pi}{3} \cdot \vert\,\mathbf{n}\,\vert^{3}
+\;\; = \;\;
+    \dfrac{\pi}{3} \cdot \left(\dfrac{2\,L\,\nu}{c}\right)^{3}
+\;\; = \;\;
+    \dfrac{8\,\pi\,L^{3}\,\nu^{3}}{3\,c^{3}}
+\;\; = \;\;
+    \dfrac{8\,\pi\,V\,\nu^{3}}{3\,c^{3}}
+\end{equation*}
+This completes the proof of Claim 2.
+
+\vskip 0.4cm
+\noindent
+\textbf{Claim 3:}\;
+$
+g(\nu)
+\; = \;
+    \dfrac{
+        8\,\pi
+        }{
+        c^{3}
+        }
+    \cdot
+    \nu^{2}
+$
+\vskip 0.1cm
+\noindent
+Proof of Claim 3:\;
+\begin{equation*}
+g(\nu)
+\;\; = \;\;
+    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
+\;\; = \;\;
+    \dfrac{1}{V}
+    \cdot
+    \dfrac{\d}{\d\,\nu}\!\left(\,
+        \dfrac{8\,\pi\,V\,\nu^{3}}{3\,c^{3}}
+        \,\right)
+\;\; = \;\;
+    \dfrac{8\,\pi}{3\,c^{3}}
+    \cdot
+    \dfrac{\d}{\d\,\nu}\!\left(\,
+        \nu^{3}
+        \,\right)
+\;\; = \;\;
+    \dfrac{8\,\pi}{3\,c^{3}}
+    \cdot
+    3\,\nu^{2}
+\;\; = \;\;
+    \dfrac{8\,\pi}{c^{3}}
+    \cdot
+    \nu^{2}\,,
+\end{equation*}
+as required.
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -211,3 +481,194 @@ This completes the proof of the Theorem.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\noindent
+\textbf{Planck's assumptions}
+\begin{itemize}
+\item
+    For each fixed frequency \,$\nu \in (\,0,\infty\,)$,\,
+    the collection \,$\mathscr{E}_{\nu}$\, of admissible energies
+    among all modes of vibration
+    is countably infinite, and is given by:
+    \begin{equation*}
+    \mathscr{E}_{\nu}
+    \;\; = \;\;
+        \left\{\;
+            \left.
+            \overset{{\color{white}1}}{
+                n\,h\,\nu \,\in\, \Re
+                }
+            \;\;\right\vert\;
+            n \in \N\cup\{\,0\,\}
+            \;\right\}
+    \end{equation*}
+\item
+    For each fixed frequency \,$\nu \in (\,0,\infty\,)$,\,
+    the probability mass function induced on the (discrete) set
+    \,$\mathscr{E}_{\nu}$\,
+    is proportional to the map
+    \,$
+    \mathscr{E}_{\nu} \xrightarrow{{\color{white}....}} [\,0,\infty) :
+    n\,h\,\nu \xmapsto{{\color{white}....}} \exp\!\left(\,\overset{{\color{white}.}}{-\,n\,h\,\nu\,/\,k_{B}\,T}\,\right)
+    $.\,
+\end{itemize}
+\vskip 0.2cm
+Under Planck's assumptions, we have:
+\begin{equation*}
+\langle\,E(\nu,T)\,\rangle
+\;\; = \;\;
+    \dfrac{
+        {\color{white}.}
+        \overset{\infty}{\underset{n=0}{\sum}}\;
+        n\,h\,\nu \cdot e^{-\,n\,h\,\nu/k_{B}T}
+        {\color{white}.}
+        }{
+        \overset{{\color{white}.}}{
+            \overset{\infty}{\underset{n=0}{\sum}}\;
+            e^{-\,n\,h\,\nu /k_{B}T}
+            }
+        }
+\;\; = \;\;
+    \cdots
+\;\; = \;\;
+    \dfrac{
+        h\,\nu
+        }{
+        {\color{white}.}
+        \overset{{\color{white}.}}{
+            e^{n\,h\,\nu /k_{B}T} \, - \, 1
+            }
+        {\color{white}.}
+        }
+\end{equation*}
+Hence,
+\begin{eqnarray*}
+\rho(\,\nu,T\,)
+& = &
+    g(\nu)
+    \cdot
+    \langle\,E(\nu,T)\,\rangle
+\;\; = \;\;
+    \dfrac{
+        8\,\pi
+        }{
+        c^{3}
+        }
+    \cdot
+    \nu^{2}
+    \cdot
+    \dfrac{
+        h\,\nu
+        }{
+        {\color{white}.}
+        \overset{{\color{white}.}}{
+            e^{n\,h\,\nu /k_{B}T} \, - \, 1
+            }
+        {\color{white}.}
+        }
+\\
+& = &
+    \dfrac{
+        8\,\pi\,h
+        }{
+        c^{3}
+        }
+    \cdot
+    \dfrac{
+        \nu^{3}
+        }{
+        {\color{white}.}
+        \overset{{\color{white}.}}{
+            e^{n\,h\,\nu /k_{B}T} \, - \, 1
+            }
+        {\color{white}.}
+        }
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{The ultraviolet catastrophe -- the Rayleigh–Jeans law}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\noindent
+\textbf{The Rayleigh-Jeans assumptions}
+\begin{itemize}
+\item
+    For each fixed frequency \,$\nu \in (\,0,\infty\,)$,\,
+    the collection \,$\mathscr{E}_{\nu}$\, of admissible energies
+    among all modes of vibration is given by:
+    \begin{equation*}
+    \mathscr{E}_{\nu}
+    \;\; = \;\;
+        \left[\,0,\infty\,\right)
+    \end{equation*}
+\item
+    For each fixed frequency \,$\nu \in (\,0,\infty\,)$,\,
+    the probability density function induced on the set
+    \,$\mathscr{E}_{\nu}$\,
+    is proportional to the map
+    \,$
+    [\,0,\infty\,) \xrightarrow{{\color{white}....}} [\,0,\infty\,) :
+    E \xmapsto{{\color{white}....}} \exp\!\left(\,\overset{{\color{white}.}}{-\,E\,/\,k_{B}\,T}\,\right)
+    $.\,
+\end{itemize}
+\vskip 0.2cm
+Under the Reyleigh-Jeans assumptions, we have:
+\begin{equation*}
+\langle\,E(\nu,T)\,\rangle
+\;\; = \;\;
+    \dfrac{
+        {\color{white}.}
+        \displaystyle\int_{0}^{\infty}\;
+            E \cdot e^{-E/k_{B}T}
+            \;\d E
+        {\color{white}.}
+        }{
+        \overset{{\color{white}.}}{
+            \displaystyle\int_{0}^{\infty}\;
+                e^{-\,E /k_{B}T}
+                \;\d E
+            }
+        }
+\;\; = \;\;
+    \cdots
+\;\; = \;\;
+    \dfrac{
+        {\color{white}.}
+        \left(\,k_{B}\,T\,\right)^{2}
+        {\color{white}.}
+        }{
+        \overset{{\color{white}.}}{
+            k_{B}\,T
+            }
+        }
+\;\; = \;\;
+    k_{B}\,T
+\end{equation*}
+Hence,
+\begin{eqnarray*}
+\rho(\,\nu,T\,)
+& = &
+    g(\nu)
+    \cdot
+    \langle\,E(\nu,T)\,\rangle
+\;\; = \;\;
+    \dfrac{
+        8\,\pi
+        }{
+        c^{3}
+        }
+    \cdot
+    \nu^{2}
+    \cdot
+    k_{B}\,T
+\\
+& = &
+    \dfrac{
+        8\,\pi\,k_{B}\,T
+        }{
+        c^{3}
+        }
+    \cdot
+    \nu^{2}
+\end{eqnarray*}
