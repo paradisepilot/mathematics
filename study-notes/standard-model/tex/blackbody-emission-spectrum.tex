@@ -27,122 +27,153 @@
 Suppose:
 \begin{itemize}
 \item
-    $\mathcal{C}$\, is the set of all possible macroscopic blackbody configurations
+    $\mathcal{C}$\, is the set of all possible cavities
+    (``realizations'' of blackbody)
+    characterized by their respective macroscopic configurations
     (encompassing variations in shape, volume, and interior wall material).
 \item
     $T \in \Re^{+}$ is the absolute temperature, and
     \,$\nu \in \Re^{+}$ is the frequency of electromagnetic radiation.
 \item
     \,$u: \mathbb{R}^+ \times \mathbb{R}^+ \times \mathcal{C} \xrightarrow{{\color{white}....}} \mathbb{R}^+$\,
-    is the blackbody emission spectral energy density function,
-    i.e., \,$u(\nu, T, C)$\, is the blackbody emission energy density per unit frequency
+    is the spectral energy density function,
+    i.e., \,$u(\nu, T, C)$\, is the energy density per unit frequency
+    (energy per unit volume per unit frequency)
     at frequency \,$\nu \in \Re^{+}$,\, temperature \,$T \in \Re^{+}$,\,
-    for macroscopic blackbody configuration \,$C \in \mathcal{C}$.\,
+    for cavity (equivalently, macroscopic configuration) \,$C \in \mathcal{C}$.\,
 \end{itemize}
 Assume:
 \begin{itemize}
 \item
     \textbf{Axiom 1 (Continuity):}\;
-    For any fixed $T$ and $C$, the spectral energy density $u(\nu, T, C)$ is a continuous function of the frequency $\nu$.
+    For any fixed $T$ and $C$, the spectral energy density
+    \,$u(\nu, T, C)$\,
+    is a continuous function of the frequency $\nu$.
 \item
     \textbf{Axiom 2 (Strict Monotonicity of Flux):}\;
-    The spectral power per unit area $\Phi_\nu$ emitted from a small aperture in cavity $C$ is a strictly monotonically increasing function of its internal spectral energy density. That is, $\Phi_\nu = f(u(\nu, T, C))$, where $f: \mathbb{R}^+ \to \mathbb{R}^+$ satisfies $f(a) > f(b) \iff a > b$. (In classical electrodynamics, $f(u) = \frac{c}{4}u$, but strict monotonicity is mathematically sufficient).
+    The spectral power per unit area \,$\Phi_\nu$\,
+    (energy per unit time per unit area)
+    emitted from a small aperture in cavity \,$C$\,
+    is a strictly monotonically increasing function
+    of its internal spectral energy density.
+    That is,
+    \,$\Phi_{\nu} \, = \, f(u(\nu, T, C))$,\,
+    where
+    \,$f: \Re^{+} \to \Re^{+}$\,
+    satisfies
+    \,$f(a) \, > \, f(b) \;\Longleftrightarrow\; a \, > \, b$.\,
+    (In classical electrodynamics,
+    \,$f(u) \,=\, \frac{c}{4}u$,\,
+    but strict monotonicity is mathematically sufficient).
 \item
     \textbf{Axiom 3 (Second Law of Thermodynamics):}\;
-    If two cavities $C_1, C_2 \in \mathcal{C}$ are maintained at the exact same temperature $T$ and are allowed to exchange energy radiatively, the net steady-state heat flux between them must be exactly zero.
+    If two cavities $C_{1}, C_{2} \in \mathcal{C}$ are maintained at the exact same temperature $T$ and are allowed to exchange energy radiatively, the net steady-state heat flux between them must be exactly zero.
 \item
     \textbf{Axiom 4 (Ideal Optical Filtration):}\;
-    For any interval $[\nu_1, \nu_2] \subset \mathbb{R}^+$, it is possible to construct a filter that transmits $100\%$ of incident radiation within $[\nu_1, \nu_2]$ and reflects $100\%$ of radiation outside this interval.
+    For any interval
+    \,$[\,\nu_{1}, \nu_{2}\,] \subset \Re^{+}$,\,
+    it is possible to construct a filter that transmits \,$100\%$\,
+    of the incident radiation with frequencies lying within the interval
+    \,$[\,\nu_{1}, \nu_{2}\,]$\,
+    and reflects \,$100\%$\, of the incident radiation
+    with frequencies lying outside this interval.
 \end{itemize}
 Then, the following statement is true:
-For any two arbitrary macroscope blackbody configurations
-\,$C_1, C_2 \,\in\, \mathcal{C}$\,
-at the same temperature \,$T > 0$,\,
+For any two cavities
+\,$C_{1}, C_{2} \,\in\, \mathcal{C}$\,
+that have the same temperature \,$T > 0$\,
+but arbitrary respective macroscope configurations,
 the spectral energy density is identical for all frequencies, i.e.,
 \begin{equation*}
-u(\nu, T, C_1)
+u(\nu, T, C_{1})
 \;\;=\;\;
-    u(\nu, T, C_2),
+    u(\nu, T, C_{2}),
 \quad
 \textnormal{for each \,$\nu > 0$,\, each \,$T > 0$,\, and each \,$C_{1}, C_{2} \in \mathcal{C}$}
 \end{equation*}
 Consequently, \,$u$\, is independent of \,$C$\, and is a universal function \,$u(\nu, T)$.\,
 \end{theorem}
 \proof
-Suppose, to the contrary, that there exists a specific temperature
-\,$T > 0$,\, a frequency \,$\nu_0 > 0$,\, and two configurations
-\,$C_1, C_2 \in \mathcal{C}$\,
-such that their spectral energy densities differ.
+Suppose, to the contrary, that there exist a specific temperature
+\,$T_{0} > 0$,\, a frequency \,$\nu_0 > 0$,\, and two cavities
+\,$C_{1}, C_{2} \in \mathcal{C}$\,
+such that their spectral energy densities differ
+at frequency \,$\nu_{0}$\, and temperature \,$T_{0})$.\,
 
 \vskip 0.2cm
 \noindent
 Without loss of generality, we may assume:
 \begin{equation*}
-u(\nu_0, T, C_1)
+u(\nu_0, T_{0}, C_{1})
 \;\; > \;\;
-    u(\nu_0, T, C_2)
+    u(\nu_0, T_{0}, C_{2})
 \end{equation*}
-Because $u$ is continuous with respect to \,$\nu$\, (Axiom 1),
-there must exist a finite frequency neighborhood \,$[\nu_1, \nu_2]$\,
-containing \,$\nu_0$\, (\,where \,$\nu_1 < \nu_2$\,)
+Because \,$u$\, is continuous with respect to \,$\nu$\, (Axiom 1),
+there must exist a finite frequency neighbourhood \,$[\,\nu_{1}, \nu_{2}\,]$\,
+containing \,$\nu_{0}$\, (\,where \,$\nu_{1} < \nu_{2}$\,)
 such that the following inequality holds:
 \begin{equation*}
-u(\nu, T, C_1)
+u(\nu, T_{0}, C_{1})
 \;\; > \;\;
-    u(\nu, T, C_2)\,,
+    u(\nu, T_{0}, C_{2})\,,
 \quad
-\textnormal{for each \,$\nu \in [\nu_1, \nu_2]$}
+\textnormal{for each \,$\nu \in [\,\nu_{1}, \nu_{2}\,]$}
 \end{equation*}
 
 \vskip 0.2cm
 \noindent
-Let two cavities
-whose macroscopic blackbody configurations are respectively \,$C_1$\, and \,$C_2$\,
+Let the two cavities
+\,$C_{1}$\, and \,$C_{2}$\,
 be placed facing each other,
 connected only by a small aperture of area \,$A > 0$.\,
 Between the cavities, insert an ideal filter (Axiom 4)
-that exclusively transmits radiation in the frequency range \,$[\nu_1, \nu_2]$,\,
+that exclusively transmits radiation in the frequency range \,$[\,\nu_{1}, \nu_{2}\,]$,\,
 reflecting all other frequencies back into their respective cavities.
-The total power \,$P_{1 \to 2}$\, radiated from cavity \,$C_1$\, to \,$C_2$\,
-through the filter is the integral of the emitted flux over the transmitted frequencies:
+The total power \,$P_{1 \to 2}$\, radiated from cavity \,$C_{1}$\, to \,$C_{2}$\,
+through the filter is the integral of the emitted energy flux over the transmitted frequencies:
 \begin{equation*}
 P_{1 \rightarrow 2}
 \;\; = \;\;
-    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_1)) \, \d\nu
+    A \int_{\nu_{1}}^{\nu_{2}} f(u(\nu, T_{0}, C_{1})) \, \d\nu
 \end{equation*}
 
 \vskip 0.2cm
 \noindent
-Similarly, the total power radiated from cavity \,$C_2$\, to \,$C_1$\, is:
+Similarly, the total power radiated from cavity \,$C_{2}$\, to \,$C_{1}$\, is:
 \begin{equation*}
 P_{2 \rightarrow 1}
 \;\; = \;\;
-    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_2)) \, \d\nu
+    A \int_{\nu_{1}}^{\nu_{2}} f(u(\nu, T_{0}, C_{2})) \, \d\nu
 \end{equation*}
 
 \vskip 0.2cm
 \noindent
 By Axiom 2, since
-\,$u(\nu, T, C_1) \,>\, u(\nu, T, C_2)$\,
-everywhere on the interval $[\nu_1, \nu_2]$, it strictly follows that
-\,$f(u(\nu, T, C_1)) \,>\, f(u(\nu, T, C_2))$\, on this interval.
-Since the integral of a strictly positive difference over a non-zero interval $[\nu_1, \nu_2]$ is strictly positive, we have:
+\,$u(\nu, T_{0}, C_{1}) \,>\, u(\nu, T_{0}, C_{2})$\,
+for each 
+\,$\nu \in [\nu_{1}, \nu_{2}]$,\,
+it follows that
+\,$f(u(\nu, T_{0}, C_{1})) \,>\, f(u(\nu, T_{0}, C_{2}))$\,
+for each 
+\,$\nu \in [\,\nu_{1}, \nu_{2}\,]$,\,
+which in turn implies:
 \begin{equation*}
 P_{1 \rightarrow 2}
 \;\; = \;\;
-    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_1)) \, \d\nu
+    A \int_{\nu_{1}}^{\nu_{2}} f(u(\nu, T_{0}, C_{1})) \, \d\nu
 \;\; > \;\;
-    A \int_{\nu_1}^{\nu_2} f(u(\nu, T, C_2)) \, \d\nu
+    A \int_{\nu_{1}}^{\nu_{2}} f(u(\nu, T_{0}, C_{2})) \, \d\nu
 \;\; = \;\;
     P_{2 \rightarrow 1}
 \end{equation*}
-This implies that there is a net transfer of heat energy
+Thus, there is a net transfer per unit time of heat energy
 \,$P_{\textnormal{net}} \,=\, P_{1 \to 2} - P_{2 \to 1} \,>\, 0$\,
-flowing continuously from cavity $C_1$ to cavity $C_2$.
+flowing continuously from cavity $C_{1}$ to cavity $C_{2}$.
 
 \vskip 0.2cm
 \noindent
-However, both $C_1$ and $C_2$ are precisely at the same temperature $T$.
+However, both \,$C_{1}$\, and \,$C_{2}$\, are
+at precisely the same temperature \,$T_{0}$.\,
 A spontaneous, continuous net flow of heat between two bodies
 at identical temperatures constitutes a violation of
 the Second Law of Thermodynamics (Axiom 3).
@@ -151,14 +182,14 @@ the Second Law of Thermodynamics (Axiom 3).
 \noindent
 Therefore, our initial contrary assumption must be false.
 We may now conclude that no such
-\,$\nu_0 > 0$\, exists,
+\,$\nu_0 > 0$\, and \,$T_{0} > 0$\,exist,
 and hence,
 \begin{equation*}
-u(\nu, T, C_1)
+u(\nu, T, C_{1})
 \;\; = \;\;
-    u(\nu, T, C_2)\,,
+    u(\nu, T, C_{2})\,,
 \quad
-\textnormal{for each \,$\nu,\, T \,>\, 0$\, and each \,$C_1, C_2 \,\in\, \mathcal{C}$}
+\textnormal{for each \,$\nu,\, T \,>\, 0$\, and each \,$C_{1}, C_{2} \,\in\, \mathcal{C}$}
 \end{equation*}
 This completes the proof of the Theorem.
 \qed
