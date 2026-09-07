@@ -75,7 +75,7 @@ Assume:
     satisfies
     \,$f(a) \, > \, f(b) \;\Longleftrightarrow\; a \, > \, b$.\,
     (In classical electrodynamics,
-    \,$f(u) \,=\, \frac{c}{4}u$,\,
+    \,$f(u) \,=\, \dfrac{c}{4}u$,\,
     but strict monotonicity is mathematically sufficient).
 \item
     \textbf{Axiom 3 (Second Law of Thermodynamics):}\;
@@ -768,7 +768,7 @@ Hence,
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-\section{Explanation of the universal blackbody emission spectrum via discretization by Planck}
+\section{Planck's explanation of the universal blackbody spectral energy density via discretization of admissible values of energy}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
@@ -890,7 +890,414 @@ Hence,
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\section{Boltzmann's entropy formula \,$S \,=\, k_{B}\log\!\left(\,\Omega\,\right)$}
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+Let a thermodynamic system be given, and
+let \,$\sigma$\, be a given macroscopic state of the given thermodynamic system.
+
+\vskip 0.4cm
+\noindent
+We define:
+\begin{equation*}
+\Omega_{{\color{red}\sigma}}
+\;\; := \;\;
+    \left(\begin{array}{c}
+        \textnormal{number of \textbf{\color{red}microstates}}
+        \\
+        \textnormal{of the given thermodynamic system}
+        \\
+        \textnormal{compatible with}
+        \\
+        \textnormal{the given macroscopic state \,${\color{red}\sigma}$\, of the system}
+        \end{array}\right)
+\end{equation*}
+
+\vskip 0.4cm
+\noindent
+We define:
+\begin{equation*}
+\left(\begin{array}{c}
+    \textnormal{the \textbf{\color{red}entropy}}
+    \\
+    \textnormal{of the given thermodynamic system}
+    \\
+    \textnormal{at the given macroscopic state \,${\color{red}\sigma}$\, of the system}
+    \end{array}\right)
+\;\; :=: \;\;
+    S_{{\color{red}\sigma}}
+\;\; := \;\;
+    k_{B}\cdot\log\!\left(\,\Omega_{\sigma}\,\right),
+\end{equation*}
+where
+\,$k_{B} > 0$\,
+is the Boltzmann constant.
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Thermodynamic definition of absolute temperature}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+Given a thermodynamic system at a given macroscopic state,
+the thermodynamic definition of its absolute temperature is:
+\begin{equation*}
+\dfrac{1}{T}
+\;\; := \;\;
+    \dfrac{\partial S}{\partial E}\,,
+\end{equation*}
+where
+\,$T$,\, \,$S$,\, and \,$E$\,
+are, respectively,
+the absolute temperature, the entropy, and the energy
+of the given system at the give macroscopic state.
+In this sub-section, we explain why this definition
+conforms well with our intuitive notion of what temperature is.
+
+\vskip 0.4cm
+\noindent
+Our most basic intuitive understanding of temperature
+(formalized as the Zeroth Law of Thermodynamics) is that
+when you bring two objects into thermal contact,
+they will {\color{red}exchange energy} until they reach a state of equilibrium,
+at which point they share the same temperature.
+
+\vskip 0.4cm
+\noindent
+Let us test if our definition satisfies this.
+Imagine two isolated systems, $A$ and $B$.
+System $A$ has energy $E_{A}$ and entropy $S_{A}(E_{A})$.
+System $B$ has energy $E_{B}$ and entropy $S_{B}(E_{B})$.
+Now, bring them into thermal contact so they can exchange energy,
+but keep the combined system isolated.
+The total energy is strictly conserved:
+\begin{equation*}
+E_{\textnormal{total}}
+\;\; = \;\;
+    E_{A} \,+\, E_{B}
+\;\; = \;\;
+    \textnormal{constant}\,,
+\end{equation*}
+which implies
+\begin{equation*}
+\d E_{B}
+\;\; = \;\;
+    -\,\d E_{A}
+\end{equation*}
+The total entropy of the combined system
+is the sum of their individual entropies:
+\begin{equation*}
+S_{\textnormal{total}}
+\;\; = \;\;
+    S_{A}(E_{A}) \,+\, S_{B}(E_{B})
+\end{equation*}
+According to the Second Law of Thermodynamics,
+the system will naturally evolve to maximize its total entropy.
+At equilibrium, the total entropy is at a maximum,
+meaning its first derivative is zero ($\d S_{\textnormal{total}} = 0$):
+\begin{equation*}
+0
+\;\; = \;\;
+    \d S_{\textnormal{total}}
+\;\; = \;\;
+    \dfrac{\partial S_{A}}{\partial E_{A}}\,\d E_{A}
+    \, + \,
+    \dfrac{\partial S_{B}}{\partial E_{B}}\,\d E_{B}
+\;\; = \;\;
+    \left(\,
+        \dfrac{\partial S_{A}}{\partial E_{A}}
+        \, - \,
+        \dfrac{\partial S_{B}}{\partial E_{B}}
+        \right)
+    \d E_{A}\,,
+\end{equation*}
+where the last equality follows by substituting \,$\d E_{B} \,=\, -\,\d E_{A}$.\,
+% \begin{equation*}
+% dS_{\textnormal{total}}
+% \;\; = \;\;
+%     \left( \dfrac{\partial S_{A}}{\partial E_{A}} - \dfrac{\partial S_{B}}{\partial E_{B}} \right) dE_{A}
+% \;\; = \;\;
+%     0
+% \end{equation*}
+The validity of the above equality
+for any arbitrary energy fluctuation \,$\d E_{A}$\, implies that
+the term in the parentheses must be exactly zero:
+\begin{equation*}
+\dfrac{\partial S_{A}}{\partial E_{A}}
+\;\; = \;\;
+    \dfrac{\partial S_{B}}{\partial E_{B}}
+\end{equation*}
+The conclusion: At thermal equilibrium,
+this specific derivative is exactly the same for both systems.
+Because our intuitive definition of equilibrium is "the state
+where $T_A = T_B$", whatever temperature is,
+it must be a direct function of $\dfrac{\partial S}{\partial E}$.
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\section{Justification of the use of the Boltzmann probability distriubtion
+in the derivation of the Rayleigh-Jeans law}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+We consider the energy contained in the (electromagnetic) radiation
+within a blackbody radiation cavity at a certain absolute temperature \,$T$.\,
+The electromagnetic radiation obeys Maxwell's equations,
+which are linear partial differential equations
+(involving partial derivatives of electric and magnetic fields
+with respect to space and time).
+The linearity of Maxwell's equations implies that their solutions
+satisfy the principle of superposition
+(i.e., linear combinations of solutions are themselves solutions).
+Under appropriate boundary conditions, we expect that the solution
+describing the full electromagnetic field
+inside the blackbody radiation cavity
+can be decomposed into frequency-specific components
+(either as a discrete sum or as an integral transform).
+In what follows, we will refer to such a frequency-specific component
+(which itself can be considered a single-frequency electromagnetic field in its own right)
+as a \textbf{mode of oscillation} of the total electromagnetic field.
+
+\vskip 0.3cm
+\noindent
+Fix a frequency \,$\nu \in (\,0\,,\,\infty\,)$.\,
+
+\begin{equation*}
+E_{\textnormal{total}}(\nu)
+\;\; = \;\;
+    E
+    \; + \;
+    E_{\textnormal{wall}}
+\;\; = \;\;
+    \textnormal{constant in time}
+\end{equation*}
+
+\begin{equation*}
+\Omega_{\textnormal{total}}\!\left(\,\overset{{\color{white}.}}{
+    E_{\textnormal{total}}(\nu)
+    }\,\right)
+\;\; = \;\;
+    \underset{E}{\sum}\;\,
+    \Omega_{\nu}(E)
+    \cdot
+    \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{wall}}
+        }\,\right)
+\;\; = \;\;
+    \underset{E}{\sum}\;\,
+    \Omega_{\nu}(E)
+    \cdot
+    \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}} \,-\, E
+        }\,\right)
+\end{equation*}
+
+\vskip 0.3cm
+\noindent
+Recall the \textbf{Postulate of Equal A Priori Probabilities} from statisticsl mechanics:
+\begin{center}
+\begin{minipage}{5.5in}
+For an isolated macroscopic system in thermodynamic equilibrium
+under fixed macroscopic parameters
+(such as total energy $E$, volume $V$, and particle number $N$),
+all accessible microstates compatible with these constraints
+are equally likely to be occupied.
+\end{minipage}
+\end{center}
+\vskip 0.4cm
+\noindent
+Hence,
+\begin{equation*}
+P(E)
+\;\; \propto \;\;
+    \Omega_{\nu}(E)
+    \cdot
+    \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}-E
+        }\,\right)
+\end{equation*}
+
+\vskip 0.4cm
+\noindent
+\textbf{Claim 1}:\;\,
+$\Omega_{\nu}(E)$\,
+depends only on the frequency \,$\nu$\,
+and not on the energy \,$E$.\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;\;
+
+\vskip 0.1cm
+\noindent
+This completes the proof of Claim 1.
+
+\vskip 0.4cm
+\noindent
+By Claim 1, we therefore have:
+\begin{equation*}
+P(E)
+\;\; \propto \;\;
+    \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}-E
+        }\,\right)
+\end{equation*}
+Next, by \textbf{\color{red}Boltzmann's entropy formula}
+\,${\color{red}
+S_{\textnormal{wall}}
+\,=\,
+    k_{B} \cdot \log\!\left(\,\overset{{\color{white}.}}{
+        \Omega_{\textnormal{wall}}
+        }\,\right)
+}$,\,
+we have
+\begin{equation*}
+\Omega_{\textnormal{wall}}
+\;\; = \;\;
+    \exp\!\left(\,
+        \dfrac{
+            S_{\textnormal{wall}}
+            }{
+            k_{B}
+            }
+        \,\right)
+\end{equation*}
+Hence, expressing \,$P(E)$\, in terms of $S_{\textnormal{wall}}$, we have:
+\begin{equation*}
+P(E)
+\;\; \propto \;\;
+    \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}-E
+        }\,\right)
+\;\; = \;\;
+    \exp\!\left(\,
+        \dfrac{1}{k_{B}}
+        \cdot
+        S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+            E_{\textnormal{total}}-E
+            }\,\right)
+        \right)
+\end{equation*}
+By Taylor's Theorem,
+\begin{equation*}
+S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+    E_{\textnormal{total}}-E
+    }\,\right)
+\;\; \approx \;\;
+    S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}
+        }\,\right)
+    \,-\,
+    \left.\dfrac{\partial\,S_{\textnormal{wall}}}{\partial\,E_{\textnormal{wall}}}\right\vert_{E_{\textnormal{total}}}
+    \cdot
+    E
+\end{equation*}
+By the \textbf{\color{red}thermodynamic definition of temperature}, we have:
+{\color{red}
+\begin{equation*}
+\dfrac{1}{T_{\textnormal{wall}}}
+\;\; := \;\;
+    \dfrac{\partial\,S_{\textnormal{wall}}}{\partial\,E_{\textnormal{wall}}}
+\end{equation*}
+}
+Hence,
+\begin{eqnarray*}
+S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+    E_{\textnormal{total}}-E
+    }\,\right)
+& \approx &
+    S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}
+        }\,\right)
+    \,-\,
+    \left.\dfrac{\partial\,S_{\textnormal{wall}}}{\partial\,E_{\textnormal{wall}}}\right\vert_{E_{\textnormal{total}}}
+    \cdot
+    E
+\;\; = \;\;
+    S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}
+        }\,\right)
+    \,-\,
+    \dfrac{1}{T_{\textnormal{wall}}} \cdot E
+\\
+& = &
+    S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}
+        }\,\right)
+    \,-\,
+    \dfrac{E}{T}
+\end{eqnarray*}
+Substituting this into the earlier expression for \,$P(E)$,\, we have:
+\begin{eqnarray*}
+P(E)
+& \propto &
+    \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}-E
+        }\,\right)
+\;\; = \;\;
+    \exp\!\left(\,
+        \dfrac{1}{k_{B}}
+        \cdot
+        S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+            E_{\textnormal{total}}-E
+            }\,\right)
+        \right)
+\\
+& = &
+    \exp\!\left(\,
+        \dfrac{1}{k_{B}}
+        \cdot
+        \left(\,
+            S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+                E_{\textnormal{total}}
+                }\,\right)
+            \,-\,
+            \dfrac{E}{T}
+            \,\right)
+        \right)
+\;\; = \;\;
+    \exp\!\left(\,
+        \dfrac{
+            S_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+                E_{\textnormal{total}}
+                }\,\right)
+            }{
+            k_{B}
+            }
+        \right)
+    \cdot
+    \exp\!\left(\,
+        -\,\dfrac{E}{
+            {\color{white}.}
+            k_{B}\,T
+            {\color{white}.}
+            }
+        \right)
+\\
+& \propto &
+    \exp\!\left(\,
+        -\,\dfrac{E}{
+            {\color{white}.}
+            k_{B}\,T
+            {\color{white}.}
+            }
+        \right)
+\end{eqnarray*}
+
+\vskip 0.4cm
+\noindent
+This completes the proof of the desired proportionality relation:
+\begin{equation*}
+P(E)
+\;\; \propto \;\;
+    \exp\!\left(\,
+        -\,\dfrac{E}{
+            {\color{white}.}
+            k_{B}\,T
+            {\color{white}.}
+            }
+        \right)
+\end{equation*}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
