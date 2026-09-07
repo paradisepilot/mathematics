@@ -231,7 +231,7 @@ g(\nu)
     \left(\begin{array}{c}
         \textnormal{number of all}
         \\
-        \textnormal{admissible modes of vibration}
+        \textnormal{admissible modes of oscillation}
         \\
         \textnormal{per unit volume, at frequency \,$\nu$}
         \end{array}\right),
@@ -243,7 +243,7 @@ g(\nu)
     \left(\begin{array}{c}
         \textnormal{average energy over all}
         \\
-        \textnormal{admissible modes of vibration}
+        \textnormal{admissible modes of oscillation}
         \\
         \textnormal{at frequency \,$\nu$\, and temperature \,$T$}
         \end{array}\right)
@@ -261,6 +261,21 @@ Then,
 \proof
 Let \,$\nu_{1}, \nu_{2} \in (\,0\,,\infty\,)$\,
 with \,$\nu_{1} < \nu_{2}$,\, but otherwise arbitrary.
+We define:
+\begin{equation*}
+N(\nu)
+\;\; := \;\;
+    \left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{admissible modes of oscillation}
+        \\
+        \textnormal{at frequency \,$\nu > 0$}
+        \end{array}\right)
+\;\; = \;\;
+    \int_{\nu_{1}}^{\nu_{2}}\, V \cdot g(\nu) \,\d\nu
+\end{equation*}
+Next, observe that
 \begin{equation*}
 \left(\begin{array}{c}
     \textnormal{total amount of energy}
@@ -319,7 +334,7 @@ Lastly, recall that \,$\nu_{1}, \nu_{2} \in (\,0\,,\,\infty\,)$\,
 satisfy
 \,$\nu_{1} < \nu_{2}$,\,
 but are otherwise arbitrary.
-We may thus conclude that
+By continuity of the integrand, we may thus conclude that
 \begin{equation*}
 \rho(\nu,T)
 \;\; = \;\;
@@ -342,9 +357,9 @@ g(\nu)
     \left(\begin{array}{c}
         \textnormal{number of all}
         \\
-        \textnormal{admissible modes of vibration}
+        \textnormal{admissible modes of oscillation}
         \\
-        \textnormal{at frequency \,$\nu$}
+        \textnormal{per unit volume, at frequency \,$\nu$}
         \end{array}\right)
 % \;\; = \;\;
 %     \dfrac{8\,\pi}{c^{3}}\cdot\nu^{2}
@@ -365,33 +380,73 @@ g(\nu)
 \end{equation*}
 \end{proposition}
 \proof
-Let \,$\nu_{1}, \nu_{2} \in (\,0\,,\infty\,)$\,
-with \,$\nu_{1} < \nu_{2}$,\, but otherwise arbitrary.
 
 \vskip 0.3cm
 \noindent
 \textbf{Claim 1:}\;\,
 $
-\displaystyle\int_{0}^{\infty}
-    \left(\,
-        g(\nu)
-        \, \overset{{\color{white}1}}{-} \,
-        \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}
-        \,\right)
-    \d\nu
-\;\; = \;\;
-    0
-$
+g(\nu)
+\; = \;
+    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}\,,
+$\;\;
+for each \,$\nu \in (\,0\,,\,\infty\,)$.
 \vskip 0.2cm
 \noindent
 Proof of Claim 1:\;
-Immediate by the following observation:
+Let \,$\nu_{1}, \nu_{2} \in (\,0\,,\infty\,)$\,
+with \,$\nu_{1} < \nu_{2}$,\, but otherwise arbitrary.
+We define:
 \begin{equation*}
-\int_{0}^{\infty}\, \dfrac{\d N(\nu)}{\d\nu} \,\d\nu
+N(\nu)
+\;\; := \;\;
+    \left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{admissible modes of oscillation}
+        \\
+        \textnormal{at frequency \,$\nu > 0$}
+        \end{array}\right)
+% \;\; = \;\;
+%     \int_{\nu_{1}}^{\nu_{2}}\, V \cdot g(\nu) \,\d\nu
+\end{equation*}
+Next, note that
+\begin{equation*}
+\int_{\nu_{1}}^{\nu_{2}}\, \dfrac{\d N(\nu)}{\d\nu} \,\d\nu
+% \;\; = \;\;
+%     N(\nu)
 \;\; = \;\;
-    N(\nu)
+    \left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{admissible modes of oscillation}
+        \\
+        \textnormal{with frequencies between \,$\nu_{1}$\, and \,$\nu_{2}$}
+        \end{array}\right)
 \;\; = \;\;
-    \int_{0}^{\infty}\, V \cdot g(\nu) \,\d\nu
+    \int_{\nu_{1}}^{\nu_{2}}\, V \cdot g(\nu) \,\d\nu\,,
+\end{equation*}
+which implies:
+\begin{equation*}
+\int_{\nu_{1}}^{\nu_{2}}
+\left(\;
+    g(\nu)
+    \; \overset{{\color{white}1}}{-} \;
+    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}
+    \,\right)\,\d\nu
+\;\; = \;\;
+    0
+\end{equation*}
+Now, recall that \,$\nu_{1}, \nu_{2} \in (\,0\,,\,\infty\,)$\,
+satisfy
+\,$\nu_{1} < \nu_{2}$,\,
+but are otherwise arbitrary.
+By continuity of the integrand, we may thus conclude that
+\begin{equation*}
+g(\nu)
+\;\; = \;\;
+    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}\,,
+\quad
+\textnormal{for each \,$\nu \in (\,0\,,\,\infty\,)$}
 \end{equation*}
 This completes the proof of Claim 1.
 
@@ -498,9 +553,10 @@ $
     \cdot
     \nu^{2}
 $
-\vskip 0.1cm
+\vskip 0.2cm
 \noindent
 Proof of Claim 3:\;
+By Claim 2, we have
 \begin{equation*}
 % g(\nu)
 % \;\; = \;\;
@@ -545,7 +601,7 @@ The Proposition now follows immediately from Claim 1 and Claim 3.
 \item
     For each fixed frequency \,$\nu \in (\,0,\infty\,)$,\,
     the collection \,$\mathscr{E}_{\nu}$\, of admissible energies
-    among all modes of vibration
+    among all modes of oscillation
     is countably infinite, and is given by:
     \begin{equation*}
     \mathscr{E}_{\nu}
@@ -654,7 +710,7 @@ Hence,
 \item
     For each fixed frequency \,$\nu \in (\,0,\infty\,)$,\,
     the collection \,$\mathscr{E}_{\nu}$\, of admissible energies
-    among all modes of vibration is given by:
+    among all modes of oscillation is given by:
     \begin{equation*}
     \mathscr{E}_{\nu}
     \;\; = \;\;
