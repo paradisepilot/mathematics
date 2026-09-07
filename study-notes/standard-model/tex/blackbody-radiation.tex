@@ -20,6 +20,21 @@
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\begin{definition}[Blackbody radiation cavity]
+\mbox{}
+\vskip 0.1cm
+\noindent
+A \textbf{blackbody radiation cavity} is, by definition,
+a finite \textbf{\color{red}evacuated} cavity
+with perfectly reflecting walls, maintained
+at a uniform absolute temperature \,$T$,\,
+where the radiation inside is in thermal equilibrium with the walls.
+We remark that blackbody radiation cavities are
+characterized by their respective macroscopic configurations
+(encompassing variations in shape, volume, and interior wall material, etc.).
+\end{definition}
+
+\vskip 0.2cm
 \begin{theorem}[Universality of the energy density spectrum of blackbody radiation]
 \mbox{}
 \vskip 0.1cm
@@ -28,9 +43,6 @@ Suppose:
 \begin{itemize}
 \item
     $\mathcal{C}$\, is the set of all possible blackbody radiation cavities.
-    We remark that blackbody radiation cavities are
-    characterized by their respective macroscopic configurations
-    (encompassing variations in shape, volume, and interior wall material, etc.).
 \item
     $T \in \Re^{+}$ is the absolute temperature, and
     \,$\nu \in \Re^{+}$ is the frequency of electromagnetic radiation.
@@ -82,8 +94,7 @@ Assume:
     and reflects \,$100\%$\, of the incident radiation
     with frequencies lying outside this interval.
 \end{itemize}
-Then, the following statement is true:
-For any two blackbody radiation cavities
+Then, for any two blackbody radiation cavities
 \,$C_{1}, C_{2} \,\in\, \mathcal{C}$\,
 (with arbitrary -- possibly distinct -- respective macroscopic configurations),
 their respective spectral energy densities are equal
@@ -203,6 +214,7 @@ This completes the proof of the Theorem.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\clearpage
 \section{Blackbody radiation spectral energy density}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -235,9 +247,9 @@ g(\nu)
         \\
         \textnormal{admissible modes of oscillation}
         \\
-        \textnormal{per unit volume, per unit frequency}
+        \textnormal{at frequency \,$\nu$,}
         \\
-        \textnormal{at frequency \,$\nu$}
+        \textnormal{per unit volume, per unit frequency}
         \end{array}\right),
     \quad
     \textnormal{and}
@@ -284,13 +296,13 @@ Note that:
 \left(\begin{array}{c}
     \textnormal{total amount of energy}
     \\
+    \textnormal{at temperature \,$T$,}
+    \\
     \textnormal{contained in}
     \\
     \textnormal{oscillators with frequencies}
     \\
-    \textnormal{between \,$\nu_{1}$\, and \,$\nu_{2}$,}
-    \\
-    \textnormal{at temperature \,$T$}
+    \textnormal{between \,$\nu_{1}$\, and \,$\nu_{2}$}
     \end{array}\right)
 \;\; =: \;\;
     U_{\textnormal{total}}(\nu_{1},\nu_{2}\,;T)
@@ -313,15 +325,15 @@ It follows that
     \left(\begin{array}{c}
         \textnormal{total amount of energy}
         \\
+        \textnormal{per unit volume}
+        \\
+        \textnormal{at temperature \,$T$,}
+        \\
         \textnormal{contained in}
         \\
         \textnormal{oscillators with frequenciess}
         \\
         \textnormal{between \,$\nu_{1}$\, and \,$\nu_{2}$}
-        \\
-        \textnormal{per unit volume,}
-    \\
-    \textnormal{at temperature \,$T$}
         \end{array}\right)
 \;\; = \;\;
     \int_{\nu_{1}}^{\nu_{2}}\,\rho(\nu,T)\,\d\nu
@@ -358,6 +370,21 @@ as required.
 \mbox{}
 \vskip 0.2cm
 \noindent
+Suppose:
+\begin{itemize}
+\item
+    The Cavity Model (Thermal Equilibrium):
+    The blackbody is modeled as an \textbf{\color{red}evacuated} cubic cavity
+    of side length \,$L > 0$\, and hence volume \,$V = L^3$,\,
+    with perfectly reflecting walls, maintained
+    at a uniform absolute temperature \,$T$.\,
+    The radiation inside is in thermal equilibrium with the walls.
+\item
+    Electromagnetic Standing Waves: The radiation field inside the cavity
+    consists of independent electromagnetic standing waves.
+    The electric field must vanish at the conducting boundaries of the cavity,
+    constraining the allowed wavelengths (modes) of the system.
+\end{itemize}
 Let
 \begin{equation*}
 g(\nu)
@@ -410,9 +437,174 @@ N(\nu)
 %     \int_{\nu_{1}}^{\nu_{2}}\, V \cdot g(\nu) \,\d\nu
 \end{equation*}
 
-\vskip 0.3cm
+\vskip 0.4cm
 \noindent
-\textbf{Claim 1:}\;\,
+\textbf{Claim 1:}\;
+$
+N(\nu)
+\; = \;
+    \dfrac{
+        8\,\pi\,V\,\nu^{3}
+        }{
+        3\,c^{3}
+        }
+$
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\;
+Let
+\,$\mathbf{k} \,=\, (\,k_{x}, k_{y}, k_{z}\,) \,\in\, \Re^{3}$\,
+be the wave vector of any electromagnetic standing wave
+inside the cavity.
+The boundary conditions that the standing wave amplitude must
+be zero at the walls of the cubic cavity imply:
+\begin{equation*}
+k_{x} \;=\; \dfrac{n_{x}\pi}{L},
+\quad
+k_{y} \;=\; \dfrac{n_{y}\pi}{L},
+\quad
+k_{z} \;=\; \dfrac{n_{z}\pi}{L},
+\end{equation*}
+where
+\,$n_{x},\, n_{y},\, n_{z} \,\in\, \N$.\,
+Hence,
+\begin{eqnarray*}
+\vert\,\mathbf{k}\,\vert^{2}
+& = &
+    \left(k_{x}\right)^{2}
+    \,+\,
+    \left(k_{y}\right)^{2}
+    \,+\,
+    \left(k_{z}\right)^{2}
+\;\; = \;\;
+    \left(\dfrac{n_{x}\pi}{L}\right)^{2}
+    \,+\,
+    \left(\dfrac{n_{y}\pi}{L}\right)^{2}
+    \,+\,
+    \left(\dfrac{n_{z}\pi}{L}\right)^{2}
+\;\; = \;\;
+    \left(\,\dfrac{\pi}{L}\,\right)^{2}
+    \left(n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\right)
+\\
+& = &
+    \left(\,\dfrac{\pi}{L}\,\right)^{2}
+    \vert\,\mathbf{n}\,\vert^{2}\,,
+\end{eqnarray*}
+where
+\,$\mathbf{n} \,=\, (\,n_{x},n_{y},n_{z}\,)$.\,
+
+\vskip 0.2cm
+\noindent
+Now, recall the relation between the magnitude of the wave vector \,$\mathbf{k}$\,
+and the frequency \,$\nu$\, and the wavelength \,$\lambda \,=\, c/\nu$\,
+of the (standing) wave:
+\begin{equation*}
+\vert\,\mathbf{k}\,\vert
+\; = \;
+    \dfrac{2\,\pi}{\lambda}
+\; = \;
+    \dfrac{2\,\pi}{c/\nu}
+\; = \;
+    \dfrac{2\,\pi\,\nu}{c}
+\end{equation*}
+Hence,
+\begin{equation*}
+\left(\,\dfrac{2\,\pi\,\nu}{c}\,\right)^{2}
+\;\; = \;\;
+    \vert\,\mathbf{k}\,\vert^{2}
+\;\; = \;\;
+    \left(\,\dfrac{\pi}{L}\,\right)^{2}
+    \vert\,\mathbf{n}\,\vert^{2}\,,
+\end{equation*}
+which in turn implies:
+\begin{equation*}
+\vert\,\mathbf{n}\,\vert
+\;\; = \;\;
+    \dfrac{2\,L\,\nu}{c}
+\end{equation*}
+Now, recall the definition:
+\begin{equation*}
+N(\nu)
+\;\; := \;\;
+    \left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{admissible modes of oscillation}
+        \\
+        \textnormal{with frequencies {\color{red}less than or equal to \,$\nu$}}
+        \end{array}\right)
+\end{equation*}
+Taking into account the fact that electromagnetic waves with the same wave vector
+admit two polarizations, we see that
+\,$N(\nu)$\,
+is \,$2$\, times the number of lattice points with non-negative integer coordinates
+contained inside the intersection of the first octant and
+the sphere of radius \,$\vert\,\mathbf{n}\,\vert$.\,
+Hence,
+\begin{equation*}
+N(\nu)
+\;\; = \;\;
+    2 \times \dfrac{1}{8} \times \left(\dfrac{4}{3}\,\pi\,\vert\,\mathbf{n}\,\vert^{3}\right)
+\;\; = \;\;
+    \dfrac{\pi}{3} \cdot \vert\,\mathbf{n}\,\vert^{3}
+\;\; = \;\;
+    \dfrac{\pi}{3} \cdot \left(\dfrac{2\,L\,\nu}{c}\right)^{3}
+\;\; = \;\;
+    \dfrac{8\,\pi\,L^{3}\,\nu^{3}}{3\,c^{3}}
+\;\; = \;\;
+    \dfrac{8\,\pi\,V\,\nu^{3}}{3\,c^{3}}
+\end{equation*}
+This completes the proof of Claim 1.
+
+\vskip 0.4cm
+\noindent
+\textbf{Claim 2:}\;\,
+$
+% g(\nu)
+\dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
+\; = \;
+    \dfrac{
+        8\,\pi
+        }{
+        c^{3}
+        }
+    \cdot
+    \nu^{2}
+$
+\vskip 0.2cm
+\noindent
+Proof of Claim 2:\;
+By Claim 1, we have
+\begin{equation*}
+% g(\nu)
+% \;\; = \;\;
+\dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
+\;\; = \;\;
+    \dfrac{1}{V}
+    \cdot
+    \dfrac{\d}{\d\,\nu}\!\left(\,
+        \dfrac{8\,\pi\,V\,\nu^{3}}{3\,c^{3}}
+        \,\right)
+\;\; = \;\;
+    \dfrac{8\,\pi}{3\,c^{3}}
+    \cdot
+    \dfrac{\d}{\d\,\nu}\!\left(\,
+        \nu^{3}
+        \,\right)
+\;\; = \;\;
+    \dfrac{8\,\pi}{3\,c^{3}}
+    \cdot
+    3\,\nu^{2}
+\;\; = \;\;
+    \dfrac{8\,\pi}{c^{3}}
+    \cdot
+    \nu^{2}\,,
+\end{equation*}
+This completes the proof of Claim 2.
+
+\vskip 0.4cm
+\noindent
+\textbf{Claim 3:}\;\,
 $
 g(\nu)
 \; = \;
@@ -421,7 +613,7 @@ $\;\;
 for each \,$\nu \in (\,0\,,\,\infty\,)$.
 \vskip 0.2cm
 \noindent
-Proof of Claim 1:\;
+Proof of Claim 3:\;
 Let \,$\nu_{1}, \nu_{2} \in (\,0\,,\infty\,)$\,
 with \,$\nu_{1} < \nu_{2}$,\, but otherwise arbitrary.
 Note that
@@ -463,145 +655,11 @@ g(\nu)
 \quad
 \textnormal{for each \,$\nu \in (\,0\,,\,\infty\,)$}
 \end{equation*}
-This completes the proof of Claim 1.
-
-\vskip 0.4cm
-\noindent
-\textbf{Claim 2:}\;
-$
-N(\nu)
-\; = \;
-    \dfrac{
-        8\,\pi\,V\,\nu^{3}
-        }{
-        3\,c^{3}
-        }
-$
-\vskip 0.1cm
-\noindent
-Proof of Claim 2:\;
-\begin{equation*}
-k_{x} \;=\; \dfrac{n_{x}\pi}{L},
-\quad
-k_{y} \;=\; \dfrac{n_{y}\pi}{L},
-\quad
-k_{z} \;=\; \dfrac{n_{z}\pi}{L},
-\end{equation*}
-where
-\,$n_{x},\, n_{y},\, n_{z} \,\in\, \N$.\,
-
-\begin{eqnarray*}
-\vert\,\mathbf{k}\,\vert^{2}
-& = &
-    \left(k_{x}\right)^{2}
-    \,+\,
-    \left(k_{y}\right)^{2}
-    \,+\,
-    \left(k_{z}\right)^{2}
-\;\; = \;\;
-    \left(\dfrac{n_{x}\pi}{L}\right)^{2}
-    \,+\,
-    \left(\dfrac{n_{y}\pi}{L}\right)^{2}
-    \,+\,
-    \left(\dfrac{n_{z}\pi}{L}\right)^{2}
-\;\; = \;\;
-    \left(\,\dfrac{\pi}{L}\,\right)^{2}
-    \left(n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\right)
-\\
-& = &
-    \left(\,\dfrac{\pi}{L}\,\right)^{2}
-    \vert\,\mathbf{n}\,\vert^{2}
-\end{eqnarray*}
-Now, recall the relation between the magnitude of the wave vector and the frequency:
-\begin{equation*}
-\vert\,\mathbf{k}\,\vert
-\; = \;
-    \dfrac{2\,\pi}{\lambda}
-\; = \;
-    \dfrac{2\,\pi}{c/\nu}
-\; = \;
-    \dfrac{2\,\pi\,\nu}{c}
-\end{equation*}
-Hence,
-\begin{equation*}
-\left(\,\dfrac{2\,\pi\,\nu}{c}\,\right)^{2}
-\;\; = \;\;
-    \vert\,\mathbf{k}\,\vert^{2}
-\;\; = \;\;
-    \left(\,\dfrac{\pi}{L}\,\right)^{2}
-    \vert\,\mathbf{n}\,\vert^{2}\,,
-\end{equation*}
-which in turn implies:
-\begin{equation*}
-\vert\,\mathbf{n}\,\vert
-\;\; = \;\;
-    \dfrac{2\,L\,\nu}{c}
-\end{equation*}
-
-\begin{equation*}
-N(\nu)
-\;\; = \;\;
-    2 \times \dfrac{1}{8} \times \left(\dfrac{4}{3}\,\pi\,\vert\,\mathbf{n}\,\vert^{3}\right)
-\;\; = \;\;
-    \dfrac{\pi}{3} \cdot \vert\,\mathbf{n}\,\vert^{3}
-\;\; = \;\;
-    \dfrac{\pi}{3} \cdot \left(\dfrac{2\,L\,\nu}{c}\right)^{3}
-\;\; = \;\;
-    \dfrac{8\,\pi\,L^{3}\,\nu^{3}}{3\,c^{3}}
-\;\; = \;\;
-    \dfrac{8\,\pi\,V\,\nu^{3}}{3\,c^{3}}
-\end{equation*}
-This completes the proof of Claim 2.
-
-\vskip 0.4cm
-\noindent
-\textbf{Claim 3:}\;\,
-$
-% g(\nu)
-\dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
-\; = \;
-    \dfrac{
-        8\,\pi
-        }{
-        c^{3}
-        }
-    \cdot
-    \nu^{2}
-$
-\vskip 0.2cm
-\noindent
-Proof of Claim 3:\;
-By Claim 2, we have
-\begin{equation*}
-% g(\nu)
-% \;\; = \;\;
-\dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
-\;\; = \;\;
-    \dfrac{1}{V}
-    \cdot
-    \dfrac{\d}{\d\,\nu}\!\left(\,
-        \dfrac{8\,\pi\,V\,\nu^{3}}{3\,c^{3}}
-        \,\right)
-\;\; = \;\;
-    \dfrac{8\,\pi}{3\,c^{3}}
-    \cdot
-    \dfrac{\d}{\d\,\nu}\!\left(\,
-        \nu^{3}
-        \,\right)
-\;\; = \;\;
-    \dfrac{8\,\pi}{3\,c^{3}}
-    \cdot
-    3\,\nu^{2}
-\;\; = \;\;
-    \dfrac{8\,\pi}{c^{3}}
-    \cdot
-    \nu^{2}\,,
-\end{equation*}
 This completes the proof of Claim 3.
 
 \vskip 0.4cm
 \noindent
-The Proposition now follows immediately from Claim 1 and Claim 3.
+The Proposition now follows immediately from Claim 2 and Claim 3.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
