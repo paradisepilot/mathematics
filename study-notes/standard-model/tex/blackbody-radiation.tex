@@ -208,33 +208,23 @@ This completes the proof of the Theorem.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.3cm
-\begin{proposition}
+\begin{proposition}[Motivation for \,$\rho(\nu,T)\; = \; g(\nu) \cdot \langle\,E(\nu,T)\,\rangle$]
 \mbox{}
-\vskip 0.1cm
+\vskip 0.2cm
 \noindent
-\begin{equation*}
-\rho(\nu,T)
-\;\; = \;\;
-    g(\nu) \cdot \langle\,E(\nu,T)\,\rangle\,,
-% \;\; = \;\;
-%     \left(\begin{array}{c}
-%         \textnormal{number of}
-%         \\
-%         \textnormal{admissible modes of vibration}
-%         \\
-%         \textnormal{per unit volume, at frequency \,$\nu$}
-%         \end{array}\right)
-%     \times
-%     \left(\begin{array}{c}
-%         \textnormal{average energy over all}
-%         \\
-%         \textnormal{admissible modes of vibration}
-%         \\
-%         \textnormal{at frequency \,$\nu$\, and temperature \,$T$}
-%         \end{array}\right)
-\end{equation*}
-where
+Let
 \begin{eqnarray*}
+\rho(\,\nu,T\,)
+{\color{white}.}
+& := &
+    \left(\begin{array}{c}
+        \textnormal{universal}
+        \\
+        \textnormal{spectral energy density function}
+        \\
+        \textnormal{of blackbody radiation}
+        \end{array}\right),
+\\
 g(\nu)
 {\color{white}....}
 & := &
@@ -258,6 +248,18 @@ g(\nu)
         \textnormal{at frequency \,$\nu$\, and temperature \,$T$}
         \end{array}\right)
 \end{eqnarray*}
+Then,
+\begin{equation*}
+\int_{0}^{\infty}
+    \left(\,
+        \rho(\nu,T)
+        \, \overset{{\color{white}1}}{-} \,
+        g(\nu) \langle\,E(\nu,T)\,\rangle
+        \right)
+    \,\d\nu
+\;\; = \;\;
+    0
+\end{equation*}
 \end{proposition}
 \proof
 \begin{equation*}
@@ -288,18 +290,20 @@ U_{\textnormal{total}}
         \rho(\nu,T)
         \, \overset{{\color{white}1}}{-} \,
         g(\nu) \langle\,E(\nu,T)\,\rangle
-        \,\right)
+        \right)
     \,\d\nu
 \;\; = \;\;
-    0
+    0\,,
 \end{equation*}
+as required.
 \qed
 
 \vskip 0.5cm
-\begin{proposition}
+\begin{proposition}[Motivation for \,$g(\nu) \,=\, 8\,\pi\,\nu^{2}\,/\,c^{3}$]
 \mbox{}
-\vskip 0.1cm
+\vskip 0.2cm
 \noindent
+Let
 \begin{equation*}
 g(\nu)
 \;\; := \;\;
@@ -310,35 +314,54 @@ g(\nu)
         \\
         \textnormal{at frequency \,$\nu$}
         \end{array}\right)
+% \;\; = \;\;
+%     \dfrac{8\,\pi}{c^{3}}\cdot\nu^{2}
+\end{equation*}
+Then,
+\begin{equation*}
+\int_{0}^{\infty}
+    \left(\;
+        g(\nu)
+        \, \overset{{\color{white}1}}{-} \,
+        \dfrac{
+            8\,\pi
+            }{
+            c^{3}
+            }
+        \cdot
+        \nu^{2}
+        \,\right)
+    \d\nu
 \;\; = \;\;
-    \dfrac{8\,\pi}{c^{3}}\cdot\nu^{2}
+    0
 \end{equation*}
 \end{proposition}
 \proof
 
 \vskip 0.3cm
 \noindent
-\textbf{Claim 1:}\;
+\textbf{Claim 1:}\;\,
 $
-g(\nu)
+\displaystyle\int_{0}^{\infty}
+    \left(\,
+        g(\nu)
+        \, \overset{{\color{white}1}}{-} \,
+        \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}
+        \,\right)
+    \d\nu
 \;\; = \;\;
-    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}
+    0
 $
-\vskip 0.1cm
+\vskip 0.2cm
 \noindent
 Proof of Claim 1:\;
+Immediate by the following observation:
 \begin{equation*}
 \int_{0}^{\infty}\, \dfrac{\d N(\nu)}{\d\nu} \,\d\nu
 \;\; = \;\;
     N(\nu)
 \;\; = \;\;
     \int_{0}^{\infty}\, V \cdot g(\nu) \,\d\nu
-\end{equation*}
-Hence,
-\begin{equation*}
-g(\nu)
-\;\; = \;\;
-    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\nu}
 \end{equation*}
 This completes the proof of Claim 1.
 
@@ -432,9 +455,10 @@ This completes the proof of Claim 2.
 
 \vskip 0.4cm
 \noindent
-\textbf{Claim 3:}\;
+\textbf{Claim 3:}\;\,
 $
-g(\nu)
+% g(\nu)
+\dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
 \; = \;
     \dfrac{
         8\,\pi
@@ -448,9 +472,9 @@ $
 \noindent
 Proof of Claim 3:\;
 \begin{equation*}
-g(\nu)
-\;\; = \;\;
-    \dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
+% g(\nu)
+% \;\; = \;\;
+\dfrac{1}{V}\cdot\dfrac{\d N(\nu)}{\d\,\nu}
 \;\; = \;\;
     \dfrac{1}{V}
     \cdot
@@ -472,7 +496,11 @@ g(\nu)
     \cdot
     \nu^{2}\,,
 \end{equation*}
-as required.
+This completes the proof of Claim 3.
+
+\vskip 0.4cm
+\noindent
+The Proposition now follows immediately from Claim 1 and Claim 3.
 \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
