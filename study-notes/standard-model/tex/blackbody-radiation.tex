@@ -208,7 +208,7 @@ This completes the proof of the Theorem.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.3cm
-\begin{proposition}[Motivation for \,$\rho(\nu,T)\; = \; g(\nu) \cdot \langle\,E(\nu,T)\,\rangle$]
+\begin{proposition} %[Motivation for \,$\rho(\nu,T)\; = \; g(\nu) \cdot \langle\,E(\nu,T)\,\rangle$]
 \mbox{}
 \vskip 0.2cm
 \noindent
@@ -250,7 +250,62 @@ g(\nu)
 \end{eqnarray*}
 Then,
 \begin{equation*}
-\int_{0}^{\infty}
+{\color{red}
+\rho(\nu,T)
+\;\; = \;\;
+    g(\nu) \langle\,E(\nu,T)\,\rangle}\,,
+\quad
+\textnormal{for each \,$\nu \in (\,0\,,\,\infty\,)$\, and each \,$T \in (\,0\,,\,\infty\,)$},
+\end{equation*}
+\end{proposition}
+\proof
+Let \,$\nu_{1}, \nu_{2} \in (\,0\,,\infty\,)$\,
+with \,$\nu_{1} < \nu_{2}$,\, but otherwise arbitrary.
+\begin{equation*}
+\left(\begin{array}{c}
+    \textnormal{total amount of energy}
+    \\
+    \textnormal{contained in}
+    \\
+    \textnormal{oscillators with frequenciess}
+    \\
+    \textnormal{between \,$\nu_{1}$\, and \,$\nu_{2}$}
+    \end{array}\right)
+\;\; =: \;\;
+    U_{\textnormal{total}}(\nu_{1},\nu_{2})
+\;\; = \;\;
+    \int_{\nu_{1}}^{\nu_{2}} N(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
+\;\; = \;\;
+    \int_{\nu_{1}}^{\nu_{2}} V \cdot g(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
+\end{equation*}
+It follows that
+\begin{equation*}
+\int_{\nu_{1}}^{\nu_{2}}\, g(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
+\;\; = \;\;
+    \dfrac{U_{\textnormal{total}}(\nu_{1},\nu_{2})}{V}
+\;\; = \;\;
+    % \left(\begin{array}{c}
+    %     \textnormal{energy}
+    %     \\
+    %     \textnormal{per unit volume}
+    %     \end{array}\right)
+    \left(\begin{array}{c}
+        \textnormal{total amount of energy}
+        \\
+        \textnormal{contained in}
+        \\
+        \textnormal{oscillators with frequenciess}
+        \\
+        \textnormal{between \,$\nu_{1}$\, and \,$\nu_{2}$}
+        \\
+        \textnormal{per unit volume}
+        \end{array}\right)
+\;\; = \;\;
+    \int_{\nu_{1}}^{\nu_{2}}\,\rho(\nu,T)\,\d\nu
+\end{equation*}
+Hence,
+\begin{equation*}
+\int_{\nu_{1}}^{\nu_{2}}
     \left(\,
         \rho(\nu,T)
         \, \overset{{\color{white}1}}{-} \,
@@ -260,46 +315,23 @@ Then,
 \;\; = \;\;
     0
 \end{equation*}
-\end{proposition}
-\proof
+Lastly, recall that \,$\nu_{1}, \nu_{2} \in (\,0\,,\,\infty\,)$\,
+satisfy
+\,$\nu_{1} < \nu_{2}$,\,
+but are otherwise arbitrary.
+We may thus conclude that
 \begin{equation*}
-U_{\textnormal{total}}
+\rho(\nu,T)
 \;\; = \;\;
-    \int_{0}^{\infty} N(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
-\;\; = \;\;
-    \int_{0}^{\infty} V \cdot g(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
-\end{equation*}
-
-\begin{equation*}
-\int_{0}^{\infty}\, g(\nu) \langle\,E(\nu,T)\,\rangle \,\d\nu
-\;\; = \;\;
-    \dfrac{U_{\textnormal{total}}}{V}
-\;\; = \;\;
-    \left(\begin{array}{c}
-        \textnormal{energy}
-        \\
-        \textnormal{per unit volume}
-        \end{array}\right)
-\;\; = \;\;
-    \int_{0}^{\infty}\rho(\nu,T)\,\d\nu
-\end{equation*}
-
-\begin{equation*}
-\int_{0}^{\infty}
-    \left(\,
-        \rho(\nu,T)
-        \, \overset{{\color{white}1}}{-} \,
-        g(\nu) \langle\,E(\nu,T)\,\rangle
-        \right)
-    \,\d\nu
-\;\; = \;\;
-    0\,,
+    g(\nu) \langle\,E(\nu,T)\,\rangle\,,
+\quad
+\textnormal{for each \,$\nu \in (\,0\,,\,\infty\,)$\, and each \,$T \in (\,0\,,\,\infty\,)$},
 \end{equation*}
 as required.
 \qed
 
 \vskip 0.5cm
-\begin{proposition}[Motivation for \,$g(\nu) \,=\, 8\,\pi\,\nu^{2}\,/\,c^{3}$]
+\begin{proposition} %[Motivation for \,$g(\nu) \,=\, 8\,\pi\,\nu^{2}\,/\,c^{3}$]
 \mbox{}
 \vskip 0.2cm
 \noindent
@@ -319,24 +351,22 @@ g(\nu)
 \end{equation*}
 Then,
 \begin{equation*}
-\int_{0}^{\infty}
-    \left(\;
-        g(\nu)
-        \, \overset{{\color{white}1}}{-} \,
-        \dfrac{
-            8\,\pi
-            }{
-            c^{3}
-            }
-        \cdot
-        \nu^{2}
-        \,\right)
-    \d\nu
+g(\nu)
 \;\; = \;\;
-    0
+    \dfrac{
+        8\,\pi
+        }{
+        c^{3}
+        }
+    \cdot
+    \nu^{2}\,,
+\quad
+\textnormal{for each \,$\nu \in (\,0\,,\,\infty\,)$},
 \end{equation*}
 \end{proposition}
 \proof
+Let \,$\nu_{1}, \nu_{2} \in (\,0\,,\infty\,)$\,
+with \,$\nu_{1} < \nu_{2}$,\, but otherwise arbitrary.
 
 \vskip 0.3cm
 \noindent
