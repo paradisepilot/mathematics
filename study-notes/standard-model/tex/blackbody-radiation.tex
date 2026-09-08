@@ -664,6 +664,7 @@ The Proposition now follows immediately from Claim 2 and Claim 3.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \section{The ultraviolet catastrophe -- the Rayleigh–Jeans law}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -768,6 +769,7 @@ Hence,
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \section{Planck's explanation of the universal blackbody spectral energy density via discretization of admissible values of energy}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -890,6 +892,7 @@ Hence,
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \section{Boltzmann's entropy formula \,$S \,=\, k_{B}\log\!\left(\,\Omega\,\right)$}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -936,6 +939,7 @@ is the Boltzmann constant.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \section{Thermodynamic definition of absolute temperature}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
@@ -955,7 +959,30 @@ of the given system at the give macroscopic state.
 In this sub-section, we explain why this definition
 conforms well with our intuitive notion of what temperature is.
 
-\vskip 0.4cm
+\vskip 0.6cm
+\begin{center}
+\begin{minipage}{4.5in}
+% \begin{tcolorbox}[arc=2mm, colback=blue!5!white, colframe=blue!75!black]
+% \begin{tcolorbox}[arc=2mm, colback=blue!5!white, colframe=black]
+% \begin{tcolorbox}[arc=8px, colback=blue!5!white, colframe=black]
+\begin{tcolorbox}[arc=8px, colback=white, colframe=black]
+\begin{center}
+\vskip 0.1cm
+\textbf{Observation \#1:}
+\vskip 0.1cm
+The absolute temperature \,$T$\,
+should be a function of
+\,$\dfrac{\partial S}{\partial E}$.\,
+\end{center}
+\vskip -0.5cm
+{\color{white}.}
+\end{tcolorbox}
+\end{minipage}
+\end{center}
+\vskip 0.2cm
+\noindent
+\textbf{Justification of Observation \#1:}
+\vskip 0.1cm
 \noindent
 Our most basic intuitive understanding of temperature
 (formalized as the Zeroth Law of Thermodynamics) is that
@@ -1035,14 +1062,123 @@ this specific derivative is exactly the same for both systems.
 Because our intuitive definition of equilibrium is ``the state
 where $T_A = T_B$'', whatever temperature is,
 it must be a direct function of \,$\dfrac{\partial S}{\partial E}$.\,
+This completes the justification of Observation \#1.
+\qed
 
 \vskip 0.4cm
 \noindent
-It remains to justify why the absolute temperature \,$T$\, is defined
-to be the reciprocal of \,$\dfrac{\partial S}{\partial E}$.\,
+It remains to justify why
+the absolute temperature \,$T$\, should be defined to be
+the reciprocal of \,$\dfrac{\partial S}{\partial E}$.\,
+
+\vskip 0.6cm
+\begin{center}
+\begin{minipage}{4.5in}
+% \begin{tcolorbox}[arc=2mm, colback=blue!5!white, colframe=blue!75!black]
+% \begin{tcolorbox}[arc=2mm, colback=blue!5!white, colframe=black]
+% \begin{tcolorbox}[arc=8px, colback=blue!5!white, colframe=black]
+\begin{tcolorbox}[arc=8px, colback=white, colframe=black]
+\begin{center}
+\vskip 0.1cm
+\textbf{Observation \#2:}
+\end{center}
+\vskip -0.1cm
+Heat always flows from the system with the smaller value of
+\,$\dfrac{\partial S}{\partial E}$\,
+to the system with the larger value of
+\,$\dfrac{\partial S}{\partial E}$.\,
+\vskip -0.2cm
+{\color{white}.}
+\end{tcolorbox}
+\end{minipage}
+\end{center}
+\vskip 0.2cm
+\noindent
+\textbf{Justification of Observation \#2:}
+\vskip 0.1cm
+\noindent
+Let's look at the systems before they reach equilibrium.
+The Second Law of Thermodynamics dictates that
+any spontaneous exchange of energy must strictly increase
+the total entropy ($\d S_{\textnormal{total}} > 0$).
+Using the same equation as before:
+\begin{equation*}
+\left(\,
+    \dfrac{\partial S_{A}}{\partial E_{A}}
+    \, - \,
+    \dfrac{\partial S_{B}}{\partial E_{B}}
+    \,\right)
+\d E_{A}
+\;\; = \;\;
+    \d S_{\textnormal{total}}
+\;\; > \;\;
+    0
+\end{equation*}
+Suppose System $A$ has a larger rate of entropy increase than System $B$, i.e.,
+\begin{equation*}
+\dfrac{\partial S_{A}}{\partial E_{A}}
+\;\; > \;\;
+    \dfrac{\partial S_{B}}{\partial E_{B}}
+\end{equation*}
+For the total entropy change \,$\d S_{\textnormal{total}}$\, to be positive,
+\,$\d E_{A}$\, must be positive.
+This means energy (heat) must flow into System $A$ and out of System $B$.
+Intuitively, if heat is flowing into System $A$,
+System $A$ must be the ``colder'' object.
+In summary,
+\begin{equation*}
+\dfrac{\partial S_{A}}{\partial E_{A}}
+\; > \;
+    \dfrac{\partial S_{B}}{\partial E_{B}}
+\quad
+\xLeftrightarrow{{\color{white}......}}
+\quad
+\left\{\begin{array}{c}
+    \textnormal{heat flows}
+    \\
+    \textnormal{from System $B$}
+    \\
+    \textnormal{into System $A$}
+    \end{array}\right\}
+\quad
+\xLeftrightarrow{{\color{white}......}}
+\quad
+\left\{\begin{array}{c}
+    \textnormal{System $A$}
+    \\
+    \textnormal{should be colder than}
+    \\
+    \textnormal{System $B$}
+    \end{array}\right\}
+\end{equation*}
+Therefore, we have established a direct rule:
+Heat always flows from the system with the smaller value of
+\,$\dfrac{\partial S}{\partial E}$\,
+to the system with the larger value of
+\,$\dfrac{\partial S}{\partial E}$.\,
+This completes the justification of Observation \#2.
+\qed
+
+\vskip 0.4cm
+\noindent
+To align this with our historical, everyday convention that
+heat flows from a larger number (higher temperature)
+to a smaller number (lower temperature), we must define
+temperature \,$T$\, to be a {\color{red}strictly decreasing} function of
+\,$\dfrac{\partial S}{\partial E}$.\,
+And, of course, the reciprocal is among the simplest strictly decreasing functions.
+The foregoing discussion thus leads us to define:
+\begin{equation*}
+T
+\;\; := \;\;
+    \left(\,
+        \dfrac{\partial S}{\partial E}
+        \,\right)^{\!-1}
+\end{equation*}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \section{Justification of the use of the Boltzmann probability distriubtion
 in the derivation of the Rayleigh-Jeans law}
 
