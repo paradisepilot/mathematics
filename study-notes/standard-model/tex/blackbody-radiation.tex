@@ -1179,11 +1179,11 @@ T
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\section{The probability distribution of states of a canonical ensemble is a Boltzmann distribution}
+\section{The probability distribution of the states of a canonical ensemble is a Boltzmann distribution}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
-In this subsection, we establish that the probability distribution of states
+In this subsection, we establish that the probability distribution of the states
 for a canonical ensemble is a Boltzmann distribution.
 
 \vskip 0.5cm
@@ -1193,7 +1193,7 @@ for a canonical ensemble is a Boltzmann distribution.
 \noindent
 In statistical mechanics, a \textbf{canonical ensemble} is the statistical ensemble
 that represents the possible states of a mechanical system
-in thermal equilibrium with a heat bath at a fixed temperature.
+in thermal equilibrium with a heat reservoir at a fixed temperature.
 \end{definition}
 
 \vskip 0.5cm
@@ -1207,12 +1207,18 @@ Let \,$\Psi$\, denote the micro-state
 of the given canonical ensemble, and
 \,$P(\,\Psi = \psi\,)$\,
 the probability that the given canonical ensemble
-is in the (admissible) micro-state \,$\psi$.\,
+is in the accessible micro-state \,$\psi$.\,
 Then, we have:
 \begin{equation*}
 P(\,\Psi = \psi\,)
 \;\; = \;\;
-    \dfrac{1}{Z}
+    \dfrac{
+        1
+        }{
+        {\color{white}.}
+        \mathcal{N}
+        {\color{white}.}
+        }
     \cdot
     \exp\!\left(\,
         -\,
@@ -1226,7 +1232,7 @@ P(\,\Psi = \psi\,)
         \,\right),
 \quad
 \begin{array}{c}
-\textnormal{for each admissible micro-state \,$\psi$}
+\textnormal{for each accessible micro-state \,$\psi$}
 \\
 \textnormal{of the given canonical ensemble},
 \end{array}
@@ -1234,7 +1240,7 @@ P(\,\Psi = \psi\,)
 where
 \,$E_{\psi}$\, is the energy of the micro-state \,$\psi$,\,
 \,$k_{B}$\, is the Boltzmann constant, and
-\,$Z$\, is a normalization constant.
+\,$\mathcal{N}$\, is a normalization constant.
 \end{proposition}
 \proof
 First, recall that the {\color{red}composite} system
