@@ -1179,6 +1179,294 @@ T
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\section{The probability distribution of states of a canonical ensemble is a Boltzmann distribution}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+In this subsection, we establish that the probability distribution of states
+for a canonical ensemble is a Boltzmann distribution.
+
+\vskip 0.5cm
+\begin{definition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+In statistical mechanics, a \textbf{canonical ensemble} is the statistical ensemble
+that represents the possible states of a mechanical system
+in thermal equilibrium with a heat bath at a fixed temperature.
+\end{definition}
+
+\vskip 0.5cm
+\begin{proposition}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Suppose a canonical ensemble at a fixed temperature $T > 0$\, is given.
+Let \,$\Psi$\, denote the micro-state
+(considered as a random variable in the sense of probability theory)
+of the given canonical ensemble, and
+\,$P(\,\Psi = \psi\,)$\,
+the probability that the given canonical ensemble
+is in the (admissible) micro-state \,$\psi$.\,
+Then, we have:
+\begin{equation*}
+P(\,\Psi = \psi\,)
+\;\; = \;\;
+    \dfrac{1}{Z}
+    \cdot
+    \exp\!\left(\,
+        -\,
+        \dfrac{
+            E_{\psi}
+            }{
+            {\color{white}.}
+            k_{B}\,T
+            {\color{white}.}
+            }
+        \,\right),
+\quad
+\begin{array}{c}
+\textnormal{for each admissible micro-state \,$\psi$}
+\\
+\textnormal{of the given canonical ensemble},
+\end{array}
+\end{equation*}
+where
+\,$E_{\psi}$\, is the energy of the micro-state \,$\psi$,\,
+\,$k_{B}$\, is the Boltzmann constant, and
+\,$Z$\, is a normalization constant.
+\end{proposition}
+\proof
+First, recall that the {\color{red}composite} system
+(\,the canonical ensemble together with the heat reservoir \,$R$\,)
+is assumed to be an {\color{red}isolated} system.
+Hence, the energy of the composite system is conserved:
+\begin{equation*}
+E_{\psi} \,+\, E_{R}
+\;\; \equiv \;\;
+    E_{\textnormal{total}}
+\;\; = \;\;
+    \textnormal{constant}
+\end{equation*}
+By the {\color{red}Postulate of Equal \textit{A Priori} Probabilities}, we have:
+\begin{equation*}
+P(\,\Psi = \psi\,)
+\;\; = \;\;
+    \dfrac{
+        \left(\begin{array}{c}
+            \textnormal{number of all}
+            \\
+            \textnormal{accessible micro-states}
+            \\
+            \textnormal{of the composite system}
+            \\
+            \textnormal{for which \,$\Psi = \psi$}
+            \end{array}\right)
+        }{
+        \left(\begin{array}{c}
+            \textnormal{number of all}
+            \\
+            \textnormal{accessible micro-states}
+            \\
+            \textnormal{of the composite system}
+            \end{array}\right)
+        }
+\;\; = \;\;
+    \dfrac{
+        \Omega_{\Psi}(\psi)
+        \times
+        \Omega_{R}(E_{R})
+        }{
+        \Omega_{C}(\,E_{\textnormal{total}}\,)
+        }
+\;\; = \;\;
+    \dfrac{
+        \Omega_{R}\!\left(\,E_{\textnormal{total}} \,\overset{{\color{white}.}}{-}\, E_{\psi}\,\right)
+        }{
+        \Omega_{C}\!\left(\,\overset{{\color{white}.}}{E_{\textnormal{total}}}\,\right)
+        }\,,
+\end{equation*}
+where we have used the following facts:
+\,$
+E_{\psi} \,+\, E_{R}
+\, \equiv \,
+    E_{\textnormal{total}}
+\, = \,
+    \textnormal{constant}
+$,\,
+and
+\begin{equation*}
+\left(\begin{array}{c}
+    \textnormal{number of all}
+    \\
+    \textnormal{accessible micro-states}
+    \\
+    \textnormal{of the composite system}
+    \\
+    \textnormal{for which \,$\Psi = \psi$}
+    \end{array}\right)
+\;\; = \;\;
+    \underset{\Omega_{\Psi}(\psi)}{\underbrace{\left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{accessible micro-states}
+        \\
+        \textnormal{of the canonical ensemble}
+        \\
+        \textnormal{for which \,$\Psi = \psi$}
+        \end{array}\right)}}
+    \times
+    \underset{\Omega_{R}(E_{R})}{\underbrace{\left(\begin{array}{c}
+        \textnormal{number of all}
+        \\
+        \textnormal{accessible micro-states}
+        \\
+        \textnormal{of the heat reservoir}
+        \\
+        \textnormal{compatible with \,$\Psi = \psi$}
+        \end{array}\right)}},
+\end{equation*}
+and
+\,$\Omega_{\Psi}(\psi) \,=\, 1$\,
+(since \,$\psi$\, is a micro-state of the canonical ensemble).
+\vskip 0.4cm
+\noindent
+Incidentally, we note that:
+\begin{equation*}
+\Omega_{C}\!\left(\,E_{\textnormal{total}}\,\right)
+\;\; = \;\;
+    \underset{\psi}{\sum}\;\,
+    \Omega_{\Psi}(\psi)
+    \cdot
+    \Omega_{R}\!\left(\,E_{\textnormal{total}} \,\overset{{\color{white}.}}{-}\, E_{\psi}\,\right)
+\;\; = \;\;
+    \underset{\psi}{\sum}\;\,
+    \Omega_{R}\!\left(\,E_{\textnormal{total}} \,\overset{{\color{white}.}}{-}\, E_{\psi}\,\right),
+\end{equation*}
+where the summation is over all accessible micro-states \,$\psi$\,
+of the given canonical ensemble.
+\vskip 0.4cm
+\noindent
+By the {\color{red}definition of entropy}, we have:
+\begin{equation*}
+S_{R}(E_{R})
+\;\; = \;\;
+    k_{B}
+    \cdot
+    \log\!\left(\,\overset{{\color{white}.}}{
+        \Omega_{R}(E_{R})
+        }\,\right)
+\;\; = \;\;
+    k_{B}
+    \cdot
+    \log\!\left(\,\overset{{\color{white}.}}{
+        \Omega_{R}\!\left(\,E_{\textnormal{total}} \,\overset{{\color{white}1}}{-}\, E_{\psi}\,\right)
+        }\,\right)
+\end{equation*}
+Isolating \,$\Omega_{R}$\, yields:
+\begin{equation*}
+\Omega_{R}\!\left(\,E_{\textnormal{total}} \,\overset{{\color{white}1}}{-}\, E_{\psi}\,\right)
+\;\; = \;\;
+    \exp\!\left(\,
+        \dfrac{ S_{R}(E_{R}) }{ k_{B} }
+        \,\right)
+\end{equation*}
+
+\noindent
+By Taylor's Theorem, we have:
+\begin{eqnarray*}
+S_{R}(E_{R})
+& = &
+    S_{R}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}} \,-\, E_{\psi}
+        }\,\right)
+\\
+& \approx &
+    S_{R}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}
+        }\,\right)
+    \, + \,
+    \left(
+        \left.
+        \dfrac{\partial S_{R}}{\partial E_{R}}
+        \,\right\vert_{E_{R} \,=\, E_{\textnormal{total}}}
+        \right)
+    \cdot
+    \left(\,\overset{{\color{white}.}}{-\,E_{\psi}}\,\right)
+\\
+& = &
+    S_{R}\!\left(\,\overset{{\color{white}.}}{
+        E_{\textnormal{total}}
+        }\,\right)
+    \, - \,
+    \dfrac{E_{\psi}}{T}\,,
+\end{eqnarray*}
+where the last equality follows from
+the thermodynamic definition of absolute temperature
+\;$
+\dfrac{1}{T}
+\, = \,
+    \dfrac{
+        \partial S
+        }{
+        \partial E
+        }
+$.\;
+
+\noindent
+Hence,
+\begin{eqnarray*}
+P(\,\Psi = \psi\,)
+& = &
+    \cdots
+\;\; = \;\;
+    \dfrac{
+        \Omega_{R}\!\left(\,E_{\textnormal{total}} \,\overset{{\color{white}.}}{-}\, E_{\psi}\,\right)
+        }{
+        \Omega_{C}\!\left(\,\overset{{\color{white}.}}{E_{\textnormal{total}}}\,\right)
+        }
+\\
+& = &
+    \dfrac{1}{\Omega_{C}\!\left(\,\overset{{\color{white}.}}{E_{\textnormal{total}}}\,\right)}
+    \cdot
+    \exp\!\left(\,
+        \dfrac{1}{k_{B}}
+        \cdot
+        \left(\,
+            S_{R}\!\left(\,E_{\textnormal{total}}\,\right)
+            \, - \,
+            \dfrac{E_{\psi}}{T}
+            \,\right)
+        \,\right)
+\\
+& = &
+    \dfrac{
+        {\color{white}.}
+        \exp\!\left(\,\overset{{\color{white}.}}{
+            \left.S_{R}\!\left(\,E_{\textnormal{total}}\,\right)\,\right\slash k_{B}
+            }\,\right)
+        {\color{white}.}
+        }{
+        \Omega_{C}\!\left(\,\overset{{\color{white}.}}{E_{\textnormal{total}}}\,\right)
+        }
+    \cdot
+    \exp\!\left(\,
+        - \,
+        \dfrac{
+            E_{\psi}
+            }{
+            {\color{white}.}
+            k_{B}\,T
+            {\color{white}.}
+            }
+        \,\right),
+\end{eqnarray*}
+as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
 \section{Justification of the use of the Boltzmann probability distriubtion
 in the derivation of the Rayleigh-Jeans law}
 
@@ -1193,8 +1481,8 @@ with respect to space and time).
 The linearity of Maxwell's equations implies that their solutions
 satisfy the principle of superposition
 (i.e., linear combinations of solutions are themselves solutions).
-Under appropriate boundary conditions, we expect that the solution
-describing the full electromagnetic field
+Under appropriate assumptions on cavity geometry and boundary conditions,
+we expect that the solution describing the full electromagnetic field
 inside the blackbody radiation cavity
 can be decomposed into frequency-specific components
 (either as a discrete sum or as an integral transform).
