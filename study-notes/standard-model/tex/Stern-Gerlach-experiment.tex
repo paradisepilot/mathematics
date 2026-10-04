@@ -39,9 +39,148 @@ In this section, we discuss the following:
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\section{Spin}
+\section{The magnetic dipole moment of a particle is proportional to its intrinsic spin}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+The \,\textbf{magnetic dipole moment}\, \,$\boldsymbol{\mu}_{S}$\,
+of a Dirac particle (i.e., elementary particle of intrinsic spin $\frac{1}{2}$)
+% of rest mass \,$m$,\, electric charge \,$q$,\, and
+% intrinsic spin \,$\boldsymbol{S}$\,
+is given by:
+\begin{equation*}
+\boldsymbol{\mu}_{S}
+\; = \;
+    g \cdot \dfrac{q}{2m} \cdot \mathbf{S}\,,
+\end{equation*}
+where
+\begin{itemize}
+\item
+    $q$\, is the electric charge of the particle (for an electron, $q = -e$),
+\item
+    $m$\, is the rest mass of the particle,
+\item
+    $\mathbf{S}$\, is the spin angular momentum vector operator, and
+\item
+    $g$ is the dimensionless Landé $g$-factor (or spin $g$-factor), which is approximately $2$ for elementary fermions like electrons, muons, and quarks.
+\end{itemize}
+In this section, we explain the above classical formula (or definition)
+of the magnetic dipole moment of a Dirac particle.
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+Consider an elementary particle of rest mass \,$m > 0$\, and
+electric charge \,$q \in \Re\,\backslash\{\,0\,\}$\,
+moving in a circular trajectory of radius \,$r > 0$\,
+with constant speed \,$v > 0$.\,
+Classically, the particle behaves like a magnetic dipole,
+in the sense that it behaves electromagnetically
+as a fictitious ensemble of two ``opposite magnetic charges''
+separated by a small distance.
+
+\vskip 0.5cm
+\begin{lemma}[Classical magnetic dipole moment in terms of orbital angular momentum]
+\mbox{}
+\vskip 0.02cm
+\noindent
+The (classical) magnetic dipole moment
+\,$\boldsymbol{\mu}_{L}$\,
+of the aforementioned particle can be expressed
+in terms of the (classical) orbital angular moment \,$\mathbf{L}$\,
+of the particle as follows:
+\begin{equation*}
+\boldsymbol{\mu}_{L}
+\;\; = \;\;
+    \dfrac{q}{2m}
+    \cdot
+    \mathbf{L}
+\end{equation*}
+\end{lemma}
+\proof
+The moving charge creates a \textit{current loop},
+where the current \,$I$\, flowing through the loop is given by:
+\begin{equation*}
+I
+\;\; = \;\;
+    \left(\!\begin{array}{c}
+        \textnormal{charge}
+        \\
+        \textnormal{per unit time}
+        \end{array}\!\right)
+\;\; = \;\;
+    \dfrac{q}{2\pi\,r/v}
+\;\; = \;\;
+    \dfrac{q\,v}{2\pi\,r}\,,
+\end{equation*}
+while the area enclosed by the (circular) loop is:
+\begin{equation*}
+A
+\;\; = \;\;
+    \pi \, r^{2}
+\end{equation*}
+The (classical) magnetic dipole moment
+\,$\boldsymbol{\mu}_{L}$\,
+of the current loop is defined as follows:
+\begin{equation*}
+\boldsymbol{\mu}_{L}
+\;\; := \;\;
+    I \cdot \boldsymbol{A}
+\;\; = \;\;
+    \left(\,\dfrac{q\,v}{2\pi\,r}\,\right)
+    \left(\,\pi \, r^{2}\,\right)
+    \cdot
+    \mathbf{e}_{\perp}
+\;\; = \;\;
+    \dfrac{q\,r\,v}{2}
+    \cdot
+    \mathbf{e}_{\perp}\,,
+\end{equation*}
+where
+\,$\mathbf{e}_{\perp}$\,
+is the unit vector obtained from the flow direction of the current via the right-hand rule, and
+\,$\mathbf{A} \,:=\, A \cdot \mathbf{e}_{\perp}$\, is the area vector.
+On the other hand, the orbital angular momentum \,$\mathbf{L}$\,
+of the particle is:
+\begin{equation*}
+\mathbf{L}
+\;\; = \;\;
+    \mathbf{r}
+    \times
+    \left(\,m\cdot\mathbf{v}\,\right)
+\;\; = \;\;
+    m\,r\,v
+    \cdot
+    \mathbf{e}_{\perp}\,,
+\end{equation*}
+where
+\,$\mathbf{r}$\,
+is the instantaneous position vector of the particle,
+and
+\,$\mathbf{v}$\,
+is its instantaneous velocity vector.
+We thus see that
+\begin{equation*}
+\boldsymbol{\mu}_{L}
+\;\; := \;\;
+    I \cdot \boldsymbol{A}
+\;\; = \;\;
+    \left(\,\dfrac{q\,v}{2\pi\,r}\,\right)
+    \left(\,\pi \, r^{2}\,\right)
+    \cdot
+    \mathbf{e}_{\perp}
+\;\; = \;\;
+    \dfrac{q\,r\,v}{2}
+    \cdot
+    \mathbf{e}_{\perp}
+\;\; = \;\;
+    \dfrac{q}{2m}
+    \cdot
+    \mathbf{L}\,,
+\end{equation*}
+as required.
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
