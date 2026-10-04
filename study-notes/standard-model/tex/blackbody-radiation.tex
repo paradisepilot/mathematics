@@ -1532,7 +1532,9 @@ E_{\textnormal{total}}(\nu)
 
 \vskip 0.3cm
 \noindent
-Recall the \textbf{Postulate of Equal A Priori Probabilities} from statisticsl mechanics:
+Recall the
+\textbf{Postulate of Equal \textit{A Priori} Probabilities}
+from statisticsl mechanics:
 \begin{center}
 \begin{minipage}{5.5in}
 For an isolated macroscopic system in thermodynamic equilibrium
@@ -1558,22 +1560,103 @@ P(E)
 \vskip 0.4cm
 \noindent
 \textbf{Claim 1}:\;\,
-$\Omega_{\nu}(E)$\,
-depends only on the frequency \,$\nu$\,
-and not on the energy \,$E$.\,
+$\Omega_{\nu}(E) \,=\, 1$\,
+% depends only on the frequency \,$\nu$\,
+% and not on the energy \,$E$.\,
 \vskip 0.1cm
 \noindent
 Proof of Claim 1:\;\;
-{\color{red}????}
-\vskip 0.1cm
-\noindent
+Recall:
+\begin{equation*}
+\Omega_{\nu}(E)
+\;\; := \;\;
+    \left(\begin{array}{c}
+        \textnormal{number of \textbf{\color{red}microstates} (modes of oscillation)}
+        \\
+        \textnormal{of the electromagnetic field component at frequency \,$\nu$}
+        \\
+        \textnormal{having energy (a macroscopic state characteristic) $E$}
+        \end{array}\right)
+\end{equation*}
+Here, we tacitly make the assumption that each microstate (mode of oscillation)
+of the electromagnetic field component of frequency \,$\nu$\, is in fact
+uniquely determined by its energy \,$E$.\,
+In other words, we tacitly assume that there is a bijective correspondence
+between the following two sets:
+\begin{equation*}
+\left\{\!\begin{array}{c}
+    \textnormal{set of microstates of the}
+    \\
+    \textnormal{electromagnetic field component}
+    \\
+    \textnormal{of frequency \,$\nu$}
+    % \\
+    % \textnormal{$
+    %     \left(\!\begin{array}{c}
+    %         \textnormal{of the electromagnetic field component}
+    %         \\
+    %         \textnormal{of frequency \,$\nu$}
+    %         \end{array}\!\right)
+    %     $}
+    \end{array}\!\right\}
+\quad\textnormal{and}\quad
+\left\{\begin{array}{c}
+    \textnormal{set of values of energy}
+    \\
+    \textnormal{of the microstates of the}
+    \\
+    \textnormal{electromagnetic field component}
+    \\
+    \textnormal{of frequency \,$\nu$}
+    \end{array}\right\}
+\end{equation*}
+Under this assumption, each given admissible value \,$E$\, of energy
+uniquely determines the corresponding microstate.
+Hence, \,$\Omega_{\nu}(E) = 1$.\,
 This completes the proof of Claim 1.
+
+    % \begin{equation*}
+    % \Omega_{\textnormal{total}}\!\left(\,\overset{{\color{white}.}}{
+    %     E_{\textnormal{total}}(\nu)
+    %     }\,\right)
+    % \;\; = \;\;
+    %     \underset{E}{\sum}\;\,
+    %     \Omega_{\nu}(E)
+    %     \cdot
+    %     \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+    %         E_{\textnormal{wall}}
+    %         }\,\right)
+    % \;\; = \;\;
+    %     \underset{E}{\sum}\;\,
+    %     \Omega_{\nu}(E)
+    %     \cdot
+    %     \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+    %         E_{\textnormal{total}} \,-\, E
+    %         }\,\right)
+    % \end{equation*}
 
 \vskip 0.4cm
 \noindent
-By Claim 1, we therefore have:
+By Claim 1 and the
+\textbf{Postulate of Equal \textit{A Priori} Probabilities},
+we therefore have:
 \begin{equation*}
 P(E)
+\;\; = \;\;
+    \dfrac{
+        \Omega_{\nu}(E)
+        \cdot
+        \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+            E_{\textnormal{total}} \,-\, E
+            }\,\right)
+    }{
+        \underset{E^{\prime}}{\sum}\;\,
+        \Omega_{\nu}(E^{\prime})
+        \cdot
+        \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
+            E_{\textnormal{total}} \,-\, E^{\prime}
+            }\,\right)
+        }
 \;\; \propto \;\;
     \Omega_{\textnormal{wall}}\!\left(\,\overset{{\color{white}.}}{
         E_{\textnormal{total}}-E
