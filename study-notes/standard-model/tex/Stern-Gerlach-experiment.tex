@@ -184,6 +184,320 @@ as required.
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\noindent
+The Lorentz forece \,$\mathbf{F}$\,
+experienced by a classical particle
+of rest mass \,$m$\, and electric charge \,$q$\,
+inside an electromagnetic field described by
+the scalar potential \,$\phi$\, and vector potential \,$\mathbf{A}$:\,
+\begin{equation*}
+\mathbf{F}
+\;\; = \;\;
+    q \cdot
+    \left[\,
+        \mathbf{E}
+        \, \overset{{\color{white}.}}{+} \,
+        \mathbf{v} \times \mathbf{B} 
+        \,\right]
+\;\; = \;\;
+    q \cdot
+    \left[\,
+        -\,\nabla\phi
+        - \dfrac{\partial\mathbf{A}}{\partial t}
+        + \mathbf{v} \times (\nabla \times \mathbf{A})
+        \,\right]
+\end{equation*}
+We recall here that
+\,$\mathbf{E} \,=\, -\,\nabla\phi - \dfrac{\partial\mathbf{A}}{\partial t}$\,
+and
+\,$\mathbf{B} \,=\, \nabla \times \mathbf{A}$.\,
+
+\vskip 0.5cm
+\begin{lemma}[Lagrangian and Hamiltonian associated with the Lorentz force]
+\mbox{}
+\vskip 0.02cm
+\noindent
+The Lagrangian
+\,$\mathscr{L}(t, \mathbf{r}, \mathbf{v})$\,
+and the Hamiltonian
+\,$\mathscr{H}(t, \mathbf{r}, \mathbf{v})$\,
+associated with the Lorentz force
+\begin{equation*}
+\mathbf{F}
+\, = \,
+    q \cdot
+    \left[\,
+        -\,\nabla\phi
+        - \dfrac{\partial\mathbf{A}}{\partial t}
+        + \mathbf{v} \times (\nabla \times \mathbf{A})
+        \,\right]
+\end{equation*}
+are respectively given by:
+\begin{eqnarray*}
+\mathscr{L}(t, \mathbf{r}, \mathbf{v})
+& = &
+    \dfrac{1}{2}\,m\cdot\Vert\,\mathbf{v}\,\Vert^2
+    \, - \,
+    q\cdot\phi(t,\mathbf{r})
+    \, + \,
+    q\cdot\mathbf{v} \bullet \mathbf{A}(t,\mathbf{r})
+\\
+\mathscr{H}(t, \mathbf{r}, \mathbf{v})
+& = &
+    \dfrac{1}{2m}\,\left\Vert\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right\Vert^{2}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\,,
+\end{eqnarray*}
+where
+\,$\mathbf{p} \,=\, \mathbf{p}(t,\mathbf{r},\mathbf{v})$\,
+is the canonical momentum vector,
+which is componentwise defined by
+\;$p_{i} \,:=\, \dfrac{\partial\mathscr{L}}{\partial v_{i}}$,\;
+and thus is equivalently defined (vectorially) by:
+\begin{equation*}
+\mathbf{p}
+\;\; = \;\;
+    \mathbf{p}(t,\mathbf{r},\mathbf{v})
+\;\; = \;\;
+    m\cdot\mathbf{v}
+    \, + \,
+    q\cdot\mathbf{A}(t,\mathbf{r})
+\end{equation*}
+\end{lemma}
+\proof
+We first show that the Euler-Lagrange equations
+imply the explicit form of the Lorentz force.
+Recall that the Euler-Lagrange equations are:
+\begin{equation*}
+\dfrac{\d}{\d\,t}\!\left(\,\dfrac{\partial\mathscr{L}}{\partial v_{i}}\,\right)
+\, - \,
+\dfrac{\partial\mathscr{L}}{\partial\,x_{i}}
+\;\; = \;\;
+    0
+\end{equation*}
+Next, we compute the individual terms occurring in the Euler-Lagrange equations.
+\begin{equation*}
+\dfrac{\partial\mathscr{L}}{\partial v_{i}}
+\;\; = \;\;
+    \dfrac{\partial}{\partial v_{i}}\!
+    \left(\,
+        \dfrac{1}{2}\,m\cdot\Vert\,\mathbf{v}\,\Vert^2
+        \, - \,
+        q\cdot\phi(t,\mathbf{r})
+        \, + \,
+        q\cdot\mathbf{v} \bullet \mathbf{A}(t,\mathbf{r})
+        \,\right)
+\;\; = \;\;
+    m\,v_{i}
+    \, + \,
+    q\,A_{i}
+\end{equation*}
+\begin{eqnarray*}
+\dfrac{\d}{\d t}\!\left(\,\dfrac{\partial\mathscr{L}}{\partial v_{i}}\,\right)
+& = &
+    \dfrac{\d}{\d t}\!\left(\,
+        m\,v_{i}
+        \, \overset{{\color{white}.}}{+} \,
+        q\,A_{i}
+        \,\right)
+\;\; = \;\;
+    m\,\dot{v}_{i}
+    \, + \,
+    q\cdot\!\left(\,
+        \dfrac{\partial A_{i}}{\partial t}
+        \, + \,
+        \overset{3}{\underset{k=1}{\sum}}\;
+        \dfrac{\partial A_{i}}{\partial x_{k}}
+        \dfrac{\partial x_{k}}{\partial t}
+        \,\right)
+\;\; = \;\;
+    m\,\dot{v}_{i}
+    \, + \,
+    q\cdot\dfrac{\partial A_{i}}{\partial t}
+    \, + \,
+    q\cdot
+    \overset{3}{\underset{k=1}{\sum}}\;
+    v_{k}
+    \dfrac{\partial A_{i}}{\partial x_{k}}
+\end{eqnarray*}
+\begin{equation*}
+\dfrac{\partial\mathscr{L}}{\partial x_{i}}
+\;\; = \;\;
+    \dfrac{\partial}{\partial x_{i}}\!
+    \left(\,
+        \dfrac{1}{2}\,m\,\mathbf{v}^2
+        \, - \,
+        q\,\phi(t,\mathbf{r})
+        \, + \,
+        q\,\mathbf{v} \bullet \mathbf{A}(t,\mathbf{r})
+        \,\right)
+\;\; = \;\;
+    -\,q\,\dfrac{\partial\phi}{\partial x_{i}}
+    \, + \,
+    q\cdot\overset{3}{\underset{k=1}{\sum}}\;v_{k}\,\dfrac{\partial A_{k}}{\partial x_{i}}
+\end{equation*}
+Hence, the Euler-Lagrange equations give:
+\begin{eqnarray*}
+0
+& = &
+    \dfrac{\d}{\d\,t}\!\left(\,\dfrac{\partial\mathscr{L}}{\partial v_{i}}\,\right)
+    \, - \,
+    \dfrac{\partial\mathscr{L}}{\partial\,x_{i}}
+\\
+& = &
+    \left(\,
+        m\,\dot{v}_{i}
+        \, + \,
+        q\cdot\dfrac{\partial A_{i}}{\partial t}
+        \, + \,
+        q\cdot
+        \overset{3}{\underset{k=1}{\sum}}\;
+        v_{k}
+        \dfrac{\partial A_{i}}{\partial x_{k}}
+        \,\right)
+    \, - \,
+    \left(\,
+        -\,q\,\dfrac{\partial\phi}{\partial x_{i}}
+        \, + \,
+        q\cdot\overset{3}{\underset{k=1}{\sum}}\;v_{k}\,\dfrac{\partial A_{k}}{\partial x_{i}}
+        \,\right)
+\\
+& = &
+    m\,\dot{v}_{i}
+    \, + \,
+    q \cdot\!\left(\,
+        \dfrac{\partial\phi}{\partial x_{i}}
+        \, + \,
+        \dfrac{\partial A_{i}}{\partial t}
+        \, + \,
+        \overset{3}{\underset{k=1}{\sum}}\;v_{k}\left(\,
+            \dfrac{\partial A_{i}}{\partial x_{k}}
+            \, - \,
+            \dfrac{\partial A_{k}}{\partial x_{i}}
+            \right)
+        \right)
+\end{eqnarray*}
+Isolating the term \,$m\,\dot{v}_{i}$\, on one side yields
+\begin{equation*}
+m\,\dot{v}_{i}
+\;\; = \;\;
+    q \cdot\!\left(\,
+        -\,
+        \dfrac{\partial\phi}{\partial x_{i}}
+        \, - \,
+        \dfrac{\partial A_{i}}{\partial t}
+        \, + \,
+        \overset{3}{\underset{k=1}{\sum}}\;v_{k}\left(\,
+            \dfrac{\partial A_{k}}{\partial x_{i}}
+            \, - \,
+            \dfrac{\partial A_{i}}{\partial x_{k}}
+            \right)
+        \right)
+\end{equation*}
+Recalling that
+\,$\mathbf{F} \,=\, m\,\dot{\mathbf{v}}$\,
+yields the desired expression of the Lorentz force, i.e.,
+\begin{equation*}
+\mathbf{F}
+\;\; = \;\;
+    q \cdot
+    \left[\,
+          -\, \nabla\phi
+        \,-\, \dfrac{\partial\mathbf{A}}{\partial t}
+        \,+\, \mathbf{v} \times (\nabla \times \mathbf{A})
+        \,\right]
+\end{equation*}
+This completes the proof that the Euler-Lagrange equations
+imply the explicit form of the Lorentz force.
+
+\vskip 0.3cm
+\noindent
+Next, we derive the associated Hamiltonian.
+The Hamiltonian is simply obtained from the Lagrangian via the Legendre transformation:
+\begin{equation*}
+\mathscr{H}
+\;\; := \;\;
+    \mathbf{v} \bullet \mathbf{p}
+    \, - \,
+    \mathscr{L}\,,
+\end{equation*}
+where
+\,$\mathbf{p}$\,
+is the \textit{canonical momentum} vector, whose components are defined by
+\,$p_{i} \,:=\, \dfrac{\partial\mathscr{L}}{\partial v_{i}}$.\,
+Hence,
+\begin{equation*}
+p_{i}
+\;\; := \;\;
+    \dfrac{\partial\mathscr{L}}{\partial v_{i}}
+\;\; = \;\;
+    \dfrac{\partial}{\partial v_{i}}\!
+    \left(\,
+        \dfrac{1}{2}\,m\cdot\Vert\,\mathbf{v}\,\Vert^2
+        \, - \,
+        q\cdot\phi
+        \, + \,
+        q\cdot\mathbf{v} \bullet \mathbf{A}
+        \,\right)
+\;\; = \;\;
+    m\,v_{i}
+    \, + \,
+    q\,A_{i}
+\end{equation*}
+Equivalently, the canonical momentum vector \,$\mathbf{p}$\, is given by:
+\begin{equation*}
+\mathbf{p}
+\;\; = \;\;
+    m\cdot\mathbf{v}
+    \, + \,
+    q\cdot\mathbf{A}
+\end{equation*}
+Thus,
+\begin{eqnarray*}
+\mathscr{H}
+& := &
+    \mathbf{v} \bullet \mathbf{p}
+    \, - \,
+    \mathscr{L}
+\;\; = \;\;
+    m\cdot\Vert\,\mathbf{v}\,\Vert^{2}
+    \, + \,
+    q\cdot\mathbf{v} \bullet \mathbf{A}
+    \, - \,
+    \left(\,
+        \dfrac{1}{2}\,m\cdot\Vert\,\mathbf{v}\,\Vert^2
+        \, - \,
+        q\cdot\phi
+        \, + \,
+        q\cdot\mathbf{v} \bullet \mathbf{A}
+        \,\right)
+\\
+& = &
+    \dfrac{1}{2}\,m\cdot\Vert\,\mathbf{v}\,\Vert^2
+    \, + \,
+    q\cdot\phi
+\;\; = \;\;
+    \dfrac{1}{2m}\,\Vert\,m\cdot\mathbf{v}\,\Vert^{2}
+    \, + \,
+    q\cdot\phi
+\\
+& = &
+    \dfrac{1}{2m}\,\left\Vert\;
+        \mathbf{p}
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}
+        \,\right\Vert^{2}
+    \, + \,
+    q\cdot\phi\,,
+\end{eqnarray*}
+as required.
+\qed
+
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
