@@ -70,6 +70,10 @@ of the magnetic dipole moment of a Dirac particle.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\subsection{Classical charged particle moving in circular orbit: \,$\boldsymbol{\mu}_{L} = \dfrac{q}{2m}\mathbf{L}$}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \noindent
 Consider an elementary particle of rest mass \,$m > 0$\, and
 electric charge \,$q \in \Re\,\backslash\{\,0\,\}$\,
@@ -185,6 +189,10 @@ as required.
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
+\subsection{Hamiltonian of a classical charged particle in an electromagnetic field}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \begin{definition}[Lorentz force]
 \mbox{}
 \vskip 0.02cm
@@ -503,6 +511,752 @@ Thus,
 \end{eqnarray*}
 as required.
 \qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{Pauli-Schr\"odinger equation -- via quantization of the Hamiltonian of the Lorenz force}
+
+We will obtain the Pauli-Schr\"odinger equation by ``quantizing''
+the Hamiltonian of the Lorentz force:
+\begin{equation*}
+\mathscr{H}(t, \mathbf{r}, \mathbf{v})
+\;\; = \;\;
+    \dfrac{1}{2m}\,\left\Vert\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right\Vert^{2}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})
+\end{equation*}
+``Quantization'' in the present context will mean
+re-interpreting the quantities occurring in the
+Lorentz-force Hamiltonian as (differential) operators
+on spinor fields.
+Recall that a spinor field is a smooth section of a spinor bundle,
+i.e., a smooth section of a complex vector bundle associated
+to a principal $\SU(2)$-bundle via a representation
+\,$\rho : \SU(2) \xrightarrow{{\color{white}????}} U(\mathcal{H})$\,
+on a (possibly infinite-dimensional) complex Hilbert space \,$\mathcal{H}$,\,
+where \,$\rho$\, does NOT factor through the adjoint representation of \,$\SU(2)$:\,
+\begin{equation*}
+\Ad : \SU(2) \xrightarrow{{\color{white}2222}} \SO(\mathfrak{su}(2)) \cong \SO(3)
+\end{equation*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\subsection{Some useful properties of the Pauli spin matrices}
+
+\begin{definition}
+\mbox{}
+\vskip -0.01cm
+\begin{enumerate}
+\item
+    The Pauli spin matrices:
+    \begin{equation*}
+    \sigma_{1}
+    \, :=: \,
+        \sigma_{x}
+    \; := \;
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right),
+    \quad\quad
+    \sigma_{2}
+    \, :=: \,
+        \sigma_{y}
+    \; := \;
+        \left(\,\begin{array}{rr}
+            0 & -\,\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+    \quad\quad
+    \sigma_{3}
+    \, :=: \,
+        \sigma_{z}
+    \; := \;
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+    \end{equation*}
+\item
+    The ``vector'' \,$\boldsymbol{\sigma}$\, of Pauli spin matrices is, by definition,
+    the ordered triple of the Pauli spin matrices, i.e.,
+    \begin{equation*}
+    \boldsymbol{\sigma}
+    \;\; := \;\;
+        \left(\, \sigma_{1} \,,\, \sigma_{2} \,,\, \sigma_{3} \,\right)
+    \end{equation*}
+\item
+    The ``dot product''
+    \,$\boldsymbol{\sigma} \bullet \mathbf{a}$\,
+    of the vector
+    \,$\boldsymbol{\sigma}$\,
+    of Pauli spin matrices with a vector
+    \,$\mathbf{a} \,=\, (a_{1},a_{2},a_{3}) \,\in\, \Re^{3}$\,
+    is defined as follows:
+    \begin{eqnarray*}
+    \boldsymbol{\sigma} \bullet \mathbf{a}
+    & := &
+        \sigma_{1} \cdot a_{1}
+        \, + \,
+        \sigma_{2} \cdot a_{2}
+        \, + \,
+        \sigma_{3} \cdot a_{3}
+    \;\; = \;\;
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right)
+        \cdot
+        a_{1}
+        \; + \;
+        \left(\,\begin{array}{rr}
+            0 & -\,\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+        \cdot
+        a_{2}
+        \; + \;
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+        \cdot
+        a_{3}
+    \\
+    & = &
+        \left(\,\begin{array}{cc}
+            a_{3} & a_{1} - \i\,a_{2}
+            \\
+            a_{1} + \i\,a_{2} & -a_{3}
+            \end{array}\,\right)
+    \;\; \in \;\;
+        \C^{2 \times 2}
+    \end{eqnarray*}
+\end{enumerate}
+\end{definition}
+
+\vskip 0.5cm
+\begin{lemma}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let
+\,$\sigma_{1},\,\sigma_{2},\,\sigma_{3} \in \C^{2 \times 2}$\,
+be the Pauli matrices and
+\,$\boldsymbol{\sigma} \,=\, \left(\,\sigma_{1},\,\sigma_{2},\,\sigma_{3}\,\right)$\,
+be the vector of Pauli matrices.
+Then, the following identities are true:
+\begin{enumerate}
+\item
+    $
+    \sigma_{i} \cdot \sigma_{j}
+    \, = \,
+        \delta_{ij}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}\cdot\sigma_{k}
+    $,\,
+    for each
+    \,$i,j,k \in \{\,1,2,3\,\}$.\,
+\item
+    $
+    \left(\,\boldsymbol{\sigma} \bullet \mathbf{a}\,\right)
+    \cdot
+    \left(\,\boldsymbol{\sigma} \bullet \mathbf{b}\,\right)
+    \; = \;
+        \left(\,\mathbf{a}\bullet\mathbf{b}\,\right)\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\boldsymbol{\sigma} \bullet \left(\,\mathbf{a} \times \mathbf{b}\,\right)
+    \; \in \;
+        \C^{2 \times 2}
+    $,\,
+    for each
+    \,$\mathbf{a}, \mathbf{b} \in \Re^{3}$.\,
+\item
+    $
+    \left(\,\boldsymbol{\sigma} \bullet \mathbf{a}\,\right)^{2}
+    \; = \;
+        (\,\mathbf{a} \bullet \mathbf{a}\,)\cdot\boldsymbol{1}_{2 \times 2}
+    \; \in \;
+        \C^{2 \times 2}
+    $,\,
+    for each
+    \,$\mathbf{a} \in \Re^{3}$.\,
+\item
+    $
+    \left(\,\boldsymbol{\sigma} \overset{{\color{white}1}}{\bullet} \widehat{\mathbf{a}}\,\right)
+    \!\cdot\!
+    \left(\,\boldsymbol{\sigma} \bullet \widehat{\mathbf{b}}\,\right)
+    \; = \;
+        \left(\,\widehat{\mathbf{a}}\bullet\widehat{\mathbf{b}}\,\right)
+        \, + \,
+        \i\cdot\boldsymbol{\sigma} \bullet \left(\,\widehat{\mathbf{a}} \times \widehat{\mathbf{b}}\,\right)
+    \; \in \;
+        U\!\left(\,L^{2}(\Re^{3})\overset{{\color{white}.}}{\otimes}\C^{2}\,\right)
+    $,\,
+    for arbitrary ordered triples
+    \,$\widehat{\mathbf{a}} = \left(\,\widehat{a}_{1},\,\widehat{a}_{2},\,\widehat{a}_{3}\,\right)$\,
+    and
+    \,$\widehat{\mathbf{b}} = \left(\,\widehat{b}_{1},\,\widehat{b}_{2},\,\widehat{b}_{3}\,\right)$\,
+    of operators on $L^{2}(\Re^{3})$.
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+    We compute:
+    \begin{equation*}
+    \begin{array}{ccccccrcc}
+    \sigma_{1} \cdot \sigma_{1}
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & 1
+            \end{array}\,\right)
+    & = &
+        \boldsymbol{1}_{2 \times 2}
+    & = &
+        \delta_{11}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{11{\color{white}k}}^{{\color{white}11}k}\cdot\sigma_{k}
+    \\
+    \sigma_{1} \cdot \sigma_{2}
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            0 & -\,\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            \i & 0
+            \\
+            0 & -\i
+            \end{array}\,\right)
+    & = &
+        \i\cdot\sigma_{3}
+    & = &
+        \delta_{12}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{12{\color{white}k}}^{{\color{white}12}k}\cdot\sigma_{k}
+    \\
+    \sigma_{1} \cdot \sigma_{3}
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & -1
+            \\
+            1 & 0
+            \end{array}\,\right)
+    & = &
+        -\,\i\cdot\sigma_{2}
+    & = &
+        \delta_{13}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{13{\color{white}k}}^{{\color{white}12}k}\cdot\sigma_{k}
+    \end{array}
+    \end{equation*}
+    \begin{equation*}
+    \begin{array}{ccccccrcc}
+    \sigma_{2} \cdot \sigma_{1}
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & -\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            -\i & 0
+            \\
+            0 & \i
+            \end{array}\,\right)
+    & = &
+        -\,\i\,\sigma_{3}
+    & = &
+        \delta_{21}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{21{\color{white}k}}^{{\color{white}11}k}\cdot\sigma_{k}
+    \\
+    \sigma_{2} \cdot \sigma_{2}
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & -\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            0 & -\,\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & 1
+            \end{array}\,\right)
+    & = &
+        \boldsymbol{1}_{2 \times 2}
+    & = &
+        \delta_{22}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{22{\color{white}k}}^{{\color{white}12}k}\cdot\sigma_{k}
+    \\
+    \sigma_{2} \cdot \sigma_{3}
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & -\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & \i
+            \\
+            \i & 0
+            \end{array}\,\right)
+    & = &
+        \i\cdot\sigma_{1}
+    & = &
+        \delta_{23}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{23{\color{white}k}}^{{\color{white}12}k}\cdot\sigma_{k}
+    \end{array}
+    \end{equation*}
+    \begin{equation*}
+    \begin{array}{ccccccrcc}
+    \sigma_{3} \cdot \sigma_{1}
+    & = &
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            1 & 0
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & 1
+            \\
+            -1 & 0
+            \end{array}\,\right)
+    & = &
+        \i\,\sigma_{2}
+    & = &
+        \delta_{31}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{31{\color{white}k}}^{{\color{white}11}k}\cdot\sigma_{k}
+    \\
+    \sigma_{3} \cdot \sigma_{2}
+    & = &
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            0 & -\,\i
+            \\
+            \i & 0
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            0 & \i
+            \\
+            -\i & 1
+            \end{array}\,\right)
+    & = &
+        -\,\i\,\sigma_{1}
+    & = &
+        \delta_{32}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{32{\color{white}k}}^{{\color{white}12}k}\cdot\sigma_{k}
+    \\
+    \sigma_{3} \cdot \sigma_{3}
+    & = &
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+        \cdot
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & -1
+            \end{array}\,\right)
+    & = &
+        \left(\,\begin{array}{rr}
+            1 & 0
+            \\
+            0 & 1
+            \end{array}\,\right)
+    & = &
+        \boldsymbol{1}_{2 \times 2}
+    & = &
+        \delta_{33}\cdot\boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\varepsilon_{33{\color{white}k}}^{{\color{white}12}k}\cdot\sigma_{k}
+    \end{array}
+    \end{equation*}
+\item
+    We compute:
+    \begin{eqnarray*}
+    \left(\,\boldsymbol{\sigma} \bullet \mathbf{a}\,\right)
+    \cdot
+    \left(\,\boldsymbol{\sigma} \bullet \mathbf{b}\,\right)
+    & = &
+        \left(\!\begin{array}{cc}
+            \overset{3}{\underset{i=1}{\sum}}\;
+            \sigma_{i} \cdot a_{i}
+            \end{array}\!\!\right)
+        \cdot
+        \left(\!\begin{array}{cc}
+            \overset{3}{\underset{j=1}{\sum}}\;
+            \sigma_{j} \cdot b_{j}
+            \end{array}\!\!\right)
+    \;\; = \;\;
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;\,
+        a_{i}\,b_{j} \cdot \!\left(\,\sigma_{i}\cdot\sigma_{j}\,\right)
+    \\
+    & = &
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;\,
+        a_{i}\,b_{j} \cdot \!\left(\,
+            \delta_{ij}\cdot\boldsymbol{1}_{2 \times 2}
+            \, + \,
+            \i\cdot\varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}\cdot\sigma_{k}
+            \,\right),
+        \quad
+        \textnormal{by (i)}
+    \\
+    & = &
+        \left(\,
+            \overset{3}{\underset{i=1}{\sum}}\;a_{i}b_{i}
+            \,\right)
+        \cdot\boldsymbol{1}_{2 \times 2}
+        \; + \;
+        \i\cdot\!\left(\,
+            \overset{3}{\underset{i=1}{\sum}}\;
+            \overset{3}{\underset{j=1}{\sum}}\;\,
+            a_{i}b_{j}\cdot
+            \varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}
+            \right)
+        \!\cdot
+        \sigma_{k}
+    \\
+    & \overset{{\color{white}\textnormal{\Large 1}}}{=} &
+        \left(\,
+            \mathbf{a} \bullet \mathbf{b}
+            \,\right)
+        \cdot\boldsymbol{1}_{2 \times 2}
+        \; + \;
+        \i\cdot
+        \boldsymbol{\sigma}
+        \cdot
+        \left(\,
+            \mathbf{a} \times \mathbf{b}
+            \right),
+    \quad
+    \textnormal{as required}
+    \end{eqnarray*}
+\item
+    Immediate by (ii).
+\item
+    We compute:
+    \begin{eqnarray*}
+    \left(\,\boldsymbol{\sigma} \bullet \widehat{\mathbf{a}}\,\right)
+    \cdot
+    \left(\,\boldsymbol{\sigma} \bullet \widehat{\mathbf{b}}\,\right)
+    & = &
+        \left(\!\begin{array}{cc}
+            \overset{3}{\underset{i=1}{\sum}}\;
+            \sigma_{i} \cdot \widehat{a}_{i}
+            \end{array}\!\!\right)
+        \cdot
+        \left(\!\begin{array}{cc}
+            \overset{3}{\underset{j=1}{\sum}}\;
+            \sigma_{j} \cdot \widehat{b}_{j}
+            \end{array}\!\!\right)
+    \;\; = \;\;
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;
+        \left(\,\sigma_{i} \overset{{\color{white}1}}{\cdot} \widehat{a}_{i}\,\right)
+        \!\cdot\!
+        \left(\,\sigma_{j} \cdot \widehat{b}_{j}\,\right)
+    \\
+    & = &
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;\,
+        \sigma_{i} \cdot \widehat{a}_{i} \cdot \sigma_{j} \cdot \widehat{b}_{j}
+    \;\; = \;\;
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;\,
+        \sigma_{i} \cdot \sigma_{j} \cdot \widehat{a}_{i} \cdot \widehat{b}_{j}
+    \\
+    & = &
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}
+        \left(\,
+            \delta_{ij}\cdot\boldsymbol{1}_{2 \times 2}
+            \, + \,
+            \i\cdot\varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}\cdot\sigma_{k}
+            \,\right)
+        \cdot
+        \widehat{a}_{i}\cdot\widehat{b}_{j}\,,
+        \quad
+        \textnormal{by (i)}
+    \\
+    & = &
+        \left(\,
+            \overset{3}{\underset{i=1}{\sum}}\;\widehat{a}_{i}\cdot\widehat{b}_{j}
+            \,\right)
+        \; + \;
+        \i\cdot\sigma_{k}\cdot\!
+        \left(\,
+            \overset{3}{\underset{i=1}{\sum}}\;
+            \overset{3}{\underset{j=1}{\sum}}\;\,
+            \varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}\cdot
+            \widehat{a}_{i}\cdot\widehat{b}_{j}
+            \right)
+    \\
+    & \overset{{\color{white}\textnormal{\Large 1}}}{=} &
+        \left(\,
+            \widehat{\mathbf{a}} \bullet \widehat{\mathbf{b}}
+            \,\right)
+        \; + \;
+        \i\cdot
+        \boldsymbol{\sigma}
+        \cdot
+        \left(\,
+            \widehat{\mathbf{a}} \times \widehat{\mathbf{b}}
+            \,\right),
+    \quad
+    \textnormal{as required}
+    \end{eqnarray*}
+\end{enumerate}
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\subsection{Re-interpreting the Lorentz-force Hamiltonian as operators on spinors}
+
+\begin{equation*}
+\mathscr{H}(t, \mathbf{r}, \mathbf{v})
+\;\; = \;\;
+    \dfrac{1}{2m}\,\left\Vert\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right\Vert^{2}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})
+\end{equation*}
+
+\begin{eqnarray*}
+\widehat{\mathscr{H}}(t, \mathbf{r}, \mathbf{v})
+& = &
+    \dfrac{1}{2m}\,\left\Vert\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right\Vert^{2}
+    \cdot\boldsymbol{1}_{2 \times 2}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+\\
+& = &
+    \dfrac{1}{2m}
+    \left[\,
+        \boldsymbol{\sigma}\cdot\left(\,
+            \mathbf{p}(t,\mathbf{r},\mathbf{v})
+            \, \overset{{\color{white}.}}{-} \,
+            q\cdot\mathbf{A}(t,\mathbf{r})
+            \,\right)
+        \,\right]
+    \cdot
+    \left[\,
+        \boldsymbol{\sigma}\cdot\left(\,
+            \mathbf{p}(t,\mathbf{r},\mathbf{v})
+            \, \overset{{\color{white}.}}{-} \,
+            q\cdot\mathbf{A}(t,\mathbf{r})
+            \,\right)
+        \,\right]
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+\\
+& = &
+    \dfrac{1}{2m}
+    \left[\;
+        \left\Vert\;
+            \mathbf{p}(t,\mathbf{r},\mathbf{v})
+            \, \overset{{\color{white}.}}{-} \,
+            q\cdot\mathbf{A}(t,\mathbf{r})
+            \,\right\Vert^{2}
+        \cdot
+        \boldsymbol{1}_{2 \times 2}
+        \, + \,
+        \i\cdot\boldsymbol{\sigma}\cdot
+            \left(\,
+                \mathbf{p}(t,\mathbf{r},\mathbf{v})
+                \, \overset{{\color{white}.}}{-} \,
+                q\cdot\mathbf{A}(t,\mathbf{r})
+                \,\right)
+            \times
+            \left(\,
+                \mathbf{p}(t,\mathbf{r},\mathbf{v})
+                \, \overset{{\color{white}.}}{-} \,
+                q\cdot\mathbf{A}(t,\mathbf{r})
+                \,\right)
+        \;\right]
+\\
+&&
+    \, \overset{{\color{white}.}}{+} \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+\\
+& = &
+    \dfrac{1}{2m}
+    \left\Vert\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right\Vert^{2}
+    \cdot
+    \boldsymbol{1}_{2 \times 2}
+\\
+&&
+    \; + \;
+    \dfrac{\i}{2m}
+    \cdot
+    \boldsymbol{\sigma}
+    \cdot
+    \left[\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{+} \,
+        q^{2}\cdot\mathbf{A}(t,\mathbf{r}) \times \mathbf{A}(t,\mathbf{r})
+        \;\right]
+\\
+&&
+    \; - \;
+    \dfrac{\i\,q}{2m}
+    \cdot
+    \boldsymbol{\sigma}
+    \cdot
+    \left[\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{A}(t,\mathbf{r})
+        \, \overset{{\color{white}.}}{+} \,
+        \mathbf{A}(t,\mathbf{r}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \;\right]
+\\
+&&
+    \; \overset{{\color{white}1}}{+} \;
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+\\
+& = &
+    \dfrac{1}{2m}
+    \left\Vert\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right\Vert^{2}
+    \cdot
+    \boldsymbol{1}_{2 \times 2}
+\\
+&&
+    \; + \;
+    \dfrac{\i}{2m}
+    \cdot
+    \boldsymbol{\sigma}
+    \cdot
+    \left[\;
+        \boldsymbol{0}
+        \, \overset{{\color{white}.}}{+} \,
+        q^{2}\cdot\boldsymbol{0}
+        \;\right]
+\\
+&&
+    \; - \;
+    \dfrac{\i\,q}{2m}
+    \cdot
+    \boldsymbol{\sigma}
+    \cdot
+    \left[\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{A}(t,\mathbf{r})
+        \, \overset{{\color{white}.}}{+} \,
+        \mathbf{A}(t,\mathbf{r}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \;\right]
+\\
+&&
+    \; \overset{{\color{white}1}}{+} \;
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
