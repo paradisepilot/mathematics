@@ -1052,7 +1052,9 @@ Then, the following identities are true:
     \;\; = \;\;
         \overset{3}{\underset{i=1}{\sum}}\;
         \overset{3}{\underset{j=1}{\sum}}\;\,
-        \sigma_{i} \cdot \sigma_{j} \cdot \widehat{a}_{i} \cdot \widehat{b}_{j}
+        \sigma_{i} \cdot \sigma_{j} \cdot \widehat{a}_{i} \cdot \widehat{b}_{j}\,,
+        \quad
+        \textnormal{since \;$\widehat{a}_{i} \cdot \sigma_{j} \,=\, \sigma_{j} \cdot \widehat{a}_{i}$}
     \\
     & = &
         \overset{3}{\underset{i=1}{\sum}}\;
@@ -1102,20 +1104,8 @@ Then, the following identities are true:
 \vskip 0.5cm
 \subsection{Re-interpreting the Lorentz-force Hamiltonian as operators on spinors}
 
-\begin{equation*}
-\mathscr{H}(t, \mathbf{r}, \mathbf{v})
-\;\; = \;\;
-    \dfrac{1}{2m}\,\left\Vert\;
-        \mathbf{p}(t,\mathbf{r},\mathbf{v})
-        \, \overset{{\color{white}.}}{-} \,
-        q\cdot\mathbf{A}(t,\mathbf{r})
-        \,\right\Vert^{2}
-    \, + \,
-    q\cdot\phi(t,\mathbf{r})
-\end{equation*}
-
 \begin{eqnarray*}
-\widehat{\mathscr{H}}(t, \mathbf{r}, \mathbf{v})
+\mathscr{H}(t, \mathbf{r}, \mathbf{v})\cdot\boldsymbol{1}_{2 \times 2}
 & = &
     \dfrac{1}{2m}\,\left\Vert\;
         \mathbf{p}(t,\mathbf{r},\mathbf{v})
@@ -1125,6 +1115,23 @@ Then, the following identities are true:
     \cdot\boldsymbol{1}_{2 \times 2}
     \, + \,
     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+% \\
+% & = &
+%     \dfrac{1}{2m}
+%     \left(\;
+%         \mathbf{p}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right)
+%     \bullet
+%     \left(\;
+%         \mathbf{p}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right)
+%     \cdot\boldsymbol{1}_{2 \times 2}
+%     \, + \,
+%     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
 \\
 & = &
     \dfrac{1}{2m}
@@ -1139,6 +1146,39 @@ Then, the following identities are true:
     \left[\,
         \boldsymbol{\sigma}\cdot\left(\,
             \mathbf{p}(t,\mathbf{r},\mathbf{v})
+            \, \overset{{\color{white}.}}{-} \,
+            q\cdot\mathbf{A}(t,\mathbf{r})
+            \,\right)
+        \,\right]
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\widehat{\mathscr{H}}(t, \mathbf{r}, \mathbf{v})
+% & = &
+%     \dfrac{1}{2m}\,\left\Vert\;
+%         \mathbf{p}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right\Vert^{2}
+%     \cdot\boldsymbol{1}_{2 \times 2}
+%     \, + \,
+%     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+% \\
+& = &
+    \dfrac{1}{2m}
+    \left[\,
+        \boldsymbol{\sigma}\cdot\left(\,
+            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+            \, \overset{{\color{white}.}}{-} \,
+            q\cdot\mathbf{A}(t,\mathbf{r})
+            \,\right)
+        \,\right]
+    \cdot
+    \left[\,
+        \boldsymbol{\sigma}\cdot\left(\,
+            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
             \, \overset{{\color{white}.}}{-} \,
             q\cdot\mathbf{A}(t,\mathbf{r})
             \,\right)
