@@ -597,14 +597,14 @@ where \,$\rho$\, does NOT factor through the adjoint representation of \,$\SU(2)
     \end{equation*}
 \item
     The ``dot product''
-    \,$\boldsymbol{\sigma} \bullet \mathbf{a}$\,
+    \,$\boldsymbol{\sigma} \,\bullet\, \mathbf{a}$\,
     of the vector
     \,$\boldsymbol{\sigma}$\,
     of Pauli spin matrices with a vector
     \,$\mathbf{a} \,=\, (a_{1},a_{2},a_{3}) \,\in\, \Re^{3}$\,
     is defined as follows:
     \begin{eqnarray*}
-    \boldsymbol{\sigma} \bullet \mathbf{a}
+    \boldsymbol{\sigma} \,\bullet\, \mathbf{a}
     & := &
         \sigma_{1} \cdot a_{1}
         \, + \,
@@ -673,13 +673,13 @@ Then, the following identities are true:
     \,$i,j,k \in \{\,1,2,3\,\}$.\,
 \item
     $
-    \left(\,\boldsymbol{\sigma} \bullet \mathbf{a}\,\right)
+    \left(\,\boldsymbol{\sigma} \,\bullet\, \mathbf{a}\,\right)
     \cdot
-    \left(\,\boldsymbol{\sigma} \bullet \mathbf{b}\,\right)
+    \left(\,\boldsymbol{\sigma} \,\bullet\, \mathbf{b}\,\right)
     \; = \;
-        \left(\,\mathbf{a}\bullet\mathbf{b}\,\right)\cdot\boldsymbol{1}_{2 \times 2}
-        \, + \,
-        \i\cdot\boldsymbol{\sigma} \bullet \left(\,\mathbf{a} \times \mathbf{b}\,\right)
+        \left(\,\mathbf{a}\,\bullet\,\mathbf{b}\,\right)\cdot\boldsymbol{1}_{2 \times 2}
+        \; + \;
+        \i\cdot\boldsymbol{\sigma} \,\bullet \left(\,\mathbf{a} \times \mathbf{b}\,\right)
     \; \in \;
         \C^{2 \times 2}
     $,\,
@@ -687,31 +687,14 @@ Then, the following identities are true:
     \,$\mathbf{a}, \mathbf{b} \in \Re^{3}$.\,
 \item
     $
-    \left(\,\boldsymbol{\sigma} \bullet \mathbf{a}\,\right)^{2}
+    \left(\,\boldsymbol{\sigma} \,\bullet\, \mathbf{a}\,\right)^{2}
     \; = \;
-        (\,\mathbf{a} \bullet \mathbf{a}\,)\cdot\boldsymbol{1}_{2 \times 2}
+        (\,\mathbf{a} \,\bullet\, \mathbf{a}\,)\cdot\boldsymbol{1}_{2 \times 2}
     \; \in \;
         \C^{2 \times 2}
     $,\,
     for each
     \,$\mathbf{a} \in \Re^{3}$.\,
-\item
-    $
-    \left(\,\boldsymbol{\sigma} \overset{{\color{white}1}}{\bullet} \widehat{\mathbf{a}}\,\right)
-    \!\cdot\!
-    \left(\,\boldsymbol{\sigma} \bullet \widehat{\mathbf{b}}\,\right)
-    \; = \;
-        \left(\,\widehat{\mathbf{a}}\bullet\widehat{\mathbf{b}}\,\right)
-        \, + \,
-        \i\cdot\boldsymbol{\sigma} \bullet \left(\,\widehat{\mathbf{a}} \times \widehat{\mathbf{b}}\,\right)
-    \; \in \;
-        U\!\left(\,L^{2}(\Re^{3})\overset{{\color{white}.}}{\otimes}\C^{2}\,\right)
-    $,\,
-    for arbitrary ordered triples
-    \,$\widehat{\mathbf{a}} = \left(\,\widehat{a}_{1},\,\widehat{a}_{2},\,\widehat{a}_{3}\,\right)$\,
-    and
-    \,$\widehat{\mathbf{b}} = \left(\,\widehat{b}_{1},\,\widehat{b}_{2},\,\widehat{b}_{3}\,\right)$\,
-    of operators on $L^{2}(\Re^{3})$.
 \end{enumerate}
 \end{lemma}
 \proof
@@ -1056,7 +1039,7 @@ be the corresponding ``vector'' (ordered triple) of operators.
 \vskip 0.1cm
 \noindent
 Then, the ``dot product''
-\,$\boldsymbol{\sigma} \bullet \widehat{\mathbf{a}}$\,
+\,$\boldsymbol{\sigma} \,\bullet\, \widehat{\mathbf{a}}$\,
 of the vector
 \,$\boldsymbol{\sigma}$\,
 of Pauli spin matrices with the ``vector'' (ordered triple)
@@ -1436,6 +1419,16 @@ Then, the following statements are true:
     \, + \,
     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
 \end{eqnarray*}
+
+\begin{equation*}
+\boldsymbol{\pi}
+\;\; :=: \;\;
+    \boldsymbol{\pi}(t, \mathbf{r}, \mathbf{v})
+\;\; := \;\;
+    \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+    \, \overset{{\color{white}.}}{-} \,
+    q\cdot\mathbf{A}(t,\mathbf{r})
+\end{equation*}
 
 \begin{eqnarray*}
 \widehat{\mathscr{H}}(t, \mathbf{r}, \mathbf{v})
