@@ -1060,6 +1060,7 @@ defined by:
 
 \vskip 0.5cm
 \begin{lemma}
+\label{PauliMatricesSpinorProperties}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1370,6 +1371,22 @@ Then, the following statements are true:
 \vskip 0.5cm
 \subsection{Re-interpreting the Lorentz-force Hamiltonian as operators on spinors}
 
+First, recall that the Hamiltonian of the Lorentz force
+(\,experienced by a classical particle of mass \,$m$\, and electric charge \,$q$\,
+inside an electromagnetic field described by the scalar electric potential \,$\phi$\, and vector magnetic potential \,$\mathbf{A}$\,)
+is given by:
+\begin{equation*}
+\mathscr{H}(t, \mathbf{r}, \mathbf{v})
+\;\; = \;\;
+    \dfrac{1}{2m}\,\left\Vert\;
+        \mathbf{p}(t,\mathbf{r},\mathbf{v})
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right\Vert^{2}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})
+\end{equation*}
+Multiplying both sides by the \,$2 \times 2$\, identity matrix \,$\boldsymbol{1}_{2 \times 2}$\, yields
 \begin{eqnarray*}
 \mathscr{H}(t, \mathbf{r}, \mathbf{v})\cdot\boldsymbol{1}_{2 \times 2}
 & = &
@@ -1402,7 +1419,7 @@ Then, the following statements are true:
 & = &
     \dfrac{1}{2m}
     \left[\,
-        \boldsymbol{\sigma}\cdot\left(\,
+        \boldsymbol{\sigma}\,\bullet\left(\,
             \mathbf{p}(t,\mathbf{r},\mathbf{v})
             \, \overset{{\color{white}.}}{-} \,
             q\cdot\mathbf{A}(t,\mathbf{r})
@@ -1410,57 +1427,268 @@ Then, the following statements are true:
         \,\right]
     \cdot
     \left[\,
-        \boldsymbol{\sigma}\cdot\left(\,
+        \boldsymbol{\sigma}\,\bullet\left(\,
             \mathbf{p}(t,\mathbf{r},\mathbf{v})
             \, \overset{{\color{white}.}}{-} \,
             q\cdot\mathbf{A}(t,\mathbf{r})
             \,\right)
         \,\right]
     \, + \,
-    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}\,,
 \end{eqnarray*}
-
+where the second equality follows by Lemma \ref{PauliMatricesProperties}(iii).
+Promoting to operators on \,$\mathcal{H} \,=\, L^{2}(\Re^{3}) \otimes \C^{2}$,\, we get:
+\begin{eqnarray*}
+\widehat{\mathscr{H}}(t, \mathbf{r}, \mathbf{v})
+& = &
+    \dfrac{1}{2m}
+    \left[\,
+        \boldsymbol{\sigma}\,\bullet\left(\,
+            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+            \, \overset{{\color{white}.}}{-} \,
+            q\cdot\mathbf{A}(t,\mathbf{r})
+            \,\right)
+        \,\right]
+    \cdot
+    \left[\,
+        \boldsymbol{\sigma}\,\bullet\left(\,
+            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+            \, \overset{{\color{white}.}}{-} \,
+            q\cdot\mathbf{A}(t,\mathbf{r})
+            \,\right)
+        \,\right]
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
+\\
+& = &
+    \dfrac{1}{2m}
+    \left(\,
+        \boldsymbol{\sigma}\,\bullet\boldsymbol{\widehat{\pi}}
+        \,\right)
+    \circ
+    \left(\,
+        \boldsymbol{\sigma}\,\bullet\boldsymbol{\widehat{\pi}}
+        \,\right)
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}\,,
+\end{eqnarray*}
+where we have introduced:
 \begin{equation*}
-\boldsymbol{\pi}
+\boldsymbol{\widehat{\pi}}
 \;\; :=: \;\;
-    \boldsymbol{\pi}(t, \mathbf{r}, \mathbf{v})
+    \boldsymbol{\widehat{\pi}}(t, \mathbf{r}, \mathbf{v})
 \;\; := \;\;
     \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
     \, \overset{{\color{white}.}}{-} \,
     q\cdot\mathbf{A}(t,\mathbf{r})
 \end{equation*}
-
+By Lemma \ref{PauliMatricesSpinorProperties}(ii),
 \begin{eqnarray*}
 \widehat{\mathscr{H}}(t, \mathbf{r}, \mathbf{v})
-% & = &
-%     \dfrac{1}{2m}\,\left\Vert\;
-%         \mathbf{p}(t,\mathbf{r},\mathbf{v})
-%         \, \overset{{\color{white}.}}{-} \,
-%         q\cdot\mathbf{A}(t,\mathbf{r})
-%         \,\right\Vert^{2}
-%     \cdot\boldsymbol{1}_{2 \times 2}
-%     \, + \,
-%     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
-% \\
-& = &
+& := &
+    \cdots
+\;\; = \;\;
     \dfrac{1}{2m}
-    \left[\,
-        \boldsymbol{\sigma}\cdot\left(\,
-            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-            \, \overset{{\color{white}.}}{-} \,
-            q\cdot\mathbf{A}(t,\mathbf{r})
-            \,\right)
-        \,\right]
-    \cdot
-    \left[\,
-        \boldsymbol{\sigma}\cdot\left(\,
-            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-            \, \overset{{\color{white}.}}{-} \,
-            q\cdot\mathbf{A}(t,\mathbf{r})
-            \,\right)
-        \,\right]
+    \left(\,
+        \boldsymbol{\sigma}\,\bullet\boldsymbol{\widehat{\pi}}
+        \,\right)
+    \circ
+    \left(\,
+        \boldsymbol{\sigma}\,\bullet\boldsymbol{\widehat{\pi}}
+        \,\right)
     \, + \,
-    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
+\\
+& = &
+    \dfrac{1}{2m}\cdot
+    \left(\,\boldsymbol{\widehat{\pi}}\,\bullet\,\boldsymbol{\widehat{\pi}}\,\right)
+    \, + \,
+    \dfrac{\i}{2m}
+    \cdot\boldsymbol{\sigma} \,\bullet \left(\,
+        \boldsymbol{\widehat{\pi}}
+        \times
+        \boldsymbol{\widehat{\pi}}
+        \,\right)
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
+\end{eqnarray*}
+Now, unlike the cross product of a vector with itself (which is always zero),
+the cross product
+\,$\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}$\,
+of the operator vector
+\,$\boldsymbol{\widehat{\pi}}$\,
+with itself is no longer necessarily zero.
+We next compute 
+\,$\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}$.\,
+To this end, first note that the $k$-component of
+\,$\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}$\,
+can be rewritten as follows:
+\begin{eqnarray*}
+\left(\,\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}\,\right)_{k}
+& := &
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\,
+    \varepsilon_{ijk}
+    \,\cdot\,
+    \widehat{\pi}_{i}
+    \,\circ\,
+    \widehat{\pi}_{j}
+\\
+& = &
+    \dfrac{1}{2}
+    \cdot
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\,
+    \varepsilon_{ijk}
+    \,\cdot\,
+    \widehat{\pi}_{i}
+    \,\circ\,
+    \widehat{\pi}_{j}
+    \; + \;
+    \dfrac{1}{2}
+    \cdot
+    \overset{3}{\underset{{\color{red}j}=1}{\sum}}\;\,
+    \overset{3}{\underset{{\color{red}i}=1}{\sum}}\;
+    \varepsilon_{{\color{red}ji}k}
+    \,\cdot\,
+    \widehat{\pi}_{{\color{red}j}}
+    \,\circ\,
+    \widehat{\pi}_{{\color{red}i}}
+\\
+& = &
+    \dfrac{1}{2}
+    \cdot
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\,
+    \varepsilon_{ijk}
+    \,\cdot\,
+    \widehat{\pi}_{i}
+    \,\circ\,
+    \widehat{\pi}_{j}
+    \;\; {\color{red}-} \;\;
+    \dfrac{1}{2}
+    \cdot
+    \overset{3}{\underset{{\color{black}i}=1}{\sum}}\;\,
+    \overset{3}{\underset{{\color{black}j}=1}{\sum}}\;\,
+    \varepsilon_{{\color{red}ij}k}
+    \,\cdot\,
+    \widehat{\pi}_{{\color{black}j}}
+    \,\circ\,
+    \widehat{\pi}_{{\color{black}i}}
+\\
+& = &
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\;
+    \dfrac{\varepsilon_{ijk}}{2}
+    \,\cdot\,
+    \left(\,
+        \widehat{\pi}_{i}
+        \,\circ\,
+        \widehat{\pi}_{j}
+        \, - \,
+        \widehat{\pi}_{j}
+        \,\circ\,
+        \widehat{\pi}_{i}
+        \,\right)
+\\
+& = &
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\;
+    \dfrac{\varepsilon_{ijk}}{2}
+    \,\cdot\,
+    \left[\;
+        \widehat{\pi}_{i}
+        \, \overset{{\color{white}1}}{,} \,
+        \widehat{\pi}_{j}
+        \,\right]
+\end{eqnarray*}
+\begin{eqnarray*}
+\left[\;
+    \widehat{\pi}_{i}
+    \, \overset{{\color{white}1}}{,} \,
+    \widehat{\pi}_{j}
+    \,\right](\psi)
+& = &
+    \left(\;
+        \widehat{\pi}_{i}
+        \, \overset{{\color{white}1}}{\circ} \,
+        \widehat{\pi}_{j}
+        \, - \,
+        \widehat{\pi}_{j}
+        \, \overset{{\color{white}1}}{\circ} \,
+        \widehat{\pi}_{i}
+        \,\right)(\psi)
+\\
+& = &
+    \left(\,-\,\i\,\hbar\,\partial_{i}\,\overset{{\color{white}.}}{-}\,q A_{i}\,\right)
+    \left(\,-\,\i\,\hbar\,\partial_{j}\,\overset{{\color{white}.}}{-}\,q A_{j}\,\right)
+    (\psi)
+    \; - \;
+    \left(\,-\,\i\,\hbar\,\partial_{j}\,\overset{{\color{white}.}}{-}\,q A_{j}\,\right)
+    \left(\,-\,\i\,\hbar\,\partial_{i}\,\overset{{\color{white}.}}{-}\,q A_{i}\,\right)
+    (\psi)
+\\
+& = &
+    \left(\,-\,\i\,\hbar\,\partial_{i}\,\overset{{\color{white}.}}{-}\,q A_{i}\,\right)
+    \left(\,-\,\i\,\hbar\,\partial_{j}\psi\,\overset{{\color{white}.}}{-}\,q A_{j}\psi\,\right)
+    \; - \;
+    \left(\,-\,\i\,\hbar\,\partial_{j}\,\overset{{\color{white}.}}{-}\,q A_{j}\,\right)
+    \left(\,-\,\i\,\hbar\,\partial_{i}\psi\,\overset{{\color{white}.}}{-}\,q A_{i}\psi\,\right)
+\\
+& = &
+    +\,\i^{2}\hbar^{2}\cdot\partial_{i}\partial_{j}\psi
+    \,+\,
+    \i\,\hbar\,q\cdot\partial_{i}\!\left(\,A_{j}\psi\,\right)
+    \,+\,
+    \i\,\hbar\,q\cdot A_{i} \cdot \partial_{j}\psi
+    \,+\,
+    q^{2}\cdot A_{i}\,A_{j}\,\psi
+\\
+&&
+    -\,\i^{2}\hbar^{2}\cdot\partial_{j}\partial_{i}\psi
+    \,-\,
+    \i\,\hbar\,q\cdot\partial_{j}\!\left(\,A_{i}\psi\,\right)
+    \,-\,
+    \i\,\hbar\,q\cdot A_{j} \cdot \partial_{i}\psi
+    \,-\,
+    q^{2}\cdot A_{j}\,A_{i}\,\psi
+\\
+& = &
+    \i\,\hbar\,q\cdot\left(\,
+        \partial_{i}\!\left(\,A_{j}\psi\,\right)
+        \overset{{\color{white}.}}{-}\,
+        \partial_{j}\!\left(\,A_{i}\psi\,\right)
+        \,+\,
+        A_{i} \cdot \partial_{j}\psi
+        \,-\,
+        A_{j} \cdot \partial_{i}\psi
+        \,\right)
+\\
+& = &
+    \i\,\hbar\,q\cdot\left(\,
+        \left(\partial_{i}A_{j}\right)\psi
+        \,\overset{{\color{white}.}}{+}\,
+        A_{j}\left(\partial_{i}\psi\right)
+        \,-\,
+        \left(\partial_{j}A_{i}\right)\psi
+        \,-\,
+        A_{i}\left(\partial_{j}\psi\right)
+        \,+\,
+        A_{i} \cdot \partial_{j}\psi
+        \,-\,
+        A_{j} \cdot \partial_{i}\psi
+        \,\right)
+\\
+& = &
+    \i\,\hbar\,q\cdot\left(\,
+        \partial_{i}A_{j}
+        \,\overset{{\color{white}.}}{-}\,
+        \partial_{j}A_{i}
+        \,\right)
+    \cdot
+    \psi
+\end{eqnarray*}
+\begin{eqnarray*}
 \\
 & = &
     \dfrac{1}{2m}
