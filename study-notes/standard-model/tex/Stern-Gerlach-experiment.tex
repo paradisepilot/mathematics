@@ -548,11 +548,13 @@ where \,$\rho$\, does NOT factor through the adjoint representation of \,$\SU(2)
 
 \subsection{Some useful properties of the Pauli spin matrices}
 
+\vskip 0.2cm
 \begin{definition}
 \mbox{}
-\vskip -0.01cm
+\vskip 0.01cm
 \begin{enumerate}
 \item
+    \vskip -0.1cm
     The Pauli spin matrices:
     \begin{equation*}
     \sigma_{1}
@@ -648,14 +650,15 @@ where \,$\rho$\, does NOT factor through the adjoint representation of \,$\SU(2)
 
 \vskip 0.5cm
 \begin{lemma}
+\label{PauliMatricesProperties}
 \mbox{}
 \vskip 0.1cm
 \noindent
 Let
 \,$\sigma_{1},\,\sigma_{2},\,\sigma_{3} \in \C^{2 \times 2}$\,
-be the Pauli matrices and
+be the Pauli spin matrices and
 \,$\boldsymbol{\sigma} \,=\, \left(\,\sigma_{1},\,\sigma_{2},\,\sigma_{3}\,\right)$\,
-be the vector of Pauli matrices.
+be the vector of Pauli spin matrices.
 Then, the following identities are true:
 \begin{enumerate}
 \item
@@ -1022,39 +1025,318 @@ Then, the following identities are true:
     \end{eqnarray*}
 \item
     Immediate by (ii).
+    \qed
+\end{enumerate}
+
+\vskip 0.5cm
+\begin{definition}
+\mbox{}
+\vskip 0.15cm
+\noindent
+Let
+\,$L^{2}(\Re^{3})$\,
+be the Hilbert space of square-integrable $\C$-valued functions defined on \,$\Re^{3}$.
+\vskip 0.1cm
+\noindent
+Let
+\,$\mathcal{H} \, := \, L^{2}(\Re^{3}) \otimes \C^{2}$\,
+be the tensor product Hilbert space.
+\vskip 0.1cm
+\noindent
+Let
+\,$\widehat{a}_{1}$,\, 
+\,$\widehat{a}_{2}$,\, 
+\,$\widehat{a}_{3}$\,
+be arbitrary {\color{red}linear} operators on \,$L^{2}(\Re^{3})$.\,
+\vskip 0.1cm
+\noindent
+Let
+\,$\widehat{\boldsymbol{a}} \, := \, \left(\,\widehat{a}_{1},\,\widehat{a}_{2},\,\widehat{a}_{3}\,\right)$\,
+be the corresponding ``vector'' (ordered triple) of operators.
+\vskip 0.1cm
+\noindent
+Then, the ``dot product''
+\,$\boldsymbol{\sigma} \bullet \widehat{\mathbf{a}}$\,
+of the vector
+\,$\boldsymbol{\sigma}$\,
+of Pauli spin matrices with the ``vector'' (ordered triple)
+\,$\widehat{\boldsymbol{a}} \, := \, \left(\,\widehat{a}_{1},\,\widehat{a}_{2},\,\widehat{a}_{3}\,\right)$\,
+of operators on \,$L^{2}(\Re^{3})$\, is the operator on
+\,$\mathcal{H} \, = \, L^{2}(\Re^{3}) \otimes \C^{3}$\,
+defined by:
+\begin{equation*}
+\boldsymbol{\sigma} \,\bullet\, \widehat{\mathbf{a}}
+\;\; := \;\;
+    \sigma_{1} \,\circ\, \widehat{a}_{1}
+    \; + \;
+    \sigma_{2} \,\circ\, \widehat{a}_{2}
+    \; + \;
+    \sigma_{3} \,\circ\, \widehat{a}_{3}
+\end{equation*}
+\end{definition}
+
+\vskip 0.5cm
+\begin{lemma}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let
+\,$L^{2}(\Re^{3})$\,
+be the Hilbert space of square-integrable $\C$-valued functions defined on \,$\Re^{3}$.
+\vskip 0.1cm
+\noindent
+Let
+\,$\mathcal{H} \, := \, L^{2}(\Re^{3}) \otimes \C^{2}$\,
+be the tensor product Hilbert space.
+\vskip 0.1cm
+\noindent
+Let
+\,$\widehat{a}_{1}$,\,
+\,$\widehat{a}_{2}$,\,
+\,$\widehat{a}_{3}$,\,
+\,$\widehat{b}_{1}$,\,
+\,$\widehat{b}_{2}$,\,
+\,$\widehat{b}_{3}$\,
+be arbitrary {\color{red}linear} operators on \,$L^{2}(\Re^{3})$.\,
+\vskip 0.1cm
+\noindent
+Let
+\,$\widehat{\boldsymbol{a}} \, := \, \left(\,\widehat{a}_{1},\,\widehat{a}_{2},\,\widehat{a}_{3}\,\right)$\,
+and
+\,$\widehat{\boldsymbol{b}} \, := \, \left(\,\widehat{b}_{1},\,\widehat{b}_{2},\,\widehat{b}_{3}\,\right)$\,
+be the corresponding ``vector'' (ordered triple) of operators.
+\vskip 0.1cm
+\noindent
+Then, the following statements are true:
+\begin{enumerate}
+\item
+    For each \,$i,j \in \{\,1,2,3\,\}$,\, we have:
+    \;$
+    \sigma_{i} \,\circ\, \widehat{a}_{j}
+    \;\; = \;\;
+        \widehat{a}_{j} \,\circ\, \sigma_{i}
+    $\,
+\item
+    We have:
+    \begin{equation*}
+    \left(\,\boldsymbol{\sigma} \,\overset{{\color{white}1}}{\bullet}\, \widehat{\mathbf{a}}\,\right)
+    \circ
+    \left(\,\boldsymbol{\sigma} \,\bullet\, \widehat{\mathbf{b}}\,\right)
+    \; = \;
+        \left(\,\widehat{\mathbf{a}}\,\bullet\,\widehat{\mathbf{b}}\,\right)
+        \, + \,
+        \i\cdot\boldsymbol{\sigma} \,\bullet \left(\,\widehat{\mathbf{a}} \times \widehat{\mathbf{b}}\,\right),
+    \quad
+    \textnormal{
+        as operators on
+        \,$\mathcal{H} \,=\, L^{2}(\Re^{3})\overset{{\color{white}.}}{\otimes}\C^{2}$,\,
+        }
+    \end{equation*}
+    where
+    \begin{eqnarray*}
+    \widehat{\mathbf{a}}\,\bullet\,\widehat{\mathbf{b}}
+    & := &
+        \widehat{a}_{1} \circ \widehat{b}_{1}
+        \, + \,
+        \widehat{a}_{2} \circ \widehat{b}_{2}
+        \, + \,
+        \widehat{a}_{3} \circ \widehat{b}_{3}
+    \\
+    \widehat{\mathbf{a}}\times\widehat{\mathbf{b}}
+    & := &
+        \overset{{\color{white}.}}{
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;\,
+        \varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}
+        \cdot
+        \widehat{a}_{i} \circ \widehat{b}_{j}
+        }
+    \end{eqnarray*}
+    for arbitrary ordered triples
+    \,$\widehat{\mathbf{a}} = \left(\,\widehat{a}_{1},\,\widehat{a}_{2},\,\widehat{a}_{3}\,\right)$\,
+    and
+    \,$\widehat{\mathbf{b}} = \left(\,\widehat{b}_{1},\,\widehat{b}_{2},\,\widehat{b}_{3}\,\right)$\,
+    of operators on $L^{2}(\Re^{3})$.
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+    Let \,$i,j \in \{\,1,2,3\,\}$\, be fixed.
+    Write
+    \,$
+    \sigma_{i} \, = \, \left(\!\begin{array}{cc} w & x \\ y & z \end{array}\!\right)
+    $.\,
+    Then, for each
+    \,$
+    \psi
+    \, = \,
+        \left(\!\begin{array}{c} \psi_{\uparrow} \\ \psi_{\downarrow} \end{array}\!\right)
+    \, \in \,
+        \mathcal{H}
+    \, = \,
+        L^{2}(\Re^{3}) \otimes \C^{2}
+    $,\,
+    we compute:
+    \begin{eqnarray*}
+    \left(\,\sigma_{i} \,\circ\, \widehat{a}_{j}\,\right)\left(\!
+        \begin{array}{c}
+            \psi_{\uparrow}
+            \\
+            \psi_{\downarrow}
+            \end{array}
+        \!\!\right)
+    & = &
+        \left(\!\begin{array}{cc} w & x \\ y & z \end{array}\!\right)
+        \cdot
+        \left(
+            \begin{array}{c}
+                \widehat{a}_{j}\!\left(\,\psi_{\uparrow}\,\right)
+                \\
+                \overset{{\color{white}.}}{
+                    \widehat{a}_{j}\!\left(\,\psi_{\downarrow}\,\right)
+                    }
+                \end{array}
+            \!\right)
+    \;\; = \;\;
+        \left(
+            \begin{array}{c}
+                w\cdot\widehat{a}_{j}\!\left(\,\psi_{\uparrow}\,\right)
+                \, + \,
+                x\cdot\widehat{a}_{j}\!\left(\,\psi_{\downarrow}\,\right)
+                \\
+                \overset{{\color{white}.}}{
+                    y\cdot\widehat{a}_{j}\!\left(\,\psi_{\uparrow}\,\right)
+                    \, + \,
+                    z\cdot\widehat{a}_{j}\!\left(\,\psi_{\downarrow}\,\right)
+                    }
+                \end{array}
+            \right)
+    \\
+    & = &
+        \left(
+            \begin{array}{c}
+                \widehat{a}_{j}\!\left(\,w\cdot\psi_{\uparrow} \,+\, x\cdot\psi_{\downarrow}\,\right)
+                \\
+                \overset{{\color{white}.}}{
+                    \widehat{a}_{j}\!\left(\;y\cdot\psi_{\uparrow} \,+\, z\cdot\psi_{\downarrow}\,\right)
+                    }
+                \end{array}
+            \right),
+        \quad
+        \textnormal{by linearity of \,$\widehat{a}_{j}$}
+    \\
+    & = &
+        \widehat{a}_{j}\!\left(
+            \begin{array}{c}
+                w\cdot\psi_{\uparrow} \,+\, x\cdot\psi_{\downarrow}
+                \\
+                \overset{{\color{white}.}}{
+                    y\cdot\psi_{\uparrow} \,+\, z\cdot\psi_{\downarrow}
+                    }
+                \end{array}
+            \right)
+    \;\; = \;\;
+        \widehat{a}_{j}\!\left(\,\sigma_{i}\!\left(\!
+            \begin{array}{c}
+                \psi_{\uparrow}
+                \\
+                \overset{{\color{white}.}}{
+                    \psi_{\downarrow}
+                    }
+                \end{array}
+            \!\!\right)\,\right)
+    \\
+    & = &
+        \left(\,\widehat{a}_{j} \,\circ\, \sigma_{i}\,\right)\left(\!
+            \begin{array}{c}
+                \psi_{\uparrow}
+                \\
+                \psi_{\downarrow}
+                \end{array}
+            \!\!\right),
+        \quad
+        \textnormal{as required}
+    \end{eqnarray*}
+    \,$\sigma_{i}\cdot\widehat{a}_{j}$\,
+    and
+    \;\,$\widehat{a}_{j}\cdot\sigma_{i}$\,
+    to be the operators on
+    \,$\mathcal{H} \,=\, L^{2}(\Re^{3}) \otimes \C^{2}$\,
+    defined respectively by:
+    \begin{equation*}
+    \left(\,\sigma_{i} \,\circ\, \widehat{a}_{j}\,\right)\left(\!
+        \begin{array}{c}
+            \psi_{\uparrow}
+            \\
+            \psi_{\downarrow}
+            \end{array}
+        \!\right)
+    \;\; := \;\;
+        \sigma_{i}\!\left(
+            \begin{array}{c}
+                \widehat{a}_{j}\!\left(\,\psi_{\uparrow}\,\right)
+                \\
+                \overset{{\color{white}.}}{
+                    \widehat{a}_{j}\!\left(\,\psi_{\downarrow}\,\right)
+                    }
+                \end{array}
+            \!\right),
+    \quad\quad
+    \left(\,\widehat{a}_{j} \,\circ\, \sigma_{i}\,\right)\left(\!
+        \begin{array}{c}
+            \psi_{\uparrow}
+            \\
+            \psi_{\downarrow}
+            \end{array}
+        \!\right)
+    \;\; := \;\;
+        \widehat{a}_{j}\!\left(\,\sigma_{i}\!\left(
+            \begin{array}{c}
+                \psi_{\uparrow}
+                \\
+                \overset{{\color{white}.}}{
+                    \psi_{\downarrow}
+                    }
+                \end{array}
+            \!\right)\,\right)
+    \end{equation*}
 \item
     We compute:
     \begin{eqnarray*}
-    \left(\,\boldsymbol{\sigma} \bullet \widehat{\mathbf{a}}\,\right)
-    \cdot
-    \left(\,\boldsymbol{\sigma} \bullet \widehat{\mathbf{b}}\,\right)
+    \left(\,\boldsymbol{\sigma} \,\overset{{\color{white}1}}{\bullet}\, \widehat{\mathbf{a}}\,\right)
+    \circ
+    \left(\,\boldsymbol{\sigma} \,\bullet\, \widehat{\mathbf{b}}\,\right)
     & = &
         \left(\!\begin{array}{cc}
-            \overset{3}{\underset{i=1}{\sum}}\;
-            \sigma_{i} \cdot \widehat{a}_{i}
+            \overset{3}{\underset{i=1}{\sum}}\;\,
+            \sigma_{i} \,\circ\, \widehat{a}_{i}
             \end{array}\!\!\right)
-        \cdot
+        \circ
         \left(\!\begin{array}{cc}
-            \overset{3}{\underset{j=1}{\sum}}\;
-            \sigma_{j} \cdot \widehat{b}_{j}
+            \overset{3}{\underset{j=1}{\sum}}\;\,
+            \sigma_{j} \,\circ\,\widehat{b}_{j}
             \end{array}\!\!\right)
-    \;\; = \;\;
+    \\
+    & = &
         \overset{3}{\underset{i=1}{\sum}}\;
-        \overset{3}{\underset{j=1}{\sum}}\;
-        \left(\,\sigma_{i} \overset{{\color{white}1}}{\cdot} \widehat{a}_{i}\,\right)
-        \!\cdot\!
-        \left(\,\sigma_{j} \cdot \widehat{b}_{j}\,\right)
+        \overset{3}{\underset{j=1}{\sum}}\,
+        \left(\,\sigma_{i} \,\overset{{\color{white}1}}{\circ}\, \widehat{a}_{i}\,\right)
+        \circ
+        \left(\,\sigma_{j} \,\circ\, \widehat{b}_{j}\,\right),
+        \quad
+        \textnormal{by linearity of \,$\sigma_{i}$\, and \,$\widehat{a}_{i}$}
     \\
     & = &
         \overset{3}{\underset{i=1}{\sum}}\;
         \overset{3}{\underset{j=1}{\sum}}\;\,
-        \sigma_{i} \cdot \widehat{a}_{i} \cdot \sigma_{j} \cdot \widehat{b}_{j}
+        \sigma_{i} \,\circ\, \widehat{a}_{i} \,\circ\, \sigma_{j} \,\circ\, \widehat{b}_{j}
     \;\; = \;\;
         \overset{3}{\underset{i=1}{\sum}}\;
         \overset{3}{\underset{j=1}{\sum}}\;\,
-        \sigma_{i} \cdot \sigma_{j} \cdot \widehat{a}_{i} \cdot \widehat{b}_{j}\,,
+        \sigma_{i} \,\circ\, \sigma_{j} \,\circ\, \widehat{a}_{i} \,\circ\, \widehat{b}_{j}\,,
         \quad
-        \textnormal{since \;$\widehat{a}_{i} \cdot \sigma_{j} \,=\, \sigma_{j} \cdot \widehat{a}_{i}$}
+        \textnormal{by (i)}
     \\
     & = &
         \overset{3}{\underset{i=1}{\sum}}\;
@@ -1064,40 +1346,41 @@ Then, the following identities are true:
             \, + \,
             \i\cdot\varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}\cdot\sigma_{k}
             \,\right)
-        \cdot
-        \widehat{a}_{i}\cdot\widehat{b}_{j}\,,
+        \circ\,
+        \widehat{a}_{i} \,\circ\, \widehat{b}_{j}\,,
         \quad
-        \textnormal{by (i)}
+        \textnormal{by Lemma \ref{PauliMatricesProperties}(i)}
     \\
     & = &
         \left(\,
-            \overset{3}{\underset{i=1}{\sum}}\;\widehat{a}_{i}\cdot\widehat{b}_{j}
+            \overset{3}{\underset{i=1}{\sum}}\;\,\widehat{a}_{i}\,\circ\,\widehat{b}_{j}
             \,\right)
         \; + \;
-        \i\cdot\sigma_{k}\cdot\!
+        \i\cdot\sigma_{k}\,\circ
         \left(\,
             \overset{3}{\underset{i=1}{\sum}}\;
             \overset{3}{\underset{j=1}{\sum}}\;\,
-            \varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}\cdot
-            \widehat{a}_{i}\cdot\widehat{b}_{j}
+            \varepsilon_{ij{\color{white}k}}^{{\color{white}ij}k}
+            \,\cdot\,
+            \widehat{a}_{i} \,\circ\, \widehat{b}_{j}
             \right)
     \\
     & \overset{{\color{white}\textnormal{\Large 1}}}{=} &
         \left(\,
-            \widehat{\mathbf{a}} \bullet \widehat{\mathbf{b}}
+            \widehat{\mathbf{a}} \,\bullet\, \widehat{\mathbf{b}}
             \,\right)
         \; + \;
         \i\cdot
         \boldsymbol{\sigma}
-        \cdot
+        \bullet
         \left(\,
             \widehat{\mathbf{a}} \times \widehat{\mathbf{b}}
             \,\right),
     \quad
     \textnormal{as required}
     \end{eqnarray*}
+    \qed
 \end{enumerate}
-\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
