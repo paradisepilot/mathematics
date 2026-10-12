@@ -1520,7 +1520,41 @@ of the operator vector
 with itself is no longer necessarily zero.
 We next compute 
 \,$\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}$.\,
-To this end, first note that the $k$-component of
+
+\vskip 0.5cm
+\begin{lemma}
+\mbox{}
+\vskip 0.1cm
+\noindent
+Let
+\,$
+\boldsymbol{\widehat{\pi}}
+\; :=: \;
+    \boldsymbol{\widehat{\pi}}(t, \mathbf{r}, \mathbf{v})
+\; := \;
+    \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+    \, \overset{{\color{white}.}}{-} \,
+    q\cdot\mathbf{A}(t,\mathbf{r})
+\; = \;
+    -\i\,\hbar\,\nabla
+    \, - \,
+    q \cdot \mathbf{A}
+$.\,
+Then, the ``cross product''
+\,$
+\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}
+$\,
+can be expressed in terms of the magnetic field
+\,$\mathbf{B} \, := \, \nabla \times \mathbf{A}$\,
+as follows:
+\begin{equation*}
+\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}
+\;\; = \;\;
+    \i\,\hbar\,q\,\boldsymbol{B}
+\end{equation*}
+\end{lemma}
+\proof
+First, note that the $k$-component of
 \,$\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}$\,
 can be rewritten as follows:
 \begin{eqnarray*}
@@ -1602,6 +1636,7 @@ can be rewritten as follows:
         \widehat{\pi}_{j}
         \,\right]
 \end{eqnarray*}
+Next, observe that
 \begin{eqnarray*}
 \left[\;
     \widehat{\pi}_{i}
@@ -1804,6 +1839,7 @@ can be rewritten as follows:
     \; \overset{{\color{white}1}}{+} \;
     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
 \end{eqnarray*}
+\qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
