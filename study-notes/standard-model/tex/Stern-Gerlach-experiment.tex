@@ -1724,6 +1724,132 @@ Next, observe that
     \psi
 \end{eqnarray*}
 \begin{eqnarray*}
+\mathbf{B} \; = \; \nabla \times \mathbf{A}
+& \xRightarrow{{\color{white}????}} &
+B_{k}
+\; = \;
+    \overset{3}{\underset{l=1}{\sum}}\;
+    \overset{3}{\underset{m=1}{\sum}}\;
+    \varepsilon_{klm}
+    \cdot
+    \partial_{l}A_{m}
+\\
+& \xRightarrow{{\color{white}????}} &
+    \overset{3}{\underset{k=1}{\sum}}\;\,
+    \varepsilon_{ijk}\,B_{k}
+    \; = \;
+        \overset{3}{\underset{k=1}{\sum}}\;\,
+        \varepsilon_{ijk}\,
+        \overset{3}{\underset{l=1}{\sum}}\;
+        \overset{3}{\underset{m=1}{\sum}}\;
+        \varepsilon_{klm}
+        \cdot
+        \partial_{l}A_{m}
+    \; = \;
+        \overset{3}{\underset{l=1}{\sum}}\;
+        \overset{3}{\underset{m=1}{\sum}}
+        \left(\,
+            {\color{blue}
+            \overset{3}{\underset{k=1}{\sum}}\;\,
+            \varepsilon_{ijk}\,
+            \varepsilon_{klm}
+            }
+            \right)
+        \cdot
+        \partial_{l}A_{m}
+\\
+& \xRightarrow{{\color{white}????}} &
+    \overset{3}{\underset{k=1}{\sum}}\;\,
+    \varepsilon_{ijk}\,B_{k}
+    \; = \;
+        \overset{3}{\underset{l=1}{\sum}}\;
+        \overset{3}{\underset{m=1}{\sum}}
+        \left(\,
+            % \overset{3}{\underset{k=1}{\sum}}\;\,
+            % \varepsilon_{ijk}\,
+            % \varepsilon_{klm}
+            {\color{blue}\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}}
+            \right)
+        \cdot
+        \partial_{l}A_{m}
+    \; = \;
+        \partial_{i}A_{j}
+        \, - \,
+        \partial_{j}A_{i}
+\end{eqnarray*}
+\begin{eqnarray*}
+% \left[\;
+%     \widehat{\pi}_{i}
+%     \, \overset{{\color{white}1}}{,} \,
+%     \widehat{\pi}_{j}
+%     \,\right](\psi)
+\left(\,
+    \boldsymbol{\widehat{\pi}}
+    \times
+    \boldsymbol{\widehat{\pi}}
+    \,\right)_{{\color{red}k}}
+& = &
+    \cdots
+\;\; = \;\;
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\;
+    \dfrac{\varepsilon_{ij\color{red}k}}{2}
+    \,\cdot\,
+    \left[\;
+        \widehat{\pi}_{i}
+        \, \overset{{\color{white}1}}{,} \,
+        \widehat{\pi}_{j}
+        \,\right]
+\\
+& = &
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\;
+    \dfrac{\varepsilon_{ij\color{red}k}}{2}
+    \,\cdot\,
+    \i\,\hbar\,q
+    \left(\,
+        \overset{3}{\underset{l=1}{\sum}}\;\,
+        \varepsilon_{ijl}\,B_{l}
+        \,\right)
+\;\; = \;\;
+    \dfrac{\i\,\hbar\,q}{2}
+    \cdot
+    \overset{3}{\underset{l=1}{\sum}}
+    \left(\,
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;\,
+        \varepsilon_{ij{\color{red}k}}\,
+        \varepsilon_{ijl}
+        \right)
+    B_{l}
+\\
+& = &
+    \dfrac{\i\,\hbar\,q}{2}
+    \cdot
+    \overset{3}{\underset{l=1}{\sum}}
+    \left(\,
+        % \overset{3}{\underset{i=1}{\sum}}\;
+        % \overset{3}{\underset{j=1}{\sum}}\;\,
+        % \varepsilon_{ij{\color{red}k}}\,
+        % \varepsilon_{ijl}
+        2\,\delta_{{\color{red}k}l}
+        \right)
+    B_{l}
+\;\; = \;\;
+    \i\,\hbar\,q\,B_{k}
+\end{eqnarray*}
+It now immediately follows that
+\begin{equation*}
+\boldsymbol{\widehat{\pi}}
+\times
+\boldsymbol{\widehat{\pi}}
+\;\; = \;\;
+    \i\,\hbar\,q\,\mathbf{B}\,,
+\end{equation*}
+as required.
+\qed
+
+\begin{eqnarray*}
 \\
 & = &
     \dfrac{1}{2m}
