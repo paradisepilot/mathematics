@@ -2261,7 +2261,119 @@ the quantized Hamiltonian of the Lorentz force as:
     \cdot\boldsymbol{\sigma} \,\bullet\, \mathbf{B}
     \, + \,
     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
+\\
+& = &
+    \dfrac{1}{2m}\cdot
+    \left(\,
+        % \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+        -\,\i\,\hbar\,\nabla
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right)
+    \bullet
+    \left(\,
+        % \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+        -\,\i\,\hbar\,\nabla
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right)
+    \, - \,
+    \dfrac{\hbar\,q}{2m}
+    \cdot\boldsymbol{\sigma} \,\bullet\, \mathbf{B}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
+\\
+& = &
+    \dfrac{1}{2m}\cdot
+    \left(\,
+        % \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+        -\,\i\,\hbar\,\nabla
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right)
+    \bullet
+    \left(\,
+        -\,\i\,\hbar\,\nabla
+        \, \overset{{\color{white}.}}{-} \,
+        q\cdot\mathbf{A}(t,\mathbf{r})
+        \,\right)
+    \, - \,
+    \left(\,
+        \dfrac{{\color{red}g}}{\hbar}
+        \cdot
+        \mu_{B}
+        \cdot
+        \mathbf{S}
+        \right)
+    \,\bullet\, \mathbf{B}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}\,,
 \end{eqnarray*}
+where the last equality is just the consequence of rewriting the quantity
+\;$
+\dfrac{\hbar\,q}{2m}\cdot\boldsymbol{\sigma}
+$\;
+as
+\;$
+\dfrac{{\color{black}g}}{\hbar}
+\cdot
+\mu_{B}
+\cdot
+\mathbf{S}
+$.\;
+The quantity
+\,$
+\dfrac{\hbar\,q}{2m}\cdot\boldsymbol{\sigma}
+\, = \,
+    \dfrac{{\color{black}g}}{\hbar}
+    \cdot
+    \mu_{B}
+    \cdot
+    \mathbf{S}
+$\,
+is the \textbf{magnetic dipole moment} of the charged particle.
+It can be rewritten as follows:
+\begin{equation*}
+\dfrac{\hbar\,q}{2m}\cdot\boldsymbol{\sigma}
+\;\; = \;\;
+    \dfrac{2}{\hbar}
+    \cdot
+    \left(\,\dfrac{\hbar\,q}{2m}\right)
+    \left(\,\dfrac{\hbar}{2}\cdot\boldsymbol{\sigma}\right)
+\;\; = \;\;
+    \dfrac{{\color{red}g}}{\hbar}
+    \cdot
+    \mu_{B}
+    \cdot
+    \mathbf{S}\,,
+\end{equation*}
+where
+\begin{itemize}
+\item
+    $\mu_{B} \, := \, \dfrac{\hbar\,q}{2m}$,\;
+\item
+    $\mathbf{S} \, := \, \dfrac{\hbar}{2}\cdot\boldsymbol{\sigma}$\;
+    is the intrinsic spin operator (observable), and
+\item
+    $g \, := \, 2$\; is called the \textbf{gyromagnetic ratio}.
+\end{itemize}
+The gyromagnetic ratio is thus the strength of the coupling
+between the spin of the charge particle with the external magnetic field.
+
+\begin{remark}
+\mbox{}
+\vskip 0.1cm
+\noindent
+According to the quantization of the Lorentz force Hamiltonian as explained in this section,
+the gyromagnetic ratio
+-- for a charged particle of positive mass and intrinsic spin \,$1/2$\, in an electromagnetic field --
+has the value of exactly $2$.
+Quantum electrodynamics (QED) predicts a slightly different value --
+{\color{red}$g_{\textnormal{QED}} \,=\, 2.00231930436092(36)$}
+-- for the gyromagnetic ratio.
+The QED value agrees with the experimentally observed value
+to an astoundingly high degree.
+\end{remark}
 
 % \begin{eqnarray*}
 % \\
