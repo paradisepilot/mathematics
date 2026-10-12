@@ -546,6 +546,7 @@ where \,$\rho$\, does NOT factor through the adjoint representation of \,$\SU(2)
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
 \subsection{Some useful properties of the Pauli spin matrices}
 
 \vskip 0.2cm
@@ -1368,6 +1369,253 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+% \vskip 0.5cm
+\clearpage
+\subsection{Some useful properties of the Levi-Civita symbol \,$\varepsilon_{ijk}$}
+
+\vskip 0.2cm
+\begin{lemma}
+\label{LeviCivitaSymbolProperties}
+\mbox{}
+\vskip -0.05cm
+\noindent
+\begin{enumerate}
+\item
+    The following identity is true:
+    \begin{equation*}
+    \varepsilon_{ijk}\,\varepsilon_{lmn}
+    \;\; = \;\;
+        \det\left(\begin{array}{ccc}
+            \delta_{il} & \delta_{im} & \delta_{in}
+            \\
+            \delta_{jl} & \delta_{jm} & \delta_{jn}
+            \\
+            \delta_{kl} & \delta_{km} & \delta_{kn}
+            \end{array}\right)
+    \end{equation*}
+\item
+    $
+    \overset{3}{\underset{k=1}{\sum}}\;\,
+    \varepsilon_{{\color{red}ij}k}\,
+    \varepsilon_{{\color{red}lm}k}
+    \; = \;
+        \delta_{il}\,\delta_{jm} - \delta_{im}\,\delta_{jl}
+    $
+\item
+    $
+    \overset{3}{\underset{j=1}{\sum}}\;
+    \overset{3}{\underset{k=1}{\sum}}\;\,
+    \varepsilon_{{\color{red}i}jk}\,
+    \varepsilon_{{\color{red}l}jk}
+    \; = \;
+        2\,\delta_{{\color{black}il}}
+    $
+\end{enumerate}
+\end{lemma}
+\proof
+\begin{enumerate}
+\item
+    Define:
+    \begin{equation*}
+    A_{ijk}
+    \;\; := \;\;
+        \left(\begin{array}{ccc}
+        \delta_{i1} & \delta_{i2} & \delta_{i3}
+        \\
+        \delta_{j1} & \delta_{j2} & \delta_{j3}
+        \\
+        \delta_{k1} & \delta_{k2} & \delta_{k3}
+        \end{array}\right),
+    \quad\textnormal{and}\quad
+    B_{lmn}
+    \;\; := \;\;
+        \left(\begin{array}{ccc}
+        \delta_{l1} & \delta_{m1} & \delta_{n1}
+        \\
+        \delta_{l2} & \delta_{m2} & \delta_{n2}
+        \\
+        \delta_{l3} & \delta_{m3} & \delta_{n3}
+        \end{array}\right)
+    \end{equation*}
+    Then, it is clear that:
+    \begin{equation*}
+    \det(\,A_{ijk}\,) \; = \;\varepsilon_{ijk}\,,
+    \quad\textnormal{and}\quad
+    \det(\,B_{lmn}\,) \; = \;\varepsilon_{lmn}\,,
+    \end{equation*}
+    Direct computations show:
+    \begin{equation*}
+    A_{ijk} \cdot B_{lmn}
+    \;\; = \;\;
+        \cdots
+    \;\; = \;\;
+        \left(\begin{array}{ccc}
+        \delta_{il} & \delta_{im} & \delta_{in}
+        \\
+        \delta_{jl} & \delta_{jm} & \delta_{jn}
+        \\
+        \delta_{kl} & \delta_{km} & \delta_{kn}
+        \end{array}\right)
+    \end{equation*}
+    For example,
+    \begin{eqnarray*}
+    \left(\,A_{ijk} \cdot B_{lmn}\,\right)_{12}
+    & = &
+        \delta_{i1} \cdot \delta_{m1}
+        \, + \,
+        \delta_{i2} \cdot \delta_{m2}
+        \, + \,
+        \delta_{i3} \cdot \delta_{m3}
+    \;\; = \;\;
+        \delta_{im}
+    \\
+    \left(\,A_{ijk} \cdot B_{lmn}\,\right)_{31}
+    & = &
+        \,
+        \delta_{k1} \cdot \delta_{l1}
+        \; + \;
+        \delta_{k2} \cdot \delta_{l2}
+        \; + \;
+        \delta_{k3} \cdot \delta_{l3}
+        \;
+    \;\; = \;\;
+        \delta_{kl}
+    \end{eqnarray*}
+    We now see:
+    \begin{equation*}
+    \varepsilon_{ijk}\,\varepsilon_{lmn}
+    \;\; = \;\;
+        \det(\,A_{ijk}\,) \cdot \det(\,B_{lmn}\,)
+    \;\; = \;\;
+        \det(\,A_{ijk} \cdot B_{lmn}\,)
+    \;\; = \;\;
+        \det\left(\begin{array}{ccc}
+            \delta_{il} & \delta_{im} & \delta_{in}
+            \\
+            \delta_{jl} & \delta_{jm} & \delta_{jn}
+            \\
+            \delta_{kl} & \delta_{km} & \delta_{kn}
+            \end{array}\right),
+    \end{equation*}
+    as required.
+\item
+    We compute:
+    \begin{eqnarray*}
+    \overset{3}{\underset{k=1}{\sum}}\;\,
+    \varepsilon_{{\color{red}ij}k}\,
+    \varepsilon_{{\color{red}lm}k}
+    & = &
+        \overset{3}{\underset{k=1}{\sum}}\;\,
+        \det\left(\begin{array}{ccc}
+            \delta_{il} & \delta_{im} & \delta_{i{\color{red}k}}
+            \\
+            \delta_{jl} & \delta_{jm} & \delta_{j{\color{red}k}}
+            \\
+            \delta_{kl} & \delta_{km} & \delta_{k{\color{red}k}}
+            \end{array}\right),
+        \quad
+        \textnormal{by (i)}
+    \\
+    & = &
+        \overset{3}{\underset{k=1}{\sum}}\,
+        \left[\,
+            \delta_{ik}\cdot
+            \det\left(\begin{array}{ccc}
+                \delta_{jl} & \delta_{jm} 
+                \\
+                \delta_{kl} & \delta_{km}
+                \end{array}\right)
+            \, - \,
+            \delta_{jk}\cdot
+            \det\left(\begin{array}{ccc}
+                \delta_{il} & \delta_{im}
+                \\
+                \delta_{kl} & \delta_{km}
+                \end{array}\right)
+            \, + \,
+            \delta_{kk}\cdot
+            \det\left(\begin{array}{ccc}
+                \delta_{il} & \delta_{im}
+                \\
+                \delta_{jl} & \delta_{jm}
+                \end{array}\right)
+            \,\right]
+    \\
+    & = &
+        \overset{3}{\underset{k=1}{\sum}}\;
+        \delta_{ik}\left(\,\delta_{jl}\delta_{km} - \delta_{jm}\delta_{kl}\,\right)
+        \,-\,
+        \overset{3}{\underset{k=1}{\sum}}\;
+        \delta_{jk}\left(\,\delta_{il}\delta_{km} - \delta_{im}\delta_{kl}\,\right)
+        \,+\,
+        \overset{3}{\underset{k=1}{\sum}}\;
+        \delta_{kk}\left(\,\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}\,\right)
+    \\
+    & = &
+        \left(\,\delta_{jl}\delta_{im} - \delta_{jm}\delta_{il}\,\right)
+        \,-\,
+        \left(\,\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}\,\right)
+        \,+\,
+        \left(\,\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}\,\right)
+        \cdot
+        \overset{3}{\underset{k=1}{\sum}}\;\delta_{kk}
+    \\
+    & = &
+        \left(\,
+            \delta_{il}\delta_{jm}
+            \overset{{\color{white}.}}{-}
+            \delta_{im}\delta_{jl}
+            \,\right)
+        \cdot
+        \left(\,
+            -\,1 \,-\, 1 \,+\, 3
+            \,\right)
+    \\
+    & = &
+        \delta_{il}\delta_{jm}
+        \overset{{\color{white}.}}{-}
+        \delta_{im}\delta_{jl}\,,
+        \quad
+        \textnormal{as required}
+    \end{eqnarray*}
+\item
+    \begin{eqnarray*}
+    \overset{3}{\underset{j=1}{\sum}}\;
+    \overset{3}{\underset{k=1}{\sum}}\;\,
+    \varepsilon_{{\color{red}i}jk}\,
+    \varepsilon_{{\color{red}l}jk}
+    & = &
+        \overset{3}{\underset{j=1}{\sum}}
+        \left(\,
+            \delta_{il}\delta_{j{\color{red}j}}
+            \overset{{\color{white}.}}{-}
+            \delta_{i{\color{red}j}}\delta_{jl}
+            \,\right),
+        \quad
+        \textnormal{by (ii)}
+    \\
+    & = &
+        \overset{3}{\underset{j=1}{\sum}}\;
+        \delta_{il}\delta_{j{\color{red}j}}
+        \;\overset{{\color{white}.}}{-}\;
+        \overset{3}{\underset{j=1}{\sum}}\;
+        \delta_{i{\color{red}j}}\delta_{jl}
+    \;\; = \;\;
+        3 \cdot \delta_{il}
+        \;\overset{{\color{white}.}}{-}\;
+        \delta_{il}
+    \\
+    & = &
+        2\,\delta_{{\color{black}il}}\,,
+        \quad
+        \textnormal{as required}
+    \end{eqnarray*}
+\vskip -0.8cm
+\qed
+\end{enumerate}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 0.5cm
 \subsection{Re-interpreting the Lorentz-force Hamiltonian as operators on spinors}
 
@@ -1522,7 +1770,7 @@ We next compute
 \,$\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}$.\,
 
 \vskip 0.5cm
-\begin{lemma}
+\begin{lemma}\label{PiCrossPi}
 \mbox{}
 \vskip 0.1cm
 \noindent
@@ -1554,9 +1802,31 @@ as follows:
 \end{equation*}
 \end{lemma}
 \proof
-First, note that the $k$-component of
+We proceed by stating and proving a series of Claims.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 1:}\;
+The $k$-component of
 \,$\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}$\,
-can be rewritten as follows:
+can be expressed as:
+\,$
+\left(\,\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}\,\right)_{k}
+\; = \;
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\;
+    \dfrac{\varepsilon_{ijk}}{2}
+    \,\cdot\,
+    \left[\;
+        \widehat{\pi}_{i}
+        \, \overset{{\color{white}1}}{,} \,
+        \widehat{\pi}_{j}
+        \,\right]
+$\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 1:\; We compute:
+\vskip -0.6cm
 \begin{eqnarray*}
 \left(\,\boldsymbol{\widehat{\pi}} \times \boldsymbol{\widehat{\pi}}\,\right)_{k}
 & := &
@@ -1567,8 +1837,7 @@ can be rewritten as follows:
     \widehat{\pi}_{i}
     \,\circ\,
     \widehat{\pi}_{j}
-\\
-& = &
+\;\; = \;\;
     \dfrac{1}{2}
     \cdot
     \overset{3}{\underset{i=1}{\sum}}\;
@@ -1609,8 +1878,7 @@ can be rewritten as follows:
     \widehat{\pi}_{{\color{black}j}}
     \,\circ\,
     \widehat{\pi}_{{\color{black}i}}
-\\
-& = &
+\;\; = \;\;
     \overset{3}{\underset{i=1}{\sum}}\;
     \overset{3}{\underset{j=1}{\sum}}\;\;
     \dfrac{\varepsilon_{ijk}}{2}
@@ -1636,7 +1904,30 @@ can be rewritten as follows:
         \widehat{\pi}_{j}
         \,\right]
 \end{eqnarray*}
-Next, observe that
+This completes the proof of Claim 1.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 2:}\;
+For each \,$\psi \in \mathcal{H}$,\, we have:
+\,$
+\left[\;
+    \widehat{\pi}_{i}
+    \, \overset{{\color{white}1}}{,} \,
+    \widehat{\pi}_{j}
+    \,\right](\psi)
+\; = \;
+    \i\,\hbar\,q\cdot\left(\,
+        \partial_{i}A_{j}
+        \,\overset{{\color{white}.}}{-}\,
+        \partial_{j}A_{i}
+        \,\right)
+    \cdot
+    \psi
+$\,
+\vskip 0.1cm
+\noindent
+Proof of Claim 2:\; We compute:
 \begin{eqnarray*}
 \left[\;
     \widehat{\pi}_{i}
@@ -1723,9 +2014,28 @@ Next, observe that
     \cdot
     \psi
 \end{eqnarray*}
-\begin{eqnarray*}
+This completes the proof of Claim 2.
+
+\vskip 0.3cm
+\noindent
+\textbf{Claim 3:}\;\;
+$
+\overset{3}{\underset{k=1}{\sum}}\;\,
+\varepsilon_{{\color{red}ij}k}\,B_{k}
+\; = \;
+    \partial_{i}A_{j}
+    \, - \,
+    \partial_{j}A_{i}
+$
+\vskip 0.1cm
+\noindent
+Proof of Claim 3:\;
+First, recall that
+\,$
 \mathbf{B} \; = \; \nabla \times \mathbf{A}
-& \xRightarrow{{\color{white}????}} &
+$,\,
+which can be equivalently expressed in component form as
+\,$
 B_{k}
 \; = \;
     \overset{3}{\underset{l=1}{\sum}}\;
@@ -1733,64 +2043,84 @@ B_{k}
     \varepsilon_{klm}
     \cdot
     \partial_{l}A_{m}
-\\
-& \xRightarrow{{\color{white}????}} &
+$.\,
+Thus,
+\begin{eqnarray*}
+\overset{3}{\underset{k=1}{\sum}}\;\,
+\varepsilon_{{\color{red}ij}k}\,B_{k}
+& = &
     \overset{3}{\underset{k=1}{\sum}}\;\,
-    \varepsilon_{ijk}\,B_{k}
-    \; = \;
-        \overset{3}{\underset{k=1}{\sum}}\;\,
-        \varepsilon_{ijk}\,
+    \varepsilon_{ijk}\cdot\!\left(\,
         \overset{3}{\underset{l=1}{\sum}}\;
         \overset{3}{\underset{m=1}{\sum}}\;
         \varepsilon_{klm}
         \cdot
         \partial_{l}A_{m}
-    \; = \;
-        \overset{3}{\underset{l=1}{\sum}}\;
-        \overset{3}{\underset{m=1}{\sum}}
-        \left(\,
-            {\color{blue}
-            \overset{3}{\underset{k=1}{\sum}}\;\,
-            \varepsilon_{ijk}\,
-            \varepsilon_{klm}
-            }
-            \right)
-        \cdot
-        \partial_{l}A_{m}
+        \,\right)
+\;\; = \;\;
+    \overset{3}{\underset{l=1}{\sum}}\;
+    \overset{3}{\underset{m=1}{\sum}}
+    \left(\,
+        {\color{black}
+        \overset{3}{\underset{k=1}{\sum}}\;\,
+        \varepsilon_{ijk}\,
+        \varepsilon_{klm}
+        }
+        \right)
+    \cdot
+    \partial_{l}A_{m}
 \\
-& \xRightarrow{{\color{white}????}} &
-    \overset{3}{\underset{k=1}{\sum}}\;\,
-    \varepsilon_{ijk}\,B_{k}
-    \; = \;
-        \overset{3}{\underset{l=1}{\sum}}\;
-        \overset{3}{\underset{m=1}{\sum}}
-        \left(\,
-            % \overset{3}{\underset{k=1}{\sum}}\;\,
-            % \varepsilon_{ijk}\,
-            % \varepsilon_{klm}
-            {\color{blue}\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}}
-            \right)
-        \cdot
-        \partial_{l}A_{m}
-    \; = \;
-        \partial_{i}A_{j}
-        \, - \,
-        \partial_{j}A_{i}
+& = &
+    \overset{3}{\underset{l=1}{\sum}}\;
+    \overset{3}{\underset{m=1}{\sum}}
+    \left(\,
+        {\color{blue}
+        \overset{3}{\underset{k=1}{\sum}}\;\,
+        \varepsilon_{ijk}\,
+        \varepsilon_{lm{\color{red}k}}
+        }
+        \right)
+    \cdot
+    \partial_{l}A_{m}
+\;\; = \;\;
+    \overset{3}{\underset{l=1}{\sum}}\;
+    \overset{3}{\underset{m=1}{\sum}}
+    \left(\,
+        {\color{blue}\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}}
+        \right)
+    \cdot
+    \partial_{l}A_{m}\,,
+    \;\;
+    \textnormal{by Lemma \ref{LeviCivitaSymbolProperties}(ii)}
+\\
+& = &
+    \overset{3}{\underset{l=1}{\sum}}\;
+    \overset{3}{\underset{m=1}{\sum}}\;
+    \delta_{il}\delta_{jm}\,\partial_{l}A_{m}
+    \; - \;
+    \overset{3}{\underset{l=1}{\sum}}\;
+    \overset{3}{\underset{m=1}{\sum}}\;
+    \delta_{im}\delta_{jl}\,\partial_{l}A_{m}
+\\
+& = &
+    \partial_{i}A_{j}
+    \, - \,
+    \partial_{j}A_{i}\,,
+    \quad
+    \textnormal{as required}
 \end{eqnarray*}
+This completes the proof of Claim 3.
+
+\vskip 0.3cm
+\noindent
+We are now ready to finish the proof:
 \begin{eqnarray*}
-% \left[\;
-%     \widehat{\pi}_{i}
-%     \, \overset{{\color{white}1}}{,} \,
-%     \widehat{\pi}_{j}
-%     \,\right](\psi)
 \left(\,
     \boldsymbol{\widehat{\pi}}
     \times
     \boldsymbol{\widehat{\pi}}
     \,\right)_{{\color{red}k}}
 & = &
-    \cdots
-\;\; = \;\;
     \overset{3}{\underset{i=1}{\sum}}\;
     \overset{3}{\underset{j=1}{\sum}}\;\;
     \dfrac{\varepsilon_{ij\color{red}k}}{2}
@@ -1799,7 +2129,22 @@ B_{k}
         \widehat{\pi}_{i}
         \, \overset{{\color{white}1}}{,} \,
         \widehat{\pi}_{j}
-        \,\right]
+        \,\right],
+    \quad
+    \textnormal{by Claim 1}
+\\
+& = &
+    \overset{3}{\underset{i=1}{\sum}}\;
+    \overset{3}{\underset{j=1}{\sum}}\;\;
+    \dfrac{\varepsilon_{ij\color{red}k}}{2}
+    \,\cdot\,
+    \i\,\hbar\,q\cdot\left(\,
+        \partial_{i}A_{j}
+        \,\overset{{\color{white}.}}{-}\,
+        \partial_{j}A_{i}
+        \,\right),
+    \quad
+    \textnormal{by Claim 2}
 \\
 & = &
     \overset{3}{\underset{i=1}{\sum}}\;
@@ -1810,8 +2155,11 @@ B_{k}
     \left(\,
         \overset{3}{\underset{l=1}{\sum}}\;\,
         \varepsilon_{ijl}\,B_{l}
-        \,\right)
-\;\; = \;\;
+        \,\right),
+    \quad
+    \textnormal{by Claim 3}
+\\
+& = &
     \dfrac{\i\,\hbar\,q}{2}
     \cdot
     \overset{3}{\underset{l=1}{\sum}}
@@ -1822,150 +2170,216 @@ B_{k}
         \varepsilon_{ijl}
         \right)
     B_{l}
+\;\; = \;\;
+    \dfrac{\i\,\hbar\,q}{2}
+    \cdot
+    \overset{3}{\underset{l=1}{\sum}}
+    \left(\,
+        \overset{3}{\underset{i=1}{\sum}}\;
+        \overset{3}{\underset{j=1}{\sum}}\;\,
+        \varepsilon_{{\color{red}k}ij}\,
+        \varepsilon_{lij}
+        \right)
+    B_{l}
 \\
 & = &
     \dfrac{\i\,\hbar\,q}{2}
     \cdot
     \overset{3}{\underset{l=1}{\sum}}
     \left(\,
-        % \overset{3}{\underset{i=1}{\sum}}\;
-        % \overset{3}{\underset{j=1}{\sum}}\;\,
-        % \varepsilon_{ij{\color{red}k}}\,
-        % \varepsilon_{ijl}
         2\,\delta_{{\color{red}k}l}
         \right)
-    B_{l}
-\;\; = \;\;
+    B_{l}\,,
+    \quad
+    \textnormal{by Lemma \ref{LeviCivitaSymbolProperties}(iii)}
+\\
+& = &
     \i\,\hbar\,q\,B_{k}
 \end{eqnarray*}
+
+\vskip 0.3cm
 It now immediately follows that
 \begin{equation*}
 \boldsymbol{\widehat{\pi}}
 \times
 \boldsymbol{\widehat{\pi}}
 \;\; = \;\;
-    \i\,\hbar\,q\,\mathbf{B}\,,
+    \i\,\hbar\,q\,\mathbf{B}
 \end{equation*}
-as required.
+This completes the proof of the Lemma.
 \qed
 
+\vskip 0.5cm
+\noindent
+By Lemma \ref{PiCrossPi}, we can now rewrite
+the quantized Hamiltonian of the Lorentz force as:
 \begin{eqnarray*}
-\\
-& = &
+\widehat{\mathscr{H}}(t, \mathbf{r}, \mathbf{v})
+& := &
+    \cdots
+\;\; = \;\;
     \dfrac{1}{2m}
     \left(\,
-        \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-        \, \overset{{\color{white}.}}{-} \,
-        q\cdot\mathbf{A}(t,\mathbf{r})
+        \boldsymbol{\sigma}\,\bullet\boldsymbol{\widehat{\pi}}
         \,\right)
-    \bullet
+    \circ
     \left(\,
-        \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-        \, \overset{{\color{white}.}}{-} \,
-        q\cdot\mathbf{A}(t,\mathbf{r})
+        \boldsymbol{\sigma}\,\bullet\boldsymbol{\widehat{\pi}}
         \,\right)
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
 \\
-&&
-    \; + \;
+& = &
     \dfrac{1}{2m}\cdot
-    \i\cdot\boldsymbol{\sigma}\cdot
-        \left(\,
-            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-            \, \overset{{\color{white}.}}{-} \,
-            q\cdot\mathbf{A}(t,\mathbf{r})
-            \,\right)
+    \left(\,\boldsymbol{\widehat{\pi}}\,\bullet\,\boldsymbol{\widehat{\pi}}\,\right)
+    \, + \,
+    \dfrac{\i}{2m}
+    \cdot\boldsymbol{\sigma} \,\bullet \left(\,
+        \boldsymbol{\widehat{\pi}}
         \times
-        \left(\,
-            \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-            \, \overset{{\color{white}.}}{-} \,
-            q\cdot\mathbf{A}(t,\mathbf{r})
-            \,\right)
-\\
-&&
-    \; \overset{{\color{white}1}}{+} \;
-    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+        \boldsymbol{\widehat{\pi}}
+        \,\right)
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
 \\
 & = &
-    \dfrac{1}{2m}
-    \left(\,
-        \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-        \, \overset{{\color{white}.}}{-} \,
-        q\cdot\mathbf{A}(t,\mathbf{r})
-        \,\right)
-    \bullet
-    \left(\,
-        \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
-        \, \overset{{\color{white}.}}{-} \,
-        q\cdot\mathbf{A}(t,\mathbf{r})
-        \,\right)
-\\
-&&
-    \; + \;
-    \dfrac{\i}{2m}
-    \cdot
-    \boldsymbol{\sigma}
-    \cdot
-    \left[\;
-        \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
-        \, \overset{{\color{white}.}}{+} \,
-        q^{2}\cdot\mathbf{A}(t,\mathbf{r}) \times \mathbf{A}(t,\mathbf{r})
-        \;\right]
-\\
-&&
-    \; - \;
-    \dfrac{\i\,q}{2m}
-    \cdot
-    \boldsymbol{\sigma}
-    \cdot
-    \left[\;
-        \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{A}(t,\mathbf{r})
-        \, \overset{{\color{white}.}}{+} \,
-        \mathbf{A}(t,\mathbf{r}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
-        \;\right]
-\\
-&&
-    \; \overset{{\color{white}1}}{+} \;
-    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+    \dfrac{1}{2m}\cdot
+    \left(\,\boldsymbol{\widehat{\pi}}\,\bullet\,\boldsymbol{\widehat{\pi}}\,\right)
+    \, + \,
+    \dfrac{\i^{2}\,\hbar\,q}{2m}
+    \cdot\boldsymbol{\sigma} \,\bullet\, \mathbf{B}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}\,,
+    \quad
+    \textnormal{by Lemma \ref{PiCrossPi}}
 \\
 & = &
-    \dfrac{1}{2m}
-    \left\Vert\;
-        \mathbf{p}(t,\mathbf{r},\mathbf{v})
-        \, \overset{{\color{white}.}}{-} \,
-        q\cdot\mathbf{A}(t,\mathbf{r})
-        \,\right\Vert^{2}
-    \cdot
-    \boldsymbol{1}_{2 \times 2}
-\\
-&&
-    \; + \;
-    \dfrac{\i}{2m}
-    \cdot
-    \boldsymbol{\sigma}
-    \cdot
-    \left[\;
-        \boldsymbol{0}
-        \, \overset{{\color{white}.}}{+} \,
-        q^{2}\cdot\boldsymbol{0}
-        \;\right]
-\\
-&&
-    \; - \;
-    \dfrac{\i\,q}{2m}
-    \cdot
-    \boldsymbol{\sigma}
-    \cdot
-    \left[\;
-        \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{A}(t,\mathbf{r})
-        \, \overset{{\color{white}.}}{+} \,
-        \mathbf{A}(t,\mathbf{r}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
-        \;\right]
-\\
-&&
-    \; \overset{{\color{white}1}}{+} \;
-    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+    \dfrac{1}{2m}\cdot
+    \left(\,\boldsymbol{\widehat{\pi}}\,\bullet\,\boldsymbol{\widehat{\pi}}\,\right)
+    \, - \,
+    \dfrac{\hbar\,q}{2m}
+    \cdot\boldsymbol{\sigma} \,\bullet\, \mathbf{B}
+    \, + \,
+    q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{\mathcal{H}}
 \end{eqnarray*}
-\qed
+
+% \begin{eqnarray*}
+% \\
+% & = &
+%     \dfrac{1}{2m}
+%     \left(\,
+%         \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right)
+%     \bullet
+%     \left(\,
+%         \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right)
+% \\
+% &&
+%     \; + \;
+%     \dfrac{1}{2m}\cdot
+%     \i\cdot\boldsymbol{\sigma}\cdot
+%         \left(\,
+%             \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+%             \, \overset{{\color{white}.}}{-} \,
+%             q\cdot\mathbf{A}(t,\mathbf{r})
+%             \,\right)
+%         \times
+%         \left(\,
+%             \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+%             \, \overset{{\color{white}.}}{-} \,
+%             q\cdot\mathbf{A}(t,\mathbf{r})
+%             \,\right)
+% \\
+% &&
+%     \; \overset{{\color{white}1}}{+} \;
+%     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+% \\
+% & = &
+%     \dfrac{1}{2m}
+%     \left(\,
+%         \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right)
+%     \bullet
+%     \left(\,
+%         \widehat{\mathbf{p}}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right)
+% \\
+% &&
+%     \; + \;
+%     \dfrac{\i}{2m}
+%     \cdot
+%     \boldsymbol{\sigma}
+%     \cdot
+%     \left[\;
+%         \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{+} \,
+%         q^{2}\cdot\mathbf{A}(t,\mathbf{r}) \times \mathbf{A}(t,\mathbf{r})
+%         \;\right]
+% \\
+% &&
+%     \; - \;
+%     \dfrac{\i\,q}{2m}
+%     \cdot
+%     \boldsymbol{\sigma}
+%     \cdot
+%     \left[\;
+%         \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{A}(t,\mathbf{r})
+%         \, \overset{{\color{white}.}}{+} \,
+%         \mathbf{A}(t,\mathbf{r}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
+%         \;\right]
+% \\
+% &&
+%     \; \overset{{\color{white}1}}{+} \;
+%     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+% \\
+% & = &
+%     \dfrac{1}{2m}
+%     \left\Vert\;
+%         \mathbf{p}(t,\mathbf{r},\mathbf{v})
+%         \, \overset{{\color{white}.}}{-} \,
+%         q\cdot\mathbf{A}(t,\mathbf{r})
+%         \,\right\Vert^{2}
+%     \cdot
+%     \boldsymbol{1}_{2 \times 2}
+% \\
+% &&
+%     \; + \;
+%     \dfrac{\i}{2m}
+%     \cdot
+%     \boldsymbol{\sigma}
+%     \cdot
+%     \left[\;
+%         \boldsymbol{0}
+%         \, \overset{{\color{white}.}}{+} \,
+%         q^{2}\cdot\boldsymbol{0}
+%         \;\right]
+% \\
+% &&
+%     \; - \;
+%     \dfrac{\i\,q}{2m}
+%     \cdot
+%     \boldsymbol{\sigma}
+%     \cdot
+%     \left[\;
+%         \mathbf{p}(t,\mathbf{r},\mathbf{v}) \times \mathbf{A}(t,\mathbf{r})
+%         \, \overset{{\color{white}.}}{+} \,
+%         \mathbf{A}(t,\mathbf{r}) \times \mathbf{p}(t,\mathbf{r},\mathbf{v})
+%         \;\right]
+% \\
+% &&
+%     \; \overset{{\color{white}1}}{+} \;
+%     q\cdot\phi(t,\mathbf{r})\cdot\boldsymbol{1}_{2 \times 2}
+% \end{eqnarray*}
+% \qed
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
