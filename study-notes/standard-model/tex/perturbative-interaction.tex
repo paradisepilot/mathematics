@@ -55,6 +55,8 @@ H(t) \;\; = \;\; H_{0} \,+\, H_{1}(t)
 \vskip 0.5cm
 \section{The interaction picture}
 
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 The situation where we time-evolve the operator \,$A$\, according to
 \begin{equation*}
 A(t) \;\; = \;\; U_{0}(-t) \cdot A \cdot U_{0}(t)
@@ -104,6 +106,9 @@ Note that the interaction picture is consistent with both the Schr\"odinger and 
 
 \vskip 0.5cm
 \section{The Dyson expansion}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \begin{proposition}[Dyson expansion]
 \mbox{}\vskip 0.2cm
 \noindent
@@ -192,6 +197,298 @@ Then, the following statements are true:
 \end{enumerate}
 \end{proposition}
 
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{The Lehmann-Symanzik-Zimmermann reduction formula}
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{eqnarray*}
+&&
+	\left(\,
+	    \overset{m}{\underset{i=1}{\prod}}\;
+	    \dfrac{\i\sqrt{Z}}{k_{i}^{2}-m^{2}}
+	    \right)
+	\!
+	\left(\,
+	    \overset{n}{\underset{j=1}{\prod}}\;
+	    \dfrac{\i\sqrt{Z}}{p_{j}^{2}-m^{2}}
+	    \right)
+	\!
+	{\color{red}
+	\left\langle\,
+	    \mathbf{p}_{1} \cdots \mathbf{p}_{n}
+	    \,\vert\,
+	    \i\,T
+	    \,\vert\,
+	    \mathbf{k}_{1} \cdots \mathbf{k}_{m}
+	    \,\right\rangle
+	}
+\\
+& = &
+    \bigints\;
+	    \overset{m}{\underset{i=1}{\prod}}\;e^{-\i\,k_{i} \cdot x_{i}}
+	    \;
+	    \overset{n}{\underset{j=1}{\prod}}\;e^{+\i\,p_{j} \cdot y_{j}}
+	    \,
+    	{\color{red}
+		\left\langle\,
+		    0
+		    \,\left\vert\,
+		    \mathbb{T}\left\{\,
+		        \overset{{\color{white}.}}{\phi(x_{1})\cdots\phi(x_{1})}
+		        \,
+		        \phi(y_{1})\cdots\phi(y_{1})
+		        \,\right\}
+		    \,\right\vert\,
+		    0
+		    \,\right\rangle
+		}
+		\;
+		\d^{4}x_{1} \cdots \d^{4}x_{m}
+		\;
+		\d^{4}y_{1} \cdots \d^{4}y_{n}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\noindent
+\begin{itemize}
+\item
+    Hamiltonian:\; $H \,=\, H_{0} + H_{I}$,\, where
+    \,$H_{0}$\, is a free-field Hamiltonian, and
+    \,$H_{I}$\, is a small perturbation that describes interaction.
+\item
+    $U_{0}(t) \, := \, e^{-\,\i tH_{0}}$,\,
+    \quad
+    $U(t) \, := \, e^{-\,\i tH}$
+\item
+    Define:
+    \,$
+    \phi_{I}(t,\mathbf{x})
+    \, := \,
+        U_{0}(-t) \cdot U(t) \cdot \phi(t,\mathbf{x}) \cdot U(-t) \cdot U_{0}(t)
+    \, = \,
+        e^{+\i\,tH_{0}} \cdot e^{-\i\,tH} \cdot \phi(t,\mathbf{x}) \cdot e^{+\i\,tH} \cdot e^{-\i\,tH_{0}}
+    $.\,
+    \vskip 0.05cm
+    Then, in particular, we have:
+    \,$
+    \phi_{I}(t,\mathbf{x})
+    \, = \,
+        e^{+\i\,tH_{0}} \cdot e^{-\i\,tH} \cdot \phi(t,\mathbf{x}) \cdot e^{+\i\,tH} \cdot e^{-\i\,tH_{0}}
+    $\,
+\end{itemize}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{Cross sections \& differential cross sections of particle scattering}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{lemma}
+\mbox{}
+\vskip 0.01cm
+\noindent
+Suppose:
+\begin{itemize}
+\item
+    Two cylindrial packets of protons are made to collide head on
+    (travelling in exactly opposite directions in a particle collider).
+\item
+    $A$\, is the common geometric cross-sectional area each of the packets,
+    and
+    \,$L$\, is their common length.
+    The common volume of the two packets is thus \,$V = A\,L$.\,
+\item
+    $N_{1}$\, and \,$N_{2}$\, are the number of protons 
+    in the first and second packets of protons, respectively.
+\item
+    The number density \,$n_{1}$\, of protons in the first packet is constant in space and time.
+    Similarly,
+    the number density \,$n_{2}$\, of protons in the second packet is constant in space and time.
+\item
+    $v_{1}$\, and \,$v_{2}$\, are the speeds (as observed in the reference frame of the laboratory)
+    of the first and second packets of protons, respectively.
+    Hence, the relative speed of the two packets of protons is
+    \,$\vert\,v_{1} - v_{2}\,\vert$.\,
+\end{itemize}
+Let
+\,$V_{\textnormal{overlap}}(t) \subset \Re^{3}$\,
+denote the overlap at time \,$t \in \Re$\, of the two packets.
+\vskip 0.2cm
+\noindent
+\!We assume:
+There exists a
+{\color{red}(proportionality) constant \,$\sigma > 0$\,}
+such that the
+\textbf{expected number \,$r(t,x)$\, at time \,$t \in \Re$\, and at \,$x \in \Re^{3}$
+of interactions per unit time and per unit volume}\,
+is given by:
+\begin{equation*}
+r(t,x)
+\;\; = \;\;
+    \left\{\begin{array}{cl}
+        \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2}\,,
+        &
+        \textnormal{for \,$t \in \Re$\, such that
+            \,$V_{\textnormal{overlap}}(t) \,\neq\, \varemptyset$\,
+            and \,$x \in V_{\textnormal{overlap}}(t)$\,
+            }
+        \\
+        \overset{{\color{white}1}}{0}\,,
+        &
+        \textnormal{otherwise}
+        \end{array}\right.
+\end{equation*}
+(Note that the quantity
+\,$\sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2}$\,
+above is in fact a constant, independent of \,$t$\, and \,$x$.)
+\vskip 0.2cm
+\noindent
+Then, the following equality is true:
+\begin{equation*}
+\left(\!\begin{array}{c}
+    \textnormal{total number of}
+    \\
+    \textnormal{interaction events}
+    \end{array}\!\right)
+\;\; = \;\;
+    \sigma \cdot \dfrac{ N_{1} N_{2} }{A}
+\end{equation*}
+\end{lemma}
+\proof
+We choose the reference time
+\,$t = 0$\,
+to be the exact moment when the centres of the two cylindrical packets coincide
+(equivalently, when the two packets perfecrtly overlap each other).
+We will use the slight abuse of notation to denote the volume
+of the time-dependent overlap
+\,$V_{\textnormal{overlap}}(t)$\,
+also as
+\,$V_{\textnormal{overlap}}(t)$.\,
+
+\vskip 0.3cm
+\noindent
+Let
+\,$R(t)$\,
+be the total number of interactions per unit time (over all of space).
+Then, we have:
+\begin{eqnarray*}
+R(t)
+& = &
+    \int_{\Re^{3}}\;
+        r(t,x)
+        \;\d^{3}x
+\;\; = \;\;
+    \int_{V_{\textnormal{overlap}}(t)}\;
+        \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2}
+        \;\d^{3}x
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot V_{\textnormal{overlap}}(t)
+\end{eqnarray*}
+Next, observe that
+\begin{equation*}
+V_{\textnormal{overlap}}(t)
+\;\; = \;\;
+    \left\{\begin{array}{cl}
+        A\left(L \,\overset{{\color{white}.}}{-}\, \vert\,v_{1}-v_{2}\,\vert\cdot\vert\,t\,\vert\right)\,, & \textnormal{for \;$t \,\in\, \left[\,-\,\dfrac{L}{\vert\,v_{1}-v_{2}\,\vert}\,,\,\dfrac{L}{\vert\,v_{1}-v_{2}\,\vert}\,\right]$}
+        \\
+        0\,, & \textnormal{otherwise}
+        \end{array}\right.
+\end{equation*}
+Hence,
+\begin{eqnarray*}
+\left(\!\begin{array}{c}
+    \textnormal{number of}
+    \\
+    \textnormal{interaction events}
+    \end{array}\!\right)
+& = &
+    \bigintsss_{-\infty}^{+\infty}\;
+        R(t)
+        \;\d t
+\;\; = \;\;
+    \bigintsss_{-\infty}^{+\infty}\;
+        \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot V_{\textnormal{overlap}}(t)
+        \;\d t
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot
+    \bigintsss_{-L/\vert\,v_{1}-v_{2}\,\vert}^{+L/\vert\,v_{1}-v_{2}\,\vert}\;
+        V_{\textnormal{overlap}}(t)
+        \;\d t
+    % \bigintsss_{-L/\vert\,v_{1}-v_{2}\,\vert}^{+L/\vert\,v_{1}-v_{2}\,\vert}\;
+    %     A (L \,-\, \vert\,v_{1}-v_{2}\,\vert\cdot\vert\,t\,\vert)
+    %     \;\d t
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot
+    \bigintsss_{-L/\vert\,v_{1}-v_{2}\,\vert}^{+L/\vert\,v_{1}-v_{2}\,\vert}\;
+         A\left(L \,\overset{{\color{white}.}}{-}\, \vert\,v_{1}-v_{2}\,\vert\cdot\vert\,t\,\vert\right)
+        \;\d t
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot
+    \left(\,
+	    AL \cdot \dfrac{2\,L}{\vert\,v_{1}-v_{2}\,\vert}
+	    \; - \;
+	    A \cdot \vert\,v_{1}-v_{2}\,\vert
+	    \bigintsss_{-L/\vert\,v_{1}-v_{2}\,\vert}^{+L/\vert\,v_{1}-v_{2}\,\vert}\;
+	        \vert\,t\,\vert
+	        \;\d t
+	    \,\right)
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot
+    \left(\,
+	    2\cdot\dfrac{AL^{2}}{\vert\,v_{1}-v_{2}\,\vert}
+	    \; - \;
+	    2\,A \cdot \vert\,v_{1}-v_{2}\,\vert
+	    \bigintsss_{0}^{+L/\vert\,v_{1}-v_{2}\,\vert}\;
+	        t
+	        \;\d t
+	    \,\right)
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot
+    \left(\,
+	    2\cdot\dfrac{AL^{2}}{\vert\,v_{1}-v_{2}\,\vert}
+	    \; - \;
+	    2\,A \cdot \vert\,v_{1}-v_{2}\,\vert \cdot
+	    \left[\,
+	        \dfrac{1}{2}\,t^{2}
+	        \,\right]_{0}^{L/\vert\,v_{1}-v_{2}\,\vert}
+	    \,\right)
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot
+    \left(\,
+	    2\cdot\dfrac{AL^{2}}{\vert\,v_{1}-v_{2}\,\vert}
+	    \; - \;
+	    A \cdot \vert\,v_{1}-v_{2}\,\vert \cdot
+	    \dfrac{L^{2}}{\vert\,v_{1}-v_{2}\,\vert^{2}}
+	    \,\right)
+\\
+& = &
+    \sigma \cdot \vert\,v_{1} - v_{2}\,\vert \cdot n_{1} n_{2} \cdot
+    \left(\,
+        \dfrac{AL^{2}}{\vert\,v_{1}-v_{2}\,\vert}
+	    \,\right)
+\;\; = \;\;
+    \sigma \cdot n_{1} n_{2} \cdot AL^{2}
+\\
+& = &
+    \sigma \cdot \left(n_{1} A L\right) \cdot \left(n_{2} A L\right) \cdot \dfrac{1}{A}
+\\
+& = &
+    \sigma \cdot \dfrac{ N_{1} N_{2} }{A}\,,
+\end{eqnarray*}
+as required.
+\qed
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
