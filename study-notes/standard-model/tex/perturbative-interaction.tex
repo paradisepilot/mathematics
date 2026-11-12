@@ -253,6 +253,137 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{eqnarray*}
+\left\langle\,
+    \mathbf{p}_{1} \cdots \mathbf{p}_{n}
+    \,\vert\,
+    1+\i\,T
+    \,\vert\,
+    \mathbf{k}_{1} \cdots \mathbf{k}_{m}
+    \,\right\rangle
+& = &
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}
+        \,\vert\,
+        S
+        \,\vert\,
+        \mathbf{k}_{1} \cdots \mathbf{k}_{m}
+        \,\right\rangle
+\\
+& = &
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}
+        \,\left\vert\,
+        \underset{T_{f}\,\rightarrow\,+\infty}{\lim}\;\,
+        \underset{T_{i}\,\rightarrow\,-\infty}{\lim}\;
+        e^{-\i H(T_{f}-T_{i})}
+        \,\right\vert\,
+        \mathbf{k}_{1} \cdots \mathbf{k}_{m}
+        \,\right\rangle
+\\
+& = &
+    \underset{T_{f}\,\rightarrow\,+\infty}{\lim}\;\,
+    \underset{T_{i}\,\rightarrow\,-\infty}{\lim}\,
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}
+        \,\left\vert\,
+        e^{-\i H(T_{f}-T_{i})}
+        \,\right\vert\,
+        \mathbf{k}_{1} \cdots \mathbf{k}_{m}
+        \,\right\rangle
+\\
+& = &
+    \underset{T_{f}\,\rightarrow\,+\infty}{\lim}\;\,
+    \underset{T_{i}\,\rightarrow\,-\infty}{\lim}\,
+    \left\langle\,
+        \left.
+        \overset{{\color{white}1}}{\mathbf{p}_{1}} \cdots \mathbf{p}_{n}\,;\,T_{f}
+        \;\right\vert\,
+        \mathbf{k}_{1} \cdots \mathbf{k}_{m}\,;\,T_{i}
+        \,\right\rangle
+\end{eqnarray*}
+
+\begin{eqnarray*}
+&&
+    \underset{{\color{white}1}}{
+	    \left\langle\,
+	        \left.
+	        \overset{{\color{white}1}}{\mathbf{p}_{1}} \cdots \mathbf{p}_{n}\,;\,T_{f}
+	        \;\right\vert\,
+	        \mathbf{k}_{1} \cdots \mathbf{k}_{m}\,;\,T_{i}
+	        \,\right\rangle
+        }
+\\
+& = &
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}\,;\,T_{f}
+        \,\left\vert\,
+        (2 E_{\mathbf{k}_{1}})^{1/2}\,a^{\dagger,(\textnormal{in})}_{\mathbf{k}_{1}}
+        \,\right\vert\,
+        \mathbf{k}_{2} \cdots \mathbf{k}_{m}\,;\,T_{i}
+        \,\right\rangle,
+    \;\;
+    \textnormal{since \,$\left\vert\,\mathbf{k}\,\right\rangle \,=\, (2 E_{\mathbf{k}})^{1/2}\,a^{\dagger}_{\mathbf{k}}\left\vert\,0\,\right\rangle$}
+\\
+& = &
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}\,;\,T_{f}
+        \,\left\vert\;
+        -\,\i\,\cdot\!\int\,
+            e^{-\i k x}\;\overleftrightarrow{\partial_{0}}\;\phi_{\textnormal{in}}
+            \;\d^{3}\mathbf{x}
+        \;\right\vert\,
+        \mathbf{k}_{2} \cdots \mathbf{k}_{m}\,;\,T_{i}
+        \,\right\rangle,
+    \;\;
+    \textnormal{since \,$
+        (2 E_{\mathbf{k}_{1}})^{1/2}\,a^{\dagger,(\textnormal{in})}_{\mathbf{k}_{1}}
+        \, = \,
+	        -\,\i\,\cdot\!\int\,
+	            e^{-\i k x}\;\overleftrightarrow{\partial_{0}}\;\phi_{\textnormal{in}}
+	            \;\d^{3}\mathbf{x}
+	    $}
+\\
+& = &
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}\,;\,T_{f}
+        \,\left\vert\;
+        -\,\i\,\cdot\!\int\,
+            e^{-\i k x}\;\overleftrightarrow{\partial_{0}}
+            \left(Z^{\,-1/2}\cdot\underset{t\rightarrow-\infty}{\lim}\phi\right)
+            \;\d^{3}\mathbf{x}
+        \;\right\vert\,
+        \mathbf{k}_{2} \cdots \mathbf{k}_{m}\,;\,T_{i}
+        \,\right\rangle,
+    \;\;
+    \textnormal{since \,$\underset{t\rightarrow-\infty}{\lim}\phi \,=\, Z^{1/2}\cdot\phi_{\textnormal{in}}$}
+\\
+& = &
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}\,;\,T_{f}
+        \,\left\vert\,
+        -\,\i\,Z^{\,-1/2}\cdot\underset{t\rightarrow-\infty}{\lim}\int\,
+            e^{-\i k x}\;\overleftrightarrow{\partial_{0}}\;\phi
+            \;\d^{3}\mathbf{x}
+        \,\right\vert\,
+        \mathbf{k}_{2} \cdots \mathbf{k}_{m}\,;\,T_{i}
+        \,\right\rangle
+\\
+& = &
+    -\,\i\,Z^{\,-1/2}\cdot\underset{t\rightarrow-\infty}{\lim}\int\,
+    e^{-\i k x}
+    \left\langle\,
+        \mathbf{p}_{1} \cdots \mathbf{p}_{n}\,;\,T_{f}
+        \,\left\vert\,
+            \overleftrightarrow{\partial_{0}}\phi
+        \,\right\vert\,
+        \mathbf{k}_{2} \cdots \mathbf{k}_{m}\,;\,T_{i}
+        \,\right\rangle
+        \;\d^{3}\mathbf{x}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \vskip 0.5cm
 \noindent
 \begin{itemize}
