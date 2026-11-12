@@ -253,6 +253,75 @@ Then, the following statements are true:
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\begin{lemma}
+\begin{eqnarray*}
+&&
+    \underset{{\color{white}1}}{
+        \left\langle\,
+            \left.
+            \overset{{\color{white}1}}{\mathbf{p}_{1}} \cdots \mathbf{p}_{n}\,;\,T_{f}
+            \;\right\vert\,
+            \mathbf{k}_{1} \cdots \mathbf{k}_{m}\,;\,T_{i}
+            \,\right\rangle
+        }
+\\
+& = &
+    (\i Z^{\,-1/2})^{2}
+    \bigintss
+        e^{-\i {\color{red}k_{1}}x}\!\left(\,\square_{x}+m^{2}\right)
+        e^{+\i {\color{red}p_{1}}y}\!\left(\,\square_{y}+m^{2}\right)
+        \left\langle\,
+            {\color{red}\mathbf{p}_{2}} \cdots \mathbf{p}_{n}\,;\,T_{f}
+            \,\left\vert\,
+            \overset{{\color{white}.}}{\mathbb{T}\!\left\{\phi(y)\phi(x)\right\}}
+            \,\right\vert\,
+            {\color{red}\mathbf{k}_{2}} \cdots \mathbf{k}_{m}\,;\,T_{i}
+            \,\right\rangle
+            \;\d^{4}x\;\d^{4}y
+\end{eqnarray*}
+\end{lemma}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\begin{corollary}
+\begin{eqnarray*}
+&&
+    \underset{{\color{white}1}}{
+        \left\langle\,
+            \left.
+            \overset{{\color{white}1}}{\mathbf{p}_{1}} \cdots \mathbf{p}_{n}\,;\,T_{f}
+            \;\right\vert\,
+            \mathbf{k}_{1} \cdots \mathbf{k}_{m}\,;\,T_{i}
+            \,\right\rangle
+        }
+\\
+& = &
+    \textnormal{\scriptsize$
+    (\i Z^{\,-1/2})^{m+n}\!\!
+    \bigintss\!\!
+        \exp\!\left(
+            \i\overset{n}{\underset{j=1}{\sum}\,p_{j}y_{j}}
+            -
+            \i\overset{m}{\underset{i=1}{\sum}\,k_{i}x_{i}}
+            \right)
+        \overset{m}{\underset{i=1}{\prod}}\left(\,\square_{x_{i}}+m^{2}\right)\,
+        \overset{m}{\underset{i=1}{\prod}}\left(\,\square_{y_{j}}+m^{2}\right)
+        \left\langle\,
+            0
+            \,\left\vert\,
+            \overset{{\color{white}.}}{\mathbb{T}\!\left\{
+                \phi(x_{1})\cdots\phi(x_{m})\,\phi(y_{1}\cdots\phi(y_{n}))
+                \right\}}
+            \,\right\vert\,
+            0
+            \,\right\rangle
+            \;\d^{4}x_{1}\cdots\d^{4}y_{n}
+    $}
+\end{eqnarray*}
+\end{corollary}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 \begin{eqnarray*}
 \left\langle\,
     \mathbf{p}_{1} \cdots \mathbf{p}_{n}
