@@ -15,6 +15,201 @@
 
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
+\vskip 0.5cm
+\section{Observations meet theory: expected number of events equals integrated luminosity times total cross section}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+Consider a particle scattering experiment in a particle collider
+with two counter-propagating beams (of incoming particles),
+denoted by beam 1 and beam 2.
+
+\vskip 0.2cm
+\noindent
+Let \,$[t_0,t_1]$\, be the data acquisition interval under consideration. We use the laboratory reference frame to describe the beam distributions.
+
+\vskip 0.2cm
+\noindent
+For simplicity, we initially adopt the standard independent-particle approximation for the two beams. We also assume that the particles can be described by classical one-particle phase-space distributions.
+
+\vskip 0.2cm
+\noindent
+For each beam \,$i \in \{1,2\}$,\,
+let \,$f_{i}(t,\mathbf{x},\mathbf{p})$\, denote
+the phase space density of beam \,$i$.\,
+Then,
+\begin{equation*}
+n_{i}(t,\mathbf{x})
+\;\; := \;\;
+    \int_{\Re^3}\,
+        f_{i}(t,\mathbf{x},\mathbf{p})
+        \,\d^3\mathbf{p}
+\end{equation*}
+gives the number-of-particle density over spacetime for beam \,$i$.\,
+
+\vskip 0.2cm
+\noindent
+\textbf{M{\o}ller relative velocity:}
+\begin{equation*}
+v_{\textnormal{M}}(\mathbf{p}_{1},\mathbf{p}_{2})
+\;\; := \;\;
+    \sqrt{
+        {\color{white}.}
+        \vert\,\mathbf{v}_{1} - \mathbf{v}_{2}\,\vert^{2}
+        \, - \,
+        \dfrac{
+            \vert\,\mathbf{v}_{1} \times \mathbf{v}_{2}\,\vert^{2}
+            }{
+            c^{2}
+            }
+        {\color{white}.}
+        }
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+\textbf{Instantaneous luminosity:}
+\begin{equation*}
+\mathcal{L}(t)
+\;\; := \;\;
+    \int_{\Re^{3}}\,
+    \int_{\Re^{3}}\,
+    \int_{\Re^{3}}\;
+        f_{1}(t,\mathbf{x},\mathbf{p}_{1})
+        \cdot
+        f_{2}(t,\mathbf{x},\mathbf{p}_{2})
+        \cdot
+        v_{\textnormal{M}}(\mathbf{p}_{1},\mathbf{p}_{2})
+        \;
+        \d^{3}\mathbf{p}_{1}\,
+        \d^{3}\mathbf{p}_{2}\,
+        \d^{3}\mathbf{x}
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+\textbf{Integrated luminosity:}
+% The integrated luminosity accumulated by the collider during the data-taking interval \([t_0,t_1]\) is defined by
+\begin{eqnarray*}
+\displaystyle
+\mathcal{L}_{\textnormal{int}}
+& := &
+    \int_{t_{0}}^{t_{1}}
+        \mathcal{L}(t)
+        \;\d t
+\\
+& = &
+    \int_{t_{0}}^{t_{1}}\!
+    \int_{\Re^{3}}
+    \int_{\Re^{3}}
+    \int_{\Re^{3}}\;
+        f_{1}(t,\mathbf{x},\mathbf{p}_{1})
+        \cdot
+        f_{2}(t,\mathbf{x},\mathbf{p}_{2})
+        \cdot
+        v_{\textnormal{M}}(\mathbf{p}_{1},\mathbf{p}_{2})
+        \;
+        \d^{3}\mathbf{p}_{1}\,
+        \d^{3}\mathbf{p}_{2}\,
+        \d^{3}\mathbf{x}\,
+        \;\d t
+\end{eqnarray*}
+
+\begin{equation*}
+\mathcal P_{F}(P)
+\;\; := \;\;
+    \left\{
+        (q_1,\ldots,q_n)
+        \left\vert
+            \begin{array}{c}
+            q_j^2=\mu_j^2,\quad q_j^0>0,\\[2pt]
+            \displaystyle\sum_{j=1}^{n}q_j=P
+            \end{array}
+            \right.
+        \right\}
+\end{equation*}
+
+Define the Lorentz-invariant phase-space measure by
+\begin{equation*}
+\d\Phi_n(P)
+\;\; = \;\;
+    (2\pi)^{4}
+    \cdot
+    \delta^{(4)}\!\left(\,P-\sum_{j=1}^{n}q_{j}\,\right)
+    \cdot
+    \prod_{j=1}^{n}\dfrac{\d^{3}\mathbf{q}_{j}}{(2\pi)^{3}\,2 E_{j}}
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+\textbf{The cross-section measure \,$\sigma_{F}$\, on \,$\mathcal{P}_{F}(P)$:}
+\begin{equation*}
+\sigma_{F}(A)
+\;\; := \;\;
+    \dfrac{1}{\mathcal{F}_{\textnormal{in}}}
+    \int_{A}\;
+        \overline{{\color{white}.}\vert\,\mathcal{M}_{Fi}\,\vert^{2}{\color{white}.}}
+        \;\d\Phi_{F}(P)\,,
+\quad
+\textnormal{for every measurable subset \,$A\subseteq\mathcal{P}_{F}(P)$\,}
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+\textbf{The total cross section \,$\sigma_{F,\textnormal{tot}}$\, for the specified final-state channel \,$F$:}
+\begin{equation*}
+\sigma_{F,\textnormal{tot}}
+\;\; := \;\;
+    \dfrac{1}{\mathcal{F}_{\textnormal{in}}}
+    \int_{ {\color{red}\mathcal{P}_{F}(P)} }\;
+        \overline{{\color{white}.}\vert\,\mathcal{M}_{Fi}\,\vert^{2}{\color{white}.}}
+        \;\d\Phi_{F}(P)
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+\begin{equation*}
+\dfrac{\d\,\mathbb{E}[\,N_{F}\,]}{\d\,t}
+\;\; = \;\;
+    \mathcal{L}(t) \cdot \sigma_{F,\mathrm{tot}}.
+\end{equation*}
+
+\vskip 0.2cm
+\noindent
+\textbf{Expected number \,$\mathbb{E}[\,N_{F}\,]$\, of events for the specified final-state channel $F$\,:}
+\begin{eqnarray*}
+\mathbb{E}[\,N_{F}\,]
+& = &
+    \displaystyle
+    \int_{t_{0}}^{t_{1}}\,
+        \dfrac{\d\,\mathbb{E}[\,N_{F}\,]}{\d\,t}
+        \;\d t
+\;\; = \;\;
+    \displaystyle
+    \int_{t_{0}}^{t_{1}}\,
+        \mathcal{L}(t)\cdot\sigma_{F,\mathrm{tot}}
+        \;\d t
+\;\; = \;\;
+    \sigma_{F,\mathrm{tot}}
+    \,\cdot
+    \displaystyle
+    \int_{t_{0}}^{t_{1}}\,
+        \mathcal{L}(t)
+        \;\d t
+\\
+& \overset{{\color{white}\textnormal{\Large1}}}{=} &
+    \sigma_{F,\mathrm{tot}}
+    \cdot
+    \mathcal{L}_{\textnormal{int}}
+\end{eqnarray*}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
+\vskip 0.5cm
+\section{The interaction picture}
+
+          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
+
 We want to determine the time-evolution of a system under the time-varying Hamiltonian
 \begin{equation*}
 H(t) \;\; = \;\; H_{0} \,+\, H_{1}(t)
@@ -53,10 +248,7 @@ H(t) \;\; = \;\; H_{0} \,+\, H_{1}(t)
           %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
 
 \vskip 0.5cm
-\section{The interaction picture}
-
-          %%%%% ~~~~~~~~~~~~~~~~~~~~ %%%%%
-
+\noindent
 The situation where we time-evolve the operator \,$A$\, according to
 \begin{equation*}
 A(t) \;\; = \;\; U_{0}(-t) \cdot A \cdot U_{0}(t)
