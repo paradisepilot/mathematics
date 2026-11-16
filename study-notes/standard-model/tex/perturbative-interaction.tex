@@ -116,7 +116,7 @@ v_{\textnormal{M}}(\mathbf{p}_{1},\mathbf{p}_{2})
 \end{eqnarray*}
 
 \begin{equation*}
-\mathcal P_{F}(P)
+\mathcal P_{F}^{(P)}
 \;\; := \;\;
     \left\{
         (q_1,\ldots,q_n)
@@ -129,9 +129,11 @@ v_{\textnormal{M}}(\mathbf{p}_{1},\mathbf{p}_{2})
         \right\}
 \end{equation*}
 
+\vskip 0.2cm
+\noindent
 Define the Lorentz-invariant phase-space measure by
 \begin{equation*}
-\d\Phi_n(P)
+\d\Phi_{n}^{(P)}
 \;\; = \;\;
     (2\pi)^{4}
     \cdot
@@ -142,29 +144,37 @@ Define the Lorentz-invariant phase-space measure by
 
 \vskip 0.2cm
 \noindent
-\textbf{The cross-section measure \,$\sigma_{F}$\, on \,$\mathcal{P}_{F}(P)$:}
+\textbf{The cross-section measure \,$\sigma_{F}$\, on \,$\mathcal{P}_{F}^{(P)}$:}
 \begin{equation*}
 \sigma_{F}(A)
 \;\; := \;\;
     \dfrac{1}{\mathcal{F}_{\textnormal{in}}}
     \int_{A}\;
         \overline{{\color{white}.}\vert\,\mathcal{M}_{Fi}\,\vert^{2}{\color{white}.}}
-        \;\d\Phi_{F}(P)\,,
+        \;{\color{red}\d\Phi_{F}^{(P)}}\,,
 \quad
-\textnormal{for every measurable subset \,$A\subseteq\mathcal{P}_{F}(P)$\,}
+\textnormal{for every measurable subset \,$A\subseteq\mathcal{P}_{F}^{(P)}$\,}
 \end{equation*}
 
 \vskip 0.2cm
 \noindent
 \textbf{The total cross section \,$\sigma_{F,\textnormal{tot}}$\, for the specified final-state channel \,$F$:}
-\begin{equation*}
+\begin{eqnarray*}
 \sigma_{F,\textnormal{tot}}
-\;\; := \;\;
+& := &
     \dfrac{1}{\mathcal{F}_{\textnormal{in}}}
-    \int_{ {\color{red}\mathcal{P}_{F}(P)} }\;
+    \cdot
+    \int_{ {\color{red}\mathcal{P}_{F}^{(P)}} }\;\,
         \overline{{\color{white}.}\vert\,\mathcal{M}_{Fi}\,\vert^{2}{\color{white}.}}
-        \;\d\Phi_{F}(P)
-\end{equation*}
+        \;\,\d\Phi_{F}^{(P)}
+\\
+& = &
+    \dfrac{1}{\mathcal{F}_{\textnormal{in}}}
+    \cdot
+    \int_{ {\color{black}\mathcal{P}_{F}^{(P)}} }\;\,
+        \overline{{\color{white}.}\vert\,\mathcal{M}_{Fi}(q_{1},\ldots,q_{n})\,\vert^{2}{\color{white}.}}
+        \;\,\d\Phi_{F}^{(P)}(q_{1},\ldots,q_{n})
+\end{eqnarray*}
 
 \vskip 0.2cm
 \noindent
